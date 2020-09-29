@@ -1,0 +1,43 @@
+title: Employee
+fields:
+  -
+    handle: employee_role
+    field:
+      input_type: text
+      display: Role
+      type: text
+      width: 50
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: email
+    field:
+      input_type: email
+      display: Email
+      type: text
+      listable: hidden
+      validate:
+        - required
+        - email
+      width: 50
+  -
+    handle: employee_image
+    field:
+      mode: grid
+      container: assets
+      folder: /
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: 'Employee Image'
+      type: assets
+      listable: hidden
+      width: 50
+  -
+    handle: expertise
+    field:
+      display: Expertise
+      type: list
+      listable: hidden
+      width: 50

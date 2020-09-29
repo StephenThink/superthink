@@ -1,0 +1,28 @@
+title: Banner
+fields:
+  -
+    handle: banner_heading
+    field:
+      input_type: text
+      type: text
+      localizable: false
+      listable: hidden
+      display: Heading
+  -
+    handle: banner_text
+    field:
+      type: textarea
+      localizable: false
+      width: 50
+      listable: hidden
+      display: Text
+  -
+    handle: banner_email
+    field:
+      input_type: text
+      type: text
+      instructions: 'If we need to display an email in here, we can d=o'
+      localizable: false
+      width: 50
+      listable: hidden
+      display: Email

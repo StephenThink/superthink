@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54.354" height="54.354" viewBox="0 0 54.354 54.354">
+  <g transform="translate(-171.905 -308.486)">
+    <path d="M25.677,0A25.677,25.677,0,1,1,0,25.677,25.677,25.677,0,0,1,25.677,0Z" id="arrow-circle" class="arrow-circle" transform="translate(173.405 309.986)" fill="none"  stroke-width="3"/>
+    <g transform="translate(184.907 321.104)">
+      <line x1="27.879" transform="translate(0 14.541)" fill="#fff" stroke-miterlimit="10" stroke-width="3"/>
+      <line x2="14.989" y2="14.989" transform="translate(13.246)" fill="#fff" stroke-miterlimit="10" stroke-width="3"/>
+      <line y1="14.869" x2="14.869" transform="translate(13.33 13.948)" fill="#fff" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

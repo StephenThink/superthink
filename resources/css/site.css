@@ -1,0 +1,257 @@
+/* This is all you. */
+
+/* $handleWidth: 5rem; */
+:root {
+    --handleWidth: 5rem;
+}
+
+@font-face {
+    font-family: "geo-black";
+    src: url('/fonts/geograph-web-black.eot') format("eot");
+    src: url('/fonts/geograph-web-black.woff') format("woff");
+    src: url('/fonts/geograph-web-black.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-regular";
+    src: url('/fonts/geograph-web-regular.eot') format("eot");
+    src: url('/fonts/geograph-web-regular.woff') format("woff");
+    src: url('/fonts/geograph-web-regular.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-bold";
+    src: url('/fonts/geograph-web-bold.eot') format("eot");
+    src: url('/fonts/geograph-web-bold.woff') format("woff");
+    src: url('/fonts/geograph-web-bold.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-regular-italic";
+    src: url('/fonts/geograph-web-regular-italic.eot') format("eot");
+    src: url('/fonts/geograph-web-regular-italic.woff') format("woff");
+    src: url('/fonts/geograph-web-regular-italic.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-medium";
+    src: url('/fonts/geograph-web-medium.eot') format("eot");
+    src: url('/fonts/geograph-web-medium.woff') format("woff");
+    src: url('/fonts/geograph-web-medium.woff2') format("woff2");
+}
+
+/* .font-black { font-family: geo-black; }
+.font-regular { font-family: "geo-regular"; }
+.font-bold { font-family: geo-bold; }
+.font-regular-italic { font-family: geo-regular-italic; }
+.font-medium { font-family: geo-medium ; } */
+
+
+@responsive {
+    .bg-gradient-yellow-to-dark {
+        background: rgb(255,199,52);
+        background: linear-gradient(90deg, rgba(255,199,52,1) 65%, rgba(66,69,74,1) 65%);
+    }
+
+    .bg-gradient-blue-to-light {
+        background: linear-gradient(0deg, rgba(247,247,247, 1) 30%, rgba(10, 6, 77, 1) 30%);
+    }
+
+    .bg-gradient-transparent-to-yellow {
+        background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
+    }
+}
+.accent {
+    @apply text-yellow border-t border-yellow inline-block pt-2
+}
+
+.main {
+    &__panel {
+        @apply py-32
+        
+    }
+    &__panel_small {
+        @apply py-24
+    }
+    &__panel_x-small {
+        @apply py-12
+    }
+}
+
+.bubbles-svg {
+    width: 450px;
+    margin-top: -9rem;
+    margin-right: -9rem;
+}
+.small_bubble_banner {
+    height: 200%;
+    top: -50%;
+}
+
+.handle {
+    & .syp {
+        width: max-content;
+    }
+    &.open {
+        background-color: #FFC734;
+        & .logo {
+            color: #42454A;
+            fill: currentColor;
+        }
+    }
+}
+/*  Svg line animations */
+.blog-arrow{
+    &-left {
+        #Line_2 {
+            /* stroke-dashoffset: -15px; */
+            stroke-dasharray: 15;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+        &:hover {
+            #Line_2 {
+                stroke-dashoffset: -120px;
+                transition: stroke-dashoffset 2s ease-out;
+            }
+        }
+    }   
+    &-right {
+        #Line_2 {
+            /* stroke-dashoffset: -15px; */
+            stroke-dasharray: 15;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+        &:hover {
+            #Line_2 {
+                stroke-dashoffset: -120px;
+                transition: stroke-dashoffset 2s ease-out;
+            }
+        }
+    }
+}
+
+.circle-animation {
+    cursor: pointer;
+    & path {
+        &:first-child {
+            stroke-dasharray: 162;
+            transition: stroke-dashoffset .5s ease-out;
+        }
+    }
+    
+    
+    &:hover {
+        & path {
+            &:first-child {
+                stroke-dashoffset: 162;
+                transition: stroke-dashoffset .7s ease-out;
+            }
+        }
+    }
+}
+
+#navigation-panel {
+    &.open {
+        transform: translate( calc( 100vw ) );
+    }
+    @screen md {
+        &.open {
+            transform: translate( calc( 100vw + 5rem ) );
+        }
+    }
+    
+}
+.content-slider {
+    &.active {
+        @apply text-dark;
+    }
+}
+.burger {
+    &__bun {
+        margin: 0 auto;
+        width: 22px;
+    }
+    &__slice {
+        height: 3px;
+        width: 100%;
+        margin-bottom: 6px;
+        background: white;
+        transition: width .2s ease-in-out;
+        &:last-child {
+            width: 14px;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        & .burger {
+            &__slice {
+                transition: width .2s ease-in-out;
+                &:last-child {
+                    
+                    width: 22px;
+                }
+            }
+        }
+    }
+}
+.quote {    
+    font-size: 8rem;
+    height: 136px;
+    transform-orgin: top right;
+    &-left,
+    &-right {
+        transform: rotate(200deg);
+    }
+    @screen md {
+        font-size: 10rem;
+    }
+    @screen lg {
+        font-size: 12rem;
+    }
+    @screen xl {
+        font-size: 16rem;
+    }
+    
+    
+}
+.fancy {
+    transform: translateY(50px);
+    opacity: 0;
+}
+/*  any time we use markup as content  */
+.content {  
+    h2 {
+        @apply font-bold text-lg my-8
+    }
+    p {
+        @apply mt-4
+    }
+}
+
+.footer {
+    &__panel {
+        @apply py-24 px-16
+    }
+}
+
+/*  Some animation stuff  */
+
+[data-scroll-call="fancy"] {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+[data-scroll-call="wipe"] {
+    img {
+        transform: translateX(-100%);
+        width: 100%;
+        opacity: 0;
+    }
+    .initial-wipe {
+        content: ' ';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,66 @@
+{{ partial:partials/hero classes="bg-yellow text-dark  " bubbles="1" display="{{hero_text}}" show_playreel="1" }}
+
+<div class="main__panel bg-light " data-scroll-section>
+    <div class="container">
+        <h2 class="accent">Why us?</h2>
+        <h1 class="font-black mt-4 text-2xl leading-tight md:text-5xl fancy" data-scroll data-scroll-call="fancy">{{ why_us_headline }}</h1>
+        <div class="block md:flex -mx-3 mt-10 items-stretch">
+
+            {{ why_us_content }}
+            
+                {{## <div class='w-{{ why_us_content|count == 1 ? "full" : "--" . why_us_content|count }} px-2'> ##}}
+                <div class="w-full px-3 mb-12 md:mb-0 md:w-1/3">
+                    <div class="h-full flex flex-col">
+                        <div class="overflow-hidden">
+                            <div class="pb-full relative"  data-scroll data-scroll-call="wipe" data-scroll-delay="{{index}}">
+                                <span class="initial-wipe bg-dark"></span>
+                                {{ glide:image width="600" fit="crop_focal"}}
+                                    <img src="{{ url }}" alt="{{ alt }}" class="w-full h-full object-cover absolute" loading=lazy>
+                                {{ /glide:image }}
+                            </div>
+                        </div>
+                        <p class="mt-8 text-yellow font-bold">{{heading}}</p>
+                        <p class="mt-8 ">{{ excerpt }}</p>
+
+                        <a class="mt-auto block text-grey md:mt-8" href="{{ link_url ?? '/' }}">{{ link_text ?? 'generic link text' }}</a>
+                    </div>
+                </div>
+            {{ /why_us_content }}
+        </div>
+    </div>
+</div>
+
+<div class="main__panel_small h-screen bg-darker" data-scroll-section>
+    
+    <div class="container h-full flex flex-col justify-between">
+        <div class="">
+            <h2 class="accent">The Think! way of doing things</h2>
+        </div>
+        <div class="text-5xl md:text-display-hero font-black">
+            <div class="text-white leading-tight fancy" data-scroll data-scroll-call="fancy">Stand out ideas get</div>
+            <div class="text-yellow leading-tight fancy" data-scroll data-scroll-call="fancy">outstanding results</div>
+        </div>
+        <div class="">
+            {{ partial:partials/link_arrow textColor="text-yellow" text="See how" }}
+        </div>
+    </div>
+
+</div>
+
+{{ taxonomy:core-services as="data" }}
+    {{  partial:partials/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
+{{ /taxonomy:core-services }}
+
+
+
+{{ partial:partials/banner 
+    heading="{{ banner_heading }}" 
+    text="{{ banner_text }}"
+    email="{{ banner_email }}"
+    bg="bg-yellow"
+    bubbles="true"
+}}
+
+{{ partial:partials/client_list }}
+
+{{ partial:partials/awards_list }}

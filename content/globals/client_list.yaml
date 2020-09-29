@@ -1,0 +1,33 @@
+title: 'Client List'
+data:
+  clients:
+    -
+      client_logo: client-list/BAE.svg
+      client_name: 'BEA Systems'
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/Bisocript.svg
+      client_name: Bioscript
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/Climavent.svg
+      client_name: Climavent
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/ParkingEye.svg
+      client_name: 'Parking Eye'
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/Pic.svg
+      client_name: 'Pic Property'
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/Utiligroup.svg
+      client_name: Utiligroup
+      type: client
+      enabled: true

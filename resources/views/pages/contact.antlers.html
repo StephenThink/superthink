@@ -1,0 +1,36 @@
+<section class="bg-transparent md:bg-gradient-yellow-to-dark h-screen" data-scroll-section>
+    <div class="h-full w-screen md:container">
+        <div class="h-full flex flex-col md:flex-row ">
+    
+            <div class="w-screen md:w-7/12 bg-yellow text-dark main__panel flex items-center">
+                <div class="container">
+                    <div class="flex flex-col">
+                        <div class="w-full text-7xl font-black fancy leading-none lg:text-14xl" data-scroll data-scroll-call="fancy">
+                            {{ slogan }}
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="w-screen md:w-5/12 bg-dark text-white main__panel flex items-center">
+                <div class="container">
+                    <p class="mt-8">{{ written_address }}</p>
+                    <div class="mt-8">
+                        <p> <a href="tel:{{ contact_information:tel}}">{{ contact_information:tel}}</a></p>
+                        <p><a href="mailto:{{ contact_information:email}}">{{ contact_information:email}}</a></p>
+                    </div>
+                    <p class="mt-8">{{ contact_information:company_address_alt}}</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</section>
+
+<div class="flex flex-wrap">
+    {{ images }}
+        <div class="{{ width }}">
+            <img src="{{ image }}" alt="" class="object-cover h-full w-full" loading=lazy>
+        </div>
+    {{ /images }}
+</div>

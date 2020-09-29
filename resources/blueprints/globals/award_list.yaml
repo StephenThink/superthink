@@ -1,0 +1,35 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: award
+        field:
+          sets:
+            award:
+              display: Award
+              fields:
+                -
+                  handle: logo
+                  field:
+                    mode: grid
+                    container: assets
+                    folder: awards-list
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    display: Logo
+                    type: assets
+                    width: 50
+                    listable: hidden
+                -
+                  handle: award_name
+                  field:
+                    input_type: text
+                    display: 'Award Name'
+                    type: text
+                    width: 50
+                    listable: hidden
+          display: Award
+          type: replicator
+          listable: hidden

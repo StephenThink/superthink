@@ -1,0 +1,15 @@
+<div class="bg-light">
+    <div class="container-none md:container flex flex-col">
+        <div class="pb-1/2 relative mt-0 md:-mt-48">
+            {{ main_image }}
+            <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full object-cover absolute" loading=lazy>
+            {{ /main_image }}
+        </div>
+        {{ if headline }}
+            <div class="relative font-black text-xl w-full bg-yellow p-8 self-end mt-0 mr-0 md:-mr-8 md:-mt-20 md:w-5/12 ">
+                {{ headline }}
+            </div>
+        {{ /if }}
+        
+    </div>
+</div>

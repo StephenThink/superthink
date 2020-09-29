@@ -1,0 +1,232 @@
+title: 'Case Study'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: hero
+      -
+        handle: tagline
+        field:
+          input_type: text
+          type: text
+          instructions: 'To be shown on the case studies listing'
+          listable: hidden
+          display: Tagline
+      -
+        handle: secondary_image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          type: assets
+          instructions: 'image that''s offset from the blue container'
+          listable: hidden
+          display: 'Secondary Image'
+          container: assets
+          folder: /
+          max_files: 1
+      -
+        handle: mini_introduction
+        field:
+          type: textarea
+          instructions: 'To be displayed underneath the title on the case study page.'
+          listable: hidden
+          display: 'Mini Introduction'
+      -
+        handle: sector
+        field:
+          type: list
+          instructions: 'Keep adding to the list and they''ll be shown on the page'
+          listable: hidden
+          display: Sector
+      -
+        import: call_to_action
+      -
+        handle: main_content
+        field:
+          always_show_set_button: false
+          sets:
+            the_problem:
+              display: 'The Problem'
+              fields:
+                -
+                  handle: intro
+                  field:
+                    type: textarea
+                    listable: hidden
+                    display: intro
+                -
+                  handle: image
+                  field:
+                    mode: grid
+                    container: assets
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    type: assets
+                    listable: hidden
+                    display: Image
+                -
+                  handle: sign_off
+                  field:
+                    type: textarea
+                    listable: hidden
+                    display: 'Sign Off'
+            the_idea:
+              display: 'The Idea'
+              fields:
+                -
+                  handle: intro
+                  field:
+                    type: textarea
+                    listable: hidden
+                    display: Intro
+                -
+                  handle: full_image
+                  field:
+                    mode: grid
+                    container: assets
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    type: assets
+                    listable: hidden
+                    display: 'Full Image'
+                -
+                  handle: outro
+                  field:
+                    type: textarea
+                    listable: hidden
+                    display: Outro
+            the_work:
+              display: 'The Work'
+              fields:
+                -
+                  handle: intro
+                  field:
+                    type: textarea
+                    listable: hidden
+                    display: Intro
+            gallery:
+              display: Gallery
+              fields:
+                -
+                  handle: gallery
+                  field:
+                    mode: grid
+                    container: assets
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    type: assets
+                    instructions: 'add as many images as you want - images will displayed half width.'
+                    listable: hidden
+                    display: Gallery
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - h1
+            - h4
+            - h5
+            - h6
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          type: bard
+          instructions: 'Add the blocks that you need or have content for - anything kept empty will be hidden.'
+          listable: hidden
+          display: 'Main Content'
+      -
+        import: two_third_banner
+      -
+        handle: outro
+        field:
+          type: textarea
+          listable: hidden
+          display: Outro
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: greatest_hits
+        field:
+          display: 'Greatest Hits'
+          type: toggle
+          instructions: 'Toggle this on so that we can display them in the greatest hits of the case studies'
+          listable: hidden
+      -
+        handle: core-services
+        field:
+          type: terms
+          taxonomies:
+            - core-services
+          display: 'Core Services'
+          mode: select
+      -
+        handle: services_filter
+        field:
+          type: terms
+          taxonomies:
+            - services_filter
+          display: 'Services Filter'
+          mode: select
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - case_studies
+          max_items: 1
+          listable: false
+          localizable: true
+  employees:
+    display: Employees
+    fields:
+      -
+        handle: employee_heading
+        field:
+          input_type: text
+          display: 'Employee Heading'
+          type: text
+          listable: hidden
+      -
+        handle: employee_list
+        field:
+          mode: select
+          collections:
+            - employees
+          display: Employees
+          type: entries
+          listable: hidden

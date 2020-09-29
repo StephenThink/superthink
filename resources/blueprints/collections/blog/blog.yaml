@@ -1,0 +1,169 @@
+title: 'Blog Posts'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: thumbnail
+        field:
+          mode: grid
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: Thumbnail
+          type: assets
+          listable: hidden
+      -
+        import: negative_image
+      -
+        handle: introduction
+        field:
+          type: markdown
+          localizable: true
+          instructions: 'This is the introduction of the blog post'
+          listable: hidden
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          display: Introduction
+      -
+        handle: content
+        field:
+          always_show_set_button: false
+          sets:
+            before_image_content_group:
+              display: 'Before Image Content Group'
+              fields:
+                -
+                  handle: header
+                  field:
+                    input_type: text
+                    display: Header
+                    type: text
+                    instructions: 'This will be outputted in a h3 tag'
+                    listable: hidden
+                -
+                  handle: blog_content
+                  field:
+                    display: 'Blog Content'
+                    type: textarea
+                    listable: hidden
+            image:
+              display: Image
+              fields:
+                -
+                  handle: offset_image
+                  field:
+                    mode: grid
+                    container: assets
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    display: 'Offset Image'
+                    type: assets
+                    listable: hidden
+            after_image_content_group:
+              display: 'After Image Content Group'
+              fields:
+                -
+                  handle: header
+                  field:
+                    input_type: text
+                    display: Header
+                    type: text
+                    listable: hidden
+                -
+                  handle: blog_content
+                  field:
+                    display: 'Blog Content'
+                    type: textarea
+                    listable: hidden
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - h1
+            - h4
+            - h5
+            - h6
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: Content
+          type: bard
+          listable: hidden
+      -
+        import: two_third_banner
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - blog
+          max_items: 1
+          listable: false
+          localizable: true
+  employees:
+    display: Employees
+    fields:
+      -
+        handle: employee_heading
+        field:
+          input_type: text
+          display: 'Employee heading'
+          type: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: employee_list
+        field:
+          mode: select
+          collections:
+            - employees
+          display: Employees
+          type: entries
+          listable: hidden

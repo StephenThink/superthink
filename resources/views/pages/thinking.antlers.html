@@ -1,0 +1,67 @@
+{{ partial:partials/hero classes="text-dark bg-light" display="{{hero_text}}" show_playreel="0" }}
+
+{{ partial:partials/negative_image }}
+
+
+<section class="main__panel bg-light">
+    <div class="container">
+        <div class="flex flex-wrap -mx-4">
+
+            {{ collection:blog limit="4" paginate="true" as="posts" }}
+
+                {{ if no_results }}
+                    <p>Damn, we havn't written anything yet. Check back soon.</p>
+                {{ /if }} 
+
+
+                {{ posts }}
+
+                    <div class="w-full md:w-1/4 p-4">
+                        <a href="{{ url }}">
+                            <div class="pb-2/3 relative">
+                                {{ if thumbnail }}
+                                    <img src="{{ thumbnail }}" class="h-full w-full absolute object-cover" loading=lazy>
+                                {{ /if }}
+                            </div>
+                        
+                            <div class="mt-2 font-bold text-lg">
+                                {{ title }}        
+                            </div>
+                        </a>
+                    </div>
+
+                {{ /posts }}
+
+                {{ paginate }}
+                    <div class="flex w-full justify-between mt-24 text-lg px-4">
+                        <div>
+                            <a href="{{ prev_page }}" class="flex blog-arrow-left">
+                                <span class="text-yellow mr-2">
+                                    {{ svg src="/assets/svgs/arrow-left" }}
+                                </span> Newer Posts
+                            </a>
+                        </div>
+                        <div>
+                            <a href="{{ next_page }}" class="flex blog-arrow-right">
+                                Older Posts 
+                                <span class="text-yellow ml-2">
+                                    {{ svg src="/assets/svgs/arrow-right"  }}
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <!-- {{ current_page }} of {{ total_pages }} pages
+                    (There are {{ total_items }} posts) -->
+
+                    
+                {{ /paginate }}
+                
+            {{ /collection:blog }}
+        </div>
+
+    </div>
+</section>
+
+

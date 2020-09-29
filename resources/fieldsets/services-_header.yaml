@@ -1,0 +1,44 @@
+title: Services-header
+fields:
+  -
+    handle: introduction
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - removeformat
+        - h1
+        - h4
+        - h5
+        - underline
+        - strikethrough
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      type: bard
+      instructions: 'Text to be displayed under the title'
+      localizable: false
+      listable: hidden
+      display: Introduction
+      validate: required
+  -
+    handle: header_animation
+    field:
+      mode: grid
+      container: assets
+      folder: /
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      type: assets
+      instructions: 'display an animation to be loaded by lottie (edit:could enter this as text)'
+      localizable: false
+      listable: hidden
+      display: 'Header Animation'

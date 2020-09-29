@@ -1,0 +1,19 @@
+title: 'Case Studies'
+template: case_studies/show
+layout: layout
+taxonomies:
+  - core-services
+  - services_filter
+revisions: false
+route: '/work/{slug}'
+sort_dir: asc
+structure:
+  root: false
+  max_depth: 1
+  tree:
+    -
+      entry: 53966610-757c-40bb-92fd-b0f77a3706e6
+    -
+      entry: 53966610-757c-40bb-92fd-b0f77a3706e7
+    -
+      entry: 53966610-757c-40bb-92fd-b0f77a3706e9

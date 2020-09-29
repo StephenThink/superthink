@@ -1,0 +1,22 @@
+title: 'Negative Image'
+fields:
+  -
+    handle: main_image
+    field:
+      mode: grid
+      container: assets
+      folder: /
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: 'Main Image'
+      type: assets
+      listable: hidden
+  -
+    handle: headline
+    field:
+      input_type: text
+      display: Headline
+      type: text
+      listable: hidden
+      instructions: 'This content will appear in a yellow box on the negative image. Not always needed.'

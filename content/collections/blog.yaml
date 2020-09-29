@@ -1,0 +1,19 @@
+title: 'Blog Posts'
+template: blog/show
+layout: layout
+mount: 53195ae4-5580-4d96-ac96-464c2cf2b354
+revisions: false
+route: '/{mount}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: false
+  max_depth: 1
+  tree:
+    -
+      entry: 0f01c817-05d9-44c2-9990-71ea1a0b4647
+    -
+      entry: 274c4097-7060-46c8-988a-744948db0ce8

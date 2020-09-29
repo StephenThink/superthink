@@ -1,0 +1,47 @@
+<div class="main__panel bg-light {{padding}}">
+
+    <div class="container flex">
+        <div class="w-full hidden md:block md:w-2/12"></div>
+        <div class="w-full md:w-9/12 flex flex-col ">
+            <h4 class="text-3xl font-bold">{{ employee_heading ?? 'Wanna get in touch?'}}</h4>
+            
+
+            {{ if employee_list }}
+                <div class="flex mt-8">
+                    {{ employee_list }}
+                        <div class="flex w-1/2">
+                            <div class="w-1/3">
+                                <div class="pb-full relative rounded-full overflow-hidden">
+                                    {{ employee_image }}
+                                        <img class="absolute h-full w-full object-cover" src="{{ url }}" alt="{{ alt }}" loading=lazy>
+                                    {{ /employee_image }}
+                                </div>
+                            </div>
+                            <div class="w-2/3 px-4 flex flex-col justify-center">
+                                <p class="font-bold">{{ title }}</p>
+                                <p>{{ employee_role }}</p>
+                                <a href="mailto:{{email}}" class="text-light-blue text-sm underline">Email Me</a>
+                            </div>
+                        </div>
+                    {{ /employee_list }}
+                </div>
+            {{ else }}
+                <div class="w-1/2 flex mt-8">
+                    <div class="w-1/3">
+                        <div class="pb-full relative rounded-full overflow-hidden">
+                            <img class="absolute h-full w-full object-cover" src="/assets/bruce.png" alt="" loading=lazy>
+                        </div>
+                    </div>
+                    <div class="w-2/3 px-4 flex flex-col justify-center">
+                        <p class="font-bold">Bruce the Moose</p>
+                        <p>Table tennis master</p>
+                        <a href="mailto:info@thinkcreative.uk.com" class="text-light-blue text-sm underline">Email Me</a>
+                    </div>
+                </div>
+            {{ /if }}
+            
+        </div>
+
+    </div>
+
+</div>

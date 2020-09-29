@@ -1,0 +1,16 @@
+title: 'Two Third Banner'
+fields:
+  -
+    handle: banner_text
+    field:
+      type: textarea
+      listable: hidden
+      display: 'Banner Text'
+      instructions: 'This is the content that will be in the 2/3 width banner'
+  -
+    handle: who_said_it
+    field:
+      input_type: text
+      type: text
+      listable: hidden
+      display: 'Who said it'

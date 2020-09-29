@@ -1,0 +1,8 @@
+title: 'Award List'
+data:
+  award:
+    -
+      logo: awards-list/red_rose_award.png
+      award_name: 'Red Rose Award 2020'
+      type: award
+      enabled: true

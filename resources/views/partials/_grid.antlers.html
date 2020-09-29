@@ -1,0 +1,30 @@
+<div class="main__panel bg-light-grey">
+    <div class="container">
+        <h3 class="font-black text-3xl">{{ title }}</h3>
+        <div class="flex flex-wrap  -mx-4">
+                
+            {{ collection from="{what}" }}
+                {{ if no_results }}
+                    <p>Dang, rest asured; We're working on it.</p>
+                {{ else }}
+                    <div class="w-1/2 md:w-1/3 px-4 mt-12">
+                        <a href="{{ url }}">
+                            <div class="pb-2/3 relative">
+                                {{ if thumbnail }}
+                                    {{ thumbnail }}
+                                        <img src="{{ thumbnail:url }}" alt="{{ alt }}" class="h-full w-full absolute object-cover" loading=lazy>
+                                    {{ /thumbnail }}
+                                {{ /if }}
+                            </div>
+                            <div class="mt-2 font-bold text-lg">
+                                {{ title }}        
+                            </div>
+                        </a>
+                    </div>
+                {{ /if }}
+            {{ /collection }}
+        </div>
+        
+        
+    </div>
+</div>

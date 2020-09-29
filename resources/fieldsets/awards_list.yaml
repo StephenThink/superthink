@@ -1,0 +1,32 @@
+title: 'Awards List'
+fields:
+  -
+    handle: awards
+    field:
+      sets:
+        award:
+          display: Awards
+          fields:
+            -
+              handle: award_logo
+              field:
+                mode: grid
+                container: assets
+                folder: awards-list
+                restrict: false
+                allow_uploads: true
+                type: assets
+                listable: hidden
+                display: 'Awards Logo'
+                width: 50
+            -
+              handle: award_name
+              field:
+                input_type: text
+                display: 'Award name'
+                type: text
+                width: 50
+                listable: hidden
+      type: replicator
+      listable: hidden
+      display: Awards

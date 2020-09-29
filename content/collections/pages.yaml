@@ -1,0 +1,21 @@
+title: Pages
+template: default
+layout: layout
+revisions: false
+route: '{parent_uri}/{slug}'
+sort_dir: asc
+structure:
+  root: true
+  tree:
+    -
+      entry: home
+    -
+      entry: 4b041b66-7921-4307-99a0-2aaecb2d2504
+    -
+      entry: c220f30e-3f32-4a6d-958d-6d8577ff4e1b
+    -
+      entry: 245b90b3-1382-45b2-8ea4-5ab7469ea872
+    -
+      entry: 3be6a7b1-6a3d-4e2a-95a9-3b54a70f87c4
+    -
+      entry: 53195ae4-5580-4d96-ac96-464c2cf2b354

@@ -1,0 +1,17 @@
+title: Quote
+fields:
+  -
+    handle: quote
+    field:
+      type: textarea
+      localizable: false
+      listable: hidden
+      display: Quote
+  -
+    handle: cite
+    field:
+      input_type: text
+      type: text
+      localizable: false
+      listable: hidden
+      display: Cite

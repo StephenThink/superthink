@@ -1,0 +1,28 @@
+<div class="w-full mt-8">
+    <div class="flex justify-between">
+        <h2 class="font-black text-2xl">{{ header }}</h2>
+        <p><a href="/work/{{ slug | lower }}/all">show more</a></p>
+    </div>
+    <div class="flex mt-2 -mx-4">
+        {{ entries  limit="3" sort="random" }}
+        
+            {{ if no_results }}
+                <div class="w-full  px-4">
+                    <p class="">We've nothing yet to show how great we are yet, but rest assured we're masters of <span class="font-bold">{{ header }}</span>, table tennis and kung fu.</p>
+                </div>
+                
+            {{ else }}
+                <div class="w-1/3  px-4">
+                    <a href="{{ url }}" class="">
+                        <div class="pb-2/3 relative">
+                            {{ hero_image }}
+                            <img src="{{ url }}" alt="{{ alt }}" class=" h-full w-full absolute object-cover" loading=lazy>
+                            {{ /hero_image }}
+                        </div>    
+                        <p class="font-bold">{{ title }}</p>
+                    </a>
+                </div>
+            {{ /if }}
+        {{ /entries }}
+    </div>
+</div>

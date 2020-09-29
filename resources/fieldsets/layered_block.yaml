@@ -1,0 +1,50 @@
+title: 'Layered Block'
+fields:
+  -
+    handle: layered_title
+    field:
+      input_type: text
+      type: text
+      instructions: 'Bold yellow text'
+      localizable: false
+      listable: hidden
+      display: Title
+      width: 33
+  -
+    handle: you_us
+    field:
+      options:
+        'null': Select
+        you: You
+        us: Us
+        step: Steps
+      clearable: false
+      multiple: false
+      searchable: false
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      type: select
+      instructions: 'Do you want to show the you or us from the service?'
+      localizable: false
+      listable: true
+      display: You/Us
+      validate:
+        - required
+      width: 33
+  -
+    handle: show_link
+    field:
+      type: toggle
+      instructions: 'DO you want to show links to the services?'
+      localizable: false
+      listable: true
+      display: 'Show Link'
+      width: 33
+  -
+    handle: layered_content
+    field:
+      type: textarea
+      localizable: false
+      listable: hidden
+      display: Content

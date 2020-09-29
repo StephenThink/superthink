@@ -1,0 +1,33 @@
+title: 'Client List'
+fields:
+  -
+    handle: clients
+    field:
+      sets:
+        client:
+          display: Client
+          fields:
+            -
+              handle: client_logo
+              field:
+                mode: grid
+                container: assets
+                folder: client-list
+                restrict: false
+                allow_uploads: true
+                type: assets
+                listable: hidden
+                display: 'Client Logo'
+                width: 50
+                max_files: 1
+            -
+              handle: client_name
+              field:
+                input_type: text
+                display: 'Client name'
+                type: text
+                width: 50
+                listable: hidden
+      type: replicator
+      listable: hidden
+      display: Clients

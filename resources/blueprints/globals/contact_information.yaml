@@ -1,0 +1,34 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: tel
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Company Telephone Number'
+      -
+        handle: company_address
+        field:
+          type: textarea
+          localizable: false
+          listable: hidden
+          display: 'Company Address'
+      -
+        handle: company_address_alt
+        field:
+          type: textarea
+          localizable: false
+          listable: hidden
+          display: 'Company Address alt'
+      -
+        handle: email
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: Email

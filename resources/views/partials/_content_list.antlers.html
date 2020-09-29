@@ -1,0 +1,69 @@
+<div class="main__panel bg-light">
+
+    <div class="container">
+        <div class="block md:flex border-b border-light-grey pb-12">
+            <div class="w-full md:w-3/12">
+                <h2 class="text-yellow font-black leading-tight text-4xl">{{ header }}</h2>
+            </div>
+            <div class="w-full ml-auto text-xl md:w-8/12">
+                {{ text }}
+            </div>
+        </div>
+        <div class="flex flex-col divide-y divide-light-grey items-end ">
+            {{ data }}
+                <div class="w-full md:w-2/3 py-16">
+
+                    {{ if you_us == 'step' }}
+                        <h3 class="text-yellow text-xl">{{ title }}</h3>
+                        <div class="mt-6 font-black leading-tight text-5xl">
+                            {{ noun }}
+                        </div>
+                        <p>{{ text }}</p>
+                    {{ /if }}
+                    
+                    {{ if you_us == 'us' }}
+                        <h3 class="text-yellow text-xl">{{ title }}</h3>
+                        <div class="mt-6 font-black leading-tight text-5xl">
+                            {{ tag_line_us }}
+                        </div>
+                    {{ /if }}
+
+                    {{ if you_us == 'you' }}
+                        <h3 class="text-grey text-lg">{{ strapline }}</h3>
+                        <div class="my-3 font-black leading-tight text-5xl">
+                            
+                                {{ tag_line_you }}
+                            </a>
+                        </div>
+                        <a href="{{ url }}">
+                            {{ partial:partials/link_arrow textSize="text-lg" textColor="text-yellow" text="View all {title} services" }}
+                        </a>
+                    {{ /if }}
+                    
+                </div>
+            {{ /data }}
+
+            {{ if you_us == 'you'}}
+                <div class="w-full md:w-2/3 py-16">
+                    <h3 class="text-grey text-lg">Help! I already know what I need</h3>
+                    <div class="mt-6 font-black text-5xl">
+                        <p>That’s cool. Check out all our services below...</p>
+                    </div>
+                </div>
+            {{ /if }}
+            
+        </div>
+
+        {{ if you_us == 'us' }}
+            <div class="flex flex-col items-end">
+                <div class="w-full md:w-2/3 py-16">
+                    <a href="/services">
+                        {{ partial:partials/link_arrow textColor="text-yellow" text="View all services" }}
+                    </a>
+                </div>
+            </div>
+        {{ /if }}
+
+    </div>
+
+</div>

@@ -1,0 +1,32 @@
+title: Hero
+fields:
+  -
+    handle: hero_text
+    field:
+      input_type: text
+      type: text
+      localizable: false
+      listable: hidden
+      display: 'Hero Text'
+      width: 50
+  -
+    handle: hero_image
+    field:
+      mode: grid
+      container: assets
+      folder: /
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      type: assets
+      localizable: false
+      width: 50
+      listable: hidden
+      display: Image
+  -
+    handle: hero_intro
+    field:
+      type: textarea
+      localizable: false
+      listable: hidden
+      display: 'Hero Intro'

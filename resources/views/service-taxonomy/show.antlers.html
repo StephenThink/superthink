@@ -1,0 +1,26 @@
+<!-- This is where we show a core service page - brand;communication;... -->
+{{ if hero_image }}
+    {{ partial:partials/hero classes="" show_playreel="0"  }}
+{{ /if }}
+
+
+<section class="main__panel bg-light">
+    <div class="container flex">
+        <div class="hidden w-full md:w-2/12 md:block"></div>
+        <div class="w-full md:w-1/2 mx-auto">
+            <h1 class="text-5xl font-black">{{ title }}</h1>
+
+            <p class="mt-4 text-lg">{{ introduction }}</p>
+            
+            <div class="content mt-4">
+                {{ content }}
+            </div>
+        </div>
+        <div class="hidden w-full md:w-4/12 md:block"></div>
+    </div>
+</section>
+
+{{ partial:partials/cta custom_cta="Need an idea? Get in touch for a chat..." }}
+
+
+{{ partial:partials/grid_filter title="All {{title}} Services" what="services" filter="{slug}"}}

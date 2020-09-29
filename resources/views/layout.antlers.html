@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        {{# Preload fonts #}}
+        {{# <link rel="preload" href="/fonts/geograph-web-black.eot" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-black.woff" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-black.woff2" as="font" crossorigin="anonymous" />
+
+        <link rel="preload" href="/fonts/geograph-web-bold.eot" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-bold.woff" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-bold.woff2" as="font" crossorigin="anonymous" />
+
+        <link rel="preload" href="/fonts/geograph-web-medium.eot" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-medium.woff" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-medium.woff2" as="font" crossorigin="anonymous" />
+
+        <link rel="preload" href="/fonts/geograph-web-regular-italic.eot" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-regular-italic.woff" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-regular-italic.woff2" as="font" crossorigin="anonymous" />
+
+        <link rel="preload" href="/fonts/geograph-web-regular.eot" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-regular.woff" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/geograph-web-regular.woff2" as="font" crossorigin="anonymous" /> #}}
+
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+        
+    </head>
+    <body class="font-regular leading-normal text-dark site-wrap" data-barba="wrapper">
+
+        <div class="block md:flex-col overflow_hidden">
+            {{ partial:partials/nav }}
+            {{ partial:partials/handle }}
+            
+            <div class="w-screen ml-0 md:w-handle-nm  md:ml-handle" data-barba="container">
+                {{ template_content }}
+            </div>
+            
+            {{ partial:partials/footer }}
+
+        </div>
+
+    </body>
+    <script src="{{ mix src='/js/site.js' }}"></script>
+</html>

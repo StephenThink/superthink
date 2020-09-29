@@ -1,0 +1,29 @@
+title: 'Call To Action'
+fields:
+  -
+    handle: call_to_action
+    field:
+      input_type: text
+      type: text
+      localizable: false
+      listable: hidden
+      display: 'Call to action'
+      validate:
+        - required
+      width: 50
+  -
+    handle: cta_button
+    field:
+      input_type: text
+      type: text
+      localizable: false
+      width: 50
+      listable: hidden
+      display: 'Call to action button'
+  -
+    handle: cta_link
+    field:
+      type: link
+      localizable: false
+      listable: hidden
+      display: 'Call to action link'

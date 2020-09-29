@@ -1,0 +1,18 @@
+<section class="main__panel_x-small bg-light-grey">
+    <div class="container">
+        <div class="block  flex-row text-center items-center md:flex md:text-left ">
+            <div class="w-full hidden md:block md:w-1/12"></div>
+
+            <div class="w-full  text-dark font-black text-4:5xl md:w-6/12  md:ml-auto">
+                Awards & Accreditations
+            </div>
+            <div class="w-full mt-8 md:mt-0 md:w-5/12 ">
+                {{ award_list:award }}
+                    <div class="w-1/3">
+                        <img src="{{ logo }}" alt="{{ award_name }}" loading=lazy>
+                    </div>
+                {{ /award_list:award }}
+            </div>
+        </div>
+    </div>
+</section>
