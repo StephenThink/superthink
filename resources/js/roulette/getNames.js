@@ -4,8 +4,9 @@ const getNames = () => {
     let items = document.getElementById('names').querySelectorAll('li');
 
     items.forEach( (el) => {
+       let name = el.querySelector('.name') ;
        names.push( 
-           {'fillStyle': 'transparent', 'text': el.textContent } 
+           {'fillStyle': 'transparent', 'text': name.textContent } 
         );
     });
 

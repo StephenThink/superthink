@@ -80,6 +80,9 @@ module.exports = {
       transitionProperty: {
         'background-color': 'background-color'
       },
+      rotate: {
+        '135': '135deg'
+      },
       colors: {
         yellow: "#FFC734",
         darker: "#2C2F33",

@@ -7965,9 +7965,10 @@ var getNames = function getNames() {
   var names = [];
   var items = document.getElementById('names').querySelectorAll('li');
   items.forEach(function (el) {
+    var name = el.querySelector('.name');
     names.push({
       'fillStyle': 'transparent',
-      'text': el.textContent
+      'text': name.textContent
     });
   });
   return names;
@@ -8072,7 +8073,9 @@ var nameToList = function nameToList() {
   var name = document.createTextNode(input.value);
   var cross = document.createTextNode('x'); //  set attributes/classes
 
-  li.setAttribute('class', 'flex justify-between pb-2'); // add an event listener
+  li.setAttribute('class', 'flex justify-between pb-2');
+  name_span.setAttribute('class', 'name');
+  delete_span.setAttribute('class', 'text-lg'); // add an event listener
 
   delete_span.addEventListener('click', _removeNameFromList__WEBPACK_IMPORTED_MODULE_0__["default"]); //  append chilren
 
@@ -8099,9 +8102,11 @@ var nameToList = function nameToList() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var removeNameFromList = function removeNameFromList(e) {
-  console.log(e);
+  // const names = document.querySelector('.names');
+  if (names.length <= 1) ; // return message("You can't have less than one brew maker.");
+
   var el = e.target;
-  console.log(el); // el.parentNode().remove();
+  el.parentNode.remove();
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (removeNameFromList);

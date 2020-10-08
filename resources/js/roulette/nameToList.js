@@ -21,6 +21,8 @@ const nameToList = () => {
 
     //  set attributes/classes
     li.setAttribute('class', 'flex justify-between pb-2');
+    name_span.setAttribute('class', 'name');
+    delete_span.setAttribute('class', 'text-lg');
 
     // add an event listener
     delete_span.addEventListener('click', removeNameFromList);

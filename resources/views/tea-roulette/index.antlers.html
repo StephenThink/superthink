@@ -34,12 +34,13 @@
 
 
 <div class="addNamesPanel h-screen w-screen ml-0 transform -translate-y-full top-0 left-0 z-30 bg-dark fixed   md:w-handle-nm md:ml-handle">
-    <div class="w-11/12 m-auto pt-32 overflow-scroll flex flex-row flex-wrap items-center justify-between md:w-1/2 relative">
-        <div class="close_addNamesPanel text-5xl text-yellow transform rotate-45 transition duration-500 absolute top-0 right-0 cursor-pointer hover:text-white">+</div>
+    <div class="w-11/12 m-auto pt-32 pb-12 overflow-scroll flex flex-row flex-wrap items-center justify-between md:w-1/2 relative">
+        <div class="close_addNamesPanel text-5xl text-yellow transform rotate-45 transition duration-500 absolute top-0 right-0 cursor-pointer hover:text-white hover:rotate-135">+</div>
         
         <div class="w-full flex items-center mb-10">
             <input type="text" class="addNewName text-yellow appearance-none outline-none bg-transparent border-b border-yellow placeholder-yellow pb-4 flex-1" placeholder="add a brew maker">
-            <span class="addNameToList inline-block leading-none text-yellow text-3xl cursor-pointer transition duration-500 transform hover:rotate-90">+</span>
+            {{# <span class="addNameToList inline-block leading-none text-yellow text-3xl cursor-pointer transition duration-500 transform hover:rotate-90">+</span> #}}
+            {{ partial:tea-roulette/partials/small_button classes="addNameToList text-sm mr-2 hover:text-dark" text="Add name" }}
         </div>
 
         <div>
@@ -48,7 +49,7 @@
         </div>
 
         <div class="flex self-start mr-2">
-            {{ partial:tea-roulette/partials/button classes="initWheel" text="Submit" }}
+            {{ partial:tea-roulette/partials/button classes="initWheel hover:text-dark" text="Submit" }}
         </div>
     </div>
 </div>

@@ -1,11 +1,14 @@
 const removeNameFromList = (e) => {
 
-    console.log(e);
+    // const names = document.querySelector('.names');
+
+    if(names.length <= 1);
+        // return message("You can't have less than one brew maker.");
+
+
     let el = e.target;
 
-    console.log(el);
-
-    // el.parentNode().remove();
+    el.parentNode.remove();
 
 }
 
