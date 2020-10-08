@@ -1,0 +1,14 @@
+<svg id="theBurger" class="overflow-visible" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
+  <!-- <g id="burger" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="10">
+    <line class="patty" x1="50" y1="61" x2="150" y2="61" />
+    <path class="buns" d="M50,29h96c27,0,48-1,34,40-18.12,53.08-48.64,23.86-48.64,23.86L60.64,22.14"/>
+    <path class="buns" d="M50,94h96c27,0,48,1,34-40C161.88,1,131.36,30.17,131.36,30.17L60.64,100.88"/>
+  </g> -->
+
+  <g id="burger"  fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="10">
+    <line class="patty" stroke-linecap="square" x1="7.041748046875" y1="48.93947505950928" x2="107.041748046875" y2="48.93947505950928" id="svg_1" stroke-dasharray="none"></line>
+    <path class="buns" stroke-linecap="square" d="m 7.0417 16.9395 l 96 0 c 27 0 53 1 39 42 c -18.12 53.08 -53.64 21.86 -53.64 21.86 l -70.72 -70.72 " id="svg_2" stroke-dasharray="none" pathLength="100"></path>
+    <path class="buns" stroke-linecap="square" d="m 7.0417 81.9395 l 96 0 c 27 0 48 1 34 -40 c -18.12 -53 -48.64 -23.83 -48.64 -23.83 l -70.72 70.71 " id="svg_3" stroke-dasharray="none" pathLength="100"></path>
+  </g>
+</svg>
+

@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 //    'title' => 'Example'
 // ]);
 Route::get('/work/{service}/all', 'CaseStudyController@index');
+
+// Route::get('/tea-roulette', function() {
+
+//     return (new \Statamic\View\View)
+//             ->template('tea-roulette.index')
+//             ->layout('layout');
+//             // ->with(['data' => $byService]);
+
+// });

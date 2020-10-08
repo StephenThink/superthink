@@ -11,7 +11,9 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('resources/js/site.js', 'public/js')
+mix
+    .js('resources/js/site.js', 'public/js')
+    .js('resources/js/tea.js', 'public/js')
 
 mix.postCss('resources/css/tailwind.css', 'public/css', [
     require('postcss-import'),
@@ -22,6 +24,8 @@ mix.postCss('resources/css/tailwind.css', 'public/css', [
 .options({
     processCssUrls: false,
 })
+
+// mix.browserSync('https://think.test:1000');
 
 if (mix.inProduction()) {
    mix.version();

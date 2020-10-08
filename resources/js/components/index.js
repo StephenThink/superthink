@@ -1,0 +1,1 @@
+export { default as animateTheBurger } from './hamburger'

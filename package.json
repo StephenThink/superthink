@@ -11,6 +11,8 @@
     },
     "devDependencies": {
         "autoprefixer": "^9.7.6",
+        "browser-sync": "^2.26.12",
+        "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^5.1",
         "laravel-mix": "^4.0",
         "laravel-mix-purgecss": "^4.1.0",
@@ -22,9 +24,9 @@
     },
     "dependencies": {
         "@barba/core": "^2.9.7",
-        "bootstrap": "^4.5.2",
         "gsap": "^3.5.1",
         "in-view": "^0.6.1",
-        "locomotive-scroll": "^3.6.1"
+        "locomotive-scroll": "^3.6.1",
+        "winwheeljs": "^2.7.0"
     }
 }

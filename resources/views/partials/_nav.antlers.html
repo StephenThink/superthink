@@ -1,8 +1,8 @@
-<nav class="transition-transform duration-700 delay-5 ease-in-out h-screen  fixed -ml-screen bg-dark z-10 w-screen md:w-handle-nm" id="navigation-panel">
-    <div class="container h-full leading-tight pt-48 pb-24 md:py-24 flex flex-col font-black text-6xl md:text-10xl">
+<nav class="transition-transform duration-700 delay-5 ease-in-out h-screen  fixed -ml-screen bg-dark z-40 w-screen md:w-handle-nm" id="navigation-panel">
+    <div class="container h-full leading-tight pt-48 pb-24 md:py-24 flex flex-col font-black text-4xl md:text-10xl">
         <ul class="text-yellow ">
             {{ nav:main_navigation }}
-                <li>
+                <li class="py-2 md:py-0">
                     <a href="{{ url }}">
                         {{ title }}
                     </a>
@@ -12,7 +12,7 @@
 
         <ul class="text-white mt-auto">
             {{ nav:extra_navigation }}
-            <li>
+            <li class="py-2 md:py-0">
                 <a href="{{ url }}">{{ title }}</a>
             </li>
             {{ /nav:extra_navigation}}

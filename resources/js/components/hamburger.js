@@ -1,46 +1,54 @@
-
 import { gsap } from 'gsap';
 
-// initial load. 
-document
-.addEventListener('DOMContentLoaded', function() {
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+gsap.registerPlugin(MotionPathPlugin);
+
+const animateTheBurger = ( e ) => {
+    
+    e.preventDefault();
 
     let handle = document.getElementById('handle');
-    let burger = document.querySelectorAll('.burger')[0];
     let nav = document.getElementById('navigation-panel');
-    let state = handle.dataset.state;
-
-    let open = gsap.timeline();
-    let close = gsap.timeline();
-
-    burger.addEventListener('click', function(e) {
-        
-        e.preventDefault();
-
-        // if(state == 'closed') {
-        //     console.log('open the nav');
-            // handle.dataset.state = 'open';
-            nav.classList.toggle('open');
-            handle.classList.toggle('open');
-        //     open.to(handle, {
-        //         backgroundColor: "#FFC734"
-        //     }).to(nav, {
-        //         transform: "translateX( calc(100vw + 5rem ) )"
-        //     }, "<");
-
-        // }
-
-        // if(state == 'open') {
-        //     console.log('close the nav');
-        //     handle.dataset.state = 'closed';
-        //     close.to(handle, {
-        //         backgroundColor: "#42454A"
-        //     }).to(nav, {
-        //         transform: "translateX( calc(-100vw - 5rem ) )"
-        //     })
-
-        // }
-
-    });
     
-}, false);
+    nav.classList.toggle('open');
+    handle.classList.toggle('open');
+
+}
+
+
+
+// const animateTheBurger = () => {
+    
+//     gsap.to("#bottom", {
+//         motionPath: {
+//             path: "#bottom-path",
+//             align: "#bottom-path",
+//             alignOrigin: [0.5, 0.5],
+//             autoRotate: true
+//         },
+//         duration: 5,
+//         ease: "power1.inOut"
+//     });
+
+    // const tl = gsap.timeline({defaults:{ease:"power2.inOut"}});
+
+    // gsap.set("#theBurger", { autoAlpha:1 });
+    // gsap.set(".buns", { drawSVG: "0% 30%" });
+    // gsap.set(".letters", { drawSVG: "53.5% 100%", x: -155 });
+
+
+    // tl.to(".patty", { duration: 0.35, drawSVG: "50% 50%"}, 0);
+    // tl.to(".patty", { duration: 0.1, opacity: 0, ease: "none" }, 0.25);
+    // tl.to(".buns", { duration: 0.85, drawSVG: "69% 96.5%" }, 0);
+    // tl.to(".letters", { duration: 0.85, drawSVG: "0% 53%", x: 0 }, 0);
+
+    // tl.reversed(true);
+
+    // tl.reversed(!tl.reversed());
+
+// }
+
+
+
+export default animateTheBurger;

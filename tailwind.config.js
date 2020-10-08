@@ -102,6 +102,8 @@ module.exports = {
   corePlugins: {
     fontWeight: false,
   },
-  variants: {},
+  variants: {
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover']
+  },
   plugins: [],
 }

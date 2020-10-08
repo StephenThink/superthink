@@ -1,0 +1,61 @@
+
+<section class="flex flex-row flex-wrap w-screen h-screen lg:flex-nowrap md:w-handle-nm">
+
+    <div class="flex-1 h-1/2 bg-yellow order-2 lg:order-1 lg:w-2/12 lg:h-full">
+        <div class="flex justify-center items-center h-full ">
+            {{ partial:tea-roulette/partials/button classes="showNameSelector" text="Names" }}
+        </div>
+    </div>
+
+    <div class="w-full h-1/2 bg-yellow order-1 lg:order-2 lg:w-8/12 lg:h-full">
+        <div class="flex-col h-full">
+            
+            <div class="w-11/12 relative m-auto z-10 sm:w-9/12 lg:w-11/12 xl:w-6/12">
+                <img src="assets/tea-roulette/teapot-pointer.png" alt="" class="m-auto">
+            </div>
+    
+            <div class="w-11/12 relative m-auto sm:w-9/12 lg:w-11/12 xl:w-6/12 ">
+                <img src="assets/tea-roulette/cut-out-teacup.png" alt="" class="relative -my-48 mx-auto">
+                <canvas id="canvas" class="the_Wheel absolute inset-0 m-auto w-6/12" width="400" height="400">
+                    <p class="font-bold text-red-800 text-center">Sorry, your browser doesn't support canvas. Please try another.</p>
+                </canvas>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="flex-1 h-1/2  bg-yellow order-3 lg:order-3 lg:w-2/12 lg:h-full">
+        <div class="flex justify-center items-center h-full ">
+            {{ partial:tea-roulette/partials/button classes="spinTheWheel" text="Spin" }}
+        </div>
+    </div>
+
+</div>
+
+
+<div class="addNamesPanel h-screen w-screen ml-0 transform -translate-y-full top-0 left-0 z-30 bg-dark fixed   md:w-handle-nm md:ml-handle">
+    <div class="w-11/12 m-auto pt-32 overflow-scroll flex flex-row flex-wrap items-center justify-between md:w-1/2 relative">
+        <div class="close_addNamesPanel text-5xl text-yellow transform rotate-45 transition duration-500 absolute top-0 right-0 cursor-pointer hover:text-white">+</div>
+        
+        <div class="w-full flex items-center mb-10">
+            <input type="text" class="addNewName text-yellow appearance-none outline-none bg-transparent border-b border-yellow placeholder-yellow pb-4 flex-1" placeholder="add a brew maker">
+            <span class="addNameToList inline-block leading-none text-yellow text-3xl cursor-pointer transition duration-500 transform hover:rotate-90">+</span>
+        </div>
+
+        <div>
+            <p class="text-yellow text-bold text-xl underline">Brew Makers</p>
+            <ul id="names" class="text-yellow py-2"></ul>
+        </div>
+
+        <div class="flex self-start mr-2">
+            {{ partial:tea-roulette/partials/button classes="initWheel" text="Submit" }}
+        </div>
+    </div>
+</div>
+    
+
+
+
+{{ section:scripts }}
+    <script src="{{ mix src='/js/tea.js' }}"></script>
+{{ /section:scripts }}

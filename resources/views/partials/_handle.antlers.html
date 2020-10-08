@@ -1,16 +1,17 @@
-<div id="handle" data-state="closed" class="transition-background-color ease-in duration-500 handle w-screen h-auto  z-20 bg-dark p-5 py-8 flex flex-row items-center justify-between sticky top-0 md:fixed md:h-screen md:w-handle md:flex-col ">
+<div id="handle" data-state="closed" class="transition-background-color ease-in duration-500 handle w-screen h-auto z-50 bg-dark p-5 py-8 flex flex-row items-center justify-between sticky top-0 md:fixed md:h-screen md:w-handle md:flex-col ">
     
     <div class="">
         <div class="burger">
-            <div class="burger__bun">
+            {{ svg src="assets/svgs/burger" }}
+            {{# <div class="burger__bun">
                 <div class="burger__slice"></div>
                 <div class="burger__slice"></div>
                 <div class="burger__slice"></div>
-            </div>
+            </div> #}}
         </div>
     </div>
 
-    <div class="flex-grow px-16 sm:px-24 md:px-0 md:flex-grow-0">
+    <div class="flex-grow px-6 sm:px-24 md:px-0 md:flex-grow-0">
         <a href="{{ link to='/' }}" aria-label="Think!Creative home page">
             <span class="hidden">Think!Creative Logo</span>
             {{ svg src="assets/svgs/logo_horizontal" class="logo hidden text-yellow md:block fill-current" }}
