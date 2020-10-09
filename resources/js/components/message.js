@@ -21,17 +21,20 @@ const message = (text, loser) => {
 
     // toast loser
     Toastify({
-        text: `<div class="wrapper"><h1 class="block  text-3xl">${text}</h1><p class="font-bold text-4xl">${loser}</p></div>`,
+        text: `
+            <div class="wrapper">
+                <h1 class="block  text-3xl">${text}</h1>
+                <p class="font-bold text-4xl">${loser}</p>
+                <p class="text-sm">click to close</p>
+            </div>`,
         // 15 minutes 
         duration: 900000, 
-        gravity: "bottom", // `top` or `bottom`
-        position: 'center', // `left`, `center` or `right`
-        // backgroundColor: "white",
-        // backgroundColor: "#42454A",
+        gravity: "bottom", 
+        position: 'center', 
         'className': 'think-loser-toast',
         stopOnFocus: true, // Prevents dismissing of toast on hover
         onClick: function(){
-            console.log(this);
+            this.duration = 0;
         } // Callback after click
     }).showToast();
 
