@@ -1,5 +1,9 @@
-const alertLoser = () => {
-    console.log('ALERT PRIZE');
+import message from '../components/message';
+
+const alertLoser = (loser) => {
+    
+    message("Get the kettle on...", loser.text)
+
 }
 
 

@@ -1,9 +1,14 @@
 module.exports = {
-  purge: [
-    './public/assets/svgs/*.svg',
-    './resources/views/**/*.html',
-    './resources/views/*.html',    
-  ],
+  purge: {
+    content: [
+      './public/assets/svgs/*.svg',
+      './resources/views/**/*.html',
+      './resources/views/*.html',   
+    ],
+    options: {
+      safelist: ['think-toast', 'think-loser-toast', 'overflow-visible']
+    }
+  },
   theme: {
     container: {
       padding: '2rem',

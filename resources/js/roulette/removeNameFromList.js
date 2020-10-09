@@ -1,10 +1,14 @@
+import message from '../components/message';
+
 const removeNameFromList = (e) => {
 
-    // const names = document.querySelector('.names');
+    // const names = document.querySelectorAll('.names');
 
-    if(names.length <= 1);
-        // return message("You can't have less than one brew maker.");
+    const names = document.querySelectorAll('#names > li');
 
+    if(names.length <= 2){  
+        return message("You can't have less than 2 brew maker.");
+    }
 
     let el = e.target;
 

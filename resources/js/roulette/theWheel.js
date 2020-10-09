@@ -1,10 +1,8 @@
 import Winwheel from 'winwheeljs';
+import alertLoser from './alertLoser';
 
 let theWheel;
 
-const prize = function(loser) {
-    alert('WE SHOULD HAVE A LOSER and it is .... ' + loser.text)
-}
 
 
 const start = ( segments = [{}] ) => {
@@ -28,7 +26,7 @@ const start = ( segments = [{}] ) => {
             'type'       : 'spinToStop',
             'duration'   : 6,
             'spins'      : 4,                
-            'callbackFinished': prize
+            'callbackFinished': alertLoser
         },
         // 'pointerGuide'  :{
         //     'display'     : true,
