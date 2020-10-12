@@ -12,5 +12,3 @@ preferences:
       columns:
         - title
         - slug
-    pages:
-      after_save: continue_editing
