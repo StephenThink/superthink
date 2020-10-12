@@ -1,8 +1,8 @@
 ---
-title: 'About Us FROM THE SERVER'
+title: 'About Us FROM Matthew''s Machine'
 hero_text: 'Good people to think with'
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1602514591
+updated_at: 1602514635
 blueprint: about
 template: pages/about
 hero_intro: |
