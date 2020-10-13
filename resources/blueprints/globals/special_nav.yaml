@@ -1,0 +1,15 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: item_to_show
+        field:
+          options:
+            'Tea Roulette': 'Tea Roulette'
+            'Secret Santa': 'Secret Santa'
+          inline: false
+          display: 'Item to Show'
+          type: radio
+          icon: radio
+          listable: hidden

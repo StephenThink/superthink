@@ -11,10 +11,15 @@
         </ul>
 
         <ul class="text-white mt-auto">
-            {{ nav:extra_navigation }}
-            <li class="py-2 md:py-0">
-                <a href="{{ url }}">{{ title }}</a>
-            </li>
+
+            
+
+            {{ nav:extra_navigation  }}
+                {{ if title ==  special_nav:item_to_show }}
+                    <li class="py-2 md:py-0">
+                        <a href="{{ url }}">{{ title }}</a>
+                    </li>
+                {{ /if }}
             {{ /nav:extra_navigation}}
         </ul>
     </div>

@@ -262,7 +262,7 @@
 .quote {    
     font-size: 8rem;
     height: 136px;
-    transform-orgin: top right;
+    transform-origin: top right;
     &-left,
     &-right {
         transform: rotate(200deg);
