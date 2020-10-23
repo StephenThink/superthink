@@ -1,0 +1,101 @@
+<div class="w-screen-nm h-screen relative min-h-600 md:min-h-1000">
+    <div class="w-full h-full absolute bg-yellow z-1 top-0 background-slideshow ">
+        <!-- <div class="w-full pb-screen"> -->
+                {{ slider_images }}
+                    <img src="{{ url }}" alt="" class="absolute h-full w-full object-cover transition duration-1000">
+                {{ /slider_images }}
+        <!-- </div> -->
+        
+    </div>
+
+    <div class="w-full h-full transparent z-20 relative top-0 flex justify-center items-center rounded">
+        
+        <div class="secret-santa-box relative w-11/12 h-3/5 m-auto ml-auto text-center text-xs lg:text-sm max-w-500 sm:w-10/12 lg:ml-64 ">
+            <div class="h-full">
+                <div class="item front absolute bg-white ">
+                    <div class="inner">
+                        {{ partial:secret-santa/partials/logo }}
+                        <div class="text text-sm">
+                            {{ rhyme }}
+                            <hr class="my-3 w-1/2 mx-auto">
+                            {{ information }}
+                        </div>
+                        <div class="buttons flex justify-around mt-4">
+                            {{ partial:secret-santa/partials/button text="Next" classes="secret-santa-next" }}
+                        </div>    
+                    </div>
+                </div>
+                <div class="item back relative bg-white ">
+                    <div class="inner">
+                        
+                        {{ partial:secret-santa/partials/logo }}
+                        <div class="text">
+                            {{ instructions }}
+                            <strong class="mt-4">
+                                {{ disclaimer }}
+                            </strong>
+                        </div>
+                        <div class="relative h-3/5 text-xs lg:text-sm">
+                            <form action="" id="secret-santa-main-form" enctype="application/x-www-form-urlencoded">
+                                <div class="page-1 absolute page-content flex flex-col h-full w-full justify-between">
+                                    <div class="secret-santa-form h-9/12 overflow-y-scroll overflow-x-hidden">
+                                        <ol id="nice-list">
+                                            
+                                        </ol>
+                                    </div>
+
+                                    <div class="buttons flex justify-around">
+                                        {{ partial:secret-santa/partials/button text="Add more names" classes="secret-santa-add-more" }}
+                                        {{ partial:secret-santa/partials/button text="Next" classes="secret-santa-final" }}
+                                    </div>
+                                </div>
+                                <div class="page-2 absolute secret-santa-form page-content hide flex flex-col h-full w-full justify-between">
+                                    <div class="flex flex-col">
+                                        <input class="mt-2" type="text" name="groupName" placeholder="Group name">
+                                        <!--  price  -->
+                                        <input class="mt-2" type="text" name="price" placeholder="Price">
+                                        <!-- deadline -->
+                                        <input class="mt-2" type="date" name="deadline" placeholder="Deadline">
+                                        <!-- drop off -->
+                                        <input class="mt-2" type="text" name="dropOff" placeholder="Drop-off point">
+                                        <!-- additional info -->
+                                        <textarea class="mt-2" name="additionalinfo" cols="30" rows="5" placeholder="Further notes" class="resize-none"></textarea>
+
+                                        <div class="mt-2">
+                                            <label for="store" class="flex items-center cursor-pointer">
+                                                <!-- toggle -->
+                                                <div class="relative">
+                                                    <!-- input -->
+                                                    <input id="store" name="store" type="checkbox" class="hidden" />
+                                                    <!-- line -->
+                                                    <div class="toggle-line w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+                                                    <!-- dot -->
+                                                    <div class="toggle-dot absolute w-6 h-6 bg-dark rounded-full shadow "></div>
+                                                </div>
+                                                <!-- label -->
+                                                <div class="ml-3 text-dark text-xs">
+                                                Save my details. Just in case.
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- buttons -->
+                                    <div class="buttons flex justify-around mt-4">
+                                        {{ partial:secret-santa/partials/button text="Back" classes="secret-santa-back-to-page-1" }}
+                                        {{ partial:secret-santa/partials/button text="Send out email" classes="secret-santa-submit" loading="show" }}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{ section:scripts }}
+    <script src="{{ mix src='/js/santa.js' }}"></script>
+{{ /section:scripts }}

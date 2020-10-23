@@ -335,6 +335,90 @@
     }
 }
 
+/* Secret Santa  */
+
+.secret-santa {
+
+    &-box {
+        .item {
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            background: rgba(255,255,255, .95);
+            @apply  transition duration-1000 h-full w-full rounded-lg ease-in-out;
+
+            &.front {
+                transform: rotateY(0deg);
+            }
+            &.back {
+                transform: rotateY(180deg);
+            }
+    
+            .inner  {
+                @apply p-10 flex flex-col justify-between h-full;
+            }
+        }
+        
+    
+        &.flipped {
+            .item {
+                &.front {
+                    transform: rotateY(180deg);
+                }
+                &.back {
+                    transform: rotateY(0deg);
+                }
+            }
+        }
+    }
+    
+    &-remove {
+        @apply inline-block cursor-pointer h-8 w-8;
+        /* background-image: url('/assets/svgs/bin.svg');
+        background-repeat: no-repeat; */
+
+    }
+    
+    &-next {
+
+    }
+
+    &-form {
+        input {
+            @apply text-white bg-dark rounded-sm px-3 py-2;
+        }
+        textarea {
+            @apply text-white bg-dark rounded-sm px-3 py-2;
+        }
+
+    }
+}
+
+.toggle-dot {
+    top: -.25rem;
+    left: -.25rem;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+input#store:checked ~ .toggle-dot {
+    transform: translateX(100%);
+    /* background-color: #48bb78; */
+    @apply bg-yellow
+}
+
+.page-content {
+    opacity: 1;
+    transition: opacity 0.8s ease-out;
+    /* display: block; */
+    &.hide {
+        transition: opacity 0.8s ease-out;
+        opacity: 0;
+        visibility: hidden;
+        /* display: none;  */
+
+    }
+}
+
 .footer {
     &__panel {
         @apply py-24 px-16

@@ -2,6 +2,8 @@
 
 namespace App\Console;
 
+Use Statamic\Facades\Entry;
+
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -23,9 +25,24 @@ class Kernel extends ConsoleKernel
      * @return void
      */
     protected function schedule(Schedule $schedule)
-    {
-        // $schedule->command('inspire')
-        //          ->hourly();
+    {   
+
+        // Purge Secret Santa submissions. 
+        $schedule->call( function() {
+
+            // find secrect santa collection 
+            $entries = Entry::whereCollection('secret_santa_submissions');
+            // loop and remove.
+            collect($entries)->each( function($item, $key) {
+                try {
+                    $item->delete();
+                } catch(\Exception $e) {
+                   
+                    return $e;
+                }
+            });
+
+        })->cron('1 0 24 12 *');
     }
 
     /**

@@ -2,8 +2,38 @@ import gsap from 'gsap';
 import Toastify from 'toastify-js';
 import "toastify-js/src/toastify.css";
 
-const message = (text, loser) => {
+const message = (text, loser, data) => {
+
+    if( loser == 'secretSantaMessage') {
+        console.log('secretSantaMessage')
+        
+        let toast = Toastify({
+            text: `
+                <div class="wrapper font-bold">
+                    ${data}
+                </div>
+                `,
+            // 15 minutes 
+            duration: 900000, 
+            gravity: "bottom", 
+            position: 'center', 
+            'className': 'think-loser-toast',
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            onClick: function(){
+                
+                
+                toast.removeElement(toast.toastElement);
+                window.clearTimeout(toast.toastElement.timeOutValue);
+
+            } // Callback after click
+        }).showToast();
+        
+        return;
+    }
+
+
     if(! loser ) {
+        console.log('!loser')
         Toastify({
             text: text,
             duration: 3000, 
@@ -19,8 +49,9 @@ const message = (text, loser) => {
         return;
     }
 
+    console.log('anything else');
     // toast loser
-    Toastify({
+    let toastEL = Toastify({
         text: `
             <div class="wrapper">
                 <h1 class="block  text-3xl">${text}</h1>
@@ -34,7 +65,10 @@ const message = (text, loser) => {
         'className': 'think-loser-toast',
         stopOnFocus: true, // Prevents dismissing of toast on hover
         onClick: function(){
-            this.duration = 0;
+
+            toastEL.removeElement(toastEL.toastElement);
+            window.clearTimeout(toastEL.toastElement.timeOutValue);
+
         } // Callback after click
     }).showToast();
 

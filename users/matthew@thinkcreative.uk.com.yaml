@@ -14,3 +14,7 @@ preferences:
         - slug
     pages:
       after_save: continue_editing
+    secret_santa_submissions:
+      columns:
+        - title
+        - slug

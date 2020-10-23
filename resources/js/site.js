@@ -38,52 +38,49 @@ if( contentSlides.length > 0 ){
 }
 
 
+const locomotiveScroll = new LocomotiveScroll({
+    el: document.querySelector(scroll.container),
+    ...scroll.options,
+})
 
+locomotiveScroll.on('call', (value, way, obj) => {
+    
+    // do something
+    if (value === "wipe") wipe(way, obj);
+    if (value === "fancy") animateIn(obj.el);
 
+});
 
-    const locomotiveScroll = new LocomotiveScroll({
-        el: document.querySelector(scroll.container),
-        ...scroll.options,
-    })
+//  Always be at the top when entering the page.
+// barba.hooks.enter(() => {
+//     window.scrollTo(0, 0);
+// });
 
-    locomotiveScroll.on('call', (value, way, obj) => {
-        
-        // do something
-        if (value === "wipe") wipe(way, obj);
-        if (value === "fancy") animateIn(obj.el);
+//  Always close the navigation when leaving a page. 
+// barba.hooks.beforeLeave(() => {
+//     let handle = document.getElementById('handle');
+//     let nav = document.getElementById('navigation-panel');
+//     nav.classList.remove('open');
+//     handle.classList.remove('open');
+// });
 
-    });
+// barba.init({
+//     transitions: [{
+//         name: 'opacity-transition',
+//         leave(data) {
 
-    //  Always be at the top when entering the page.
-    // barba.hooks.enter(() => {
-    //     window.scrollTo(0, 0);
-    // });
+//             return gsap.to(data.current.container, {
+//                 opacity: 0
+//             }, 5);
 
-    //  Always close the navigation when leaving a page. 
-    // barba.hooks.beforeLeave(() => {
-    //     let handle = document.getElementById('handle');
-    //     let nav = document.getElementById('navigation-panel');
-    //     nav.classList.remove('open');
-    //     handle.classList.remove('open');
-    // });
-
-    // barba.init({
-    //     transitions: [{
-    //         name: 'opacity-transition',
-    //         leave(data) {
-
-    //             return gsap.to(data.current.container, {
-    //                 opacity: 0
-    //             }, 5);
-
-    //         },
-    //         enter(data) {
-    //             inView('.fancy:not(.seen)').on('enter', animateIn);
-    //             console.log('ENTERING');
-    //             return gsap.from(data.next.container, {
-    //                 opacity: 0
-    //             });
-    //         }
-    //       }]
-    // });
+//         },
+//         enter(data) {
+//             inView('.fancy:not(.seen)').on('enter', animateIn);
+//             console.log('ENTERING');
+//             return gsap.from(data.next.container, {
+//                 opacity: 0
+//             });
+//         }
+//       }]
+// });
 
