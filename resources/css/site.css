@@ -104,8 +104,10 @@
             color: #42454A;
             fill: currentColor;
         }
-        .social-icons {
-            @apply hover:text-dark
+        .social-icon {
+           &:hover {
+               @apply text-dark !important
+           }
         }
     }
 }

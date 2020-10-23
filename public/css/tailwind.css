@@ -731,6 +731,12 @@ video {
       fill: currentColor;
     }
 
+.handle.open .social-icon:hover {
+        --text-opacity: 1 !important;
+        color: #42454A !important;
+        color: rgba(66, 69, 74, var(--text-opacity)) !important
+      }
+
 /*  Svg line animations */
 
 .blog-arrow-left #Line_2 {
@@ -22171,6 +22177,14 @@ input#store:checked ~ .toggle-dot {
   z-index: 0;
 }
 
+.z-1 {
+  z-index: 1;
+}
+
+.z-5 {
+  z-index: 5;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -27687,6 +27701,56 @@ input#store:checked ~ .toggle-dot {
 }
 
 .animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+
+.hover\:animate-none:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.hover\:animate-spin:hover {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+.hover\:animate-ping:hover {
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.hover\:animate-pulse:hover {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.hover\:animate-bounce:hover {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+
+.focus\:animate-none:focus {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.focus\:animate-spin:focus {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+.focus\:animate-ping:focus {
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.focus\:animate-pulse:focus {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.focus\:animate-bounce:focus {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
 }
@@ -48754,6 +48818,14 @@ input#store:checked ~ .toggle-dot {
     z-index: 0;
   }
 
+  .sm\:z-1 {
+    z-index: 1;
+  }
+
+  .sm\:z-5 {
+    z-index: 5;
+  }
+
   .sm\:z-10 {
     z-index: 10;
   }
@@ -54204,6 +54276,56 @@ input#store:checked ~ .toggle-dot {
   }
 
   .sm\:animate-bounce {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+  }
+
+  .sm\:hover\:animate-none:hover {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .sm\:hover\:animate-spin:hover {
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+  }
+
+  .sm\:hover\:animate-ping:hover {
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .sm\:hover\:animate-pulse:hover {
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .sm\:hover\:animate-bounce:hover {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+  }
+
+  .sm\:focus\:animate-none:focus {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .sm\:focus\:animate-spin:focus {
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+  }
+
+  .sm\:focus\:animate-ping:focus {
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .sm\:focus\:animate-pulse:focus {
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .sm\:focus\:animate-bounce:focus {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
@@ -75272,6 +75394,14 @@ input#store:checked ~ .toggle-dot {
     z-index: 0;
   }
 
+  .md\:z-1 {
+    z-index: 1;
+  }
+
+  .md\:z-5 {
+    z-index: 5;
+  }
+
   .md\:z-10 {
     z-index: 10;
   }
@@ -80722,6 +80852,56 @@ input#store:checked ~ .toggle-dot {
   }
 
   .md\:animate-bounce {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+  }
+
+  .md\:hover\:animate-none:hover {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .md\:hover\:animate-spin:hover {
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+  }
+
+  .md\:hover\:animate-ping:hover {
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .md\:hover\:animate-pulse:hover {
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .md\:hover\:animate-bounce:hover {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+  }
+
+  .md\:focus\:animate-none:focus {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .md\:focus\:animate-spin:focus {
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+  }
+
+  .md\:focus\:animate-ping:focus {
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .md\:focus\:animate-pulse:focus {
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .md\:focus\:animate-bounce:focus {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
@@ -101790,6 +101970,14 @@ input#store:checked ~ .toggle-dot {
     z-index: 0;
   }
 
+  .lg\:z-1 {
+    z-index: 1;
+  }
+
+  .lg\:z-5 {
+    z-index: 5;
+  }
+
   .lg\:z-10 {
     z-index: 10;
   }
@@ -107240,6 +107428,56 @@ input#store:checked ~ .toggle-dot {
   }
 
   .lg\:animate-bounce {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+  }
+
+  .lg\:hover\:animate-none:hover {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .lg\:hover\:animate-spin:hover {
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+  }
+
+  .lg\:hover\:animate-ping:hover {
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .lg\:hover\:animate-pulse:hover {
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .lg\:hover\:animate-bounce:hover {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+  }
+
+  .lg\:focus\:animate-none:focus {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .lg\:focus\:animate-spin:focus {
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+  }
+
+  .lg\:focus\:animate-ping:focus {
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .lg\:focus\:animate-pulse:focus {
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .lg\:focus\:animate-bounce:focus {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
@@ -128308,6 +128546,14 @@ input#store:checked ~ .toggle-dot {
     z-index: 0;
   }
 
+  .xl\:z-1 {
+    z-index: 1;
+  }
+
+  .xl\:z-5 {
+    z-index: 5;
+  }
+
   .xl\:z-10 {
     z-index: 10;
   }
@@ -133758,6 +134004,56 @@ input#store:checked ~ .toggle-dot {
   }
 
   .xl\:animate-bounce {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+  }
+
+  .xl\:hover\:animate-none:hover {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .xl\:hover\:animate-spin:hover {
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+  }
+
+  .xl\:hover\:animate-ping:hover {
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .xl\:hover\:animate-pulse:hover {
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .xl\:hover\:animate-bounce:hover {
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+  }
+
+  .xl\:focus\:animate-none:focus {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .xl\:focus\:animate-spin:focus {
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+  }
+
+  .xl\:focus\:animate-ping:focus {
+    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .xl\:focus\:animate-pulse:focus {
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .xl\:focus\:animate-bounce:focus {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
