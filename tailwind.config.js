@@ -104,14 +104,18 @@ module.exports = {
         "50": "1 0 50%",
         "66": "1 0 66%",
         "100": "1 0 100%"
-      }
+      },
+      // translate: {
+      //   '1/4': '25%',
+      // }
     },
   },
   corePlugins: {
     fontWeight: false,
   },
   variants: {
-    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover']
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    animation: ['responsive', 'hover', 'focus'],
   },
   plugins: [],
 }

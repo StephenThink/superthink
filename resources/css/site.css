@@ -104,6 +104,9 @@
             color: #42454A;
             fill: currentColor;
         }
+        .social-icons {
+            @apply hover:text-dark
+        }
     }
 }
 /*  Svg line animations */
