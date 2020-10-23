@@ -1,0 +1,6 @@
+<a href="{{ anchor ?? '#'}}" class="{{ classes }} rounded-full bg-yellow text-white border border-white border-2 py-2 px-10 self-center">
+    {{ text }}
+    {{ if loading == 'show' }}
+        {{ svg src="assets/svgs/loading" class="animate-spin loader inline ml-1 mr-3 h-5 w-5 text-white hidden" }}
+    {{ /if }}
+</a>

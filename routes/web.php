@@ -18,11 +18,5 @@ use Illuminate\Support\Facades\Route;
 // ]);
 Route::get('/work/{service}/all', 'CaseStudyController@index');
 
-// Route::get('/tea-roulette', function() {
+Route::post('/secret-santa-results', 'SecretSantaController');
 
-//     return (new \Statamic\View\View)
-//             ->template('tea-roulette.index')
-//             ->layout('layout');
-//             // ->with(['data' => $byService]);
-
-// });

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a4b4e404a204227601f0bffd79bc6af",
+    "content-hash": "0e401227d69adbd6411b39a02573d683",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3158,16 +3158,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.0.16",
+            "version": "v3.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "c256d5736e38d5b31146c3bbab19361419f9f9a9"
+                "reference": "64eadfd486c4fa209832202975066dbf1720f4d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/c256d5736e38d5b31146c3bbab19361419f9f9a9",
-                "reference": "c256d5736e38d5b31146c3bbab19361419f9f9a9",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/64eadfd486c4fa209832202975066dbf1720f4d5",
+                "reference": "64eadfd486c4fa209832202975066dbf1720f4d5",
                 "shasum": ""
             },
             "require": {
@@ -3228,7 +3228,44 @@
                 "laravel",
                 "statamic"
             ],
-            "time": "2020-10-06T22:29:54+00:00"
+            "time": "2020-10-15T20:45:32+00:00"
+        },
+        {
+            "name": "statamic/seo-pro",
+            "version": "2.0.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/seo-pro.git",
+                "reference": "2e3c388d9eca8a21aacd136e417d29645769f8d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/seo-pro/zipball/2e3c388d9eca8a21aacd136e417d29645769f8d3",
+                "reference": "2e3c388d9eca8a21aacd136e417d29645769f8d3",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "~3.0.12"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Seo Pro",
+                    "description": "Seo Pro addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Statamic\\SeoPro\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\SeoPro\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2020-09-23T16:07:02+00:00"
         },
         {
             "name": "statamic/stringy",

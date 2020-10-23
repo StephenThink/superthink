@@ -6,7 +6,13 @@ module.exports = {
       './resources/views/*.html',   
     ],
     options: {
-      safelist: ['think-toast', 'think-loser-toast', 'overflow-visible']
+      safelist: [
+        'think-toast', 
+        'think-loser-toast', 
+        'overflow-visible',
+        'page-content',
+       ' toggle-dot'
+      ]
     }
   },
   theme: {
@@ -88,6 +94,28 @@ module.exports = {
       rotate: {
         '135': '135deg'
       },
+      minHeight : {
+        '0': '0',
+       '1/4': '25%',
+       '1/2': '50%',
+       '3/4': '75%',
+       '1000': '1000px',
+      },
+      maxHeight : {
+        '0': '0',
+       '1/4': '25%',
+       '1/2': '50%',
+       '3/4': '75%',
+       '1000': '1000px',
+       '600': '600px',
+      },
+      maxWidth : {
+        "500": "500px"
+      },
+      zIndex: {
+        '1': '1',
+        '5': '5',
+      },
       colors: {
         yellow: "#FFC734",
         darker: "#2C2F33",
@@ -113,5 +141,7 @@ module.exports = {
   variants: {
     scale: ['responsive', 'hover', 'focus', 'active', 'group-hover']
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
 }

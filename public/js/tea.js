@@ -9004,8 +9004,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var message = function message(text, loser) {
+var message = function message(text, loser, data) {
+  if (loser == 'secretSantaMessage') {
+    console.log('secretSantaMessage');
+    var toast = toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
+      text: "\n                <div class=\"wrapper font-bold\">\n                    ".concat(data, "\n                </div>\n                "),
+      // 15 minutes 
+      duration: 900000,
+      gravity: "bottom",
+      position: 'center',
+      'className': 'think-loser-toast',
+      stopOnFocus: true,
+      // Prevents dismissing of toast on hover
+      onClick: function onClick() {
+        toast.removeElement(toast.toastElement);
+        window.clearTimeout(toast.toastElement.timeOutValue);
+      } // Callback after click
+
+    }).showToast();
+    return;
+  }
+
   if (!loser) {
+    console.log('!loser');
     toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
       text: text,
       duration: 3000,
@@ -9022,10 +9043,11 @@ var message = function message(text, loser) {
 
     }).showToast();
     return;
-  } // toast loser
+  }
 
+  console.log('anything else'); // toast loser
 
-  toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
+  var toastEL = toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
     text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <p class=\"text-sm\">click to close</p>\n            </div>"),
     // 15 minutes 
     duration: 900000,
@@ -9035,7 +9057,8 @@ var message = function message(text, loser) {
     stopOnFocus: true,
     // Prevents dismissing of toast on hover
     onClick: function onClick() {
-      this.duration = 0;
+      toastEL.removeElement(toastEL.toastElement);
+      window.clearTimeout(toastEL.toastElement.timeOutValue);
     } // Callback after click
 
   }).showToast();
