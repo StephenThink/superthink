@@ -356,7 +356,12 @@
             }
     
             .inner  {
-                @apply p-6 flex flex-col justify-between h-full;
+                @apply p-6 flex flex-col justify-between h-full
+            }
+            @media(md){
+                .inner {
+                    @apply p-10
+                }
             }
         }
         
