@@ -11,7 +11,8 @@ module.exports = {
         'think-loser-toast', 
         'overflow-visible',
         'page-content',
-       ' toggle-dot'
+       ' toggle-dot',
+       'threed-animation',
       ]
     }
   },

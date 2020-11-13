@@ -161,7 +161,19 @@
     }
 }
 
-
+.threed-animation { 
+    perspective: 1500px;
+    img { 
+        transform: rotateX(10deg) rotateY(-10deg) rotateZ(3deg);
+        transition: transform .45s cubic-bezier(0.34, 1.56, 0.64, 1) .05s;
+        border-radius: .25rem;
+        box-shadow: 2px 10px 30px rgba(66, 69, 74, var(--text-opacity));
+        &:hover {
+            /* transform: rotateX(-4deg) rotateY(5deg) rotateZ(-3deg) !important; */
+            transform: rotate(0deg);
+        }
+    }
+}
 
 
 .handle {
@@ -271,6 +283,7 @@
     &-left,
     &-right {
         transform: rotate(200deg);
+        transform-origin: center center;
     }
     @screen md {
         font-size: 10rem;
