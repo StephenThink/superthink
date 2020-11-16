@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e401227d69adbd6411b39a02573d683",
+    "content-hash": "fa09a0e5a9b2d3d99ed1ef6b12798e8d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,79 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "box/spout",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/box/spout.git",
+                "reference": "7964dadc2128f3a00ffa393395b618ea115c8032"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/box/spout/zipball/7964dadc2128f3a00ffa393395b618ea115c8032",
+                "reference": "7964dadc2128f3a00ffa393395b618ea115c8032",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xmlreader": "*",
+                "ext-zip": "*",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2",
+                "phpunit/phpunit": "^7"
+            },
+            "suggest": {
+                "ext-iconv": "To handle non UTF-8 CSV files (if \"php-intl\" is not already installed or is too limited)",
+                "ext-intl": "To handle non UTF-8 CSV files (if \"iconv\" is not already installed)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Box\\Spout\\": "src/Spout"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Adrien Loison",
+                    "email": "adrien@box.com"
+                }
+            ],
+            "description": "PHP Library to read and write spreadsheet files (CSV, XLSX and ODS), in a fast and scalable way",
+            "homepage": "https://www.github.com/box/spout",
+            "keywords": [
+                "OOXML",
+                "csv",
+                "excel",
+                "memory",
+                "odf",
+                "ods",
+                "office",
+                "open",
+                "php",
+                "read",
+                "scale",
+                "spreadsheet",
+                "stream",
+                "write",
+                "xlsx"
+            ],
+            "support": {
+                "issues": "https://github.com/box/spout/issues",
+                "source": "https://github.com/box/spout/tree/v3.1.0"
+            },
+            "time": "2019-12-02T21:21:41+00:00"
         },
         {
             "name": "brick/math",
@@ -1898,6 +1971,60 @@
             "time": "2020-01-19T19:18:49+00:00"
         },
         {
+            "name": "michelf/php-smartypants",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/michelf/php-smartypants.git",
+                "reference": "47d17c90a4dfd0ccf1f87e25c65e6c8012415aad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/michelf/php-smartypants/zipball/47d17c90a4dfd0ccf1f87e25c65e6c8012415aad",
+                "reference": "47d17c90a4dfd0ccf1f87e25c65e6c8012415aad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Michelf": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michel Fortin",
+                    "email": "michel.fortin@michelf.ca",
+                    "homepage": "https://michelf.ca/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "John Gruber",
+                    "homepage": "https://daringfireball.net/"
+                }
+            ],
+            "description": "PHP SmartyPants",
+            "homepage": "https://michelf.ca/projects/php-smartypants/",
+            "keywords": [
+                "dashes",
+                "quotes",
+                "spaces",
+                "typographer",
+                "typography"
+            ],
+            "support": {
+                "issues": "https://github.com/michelf/php-smartypants/issues",
+                "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
+            },
+            "time": "2016-12-13T01:01:17+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "2.1.1",
             "source": {
@@ -3016,6 +3143,48 @@
             "time": "2020-08-18T17:17:46+00:00"
         },
         {
+            "name": "rias/statamic-data-import",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/riasvdv/statamic-data-import.git",
+                "reference": "53e83e77a1b9e2e6dfadd627f06bca7712e020a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/riasvdv/statamic-data-import/zipball/53e83e77a1b9e2e6dfadd627f06bca7712e020a8",
+                "reference": "53e83e77a1b9e2e6dfadd627f06bca7712e020a8",
+                "shasum": ""
+            },
+            "require": {
+                "spatie/simple-excel": "^1.9",
+                "statamic/cms": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Statamic Data Import",
+                    "description": "Statamic Data Import addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Rias\\StatamicDataImport\\DataImportServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rias\\StatamicDataImport\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/riasvdv/statamic-data-import/issues",
+                "source": "https://github.com/riasvdv/statamic-data-import/tree/1.1.0"
+            },
+            "time": "2020-11-05T18:26:54+00:00"
+        },
+        {
             "name": "seld/jsonlint",
             "version": "1.8.2",
             "source": {
@@ -3157,21 +3326,83 @@
             "time": "2020-02-16T19:18:04+00:00"
         },
         {
-            "name": "statamic/cms",
-            "version": "v3.0.19",
+            "name": "spatie/simple-excel",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/statamic/cms.git",
-                "reference": "64eadfd486c4fa209832202975066dbf1720f4d5"
+                "url": "https://github.com/spatie/simple-excel.git",
+                "reference": "eb4d25f5127014dd341f2eaf021986132d31aeeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/64eadfd486c4fa209832202975066dbf1720f4d5",
-                "reference": "64eadfd486c4fa209832202975066dbf1720f4d5",
+                "url": "https://api.github.com/repos/spatie/simple-excel/zipball/eb4d25f5127014dd341f2eaf021986132d31aeeb",
+                "reference": "eb4d25f5127014dd341f2eaf021986132d31aeeb",
                 "shasum": ""
             },
             "require": {
-                "composer/composer": "^1.10",
+                "box/spout": "^3.0",
+                "illuminate/support": "^6.3|^7.0|^8.0",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpunit/phpunit": "^9.0",
+                "spatie/phpunit-snapshot-assertions": "^4.0",
+                "spatie/temporary-directory": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\SimpleExcel\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Read and write simple Excel and CSV files",
+            "homepage": "https://github.com/spatie/simple-excel",
+            "keywords": [
+                "simple-excel",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/simple-excel/issues",
+                "source": "https://github.com/spatie/simple-excel/tree/1.9.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-10-30T09:44:32+00:00"
+        },
+        {
+            "name": "statamic/cms",
+            "version": "v3.0.27",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/cms.git",
+                "reference": "b4586d70660ad8beab27c7ec69abe0e3c5b31355"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/b4586d70660ad8beab27c7ec69abe0e3c5b31355",
+                "reference": "b4586d70660ad8beab27c7ec69abe0e3c5b31355",
+                "shasum": ""
+            },
+            "require": {
+                "composer/composer": "^1.10 || ^2.0.0",
+                "ext-json": "*",
                 "facade/ignition-contracts": "^1.0",
                 "guzzlehttp/guzzle": "^6.3 || ^7.0",
                 "laravel/framework": "^6.0 || ^7.0 || ^8.0",
@@ -3179,9 +3410,11 @@
                 "league/commonmark": "^1.5",
                 "league/csv": "^9.0",
                 "league/glide": "^1.1",
-                "pixelfear/composer-dist-plugin": "^0.1.0",
+                "michelf/php-smartypants": "^1.8",
+                "pixelfear/composer-dist-plugin": "^0.1.4",
                 "spatie/blink": "^1.1.2",
                 "statamic/stringy": "^3.1",
+                "symfony/lock": "^5.1",
                 "symfony/var-exporter": "^4.3",
                 "symfony/yaml": "^4.1 || ^5.1",
                 "ueberdosis/html-to-prosemirror": "^1.0",
@@ -3228,7 +3461,17 @@
                 "laravel",
                 "statamic"
             ],
-            "time": "2020-10-15T20:45:32+00:00"
+            "support": {
+                "issues": "https://github.com/statamic/cms/issues",
+                "source": "https://github.com/statamic/cms/tree/v3.0.27"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/statamic",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-11-12T16:06:43+00:00"
         },
         {
             "name": "statamic/seo-pro",
@@ -4084,6 +4327,85 @@
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
             "time": "2020-10-04T07:57:28+00:00"
+        },
+        {
+            "name": "symfony/lock",
+            "version": "v5.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/lock.git",
+                "reference": "9ff3c3bfc08da89d307464276aa206514a8c97e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/lock/zipball/9ff3c3bfc08da89d307464276aa206514a8c97e5",
+                "reference": "9ff3c3bfc08da89d307464276aa206514a8c97e5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "psr/log": "~1.0",
+                "symfony/polyfill-php80": "^1.15"
+            },
+            "conflict": {
+                "doctrine/dbal": "<2.5"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.5|^3.0",
+                "mongodb/mongodb": "~1.1",
+                "predis/predis": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Lock\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jérémy Derussé",
+                    "email": "jeremy@derusse.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Lock Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "cas",
+                "flock",
+                "locking",
+                "mutex",
+                "redlock",
+                "semaphore"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/lock/tree/v5.1.8"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-24T12:01:57+00:00"
         },
         {
             "name": "symfony/mime",
@@ -7874,5 +8196,6 @@
     "platform": {
         "php": "^7.2.5"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
