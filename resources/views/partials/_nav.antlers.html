@@ -16,8 +16,8 @@
         <ul class="text-white mt-auto relative z-10">
             {{ nav:extra_navigation  }}
                 {{ if title ==  special_nav:item_to_show }}
-                    <li class="py-2 md:py-0">
-                        <a href="{{ url }}">{{ title }}</a>
+                    <li class="py-2 md:py-0 half-height-colour">
+                        <a class="underline-element yellow-underline" href="{{ url }}">{{ title }}</a>
                     </li>
                 {{ /if }}
             {{ /nav:extra_navigation}}

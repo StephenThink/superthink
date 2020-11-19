@@ -17,37 +17,56 @@
     </div>
 
     {{ content }}
-       
-        {{ if type == 'before_image_content_group' }}
-            <div class="container flex mt-8">
-                <div class="w-full hidden md:block md:w-2/12"></div>
-                <div class="w-full md:w-1/2 ">
-                    <h3 class="text-2xl font-bold">{{ header }}</h3>
-                    <p class="mt-4">{{ blog_content }}</p>
-                </div>
 
-            </div>
+        {{ if type == 'slider' }}   
+            {{ if images | count > 0}}
+                <!-- put a slider here. -->
+                <div class="container blog__post mt-8">
+                    <div class="swiper-container my-7 w-full h-full">
+                        <div class="swiper-wrapper">
+                            {{ images }}
+                                <div class="swiper-slide bg-cover bg-center" style="height: {{ height }}px; background-image:url('{{ url }}')"></div>
+                            {{ /images }}
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination swiper-pagination-white"></div>
+                        <!-- Add Arrows -->
+                        {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-next absolute right-0 mr-4 z-1 top-1/2" }}
+                        {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-prev absolute left z-1 ml-4 top-1/2 transform rotate-180" }}
+
+                    </div>
+                </div>
+            {{ /if }}
+
         {{ /if }}
+    
+        {{ if type == 'blog_content_group' }}
+            <div class="blog__post">
+                <div class="container flex mt-8">
+                    <div class="w-full hidden md:block md:w-2/12"></div>
+                    <div class="w-full md:w-1/2 ">
+                        {{ if header }}
+                            <h3 class="text-2xl font-bold">{{ header }}</h3>
+                        {{ /if }}
+                        {{ if blog_content }}
+                            <p class="mt-4">{{ blog_content }}</p>
+                        {{ /if }}
+                    </div>
 
-        {{ if type == 'image' }}
-            <div class="container flex mt-12">
-                <div class="w-full hidden md:block md:w-2/12"></div>
-                <div class="w-full md:w-8/12 ">
-                    <img src="{{ offset_image }}" alt="" loading=lazy>
                 </div>
 
-            </div>
-        {{ /if }}
-        
-        {{ if type == 'after_image_content_group' }}
-            <div class="container flex mt-8">
-                <div class="w-full hidden md:block md:w-2/12"></div>
-                <div class="w-full md:w-1/2 ">
-                    <h3 class="text-2xl font-bold">{{ header }}</h3>
-                    <p class="mt-4">{{ blog_content }}</p>
-                </div>
+                {{ if offset_image }}
+                    <div class="container flex mt-12">
+                        <div class="w-full hidden md:block md:w-2/12"></div>
+                        <div class="w-full md:w-8/12 ">
+                            <img src="{{ offset_image }}" alt="" loading=lazy>
+                        </div>
 
+                    </div>
+                {{ /if }}
             </div>
+
+            
         {{ /if }}
 
     {{ /content }}
@@ -55,6 +74,19 @@
 </section>
 
 {{ partial:partials/small_banner }}
+
+<section class="main__panel_x-small bg-light">
+    <div class="container">
+        <div class="flex flex-wrap -mx-4 md:flex-nowrap">
+            {{ collection:blog :until="date" limit="5" sort="date:desc" as="posts"}}
+                {{ posts }}
+                    {{ partial:partials.blog_listing width=" md:w-1/5 p-4" }}
+                {{ /posts }}
+            {{ /collection:blog }}
+        </div>
+    </div>
+</section>
+
 
 {{ partial:partials/employees }}
 

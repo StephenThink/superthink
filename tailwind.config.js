@@ -11,8 +11,9 @@ module.exports = {
         'think-loser-toast', 
         'overflow-visible',
         'page-content',
-       ' toggle-dot',
-       'threed-animation',
+        ' toggle-dot',
+        'threed-animation',
+        'swiper-button-disabled',
       ]
     }
   },
@@ -137,6 +138,9 @@ module.exports = {
       // translate: {
       //   '1/4': '25%',
       // }
+      inset: {
+        '1/2': '50%'
+      }
     },
   },
   corePlugins: {

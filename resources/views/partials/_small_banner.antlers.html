@@ -5,8 +5,14 @@
     <div class="container flex">
         <div class="w-full hidden md:block md:w-1/12"></div>
         <div class="w-full md:w-10/12 flex flex-col bg-yellow p-16">
-            <p class="w-full md:w-10/12">{{ banner_text }}</p>
-            <i class="block mt-4"> - {{ who_said_it }}</i>
+            <p class="w-full md:w-10/12">{{ social:rhyme }}</p>
+            <div>
+                <button class="sharing-is-caring half-height-colour cursor-pointer font-bold text-lg block mt-4">
+                    <span class="underline-element light-underline">Sharing is caring</span>
+                </button>
+                <span class="copied-to-clipboard hidden">URL copied to clipboard!</span>
+            </div>
+            <span id="sharing_url" class="hidden">{{ current_url }}</span>
         </div>
     </div>
 </div>

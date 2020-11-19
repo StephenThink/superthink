@@ -1,0 +1,13 @@
+<div class="w-full {{ width }}">
+    <a href="{{ url }}">
+        <div class="pb-2/3 relative">
+            {{ if thumbnail }}
+                <img src="{{ thumbnail }}" class="h-full w-full absolute object-cover" loading=lazy>
+            {{ /if }}
+        </div>
+    
+        <div class="mt-2 font-bold text-lg half-height-colour">
+            <span class="underline-element yellow-underline">{{ title }}</span>
+        </div>
+    </a>
+</div>

@@ -29,6 +29,7 @@
         "gsap": "^3.5.1",
         "in-view": "^0.6.1",
         "locomotive-scroll": "^3.6.1",
+        "swiper": "^6.3.5",
         "toastify-js": "^1.9.2",
         "winwheeljs": "^2.7.0"
     }

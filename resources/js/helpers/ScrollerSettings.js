@@ -1,4 +1,4 @@
-export const scroll = {
+const scroll = {
     container: ".site-wrap",
     options: {
     //   smooth: true,
@@ -11,3 +11,5 @@ export const scroll = {
     //   repeat: true
     },
 }
+
+export default scroll;

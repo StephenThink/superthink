@@ -6,8 +6,6 @@ preferences:
   collections:
     services:
       after_save: continue_editing
-    blog:
-      after_save: continue_editing
     employees:
       columns:
         - title

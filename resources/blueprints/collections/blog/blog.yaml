@@ -42,8 +42,8 @@ sections:
         field:
           always_show_set_button: false
           sets:
-            before_image_content_group:
-              display: 'Before Image Content Group'
+            blog_content_group:
+              display: 'Blog Content Group'
               fields:
                 -
                   handle: header
@@ -56,12 +56,17 @@ sections:
                 -
                   handle: blog_content
                   field:
+                    container: assets
+                    folder: /
+                    restrict: false
+                    automatic_line_breaks: true
+                    automatic_links: true
+                    escape_markup: false
+                    smartypants: false
                     display: 'Blog Content'
-                    type: textarea
+                    type: markdown
+                    icon: markdown
                     listable: hidden
-            image:
-              display: Image
-              fields:
                 -
                   handle: offset_image
                   field:
@@ -73,23 +78,23 @@ sections:
                     max_files: 1
                     display: 'Offset Image'
                     type: assets
+                    icon: assets
                     listable: hidden
-            after_image_content_group:
-              display: 'After Image Content Group'
+            slider:
+              display: Slider
               fields:
                 -
-                  handle: header
+                  handle: images
                   field:
-                    input_type: text
-                    display: Header
-                    type: text
+                    mode: grid
+                    container: assets
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    display: 'Image Set'
+                    type: assets
                     listable: hidden
-                -
-                  handle: blog_content
-                  field:
-                    display: 'Blog Content'
-                    type: textarea
-                    listable: hidden
+                    instructions: 'The slider will always appear first. ( after the intro text ) - Select any amount of images and they will be formatted into a slider. Make all images the same size, I recommend 500/600/700 x 500/600/700.'
           buttons:
             - h2
             - h3
@@ -157,7 +162,6 @@ sections:
           type: text
           listable: hidden
           validate:
-            - required
       -
         handle: employee_list
         field:
@@ -167,3 +171,12 @@ sections:
           display: Employees
           type: entries
           listable: hidden
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

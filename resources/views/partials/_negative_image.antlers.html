@@ -2,14 +2,20 @@
     <div class="container-none md:container flex flex-col">
         <div class="pb-1/2 relative mt-0 md:-mt-48">
             {{ main_image }}
-            <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full object-cover absolute" loading=lazy>
+                <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full object-cover absolute" loading=lazy>
             {{ /main_image }}
         </div>
-        {{ if headline }}
-            <div class="relative font-black text-xl w-full bg-yellow p-8 self-end mt-0 mr-0 md:-mr-8 md:-mt-20 md:w-5/12 ">
-                {{ headline }}
-            </div>
+        {{ if last_segment != slug }} 
+            <a href="{{ url }} " class="self-end mt-0 mr-0 md:-mr-8 md:-mt-20 md:w-5/12 threed-animation">
+                <div class="relative font-black text-xl w-full bg-yellow p-8 threed-inner half-height-colour">
+                    <div class="flex ">
+                        <span class="">
+                            <span class="underline-element light-underline">{{ headline ?? title ?? 'Read More' }}</span>
+                        </span>
+                        {{ partial:partials.link_arrow textColor="text-dark" classes="  right-0 top-0 bottom-0 -mr-5 " }}
+                    </div>
+                </div>
+            </a>
         {{ /if }}
-        
     </div>
 </div>

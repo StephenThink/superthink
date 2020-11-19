@@ -1,30 +1,35 @@
 // This is all you.
-import './bootstrap.js';
-
-import './helpers/Animations';
-
-import { scroll } from './helpers/ScrollerSettings';
-
 import LocomotiveScroll from 'locomotive-scroll';
+
+import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
+// configure Swiper to use modules
+Swiper.use([Navigation, Pagination, EffectFade]);
+
+import 'swiper/swiper-bundle.css';
+
+// not being used 
 import inView from 'in-view/src/in-view.js';
 import barba from '@barba/core';
 import gsap from 'gsap';
 
+// unused
+import './bootstrap.js';
 
+import { scroll, swipe, SharingIsCaring } from './helpers';
 // components
 import { animateTheBurger } from './components';
-
 // Animations
 import { wipe, animateIn } from './animations';
-
 // caseStudies
 import { findTheActiveOne, moveSlide } from './caseStudies';
 
 let burger = document.querySelectorAll('.burger')[0];
 burger.addEventListener('click', animateTheBurger, false);
 
+let sharingIsCaring = document.querySelector('.sharing-is-caring');
 
-
+if( sharingIsCaring )
+    sharingIsCaring.addEventListener('click', SharingIsCaring )
 
 
 findTheActiveOne('.filter-section');
@@ -50,6 +55,38 @@ locomotiveScroll.on('call', (value, way, obj) => {
     if (value === "fancy") animateIn(obj.el);
 
 });
+
+// init Swiper:
+const swiper = new Swiper(swipe.container, {
+    spaceBetween: 30,
+    effect: 'fade',
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.custom-button-next',
+        prevEl: '.custom-button-prev',
+    },
+});
+
+
+document.addEventListener('copy', function(e) {
+
+    let message = document.querySelector('.copied-to-clipboard');
+    let value = document.querySelector('#sharing_url');
+    e.clipboardData.setData('text/plain', value.innerText);
+    
+    message.classList.toggle('hidden');
+
+    setTimeout( () => {
+        message.classList.toggle('hidden');
+    }, 500)
+
+    // This is necessary to prevent the current document selection from
+    // being written to the clipboard.
+    e.preventDefault();
+  });
 
 //  Always be at the top when entering the page.
 // barba.hooks.enter(() => {

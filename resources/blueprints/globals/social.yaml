@@ -1,0 +1,11 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: rhyme
+        field:
+          display: Rhyme
+          type: textarea
+          icon: textarea
+          listable: hidden
