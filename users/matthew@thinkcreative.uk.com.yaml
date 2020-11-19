@@ -16,3 +16,5 @@ preferences:
       columns:
         - title
         - slug
+    blog:
+      after_save: continue_editing
