@@ -2,3 +2,7 @@ name: 'Natalie Price'
 super: true
 id: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 password_hash: $2y$10$uYuz0vCr04ONUxxVa9InPugN33eR5mtkqaECS6y6ryUm2JhTWoZqu
+preferences:
+  assets:
+    assets:
+      mode: grid
