@@ -1945,10 +1945,6 @@
                 "typographer",
                 "typography"
             ],
-            "support": {
-                "issues": "https://github.com/michelf/php-smartypants/issues",
-                "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
-            },
             "time": "2016-12-13T01:01:17+00:00"
         },
         {
@@ -3212,16 +3208,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.0.27",
+            "version": "v3.0.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "b4586d70660ad8beab27c7ec69abe0e3c5b31355"
+                "reference": "a08f17e6eeac46cb00bc7ec17b8ef4eee65e1bdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/b4586d70660ad8beab27c7ec69abe0e3c5b31355",
-                "reference": "b4586d70660ad8beab27c7ec69abe0e3c5b31355",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/a08f17e6eeac46cb00bc7ec17b8ef4eee65e1bdf",
+                "reference": "a08f17e6eeac46cb00bc7ec17b8ef4eee65e1bdf",
                 "shasum": ""
             },
             "require": {
@@ -3246,7 +3242,7 @@
                 "wilderborn/partyline": "^1.0"
             },
             "require-dev": {
-                "fzaninotto/faker": "~1.4",
+                "fakerphp/faker": "~1.10",
                 "google/cloud-translate": "^1.6",
                 "mockery/mockery": "^1.2.3",
                 "orchestra/testbench": "^4.0 || ^5.0 || ^6.0"
@@ -3285,17 +3281,7 @@
                 "laravel",
                 "statamic"
             ],
-            "support": {
-                "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.0.27"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/statamic",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-11-12T16:06:43+00:00"
+            "time": "2020-11-17T21:19:53+00:00"
         },
         {
             "name": "statamic/seo-pro",
@@ -4211,23 +4197,6 @@
                 "mutex",
                 "redlock",
                 "semaphore"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/lock/tree/v5.1.8"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-10-24T12:01:57+00:00"
         },
@@ -8020,6 +7989,5 @@
     "platform": {
         "php": "^7.2.5"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "platform-dev": []
 }
