@@ -22,17 +22,22 @@
             {{ if images | count > 0}}
                 <!-- put a slider here. -->
                 <div class="container blog__post mt-8">
-                    <div class="swiper-container my-7 w-full h-full">
+                    <div class="w-full hidden md:block md:w-2/12"></div>
+
+                    <div class="swiper-container my-7 w-full md:w-8/12 h-full">
                         <div class="swiper-wrapper">
                             {{ images }}
-                                <div class="swiper-slide bg-cover bg-center" style="height: {{ height }}px; background-image:url('{{ url }}')"></div>
+                                <div class="swiper-slide bg-cover bg-center " style="height: {{ height }}px; background-image:url('{{ url }}')"></div>
                             {{ /images }}
                         </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination swiper-pagination-white"></div>
-                        <!-- Add Arrows -->
-                        {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-next absolute right-0 mr-4 z-1 top-1/2" }}
-                        {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-prev absolute left z-1 ml-4 top-1/2 transform rotate-180" }}
+                        <div class="flex bottom-0 justify-between items-center relative mt-1">
+                            {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-prev  left z-1 ml-4  transform rotate-180" }}
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination  left-0 right-0 bottom-50"></div>
+                            <!-- Add Arrows -->
+                            {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-next  right-0 mr-4 z-1 " }}
+                            
+                        </div>
 
                     </div>
                 </div>
@@ -75,19 +80,21 @@
 
 {{ partial:partials/small_banner }}
 
-<section class="main__panel_x-small bg-light">
+{{ partial:partials/employees }}
+
+{{ partial:partials/hulk }}
+
+<section class="main__panel bg-light">
     <div class="container">
+        <div class="">
+            <h2 class="accent__dark ">More from Think!</h2>
+        </div>
         <div class="flex flex-wrap -mx-4 md:flex-nowrap">
-            {{ collection:blog :until="date" limit="5" sort="date:desc" as="posts"}}
+            {{ collection:blog :until="date" limit="4" sort="date:desc" as="posts"}}
                 {{ posts }}
-                    {{ partial:partials.blog_listing width=" md:w-1/5 p-4" }}
+                    {{ partial:partials.blog_listing width=" md:w-1/4 p-4" }}
                 {{ /posts }}
             {{ /collection:blog }}
         </div>
     </div>
 </section>
-
-
-{{ partial:partials/employees }}
-
-{{ partial:partials/hulk }}
