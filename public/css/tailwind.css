@@ -676,8 +676,20 @@ video {
   border-color: #FFC734;
   border-color: rgba(255, 199, 52, var(--border-opacity));
   display: inline-block;
-  padding-top: 0.5rem
+  padding-top: 0.5rem;
 }
+
+.accent__dark {
+    --text-opacity: 1;
+    color: #42454A;
+    color: rgba(66, 69, 74, var(--text-opacity));
+    border-top-width: 1px;
+    --border-opacity: 1;
+    border-color: #42454A;
+    border-color: rgba(66, 69, 74, var(--border-opacity));
+    display: inline-block;
+    padding-top: 0.5rem;
+  }
 
 .main__panel {
     padding-top: 8rem;
@@ -731,7 +743,7 @@ video {
       fill: currentColor;
     }
 
-.handle.open .social-icon:hover {
+.handle.open .social-icon:hover, .handle.open .social-icon:active {
         --text-opacity: 1 !important;
         color: #42454A !important;
         color: rgba(66, 69, 74, var(--text-opacity)) !important
@@ -748,7 +760,7 @@ video {
       transition: stroke-dashoffset 2s ease-out;
     }
 
-.blog-arrow-left:hover #Line_2 {
+.blog-arrow-left:hover #Line_2, .blog-arrow-left:active #Line_2 {
         stroke-dashoffset: -120px;
         transition: stroke-dashoffset 2s ease-out;
       }
@@ -759,7 +771,7 @@ video {
       transition: stroke-dashoffset 2s ease-out;
     }
 
-.blog-arrow-right:hover #Line_2 {
+.blog-arrow-right:hover #Line_2, .blog-arrow-right:active #Line_2 {
         stroke-dashoffset: -120px;
         transition: stroke-dashoffset 2s ease-out;
       }
@@ -773,7 +785,7 @@ video {
       transition: stroke-dashoffset .5s ease-out;
     }
 
-.circle-animation:hover path:first-child {
+.circle-animation:hover path:first-child, .circle-animation:active path:first-child {
         stroke-dashoffset: 162;
         transition: stroke-dashoffset .7s ease-out;
       }
@@ -789,12 +801,12 @@ video {
     box-shadow: 2px 5px 30px rgba(66, 69, 74, var(--text-opacity));
   }
 
-.threed-animation img:hover, .threed-animation .threed-inner:hover {
+.threed-animation img:hover, .threed-animation img:active, .threed-animation .threed-inner:hover, .threed-animation .threed-inner:active {
       /* transform: rotateX(-4deg) rotateY(5deg) rotateZ(-3deg) !important; */
       transform: rotate(0deg);
     }
 
-.half-height-colour .underline-element {
+.half-height-colour .underline-element,.blog__post .underline-element{
     display: inline;
     background-image: linear-gradient(transparent 50%, #42454A 50%, #42454A 85%,transparent 85%,transparent 100%);
     background-repeat: no-repeat;
@@ -802,23 +814,24 @@ video {
     transition: .5s cubic-bezier(.645,.045,.355,1);
   }
 
-.half-height-colour .underline-element.yellow-underline {
+.half-height-colour .underline-element.yellow-underline, .blog__post .underline-element.yellow-underline {
       background-image: linear-gradient(transparent 50%, #FFC734 50%, #FFC734 85%,transparent 85%,transparent 100%);
     }
 
-.half-height-colour .underline-element.light-underline {
+.half-height-colour .underline-element.light-underline, .blog__post .underline-element.light-underline {
       background-image: linear-gradient(transparent 50%, #F7F7F7 50%, #F7F7F7 85%,transparent 85%,transparent 100%);
     }
 
-.half-height-colour:hover .underline-element {
+.half-height-colour:hover .underline-element, .half-height-colour:active .underline-element, .blog__post:hover .underline-element, .blog__post:active .underline-element {
       transition: .5s cubic-bezier(.645,.045,.355,1);
       background-size: 100% 100%;
     }
 
 /*
 *
-*  Potential fix for hove on mobiles.
+*  Potential fix for hover on mobiles.
 *  Need to confirm spec. 
+*  See js file. Seems to work well. 
 */
 
 @media(hover: hover) and (pointer: fine) {
@@ -870,7 +883,7 @@ video {
                     }
                 } */
 
-#navigation-panel ul.main-nav:hover li:not(:hover) a {
+#navigation-panel ul.main-nav:hover li:not(:hover) a, #navigation-panel ul.main-nav:active li:not(:hover) a {
             /*  this is the yellow  */
             -webkit-text-stroke-color: #FFC734;
             color: transparent;
@@ -905,15 +918,15 @@ video {
       width: 14px;
     }
 
-.burger:hover {
+.burger:hover, .burger:active {
     cursor: pointer;
   }
 
-.burger:hover .burger__slice {
+.burger:hover .burger__slice, .burger:active .burger__slice {
         transition: width .2s ease-in-out;
       }
 
-.burger:hover .burger__slice:last-child {
+.burger:hover .burger__slice:last-child, .burger:active .burger__slice:last-child {
           width: 22px;
         }
 
@@ -970,16 +983,36 @@ video {
 
 .content a, .blog__post a {
     text-decoration: underline;
+    display: inline;
+    background-image: linear-gradient(transparent 60%, #FFC734 60%, #FFC734 85%,transparent 85%,transparent 100%);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: .5s cubic-bezier(.645,.045,.355,1);
   }
 
-.content li, .blog__post li {
-    list-style-image: url(/assets/misc/list-item.png);
-    list-style-position: inside;
+.content a:hover, .content a:active, .blog__post a:hover, .blog__post a:active{
+      text-decoration: none;
+      transition: .5s cubic-bezier(.645,.045,.355,1);
+      background-size: 100% 100%;
+    }
+
+.content ul,.blog__post ul{
+    margin: 1rem 0;
   }
+
+.content ul li, .blog__post ul li {
+      list-style-image: url(/assets/misc/list-item.png);
+      list-style-position: inherit;
+    }
 
 .swiper-button-disabled {
   color: #dddddd !important;
   cursor: not-allowed;
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-pagination-color: #FFC734 !important;
+  --swiper-pagination-color: #FFC734 !important;
 }
 
 .think-toast {

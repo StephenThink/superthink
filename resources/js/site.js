@@ -22,14 +22,11 @@ import { animateTheBurger } from './components';
 import { wipe, animateIn } from './animations';
 // caseStudies
 import { findTheActiveOne, moveSlide } from './caseStudies';
+// messages
+import message from './components/message';
 
 let burger = document.querySelectorAll('.burger')[0];
 burger.addEventListener('click', animateTheBurger, false);
-
-let sharingIsCaring = document.querySelector('.sharing-is-caring');
-
-if( sharingIsCaring )
-    sharingIsCaring.addEventListener('click', SharingIsCaring )
 
 
 findTheActiveOne('.filter-section');
@@ -71,22 +68,9 @@ const swiper = new Swiper(swipe.container, {
 });
 
 
-document.addEventListener('copy', function(e) {
+//   enable hover effects on touch screens! 
+document.addEventListener("touchstart", function() {}, true);
 
-    let message = document.querySelector('.copied-to-clipboard');
-    let value = document.querySelector('#sharing_url');
-    e.clipboardData.setData('text/plain', value.innerText);
-    
-    message.classList.toggle('hidden');
-
-    setTimeout( () => {
-        message.classList.toggle('hidden');
-    }, 500)
-
-    // This is necessary to prevent the current document selection from
-    // being written to the clipboard.
-    e.preventDefault();
-  });
 
 //  Always be at the top when entering the page.
 // barba.hooks.enter(() => {
