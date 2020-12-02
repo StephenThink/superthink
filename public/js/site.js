@@ -41005,29 +41005,28 @@ var message = function message(text, loser, data) {
   }
 
   if (!loser) {
-    console.log('!loser');
     toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
       text: text,
       duration: 3000,
-      gravity: "top",
+      // duration: 60000, 
+      gravity: "bottom",
       // `top` or `bottom`
       position: 'right',
       // `left`, `center` or `right`
       backgroundColor: "white",
       // backgroundColor: "#42454A",
-      'className': 'think-toast',
+      'className': 'think-toast max-w-none md:max-w-toastify-width',
       stopOnFocus: true,
       // Prevents dismissing of toast on hover
       onClick: function onClick() {} // Callback after click
 
     }).showToast();
     return;
-  }
+  } // toast loser
 
-  console.log('anything else'); // toast loser
 
   var toastEL = toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
-    text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <p class=\"text-sm\">click to close</p>\n            </div>"),
+    text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <a class=\"button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56\">click to close</a>\n            </div>"),
     // 15 minutes 
     duration: 900000,
     gravity: "bottom",

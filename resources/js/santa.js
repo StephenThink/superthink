@@ -26,7 +26,9 @@ remove.forEach( el =>  el.addEventListener('click', removeNameFromList) );
 
 submit.addEventListener('click', submitForm);
 //  Add an initial form field
-addFormField();
+for (let index = 0; index < 3; index++) {
+    addFormField();
+}
 
 
 

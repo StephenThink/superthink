@@ -1,8 +1,13 @@
 import removeNameFromList from './removeNameFromList';
+import getNames from './getNames';
+import message from '../components/message';
 
 const nameToList = () => {
     
     let input = document.querySelector('.addNewName');
+
+    if(getNames().length >= 50 )
+        return message("You can't play with any more people");
 
     if( input.value == '' )
         return false;

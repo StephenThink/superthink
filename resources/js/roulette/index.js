@@ -4,5 +4,6 @@ export { default as alertLoser } from './alertLoser';
 export { default as getNames } from './getNames';
 export { default as spinSpinSpin } from './spinSpinSpin';
 export { default as nameToList } from './nameToList';
+export { default as clearOutBrewMakers } from './ClearOutBrewMakers';
 
 export { theWheel, start } from './theWheel';

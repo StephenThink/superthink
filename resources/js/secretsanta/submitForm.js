@@ -2,7 +2,7 @@ import axios from 'axios';
 import message from '../components/message';
 
 const submitForm = (e) => {
-
+    e.preventDefault();
     let button = e.target;
     let loader = button.querySelector('.loader');
 

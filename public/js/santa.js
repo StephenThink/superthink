@@ -8549,29 +8549,28 @@ var message = function message(text, loser, data) {
   }
 
   if (!loser) {
-    console.log('!loser');
     toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
       text: text,
       duration: 3000,
-      gravity: "top",
+      // duration: 60000, 
+      gravity: "bottom",
       // `top` or `bottom`
       position: 'right',
       // `left`, `center` or `right`
       backgroundColor: "white",
       // backgroundColor: "#42454A",
-      'className': 'think-toast',
+      'className': 'think-toast max-w-none md:max-w-toastify-width',
       stopOnFocus: true,
       // Prevents dismissing of toast on hover
       onClick: function onClick() {} // Callback after click
 
     }).showToast();
     return;
-  }
+  } // toast loser
 
-  console.log('anything else'); // toast loser
 
   var toastEL = toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
-    text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <p class=\"text-sm\">click to close</p>\n            </div>"),
+    text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <a class=\"button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56\">click to close</a>\n            </div>"),
     // 15 minutes 
     duration: 900000,
     gravity: "bottom",
@@ -8621,7 +8620,10 @@ remove.forEach(function (el) {
 });
 submit.addEventListener('click', _secretsanta__WEBPACK_IMPORTED_MODULE_0__["submitForm"]); //  Add an initial form field
 
-Object(_secretsanta__WEBPACK_IMPORTED_MODULE_0__["addFormField"])();
+for (var index = 0; index < 3; index++) {
+  Object(_secretsanta__WEBPACK_IMPORTED_MODULE_0__["addFormField"])();
+}
+
 window.addEventListener('DOMContentLoaded', function (event) {
   var current = 0,
       slides = document.querySelectorAll(".background-slideshow img");
@@ -8650,8 +8652,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var numberOfInputs = 0;
 
-var addFormField = function addFormField() {
-  var binSVG = "\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\" 0 0 20 22 \" class=\"fill-current w-full h-full\">\n        <path class=\"a84ca124-37b7-487d-9221-f9b9cccce2dc\" d=\"M 7.67 7.51 V 16.13 A 0.48 0.48 0 0 1 7.19 16.61 H 6.19 A 0.48 0.48 0 0 1 5.71 16.13 V 7.51 A 0.48 0.48 0 0 1 6.23 7 H 7.23 A 0.48 0.48 0 0 1 7.67 7.51 Z M 11.67 7.03 H 10.67 A 0.48 0.48 0 0 0 10.19 7.51 V 16.13 A 0.48 0.48 0 0 0 10.67 16.61 H 11.67 A 0.47 0.47 0 0 0 12.15 16.13 V 7.51 A 0.47 0.47 0 0 0 11.66 7 Z M 16.94 3.19 A 1 1 0 0 1 17.94 4.19 V 4.67 A 0.47 0.47 0 0 1 17.46 5.15 H 16.66 V 18.53 A 1.91 1.91 0 0 1 14.75 20.45 H 3.19 A 1.92 1.92 0 0 1 1.28 18.53 H 1.28 V 5.11 H 0.48 A 0.47 0.47 0 0 1 0 4.63 H 0 V 4.15 A 1 1 0 0 1 1 3.15 H 4 L 5.29 0.93 A 1.9 1.9 0 0 1 6.93 0 H 10.93 A 1.9 1.9 0 0 1 12.6 0.93 L 14 3.19 Z M 6.18 3.19 H 11.74 L 11 2 A 0.24 0.24 0 0 0 10.79 1.89 H 7.07 A 0.25 0.25 0 0 0 6.86 2 Z M 14.7 5.11 H 3.19 V 18.29 A 0.24 0.24 0 0 0 3.43 18.53 H 14.43 A 0.24 0.24 0 0 0 14.67 18.29 Z\"/>\n    </svg>\n    ";
+var addFormField = function addFormField(e) {
+  if (e instanceof Event) e.preventDefault();
+  var binSVG = "\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\" 0 0 20 22 \" class=\"fill-current w-full h-full pointer-events-none\">\n        <path class=\"a84ca124-37b7-487d-9221-f9b9cccce2dc\" d=\"M 7.67 7.51 V 16.13 A 0.48 0.48 0 0 1 7.19 16.61 H 6.19 A 0.48 0.48 0 0 1 5.71 16.13 V 7.51 A 0.48 0.48 0 0 1 6.23 7 H 7.23 A 0.48 0.48 0 0 1 7.67 7.51 Z M 11.67 7.03 H 10.67 A 0.48 0.48 0 0 0 10.19 7.51 V 16.13 A 0.48 0.48 0 0 0 10.67 16.61 H 11.67 A 0.47 0.47 0 0 0 12.15 16.13 V 7.51 A 0.47 0.47 0 0 0 11.66 7 Z M 16.94 3.19 A 1 1 0 0 1 17.94 4.19 V 4.67 A 0.47 0.47 0 0 1 17.46 5.15 H 16.66 V 18.53 A 1.91 1.91 0 0 1 14.75 20.45 H 3.19 A 1.92 1.92 0 0 1 1.28 18.53 H 1.28 V 5.11 H 0.48 A 0.47 0.47 0 0 1 0 4.63 H 0 V 4.15 A 1 1 0 0 1 1 3.15 H 4 L 5.29 0.93 A 1.9 1.9 0 0 1 6.93 0 H 10.93 A 1.9 1.9 0 0 1 12.6 0.93 L 14 3.19 Z M 6.18 3.19 H 11.74 L 11 2 A 0.24 0.24 0 0 0 10.79 1.89 H 7.07 A 0.25 0.25 0 0 0 6.86 2 Z M 14.7 5.11 H 3.19 V 18.29 A 0.24 0.24 0 0 0 3.43 18.53 H 14.43 A 0.24 0.24 0 0 0 14.67 18.29 Z\"/>\n    </svg>\n    ";
   numberOfInputs++;
   var inputNum = numberOfInputs;
   var inputName = document.createElement('input');
@@ -8737,10 +8740,10 @@ var removeNameFromList = function removeNameFromList(e) {
   var owMany = list.length;
 
   if (owMany <= 3) {
-    return Object(_components_message__WEBPACK_IMPORTED_MODULE_0__["default"])('Cant have less than 3 to make the magic happen');
+    return Object(_components_message__WEBPACK_IMPORTED_MODULE_0__["default"])('Can\'t have less than 3 to make the magic happen');
   }
 
-  e.target.parentNode.parentNode.remove();
+  e.target.parentNode.remove();
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (removeNameFromList);
@@ -8760,6 +8763,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var showFinalForm = function showFinalForm(e) {
+  e.preventDefault();
   var page1 = document.querySelector('.page-1');
   var page2 = document.querySelector('.page-2');
   var target = e.target; // @todo
@@ -8798,6 +8802,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var submitForm = function submitForm(e) {
+  e.preventDefault();
   var button = e.target;
   var loader = button.querySelector('.loader');
   if (button.classList.contains('disabled')) return false;
@@ -8838,6 +8843,7 @@ var submitForm = function submitForm(e) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var toggleFlip = function toggleFlip(e) {
+  e.preventDefault();
   var box = document.querySelector('.secret-santa-box');
   var list = box.classList;
   list.add('flipped'); // if( list.contains('flipped') )

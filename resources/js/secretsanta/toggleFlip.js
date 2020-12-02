@@ -1,4 +1,5 @@
 const toggleFlip = (e) => {
+    e.preventDefault();
     
     let box = document.querySelector('.secret-santa-box');
     let list = box.classList;

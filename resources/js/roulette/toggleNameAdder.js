@@ -2,15 +2,24 @@ import gsap from 'gsap';
 
 const toggleNameAdder = (close) => {
 
+    let tl = gsap.timeline();
+
+    if( tl.isActive() )
+        return false;
+
     let panel = document.querySelector('.addNamesPanel');
-    let amount = (typeof close == 'object' ? 0 : '-100%');
+    let state = panel.dataset.state;
 
-    let ease = (typeof close == 'object' ? 'ease.out' : 'ease.in');
+    let amount = (state == 'closed' ? 0 : '-100%' );
+    let ease = (state == 'closed' ? 'ease.out' : 'ease.in' );
 
-    gsap.to(panel, { 
+    tl.to(panel, { 
         duration: 1,
         y: amount,
-        ease: ease
+        ease: ease,
+        onComplete: () => {
+            panel.dataset.state = (state == 'closed' ? 'open' : 'closed');
+        }
     });
 
 }

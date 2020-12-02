@@ -31,11 +31,11 @@ class SecretSantaBot{
 
     private $people;
     
-    const ERROR_MATCHING_NAMES = 'Something looks wrong! Check that there are no matches <br><a class="button error-btn" >Click to Close</a>';
-    const ERROR_NOT_ENOUGH_PEOPLE = 'Need at least 3 people for a Secret Santa <br><a class="button error-btn" >Click to Close</a>';
-    const ERROR_EXPECTING_ARRAY = 'Expecting an array of people and emails. Woops. <br><a class="button error-btn" >Click to Close</a>';
-    const ERROR_EMAILING_PAIRS = 'Only one pair was found. That is odd. Not emailing. <br><a class="button error-btn" >Click to Close</a>';
-    const ERROR_INVALID_EMAIL_ADDRESS = 'An invalid email address was found. <br><a class="button error-btn" >Click to Close</a>';
+    const ERROR_MATCHING_NAMES = 'Something looks wrong! Check that there are no matches <br><a class="button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56" >Click to Close</a>';
+    const ERROR_NOT_ENOUGH_PEOPLE = 'Need at least 3 people for a Secret Santa <br><a class="button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56" >Click to Close</a>';
+    const ERROR_EXPECTING_ARRAY = 'Expecting an array of people and emails. Woops. <br><a class="button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56" >Click to Close</a>';
+    const ERROR_EMAILING_PAIRS = 'Only one pair was found. That is odd. Not emailing. <br><a class="button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56" >Click to Close</a>';
+    const ERROR_INVALID_EMAIL_ADDRESS = 'An invalid email address was found. <br><a class="button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56" >Click to Close</a>';
 
     
     /**

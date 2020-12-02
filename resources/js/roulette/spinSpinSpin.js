@@ -7,13 +7,19 @@ import { TweenMax } from '../vendor/TweenMax.min.js';
 const spinSpinSpin = () => {
 
     let names = getNames();
+    let items = theWheel.numSegments;
 
-    if( names.length < 1 ) {
-        message("you can't spin without any brew makers"); 
+    if( items < 1 || names.length <= 0 ) {
+        message("You can't spin without any brew makers"); 
         return;
     }
 
-    if( names.length == 1 ) {
+    if( names.length <= 0) {
+        message("Something isn't right. Try adding some brew makers."); 
+        return;
+    }
+
+    if( items == 1 ) {
         message(`Flying solo? Get the kettle on <span class="font-bold">${names[0].text}</span>`); 
         return;
     }

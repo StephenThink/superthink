@@ -2,6 +2,8 @@ import gsap from 'gsap';
 
 const showFinalForm = (e) => {
 
+    e.preventDefault();
+
     let page1 = document.querySelector('.page-1');
     let page2 = document.querySelector('.page-2');
 

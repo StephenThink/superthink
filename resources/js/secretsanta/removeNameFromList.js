@@ -7,10 +7,10 @@ const removeNameFromList = (e) => {
     let owMany = list.length;
 
     if( owMany <= 3 ) {
-        return message('Cant have less than 3 to make the magic happen');
+        return message('Can\'t have less than 3 to make the magic happen');
     }
 
-    e.target.parentNode.parentNode.remove();
+    e.target.parentNode.remove();
 }
 
 export default removeNameFromList;

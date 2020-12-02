@@ -9026,29 +9026,28 @@ var message = function message(text, loser, data) {
   }
 
   if (!loser) {
-    console.log('!loser');
     toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
       text: text,
       duration: 3000,
-      gravity: "top",
+      // duration: 60000, 
+      gravity: "bottom",
       // `top` or `bottom`
       position: 'right',
       // `left`, `center` or `right`
       backgroundColor: "white",
       // backgroundColor: "#42454A",
-      'className': 'think-toast',
+      'className': 'think-toast max-w-none md:max-w-toastify-width',
       stopOnFocus: true,
       // Prevents dismissing of toast on hover
       onClick: function onClick() {} // Callback after click
 
     }).showToast();
     return;
-  }
+  } // toast loser
 
-  console.log('anything else'); // toast loser
 
   var toastEL = toastify_js__WEBPACK_IMPORTED_MODULE_1___default()({
-    text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <p class=\"text-sm\">click to close</p>\n            </div>"),
+    text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <a class=\"button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56\">click to close</a>\n            </div>"),
     // 15 minutes 
     duration: 900000,
     gravity: "bottom",
@@ -9068,6 +9067,28 @@ var message = function message(text, loser, data) {
 
 /***/ }),
 
+/***/ "./resources/js/roulette/ClearOutBrewMakers.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/roulette/ClearOutBrewMakers.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var clearOutBrewMakers = function clearOutBrewMakers() {
+  var items = document.getElementById('names').querySelectorAll('li');
+
+  for (var index = 0; index < items.length; index++) {
+    if (index == 0) continue;
+    items[index].remove();
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (clearOutBrewMakers);
+
+/***/ }),
+
 /***/ "./resources/js/roulette/alertLoser.js":
 /*!*********************************************!*\
   !*** ./resources/js/roulette/alertLoser.js ***!
@@ -9078,9 +9099,18 @@ var message = function message(text, loser, data) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/message */ "./resources/js/components/message.js");
+/* harmony import */ var _roulette__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../roulette */ "./resources/js/roulette/index.js");
+
 
 
 var alertLoser = function alertLoser(loser) {
+  for (var index = 0; index <= _roulette__WEBPACK_IMPORTED_MODULE_1__["theWheel"].numSegments; index++) {
+    _roulette__WEBPACK_IMPORTED_MODULE_1__["theWheel"].deleteSegment();
+    _roulette__WEBPACK_IMPORTED_MODULE_1__["theWheel"].draw();
+  }
+
+  Object(_roulette__WEBPACK_IMPORTED_MODULE_1__["clearOutBrewMakers"])(); // theWheel.clearCanvas();
+
   Object(_components_message__WEBPACK_IMPORTED_MODULE_0__["default"])("Get the kettle on...", loser.text);
 };
 
@@ -9119,7 +9149,7 @@ var getNames = function getNames() {
 /*!****************************************!*\
   !*** ./resources/js/roulette/index.js ***!
   \****************************************/
-/*! exports provided: initWheelFunc, toggleNameAdder, alertLoser, getNames, spinSpinSpin, nameToList, theWheel, start */
+/*! exports provided: initWheelFunc, toggleNameAdder, alertLoser, getNames, spinSpinSpin, nameToList, clearOutBrewMakers, theWheel, start */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9142,10 +9172,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nameToList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./nameToList */ "./resources/js/roulette/nameToList.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nameToList", function() { return _nameToList__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _theWheel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./theWheel */ "./resources/js/roulette/theWheel.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "theWheel", function() { return _theWheel__WEBPACK_IMPORTED_MODULE_6__["theWheel"]; });
+/* harmony import */ var _ClearOutBrewMakers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ClearOutBrewMakers */ "./resources/js/roulette/ClearOutBrewMakers.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "clearOutBrewMakers", function() { return _ClearOutBrewMakers__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "start", function() { return _theWheel__WEBPACK_IMPORTED_MODULE_6__["start"]; });
+/* harmony import */ var _theWheel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./theWheel */ "./resources/js/roulette/theWheel.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "theWheel", function() { return _theWheel__WEBPACK_IMPORTED_MODULE_7__["theWheel"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "start", function() { return _theWheel__WEBPACK_IMPORTED_MODULE_7__["start"]; });
+
 
 
 
@@ -9195,10 +9229,15 @@ var initWheelFunc = function initWheelFunc() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _removeNameFromList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./removeNameFromList */ "./resources/js/roulette/removeNameFromList.js");
+/* harmony import */ var _getNames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getNames */ "./resources/js/roulette/getNames.js");
+/* harmony import */ var _components_message__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/message */ "./resources/js/components/message.js");
+
+
 
 
 var nameToList = function nameToList() {
   var input = document.querySelector('.addNewName');
+  if (Object(_getNames__WEBPACK_IMPORTED_MODULE_1__["default"])().length >= 50) return Object(_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("You can't play with any more people");
   if (input.value == '') return false; // Get the element we're gonna push the data to.
 
   var ul = document.getElementById("names"); // create elements
@@ -9278,13 +9317,19 @@ __webpack_require__.r(__webpack_exports__);
 
 var spinSpinSpin = function spinSpinSpin() {
   var names = Object(_getNames__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  var items = _theWheel__WEBPACK_IMPORTED_MODULE_0__["theWheel"].numSegments;
 
-  if (names.length < 1) {
-    Object(_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("you can't spin without any brew makers");
+  if (items < 1 || names.length <= 0) {
+    Object(_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("You can't spin without any brew makers");
     return;
   }
 
-  if (names.length == 1) {
+  if (names.length <= 0) {
+    Object(_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("Something isn't right. Try adding some brew makers.");
+    return;
+  }
+
+  if (items == 1) {
     Object(_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("Flying solo? Get the kettle on <span class=\"font-bold\">".concat(names[0].text, "</span>"));
     return;
   }
@@ -9368,18 +9413,22 @@ var start = function start() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 
 
 var toggleNameAdder = function toggleNameAdder(close) {
+  var tl = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline();
+  if (tl.isActive()) return false;
   var panel = document.querySelector('.addNamesPanel');
-  var amount = _typeof(close) == 'object' ? 0 : '-100%';
-  var ease = _typeof(close) == 'object' ? 'ease.out' : 'ease.in';
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(panel, {
+  var state = panel.dataset.state;
+  var amount = state == 'closed' ? 0 : '-100%';
+  var ease = state == 'closed' ? 'ease.out' : 'ease.in';
+  tl.to(panel, {
     duration: 1,
     y: amount,
-    ease: ease
+    ease: ease,
+    onComplete: function onComplete() {
+      panel.dataset.state = state == 'closed' ? 'open' : 'closed';
+    }
   });
 };
 
@@ -9397,7 +9446,7 @@ var toggleNameAdder = function toggleNameAdder(close) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _roulette__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./roulette */ "./resources/js/roulette/index.js");
- // Init the wheel. wit 0 segments  
+ // Init the wheel. with 0 segments  
 // rubbishname, I know, just went with it.
 
 Object(_roulette__WEBPACK_IMPORTED_MODULE_0__["start"])();
@@ -9417,7 +9466,19 @@ closeAddNamesPanel.addEventListener('click', function () {
 
 initWheel.addEventListener('click', _roulette__WEBPACK_IMPORTED_MODULE_0__["initWheelFunc"]); //  Add name to the list
 
-nameToListSelector.addEventListener('click', _roulette__WEBPACK_IMPORTED_MODULE_0__["nameToList"]);
+nameToListSelector.addEventListener('click', _roulette__WEBPACK_IMPORTED_MODULE_0__["nameToList"]); // press enter algorithm.
+
+document.addEventListener('keydown', function (e) {
+  var enterKey = 13;
+  var panel = document.querySelector('.addNamesPanel');
+  var input = document.querySelector('.addNewName');
+
+  if (e.keyCode != enterKey || !panel || panel.dataset.state == 'closed' || !input || input.value == '') {
+    return;
+  }
+
+  return Object(_roulette__WEBPACK_IMPORTED_MODULE_0__["nameToList"])();
+});
 
 /***/ }),
 

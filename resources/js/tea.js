@@ -7,7 +7,7 @@ import {
 } from './roulette';
 
 
-// Init the wheel. wit 0 segments  
+// Init the wheel. with 0 segments  
 // rubbishname, I know, just went with it.
 start();
 
@@ -35,4 +35,22 @@ initWheel.addEventListener('click', initWheelFunc);
 //  Add name to the list
 nameToListSelector.addEventListener('click', nameToList);
 
+// press enter algorithm.
+document.addEventListener('keydown', function(e) {
 
+    var enterKey = 13;
+    var panel = document.querySelector('.addNamesPanel');
+    var input = document.querySelector('.addNewName');
+
+    if( 
+        e.keyCode != enterKey 
+        || !panel 
+        || panel.dataset.state == 'closed' 
+        || !input
+        || input.value == ''
+    ) {
+       return
+    }
+
+    return nameToList();
+});

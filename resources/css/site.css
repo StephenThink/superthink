@@ -182,7 +182,7 @@
 }
 
 .half-height-colour, .blog__post {
-    & .underline-element{
+    & .underline-element {
         display: inline;
         background-image: linear-gradient(transparent 50%, theme('colors.dark') 50%, theme('colors.dark') 85%,transparent 85%,transparent 100%);
         background-repeat: no-repeat;
@@ -197,7 +197,7 @@
     }
     
 
-    &:hover, &:active {
+    &:hover, &:active, &.current {
         .underline-element { 
             transition: .5s cubic-bezier(.645,.045,.355,1);
             background-size: 100% 100%;
@@ -217,8 +217,10 @@
 .handle {
     .buns {
         transition: all .8s;
-        stroke-dashoffset: 42;
-        stroke-dasharray: 71;
+        /* stroke-dashoffset: 42;
+        stroke-dasharray: 71; */
+        stroke-dashoffset: 0px;
+        stroke-dasharray: 102.355px, 241.261px;
     }
     .patty {
         opacity: 1;
@@ -231,7 +233,9 @@
         }
         .buns {
             transition: all 1.3s;
-            stroke-dashoffset: -68;
+            /* stroke-dashoffset: -68; */
+            stroke-dashoffset: -233.816px;
+            stroke-dasharray: 95.992px, 242.624px;
         }
     }
 }
@@ -264,14 +268,15 @@
                         -webkit-text-stroke-color: #FFC734;
                     }
                 } */
-                & li:not(:hover) {
-                    & a {
+                /* & li:not(:hover) {
+                    & a { */
                         /*  this is the yellow  */
-                        -webkit-text-stroke-color: #FFC734;
-                        color: transparent;
-                        transition: color .5s, -webkit-text-stroke-color .5 ease-out .2;
-                    }
-                }
+                        /* -webkit-text-stroke-color: #FFC734;
+                        color: transparent; */
+                        /* color: rgba(255, 198, 0, .4); */
+                        /* transition: color .5s, -webkit-text-stroke-color .5 ease-out .2; */
+                    /* }
+                } */
             }
             
         }
@@ -426,6 +431,7 @@
 .secret-santa {
 
     &-box {
+        perspective: 1000px;
         .item {
             backface-visibility: hidden;
             transform-style: preserve-3d;
@@ -436,11 +442,11 @@
                 transform: rotateY(0deg);
             }
             &.back {
-                transform: rotateY(180deg);
+                transform: rotateY(-180deg);
             }
     
             .inner  {
-                @apply p-6 flex flex-col justify-between h-full
+                @apply p-5 flex flex-col justify-between h-full
             }
             @media(md){
                 .inner {

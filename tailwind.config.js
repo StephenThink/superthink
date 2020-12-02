@@ -8,10 +8,11 @@ module.exports = {
     options: {
       safelist: [
         'think-toast', 
-        'think-loser-toast', 
+        'think-loser-toast',
+        'toastify-width',
         'overflow-visible',
         'page-content',
-        ' toggle-dot',
+        'toggle-dot',
         'threed-animation',
         'swiper-button-disabled',
       ]
@@ -45,6 +46,8 @@ module.exports = {
         handle: "5rem",
         "handle-nm": "calc( 100vw - 5rem )",
         "vertical-handle-nm": "calc(100vh - 120px)",
+        "750": "750px",
+        "800": "800px",
         '1/2': '50%',
         '1/3': '33.333333%',
         '2/3': '66.666667%',
@@ -101,18 +104,24 @@ module.exports = {
        '1/4': '25%',
        '1/2': '50%',
        '3/4': '75%',
+       '600': '600px',
        '1000': '1000px',
       },
       maxHeight : {
-        '0': '0',
+       'auto': 'auto',
+       '0': '0',
        '1/4': '25%',
        '1/2': '50%',
        '3/4': '75%',
        '1000': '1000px',
        '600': '600px',
+       '650': '650px',
+       '700': '700px',
       },
       maxWidth : {
-        "500": "500px"
+        "none": "none",
+        "500": "500px",
+        "toastify-width": "calc(50% - 20px)",
       },
       zIndex: {
         '1': '1',
