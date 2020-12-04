@@ -1,8 +1,8 @@
-{{ partial:partials/hero classes="text-dark bg-light" text_small="true" display="{{title}}" show_playreel="0" }}
+{{ partial:partials/hero classes="text-dark bg-light dark:bg-dark dark:text-light" text_small="true" display="{{title}}" show_playreel="0" }}
 
 {{ partial:partials/negative_image}}
 
-<section class="main__panel bg-light">
+<section class="main__panel bg-light dark:bg-dark">
 
     <div class="container flex">
 
@@ -31,9 +31,9 @@
                             {{ /images }}
                         </div>
                         <div class="flex bottom-0 justify-between items-center relative mt-1">
-                            {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-prev  left z-1 ml-4  transform rotate-180" }}
+                            {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-prev  left z-1 ml-4  transform rotate-180 dark:" }}
                             <!-- Add Pagination -->
-                            <div class="swiper-pagination  left-0 right-0 bottom-50"></div>
+                            <div class="swiper-pagination  left-0 right-0 bottom-50 pointer-events-none"></div>
                             <!-- Add Arrows -->
                             {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-next  right-0 mr-4 z-1 " }}
                             
@@ -84,10 +84,10 @@
 
 {{ partial:partials/hulk }}
 
-<section class="main__panel bg-light">
+<section class="main__panel bg-light dark:bg-dark">
     <div class="container">
         <div class="">
-            <h2 class="accent__dark ">More from Think!</h2>
+            <h2 class="accent__dark">More from Think!</h2>
         </div>
         <div class="flex flex-wrap -mx-4 md:flex-nowrap">
             {{ collection:blog :until="date" limit="4" sort="date:desc" as="posts"}}

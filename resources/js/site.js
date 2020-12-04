@@ -72,6 +72,25 @@ const swiper = new Swiper(swipe.container, {
 document.addEventListener("touchstart", function() {}, true);
 
 
+// watch for Dark mode on the system
+window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', event => {
+  if (event.matches) {
+    //dark mode
+    document.querySelector('html').classList.add('dark')
+  } else {
+    //light mode
+    document.querySelector('html').classList.remove('dark')
+  }
+})
+
+// Dark mode initial
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.querySelector('html').classList.add('dark')
+  } else {
+    document.querySelector('html').classList.remove('dark')
+  }
+
 //  Always be at the top when entering the page.
 // barba.hooks.enter(() => {
 //     window.scrollTo(0, 0);

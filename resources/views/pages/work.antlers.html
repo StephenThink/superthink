@@ -1,18 +1,18 @@
 {{ partial:partials/hero classes="text-yellow bg-darker" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
 
-<section class="main__panel_x-small bg-light">
+<section class="main__panel_x-small bg-light dark:bg-dark">
     <div class="container">
         <div class="flex font-medium">
             <strong class=" mr-3">Show Me:</strong>
-            <span data-slide="hits" class="content-slider mr-3 text-gray-500 active cursor-pointer">The Hits</span>
-            <span data-slide="services" class="content-slider mr-3 text-gray-500 cursor-pointer">Services</span>
+            <span data-slide="hits" class="content-slider mr-3 text-gray-500 active cursor-pointer dark:text-darker">The Hits</span>
+            <span data-slide="services" class="content-slider mr-3 text-gray-500 cursor-pointer dark:text-darker">Services</span>
         </div>
     </div>
 </div>
 
-<div class="filter-section flex relative overflow-hidden bg-light md:ml-handle md:w-handle-nm  ">
+<div class="filter-section flex relative overflow-hidden bg-light md:ml-handle md:w-handle-nm dark:bg-dark ">
     <section class="section section-hits transition w-full absolute flex-100 active ">
-        <div class="pb-12 bg-light">
+        <div class="pb-12 bg-light dark:bg-dark">
             <div class="container">
                 <div class="flex flex-wrap -mx-4">
                     {{ collection:case_studies limit="4" greatest_hits:is="true" }}
@@ -37,7 +37,7 @@
 
         {{ partial:partials/cta}}
 
-        <div class="py-12 bg-light">
+        <div class="py-12 bg-light dark:bg-dark">
             <div class="container">
                 <div class="flex flex-wrap -mx-4">
                     {{ collection:case_studies limit="4" offset="4" greatest_hits:is="true" }}
@@ -62,7 +62,7 @@
     </section>
 
     <section class="section section-services transition w-full absolute flex-100">
-        <div class="py-12 bg-light">
+        <div class="py-12 bg-light dark:bg-dark">
             <div class="container">
                 <div class="flex flex-wrap -mx-4">
                         <!-- greatest_hits:is="true" -->

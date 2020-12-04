@@ -52,15 +52,37 @@
         background: rgb(255,199,52);
         background: linear-gradient(90deg, rgba(255,199,52,1) 65%, rgba(66,69,74,1) 65%);
     }
-
     .bg-gradient-blue-to-light {
         background: linear-gradient(0deg, rgba(247,247,247, 1) 30%, rgba(10, 6, 77, 1) 30%);
     }
-
     .bg-gradient-transparent-to-yellow {
         background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
     }
+
+
+    .dark {
+        .bg-gradient-blue-to-light {
+            background: linear-gradient(0deg, rgba(66,69,74,1) 30%, rgba(10, 6, 77, 1) 30%);
+        }
+        /* very specific, sould have a better way */
+        .md\:bg-gradient-transparent-to-yellow {
+            background: linear-gradient(90deg, rgba(66,69,74,1) 50%, rgba(255,199,52,1) 50%);
+        }
+        .md\:bg-gradient-yellow-to-dark:not(.not-affected-by-dark) {
+            background: linear-gradient(90deg, rgba(255,199,52,1) 65%, rgba(221,221,221,1) 65%);
+        }
+        
+    }
 }
+
+.dark {
+    .accent{
+        &__dark {
+            @apply text-light border-t border-light inline-block pt-2;
+        }
+    }
+}
+
 .accent {
     @apply text-yellow border-t border-yellow inline-block pt-2;
     &__dark {
@@ -184,15 +206,15 @@
 .half-height-colour, .blog__post {
     & .underline-element {
         display: inline;
-        background-image: linear-gradient(transparent 50%, theme('colors.dark') 50%, theme('colors.dark') 85%,transparent 85%,transparent 100%);
+        background-image: linear-gradient(transparent 60%, theme('colors.dark') 60%, theme('colors.dark') 85%,transparent 85%,transparent 100%);
         background-repeat: no-repeat;
         background-size: 0 100%;
         transition: .5s cubic-bezier(.645,.045,.355,1);
         &.yellow-underline {
-            background-image: linear-gradient(transparent 50%, theme('colors.yellow') 50%, theme('colors.yellow') 85%,transparent 85%,transparent 100%);
+            background-image: linear-gradient(transparent 60%, theme('colors.yellow') 60%, theme('colors.yellow') 85%,transparent 85%,transparent 100%);
         }
         &.light-underline {
-            background-image: linear-gradient(transparent 50%, theme('colors.light') 50%, theme('colors.light') 85%,transparent 85%,transparent 100%);
+            background-image: linear-gradient(transparent 60%, theme('colors.light') 60%, theme('colors.light') 85%,transparent 85%,transparent 100%);
         }
     }
     
@@ -254,8 +276,8 @@
             & li {
                 & a {
                     /*  this is the dark */
-                    -webkit-text-stroke-color: #42454A;
-                    -webkit-text-stroke-width: 1px;
+                    /* -webkit-text-stroke-color: #42454A; */
+                    /* -webkit-text-stroke-width: 1px; */
                     transition: color .5s, -webkit-text-stroke-color .5 ease-in-out .2;
                 }
             }
@@ -285,7 +307,7 @@
 
 .content-slider {
     &.active {
-        @apply text-dark;
+        @apply text-dark dark:text-yellow;
     }
 }
 

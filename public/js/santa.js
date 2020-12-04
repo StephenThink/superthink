@@ -1938,7 +1938,7 @@ exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base
 
 
 // module
-exports.push([module.i, "/*!\n * Toastify js 1.9.2\n * https://github.com/apvarun/toastify-js\n * @license MIT licensed\n *\n * Copyright (C) 2018 Varun A P\n */\n\n.toastify {\n  padding: 12px 20px;\n  color: #ffffff;\n  display: inline-block;\n  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px rgba(77, 96, 232, 0.3);\n  background: linear-gradient(135deg, #73a5ff, #5477f5);\n  position: fixed;\n  opacity: 0;\n  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);\n  border-radius: 2px;\n  cursor: pointer;\n  text-decoration: none;\n  max-width: calc(50% - 20px);\n  z-index: 2147483647;\n}\n\n.toastify.on {\n  opacity: 1;\n}\n\n.toast-close {\n  opacity: 0.4;\n  padding: 0 5px;\n}\n\n.toastify-right {\n  right: 15px;\n}\n\n.toastify-left {\n  left: 15px;\n}\n\n.toastify-top {\n  top: -150px;\n}\n\n.toastify-bottom {\n  bottom: -150px;\n}\n\n.toastify-rounded {\n  border-radius: 25px;\n}\n\n.toastify-avatar {\n  width: 1.5em;\n  height: 1.5em;\n  margin: -7px 5px;\n  border-radius: 2px;\n}\n\n.toastify-center {\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0;\n  max-width: -webkit-fit-content;\n  max-width: fit-content;\n  max-width: -moz-fit-content;\n}\n\n@media only screen and (max-width: 360px) {\n  .toastify-right, .toastify-left {\n    margin-left: auto;\n    margin-right: auto;\n    left: 0;\n    right: 0;\n    max-width: -webkit-fit-content;\n    max-width: -moz-fit-content;\n    max-width: fit-content;\n  }\n}\n", ""]);
+exports.push([module.i, "/*!\n * Toastify js 1.9.3\n * https://github.com/apvarun/toastify-js\n * @license MIT licensed\n *\n * Copyright (C) 2018 Varun A P\n */\n\n.toastify {\n  padding: 12px 20px;\n  color: #ffffff;\n  display: inline-block;\n  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px rgba(77, 96, 232, 0.3);\n  background: linear-gradient(135deg, #73a5ff, #5477f5);\n  position: fixed;\n  opacity: 0;\n  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);\n  border-radius: 2px;\n  cursor: pointer;\n  text-decoration: none;\n  max-width: calc(50% - 20px);\n  z-index: 2147483647;\n}\n\n.toastify.on {\n  opacity: 1;\n}\n\n.toast-close {\n  opacity: 0.4;\n  padding: 0 5px;\n}\n\n.toastify-right {\n  right: 15px;\n}\n\n.toastify-left {\n  left: 15px;\n}\n\n.toastify-top {\n  top: -150px;\n}\n\n.toastify-bottom {\n  bottom: -150px;\n}\n\n.toastify-rounded {\n  border-radius: 25px;\n}\n\n.toastify-avatar {\n  width: 1.5em;\n  height: 1.5em;\n  margin: -7px 5px;\n  border-radius: 2px;\n}\n\n.toastify-center {\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0;\n  max-width: -webkit-fit-content;\n  max-width: fit-content;\n  max-width: -moz-fit-content;\n}\n\n@media only screen and (max-width: 360px) {\n  .toastify-right, .toastify-left {\n    margin-left: auto;\n    margin-right: auto;\n    left: 0;\n    right: 0;\n    max-width: -webkit-fit-content;\n    max-width: -moz-fit-content;\n    max-width: fit-content;\n  }\n}\n", ""]);
 
 // exports
 
@@ -8110,7 +8110,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
- * Toastify js 1.9.2
+ * Toastify js 1.9.3
  * https://github.com/apvarun/toastify-js
  * @license MIT licensed
  *
@@ -8129,7 +8129,7 @@ if(false) {}
       return new Toastify.lib.init(options);
     },
     // Library version
-    version = "1.9.2";
+    version = "1.9.3";
 
   // Defining the prototype of the object
   Toastify.lib = Toastify.prototype = {
@@ -8167,9 +8167,7 @@ if(false) {}
       this.options.stopOnFocus = options.stopOnFocus === undefined? true: options.stopOnFocus; // stop timeout on focus
       this.options.onClick = options.onClick; // Callback after click
 
-      const normalOffset = { x: 0, y: 0 };
-
-      this.options.offset = options.offset || normalOffset // toast offset
+      this.options.offset = options.offset || { x: 0, y: 0 }; // toast offset
 
       // Returning the current object for chaining functions
       return this;
@@ -8264,7 +8262,7 @@ if(false) {}
 
       // Clear timeout while toast is focused
       if (this.options.stopOnFocus && this.options.duration > 0) {
-        const self = this;
+        var self = this;
         // stop countdown
         divElement.addEventListener(
           "mouseover",
@@ -8318,10 +8316,10 @@ if(false) {}
         var x = getAxisOffsetAValue("x", this.options);
         var y = getAxisOffsetAValue("y", this.options);
         
-        const xOffset = this.options.position == "left" ? x : `-${x}`;
-        const yOffset = this.options.gravity == "toastify-top" ? y : `-${y}`;
+        var xOffset = this.options.position == "left" ? x : "-" + x;
+        var yOffset = this.options.gravity == "toastify-top" ? y : "-" + y;
 
-        divElement.style.transform = `translate(${xOffset}, ${yOffset})`;
+        divElement.style.transform = "translate(" + xOffset + "," + yOffset + ")";
 
       }
 

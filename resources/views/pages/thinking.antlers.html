@@ -1,4 +1,4 @@
-{{ partial:partials/hero classes="text-dark bg-light" display="{{hero_text}}" show_playreel="0" }}
+{{ partial:partials/hero classes="text-dark bg-light dark:bg-dark dark:text-light" display="{{hero_text}}" show_playreel="0" }}
 
 {{ collection:blog limit="1" as="single" sort="date:desc"}}
     {{ single }}
@@ -6,7 +6,7 @@
     {{ /single }}
 {{ /collection:blog }}
 
-<section class="main__panel bg-light">
+<section class="main__panel bg-light dark:bg-dark">
     <div class="container">
         <div class="flex flex-wrap -mx-4">
 

@@ -2,7 +2,7 @@
     {{ partial:partials/hero image_classes="object-left-top" display="{{hero_image}}" show_playreel="0" }}
 {{ /if }}
 
-<section class="main__panel_small bg-light">
+<section class="main__panel_small bg-light dark:bg-dark">
     <div class="container flex">
         <div class="hidden w-full md:w-2/12 md:block"></div>
 
@@ -22,14 +22,14 @@
             {{ stepper }}
                 <div class=" w-1/2 px-4 text-center md:w-1/4">
                     {{ if image }}
-                        <div class="pb-full rounded-full bg-dark">
+                        <div class="pb-full rounded-full bg-dark dark:bg-yellow">
                             <!-- this might be an svg -->
                             {{# {{ image }}
                                 <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full object-cover">
                             {{ /image }} #}}
                         </div>
                     {{ else }}
-                        <div class="pb-full rounded-full bg-dark"></div>
+                        <div class="pb-full rounded-full bg-dark dark:bg-yellow"></div>
                     {{ /if }}
 
                     <p class="mt-8 font-bold text-lg">{{ label }}</p>
@@ -53,7 +53,7 @@
 
 {{ partial:partials/cta custom_cta="Need an idea? Get in touch for a chat..." }}
 
-<section class="main__panel bg-light-grey">
+<section class="main__panel bg-light-grey dark:bg-dark">
     <div class="container">
         <h3 class="font-black text-3xl">Featured {{ title }} Projects</h3>
 
