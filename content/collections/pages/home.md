@@ -4,21 +4,21 @@ blueprint: homepage
 template: home
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1599835839
+updated_at: 1610727051
 why_us_headline: 'Want to make your brand more memorable? You’ve come to the right place.'
 why_us_content:
   -
     image: homepage/nibby.jpg
     heading: 'Big thinkers'
     excerpt: 'Ever noticed how the best brands seem to break all the rules? That''s because it makes no sense to do what everyone else is doing.'
-    link_text: 'See out Thinking in action >>>'
+    link_text: 'See out Thinking in action'
     type: new_set
     enabled: true
   -
     image: homepage/meeting.jpg
     heading: 'Big experience'
     excerpt: 'Years ago, you could only get a top class full-service agency in the big cities. Find out why that’s not true anymore…'
-    link_text: 'See our full service list >>>'
+    link_text: 'See our full service list'
     type: new_set
     enabled: true
 banner:

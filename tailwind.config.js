@@ -43,6 +43,7 @@ module.exports = {
         
       },
       spacing: {
+        "1px" : "1px",
         "screen": "100vw",
         handle: "5rem",
         "handle-nm": "calc( 100vw - 5rem )",
@@ -131,7 +132,11 @@ module.exports = {
       colors: {
         yellow: "#FFC734",
         darker: "#2C2F33",
-        dark: "#42454A",
+        // dark: "#42454A",
+        dark: "#373737",
+
+        "mid-grey" : "#7c7c7c",
+
         light: "#F7F7F7",
         grey: "#AFB0B3",
         blue: "#0A064D",

@@ -1,4 +1,4 @@
-{{ partial:partials/hero classes="bg-yellow text-dark  " bubbles="1" display="{{hero_text}}" show_playreel="1" }}
+{{ partial:partials/hero classes="bg-yellow text-dark dark:bg-darker dark:text-yellow " bubbles="1" display="{{hero_text}}" show_playreel="1" }}
 
 <div class="main__panel bg-light dark:bg-dark dark:text-light" data-scroll-section>
     <div class="container">
@@ -19,10 +19,11 @@
                                 {{ /glide:image }}
                             </div>
                         </div>
-                        <p class="mt-8 text-yellow font-bold">{{heading}}</p>
+                        <p class="mt-8 text-mid-grey font-bold dark:text-light">{{heading}}</p>
                         <p class="mt-8 ">{{ excerpt }}</p>
-
-                        <a class="mt-auto block text-grey md:mt-8" href="{{ link_url ?? '/' }}">{{ link_text ?? 'generic link text' }}</a>
+                        <div class="half-height-colour text-lg mt-auto md:mt-8">
+                            <a class="underline-element yellow-underline  block text-mid-grey  dark:text-light" href="{{ link_url ?? '/' }}">{{ link_text ?? 'generic link text' }}</a>
+                        </div>
                     </div>
                 </div>
             {{ /why_us_content }}
@@ -34,7 +35,7 @@
     
     <div class="container h-full flex flex-col justify-between">
         <div class="">
-            <h2 class="accent">The Think! way of doing things</h2>
+            <h2 class="accent__yellow">The Think! way of doing things</h2>
         </div>
         <div class="text-5xl md:text-display-hero font-black">
             <div class="text-white leading-tight fancy" data-scroll data-scroll-call="fancy">Stand out ideas get</div>
@@ -59,6 +60,7 @@
     email="{{ banner_email }}"
     bg="bg-yellow"
     bubbles="true"
+    classes="text-dark "
 }}
 
 {{ partial:partials/client_list }}

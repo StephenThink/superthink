@@ -1,7 +1,7 @@
 <div class="main__panel_x-small {{ bg }} relative overflow-hidden text-dark">
     {{ if bubbles }}
         <div class="">
-            {{ svg src="assets/svgs/bubbles" class="absolute text-white fill-current small_bubble_banner -mr-48 right-0 hidden md:block dark:text-dark" }}
+            {{ svg src="assets/svgs/bubbles" class="absolute fill-current small_bubble_banner -mr-48 right-0 hidden md:block  {classes ?? ' text-white dark:text-dark'} " }}
         </div>
     {{ /if }}
     <div class="container">

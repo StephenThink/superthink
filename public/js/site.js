@@ -41248,22 +41248,39 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](_helpers__WEBPAC
   }
 }); //   enable hover effects on touch screens! 
 
-document.addEventListener("touchstart", function () {}, true); // watch for Dark mode on the system
+document.addEventListener("touchstart", function () {}, true);
+var lightswitch = document.querySelector('.switch');
+var html = document.getElementsByTagName('html')[0];
+lightswitch.addEventListener('click', function (e) {
+  if (html.classList.contains('dark')) {
+    // dark mode needs turning off. 
+    e.target.classList.remove('on');
+    html.classList.remove('dark');
+    return;
+  }
+
+  e.target.classList.add('on');
+  html.classList.add('dark');
+}); // watch for Dark mode on the system
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (event) {
   if (event.matches) {
     //dark mode
-    document.querySelector('html').classList.add('dark');
+    html.classList.add('dark');
+    lightswitch.classList.add('on');
   } else {
     //light mode
-    document.querySelector('html').classList.remove('dark');
+    html.classList.remove('dark');
+    lightswitch.classList.remove('on');
   }
 }); // Dark mode initial
 
 if (localStorage.theme === 'dark' || !('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.querySelector('html').classList.add('dark');
+  html.classList.add('dark');
+  lightswitch.classList.add('on');
 } else {
-  document.querySelector('html').classList.remove('dark');
+  html.classList.remove('dark');
+  lightswitch.classList.remove('on');
 } //  Always be at the top when entering the page.
 // barba.hooks.enter(() => {
 //     window.scrollTo(0, 0);
