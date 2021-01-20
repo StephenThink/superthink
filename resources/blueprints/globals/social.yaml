@@ -9,3 +9,39 @@ sections:
           type: textarea
           icon: textarea
           listable: hidden
+      -
+        handle: facebook_link
+        field:
+          input_type: text
+          antlers: false
+          display: 'Facebook Link'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: instagram_link
+        field:
+          input_type: text
+          antlers: false
+          display: 'Instagram Link'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: linkedin_link
+        field:
+          input_type: text
+          antlers: false
+          display: 'Linkedin Link'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: twitter_link
+        field:
+          input_type: text
+          antlers: false
+          display: 'Twitter Link'
+          type: text
+          icon: text
+          listable: hidden

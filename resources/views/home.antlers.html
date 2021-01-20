@@ -1,4 +1,4 @@
-{{ partial:partials/hero classes="bg-yellow text-dark dark:bg-darker dark:text-yellow " bubbles="1" display="{{hero_text}}" show_playreel="1" }}
+{{ partial:partials/hero classes="bg-yellow text-dark dark:bg-header-dark dark:text-yellow " bubbles="1" display="{{hero_text}}" show_playreel="1" }}
 
 <div class="main__panel bg-light dark:bg-dark dark:text-light" data-scroll-section>
     <div class="container">
@@ -19,8 +19,8 @@
                                 {{ /glide:image }}
                             </div>
                         </div>
-                        <p class="mt-8 text-mid-grey font-bold dark:text-light">{{heading}}</p>
-                        <p class="mt-8 ">{{ excerpt }}</p>
+                        <p class="mt-8 text-dark font-bold dark:text-light">{{heading}}</p>
+                        <p class="mt-8 text-lg">{{ excerpt }}</p>
                         <div class="half-height-colour text-lg mt-auto md:mt-8">
                             <a class="underline-element yellow-underline  block text-mid-grey  dark:text-light" href="{{ link_url ?? '/' }}">{{ link_text ?? 'generic link text' }}</a>
                         </div>
@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<div class="main__panel_small h-screen bg-darker" data-scroll-section>
+<div class="main__panel_small h-screen bg-dark" data-scroll-section>
     
     <div class="container h-full flex flex-col justify-between">
         <div class="">

@@ -134,7 +134,7 @@ module.exports = {
         darker: "#2C2F33",
         // dark: "#42454A",
         dark: "#373737",
-
+        "header-dark" :"#292929",
         "mid-grey" : "#7c7c7c",
 
         light: "#F7F7F7",
