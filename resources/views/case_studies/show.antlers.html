@@ -57,7 +57,7 @@
                         <img src="{{ image }}" alt="" class="w-full h-full object-cover absolute" loading=lazy>
                     </div>
 
-                    <p class="mt-8 text-yellow w-full md:w-7/12">{{ sign_off }}</p>
+                    <p class="mt-8 text-mid-grey w-full md:w-7/12 dark:text-white">{{ sign_off }}</p>
                 </div>
             </div>
         </div>
@@ -150,14 +150,18 @@
 
         {{ next }}
 
-            <a href="{{ link to='/work/{slug}' }}">
+            <a href="{{ link to='/work/{slug}' }}" class="hover-button image">
+                
                 <div class="h-screen relative" >
-                    <img src="{{ hero_image }}" alt="" class="h-full absolute object-cover" loading=lazy>
-                    <div class="container p-24 relative text-5xl text-white font-black z-10">
-                        <p class="">Next project:</p>
-                        <p class=" mt-4">{{ title }}</p>
-                    </div>
+                    <span class="">
+                        <img src="{{ hero_image }}" alt="" class="h-full absolute object-cover" loading=lazy>
+                        <div class="container p-24 relative text-5xl text-white font-black z-10">
+                            <p class="">Next project:</p>
+                            <p class=" mt-4">{{ title }}</p>
+                        </div>
+                    </span>
                 </div>
+                
             </a>
 
         {{ /next }}

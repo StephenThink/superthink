@@ -84,7 +84,8 @@ module.exports = {
         regular: ['geo-regular'],
         bold: ['geo-bold'],
         "regular-italic": ['geo-regular-italic'],
-        medium: ['geo-medium']
+        medium: ['geo-medium'],
+        light: ['geo-light']
       },
       fontSize: {
         "display-hero": "7rem",

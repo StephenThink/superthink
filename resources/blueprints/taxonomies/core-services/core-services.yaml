@@ -8,12 +8,13 @@ sections:
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         handle: strapline
         field:
           input_type: text
           type: text
-          localizable: false
           listable: hidden
           display: Strapline
           validate:
@@ -24,7 +25,6 @@ sections:
         handle: introduction
         field:
           type: textarea
-          localizable: false
           listable: hidden
           display: Introduction
       -
@@ -33,13 +33,59 @@ sections:
           type: markdown
           localizable: true
       -
+        handle: grid
+        field:
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: text
+              field:
+                always_show_set_button: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                display: Text
+                type: bard
+                icon: bard
+                listable: hidden
+          mode: table
+          reorderable: true
+          display: Grid
+          type: grid
+          icon: grid
+          listable: hidden
+      -
         handle: tag_line_us
         field:
           placeholder: 'Inspiring quote'
           input_type: text
           type: text
           instructions: 'The text you want to display when US is toggled'
-          localizable: false
           listable: hidden
           display: 'Tagline Us'
           validate:
@@ -50,7 +96,6 @@ sections:
           input_type: text
           type: text
           instructions: 'The text you want to display when YOU is toggled'
-          localizable: false
           listable: hidden
           display: 'Tagline You'
           validate:
@@ -63,11 +108,21 @@ sections:
         field:
           type: slug
           required: true
+          validate:
+            - required
       -
         handle: template
         field:
           hide_partials: true
           type: template
-          localizable: false
           listable: hidden
           display: Template
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

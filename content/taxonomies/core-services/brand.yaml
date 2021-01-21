@@ -12,10 +12,49 @@ content: |
 strapline: 'Help! We’re really good at what we do but nobody knows'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1600184695
+updated_at: 1611243427
 blueprint: core-services
 tag_line_us: 'Build a brand that makes you stand out'
 tag_line_you: 'You need a distinctive brand'
 template: service-taxonomy/show
 introduction: 'It’s bonkers to spend a tonne of cash on beautifully crafted marketing, only to find out it looks exactly the same as your competitors. That’s why we always look at your problem from a new angle, so we can give you that little something you didn’t realise you needed.'
 hero_image: 9-ParkingEye.jpg
+grid:
+  -
+    title: Strategy
+    text:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: '“The possibilities are endless!” When you’re stood at the dessert buffet they’re the best words in the world. When you’re thinking about your brand and marketing? Not so much. Because branding needs focus. Purpose. Direction. Your branding needs strategy. And this is where you find it. '
+      -
+        type: paragraph
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'Set your direction'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Sure, you could spend the rest of your life throwing marketing ideas at the wall and seeing what sticks, but you probably don’t have time for that. You definitely won’t have the budget for that. '
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'That’s why you need a strategy. It’s how you identify what really matters. Before the creatives start doing their whizzy stuff, a strategy is how you can be confident that a) this will have an impact and b) it will have the impact you actually want. '
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'The possibilities are endless. So let’s start whittling them down to the ones that can really make a difference with a clear, smart and simple strategy. Here’s how…'

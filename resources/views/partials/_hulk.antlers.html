@@ -10,7 +10,9 @@
             <div class="mt-6">
                 <form action="" class="flex flex-col md:flex-row ">
                     <input type="text" class="appearance-none outline-none bg-transparent border-b border-dark placeholder-dark pb-4 flex-1" placeholder="Sign up for our newsletter... ">
-                    <button type="submit" class="rounded-full text-dark bg-yellow px-8 py-3 mt-5 md:mt-0">Click here</button>
+                    <button type="submit" class="w-100 hover-button mt-8 md:mt-0 ">
+                            {{ partial:partials.hover_button text="Sign up" class="text-dark bg-yellow" }}
+                    </button>
                 </form>
             </div>
         </div>

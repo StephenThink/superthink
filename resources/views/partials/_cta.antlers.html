@@ -5,8 +5,8 @@
             <h4 class="font-black text-4xl leading-tight m-auto dark:text-dark">{{ call_to_action ?? custom_cta ?? 'Nothing entered'}}</h4>
         </div>
         <div class="w-full md:w-3/12 mt-8 md:mt-0 flex items-center">
-            <a href="{{ cta_link ?? '/contact' }}" class="rounded-full text-yellow bg-dark px-12 py-4">
-                {{ cta_button ?? "Contact us" }}
+            <a href="{{ cta_link ?? '/contact' }}" class="hover-button">
+                {{ partial:partials.hover_button text="{{ cta_button ?? "Contact us" }}" class="bg-dark text-yellow" }}
             </a>
         </div>
 

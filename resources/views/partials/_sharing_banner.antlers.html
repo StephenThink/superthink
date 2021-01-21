@@ -1,0 +1,84 @@
+<!-- rename to the copy banner -->
+<div class="bg-yellow md:bg-gradient-transparent-to-yellow relative overflow-hidden dark:text-dark">
+    
+    <div class="">
+        {{ svg src="assets/svgs/bubbles" class="absolute text-dark fill-current  h-full  -mr-24 right-0 hidden md:block" }}
+    </div>
+
+    <div class="container flex">
+        <!-- <div class="w-full hidden md:block md:w-1/12"></div> -->
+        <div class="w-full md:w-10/12 flex flex-col bg-yellow p-16">
+            <p class="w-full md:w-10/12">{{ social:rhyme }}</p>
+            <div>
+                <button class="sharing-is-caring half-height-colour cursor-pointer font-bold text-lg block mt-4" onClick="javascript:copyToClipboard(window.location.href)"> 
+                    <span class="underline-element light-underline">Sharing is caring</span>
+                </button>
+                <span class="copied-to-clipboard hidden">URL copied to clipboard!</span>
+            </div>
+            <span id="sharing_url" class="hidden">{{ current_url }}</span>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function showMessage(el) {
+        el.classList.toggle('hidden');
+        setTimeout( () => {
+            el.classList.toggle('hidden');
+        }, 1000)
+    }
+
+    function copyToClipboard(string) {
+
+        let textarea;
+        let result;        
+        let hiddenMessage = document.querySelector('.copied-to-clipboard');
+        
+        try {
+            textarea = document.createElement('textarea');
+            textarea.setAttribute('readonly', true);
+            textarea.setAttribute('contenteditable', true);
+            textarea.style.position = 'fixed'; // prevent scroll from jumping to the bottom when focus is set.
+            textarea.value = string;
+        
+            document.body.appendChild(textarea);
+        
+            textarea.focus();
+            textarea.select();
+        
+            const range = document.createRange();
+            range.selectNodeContents(textarea);
+        
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        
+            textarea.setSelectionRange(0, textarea.value.length);
+            result = document.execCommand('copy');
+
+            hiddenMessage.innerText = 'Copied to clipboard!';
+            showMessage(hiddenMessage)
+
+        } catch (err) {
+            console.error(err);
+            hiddenMessage.innerText = 'Something went wrong.';
+            showMessage(hiddenMessage);
+            result = null;
+        } finally {
+            document.body.removeChild(textarea);
+        }
+        
+        // manual copy fallback using prompt
+        if (!result) {
+            const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+            const copyHotkey = isMac ? '⌘C' : 'CTRL+C';
+            result = prompt(`Press ${copyHotkey}`, string); // eslint-disable-line no-alert
+            if (!result) {
+            return false;
+            }
+        }
+        return true;
+    }
+
+</script>
