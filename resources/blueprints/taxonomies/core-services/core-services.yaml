@@ -28,58 +28,6 @@ sections:
           listable: hidden
           display: Introduction
       -
-        handle: content
-        field:
-          type: markdown
-          localizable: true
-      -
-        handle: grid
-        field:
-          fields:
-            -
-              handle: title
-              field:
-                input_type: text
-                antlers: false
-                display: Title
-                type: text
-                icon: text
-                listable: hidden
-            -
-              handle: text
-              field:
-                always_show_set_button: false
-                buttons:
-                  - h2
-                  - h3
-                  - bold
-                  - italic
-                  - unorderedlist
-                  - orderedlist
-                  - removeformat
-                  - quote
-                  - anchor
-                  - image
-                  - table
-                save_html: false
-                toolbar_mode: fixed
-                link_noopener: false
-                link_noreferrer: false
-                target_blank: false
-                reading_time: false
-                fullscreen: true
-                allow_source: true
-                display: Text
-                type: bard
-                icon: bard
-                listable: hidden
-          mode: table
-          reorderable: true
-          display: Grid
-          type: grid
-          icon: grid
-          listable: hidden
-      -
         handle: tag_line_us
         field:
           placeholder: 'Inspiring quote'
@@ -100,6 +48,62 @@ sections:
           display: 'Tagline You'
           validate:
             - required
+      -
+        handle: grid
+        field:
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: text
+              field:
+                restrict: true
+                automatic_line_breaks: true
+                automatic_links: true
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Top Text'
+                type: markdown
+                icon: markdown
+                listable: hidden
+                container: assets
+                folder: /
+            -
+              handle: bold_text
+              field:
+                input_type: text
+                antlers: false
+                display: 'Bold text'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: bottom_text
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Bottom Text'
+                type: markdown
+                icon: markdown
+                listable: hidden
+          mode: stacked
+          reorderable: true
+          display: Grid
+          type: grid
+          icon: grid
+          listable: hidden
   sidebar:
     display: Sidebar
     fields:

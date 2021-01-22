@@ -4,23 +4,42 @@
 {{ /if }}
 
 
-<section class="main__panel bg-light dark:bg-dark">
-    <div class="container flex">
-        <div class="hidden w-full md:w-2/12 md:block"></div>
-        <div class="w-full md:w-1/2 mx-auto">
-            <h1 class="text-5xl font-black">{{ title }}</h1>
+<div class="main__panel bg-light dark:bg-dark">
 
-            <p class="mt-4 text-lg">{{ introduction }}</p>
-            
-            <div class="content mt-4">
-                {{ content }}
-            </div>
+    <div class="container">
+
+        <div class="flex flex-col items-end ">
+            {{ grid }}
+                <div class="block {{ !last ?= 'pb-12' }} md:flex ">
+                    <div class="w-full mbb-4 md:mb-0 md:w-3/12">
+                        <h2 class="text-dark font-black leading-tight text-4xl dark:text-light">{{ title }}</h2>
+                    </div>
+
+                    <div class="w-full md:w-1/12"></div>
+
+                    <div class="w-full pb-12 ml-0 {{ !last ?= 'border-b border-light-grey' }} md:w-6/12">
+                        <div class="text-xl pb-8">
+                            {{ text }}
+                        </div>
+                        {{ if bold_text }}
+                            <div class="pb-8 font-bold text-xl">
+                                <strong>{{ bold_text }}</strong>
+                            </div>
+                        {{ /if }}
+                        <div class="content blog__post">
+                            {{ bottom_text}}
+                        </div>
+                    </div>
+                </div>
+            {{ /grid}}
         </div>
-        <div class="hidden w-full md:w-4/12 md:block"></div>
+
     </div>
-</section>
+
+</div>
+
 
 {{ partial:partials/cta custom_cta="Need an idea? Get in touch for a chat..." }}
 
-
-{{ partial:partials/grid_filter title="All {{title}} Services" what="services" filter="{slug}"}}
+<!-- Featured strategy projects here --- Need to tag a case study to a service -->
+{{ partial:partials/grid_filter title="Featured {{title}} Projects" what="case_studies" filter="{slug}"}}

@@ -8,7 +8,7 @@ sector:
   - Aerospace
   - Defence
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1600952941
+updated_at: 1611248677
 main_content:
   -
     type: paragraph
@@ -75,5 +75,7 @@ main_services:
 services_filter:
   - web-design-and-development
   - creative-design
+core-services:
+  - strategy
 id: 53966610-757c-40bb-92fd-b0f77a3706e6
 ---

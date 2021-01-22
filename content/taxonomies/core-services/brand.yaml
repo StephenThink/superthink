@@ -1,18 +1,8 @@
 title: Brand
-content: |
-  ## Understand your current audience
-  
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at. Lectus arcu bibendum at varius. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Nisl pretium fusce id velit ut tortor. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Consectetur a erat nam at lectus urna duis. Lacus sed viverra tellus in hac habitasse platea dictumst. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
-  
-  
-  Dolor purus non enim praesent elementum facilisis leo. Gravida rutrum quisque non tellus. Magna ac placerat vestibulum lectus mauris ultrices. Tincidunt eget nullam non nisi est sit amet facilisis magna. Sed ullamcorper morbi tincidunt ornare massa eget egestas. Etiam sit amet nisl purus in mollis. Ac turpis egestas integer eget aliquet nibh praesent tristique. Ac turpis egestas maecenas pharetra convallis posuere. Sit amet massa vitae tortor condimentum lacinia quis vel.
-  
-  
-  Dolor purus non enim praesent elementum facilisis leo. Gravida rutrum quisque non tellus. Magna ac placerat vestibulum lectus mauris ultrices. Tincidunt eget nullam non nisi est sit amet facilisis magna. Sed ullamcorper morbi tincidunt ornare massa eget egestas. Etiam sit amet nisl purus in mollis. Ac turpis egestas integer eget aliquet nibh praesent tristique. Ac turpis egestas maecenas pharetra convallis posuere. Sit amet massa vitae tortor condimentum lacinia quis vel.
 strapline: 'Help! We’re really good at what we do but nobody knows'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1611243427
+updated_at: 1611247486
 blueprint: core-services
 tag_line_us: 'Build a brand that makes you stand out'
 tag_line_you: 'You need a distinctive brand'
@@ -22,39 +12,28 @@ hero_image: 9-ParkingEye.jpg
 grid:
   -
     title: Strategy
-    text:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: '“The possibilities are endless!” When you’re stood at the dessert buffet they’re the best words in the world. When you’re thinking about your brand and marketing? Not so much. Because branding needs focus. Purpose. Direction. Your branding needs strategy. And this is where you find it. '
-      -
-        type: paragraph
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            marks:
-              -
-                type: bold
-            text: 'Set your direction'
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Sure, you could spend the rest of your life throwing marketing ideas at the wall and seeing what sticks, but you probably don’t have time for that. You definitely won’t have the budget for that. '
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'That’s why you need a strategy. It’s how you identify what really matters. Before the creatives start doing their whizzy stuff, a strategy is how you can be confident that a) this will have an impact and b) it will have the impact you actually want. '
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'The possibilities are endless. So let’s start whittling them down to the ones that can really make a difference with a clear, smart and simple strategy. Here’s how…'
+    text: '“The possibilities are endless!” When you’re stood at the dessert buffet they’re the best words in the world. When you’re thinking about your brand and marketing? Not so much. Because branding needs focus. Purpose. Direction. Your branding needs strategy. And this is where you find it.'
+    bold_text: 'Set your direction'
+    bottom_text: |
+      Sure, you could spend the rest of your life throwing marketing ideas at the wall and seeing what sticks, but you probably don’t have time for that. You definitely won’t have the budget for that.
+      
+      That’s why you need a strategy. It’s how you identify what really matters. Before the creatives start doing their whizzy stuff, a strategy is how you can be confident that a) this will have an impact and b) it will have the impact you actually want. 
+      
+      The possibilities are endless. So let’s start whittling them down to the ones that can really make a difference with a clear, smart and simple strategy. Here’s how...
+  -
+    title: 'Research & Insights'
+    text: '“Research is creating new knowledge”. Neil Armstrong said that, which just goes to show there was a good career in marketing waiting for him if he ever grew tired of the astronaut stuff. But what new knowledge do you need?'
+    bold_text: 'Knowledge. Not assumptions.'
+    bottom_text: |
+      At Think! Creative, research doesn’t come freeze dried and prepacked (unlike Neil’s lunch). We don’t start with the answers and design a survey to conveniently arrive at what we thought in the first place. 
+      
+      With us, you’ll find fresh insights that confirm your suspicions or data. You’ll find insights that contradict the conventional wisdom. And you’ll find the occasional answer that raises questions you simply never thought of before. Often, those can be the most rewarding insights of all. As the foundations of a new brand strategy or simply because it’s good to have actual knowledge rather than assumptions, when you need to ask...
+      
+      - What do your customers think?
+      - What do the people who aren’t (yet) your customers think? 
+      - What are your competitors doing?
+      - How well known are you?
+      - How are perceptions of your brand/business changing over time? 
+      
+      
+      ... ask us to find out.
