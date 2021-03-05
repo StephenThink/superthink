@@ -67,12 +67,19 @@ const swiper = new Swiper(swipe.container, {
     },
 });
 
+let fileInput = document.querySelector(".upload-cv input");
 
-
+if( fileInput ) {
+    document.querySelector(".upload-cv input").onchange = function(e) {
+        document.querySelector('.custom-filename').innerHTML = this.value.split(/(\\|\/)/g).pop();   
+    };
+}
 
 //   enable hover effects on touch screens! 
 document.addEventListener("touchstart", function() {}, true);
 
+
+// Manually toggle light siwtch. 
 var lightswitch = document.querySelector('.switch');
 var html = document.getElementsByTagName('html')[0];
 
@@ -82,37 +89,44 @@ lightswitch.addEventListener('click', function(e) {
         // dark mode needs turning off. 
         e.target.classList.remove('on');
         html.classList.remove('dark');
+        localStorage.setItem('thinkcreative.theme', 'light');
 
         return;
     }
 
     e.target.classList.add('on');
     html.classList.add('dark');
+    localStorage.setItem('thinkcreative.theme', 'dark');
 
 });
 
 // watch for Dark mode on the system
 window.matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', event => {
-  if (event.matches) {
-    //dark mode
-    html.classList.add('dark');
-    lightswitch.classList.add('on');
-  } else {
-    //light mode
-    html.classList.remove('dark');
-    lightswitch.classList.remove('on');
-  }
+        if (event.matches) {
+            //dark mode
+            html.classList.add('dark');
+            lightswitch.classList.add('on');
+            localStorage.setItem('thinkcreative.theme', 'dark');
+        } else {
+            //light mode
+            html.classList.remove('dark');
+            lightswitch.classList.remove('on');
+            localStorage.setItem('thinkcreative.theme','light');
+        }
 })
+
+
+
 
 // Dark mode initial
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     html.classList.add('dark');
     lightswitch.classList.add('on');
-  } else {
+} else {
     html.classList.remove('dark');
     lightswitch.classList.remove('on');
-  }
+}
 
 //  Always be at the top when entering the page.
 // barba.hooks.enter(() => {

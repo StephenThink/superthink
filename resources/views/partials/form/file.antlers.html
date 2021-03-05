@@ -1,0 +1,23 @@
+<div class="wrapper {{ type }}">
+    <div class=" mb-8">
+        <div class="">
+            <label class="mr-0 w-full flex place-content-between">
+                <span class="upload-cv">
+                    <input type="file" name="{{ name }}">
+                    <span class="file-custom hover:bg-yellow hover:text-dark">
+                        <span></span>
+                    </span>
+                    <span class="custom-filename ml-1 text-sm text-dark dark:text-light"></span>
+                </span>
+                
+                <span class="mr-0">
+                    {{ display }}
+                </span>
+            </label>
+        </div>
+        <div class="underline"></div>
+    </div>
+    {{ if error }}
+        <p class="text-gray-500">{{ error }}</p>
+    {{ /if }}
+</div>

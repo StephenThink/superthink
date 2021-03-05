@@ -1,0 +1,58 @@
+{{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{ title }}" show_playreel="0" }}
+
+<section class="main__panel bg-light dark:bg-dark">
+    <div class="container">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-3/12"></div>
+
+            <div class="w-6/12">
+                <h1 class="font-black text-4xl mb-4">About the role</h1>
+                
+                <div class="mt-8">{{ introduction | nl2br }}</div>
+
+                <div class="mt-8">
+                    <h2 class="font-bold text-3xl mb-4">About us</h2>
+                    <div class="blog__post">
+                        {{ job:about_us }}
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h2 class="font-bold text-3xl mb-4">What we're after</h2>
+                    <div class="blog__post">
+                        {{ job:what_we_are_after }}
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h2 class="font-bold text-3xl mb-4">What the job is like</h2>
+                    <div class="blog__post">
+                        {{ what_the_job_is_like }}
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h2 class="font-bold text-3xl mb-4">What you get</h2>
+                    <div class="blog__post">
+                        {{ job:what_you_get }}
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h2 class="font-bold text-3xl mb-4">How to apply</h2>
+                    <div class="blog__post">
+                        {{ how_to_apply }}
+                    </div>
+                </div>
+
+
+                <div class="mt-8">
+                    <a href="/apply/{{ slug }}" class="w-100 hover-button mt-8 md:mt-0 ">
+                        {{ partial:partials.hover_button text="Apply for the { title } role" class="text-yellow bg-dark dark:text-dark dark:bg-light" }}
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

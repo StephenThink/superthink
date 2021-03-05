@@ -91,7 +91,7 @@ sections:
                     listable: hidden
                     display: Intro
                 -
-                  handle: full_image
+                  handle: intro_full_image
                   field:
                     mode: grid
                     container: assets
@@ -99,24 +99,16 @@ sections:
                     restrict: false
                     allow_uploads: true
                     max_files: 1
+                    display: 'Intro Full Image'
                     type: assets
+                    icon: assets
                     listable: hidden
-                    display: 'Full Image'
                 -
                   handle: outro
                   field:
                     type: textarea
                     listable: hidden
                     display: Outro
-            the_work:
-              display: 'The Work'
-              fields:
-                -
-                  handle: intro
-                  field:
-                    type: textarea
-                    listable: hidden
-                    display: Intro
             gallery:
               display: Gallery
               fields:
@@ -132,6 +124,30 @@ sections:
                     instructions: 'add as many images as you want - images will displayed half width.'
                     listable: hidden
                     display: Gallery
+            the_work:
+              display: 'The Work'
+              fields:
+                -
+                  handle: intro
+                  field:
+                    type: textarea
+                    listable: hidden
+                    display: Intro
+            full_image:
+              display: 'Full Image'
+              fields:
+                -
+                  handle: full_image
+                  field:
+                    mode: grid
+                    container: assets
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    type: assets
+                    listable: hidden
+                    display: 'Full Image'
           buttons:
             - h2
             - h3
@@ -157,7 +173,7 @@ sections:
           fullscreen: true
           allow_source: true
           type: bard
-          instructions: 'Add the blocks that you need or have content for - anything kept empty will be hidden.'
+          instructions: 'Add the blocks that you need or have content for - anything kept empty will be hidden. The order should be `Problem -> Idea -> Full Image -> Gallery -> Work`'
           listable: hidden
           display: 'Main Content'
       -
@@ -165,9 +181,16 @@ sections:
       -
         handle: outro
         field:
-          type: textarea
-          listable: hidden
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
           display: Outro
+          type: markdown
+          icon: markdown
+          listable: hidden
   sidebar:
     display: Sidebar
     fields:
@@ -230,3 +253,12 @@ sections:
           display: Employees
           type: entries
           listable: hidden
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

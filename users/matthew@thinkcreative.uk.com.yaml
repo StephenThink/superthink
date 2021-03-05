@@ -16,3 +16,11 @@ preferences:
       columns:
         - title
         - slug
+    case_studies:
+      per_page: 100
+      columns:
+        - title
+        - slug
+        - core-services
+        - services_filter
+      after_save: continue_editing

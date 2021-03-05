@@ -41246,9 +41246,18 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](_helpers__WEBPAC
     nextEl: '.custom-button-next',
     prevEl: '.custom-button-prev'
   }
-}); //   enable hover effects on touch screens! 
+});
+var fileInput = document.querySelector(".upload-cv input");
 
-document.addEventListener("touchstart", function () {}, true);
+if (fileInput) {
+  document.querySelector(".upload-cv input").onchange = function (e) {
+    document.querySelector('.custom-filename').innerHTML = this.value.split(/(\\|\/)/g).pop();
+  };
+} //   enable hover effects on touch screens! 
+
+
+document.addEventListener("touchstart", function () {}, true); // Manually toggle light siwtch. 
+
 var lightswitch = document.querySelector('.switch');
 var html = document.getElementsByTagName('html')[0];
 lightswitch.addEventListener('click', function (e) {
@@ -41256,11 +41265,13 @@ lightswitch.addEventListener('click', function (e) {
     // dark mode needs turning off. 
     e.target.classList.remove('on');
     html.classList.remove('dark');
+    localStorage.setItem('thinkcreative.theme', 'light');
     return;
   }
 
   e.target.classList.add('on');
   html.classList.add('dark');
+  localStorage.setItem('thinkcreative.theme', 'dark');
 }); // watch for Dark mode on the system
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (event) {
@@ -41268,10 +41279,12 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     //dark mode
     html.classList.add('dark');
     lightswitch.classList.add('on');
+    localStorage.setItem('thinkcreative.theme', 'dark');
   } else {
     //light mode
     html.classList.remove('dark');
     lightswitch.classList.remove('on');
+    localStorage.setItem('thinkcreative.theme', 'light');
   }
 }); // Dark mode initial
 

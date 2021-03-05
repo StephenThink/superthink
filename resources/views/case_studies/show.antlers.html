@@ -18,14 +18,18 @@
                         <div class="flex space-between">
                             <div class="w-1/2 font-bold uppercase text-base">Sector</div>
                             <div>
-                                {{ sector | ul }}
+                                {{ if sector }}
+                                    {{ sector | ul }}
+                                {{ /if }}
                             </div>
                         </div>
 
                         <div class="flex space-between mt-4">
                             <div class="w-1/2 font-bold uppercase text-base">Services</div>
                             <div>
-                                {{ sector | ul }}
+                                {{ if sector }}
+                                    {{ sector | ul }}
+                                {{ /if }}
                             </div>
                         </div>
                     </div>
@@ -63,6 +67,12 @@
         </div>
     {{ /if }}
 
+    {{ if full_image }}
+        <div class="main__panel_x-small bg-light full_image">
+            <img src="{{ full_image }}" alt="" class="w-full  object-cover" loading=lazy>
+        </div>
+    {{ /if}}
+
     {{ if type == "the_idea"}}
         <div class="main__panel_x-small bg-light pt-0 dark:bg-dark">
             <div class="container flex">
@@ -73,16 +83,16 @@
             </div>
         </div>
 
-        {{ if full_image }}
-            <div class="full_image">
-                <img src="{{ full_image }}" alt="" class="w-full  object-cover" loading=lazy>
+        {{ if intro_full_image }}
+            <div class="main__panel_x-small bg-light full_image">
+                <img src="{{ intro_full_image }}" alt="" class="w-full  object-cover" loading=lazy>
             </div>
         {{ /if}}
 
         <div class="main__panel_small bg-light dark:bg-dark">
             <div class="container flex">
                 <div class="w-full md:w-8/12 mx-auto">
-                    <p class="mt-4 w-full md:w-10/12">{{ intro }}</p>
+                    <p class="mt-4 w-full md:w-10/12">{{ outro }}</p>
                 </div>
             </div>
         </div>
@@ -131,7 +141,7 @@
 
 {{ partial:partials/small_banner }}
 
-<section class="main__panel_x-small bg-light dark:bg-dark">
+<section class="main__panel_x-small bg-light dark:bg-dark content ">
     <div class="container flex">
         <div class="w-full md:w-8/12 mx-auto">
             <p class="mt-4 w-full md:w-2/3">{{ outro }}</p>

@@ -20,3 +20,4 @@ Route::get('/work/{service}/all', 'CaseStudyController@index');
 
 Route::post('/secret-santa-results', 'SecretSantaController');
 
+Route::statamic('/apply/{role}', 'jobs.application_form');

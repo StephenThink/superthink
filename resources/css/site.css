@@ -394,6 +394,76 @@
     
 }
 
+.wrapper{
+
+    & .input-data{
+        height: 40px;
+        width: 100%;
+        position: relative;
+
+        & input {
+            
+            height: 100%;
+            width: 100%;
+            border: none;
+            font-size: 17px;
+            border-bottom: 2px solid silver;
+            &:focus ~ label,
+            &:not(:placeholder-shown) ~ label
+            /* &:valid ~ label */ {
+                transform: translateY(-30px);               
+            }
+            &:focus ~ .underline:before {
+                transform: scaleX(1);
+            }
+        }
+        & label {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        & .underline {
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            &:before {
+                position: absolute;
+                content: "";
+                height: 100%;
+                width: 100%;
+                background: theme('colors.yellow');
+                transform: scaleX(0);
+                transform-origin: center;
+                transition: transform 0.3s ease;
+            }
+        }
+    }
+}
+
+
+input[type="file"] {
+    display: none;
+    &::-webkit-file-upload-button, 
+    &::file-selector-button {
+        visibility: hidden;
+    }
+    
+} 
+
+.file-custom {
+    @apply bg-light-grey py-2 px-4 text-dark cursor-pointer;
+    
+    &:before {
+        content: 'Choose file';
+    }
+}
+
+
+
 .fancy {
     transform: translateY(50px);
     opacity: 0;
@@ -421,10 +491,13 @@
             background-size: 100% 100%;
         }
     }
-
+    strong {
+        font-family: 'geo-bold';
+    }
     ul{
         margin: 1rem 0;
         li {
+            margin-left: 1rem;
             list-style-image: url(/assets/misc/list-item.png);
             list-style-position: inherit;
         }
@@ -641,6 +714,13 @@ input#store:checked ~ .toggle-dot {
         }
         &:hover:before {
             clip-path: circle(150% at left center);
+        }
+    }
+    &.dark {
+        & span {
+            &:before {
+                background-color: theme('colors.dark')
+            }
         }
     }
     &.image {

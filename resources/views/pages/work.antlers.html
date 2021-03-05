@@ -77,9 +77,10 @@
         <div class="py-12 bg-light dark:bg-dark">
             <div class="container">
                 <div class="flex flex-wrap -mx-4">
-                        <!-- greatest_hits:is="true" -->
-                        <!-- limit="4" -->
-                        <!-- query_scope="group_case_studies" -->
+                    
+                    <!-- greatest_hits:is="true" -->
+                    <!-- limit="4" -->
+                    <!-- query_scope="group_case_studies" -->
                     
                     {{ taxonomy:services_filter }}
                         {{ partial:partials/group_case_studies :header="title" :slug="slug" }}                
@@ -88,30 +89,6 @@
 
                         
 
-                        
-                            <!-- {{ partial:partials/group_case_studies header="Brand" :data="brand" }}
-
-                            {{ partial:partials/group_case_studies header="Campaign" :data="campaign" }} -->
-
-                        {{## partial:partials/group_case_studies header="Campaign" :data="campaign" ##}}
-                        
-
-                    
-
-                    <!-- 
-                        
-                    {{ collection:case_studies  group_by="core-services"   }}
-                        
-                        <div class="w-full p-4 md:w-1/2 filter-item" 
-                            data-terms="{{ core-services }}{{ title | lower }}{{if !last }}|{{ /if }}{{ /core-services }}"
-                        >
-                            <img src="{{ hero_image }}" alt="">
-                            <h2 class="font-bold mt-4 text-2xl">{{ title }}</h2>
-                            <p class="">{{ tagline }}</p>
-                        </div>
-                    
-                    {{ /collection:case_studies }}
-                    --> 
                 </div>
             </div>
         </div>

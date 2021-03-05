@@ -1,0 +1,135 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          input_type: text
+          antlers: false
+          display: Name
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: email
+        field:
+          input_type: email
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+            - email
+      -
+        handle: mobile_number
+        field:
+          input_type: text
+          antlers: false
+          display: 'Mobile Number'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: assets
+        field:
+          mode: grid
+          container: assets
+          folder: application-forms
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Cover Letter'
+          type: assets
+          icon: assets
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: current_position
+        field:
+          input_type: text
+          antlers: false
+          display: 'Current Position'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: current_job_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Current Job Title'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: current_what_did_you_do
+        field:
+          antlers: false
+          display: 'Current what did you do'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: past_position
+        field:
+          input_type: text
+          antlers: false
+          display: 'Past Position'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: past_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Past Title'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: past_what_you_did
+        field:
+          antlers: false
+          display: 'Past what you did'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: work_examples
+        field:
+          mode: grid
+          container: assets
+          folder: application-forms
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Work examples'
+          type: assets
+          icon: assets
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: upload_cv
+        field:
+          mode: grid
+          container: assets
+          folder: application-forms
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Upload CV'
+          type: assets
+          icon: assets
+          listable: hidden
+          validate:
+            - required

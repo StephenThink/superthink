@@ -2,9 +2,49 @@ title: Campaign
 content: 'Help! We’re really good at what we do but nobody knows'
 strapline: 'Help! We’re really good at what we do but nobody knows'
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1599836605
-# blueprint: services_level
+updated_at: 1614265794
 blueprint: core-services
 tag_line_us: 'Get noticed in print, digital and beyond'
 tag_line_you: 'You need a campaign'
 template: service-taxonomy/show
+grid:
+  -
+    title: Campaign
+    text: 'Let’s not be delicate about it, selling is what a marketing campaign is designed to do. And when the world is this bloomin’ noisy, that’s no mean feat. So how are you going to do it?'
+    bold_text: 'Buy. Sell. Seduce.'
+    bottom_text: |
+      Well, one way is to make friends with your customer. Engage them. Inform them. Seduce them if you like, you saucy thing. It’s about making them feel good about your brand by making them feel good about themselves.
+      
+      The other is to deliver a punch like Nicola Adams and a punchline like Jimmy Carr, a message you can’t miss because a) it’s a damn good message and b) you can’t help but see it everywhere you look.
+      
+      The funny thing is that whilst both approaches can work brilliantly, they can work even better when you do both.
+      
+      Discover how.
+  -
+    title: 'Integrated campaigns'
+    text: |
+      Last night, within about 30 minutes, you watched a bit of TV, checked your phone’s news feed, watched a cat video your mum sent you and searched for a birthday present for your brother. Ok, so that may not be 100% accurate. It may have been a dog video, but you get the gist. 
+      Our point is this: how the hell are you supposed to grab the attention span of customers who don’t have one?
+    bold_text: 'Attention please.'
+    bottom_text: |
+      When no one is focused on anything for too long you can’t expect one ad in one place to hit home. So if you want to make a big noise, it’s not just what you say and how you say it. It’s where you say it that counts.
+      
+      That’s the beauty of an integrated campaign with Think!. Yes, your ad zings like a lemon on steroids, but it also targets your customers like a sniper and zeroes in on them wherever they are – online, in print, in app or by email.
+      
+      And the more impressions you make, the more of an...er... impression you make.
+      Grab their attention. Start by grabbing ours.
+  -
+    title: 'Brand Advertising'
+    text: |
+      Your brand has the power to stir the emotions, to stimulate the feels and to take up residence in your customers’ heads. And there’s you thinking you just made ‘stuff’. Tch.
+      Brand aware?
+      
+      We promise not to get all nerdy about this, but there are two types of campaign. One is the short term, ‘here’s our product/service, buy it now’ sort of campaign. We do those and you’ll find them here.
+      
+      But the other doesn’t have a specific product in mind. It’s a slower burn, designed to let your brand drip, drip, drip into the memory. Take Apple. Sometimes they’ll run a campaign advertising the latest iPhone. But sometimes they’ll run a campaign that has no ambition other than to make you think ‘wow, Apple’.
+      
+      How do they do that? They do it by sharing values. By tapping into deep emotion. By making you feel.
+      
+      We’d like to show you how that could work for your brand.
+    bold_text: null
+    bottom_text: null

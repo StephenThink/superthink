@@ -8,21 +8,57 @@ sections:
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         handle: slogan
         field:
           input_type: text
           type: text
-          localizable: false
           listable: hidden
           display: Slogan
       -
         handle: written_address
         field:
           type: textarea
-          localizable: false
           listable: hidden
           display: 'Written Address'
+      -
+        handle: maps_link
+        field:
+          input_type: text
+          antlers: false
+          display: 'Maps link'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: telephone_number_intro
+        field:
+          input_type: text
+          antlers: false
+          display: 'Telephone number intro'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: email_intro
+        field:
+          input_type: text
+          antlers: false
+          display: 'Email Intro'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: jobs_email_intro
+        field:
+          input_type: text
+          antlers: false
+          display: 'Jobs email intro'
+          type: text
+          icon: text
+          listable: hidden
       -
         handle: images
         field:
@@ -63,7 +99,6 @@ sections:
                     listable: hidden
                     display: Width
           type: replicator
-          localizable: false
           listable: hidden
           display: Images
   sidebar:
@@ -75,6 +110,8 @@ sections:
           type: slug
           required: true
           localizable: true
+          validate:
+            - required
       -
         handle: parent
         field:
@@ -83,11 +120,20 @@ sections:
             - pages
           max_items: 1
           listable: false
+          localizable: true
       -
         handle: template
         field:
           hide_partials: true
           type: template
-          localizable: false
           listable: hidden
           display: Template
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO
