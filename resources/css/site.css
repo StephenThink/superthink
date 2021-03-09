@@ -306,29 +306,29 @@
             & li {
                 & a {
                     /*  this is the dark */
-                    /* -webkit-text-stroke-color: #42454A; */
-                    /* -webkit-text-stroke-width: 1px; */
-                    transition: color .5s, -webkit-text-stroke-color .5 ease-in-out .2;
+                    -webkit-text-stroke-color: #FFC734;
+                    -webkit-text-stroke-width: 1px;
+                    transition: all .5s;
                 }
             }
             
             &:hover, &:active {
-                /* & li:hover {
+                & li:hover {
                     a{
-                        transition: color .5s, -webkit-text-stroke-color .5 ease-in .2;
+                        transition: all .5s;
                         -webkit-text-stroke-width: 1px;
                         -webkit-text-stroke-color: #FFC734;
                     }
-                } */
-                /* & li:not(:hover) {
-                    & a { */
+                }
+                & li:not(:hover) {
+                    & a {
                         /*  this is the yellow  */
-                        /* -webkit-text-stroke-color: #FFC734;
-                        color: transparent; */
-                        /* color: rgba(255, 198, 0, .4); */
-                        /* transition: color .5s, -webkit-text-stroke-color .5 ease-out .2; */
-                    /* }
-                } */
+                        -webkit-text-stroke-color: #FFC734;
+                        color: transparent; 
+                        color: rgba(255, 198, 0, .4);
+                        transition: all .5s;
+                    }
+                }
             }
             
         }

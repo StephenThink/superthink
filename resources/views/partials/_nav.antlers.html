@@ -5,8 +5,9 @@
     <div class="container h-full leading-tight ml-0 pl-24 pt-48 pb-24 md:py-24 flex flex-col font-black text-4xl md:text-10xl">
         <ul class="main-nav text-yellow ">
             {{ nav:main_navigation }}
-                <li class="py-2 md:py-0 half-height-colour {{ if is_current }} current {{ /if }}">
-                    <a href="{{ url }}" class=" transition duration-500 ease-in-out underline-element light-underline">
+                
+                <li class="py-2 md:py-0 {{ if is_current }} current {{ /if }}">
+                    <a href="{{ url }}" class=" transition duration-500 ease-in-out ">
                         {{ title }}
                     </a>
                 </li>

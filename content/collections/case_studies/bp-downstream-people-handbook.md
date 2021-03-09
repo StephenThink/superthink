@@ -4,7 +4,7 @@ greatest_hits: false
 core-services:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614608810
+updated_at: 1615307752
 hero_image: work/bp-downstream-people-handbook/portfolio-BP-People-ipdf-3.jpg
 secondary_image: work/bp-downstream-people-handbook/portfolio-BP-Zcard-6.jpg
 main_content:
@@ -36,10 +36,10 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - banding
   - design
   - digital
   - display
   - print
+  - branding
 id: 3f9cf7fa-66c2-41c1-8900-8ce719add074
 ---

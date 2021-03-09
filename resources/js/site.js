@@ -100,9 +100,12 @@ lightswitch.addEventListener('click', function(e) {
 
 });
 
-// watch for Dark mode on the system
+// watch for Dark mode on the system, only when it's changed.
 window.matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', event => {
+        
+        console.log('Mode has chnaged');
+        
         if (event.matches) {
             //dark mode
             html.classList.add('dark');
@@ -118,9 +121,9 @@ window.matchMedia('(prefers-color-scheme: dark)')
 
 
 
-
+console.log
 // Dark mode initial
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+if (localStorage['thinkcreative.theme'] === 'dark' || (!('thinkcreative.theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     html.classList.add('dark');
     lightswitch.classList.add('on');
 } else {
