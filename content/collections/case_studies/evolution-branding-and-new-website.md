@@ -2,7 +2,7 @@
 title: 'Evolution Branding and NEW website'
 call_to_action: test
 greatest_hits: false
-core-services:
+core:
   - brand
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614097607

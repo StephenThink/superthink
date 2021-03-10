@@ -1,7 +1,7 @@
 ---
 title: 'Parking Eye Rebrand'
 greatest_hits: false
-core-services:
+core:
   - brand
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614873017

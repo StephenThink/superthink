@@ -3,7 +3,7 @@
         <h3 class="font-black text-3xl">{{ title }}</h3>
         <div class="grid grid-cols-1 mt-12 -mx-4 md:grid-cols-2">
         
-            {{ collection from="{what}" taxonomy:core-services="{filter}" }}
+            {{ collection from="{what}" taxonomy:core="{filter}" }}
             
                 {{ if no_results }}
                     <p>Dang, rest asured; We're working on it.</p>

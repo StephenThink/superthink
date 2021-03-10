@@ -81,7 +81,7 @@ main_services:
 services_filter:
   - web-design-and-development
   - creative-design
-core-services:
+core:
   - strategy
 id: 53966610-757c-40bb-92fd-b0f77a3706e6
 ---

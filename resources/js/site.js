@@ -8,12 +8,12 @@ Swiper.use([Navigation, Pagination, EffectFade]);
 import 'swiper/swiper-bundle.css';
 
 // not being used 
-import inView from 'in-view/src/in-view.js';
-import barba from '@barba/core';
-import gsap from 'gsap';
+// import inView from 'in-view/src/in-view.js';
+// import barba from '@barba/core';
+// import gsap from 'gsap';
 
 // unused
-import './bootstrap.js';
+// import './bootstrap.js';
 
 import { scroll, swipe, SharingIsCaring } from './helpers';
 // components

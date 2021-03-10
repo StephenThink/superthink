@@ -210,11 +210,11 @@ sections:
           instructions: 'Toggle this on so that we can display them in the greatest hits of the case studies'
           listable: hidden
       -
-        handle: core-services
+        handle: core
         field:
           type: terms
           taxonomies:
-            - core-services
+            - core
           display: 'Core Services'
           mode: select
       -

@@ -2,8 +2,8 @@ title: 'Case Studies'
 template: case_studies/show
 layout: layout
 taxonomies:
-  - core-services
   - services_filter
+  - core
 revisions: false
 route: '/work/{slug}'
 sort_dir: asc

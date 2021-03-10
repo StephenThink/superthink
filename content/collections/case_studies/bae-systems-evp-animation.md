@@ -3,7 +3,7 @@ title: 'BAE Systems EVP Animation'
 greatest_hits: false
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614347533
-core-services:
+core:
   - experience
 main_content:
   -

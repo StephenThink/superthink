@@ -21,6 +21,5 @@ preferences:
       columns:
         - title
         - slug
-        - core-services
-        - services_filter
+        - core
       after_save: continue_editing

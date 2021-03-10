@@ -3,7 +3,7 @@ title: 'Ignition RM Branding'
 greatest_hits: false
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614854687
-core-services:
+core:
   - brand
 hero_image: work/ignition-rm-branding/3-RM-branding-v2.jpg
 secondary_image: work/ignition-rm-branding/5-RM-branding-v2.jpg
