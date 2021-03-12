@@ -1,0 +1,46 @@
+title: 'Geo Pages'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: parent_service
+        field:
+          mode: select
+          collections:
+            - services
+          display: 'Parent Service'
+          type: entries
+          icon: entries
+          listable: hidden
+          max_items: 1
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: services_page
+        prefix: overriding_
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

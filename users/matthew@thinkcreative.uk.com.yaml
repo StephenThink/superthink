@@ -6,6 +6,10 @@ preferences:
   collections:
     services:
       after_save: continue_editing
+      columns:
+        - title
+        - slug
+        - date
     employees:
       columns:
         - title

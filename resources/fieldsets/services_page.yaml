@@ -1,0 +1,67 @@
+title: 'Services Page'
+fields:
+  -
+    handle: thumbnail
+    field:
+      mode: grid
+      container: assets
+      folder: /
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: Thumbnail
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    import: hero
+  -
+    import: services-_header
+  -
+    handle: stepper
+    field:
+      collapse: false
+      sets:
+        new_set:
+          display: 'New Set'
+          fields:
+            -
+              handle: label
+              field:
+                input_type: text
+                antlers: false
+                display: Label
+                type: text
+                icon: text
+                width: 50
+                listable: hidden
+            -
+              handle: image
+              field:
+                mode: grid
+                container: assets
+                folder: /
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+      display: Stepper
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: content
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: false
+      antlers: false
+      display: Content
+      type: markdown
+      icon: markdown
+      listable: hidden

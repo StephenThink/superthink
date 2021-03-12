@@ -1,5 +1,5 @@
 title: 'Geo Pages'
-template: default
+template: geo-pages/show
 layout: layout
 revisions: false
 route: 'services/{slug}'
