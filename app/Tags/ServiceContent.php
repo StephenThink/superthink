@@ -5,6 +5,7 @@ namespace App\Tags;
 use Statamic\Tags\Tags;
 use Statamic\Facades\Asset;
 use Statamic\Facades\AssetContainer;
+use Statamic\Markdown\Parser;
 
 class ServiceContent extends Tags
 {
@@ -50,6 +51,17 @@ class ServiceContent extends Tags
         
     }
 
+    public function markdown() {
+
+        $this->setStuff();
+
+        return  ( collect(optional($this->context)->value($this->overriding_field))->isEmpty() ? null : optional($this->context)->value($this->overriding_field) )
+                ?? $this->getParent($this->params->get('field')) 
+                ?? $this->getMarkdown($this->context->raw( $this->params->get('field')) ) 
+                ?? $this->fatalMessage();
+
+        
+    }
 
     public function getParent($variable) { 
 
@@ -67,7 +79,17 @@ class ServiceContent extends Tags
     }
 
     private function getAsset($path) {
+        if( is_null($path) ) return null;
+
         return AssetContainer::all()->first()->asset($path);
+    }
+
+    private function getMarkdown($variable) {
+
+        
+        
+        return (new Parser())->parse($variable);
+        
     }
 
     private function setStuff() {
@@ -76,6 +98,7 @@ class ServiceContent extends Tags
     }
 
     private function fatalMessage() {
+        if( ! $this->params->bool('show_error') ) return null;
         return "Something has gone very wrong. Do you have a parent entry or are you missing an original field called {$this->params->get('field')}";
     }
 }

@@ -27,3 +27,5 @@ preferences:
         - slug
         - core
       after_save: continue_editing
+    geo_pages:
+      after_save: create_another

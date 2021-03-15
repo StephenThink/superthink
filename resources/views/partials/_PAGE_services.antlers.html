@@ -21,7 +21,7 @@
     
             <div class="hidden w-full md:w-4/12 md:block"></div>
         </div>
-    
+        
         <div class="container flex mt-12">
             <div class="hidden w-full md:w-1/12 md:block"></div>
 
@@ -57,10 +57,10 @@
 
         </div>
 
-        <div class="container flex mt-12">
+        <div class="container flex mt-12 content ">
             <div class="hidden w-full md:w-2/12 md:block"></div>
             <div class="w-full md:w-1/2 mx-auto">
-                <p class="mt-4">{{ service_content field="content" parent_entry="parent_service" }}{{ /service_content }}</p>
+                {{ service_content:markdown field="content" parent_entry="parent_service" }}{{ /service_content:markdown }}
             </div>
             <div class="hidden w-full md:w-4/12 md:block"></div>
         </div>
