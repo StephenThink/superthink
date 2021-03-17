@@ -24,7 +24,10 @@ overriding_content: |
   
   [Talk to us now about your digital project in Blackpool.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615563419
-id: bd051845-bc62-41a1-ba00-1ff3bc612129
+updated_at: 1615910990
 blueprint: geo_pages
+seo:
+  title: 'Blackpool Digital Design Agency'
+  description: 'All your digital services, all under one roof. Think!Creative is Blackpool’s digital marketing specialist. Talk to us about your project now on 01253 297900.'
+id: bd051845-bc62-41a1-ba00-1ff3bc612129
 ---

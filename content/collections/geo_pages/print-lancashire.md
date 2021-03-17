@@ -20,7 +20,10 @@ overriding_content: |
   
   [Talk to us now about your Lancashire print project.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615567075
-id: 66b5f31d-b4d9-42e9-ab69-9eacc18f0e14
+updated_at: 1615911550
 blueprint: geo_pages
+seo:
+  title: 'Print Design in Lancashire'
+  description: 'Think!Creative’s Lancashire Based Print Design Experts Are an Award Winning Authority on All Things Print Design Related. Call our on 01253 297900.'
+id: 66b5f31d-b4d9-42e9-ab69-9eacc18f0e14
 ---

@@ -22,7 +22,10 @@ overriding_content: |
   
   [Talk to us now about your Lancashire display project.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615564230
-id: d3642eef-e414-4004-b97c-0842fe33c109
+updated_at: 1615911198
 blueprint: geo_pages
+seo:
+  title: 'Display Design Services in Lancashire'
+  description: 'Need a Display, Interior Design, or Exhibition Stand For Your Lancashire Business? Call Think!Creative''s Display Design Experts on 01253 297900.'
+id: d3642eef-e414-4004-b97c-0842fe33c109
 ---

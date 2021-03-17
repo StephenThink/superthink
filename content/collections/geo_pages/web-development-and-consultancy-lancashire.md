@@ -19,7 +19,10 @@ overriding_content: |
   
   [Let Think!Creative’s Lancashire web consultants and developers create a better customer experience.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615567540
-id: b62c80d1-aae9-4260-931b-08d79033e77f
+updated_at: 1615911872
 blueprint: geo_pages
+seo:
+  title: 'Web Design, Web Development, and Web Consultancy Lancashire'
+  description: 'Web Consultancy, Web Development, and Web Design in Lancashire? Trust Think!Creative''s Lancashire Web Experts, call on 01253 297900.'
+id: b62c80d1-aae9-4260-931b-08d79033e77f
 ---

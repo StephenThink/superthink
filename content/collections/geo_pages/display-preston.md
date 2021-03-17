@@ -20,7 +20,10 @@ overriding_content: |
   
   [Talk to us now about your display project in the Preston area.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615564504
-id: 7b2f63ee-7512-43a7-9f38-5942e00cc237
+updated_at: 1615911127
 blueprint: geo_pages
+seo:
+  title: 'Display Design Services For Preston'
+  description: 'Display, Interior Design or Exhibition Stand Project Authority For The Preston Area? Call Think!Creative''s Display Design Experts on 01253 297900.'
+id: 7b2f63ee-7512-43a7-9f38-5942e00cc237
 ---

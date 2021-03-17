@@ -22,7 +22,10 @@ overriding_content: |
   
   Whether it’s a grand idea, a simple thought or a complex instruction, your Preston business needs copywriting that makes its mark. Contact our copywriters to find out how they can get your messaging to work for you.
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615561153
-id: 7c56709c-f525-4a55-a048-dc75c9b20f67
+updated_at: 1615910614
 blueprint: geo_pages
+seo:
+  title: 'Copywriting Services For Preston'
+  description: 'Words for every channel, every campaign, and every brand. For copywriting for your Preston business, call Think!Creative on 01253 297900.'
+id: 7c56709c-f525-4a55-a048-dc75c9b20f67
 ---

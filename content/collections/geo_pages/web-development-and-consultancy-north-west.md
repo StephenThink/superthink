@@ -1,5 +1,5 @@
 ---
-title: 'The Right North West Web Develpopers'
+title: 'The Right North West Web Developers'
 overriding_introduction: '<p>You feel you need a new website. Does it offer the latest functionality? Is it optimised? Not mobile friendly? Perhaps looks a little out of date? Most North West web development companies will get on and build you a new website. But do you really need a whole new one or does it just need a refresh? What if there are other simpler, cheaper alternatives?</p>'
 overriding_content: |
   ## NO PAIN ALL GAIN
@@ -24,7 +24,10 @@ overriding_content: |
   
   [Think!Creative could save you a lot of time, stress and money. Talk to us now about our web consultancy services in North West.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615567650
-id: 88d0f725-551e-494a-a556-e28b4628aa0a
+updated_at: 1615911832
 blueprint: geo_pages
+seo:
+  title: 'Web Design, Web Development, and Web Consultancy North West'
+  description: 'North West Web Design, Web Development, and Web Consultancy that gives you the website you need. Trust Think!Creative’s Website Experts, call on 01253 297900'
+id: 88d0f725-551e-494a-a556-e28b4628aa0a
 ---

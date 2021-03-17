@@ -23,7 +23,7 @@ import { wipe, animateIn } from './animations';
 // caseStudies
 import { findTheActiveOne, moveSlide } from './caseStudies';
 // messages
-import message from './components/message';
+// import message from './components/message';
 
 let burger = document.querySelectorAll('.burger')[0];
 burger.addEventListener('click', animateTheBurger, false);
@@ -103,9 +103,7 @@ lightswitch.addEventListener('click', function(e) {
 // watch for Dark mode on the system, only when it's changed.
 window.matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', event => {
-        
-        console.log('Mode has chnaged');
-        
+                
         if (event.matches) {
             //dark mode
             html.classList.add('dark');
@@ -121,7 +119,6 @@ window.matchMedia('(prefers-color-scheme: dark)')
 
 
 
-console.log
 // Dark mode initial
 if (localStorage['thinkcreative.theme'] === 'dark' || (!('thinkcreative.theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     html.classList.add('dark');

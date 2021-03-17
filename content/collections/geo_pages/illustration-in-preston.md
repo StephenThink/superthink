@@ -1,6 +1,6 @@
 ---
 parent_service: cfc5ba64-48c0-4b2d-957a-f04e82bc05f3
-title: 'Inforamtion Through Imagery'
+title: 'Information Through Imagery'
 overriding_introduction: '<p>The conventional thought is that images are only used to break up blocks of text or fill up space. This no longer is true. Images are now used to complement the written words, to add context and understanding. Think!Creative&rsquo;s illustration specialists have been creating images for businesses in the Preston area for over a decade, such as BAE Systems and Utiligroup.</p>'
 overriding_content: |
   ## SIMPLE BUT DETAILED
@@ -26,7 +26,10 @@ overriding_content: |
   
   [To find out what we can do for you, talk to us now about your project.](/work)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615564980
-id: 6d8461dc-55fb-45d6-a3bb-9a93bb2e34e2
+updated_at: 1615911316
 blueprint: geo_pages
+seo:
+  title: 'Illustration Services for Preston'
+  description: 'Illustration Authority For Infographic, Technical or Character Illustration For The Preston Area. Call Think!Creative’s Illustration Experts on 01253 297900.'
+id: 6d8461dc-55fb-45d6-a3bb-9a93bb2e34e2
 ---

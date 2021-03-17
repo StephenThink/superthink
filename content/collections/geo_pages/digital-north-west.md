@@ -24,7 +24,10 @@ overriding_content: |
   
   [Talk to us now about your digital project in the North West.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615563650
-id: b0f9fe17-d29e-479b-93d3-0399b7b8417b
+updated_at: 1615911045
 blueprint: geo_pages
+seo:
+  title: 'North West Digital Design Agency'
+  description: 'Think!Creative is the North West’s digital marketing specialist. Talk to us about your project now on 01253 297900.'
+id: b0f9fe17-d29e-479b-93d3-0399b7b8417b
 ---

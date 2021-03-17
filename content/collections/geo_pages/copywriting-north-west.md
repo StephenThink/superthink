@@ -25,7 +25,10 @@ overriding_content: |
   
   [Contact our North West copywriters to find out how they can get your messaging working for you.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615560684
-id: 84dca800-a6a6-4df9-ad96-327939dc62ce
+updated_at: 1615910691
 blueprint: geo_pages
+seo:
+  title: 'Copywriting Services in the North West'
+  description: 'Words for every channel, every campaign, and every brand. North West Copywriting Services from Think!Creative. Call 01253 297900.'
+id: 84dca800-a6a6-4df9-ad96-327939dc62ce
 ---

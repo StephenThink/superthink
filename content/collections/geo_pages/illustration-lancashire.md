@@ -24,7 +24,10 @@ overriding_content: |
   
   Think!Creative’s Lancashire illustration specialists can make your messages simpler, your web pages more engaging and your campaigns more enlightening. To find out what we can do for you, [talk to us now about your project.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615565162
-id: afdf8624-5b71-446a-81b6-40a23b8cab04
+updated_at: 1615911346
 blueprint: geo_pages
+seo:
+  title: 'Illustration Services in Lancashire'
+  description: 'Need A Illustration Authority For Infographic, Technical and Character Illustration? Call Think!Creative’s Lancashire Illustration Experts on 01253 297900'
+id: afdf8624-5b71-446a-81b6-40a23b8cab04
 ---

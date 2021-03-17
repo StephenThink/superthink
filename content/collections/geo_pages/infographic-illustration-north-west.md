@@ -24,7 +24,10 @@ overriding_content: |
   
   [Talk to us now about your infographic illustration project in the North West.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615566043
-id: e29bd782-4cac-4a92-af4e-66baecc4e150
+updated_at: 1615911407
 blueprint: geo_pages
+seo:
+  title: 'Infographic illustration in the North West | Think!Creative'
+  description: 'Infographic illustration in the North West? Make information easier – with infographic design services from Think!Creative. Find us on 01253 297900'
+id: e29bd782-4cac-4a92-af4e-66baecc4e150
 ---

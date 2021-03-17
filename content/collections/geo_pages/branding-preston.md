@@ -2,7 +2,7 @@
 parent_service: a220da5c-1433-4add-a21a-1c09c6998ad4
 title: 'Branding Businesses in the Preston Area'
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615547951
+updated_at: 1615910390
 blueprint: geo_pages
 overriding_introduction: '<p>Whether its building a brand from the ground up, breathing new life into an old one, or keeping messages to brand guidelines, Think!Creative has over a decade of experience in helping brand Preston businesses.</p>'
 overriding_content: |
@@ -29,5 +29,8 @@ overriding_content: |
   Think!Creative’s brand developers help Preston companies create the right public or employee facing image, with the right tone of voice in company material that really reflects your business. Our brand management experts will make sure your brand message stays strong in every piece of material you release. And our brand consultants are always on hand to assess the direction of your branding.
   
   [Talk to us now about your branding project in the Preston area.](/contact)
+seo:
+  title: 'Branding Agency For Preston'
+  description: 'Does your Preston business need a brand identity? Think!Creative''s Brand Creation Experts are on hand to help whatever stage you''re at. Call us on 01253 297900.'
 id: 6878c005-0c7a-4dbd-ba6b-97521b1f81b5
 ---

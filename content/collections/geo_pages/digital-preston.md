@@ -24,7 +24,10 @@ overriding_content: |
   
   [Talk to us now about your digital project in Preston.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615563797
-id: b718f267-fb5a-47a3-bfd9-879691657b5c
+updated_at: 1615911080
 blueprint: geo_pages
+seo:
+  title: 'Digital Design Agency For Preston'
+  description: 'All your Preston business’ digital services, all under one roof. Think!Creative are digital marketing experts. Talk to us about your project on 01253 297900.'
+id: b718f267-fb5a-47a3-bfd9-879691657b5c
 ---

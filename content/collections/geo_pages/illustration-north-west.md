@@ -26,7 +26,10 @@ overriding_content: |
   
   [Talk to us now about your illustration project in the North West.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615565756
-id: f82b8ceb-e42e-4748-9d38-4c1173bf57aa
+updated_at: 1615911376
 blueprint: geo_pages
+seo:
+  title: 'Illustration Services in the North West'
+  description: 'Illustration Authority In The North West. You Can Trust That Think!Creative’s North West Illustration Experts Will Help Visualise Any Message. Call us on 01253 297900.'
+id: f82b8ceb-e42e-4748-9d38-4c1173bf57aa
 ---

@@ -24,7 +24,10 @@ overriding_content: |
   
   [Talk to us now about your branding project in the North West.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615547966
+updated_at: 1615910483
 blueprint: geo_pages
+seo:
+  title: 'Branding Agency in the North West'
+  description: 'Have a Branding project in the North West? Whether it’s a New Brand or an Old Brand Call Think!Creative''s Branding Experts on 01253 297900.'
 id: f9bbc18e-a339-4091-bb06-c2d074c7474b
 ---

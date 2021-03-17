@@ -7,6 +7,11 @@ use Statamic\Facades\Asset;
 use Statamic\Facades\AssetContainer;
 use Statamic\Markdown\Parser;
 
+use Illuminate\Support\Collection;
+
+
+
+
 class ServiceContent extends Tags
 {
     private $overriding_field = 'overriding_';
@@ -22,6 +27,7 @@ class ServiceContent extends Tags
     {   
         
         $this->setStuff();
+        
         
         return  
         // [ 
@@ -67,12 +73,26 @@ class ServiceContent extends Tags
 
         return optional( $this->context->value($this->parent_entry), 
                     function( $item ) use ($variable) {
-
-                        if ($this->is_image) {
-                            return $this->getAsset($item->first()->value($variable));
+                        
+                        if(is_null($item)) {
+                            return null;
                         }
 
-                        return $item->first()->value($variable);
+                        if ($this->is_image) {
+                            if( $item instanceof Collection ) {
+                                return $this->getAsset($item->first()->value($variable));
+                            }
+                             return $this->getAsset($item->value($variable));
+                        }
+
+                        
+                        if($item instanceof Collection) { 
+                            $item->first()->value($variable);
+                        }
+
+                        return $item->value($variable);
+
+                        // return optional($item->first())->value($variable);
 
                 });
 
@@ -85,11 +105,7 @@ class ServiceContent extends Tags
     }
 
     private function getMarkdown($variable) {
-
-        
-        
         return (new Parser())->parse($variable);
-        
     }
 
     private function setStuff() {

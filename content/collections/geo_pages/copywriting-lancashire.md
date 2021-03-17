@@ -23,7 +23,10 @@ overriding_content: |
   
   Our Lancashire creative copywriters have spent years writing words for organisations across the UK and globally. Sometimes they’re start-ups and SMEs. Sometimes they’re international brands. What connects them is the understanding that even the grandest ideas or the most complex information need explaining simply if they’re to make their mark. Talk to our copywriters now.
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615560550
-id: 97140eb4-1b12-4bfe-8b01-d3326f0573e8
+updated_at: 1615910721
 blueprint: geo_pages
+seo:
+  title: 'Copywriting Services in Lancashire'
+  description: 'Lancashire Copywriting Services from Think!Creative. Words for every channel, every campaign, and every brand. Call 01253 297900.'
+id: 97140eb4-1b12-4bfe-8b01-d3326f0573e8
 ---

@@ -28,7 +28,10 @@ overriding_content: |
   
   To find out what we can do for you, [talk to us now about your project.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615564813
-id: 8f8a7816-14f1-435c-adaf-36d710cb57dd
+updated_at: 1615911273
 blueprint: geo_pages
+seo:
+  title: 'Illustration Services in Blackpool'
+  description: 'Does your Blackpool business need Infographic, Technical or Character Illustration? Talk To Think!Creative’s Illustration Experts on 01253 297900.'
+id: 8f8a7816-14f1-435c-adaf-36d710cb57dd
 ---

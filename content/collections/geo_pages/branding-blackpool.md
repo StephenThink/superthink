@@ -2,7 +2,7 @@
 parent_service: a220da5c-1433-4add-a21a-1c09c6998ad4
 title: 'Branding Your Business in Blackpool'
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615547983
+updated_at: 1615910447
 blueprint: geo_pages
 overriding_introduction: '<p>Branding expertise runs through Think!Creative like letters through a stick of Blackpool rock. It is the same with your company: you want a brand that runs from the top to the bottom. It gives the business a tone of voice and character. It&rsquo;s your stamp of approval, your statement of intent and your badge of quality.</p>'
 overriding_content: |
@@ -29,5 +29,8 @@ overriding_content: |
   Our brand developers will help create the right tone of voice, the right public or employee facing image, and company material that really reflects your business. Our brand management experts will make sure the brand message gets stronger with every piece of material you release. And our brand consultants are always on hand to assess the direction of the branding.
   
   [Talk to us now about your branding project in Blackpool.](/contact)
+seo:
+  title: 'Branding Agency in Blackpool'
+  description: 'Does your Blackpool business need a Branding Experts touch? Think!Creative''s team are on hand to help whatever stage you are at from start up to refresh. Call us on 01253 297900.'
 id: f89e1a57-ac4d-466c-9911-a4ea9a5f9ca4
 ---

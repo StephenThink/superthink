@@ -1,9 +1,9 @@
 ---
 parent_service: a220da5c-1433-4add-a21a-1c09c6998ad2
-title: 'Choising the Right Web Development'
+title: 'Chosing the Right Web Development'
 overriding_introduction: '<p>&ldquo;We need a new website.&rdquo; For so many people, it&rsquo;s the first reaction to changes in technology. Site not optimisable? You need a new website. Not mobile friendly? Looks a little out of date? You need a new website.</p><p>Many Blackpool web development companies will simply crack on and build you a new website. But what if there are others simpler, cheaper alternatives?</p>'
 overriding_content: |
-  ## WEB DEVELOPMENT WITHOUT THE PAIN
+  ## WEB DEVELOPMENT WITHOUT THE PAIN
   
   Web development for your Blackpool business shouldn’t leave you tearing your hair out. It should hit the agreed deadlines, meet the budget, and do all the things you were promised.
   
@@ -28,7 +28,10 @@ overriding_content: |
   
   [It’s a process that could save you a lot of time, stress and money. Talk to us now about our web consultancy services in Blackpool.](/contact)
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1615567415
-id: 0d34ed7c-813c-475e-9087-498c4bcad603
+updated_at: 1615916861
 blueprint: geo_pages
+seo:
+  title: 'Web Design, Web Development, and Web Consultancy Blackpool'
+  description: 'For Web Design, Web Consultancy and Web Development in Blackpool. Trust Think!Creative''s Blackpool Web Experts, call on 01253 297900.'
+id: 0d34ed7c-813c-475e-9087-498c4bcad603
 ---

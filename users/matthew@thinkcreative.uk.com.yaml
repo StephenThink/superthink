@@ -28,4 +28,4 @@ preferences:
         - core
       after_save: continue_editing
     geo_pages:
-      after_save: create_another
+      after_save: continue_editing
