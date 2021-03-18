@@ -1,7 +1,7 @@
 ---
 title: 'Secret Santa'
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1602861158
+updated_at: 1616061927
 blueprint: secret_santa
 template: secret-santa/index
 instructions: |
@@ -37,5 +37,8 @@ slider_images:
   - secret-santa/slider/bg_15.jpg
   - secret-santa/slider/bg_13.jpg
   - secret-santa/slider/bg_1.jpg
+seo:
+  title: 'Secret Santa Generator'
+  description: 'Think!Creative''s Secret Santa Generator. No more drawing names from a hat! Have a creative project? Call us on 01253 297900.'
 id: d937d896-6586-48d9-a3f7-5d2025f661aa
 ---

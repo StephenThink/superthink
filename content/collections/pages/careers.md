@@ -2,7 +2,7 @@
 title: Careers
 hero_text: 'Your next destination?'
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1611331750
+updated_at: 1616061826
 blueprint: careers
 template: pages/careers
 page_title: 'jobs jobs jobs'
@@ -10,5 +10,9 @@ introduction: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 call_to_action: 'Questions? Get in touch'
 cta_button: 'Contact Paul'
 cta_link: 'mailto:paul@thinkcreative.uk.com'
+seo:
+  title: 'Careers with Think!Creative'
+  description: 'TALENT WANTED We are looking for someone to delve into their passion, develop and learn quickly to adapt their skills. Call us 01253 297900'
+  site_name: false
 id: c78f08a9-bab6-40f3-9f77-6132946ac48b
 ---
