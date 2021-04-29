@@ -74,6 +74,10 @@
         </div>
     {{ /if}}
 
+    {{ if type == 'slider' }} 
+        {{ partial:partials/slider }} 
+    {{ /if }}
+
     {{ if type == "the_idea"}}
         <div class="main__panel_x-small bg-light pt-0 dark:bg-dark">
             <div class="container flex">
@@ -163,8 +167,9 @@
 
             <a href="{{ link to='/work/{slug}' }}" class="hover-button image">
                 
-                <div class="h-screen relative" >
+                <div class="h-screen relative overflow-hidden" >
                     <span class="">
+                        <div class="backdrop absolute bg-yellow top-0 h-full w-full opacity-0"></div>
                         <img src="{{ hero_image }}" alt="" class="h-full absolute object-cover" loading=lazy>
                         <div class="container p-24 relative text-5xl text-white font-black z-10">
                             <p class="">Next project:</p>

@@ -148,6 +148,21 @@ sections:
                     type: assets
                     listable: hidden
                     display: 'Full Image'
+            slider:
+              display: Slider
+              fields:
+                -
+                  handle: images
+                  field:
+                    mode: grid
+                    container: assets
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    display: 'Image Set'
+                    type: assets
+                    icon: assets
+                    listable: hidden
           buttons:
             - h2
             - h3

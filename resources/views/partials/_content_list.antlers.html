@@ -9,12 +9,12 @@
                 {{ text }}
             </div>
         </div>
-        <div class="flex flex-col divide-y divide-light-grey items-end ">
+        <div class="flex flex-col  items-end ">
             {{ data }}
-                <div class="w-full md:w-2/3 py-16">
+                <div class="w-full md:w-2/3 pt-16" data-scroll data-scroll-call="campaign-section" >
 
                     {{ if you_us == 'step' }}
-                        <h3 class="text-mid-grey text-xl">{{ title }}</h3>
+                        <h3 class="title text-mid-grey text-xl" >{{ title }}</h3>
                         <div class="mt-6 font-black leading-tight text-5xl">
                             {{ noun }}
                         </div>
@@ -22,15 +22,15 @@
                     {{ /if }}
                     
                     {{ if you_us == 'us' }}
-                        <h3 class="text-mid-grey text-xl">{{ title }}</h3>
-                        <div class="mt-6 font-black leading-tight text-5xl">
+                        <h3 class="title text-mid-grey text-xl" >{{ title }}</h3>
+                        <div class="tagline mt-6 font-black leading-tight text-5xl">
                             {{ tag_line_us }}
                         </div>
                     {{ /if }}
 
                     {{ if you_us == 'you' }}
-                        <h3 class="text-grey text-lg">{{ strapline }}</h3>
-                        <div class="my-3 font-black leading-tight text-5xl">
+                        <h3 class="title text-grey text-lg" >{{ strapline }}</h3>
+                        <div class="tagline my-3 font-black leading-tight text-5xl">
                             {{ tag_line_you }}
                         </div>
                         
@@ -39,7 +39,10 @@
                         </a>
                     {{ /if }}
                     
+                    <div class="h-1px w-full bg-light-grey my-16 bottom-line"  ></div>
+
                 </div>
+                
             {{ /data }}
 
             {{ if you_us == 'you'}}

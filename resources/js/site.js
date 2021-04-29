@@ -19,7 +19,7 @@ import { scroll, swipe, SharingIsCaring } from './helpers';
 // components
 import { animateTheBurger } from './components';
 // Animations
-import { wipe, animateIn } from './animations';
+import { wipe, animateIn, campaignSection } from './animations';
 // caseStudies
 import { findTheActiveOne, moveSlide } from './caseStudies';
 // messages
@@ -50,6 +50,7 @@ locomotiveScroll.on('call', (value, way, obj) => {
     // do something
     if (value === "wipe") wipe(way, obj);
     if (value === "fancy") animateIn(obj.el);
+    if (value === "campaign-section") campaignSection(obj.el)
 
 });
 

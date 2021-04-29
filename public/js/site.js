@@ -1997,10 +1997,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkPrefix", function() { return _checkPropPrefix; });
 /* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ "./node_modules/gsap/gsap-core.js");
 /*!
- * CSSPlugin 3.5.1
+ * CSSPlugin 3.6.1
  * https://greensock.com
  *
- * Copyright 2008-2020, GreenSock. All rights reserved.
+ * Copyright 2008-2021, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -2247,9 +2247,9 @@ _convertToUnit = function _convertToUnit(target, property, value, unit) {
   curUnit !== "px" && !toPixels && (curValue = _convertToUnit(target, property, value, "px"));
   isSVG = target.getCTM && _isSVG(target);
 
-  if (toPercent && (_transformProps[property] || ~property.indexOf("adius"))) {
-    //transforms and borderRadius are relative to the size of the element itself!
-    return Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(curValue / (isSVG ? target.getBBox()[horizontal ? "width" : "height"] : target[measureProperty]) * amount);
+  if ((toPercent || curUnit === "%") && (_transformProps[property] || ~property.indexOf("adius"))) {
+    px = isSVG ? target.getBBox()[horizontal ? "width" : "height"] : target[measureProperty];
+    return Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(toPercent ? curValue / px * amount : curValue / 100 * px);
   }
 
   style[horizontal ? "width" : "height"] = amount + (toPixels ? curUnit : unit);
@@ -2308,7 +2308,7 @@ _convertToUnit = function _convertToUnit(target, property, value, unit) {
     }
   }
 
-  return unit && !~(value + "").indexOf(" ") ? _convertToUnit(target, property, value, unit) + unit : value;
+  return unit && !~(value + "").trim().indexOf(" ") ? _convertToUnit(target, property, value, unit) + unit : value;
 },
     _tweenComplexCSSString = function _tweenComplexCSSString(target, prop, start, end) {
   //note: we call _tweenComplexCSSString.call(pluginInstance...) to ensure that it's scoped properly. We may call it from within a plugin too, thus "this" would refer to the plugin.
@@ -2408,7 +2408,7 @@ _convertToUnit = function _convertToUnit(target, property, value, unit) {
           //note: SVG spec allows omission of comma/space when a negative sign is wedged between two numbers, like 2.5-5.3 instead of 2.5,-5.3 but when tweening, the negative value may switch to positive, so we insert the comma just in case.
           s: startNum,
           c: relative ? relative * endNum : endNum - startNum,
-          m: color && color < 4 ? Math.round : 0
+          m: color && color < 4 || prop === "zIndex" ? Math.round : 0
         };
       }
     }
@@ -2418,9 +2418,7 @@ _convertToUnit = function _convertToUnit(target, property, value, unit) {
     pt.r = prop === "display" && end === "none" ? _renderNonTweeningValueOnlyAtEnd : _renderNonTweeningValue;
   }
 
-  if (_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_relExp"].test(end)) {
-    pt.e = 0; //if the end string contains relative values or dynamic random(...) values, delete the end it so that on the final render we don't actually set it to the string with += or -= characters (forces it to use the calculated value).
-  }
+  _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_relExp"].test(end) && (pt.e = 0); //if the end string contains relative values or dynamic random(...) values, delete the end it so that on the final render we don't actually set it to the string with += or -= characters (forces it to use the calculated value).
 
   this._pt = pt; //start the linked list with this new PropTween. Remember, we call _tweenComplexCSSString.call(pluginInstance...) to ensure that it's scoped properly. We may call it from within another plugin too, thus "this" would refer to the plugin.
 
@@ -2739,7 +2737,7 @@ _identity2DMatrix = [1, 0, 0, 1, 0, 0],
   matrix = _getMatrix(target, cache.svg);
 
   if (cache.svg) {
-    t1 = !cache.uncache && target.getAttribute("data-svg-origin");
+    t1 = !cache.uncache && !uncache && target.getAttribute("data-svg-origin");
 
     _applySVGOrigin(target, t1 || origin, !!t1 || cache.originIsAbsolute, cache.smooth !== false, matrix);
   }
@@ -2765,7 +2763,7 @@ _identity2DMatrix = [1, 0, 0, 1, 0, 0],
       rotation = a || b ? _atan2(b, a) * _RAD2DEG : 0; //note: if scaleX is 0, we cannot accurately measure rotation. Same for skewX with a scaleY of 0. Therefore, we default to the previously recorded value (or zero if that doesn't exist).
 
       skewX = c || d ? _atan2(c, d) * _RAD2DEG + rotation : 0;
-      skewX && (scaleY *= Math.cos(skewX * _DEG2RAD));
+      skewX && (scaleY *= Math.abs(Math.cos(skewX * _DEG2RAD)));
 
       if (cache.svg) {
         x -= xOrigin - (xOrigin * a + yOrigin * c);
@@ -2863,8 +2861,8 @@ _identity2DMatrix = [1, 0, 0, 1, 0, 0],
     }
   }
 
-  cache.x = ((cache.xPercent = x && Math.round(target.offsetWidth / 2) === Math.round(-x) ? -50 : 0) ? 0 : x) + px;
-  cache.y = ((cache.yPercent = y && Math.round(target.offsetHeight / 2) === Math.round(-y) ? -50 : 0) ? 0 : y) + px;
+  cache.x = x - ((cache.xPercent = x && (cache.xPercent || (Math.round(target.offsetWidth / 2) === Math.round(-x) ? -50 : 0))) ? target.offsetWidth * cache.xPercent / 100 : 0) + px;
+  cache.y = y - ((cache.yPercent = y && (cache.yPercent || (Math.round(target.offsetHeight / 2) === Math.round(-y) ? -50 : 0))) ? target.offsetHeight * cache.yPercent / 100 : 0) + px;
   cache.z = z + px;
   cache.scaleX = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(scaleX);
   cache.scaleY = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_round"])(scaleY);
@@ -3060,11 +3058,7 @@ _addPxTranslate = function _addPxTranslate(target, start, value) {
 
   temp = "matrix(" + a11 + "," + a21 + "," + a12 + "," + a22 + "," + tx + "," + ty + ")";
   target.setAttribute("transform", temp);
-
-  if (forceCSS) {
-    //some browsers prioritize CSS transforms over the transform attribute. When we sense that the user has CSS transforms applied, we must overwrite them this way (otherwise some browser simply won't render the  transform attribute changes!)
-    target.style[_transformProp] = temp;
-  }
+  forceCSS && (target.style[_transformProp] = temp); //some browsers prioritize CSS transforms over the transform attribute. When we sense that the user has CSS transforms applied, we must overwrite them this way (otherwise some browser simply won't render the  transform attribute changes!)
 },
     _addRotationalPropTween = function _addRotationalPropTween(plugin, target, property, startNum, endValue, relative) {
   var cap = 360,
@@ -3101,11 +3095,19 @@ _addPxTranslate = function _addPxTranslate(target, start, value) {
 
   return pt;
 },
+    _assign = function _assign(target, source) {
+  // Internet Explorer doesn't have Object.assign(), so we recreate it here.
+  for (var p in source) {
+    target[p] = source[p];
+  }
+
+  return target;
+},
     _addRawTransformPTs = function _addRawTransformPTs(plugin, transforms, target) {
   //for handling cases where someone passes in a whole transform string, like transform: "scale(2, 3) rotate(20deg) translateY(30em)"
-  var style = _tempDivStyler.style,
-      startCache = target._gsap,
+  var startCache = _assign({}, target._gsap),
       exclude = "perspective,force3D,transformOrigin,svgOrigin",
+      style = target.style,
       endCache,
       p,
       startValue,
@@ -3114,13 +3116,22 @@ _addPxTranslate = function _addPxTranslate(target, start, value) {
       endNum,
       startUnit,
       endUnit;
-  style.cssText = getComputedStyle(target).cssText + ";position:absolute;display:block;"; //%-based translations will fail unless we set the width/height to match the original target (and padding/borders can affect it)
 
-  style[_transformProp] = transforms;
+  if (startCache.svg) {
+    startValue = target.getAttribute("transform");
+    target.setAttribute("transform", "");
+    style[_transformProp] = transforms;
+    endCache = _parseTransform(target, 1);
 
-  _doc.body.appendChild(_tempDivStyler);
+    _removeProperty(target, _transformProp);
 
-  endCache = _parseTransform(_tempDivStyler, 1);
+    target.setAttribute("transform", startValue);
+  } else {
+    startValue = getComputedStyle(target)[_transformProp];
+    style[_transformProp] = transforms;
+    endCache = _parseTransform(target, 1);
+    style[_transformProp] = startValue;
+  }
 
   for (p in _transformProps) {
     startValue = startCache[p];
@@ -3132,14 +3143,14 @@ _addPxTranslate = function _addPxTranslate(target, start, value) {
       endUnit = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["getUnit"])(endValue);
       startNum = startUnit !== endUnit ? _convertToUnit(target, p, startValue, endUnit) : parseFloat(startValue);
       endNum = parseFloat(endValue);
-      plugin._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](plugin._pt, startCache, p, startNum, endNum - startNum, _renderCSSProp);
+      plugin._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](plugin._pt, endCache, p, startNum, endNum - startNum, _renderCSSProp);
       plugin._pt.u = endUnit || 0;
 
       plugin._props.push(p);
     }
   }
 
-  _doc.body.removeChild(_tempDivStyler);
+  _assign(endCache, startCache);
 }; // handle splitting apart padding, margin, borderWidth, and borderRadius into their 4 components. Firefox, for example, won't report borderRadius correctly - it will only do borderTopLeftRadius and the other corners. We also want to handle paddingTop, marginLeft, borderRightWidth, etc.
 
 
@@ -3182,6 +3193,7 @@ var CSSPlugin = {
   init: function init(target, vars, tween, index, targets) {
     var props = this._props,
         style = target.style,
+        startAt = tween.vars.startAt,
         startValue,
         endValue,
         endNum,
@@ -3207,7 +3219,7 @@ var CSSPlugin = {
       endValue = vars[p];
 
       if (_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_plugins"][p] && Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_checkPlugin"])(p, vars, tween, index, target, targets)) {
-        //plugins
+        // plugins
         continue;
       }
 
@@ -3224,21 +3236,35 @@ var CSSPlugin = {
       }
 
       if (specialProp) {
-        if (specialProp(this, target, p, endValue, tween)) {
-          hasPriority = 1;
-        }
+        specialProp(this, target, p, endValue, tween) && (hasPriority = 1);
       } else if (p.substr(0, 2) === "--") {
         //CSS variable
-        this.add(style, "setProperty", getComputedStyle(target).getPropertyValue(p) + "", endValue + "", index, targets, 0, 0, p);
-      } else if (type !== "undefined") {
-        startValue = _get(target, p);
-        startNum = parseFloat(startValue);
-        relative = type === "string" && endValue.charAt(1) === "=" ? +(endValue.charAt(0) + "1") : 0;
+        startValue = (getComputedStyle(target).getPropertyValue(p) + "").trim();
+        endValue += "";
+        _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_colorExp"].lastIndex = 0;
 
-        if (relative) {
-          endValue = endValue.substr(2);
+        if (!_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_colorExp"].test(startValue)) {
+          // colors don't have units
+          startUnit = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["getUnit"])(startValue);
+          endUnit = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["getUnit"])(endValue);
         }
 
+        endUnit ? startUnit !== endUnit && (startValue = _convertToUnit(target, p, startValue, endUnit) + endUnit) : startUnit && (endValue += startUnit);
+        this.add(style, "setProperty", startValue, endValue, index, targets, 0, 0, p);
+      } else if (type !== "undefined") {
+        if (startAt && p in startAt) {
+          // in case someone hard-codes a complex value as the start, like top: "calc(2vh / 2)". Without this, it'd use the computed value (always in px)
+          startValue = typeof startAt[p] === "function" ? startAt[p].call(tween, index, target, targets) : startAt[p];
+          p in _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units && !Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["getUnit"])(startValue) && (startValue += _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units[p]); // for cases when someone passes in a unitless value like {x: 100}; if we try setting translate(100, 0px) it won't work.
+
+          (startValue + "").charAt(1) === "=" && (startValue = _get(target, p)); // can't work with relative values
+        } else {
+          startValue = _get(target, p);
+        }
+
+        startNum = parseFloat(startValue);
+        relative = type === "string" && endValue.charAt(1) === "=" ? +(endValue.charAt(0) + "1") : 0;
+        relative && (endValue = endValue.substr(2));
         endNum = parseFloat(endValue);
 
         if (p in _propertyAliases) {
@@ -3263,7 +3289,7 @@ var CSSPlugin = {
         if (isTransformRelated) {
           if (!transformPropTween) {
             cache = target._gsap;
-            cache.renderTransform || _parseTransform(target); // if, for example, gsap.set(... {transform:"translateX(50vw)"}), the _get() call doesn't parse the transform, thus cache.renderTransform won't be set yet so force the parsing of the transform here.
+            cache.renderTransform && !vars.parseTransform || _parseTransform(target, vars.parseTransform); // if, for example, gsap.set(... {transform:"translateX(50vw)"}), the _get() call doesn't parse the transform, thus cache.renderTransform won't be set yet so force the parsing of the transform here.
 
             smooth = vars.smoothOrigin !== false && cache.smooth;
             transformPropTween = this._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](this._pt, style, _transformProp, 0, 1, cache.renderTransform, cache, 0, -1); //the first time through, create the rendering PropTween so that it runs LAST (in the linked list, we keep adding to the beginning)
@@ -3319,7 +3345,7 @@ var CSSPlugin = {
 
           endUnit = Object(_gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["getUnit"])(endValue) || (p in _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units ? _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["_config"].units[p] : startUnit);
           startUnit !== endUnit && (startNum = _convertToUnit(target, p, startValue, endUnit));
-          this._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](this._pt, isTransformRelated ? cache : style, p, startNum, relative ? relative * endNum : endNum - startNum, endUnit === "px" && vars.autoRound !== false && !isTransformRelated ? _renderRoundedCSSProp : _renderCSSProp);
+          this._pt = new _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["PropTween"](this._pt, isTransformRelated ? cache : style, p, startNum, relative ? relative * endNum : endNum - startNum, !isTransformRelated && (endUnit === "px" || p === "zIndex") && vars.autoRound !== false ? _renderRoundedCSSProp : _renderCSSProp);
           this._pt.u = endUnit || 0;
 
           if (startUnit !== endUnit) {
@@ -3402,10 +3428,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_paths_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/paths.js */ "./node_modules/gsap/utils/paths.js");
 /* harmony import */ var _utils_matrix_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/matrix.js */ "./node_modules/gsap/utils/matrix.js");
 /*!
- * MotionPathPlugin 3.5.1
+ * MotionPathPlugin 3.6.1
  * https://greensock.com
  *
- * @license Copyright 2008-2020, GreenSock. All rights reserved.
+ * @license Copyright 2008-2021, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -3415,8 +3441,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _xProps = ["x", "translateX", "left", "marginLeft"],
-    _yProps = ["y", "translateY", "top", "marginTop"],
+var _xProps = "x,translateX,left,marginLeft,xPercent".split(","),
+    _yProps = "y,translateY,top,marginTop,yPercent".split(","),
     _DEG2RAD = Math.PI / 180,
     gsap,
     PropTween,
@@ -3429,10 +3455,11 @@ var _xProps = ["x", "translateX", "left", "marginLeft"],
   //mode: 0 = x but don't fill y yet, 1 = y, 2 = x and fill y with 0.
   var l = values.length,
       si = mode === 2 ? 0 : mode,
-      i = 0;
+      i = 0,
+      v;
 
   for (; i < l; i++) {
-    segment[si] = parseFloat(values[i][property]);
+    segment[si] = v = parseFloat(values[i][property]);
     mode === 2 && (segment[si + 1] = 0);
     si += 2;
   }
@@ -3452,11 +3479,11 @@ var _xProps = ["x", "translateX", "left", "marginLeft"],
     y = segment[i + 1] += y;
   }
 },
-    _segmentToRawPath = function _segmentToRawPath(plugin, segment, target, x, y, slicer, vars) {
+    _segmentToRawPath = function _segmentToRawPath(plugin, segment, target, x, y, slicer, vars, unitX, unitY) {
   if (vars.type === "cubic") {
     segment = [segment];
   } else {
-    segment.unshift(_getPropNum(target, x, vars.unitX), y ? _getPropNum(target, y, vars.unitY) : 0);
+    segment.unshift(_getPropNum(target, x, unitX), y ? _getPropNum(target, y, unitY) : 0);
     vars.relative && _relativize(segment);
     var pointFunc = y ? _utils_paths_js__WEBPACK_IMPORTED_MODULE_0__["pointsToSegment"] : _utils_paths_js__WEBPACK_IMPORTED_MODULE_0__["flatPointsToSegment"];
     segment = [pointFunc(segment, vars.curviness)];
@@ -3464,9 +3491,9 @@ var _xProps = ["x", "translateX", "left", "marginLeft"],
 
   segment = slicer(_align(segment, target, vars));
 
-  _addDimensionalPropTween(plugin, target, x, segment, "x", vars.unitX);
+  _addDimensionalPropTween(plugin, target, x, segment, "x", unitX);
 
-  y && _addDimensionalPropTween(plugin, target, y, segment, "y", vars.unitY);
+  y && _addDimensionalPropTween(plugin, target, y, segment, "y", unitY);
   return Object(_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__["cacheRawPathMeasurements"])(segment, vars.resolution || (vars.curviness === 0 ? 20 : 12)); //when curviness is 0, it creates control points right on top of the anchors which makes it more sensitive to resolution, thus we change the default accordingly.
 },
     _emptyFunc = function _emptyFunc(v) {
@@ -3604,7 +3631,7 @@ var _xProps = ["x", "translateX", "left", "marginLeft"],
 };
 
 var MotionPathPlugin = {
-  version: "3.5.1",
+  version: "3.6.1",
   name: "motionPath",
   register: function register(core, Plugin, propTween) {
     gsap = core;
@@ -3625,14 +3652,17 @@ var MotionPathPlugin = {
     }
 
     var rawPaths = [],
-        path = vars.path,
+        _vars = vars,
+        path = _vars.path,
+        autoRotate = _vars.autoRotate,
+        unitX = _vars.unitX,
+        unitY = _vars.unitY,
+        x = _vars.x,
+        y = _vars.y,
         firstObj = path[0],
-        autoRotate = vars.autoRotate,
         slicer = _sliceModifier(vars.start, "end" in vars ? vars.end : 1),
         rawPath,
-        p,
-        x,
-        y;
+        p;
 
     this.rawPaths = rawPaths;
     this.target = target;
@@ -3650,22 +3680,22 @@ var MotionPathPlugin = {
 
     if (Array.isArray(path) && !("closed" in path) && typeof firstObj !== "number") {
       for (p in firstObj) {
-        if (~_xProps.indexOf(p)) {
+        if (!x && ~_xProps.indexOf(p)) {
           x = p;
-        } else if (~_yProps.indexOf(p)) {
+        } else if (!y && ~_yProps.indexOf(p)) {
           y = p;
         }
       }
 
       if (x && y) {
         //correlated values
-        rawPaths.push(_segmentToRawPath(this, _populateSegmentFromArray(_populateSegmentFromArray([], path, x, 0), path, y, 1), target, vars.x || x, vars.y || y, slicer, vars));
+        rawPaths.push(_segmentToRawPath(this, _populateSegmentFromArray(_populateSegmentFromArray([], path, x, 0), path, y, 1), target, x, y, slicer, vars, unitX || _getUnit(path[0][x]), unitY || _getUnit(path[0][y])));
       } else {
         x = y = 0;
       }
 
       for (p in firstObj) {
-        p !== x && p !== y && rawPaths.push(_segmentToRawPath(this, _populateSegmentFromArray([], path, p, 2), target, p, 0, slicer, vars));
+        p !== x && p !== y && rawPaths.push(_segmentToRawPath(this, _populateSegmentFromArray([], path, p, 2), target, p, 0, slicer, vars, _getUnit(path[0][p])));
       }
     } else {
       rawPath = slicer(_align(Object(_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__["getRawPath"])(vars.path), target, vars));
@@ -3747,7 +3777,7 @@ _getGSAP() && gsap.registerPlugin(MotionPathPlugin);
 /*!****************************************!*\
   !*** ./node_modules/gsap/gsap-core.js ***!
   \****************************************/
-/*! exports provided: GSCache, Animation, Timeline, Tween, PropTween, gsap, Power0, Power1, Power2, Power3, Power4, Linear, Quad, Cubic, Quart, Quint, Strong, Elastic, Back, SteppedEase, Bounce, Sine, Expo, Circ, TweenMax, TweenLite, TimelineMax, TimelineLite, default, wrap, wrapYoyo, distribute, random, snap, normalize, getUnit, clamp, splitColor, toArray, mapRange, pipe, unitize, interpolate, shuffle, _getProperty, _numExp, _numWithUnitExp, _isString, _isUndefined, _renderComplexString, _relExp, _setDefaults, _removeLinkedListItem, _forEachName, _sortPropTweensByPriority, _colorStringFilter, _replaceRandom, _checkPlugin, _plugins, _ticker, _config, _roundModifier, _round, _missingPlugin, _getSetter, _getCache */
+/*! exports provided: GSCache, Animation, Timeline, Tween, PropTween, gsap, Power0, Power1, Power2, Power3, Power4, Linear, Quad, Cubic, Quart, Quint, Strong, Elastic, Back, SteppedEase, Bounce, Sine, Expo, Circ, TweenMax, TweenLite, TimelineMax, TimelineLite, default, wrap, wrapYoyo, distribute, random, snap, normalize, getUnit, clamp, splitColor, toArray, mapRange, pipe, unitize, interpolate, shuffle, _getProperty, _numExp, _numWithUnitExp, _isString, _isUndefined, _renderComplexString, _relExp, _setDefaults, _removeLinkedListItem, _forEachName, _sortPropTweensByPriority, _colorStringFilter, _replaceRandom, _checkPlugin, _plugins, _ticker, _config, _roundModifier, _round, _missingPlugin, _getSetter, _getCache, _colorExp */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3818,15 +3848,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_missingPlugin", function() { return _missingPlugin; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getSetter", function() { return _getSetter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getCache", function() { return _getCache; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_colorExp", function() { return _colorExp; });
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
 
 /*!
- * GSAP 3.5.1
+ * GSAP 3.6.1
  * https://greensock.com
  *
- * @license Copyright 2008-2020, GreenSock. All rights reserved.
+ * @license Copyright 2008-2021, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -3846,6 +3877,7 @@ var _config = {
   overwrite: false,
   delay: 0
 },
+    _suppressOverwrites,
     _bigNum = 1e8,
     _tinyNum = 1 / _bigNum,
     _2PI = Math.PI * 2,
@@ -3883,13 +3915,14 @@ var _config = {
 _isArray = Array.isArray,
     _strictNumExp = /(?:-?\.?\d|\.)+/gi,
     //only numbers (including negatives and decimals) but NOT relative values.
-_numExp = /[-+=.]*\d+[.e\-+]*\d*[e\-\+]*\d*/g,
+_numExp = /[-+=.]*\d+[.e\-+]*\d*[e\-+]*\d*/g,
     //finds any numbers, including ones that start with += or -=, negative numbers, and ones in scientific notation like 1e-8.
 _numWithUnitExp = /[-+=.]*\d+[.e-]*\d*[a-z%]*/g,
-    _complexStringNumExp = /[-+=.]*\d+(?:\.|e-|e)*\d*/gi,
+    _complexStringNumExp = /[-+=.]*\d+\.?\d*(?:e-|e\+)?\d*/gi,
     //duplicate so that while we're looping through matches from exec(), it doesn't contaminate the lastIndex of _numExp which we use to search for colors too.
-_relExp = /[+-]=-?[\.\d]+/,
+_relExp = /[+-]=-?[.\d]+/,
     _delimitedValueExp = /[#\-+.]*\b[a-z\d-=+%.]+/gi,
+    _unitExp = /[\d.+\-=]+(?:e[-+]\d*)*/i,
     _globalTimeline,
     _win,
     _coreInitted,
@@ -3928,6 +3961,7 @@ _relExp = /[+-]=-?[\.\d]+/,
   _isObject(target) || _isFunction(target) || (targets = [targets]);
 
   if (!(harnessPlugin = (target._gsap || {}).harness)) {
+    // find the first target with a harness. We assume targets passed into an animation will be of similar type, meaning the same kind of harness can be used for them all (performance optimization)
     i = _harnessPlugins.length;
 
     while (i-- && !_harnessPlugins[i].targetTest(target)) {}
@@ -4037,7 +4071,7 @@ _round = function _round(value) {
 },
     _mergeDeep = function _mergeDeep(base, toMerge) {
   for (var p in toMerge) {
-    base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p];
+    p !== "__proto__" && p !== "constructor" && p !== "prototype" && (base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p]);
   }
 
   return base;
@@ -4174,7 +4208,8 @@ _round = function _round(value) {
 },
     // feed in the totalTime and cycleDuration and it'll return the cycle (iteration minus 1) and if the playhead is exactly at the very END, it will NOT bump up to the next cycle.
 _animationCycle = function _animationCycle(tTime, cycleDuration) {
-  return (tTime /= cycleDuration) && ~~tTime === tTime ? ~~tTime - 1 : ~~tTime;
+  var whole = Math.floor(tTime /= cycleDuration);
+  return tTime && whole === tTime ? whole - 1 : whole;
 },
     _parentToChildTotalTime = function _parentToChildTotalTime(parentTime, child) {
   return (parentTime - child._start) * child._ts + (child._ts >= 0 ? 0 : child._dirty ? child.totalDuration() : child._tDur);
@@ -4187,7 +4222,7 @@ _animationCycle = function _animationCycle(tTime, cycleDuration) {
   var parent = animation._dp;
 
   if (parent && parent.smoothChildTiming && animation._ts) {
-    animation._start = _round(animation._dp._time - (animation._ts > 0 ? totalTime / animation._ts : ((animation._dirty ? animation.totalDuration() : animation._tDur) - totalTime) / -animation._ts));
+    animation._start = _round(parent._time - (animation._ts > 0 ? totalTime / animation._ts : ((animation._dirty ? animation.totalDuration() : animation._tDur) - totalTime) / -animation._ts));
 
     _setEnd(animation);
 
@@ -4263,10 +4298,15 @@ _postAddChecks = function _postAddChecks(timeline, child) {
     return 1;
   }
 },
-    _renderZeroDurationTween = function _renderZeroDurationTween(tween, totalTime, suppressEvents, force) {
+    _parentPlayheadIsBeforeStart = function _parentPlayheadIsBeforeStart(_ref) {
+  var parent = _ref.parent;
+  return parent && parent._ts && parent._initted && !parent._lock && (parent.rawTime() < 0 || _parentPlayheadIsBeforeStart(parent));
+},
+    // check parent's _lock because when a timeline repeats/yoyos and does its artificial wrapping, we shouldn't force the ratio back to 0
+_renderZeroDurationTween = function _renderZeroDurationTween(tween, totalTime, suppressEvents, force) {
   var prevRatio = tween.ratio,
-      ratio = totalTime < 0 || !totalTime && prevRatio && !tween._start && tween._zTime > _tinyNum && !tween._dp._lock || (tween._ts < 0 || tween._dp._ts < 0) && tween.data !== "isFromStart" && tween.data !== "isStart" ? 0 : 1,
-      // check parent's _lock because when a timeline repeats/yoyos and does its artificial wrapping, we shouldn't force the ratio back to 0. Also, if the tween or its parent is reversed and the totalTime is 0, we should go to a ratio of 0.
+      ratio = totalTime < 0 || !totalTime && (!tween._start && _parentPlayheadIsBeforeStart(tween) || (tween._ts < 0 || tween._dp._ts < 0) && tween.data !== "isFromStart" && tween.data !== "isStart") ? 0 : 1,
+      // if the tween or its parent is reversed and the totalTime is 0, we should go to a ratio of 0.
   repeatDelay = tween._rDelay,
       tTime = 0,
       pt,
@@ -4278,6 +4318,7 @@ _postAddChecks = function _postAddChecks(timeline, child) {
     tTime = _clamp(0, tween._tDur, totalTime);
     iteration = _animationCycle(tTime, repeatDelay);
     prevIteration = _animationCycle(tween._tTime, repeatDelay);
+    tween._yoyo && iteration & 1 && (ratio = 1 - ratio);
 
     if (iteration !== prevIteration) {
       prevRatio = 1 - ratio;
@@ -4300,7 +4341,6 @@ _postAddChecks = function _postAddChecks(timeline, child) {
     tween._from && (ratio = 1 - ratio);
     tween._time = 0;
     tween._tTime = tTime;
-    suppressEvents || _callback(tween, "onStart");
     pt = tween._pt;
 
     while (pt) {
@@ -4404,7 +4444,13 @@ _postAddChecks = function _postAddChecks(timeline, child) {
   return value < min ? min : value > max ? max : value;
 },
     getUnit = function getUnit(value) {
-  return (value = (value + "").substr((parseFloat(value) + "").length)) && isNaN(value) ? value : "";
+  if (typeof value !== "string") {
+    return "";
+  }
+
+  var v = _unitExp.exec(value);
+
+  return v ? value.substr(v.index + v[0].length) : "";
 },
     // note: protect against padded numbers as strings, like "100.100". That shouldn't return "00" as the unit. If it's numeric, return no unit.
 clamp = function clamp(min, max, value) {
@@ -4525,7 +4571,8 @@ distribute = function distribute(v) {
   var p = v < 1 ? Math.pow(10, (v + "").length - 2) : 1; //to avoid floating point math errors (like 24 * 0.1 == 2.4000000000000004), we chop off at a specific number of decimal places (much faster than toFixed()
 
   return function (raw) {
-    return Math.floor(Math.round(parseFloat(raw) / v) * v * p) / p + (_isNumber(raw) ? 0 : getUnit(raw));
+    var n = Math.round(parseFloat(raw) / v) * v * p;
+    return (n - n % 1) / p + (_isNumber(raw) ? 0 : getUnit(raw)); // n - n % 1 replaces Math.floor() in order to handle negative values properly. For example, Math.floor(-150.00000000000003) is 151!
   };
 },
     snap = function snap(snapTo, value) {
@@ -4580,7 +4627,7 @@ distribute = function distribute(v) {
 },
     random = function random(min, max, roundingIncrement, returnFunction) {
   return _conditionalReturn(_isArray(min) ? !max : roundingIncrement === true ? !!(roundingIncrement = 0) : !returnFunction, function () {
-    return _isArray(min) ? min[~~(Math.random() * min.length)] : (roundingIncrement = roundingIncrement || 1e-5) && (returnFunction = roundingIncrement < 1 ? Math.pow(10, (roundingIncrement + "").length - 2) : 1) && Math.floor(Math.round((min + Math.random() * (max - min)) / roundingIncrement) * roundingIncrement * returnFunction) / returnFunction;
+    return _isArray(min) ? min[~~(Math.random() * min.length)] : (roundingIncrement = roundingIncrement || 1e-5) && (returnFunction = roundingIncrement < 1 ? Math.pow(10, (roundingIncrement + "").length - 2) : 1) && Math.floor(Math.round((min - roundingIncrement / 2 + Math.random() * (max - min + roundingIncrement * .99)) / roundingIncrement) * roundingIncrement * returnFunction) / returnFunction;
   });
 },
     pipe = function pipe() {
@@ -4744,6 +4791,7 @@ distribute = function distribute(v) {
     _interrupt = function _interrupt(animation) {
   _removeFromParent(animation);
 
+  animation.scrollTrigger && animation.scrollTrigger.kill(false);
   animation.progress() < 1 && _callback(animation, "onInterrupt");
   return animation;
 },
@@ -4855,12 +4903,18 @@ _255 = 255,
     if (_colorLookup[v]) {
       a = _colorLookup[v];
     } else if (v.charAt(0) === "#") {
-      if (v.length === 4) {
-        //for shorthand like #9F0
+      if (v.length < 6) {
+        //for shorthand like #9F0 or #9F0F (could have alpha)
         r = v.charAt(1);
         g = v.charAt(2);
         b = v.charAt(3);
-        v = "#" + r + r + g + g + b + b;
+        v = "#" + r + r + g + g + b + b + (v.length === 5 ? v.charAt(4) + v.charAt(4) : "");
+      }
+
+      if (v.length === 9) {
+        // hex with alpha, like #fd5e53ff
+        a = parseInt(v.substr(1, 6), 16);
+        return [a >> 16, a >> 8 & _255, a & _255, parseInt(v.substr(7), 16) / 255];
       }
 
       v = parseInt(v.substr(1), 16);
@@ -4974,7 +5028,7 @@ _255 = 255,
   return result + shell[l];
 },
     _colorExp = function () {
-  var s = "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3}){1,2}\\b",
+  var s = "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3,4}){1,2}\\b",
       //we'll dynamically build this Regular Expression to conserve file size. After building it, it will be able to find rgb(), rgba(), # (hexadecimal), and named color values like red, blue, purple, etc.,
   p;
 
@@ -5367,7 +5421,8 @@ var Animation = /*#__PURE__*/function () {
     this.vars = vars;
     this._delay = +vars.delay || 0;
 
-    if (this._repeat = vars.repeat || 0) {
+    if (this._repeat = vars.repeat === Infinity ? -2 : vars.repeat || 0) {
+      // TODO: repeat: Infinity on a timeline's children must flag that timeline internally and affect its totalDuration, otherwise it'll stop in the negative direction when reaching the start.
       this._rDelay = vars.repeatDelay || 0;
       this._yoyo = !!vars.yoyo || !!vars.yoyoEase;
     }
@@ -5418,8 +5473,10 @@ var Animation = /*#__PURE__*/function () {
     var parent = this._dp;
 
     if (parent && parent.smoothChildTiming && this._ts) {
-      _alignPlayhead(this, _totalTime); //in case any of the ancestor timelines had completed but should now be enabled, we should reset their totalTime() which will also ensure that they're lined up properly and enabled. Skip for animations that are on the root (wasteful). Example: a TimelineLite.exportRoot() is performed when there's a paused tween on the root, the export will not complete until that tween is unpaused, but imagine a child gets restarted later, after all [unpaused] tweens have completed. The start of that child would get pushed out, but one of the ancestors may have completed.
+      _alignPlayhead(this, _totalTime);
 
+      !parent._dp || parent.parent || _postAddChecks(parent, this); // edge case: if this is a child of a timeline that already completed, for example, we must re-activate the parent.
+      //in case any of the ancestor timelines had completed but should now be enabled, we should reset their totalTime() which will also ensure that they're lined up properly and enabled. Skip for animations that are on the root (wasteful). Example: a TimelineLite.exportRoot() is performed when there's a paused tween on the root, the export will not complete until that tween is unpaused, but imagine a child gets restarted later, after all [unpaused] tweens have completed. The start of that child would get pushed out, but one of the ancestors may have completed.
 
       while (parent.parent) {
         if (parent.parent._time !== parent._start + (parent._ts >= 0 ? parent._tTime / parent._ts : (parent.totalDuration() - parent._tTime) / -parent._ts)) {
@@ -5438,8 +5495,12 @@ var Animation = /*#__PURE__*/function () {
     if (this._tTime !== _totalTime || !this._dur && !suppressEvents || this._initted && Math.abs(this._zTime) === _tinyNum || !_totalTime && !this._initted && (this.add || this._ptLookup)) {
       // check for _ptLookup on a Tween instance to ensure it has actually finished being instantiated, otherwise if this.reverse() gets called in the Animation constructor, it could trigger a render() here even though the _targets weren't populated, thus when _init() is called there won't be any PropTweens (it'll act like the tween is non-functional)
       this._ts || (this._pTime = _totalTime); // otherwise, if an animation is paused, then the playhead is moved back to zero, then resumed, it'd revert back to the original time at the pause
+      //if (!this._lock) { // avoid endless recursion (not sure we need this yet or if it's worth the performance hit)
+      //   this._lock = 1;
 
-      _lazySafeRender(this, _totalTime, suppressEvents);
+      _lazySafeRender(this, _totalTime, suppressEvents); //   this._lock = 0;
+      //}
+
     }
 
     return this;
@@ -5550,11 +5611,11 @@ var Animation = /*#__PURE__*/function () {
 
   _proto.repeat = function repeat(value) {
     if (arguments.length) {
-      this._repeat = value;
+      this._repeat = value === Infinity ? -2 : value;
       return _onUpdateTotalDuration(this);
     }
 
-    return this._repeat;
+    return this._repeat === -2 ? Infinity : this._repeat;
   };
 
   _proto.repeatDelay = function repeatDelay(value) {
@@ -5613,7 +5674,7 @@ var Animation = /*#__PURE__*/function () {
   };
 
   _proto.invalidate = function invalidate() {
-    this._initted = 0;
+    this._initted = this._act = 0;
     this._zTime = -_tinyNum;
     return this;
   };
@@ -5812,6 +5873,11 @@ var Timeline = /*#__PURE__*/function (_Animation) {
         //adjust the time for repeats and yoyos
         yoyo = this._yoyo;
         cycleDuration = dur + this._rDelay;
+
+        if (this._repeat < -1 && totalTime < 0) {
+          return this.totalTime(cycleDuration * 100 + totalTime, suppressEvents, force);
+        }
+
         time = _round(tTime % cycleDuration); //round to avoid floating point errors. (4 % 0.8 should be 0 but some browsers report it as 0.79999999!)
 
         if (tTime === tDur) {
@@ -5856,7 +5922,8 @@ var Timeline = /*#__PURE__*/function (_Animation) {
           !suppressEvents && this.parent && _callback(this, "onRepeat");
           this.vars.repeatRefresh && !isYoyo && (this.invalidate()._lock = 1);
 
-          if (prevTime !== this._time || prevPaused !== !this._ts) {
+          if (prevTime && prevTime !== this._time || prevPaused !== !this._ts || this.vars.onRepeat && !this.parent && !this._act) {
+            // if prevTime is 0 and we render at the very end, _time will be the end, thus won't match. So in this edge case, prevTime won't match _time but that's okay. If it gets killed in the onRepeat, eject as well.
             return this;
           }
 
@@ -5868,7 +5935,6 @@ var Timeline = /*#__PURE__*/function (_Animation) {
             this._lock = 2;
             prevTime = rewinding ? dur : -0.0001;
             this.render(prevTime, true);
-            this.vars.repeatRefresh && !isYoyo && this.invalidate();
           }
 
           this._lock = 0;
@@ -5898,6 +5964,7 @@ var Timeline = /*#__PURE__*/function (_Animation) {
         this._onUpdate = this.vars.onUpdate;
         this._initted = 1;
         this._zTime = totalTime;
+        prevTime = 0; // upon init, the playhead should always go forward; someone could invalidate() a completed timeline and then if they restart(), that would make child tweens render in reverse order which could lock in the wrong starting values if they build on each other, like tl.to(obj, {x: 100}).to(obj, {x: 0}).
       }
 
       !prevTime && time && !suppressEvents && _callback(this, "onStart");
@@ -5987,9 +6054,7 @@ var Timeline = /*#__PURE__*/function (_Animation) {
   _proto2.add = function add(child, position) {
     var _this2 = this;
 
-    if (!_isNumber(position)) {
-      position = _parsePosition(this, position);
-    }
+    _isNumber(position) || (position = _parsePosition(this, position));
 
     if (!(child instanceof Animation)) {
       if (_isArray(child)) {
@@ -6159,7 +6224,13 @@ var Timeline = /*#__PURE__*/function (_Animation) {
     }
 
     return a;
-  };
+  } // potential future feature - targets() on timelines
+  // targets() {
+  // 	let result = [];
+  // 	this.getChildren(true, true, false).forEach(t => result.push(...t.targets()));
+  // 	return result;
+  // }
+  ;
 
   _proto2.tweenTo = function tweenTo(position, vars) {
     vars = vars || {};
@@ -6170,9 +6241,11 @@ var Timeline = /*#__PURE__*/function (_Animation) {
         startAt = _vars.startAt,
         _onStart = _vars.onStart,
         onStartParams = _vars.onStartParams,
-        tween = Tween.to(tl, _setDefaults(vars, {
-      ease: "none",
+        immediateRender = _vars.immediateRender,
+        tween = Tween.to(tl, _setDefaults({
+      ease: vars.ease || "none",
       lazy: false,
+      immediateRender: false,
       time: endTime,
       overwrite: "auto",
       duration: vars.duration || Math.abs((endTime - (startAt && "time" in startAt ? startAt.time : tl._time)) / tl.timeScale()) || _tinyNum,
@@ -6182,9 +6255,9 @@ var Timeline = /*#__PURE__*/function (_Animation) {
         tween._dur !== duration && _setDuration(tween, duration, 0, 1).render(tween._time, true, true);
         _onStart && _onStart.apply(tween, onStartParams || []); //in case the user had an onStart in the vars - we don't want to overwrite it.
       }
-    }));
+    }, vars));
 
-    return tween;
+    return immediateRender ? tween.render(0) : tween;
   };
 
   _proto2.tweenFromTo = function tweenFromTo(fromPosition, toPosition, vars) {
@@ -6274,7 +6347,7 @@ var Timeline = /*#__PURE__*/function (_Animation) {
       child = next;
     }
 
-    this._time = this._tTime = this._pTime = 0;
+    this._dp && (this._time = this._tTime = this._pTime = 0);
     includeLabels && (this.labels = {});
     return _uncache(this);
   };
@@ -6521,7 +6594,7 @@ _initTween = function _initTween(tween, time) {
       targets = tween._targets,
       parent = tween.parent,
       fullTargets = parent && parent.data === "nested" ? parent.parent._targets : targets,
-      autoOverwrite = tween._overwrite === "auto",
+      autoOverwrite = tween._overwrite === "auto" && !_suppressOverwrites,
       tl = tween.timeline,
       cleanVars,
       i,
@@ -6578,6 +6651,8 @@ _initTween = function _initTween(tween, time) {
           time && (tween._zTime = time);
           return; //we skip initialization here so that overwriting doesn't occur until the tween actually begins. Otherwise, if you create several immediateRender:true tweens of the same target/properties to drop into a Timeline, the last one created would overwrite the first ones because they didn't get placed into the timeline yet before the first render occurs and kicks in overwriting.
         }
+      } else if (autoRevert === false) {
+        tween._startAt = 0;
       }
     } else if (runBackwards && dur) {
       //from() tweens must be handled uniquely: their beginning values must be rendered but we don't want overwriting to occur yet (when time is still 0). Wait until the tween actually begins before doing all the routines like overwriting. At that time, we should render at the END of the tween to ensure that things initialize correctly (remember, from() tweens go backwards)
@@ -6749,7 +6824,8 @@ var Tween = /*#__PURE__*/function (_Animation2) {
         defaults: defaults || {}
       });
       tl.kill();
-      tl.parent = _assertThisInitialized(_this3);
+      tl.parent = tl._dp = _assertThisInitialized(_this3);
+      tl._start = 0;
 
       if (keyframes) {
         _setDefaults(tl.vars.defaults, {
@@ -6808,7 +6884,7 @@ var Tween = /*#__PURE__*/function (_Animation2) {
       _this3.timeline = 0; //speed optimization, faster lookups (no going up the prototype chain)
     }
 
-    if (overwrite === true) {
+    if (overwrite === true && !_suppressOverwrites) {
       _overwritingTween = _assertThisInitialized(_this3);
 
       _globalTimeline.killTweensOf(parsedTargets);
@@ -6848,7 +6924,7 @@ var Tween = /*#__PURE__*/function (_Animation2) {
 
     if (!dur) {
       _renderZeroDurationTween(this, totalTime, suppressEvents, force);
-    } else if (tTime !== this._tTime || !totalTime || force || this._startAt && this._zTime < 0 !== totalTime < 0) {
+    } else if (tTime !== this._tTime || !totalTime || force || !this._initted && this._tTime || this._startAt && this._zTime < 0 !== totalTime < 0) {
       //this senses if we're crossing over the start time, in which case we must record _zTime and force the render, but we do it in this lengthy conditional way for performance reasons (usually we can skip the calculations): this._initted && (this._zTime < 0) !== (totalTime < 0)
       time = tTime;
       timeline = this.timeline;
@@ -6856,6 +6932,11 @@ var Tween = /*#__PURE__*/function (_Animation2) {
       if (this._repeat) {
         //adjust the time for repeats and yoyos
         cycleDuration = dur + this._rDelay;
+
+        if (this._repeat < -1 && totalTime < 0) {
+          return this.totalTime(cycleDuration * 100 + totalTime, suppressEvents, force);
+        }
+
         time = _round(tTime % cycleDuration); //round to avoid floating point errors. (4 % 0.8 should be 0 but some browsers report it as 0.79999999!)
 
         if (tTime === tDur) {
@@ -6965,7 +7046,7 @@ var Tween = /*#__PURE__*/function (_Animation2) {
   };
 
   _proto3.invalidate = function invalidate() {
-    this._pt = this._op = this._startAt = this._onUpdate = this._act = this._lazy = 0;
+    this._pt = this._op = this._startAt = this._onUpdate = this._lazy = this.ratio = 0;
     this._ptLookup = [];
     this.timeline && this.timeline.invalidate();
     return _Animation2.prototype.invalidate.call(this);
@@ -6977,16 +7058,13 @@ var Tween = /*#__PURE__*/function (_Animation2) {
     }
 
     if (!targets && (!vars || vars === "all")) {
-      this._lazy = 0;
-
-      if (this.parent) {
-        return _interrupt(this);
-      }
+      this._lazy = this._pt = 0;
+      return this.parent ? _interrupt(this) : this;
     }
 
     if (this.timeline) {
       var tDur = this.timeline.totalDuration();
-      this.timeline.killTweensOf(targets, vars, _overwritingTween && _overwritingTween.vars.overwrite !== true)._first || _interrupt(this); // if nothing is left tweenng, interrupt.
+      this.timeline.killTweensOf(targets, vars, _overwritingTween && _overwritingTween.vars.overwrite !== true)._first || _interrupt(this); // if nothing is left tweening, interrupt.
 
       this.parent && tDur !== this.timeline.totalDuration() && _setDuration(this, this._dur * this.timeline._tDur / tDur, 0, 1); // if a nested tween is killed that changes the duration, it should affect this tween's duration. We must use the ratio, though, because sometimes the internal timeline is stretched like for keyframes where they don't all add up to whatever the parent tween's duration was set to.
 
@@ -7377,12 +7455,12 @@ var _gsap = {
   config: function config(value) {
     return _mergeDeep(_config, value || {});
   },
-  registerEffect: function registerEffect(_ref) {
-    var name = _ref.name,
-        effect = _ref.effect,
-        plugins = _ref.plugins,
-        defaults = _ref.defaults,
-        extendTimeline = _ref.extendTimeline;
+  registerEffect: function registerEffect(_ref2) {
+    var name = _ref2.name,
+        effect = _ref2.effect,
+        plugins = _ref2.plugins,
+        defaults = _ref2.defaults,
+        extendTimeline = _ref2.extendTimeline;
     (plugins || "").split(",").forEach(function (pluginName) {
       return pluginName && !_plugins[pluginName] && !_globals[pluginName] && _warn(name + " effect requires " + pluginName + " plugin.");
     });
@@ -7467,7 +7545,10 @@ var _gsap = {
     Timeline: Timeline,
     Animation: Animation,
     getCache: _getCache,
-    _removeLinkedListItem: _removeLinkedListItem
+    _removeLinkedListItem: _removeLinkedListItem,
+    suppressOverwrites: function suppressOverwrites(value) {
+      return _suppressOverwrites = value;
+    }
   }
 };
 
@@ -7573,7 +7654,7 @@ var gsap = _gsap.registerPlugin({
   }
 }, _buildModifierPlugin("roundProps", _roundModifier), _buildModifierPlugin("modifiers"), _buildModifierPlugin("snap", snap)) || _gsap; //to prevent the core plugins from being dropped via aggressive tree shaking, we must include them in the variable declaration in this way.
 
-Tween.version = Timeline.version = gsap.version = "3.5.1";
+Tween.version = Timeline.version = gsap.version = "3.6.1";
 _coreReady = 1;
 
 if (_windowExists()) {
@@ -7676,18 +7757,21 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 /*!*******************************************!*\
   !*** ./node_modules/gsap/utils/matrix.js ***!
   \*******************************************/
-/*! exports provided: Matrix2D, getGlobalMatrix */
+/*! exports provided: Matrix2D, getGlobalMatrix, _getDocScrollTop, _getDocScrollLeft, _setDoc */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Matrix2D", function() { return Matrix2D; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getGlobalMatrix", function() { return getGlobalMatrix; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getDocScrollTop", function() { return _getDocScrollTop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_getDocScrollLeft", function() { return _getDocScrollLeft; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_setDoc", function() { return _setDoc; });
 /*!
- * matrix 3.5.1
+ * matrix 3.6.1
  * https://greensock.com
  *
- * Copyright 2008-2020, GreenSock. All rights reserved.
+ * Copyright 2008-2021, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -7739,11 +7823,12 @@ var _doc,
   return doc;
 },
     _forceNonZeroScale = function _forceNonZeroScale(e) {
-  // walks up the element's ancestors and finds any that had their scale set to 0 via GSAP, and changes them to 0.0001 to ensure that measurements work
+  // walks up the element's ancestors and finds any that had their scale set to 0 via GSAP, and changes them to 0.0001 to ensure that measurements work. Firefox has a bug that causes it to incorrectly report getBoundingClientRect() when scale is 0.
   var a, cache;
 
   while (e && e !== _body) {
     cache = e._gsap;
+    cache && cache.uncache && cache.get(e, "x"); // force re-parsing of transforms if necessary
 
     if (cache && !cache.scaleX && !cache.scaleY && cache.renderTransform) {
       cache.scaleX = cache.scaleY = 1e-4;
@@ -7805,7 +7890,7 @@ _divTemps = [],
         type = svg ? i ? "rect" : "g" : "div",
         x = i !== 2 ? 0 : 100,
         y = i === 3 ? 100 : 0,
-        css = "position:absolute;display:block;pointer-events:none;",
+        css = "position:absolute;display:block;pointer-events:none;margin:0;padding:0;",
         e = _doc.createElementNS ? _doc.createElementNS(ns.replace(/^https/, "http"), type) : _doc.createElement(type);
 
     if (i) {
@@ -7819,10 +7904,7 @@ _divTemps = [],
 
         _divContainer.appendChild(e);
       } else {
-        if (!_svgContainer) {
-          _svgContainer = _createSibling(element);
-        }
-
+        _svgContainer || (_svgContainer = _createSibling(element));
         e.setAttribute("width", 0.01);
         e.setAttribute("height", 0.01);
         e.setAttribute("transform", "translate(" + x + "," + y + ")");
@@ -7851,20 +7933,19 @@ _divTemps = [],
   var svg = _svgOwner(element),
       isRootSVG = element === svg,
       siblings = svg ? _svgTemps : _divTemps,
+      parent = element.parentNode,
       container,
       m,
       b,
       x,
-      y;
+      y,
+      cs;
 
   if (element === _win) {
     return element;
   }
 
-  if (!siblings.length) {
-    siblings.push(_createSibling(element, 1), _createSibling(element, 2), _createSibling(element, 3));
-  }
-
+  siblings.length || siblings.push(_createSibling(element, 1), _createSibling(element, 2), _createSibling(element, 3));
   container = svg ? _svgContainer : _divContainer;
 
   if (svg) {
@@ -7889,8 +7970,8 @@ _divTemps = [],
       x = y = 0;
     }
 
+    (isRootSVG ? svg : parent).appendChild(container);
     container.setAttribute("transform", "matrix(" + m.a + "," + m.b + "," + m.c + "," + m.d + "," + (m.e + x) + "," + (m.f + y) + ")");
-    (isRootSVG ? svg : element.parentNode).appendChild(container);
   } else {
     x = y = 0;
 
@@ -7908,18 +7989,30 @@ _divTemps = [],
       }
     }
 
+    cs = _win.getComputedStyle(element);
+
+    if (cs.position !== "absolute") {
+      m = element.offsetParent;
+
+      while (parent && parent !== m) {
+        // if there's an ancestor element between the element and its offsetParent that's scrolled, we must factor that in.
+        x += parent.scrollLeft || 0;
+        y += parent.scrollTop || 0;
+        parent = parent.parentNode;
+      }
+    }
+
     b = container.style;
     b.top = element.offsetTop - y + "px";
     b.left = element.offsetLeft - x + "px";
-    m = _win.getComputedStyle(element);
-    b[_transformProp] = m[_transformProp];
-    b[_transformOriginProp] = m[_transformOriginProp];
-    b.border = m.border;
-    b.borderLeftStyle = m.borderLeftStyle;
-    b.borderTopStyle = m.borderTopStyle;
-    b.borderLeftWidth = m.borderLeftWidth;
-    b.borderTopWidth = m.borderTopWidth;
-    b.position = m.position === "fixed" ? "fixed" : "absolute";
+    b[_transformProp] = cs[_transformProp];
+    b[_transformOriginProp] = cs[_transformOriginProp]; // b.border = m.border;
+    // b.borderLeftStyle = m.borderLeftStyle;
+    // b.borderTopStyle = m.borderTopStyle;
+    // b.borderLeftWidth = m.borderLeftWidth;
+    // b.borderTopWidth = m.borderTopWidth;
+
+    b.position = cs.position === "fixed" ? "fixed" : "absolute";
     element.parentNode.appendChild(container);
   }
 
@@ -8026,7 +8119,7 @@ var Matrix2D = /*#__PURE__*/function () {
   };
 
   return Matrix2D;
-}(); //feed in an element and it'll return a 2D matrix (optionally inverted) so that you can translate between coordinate spaces.
+}(); // Feed in an element and it'll return a 2D matrix (optionally inverted) so that you can translate between coordinate spaces.
 // Inverting lets you translate a global point into a local coordinate space. No inverting lets you go the other way.
 // We needed this to work around various browser bugs, like Firefox doesn't accurately report getScreenCTM() when there
 // are transforms applied to ancestor elements.
@@ -8034,13 +8127,13 @@ var Matrix2D = /*#__PURE__*/function () {
 //     tx = m.a * x + m.c * y + m.e
 //     ty = m.b * x + m.d * y + m.f
 
-function getGlobalMatrix(element, inverse, adjustGOffset) {
+function getGlobalMatrix(element, inverse, adjustGOffset, includeScrollInFixed) {
   // adjustGOffset is typically used only when grabbing an element's PARENT's global matrix, and it ignores the x/y offset of any SVG <g> elements because they behave in a special way.
   if (!element || !element.parentNode || (_doc || _setDoc(element)).documentElement === element) {
     return new Matrix2D();
   }
 
-  var zeroScales = _forceNonZeroScale(element.parentNode),
+  var zeroScales = _forceNonZeroScale(element),
       svg = _svgOwner(element),
       temps = svg ? _svgTemps : _divTemps,
       container = _placeSiblings(element, adjustGOffset),
@@ -8048,7 +8141,7 @@ function getGlobalMatrix(element, inverse, adjustGOffset) {
       b2 = temps[1].getBoundingClientRect(),
       b3 = temps[2].getBoundingClientRect(),
       parent = container.parentNode,
-      isFixed = _isFixed(element),
+      isFixed = !includeScrollInFixed && _isFixed(element),
       m = new Matrix2D((b2.left - b1.left) / 100, (b2.top - b1.top) / 100, (b3.left - b1.left) / 100, (b3.top - b1.top) / 100, b1.left + (isFixed ? 0 : _getDocScrollLeft()), b1.top + (isFixed ? 0 : _getDocScrollTop()));
 
   parent.removeChild(container);
@@ -8064,7 +8157,8 @@ function getGlobalMatrix(element, inverse, adjustGOffset) {
   }
 
   return inverse ? m.inverse() : m;
-} // export function getMatrix(element) {
+}
+ // export function getMatrix(element) {
 // 	_doc || _setDoc(element);
 // 	let m = (_win.getComputedStyle(element)[_transformProp] + "").substr(7).match(/[-.]*\d+[.e\-+]*\d*[e\-\+]*\d*/g),
 // 		is2D = m && m.length === 6;
@@ -8101,10 +8195,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subdivideSegmentNear", function() { return subdivideSegmentNear; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rawPathToString", function() { return rawPathToString; });
 /*!
- * paths 3.5.1
+ * paths 3.6.1
  * https://greensock.com
  *
- * Copyright 2008-2020, GreenSock. All rights reserved.
+ * Copyright 2008-2021, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -8142,6 +8236,9 @@ var _svgPathExp = /[achlmqstvz]|(-?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/ig,
 _round = function _round(value) {
   return Math.round(value * _roundingNum) / _roundingNum || 0;
 },
+    _roundPrecise = function _roundPrecise(value) {
+  return Math.round(value * 1e10) / 1e10 || 0;
+},
     _splitSegment = function _splitSegment(rawPath, segIndex, i, t) {
   var segment = rawPath[segIndex],
       shift = t === 1 ? 6 : subdivideSegment(segment, i, t);
@@ -8154,15 +8251,10 @@ _round = function _round(value) {
 },
     _reverseRawPath = function _reverseRawPath(rawPath, skipOuter) {
   var i = rawPath.length;
-
-  if (!skipOuter) {
-    rawPath.reverse();
-  }
+  skipOuter || rawPath.reverse();
 
   while (i--) {
-    if (!rawPath[i].reversed) {
-      reverseSegment(rawPath[i]);
-    }
+    rawPath[i].reversed || reverseSegment(rawPath[i]);
   }
 },
     _copyMetaData = function _copyMetaData(source, copy) {
@@ -8174,7 +8266,7 @@ _round = function _round(value) {
     copy.lookup = source.lookup.slice(0);
     copy.minLength = source.minLength;
     copy.resolution = source.resolution;
-  } else {
+  } else if (source.totalPoints) {
     //rawPath
     copy.totalPoints = source.totalPoints;
   }
@@ -8187,7 +8279,7 @@ _appendOrMerge = function _appendOrMerge(rawPath, segment) {
       prevSeg = rawPath[index - 1] || [],
       l = prevSeg.length;
 
-  if (segment[0] === prevSeg[l - 2] && segment[1] === prevSeg[l - 1]) {
+  if (index && segment[0] === prevSeg[l - 2] && segment[1] === prevSeg[l - 1]) {
     segment = prevSeg.concat(segment.slice(2));
     index--;
   }
@@ -8400,30 +8492,29 @@ function getRotationAtBezierT(segment, i, t) {
 }
 
 function sliceRawPath(rawPath, start, end) {
-  if (_isUndefined(end)) {
-    end = 1;
-  }
+  end = _isUndefined(end) ? 1 : _roundPrecise(end) || 0; // we must round to avoid issues like 4.15 / 8 = 0.8300000000000001 instead of 0.83 or 2.8 / 5 = 0.5599999999999999 instead of 0.56 and if someone is doing a loop like start: 2.8 / 0.5, end: 2.8 / 0.5 + 1.
 
-  start = start || 0;
-  var reverse = start > end,
-      loops = Math.max(0, ~~(_abs(end - start) - 1e-8));
+  start = _roundPrecise(start) || 0;
+  var loops = Math.max(0, ~~(_abs(end - start) - 1e-8)),
+      path = copyRawPath(rawPath);
 
-  if (reverse) {
-    reverse = end;
-    end = start;
-    start = reverse;
-    reverse = 1;
-    loops -= loops ? 1 : 0;
+  if (start > end) {
+    start = 1 - start;
+    end = 1 - end;
+
+    _reverseRawPath(path);
+
+    path.totalLength = 0;
   }
 
   if (start < 0 || end < 0) {
-    var offset = ~~Math.min(start, end) + 1;
+    var offset = Math.abs(~~Math.min(start, end)) + 1;
     start += offset;
     end += offset;
   }
 
-  var path = copyRawPath(rawPath.totalLength ? rawPath : cacheRawPathMeasurements(rawPath)),
-      wrap = end > 1,
+  path.totalLength || cacheRawPathMeasurements(path);
+  var wrap = end > 1,
       s = getProgressData(path, start, _temp, true),
       e = getProgressData(path, end, _temp2),
       eSeg = e.segment,
@@ -8434,7 +8525,7 @@ function sliceRawPath(rawPath, start, end) {
       si = s.i,
       sameSegment = sSegIndex === eSegIndex,
       sameBezier = ei === si && sameSegment,
-      invertedOrder = sameSegment && si > ei || sameBezier && s.t > e.t,
+      wrapsBehind,
       sShift,
       eShift,
       i,
@@ -8444,55 +8535,43 @@ function sliceRawPath(rawPath, start, end) {
       j;
 
   if (wrap || loops) {
+    wrapsBehind = eSegIndex < sSegIndex || sameSegment && ei < si || sameBezier && e.t < s.t;
+
     if (_splitSegment(path, sSegIndex, si, s.t)) {
-      sShift = 1;
       sSegIndex++;
 
-      if (sameBezier) {
-        if (invertedOrder) {
-          e.t /= s.t;
-        } else {
-          e.t = (e.t - s.t) / (1 - s.t);
-          eSegIndex++;
-          ei = 0;
-        }
-      } else if (sSegIndex <= eSegIndex + 1 && !invertedOrder) {
+      if (!wrapsBehind) {
         eSegIndex++;
 
-        if (sameSegment) {
+        if (sameBezier) {
+          e.t = (e.t - s.t) / (1 - s.t);
+          ei = 0;
+        } else if (sameSegment) {
           ei -= si;
         }
       }
     }
 
-    if (!e.t) {
+    if (1 - (end - start) < 1e-5) {
+      eSegIndex = sSegIndex - 1;
+    } else if (!e.t && eSegIndex) {
       eSegIndex--;
-      reverse && sSegIndex--;
-    } else if (_splitSegment(path, eSegIndex, ei, e.t)) {
-      invertedOrder && sShift && sSegIndex++;
-      reverse && eSegIndex++;
+    } else if (_splitSegment(path, eSegIndex, ei, e.t) && wrapsBehind) {
+      sSegIndex++;
+    }
+
+    if (s.t === 1) {
+      sSegIndex = (sSegIndex + 1) % path.length;
     }
 
     copy = [];
     totalSegments = path.length;
     l = 1 + totalSegments * loops;
     j = sSegIndex;
+    l += (totalSegments - sSegIndex + eSegIndex) % totalSegments;
 
-    if (reverse) {
-      eSegIndex = (eSegIndex || totalSegments) - 1;
-      l += (totalSegments - eSegIndex + sSegIndex) % totalSegments;
-
-      for (i = 0; i < l; i++) {
-        _appendOrMerge(copy, path[j]);
-
-        j = (j || totalSegments) - 1;
-      }
-    } else {
-      l += (totalSegments - sSegIndex + eSegIndex) % totalSegments;
-
-      for (i = 0; i < l; i++) {
-        _appendOrMerge(copy, path[j++ % totalSegments]);
-      }
+    for (i = 0; i < l; i++) {
+      _appendOrMerge(copy, path[j++ % totalSegments]);
     }
 
     path = copy;
@@ -8501,24 +8580,14 @@ function sliceRawPath(rawPath, start, end) {
 
     if (start !== end) {
       sShift = subdivideSegment(sSeg, si, sameBezier ? s.t / e.t : s.t);
-
-      if (sameSegment) {
-        eShift += sShift;
-      }
-
+      sameSegment && (eShift += sShift);
       eSeg.splice(ei + eShift + 2);
-
-      if (sShift || si) {
-        sSeg.splice(0, si + sShift);
-      }
-
+      (sShift || si) && sSeg.splice(0, si + sShift);
       i = path.length;
 
       while (i--) {
         //chop off any extra segments
-        if (i < sSegIndex || i > eSegIndex) {
-          path.splice(i, 1);
-        }
+        (i < sSegIndex || i > eSegIndex) && path.splice(i, 1);
       }
     } else {
       eSeg.angle = getRotationAtBezierT(eSeg, ei + eShift, 0); //record the value before we chop because it'll be impossible to determine the angle after its length is 0!
@@ -8532,7 +8601,6 @@ function sliceRawPath(rawPath, start, end) {
     }
   }
 
-  reverse && _reverseRawPath(path, wrap || loops);
   path.totalLength = 0;
   return path;
 } //measures a Segment according to its resolution (so if segment.resolution is 6, for example, it'll take 6 samples equally across each Bezier) and create/populate a "samples" Array that has the length up to each of those sample points (always increasing from the start) as well as a "lookup" array that's broken up according to the smallest distance between 2 samples. This gives us a very fast way of looking up a progress position rather than looping through all the points/Beziers. You can optionally have it only measure a subset, starting at startIndex and going for a specific number of beziers (remember, there are 3 x/y pairs each, for a total of 6 elements for each Bezier). It will also populate a "totalLength" property, but that's not generally super accurate because by default it'll only take 6 samples per Bezier. But for performance reasons, it's perfectly adequate for measuring progress values along the path. If you need a more accurate totalLength, either increase the resolution or use the more advanced bezierToPoints() method which keeps adding points until they don't deviate by more than a certain precision value.
@@ -8701,43 +8769,53 @@ function getProgressData(rawPath, progress, decoratee, pushToNextIfAtEnd) {
       i,
       t;
 
-  if (rawPath.length > 1) {
-    //speed optimization: most of the time, there's only one segment so skip the recursion.
-    length = rawPath.totalLength * progress;
-    max = i = 0;
+  if (!progress) {
+    t = i = segIndex = 0;
+    segment = rawPath[0];
+  } else if (progress === 1) {
+    t = 1;
+    segIndex = rawPath.length - 1;
+    segment = rawPath[segIndex];
+    i = segment.length - 8;
+  } else {
+    if (rawPath.length > 1) {
+      //speed optimization: most of the time, there's only one segment so skip the recursion.
+      length = rawPath.totalLength * progress;
+      max = i = 0;
 
-    while ((max += rawPath[i++].totalLength) < length) {
-      segIndex = i;
+      while ((max += rawPath[i++].totalLength) < length) {
+        segIndex = i;
+      }
+
+      segment = rawPath[segIndex];
+      min = max - segment.totalLength;
+      progress = (length - min) / (max - min) || 0;
     }
 
-    segment = rawPath[segIndex];
-    min = max - segment.totalLength;
-    progress = (length - min) / (max - min) || 0;
-  }
+    samples = segment.samples;
+    resolution = segment.resolution; //how many samples per cubic bezier chunk
 
-  samples = segment.samples;
-  resolution = segment.resolution; //how many samples per cubic bezier chunk
+    length = segment.totalLength * progress;
+    i = segment.lookup[~~(length / segment.minLength)] || 0;
+    min = i ? samples[i - 1] : 0;
+    max = samples[i];
 
-  length = segment.totalLength * progress;
-  i = segment.lookup[~~(length / segment.minLength)] || 0;
-  min = i ? samples[i - 1] : 0;
-  max = samples[i];
+    if (max < length) {
+      min = max;
+      max = samples[++i];
+    }
 
-  if (max < length) {
-    min = max;
-    max = samples[++i];
-  }
+    t = 1 / resolution * ((length - min) / (max - min) + i % resolution);
+    i = ~~(i / resolution) * 6;
 
-  t = 1 / resolution * ((length - min) / (max - min) + i % resolution);
-  i = ~~(i / resolution) * 6;
-
-  if (pushToNextIfAtEnd && t === 1) {
-    if (i + 6 < segment.length) {
-      i += 6;
-      t = 0;
-    } else if (segIndex + 1 < rawPath.length) {
-      i = t = 0;
-      segment = rawPath[++segIndex];
+    if (pushToNextIfAtEnd && t === 1) {
+      if (i + 6 < segment.length) {
+        i += 6;
+        t = 0;
+      } else if (segIndex + 1 < rawPath.length) {
+        i = t = 0;
+        segment = rawPath[++segIndex];
+      }
     }
   }
 
@@ -8782,7 +8860,7 @@ function getPositionOnPath(rawPath, progress, includeAngle, point) {
   samples = segment.samples;
   resolution = segment.resolution;
   length = segment.totalLength * progress;
-  i = segment.lookup[~~(length / segment.minLength)] || 0;
+  i = segment.lookup[progress < 1 ? ~~(length / segment.minLength) : segment.lookup.length - 1] || 0;
   min = i ? samples[i - 1] : 0;
   max = samples[i];
 
@@ -9194,6 +9272,8 @@ function flatPointsToSegment(points, curviness) {
 
 function pointsToSegment(points, curviness, cornerThreshold) {
   //points = simplifyPoints(points, tolerance);
+  _abs(points[0] - points[2]) < 1e-4 && _abs(points[1] - points[3]) < 1e-4 && (points = points.slice(2)); // if the first two points are super close, dump the first one.
+
   var l = points.length - 2,
       x = +points[0],
       y = +points[1],
@@ -9242,6 +9322,11 @@ function pointsToSegment(points, curviness, cornerThreshold) {
     y = nextY;
     nextX = +points[i + 2];
     nextY = +points[i + 3];
+
+    if (x === nextX && y === nextY) {
+      continue;
+    }
+
     dx1 = dx2;
     dy1 = dy2;
     dx2 = nextX - x;
@@ -9278,7 +9363,7 @@ function pointsToSegment(points, curviness, cornerThreshold) {
     }
   }
 
-  segment.push(_round(nextX), _round(nextY), _round(nextX), _round(nextY));
+  x !== nextX || y !== nextY || segment.length < 4 ? segment.push(_round(nextX), _round(nextY), _round(nextX), _round(nextY)) : segment.length -= 2;
 
   if (closed) {
     segment.splice(0, 6);
@@ -9328,15 +9413,9 @@ function simplifyStep(points, first, last, tolerance, simplified) {
   }
 
   if (maxSqDist > tolerance) {
-    if (index - first > 2) {
-      simplifyStep(points, first, index, tolerance, simplified);
-    }
-
+    index - first > 2 && simplifyStep(points, first, index, tolerance, simplified);
     simplified.push(points[index], points[index + 1]);
-
-    if (last - index > 2) {
-      simplifyStep(points, index, last, tolerance, simplified);
-    }
+    last - index > 2 && simplifyStep(points, index, last, tolerance, simplified);
   }
 } //points is an array of x/y values like [x, y, x, y, x, y]
 
@@ -12245,6 +12324,512 @@ var _default$3 = /*#__PURE__*/function () {
 /* harmony default export */ __webpack_exports__["default"] = (_default$3);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/splitting/dist/splitting.js":
+/*!**************************************************!*\
+  !*** ./node_modules/splitting/dist/splitting.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (global, factory) {
+	 true ? module.exports = factory() :
+	undefined;
+}(this, (function () { 'use strict';
+
+var root = document;
+var createText = root.createTextNode.bind(root);
+
+/**
+ * # setProperty
+ * Apply a CSS var
+ * @param el{HTMLElement} 
+ * @param varName {string} 
+ * @param value {string|number}  
+ */
+function setProperty(el, varName, value) {
+    el.style.setProperty(varName, value);
+} 
+
+/**
+ * 
+ * @param {Node} el 
+ * @param {Node} child 
+ */
+function appendChild(el, child) {
+  return el.appendChild(child);
+}
+
+function createElement(parent, key, text, whitespace) {
+  var el = root.createElement('span');
+  key && (el.className = key); 
+  if (text) { 
+      !whitespace && el.setAttribute("data-" + key, text);
+      el.textContent = text; 
+  }
+  return (parent && appendChild(parent, el)) || el;
+}
+
+function getData(el, key) {
+  return el.getAttribute("data-" + key)
+}
+
+/**
+ * 
+ * @param e {import('../types').Target} 
+ * @param parent {HTMLElement}
+ * @returns {HTMLElement[]}
+ */
+function $(e, parent) {
+    return !e || e.length == 0
+        ? // null or empty string returns empty array
+          []
+        : e.nodeName
+            ? // a single element is wrapped in an array
+              [e]
+            : // selector and NodeList are converted to Element[]
+              [].slice.call(e[0].nodeName ? e : (parent || root).querySelectorAll(e));
+}
+
+/**
+ * Creates and fills an array with the value provided
+ * @template {T}
+ * @param {number} len
+ * @param {() => T} valueProvider
+ * @return {T}
+ */
+function Array2D(len) {
+    var a = [];
+    for (; len--; ) {
+        a[len] = [];
+    }
+    return a;
+}
+
+function each(items, fn) {
+    items && items.some(fn);
+}
+
+function selectFrom(obj) {
+    return function (key) {
+        return obj[key];
+    }
+}
+
+/**
+ * # Splitting.index
+ * Index split elements and add them to a Splitting instance.
+ *
+ * @param element {HTMLElement}
+ * @param key {string}
+ * @param items {HTMLElement[] | HTMLElement[][]}
+ */
+function index(element, key, items) {
+    var prefix = '--' + key;
+    var cssVar = prefix + "-index";
+
+    each(items, function (items, i) {
+        if (Array.isArray(items)) {
+            each(items, function(item) {
+                setProperty(item, cssVar, i);
+            });
+        } else {
+            setProperty(items, cssVar, i);
+        }
+    });
+
+    setProperty(element, prefix + "-total", items.length);
+}
+
+/**
+ * @type {Record<string, import('./types').ISplittingPlugin>}
+ */
+var plugins = {};
+
+/**
+ * @param by {string}
+ * @param parent {string}
+ * @param deps {string[]}
+ * @return {string[]}
+ */
+function resolvePlugins(by, parent, deps) {
+    // skip if already visited this dependency
+    var index = deps.indexOf(by);
+    if (index == -1) {
+        // if new to dependency array, add to the beginning
+        deps.unshift(by);
+
+        // recursively call this function for all dependencies
+        each(plugins[by].depends, function(p) {
+            resolvePlugins(p, by, deps);
+        });
+    } else {
+        // if this dependency was added already move to the left of
+        // the parent dependency so it gets loaded in order
+        var indexOfParent = deps.indexOf(parent);
+        deps.splice(index, 1);
+        deps.splice(indexOfParent, 0, by);
+    }
+    return deps;
+}
+
+/**
+ * Internal utility for creating plugins... essentially to reduce
+ * the size of the library
+ * @param {string} by 
+ * @param {string} key 
+ * @param {string[]} depends 
+ * @param {Function} split 
+ * @returns {import('./types').ISplittingPlugin}
+ */
+function createPlugin(by, depends, key, split) {
+    return {
+        by: by,
+        depends: depends,
+        key: key,
+        split: split
+    }
+}
+
+/**
+ *
+ * @param by {string}
+ * @returns {import('./types').ISplittingPlugin[]}
+ */
+function resolve(by) {
+    return resolvePlugins(by, 0, []).map(selectFrom(plugins));
+}
+
+/**
+ * Adds a new plugin to splitting
+ * @param opts {import('./types').ISplittingPlugin}
+ */
+function add(opts) {
+    plugins[opts.by] = opts;
+}
+
+/**
+ * # Splitting.split
+ * Split an element's textContent into individual elements
+ * @param el {Node} Element to split
+ * @param key {string}
+ * @param splitOn {string}
+ * @param includeSpace {boolean}
+ * @returns {HTMLElement[]}
+ */
+function splitText(el, key, splitOn, includePrevious, preserveWhitespace) {
+    // Combine any strange text nodes or empty whitespace.
+    el.normalize();
+
+    // Use fragment to prevent unnecessary DOM thrashing.
+    var elements = [];
+    var F = document.createDocumentFragment();
+
+    if (includePrevious) {
+        elements.push(el.previousSibling);
+    }
+
+    var allElements = [];
+    $(el.childNodes).some(function(next) {
+        if (next.tagName && !next.hasChildNodes()) {
+            // keep elements without child nodes (no text and no children)
+            allElements.push(next);
+            return;
+        }
+        // Recursively run through child nodes
+        if (next.childNodes && next.childNodes.length) {
+            allElements.push(next);
+            elements.push.apply(elements, splitText(next, key, splitOn, includePrevious, preserveWhitespace));
+            return;
+        }
+
+        // Get the text to split, trimming out the whitespace
+        /** @type {string} */
+        var wholeText = next.wholeText || '';
+        var contents = wholeText.trim();
+
+        // If there's no text left after trimming whitespace, continue the loop
+        if (contents.length) {
+            // insert leading space if there was one
+            if (wholeText[0] === ' ') {
+                allElements.push(createText(' '));
+            }
+            // Concatenate the split text children back into the full array
+            each(contents.split(splitOn), function(splitText, i) {
+                if (i && preserveWhitespace) {
+                    allElements.push(createElement(F, "whitespace", " ", preserveWhitespace));
+                }
+                var splitEl = createElement(F, key, splitText);
+                elements.push(splitEl);
+                allElements.push(splitEl);
+            }); 
+            // insert trailing space if there was one
+            if (wholeText[wholeText.length - 1] === ' ') {
+                allElements.push(createText(' '));
+            }
+        }
+    });
+
+    each(allElements, function(el) {
+        appendChild(F, el);
+    });
+
+    // Clear out the existing element
+    el.innerHTML = "";
+    appendChild(el, F);
+    return elements;
+}
+
+/** an empty value */
+var _ = 0;
+
+function copy(dest, src) {
+    for (var k in src) {
+        dest[k] = src[k];
+    }
+    return dest;
+}
+
+var WORDS = 'words';
+
+var wordPlugin = createPlugin(
+    /*by: */ WORDS,
+    /*depends: */ _,
+    /*key: */ 'word', 
+    /*split: */ function(el) {
+        return splitText(el, 'word', /\s+/, 0, 1)
+    }
+);
+
+var CHARS = "chars";
+
+var charPlugin = createPlugin(
+    /*by: */ CHARS,
+    /*depends: */ [WORDS],
+    /*key: */ "char", 
+    /*split: */ function(el, options, ctx) {
+        var results = [];
+
+        each(ctx[WORDS], function(word, i) {
+            results.push.apply(results, splitText(word, "char", "", options.whitespace && i));
+        });
+
+        return results;
+    }
+);
+
+/**
+ * # Splitting
+ * 
+ * @param opts {import('./types').ISplittingOptions} 
+ */
+function Splitting (opts) {
+  opts = opts || {};
+  var key = opts.key;
+
+  return $(opts.target || '[data-splitting]').map(function(el) {
+    var ctx = el['🍌'];  
+    if (!opts.force && ctx) {
+      return ctx;
+    }
+
+    ctx = el['🍌'] = { el: el };
+    var items = resolve(opts.by || getData(el, 'splitting') || CHARS);
+    var opts2 = copy({}, opts);
+    each(items, function(plugin) {
+      if (plugin.split) {
+        var pluginBy = plugin.by;
+        var key2 = (key ? '-' + key : '') + plugin.key;
+        var results = plugin.split(el, opts2, ctx);
+        key2 && index(el, key2, results);
+        ctx[pluginBy] = results;
+        el.classList.add(pluginBy);
+      } 
+    });
+
+    el.classList.add('splitting');
+    return ctx;
+  })
+}
+
+/**
+ * # Splitting.html
+ * 
+ * @param opts {import('./types').ISplittingOptions}
+ */
+function html(opts) {
+  opts = opts || {};
+  var parent = opts.target =  createElement();
+  parent.innerHTML = opts.content;
+  Splitting(opts);
+  return parent.outerHTML
+}
+
+Splitting.html = html;
+Splitting.add = add;
+
+function detectGrid(el, options, side) {
+    var items = $(options.matching || el.children, el);
+    var c = {};
+
+    each(items, function(w) {
+        var val = Math.round(w[side]);
+        (c[val] || (c[val] = [])).push(w);
+    });
+
+    return Object.keys(c).map(Number).sort(byNumber).map(selectFrom(c));
+}
+
+function byNumber(a, b) {
+    return a - b;
+}
+
+var linePlugin = createPlugin(
+    /*by: */ 'lines',
+    /*depends: */ [WORDS],
+    /*key: */ 'line',
+    /*split: */ function(el, options, ctx) {
+      return detectGrid(el, { matching: ctx[WORDS] }, 'offsetTop')
+    }
+);
+
+var itemPlugin = createPlugin(
+    /*by: */ 'items',
+    /*depends: */ _,
+    /*key: */ 'item', 
+    /*split: */ function(el, options) {
+        return $(options.matching || el.children, el)
+    }
+);
+
+var rowPlugin = createPlugin(
+    /*by: */ 'rows',
+    /*depends: */ _,
+    /*key: */ 'row', 
+    /*split: */ function(el, options) {
+        return detectGrid(el, options, "offsetTop");
+    }
+);
+
+var columnPlugin = createPlugin(
+    /*by: */ 'cols',
+    /*depends: */ _,
+    /*key: */ "col", 
+    /*split: */ function(el, options) {
+        return detectGrid(el, options, "offsetLeft");
+    }
+);
+
+var gridPlugin = createPlugin(
+    /*by: */ 'grid',
+    /*depends: */ ['rows', 'cols']
+);
+
+var LAYOUT = "layout";
+
+var layoutPlugin = createPlugin(
+    /*by: */ LAYOUT,
+    /*depends: */ _,
+    /*key: */ _,
+    /*split: */ function(el, opts) {
+        // detect and set options
+        var rows =  opts.rows = +(opts.rows || getData(el, 'rows') || 1);
+        var columns = opts.columns = +(opts.columns || getData(el, 'columns') || 1);
+
+        // Seek out the first <img> if the value is true 
+        opts.image = opts.image || getData(el, 'image') || el.currentSrc || el.src;
+        if (opts.image) {
+            var img = $("img", el)[0];
+            opts.image = img && (img.currentSrc || img.src);
+        }
+
+        // add optional image to background
+        if (opts.image) {
+            setProperty(el, "background-image", "url(" + opts.image + ")");
+        }
+
+        var totalCells = rows * columns;
+        var elements = [];
+
+        var container = createElement(_, "cell-grid");
+        while (totalCells--) {
+            // Create a span
+            var cell = createElement(container, "cell");
+            createElement(cell, "cell-inner");
+            elements.push(cell);
+        }
+
+        // Append elements back into the parent
+        appendChild(el, container);
+
+        return elements;
+    }
+);
+
+var cellRowPlugin = createPlugin(
+    /*by: */ "cellRows",
+    /*depends: */ [LAYOUT],
+    /*key: */ "row",
+    /*split: */ function(el, opts, ctx) {
+        var rowCount = opts.rows;
+        var result = Array2D(rowCount);
+
+        each(ctx[LAYOUT], function(cell, i, src) {
+            result[Math.floor(i / (src.length / rowCount))].push(cell);
+        });
+
+        return result;
+    }
+);
+
+var cellColumnPlugin = createPlugin(
+    /*by: */ "cellColumns",
+    /*depends: */ [LAYOUT],
+    /*key: */ "col",
+    /*split: */ function(el, opts, ctx) {
+        var columnCount = opts.columns;
+        var result = Array2D(columnCount);
+
+        each(ctx[LAYOUT], function(cell, i) {
+            result[i % columnCount].push(cell);
+        });
+
+        return result;
+    }
+);
+
+var cellPlugin = createPlugin(
+    /*by: */ "cells",
+    /*depends: */ ['cellRows', 'cellColumns'],
+    /*key: */ "cell", 
+    /*split: */ function(el, opt, ctx) { 
+        // re-index the layout as the cells
+        return ctx[LAYOUT];
+    }
+);
+
+// install plugins
+// word/char plugins
+add(wordPlugin);
+add(charPlugin);
+add(linePlugin);
+// grid plugins
+add(itemPlugin);
+add(rowPlugin);
+add(columnPlugin);
+add(gridPlugin);
+// cell-layout plugins
+add(layoutPlugin);
+add(cellRowPlugin);
+add(cellColumnPlugin);
+add(cellPlugin);
+
+return Splitting;
+
+})));
+
 
 /***/ }),
 
@@ -22778,11 +23363,80 @@ var animateIn = function animateIn(el) {
 
 /***/ }),
 
+/***/ "./resources/js/animations/campaignSection.js":
+/*!****************************************************!*\
+  !*** ./resources/js/animations/campaignSection.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var splitting__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! splitting */ "./node_modules/splitting/dist/splitting.js");
+/* harmony import */ var splitting__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(splitting__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var campaignSection = function campaignSection(el) {
+  var title = el.querySelector('.title');
+  var bottomLine = el.querySelector('.bottom-line');
+  var tagline = el.querySelector('.tagline');
+  var results = splitting__WEBPACK_IMPORTED_MODULE_1___default()({
+    target: tagline,
+    by: 'words'
+  }); // console.log(results);
+
+  var tl = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    defaults: {
+      duration: 1
+    }
+  });
+  el.classList.add('overflow-hidden');
+
+  if (!el.classList.contains('seen')) {
+    var words = Array.from(tagline.querySelectorAll('.word'));
+    words.forEach(function (item) {
+      var parent = item.parentElement; // get text
+
+      var text = item.innerText; //  Remove text;
+
+      item.innerText = ''; // create span
+
+      var span = document.createElement('span');
+      span.innerText = text; // add text to span
+
+      span.classList.add('inline-block', 'inner');
+      item.classList.add('overflow-hidden', 'inline-block');
+      item.append(span);
+    });
+    var items = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray(el.querySelectorAll('.word .inner'));
+    tl.from(title, {
+      y: '-100px',
+      duration: 2
+    }).from(items, {
+      y: '100%',
+      duration: .8,
+      stagger: 0.2,
+      ease: 'Power4.inOut'
+    }, 0).from(bottomLine, {
+      width: 0,
+      ease: "steps(20)",
+      duration: 3
+    }, 0);
+    el.classList.add('seen');
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (campaignSection);
+
+/***/ }),
+
 /***/ "./resources/js/animations/index.js":
 /*!******************************************!*\
   !*** ./resources/js/animations/index.js ***!
   \******************************************/
-/*! exports provided: animateIn, wipe */
+/*! exports provided: animateIn, wipe, campaignSection */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22792,6 +23446,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _wipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wipe */ "./resources/js/animations/wipe.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wipe", function() { return _wipe__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _campaignSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./campaignSection */ "./resources/js/animations/campaignSection.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "campaignSection", function() { return _campaignSection__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
 
 
 
@@ -23193,6 +23851,7 @@ locomotiveScroll.on('call', function (value, way, obj) {
   // do something
   if (value === "wipe") Object(_animations__WEBPACK_IMPORTED_MODULE_5__["wipe"])(way, obj);
   if (value === "fancy") Object(_animations__WEBPACK_IMPORTED_MODULE_5__["animateIn"])(obj.el);
+  if (value === "campaign-section") Object(_animations__WEBPACK_IMPORTED_MODULE_5__["campaignSection"])(obj.el);
 }); // init Swiper:
 
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](_helpers__WEBPACK_IMPORTED_MODULE_3__["swipe"].container, {

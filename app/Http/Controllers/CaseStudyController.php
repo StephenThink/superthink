@@ -19,7 +19,10 @@ class CaseStudyController extends Controller
         return (new \Statamic\View\View)
             ->template('case_studies.all')
             ->layout('layout')
-            ->with(['data' => $byService]);
+            ->with([
+                'title' => \Illuminate\Support\Str::title($service),
+                'data' => $byService
+            ]);
 
     }
 }

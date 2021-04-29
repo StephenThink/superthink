@@ -54,6 +54,12 @@
 .font-medium { font-family: geo-medium ; } */
 
 
+/*  Splitting CSS */
+
+.word {
+    display: inline-block;
+}
+
 @responsive {
     .bg-gradient-yellow-to-dark {
         background: rgb(255,199,52);
@@ -724,19 +730,48 @@ input#store:checked ~ .toggle-dot {
         }
     }
     &.image {
-        & span {
+        .backdrop {
+            transition: all .5s ease-in-out;
+            z-index: 5;
+        }
+        img {
+            transition: transform .5s ease-in-out;
+        }
+        .container {
+            transition: transform .9s ease-in-out 0s, opacity .5s ease-out 0s;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        &:hover {
+            img {
+                transition: transform .5s ease-in-out;
+                transform: scale(1.05) rotate(2deg);
+            }
+            .backdrop {
+                opacity: 0.45;
+                transition: all .5s ease-in-out;
+            }
+            .container {
+                transition: transform .9s ease-in-out 0s, opacity .5s ease-out 0s;
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        /* & span {
             z-index: 1;
             &:before {
                 background-color: theme('colors.yellow');
                 opacity: 0.2;
 
-                /* transition: 0.7s ease-out; */
+                
                 z-index: 5;
             }
+            &
             &:hover:before {
                 transition: 0.7s ease-out;
                 clip-path: circle(150% at left center);
             }
-        }
+        } */
     }
 }

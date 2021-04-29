@@ -29,6 +29,7 @@
         "in-view": "^0.6.1",
         "locomotive-scroll": "^3.6.1",
         "postcss": "^7.0.35",
+        "splitting": "^1.0.6",
         "swiper": "^6.3.5",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
         "toastify-js": "^1.9.3",
