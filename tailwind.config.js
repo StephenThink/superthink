@@ -42,6 +42,12 @@ module.exports = {
       margin: {
         
       },
+      height: {
+        "half-screen" : '50vh'
+      },
+      width : {
+        "half-screen" : '50vw'
+      },
       spacing: {
         "1px" : "1px",
         "screen": "100vw",
@@ -129,6 +135,12 @@ module.exports = {
       zIndex: {
         '1': '1',
         '5': '5',
+        '101' : '101',
+        '102' : '102',
+        '103' : '103',
+        '104' : '104',
+        '105' : '105',
+        
       },
       colors: {
         yellow: "#FFC734",
