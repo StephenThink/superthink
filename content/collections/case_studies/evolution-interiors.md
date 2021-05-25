@@ -1,10 +1,11 @@
 ---
+id: 7343fe2a-8daf-4af0-9454-149c8d0abdf0
 title: 'Evolution Interiors'
 greatest_hits: false
 core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614780519
+updated_at: 1621500325
 hero_image: work/evolution-interiors/Evolution-portfolio-3-scaled.jpg
 secondary_image: work/evolution-interiors/Evolution-portfolio-4-scaled.jpg
 main_content:
@@ -34,9 +35,8 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - banding
   - design
   - display
   - print
-id: 7343fe2a-8daf-4af0-9454-149c8d0abdf0
+  - branding
 ---

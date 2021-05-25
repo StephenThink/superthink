@@ -10,6 +10,3 @@ sort_dir: asc
 structure:
   root: false
   max_depth: 1
-  tree:
-    -
-      entry: 53966610-757c-40bb-92fd-b0f77a3706e6
