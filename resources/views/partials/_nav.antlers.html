@@ -6,11 +6,12 @@
         <ul class="main-nav text-yellow ">
             {{ nav:main_navigation }}
                 
-                <li class="py-2 md:py-0 {{ if is_current }} current {{ /if }}">
-                    <a href="{{ url }}" class=" transition duration-500 ease-in-out ">
+                <li  class="py-2 md:py-0 {{ if is_current }} current {{ /if }}">
+                    <a href="{{ url }}" class=" transition duration-500 ease-in-out " data-trigger="main-nav">
                         {{ title }}
                     </a>
                 </li>
+
             {{ /nav:main_navigation }}
         </ul>
 

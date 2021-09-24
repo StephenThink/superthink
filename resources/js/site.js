@@ -1,27 +1,13 @@
 // This is all you.
-import LocomotiveScroll from 'locomotive-scroll';
 
-import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
-// configure Swiper to use modules
-Swiper.use([Navigation, Pagination, EffectFade]);
+import './pageTransitions.js'
+import { page } from './default'
 
-import 'swiper/swiper-bundle.css';
+page()
 
-// not being used 
-// import inView from 'in-view/src/in-view.js';
-// import barba from '@barba/core';
-// import gsap from 'gsap';
-
-// unused
-// import './bootstrap.js';
-
-import { scroll, swipe, SharingIsCaring } from './helpers';
 // components
 import { animateTheBurger } from './components';
-// Animations
-import { wipe, animateIn, campaignSection } from './animations';
-// caseStudies
-import { findTheActiveOne, moveSlide } from './caseStudies';
+
 // messages
 // import message from './components/message';
 
@@ -29,52 +15,28 @@ let burger = document.querySelectorAll('.burger')[0];
 burger.addEventListener('click', animateTheBurger, false);
 
 
-findTheActiveOne('.filter-section');
+// Animations
+// import { wipe, animateIn, campaignSection, helpSection } from './animations';
 
-var contentSlides =  document.querySelectorAll('.content-slider');
+// import LocomotiveScroll from 'locomotive-scroll';
+// import { scroll, swipe, SharingIsCaring } from './helpers';
 
-if( contentSlides.length > 0 ){
-    contentSlides.forEach( el => {
-        el.addEventListener('click', moveSlide);
-    });
-}
+// const locomotiveScroll = new LocomotiveScroll({
+//     el: document.querySelector(scroll.container),
+//     ...scroll.options,
+// })
 
-
-const locomotiveScroll = new LocomotiveScroll({
-    el: document.querySelector(scroll.container),
-    ...scroll.options,
-})
-
-locomotiveScroll.on('call', (value, way, obj) => {
+// locomotiveScroll.on('call', (value, way, obj) => {
     
-    // do something
-    if (value === "wipe") wipe(way, obj);
-    if (value === "fancy") animateIn(obj.el);
-    if (value === "campaign-section") campaignSection(obj.el)
+//     // do something
+//     if (value === "wipe") wipe(way, obj);
+//     if (value === "fancy") animateIn(obj.el);
+//     if (value === "campaign-section") campaignSection(obj.el)
+//     if (value === "help-section") helpSection(obj.el)
 
-});
+// });
 
-// init Swiper:
-const swiper = new Swiper(swipe.container, {
-    spaceBetween: 30,
-    effect: 'fade',
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.custom-button-next',
-        prevEl: '.custom-button-prev',
-    },
-});
 
-let fileInput = document.querySelector(".upload-cv input");
-
-if( fileInput ) {
-    document.querySelector(".upload-cv input").onchange = function(e) {
-        document.querySelector('.custom-filename').innerHTML = this.value.split(/(\\|\/)/g).pop();   
-    };
-}
 
 //   enable hover effects on touch screens! 
 document.addEventListener("touchstart", function() {}, true);
@@ -118,8 +80,6 @@ window.matchMedia('(prefers-color-scheme: dark)')
         }
 })
 
-
-
 // Dark mode initial
 if (localStorage['thinkcreative.theme'] === 'dark' || (!('thinkcreative.theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     html.classList.add('dark');
@@ -161,4 +121,3 @@ if (localStorage['thinkcreative.theme'] === 'dark' || (!('thinkcreative.theme' i
 //         }
 //       }]
 // });
-

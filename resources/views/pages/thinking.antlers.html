@@ -1,32 +1,33 @@
-{{ partial:partials/hero classes="text-dark bg-light dark:bg-dark dark:text-light" display="{{hero_text}}" show_playreel="0" }}
+<div class="" data-barba-namespace="blog-item">
+    {{ partial:partials/hero classes="text-dark bg-light dark:bg-dark dark:text-light" display="{{hero_text}}" show_playreel="0" }}
 
-{{ collection:blog limit="1" as="single" sort="date:desc"}}
-    {{ single }}
-        {{ partial:partials/negative_image }}
-    {{ /single }}
-{{ /collection:blog }}
+    {{ collection:blog limit="1" as="single" sort="date:desc"}}
+        {{ single }}
+            {{ partial:partials/negative_image }}
+        {{ /single }}
+    {{ /collection:blog }}
 
-<section class="main__panel bg-light dark:bg-dark">
-    <div class="container">
-        <div class="flex flex-wrap -mx-4">
+    <section class="main__panel bg-light dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap -mx-4">
 
-            {{ collection:blog limit="8" paginate="true" as="posts" sort="date:desc"}}
+                {{ collection:blog limit="8" paginate="true" as="posts" sort="date:desc"}}
 
-                {{ if no_results }}
-                    <p>Damn, we havn't written anything yet. Check back soon.</p>
-                {{ /if }} 
+                    {{ if no_results }}
+                        <p>Damn, we havn't written anything yet. Check back soon.</p>
+                    {{ /if }} 
 
 
-                {{ posts }}
-                    {{ partial:partials.blog_listing width="md:w-1/4 p-4" }}
-                {{ /posts }}
+                    {{ posts }}
+                        {{ partial:partials.blog_listing width="md:w-1/4 p-4" }}
+                    {{ /posts }}
 
-                {{ partial:partials.tailwind-pagination }}
-                
-            {{ /collection:blog }}
+                    {{ partial:partials.tailwind-pagination }}
+                    
+                {{ /collection:blog }}
+            </div>
+
         </div>
-
-    </div>
-</section>
-
+    </section>
+</div>
 

@@ -6,16 +6,33 @@ module.exports = {
       './resources/views/*.html',   
     ],
     options: {
-      safelist: [
-        'think-toast', 
-        'think-loser-toast',
-        'toastify-width',
-        'overflow-visible',
-        'page-content',
-        'toggle-dot',
-        'threed-animation',
-        'swiper-button-disabled',
-      ]
+      safelist: {
+        standard : [
+          'think-toast', 
+          'think-loser-toast',
+          'toastify-width',
+          'overflow-visible',
+          'page-content',
+          'toggle-dot',
+          'threed-animation',
+          'swiper-button-disabled',
+          'bg-yellow',
+          'bg-darker',
+          'bg-dark',
+          'bg-header-dark',
+          'bg-mid-grey',
+          'bg-grey',
+          'bg-light-grey',
+          'burger',
+          'open', 'patty', 'handle', 'buns',
+          /^bg/,
+          /^handle/,
+          /patty$/,
+          /buns$/
+        ],
+        deep: [/open$/, /^handle/, /patty$/],
+        greedy: [/open$/, /patty$/]
+      }
     }
   },
   darkMode: 'class',
@@ -49,6 +66,7 @@ module.exports = {
         "half-screen" : '50vw'
       },
       spacing: {
+
         "1px" : "1px",
         "screen": "100vw",
         handle: "5rem",
@@ -84,6 +102,8 @@ module.exports = {
         '11/12': '91.666667%',
         full: '100%',
         screen: '100vw',
+        'screen-plus-20': 'calc( 100vw + 20%)',
+        "10%": "10%"
       },
       fontFamily: {
         black: ['geo-black'],
@@ -168,6 +188,12 @@ module.exports = {
       // }
       inset: {
         '1/2': '50%'
+      },
+      borderRadius: {
+        '50': '50%'
+      },
+      scale: {
+        '200': '2'
       }
     },
   },

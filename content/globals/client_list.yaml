@@ -3,7 +3,7 @@ data:
   clients:
     -
       client_logo: client-list/BAE.svg
-      client_name: 'BEA Systems'
+      client_name: 'BAE Systems'
       type: client
       enabled: true
     -

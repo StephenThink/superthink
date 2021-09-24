@@ -1,5 +1,5 @@
-import gsap from 'gsap';
-import Splitting from 'splitting';
+import gsap from 'gsap'
+import bouncingWords from './bouncingWords'
 
 const campaignSection = (el) => {
 
@@ -7,9 +7,7 @@ const campaignSection = (el) => {
     let bottomLine  = el.querySelector('.bottom-line');
     let tagline     = el.querySelector('.tagline');
 
-    const results   = Splitting({ target: tagline, by: 'words' });
-
-    // console.log(results);
+    let items = bouncingWords(el, tagline);
 
     let tl = gsap.timeline({
         defaults: { 
@@ -20,33 +18,7 @@ const campaignSection = (el) => {
     el.classList.add('overflow-hidden')
 
     if( !el.classList.contains('seen') ) {
-        
-        let words = Array.from(tagline.querySelectorAll('.word'));
-
-        words.forEach( ( item ) => { 
-            let parent = item.parentElement;
-            
-            // get text
-            let text = item.innerText;
-            //  Remove text;
-            item.innerText = '';
-
-            // create span
-            let span = document.createElement('span');
-
-            span.innerText = text;
-            // add text to span
-
-            span.classList.add('inline-block', 'inner');
-            item.classList.add('overflow-hidden', 'inline-block');
-
-            item.append(span);            
-
-        })
-
-        let items = gsap.utils.toArray(el.querySelectorAll('.word .inner') );
-
-                
+           
         tl
         .from(title, {
             y: '-100px',
@@ -63,9 +35,8 @@ const campaignSection = (el) => {
             ease: "steps(20)",
             duration: 3
         }, 0)
-        
-        
-    
+
+
         el.classList.add('seen');
     }
 

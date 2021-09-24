@@ -46,10 +46,15 @@
             {{ /data }}
 
             {{ if you_us == 'you'}}
-                <div class="w-full md:w-2/3 py-16">
-                    <h3 class="text-grey text-lg">Help! I already know what I need</h3>
+                <div class="w-full md:w-2/3 py-16 help-section" data-scroll data-scroll-call="help-section">
+                    <h3 class="text-grey text-lg flex items-center">
+                        <span class="help inline-block">Help!</span> 
+                        <span class="overflow-hidden ">
+                            <span class="after-help inline-block ml-2">I already know what I need</span>
+                        </span>
+                    </h3>
                     <div class="mt-6 font-black text-5xl">
-                        <p>That’s cool. Check out all our services below...</p>
+                        <p class="tagline">That’s cool. Check out all our services below...</p>
                     </div>
                 </div>
             {{ /if }}

@@ -1,12 +1,12 @@
-<div class="bg-light dark:bg-dark">
+<div class="negative-image bg-light dark:bg-dark">
     <div class="container-none md:container flex flex-col">
         <div class="pb-1/2 relative mt-0 md:-mt-48">
             {{ main_image }}
-                <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full object-cover absolute" loading=lazy>
+                <img src="{{ url }}" alt="{{ alt }}" class="origin-center h-full w-full object-cover absolute" loading=lazy>
             {{ /main_image }}
         </div>
         {{ if last_segment != slug }} 
-            <a href="{{ url }} " class="self-end mt-0 mr-0 md:-mr-8 md:-mt-20 md:w-5/12 threed-animation">
+            <a href="{{ url }} " class="negative-image-link inline-block self-end mt-0 mr-0 md:-mr-8 md:-mt-20 md:w-5/12 threed-animation">
                 <div class="relative font-black text-xl w-full bg-yellow p-8 threed-inner half-height-colour">
                     <div class="flex items-center">
                         <span class="">
