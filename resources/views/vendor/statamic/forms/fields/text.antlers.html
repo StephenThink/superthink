@@ -1,0 +1,9 @@
+<input 
+    class="w-full appearance-none outline-none bg-transparent border-b border-dark placeholder-transparent pb-2 flex-1 dark:border-light "
+    type="{{ input_type ?? 'text' }}" 
+    name="{{ handle }}" 
+    required
+    {{ if placeholder }}placeholder="{{ placeholder }}"{{ /if }}
+    {{ if old }}value="{{ old }}"{{ /if }}
+>
+

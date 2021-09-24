@@ -1,0 +1,49 @@
+
+{{ partial:partials/hero classes="text-yellow bg-header-dark" jobrole="{{ role }}" show_playreel="0" }}
+
+<section class="main__panel bg-light dark:bg-dark">
+    <div class="container">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-3/12"></div>
+
+            <div class="w-6/12">
+                {{ form:app_form }}
+                    <h3 class="font-black text-5xl mb-6">Personal Details</h3>
+                    {{ fields }}
+                        {{ if listable }}
+                            {{ if type == 'assets'}}
+                                {{ partial:partials.form.file :type="type" :name="handle" :display="display" }}
+                            {{ else }}
+                                {{ partial:partials.form.text   }} 
+                            {{ /if }}
+                        {{ /if }}
+
+                    {{ /fields }}
+
+                    {{ collection:jobs slug:is='{role}' limit="1" }}
+                        <div class="mt-24">
+                            <h3 class="font-black text-5xl mb-8">Files and Links</h3>  
+                            
+                            {{ if show_additional_file_boxes }}
+                                {{ partial:partials.form.file type="assets" name="uploaded_work_examples" display="Upload Work Examples" }}
+                                {{ partial:partials.form.file type="assets" name="uploaded_cv" display="Upload CV" }}
+                            {{ /if }}
+
+                            {{ partial:partials.form.text handle="personal_website" placeholder="Personal Website" display="Personal Website" }}
+
+                            
+
+                        </div>
+                    {{ /collection:jobs }}
+                    
+                    <div class="bg-light-grey mb-8 p-8">
+                        <h3 class="font-black text-4xl text-dark ">Ready to apply?</h3>
+                        <button type="submit" class="w-100 hover-button mt-8 md:mt-8 ">
+                            {{ partial:partials.hover_button text="Submit application for {{ role |deslugify|title }} role" class="text-yellow bg-dark " }}
+                        </button>
+                    </div>
+                {{ /form:app_form }}
+            </div>
+    </div>
+
+</section>

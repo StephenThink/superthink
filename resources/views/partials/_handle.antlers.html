@@ -1,8 +1,12 @@
-<div id="handle" data-state="closed" class="transition-background-color ease-in duration-500 handle w-screen h-auto z-50 bg-dark p-5 py-8 flex flex-row items-center justify-between sticky top-0 md:fixed md:h-screen md:w-handle md:flex-col ">
+<div id="handle" data-state="closed" 
+    class="transition-background-color ease-in duration-500 handle w-screen h-auto z-50 bg-dark p-5 py-8 flex flex-row items-center justify-between sticky top-0 
+    md:fixed md:h-screen md:w-handle md:flex-col 
+    dark:bg-light-grey
+">
     
     <div class="">
         <div class="burger">
-            {{ svg src="assets/svgs/burger" }}
+            {{ svg src="assets/svgs/burger" class="fill-current text-white dark:text-dark" }}
             {{# <div class="burger__bun">
                 <div class="burger__slice"></div>
                 <div class="burger__slice"></div>
@@ -14,33 +18,26 @@
     <div class="flex-grow px-6 sm:px-24 md:px-0 md:flex-grow-0">
         <a href="{{ link to='/' }}" aria-label="Think!Creative home page">
             <span class="hidden">Think!Creative Logo</span>
-            {{ svg src="assets/svgs/logo_horizontal" class="logo hidden text-yellow md:block fill-current" }}
-            {{ svg src="assets/svgs/logo" class="logo block md:hidden text-yellow fill-current" }}
+            {{ svg src="assets/svgs/logo_horizontal" class="logo hidden text-yellow md:block fill-current dark:text-dark" }}
+            {{ svg src="assets/svgs/logo" class="logo block md:hidden text-yellow fill-current dark:bg-dark" }}
         </a>
     </div>
-    
-    <!-- <div class="transform md:-rotate-90 md:mb-12 text-white ">
-        <span class="syp inline-block">Start your project</span>
-    </div> -->
+    <div class="w-16">
+        <div>
+            <div class="transform md:-rotate-90 md:mb-12 text-white dark:text-dark">
+                <span class="syp half-height-colour inline-block ">
+                    <span class="underline-element yellow-underline">
+                        <button class="appearance-none" href="">Start your project</button>
+                    </span>
+                </span>
+            </div>
+        </div>
+        
+        
+        {{ partial:partials.lightswitch}}
+        
 
-    <div class="text-white md:mb-12">
-        <!-- <ul class="social_nav flex md:flex-col text-sm">
-            <li class="flex justify-center mr-2 md:mr-0">
-                <a href="" class="social-icon transition duration-500 mt-4 hover:text-yellow">
-                    {{ svg src="assets/svgs/facebook" class="h-6 md:h-8 transform -translate-y-1/4 hover:animate-bounce" }}
-                </a>
-            </li>
-            <li class="flex justify-center mr-2 md:mr-0">
-                <a href="" class="social-icon transition duration-500 mt-4 hover:text-yellow">
-                    {{ svg src="assets/svgs/twitter" class="h-6 md:h-8 transform -translate-y-1/4 hover:animate-bounce" }}
-                </a>
-            </li>
-            <li class="flex justify-center ">
-                <a href="" class="social-icon transition duration-500 mt-4 hover:text-yellow">
-                    {{ svg src="assets/svgs/linkedin" class="h-6 md:h-8 transform -translate-y-1/4 hover:animate-bounce" }}
-                </a>
-            </li>
-        </ul> -->
     </div>
+
     
 </div>

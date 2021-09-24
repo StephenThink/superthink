@@ -1,0 +1,23 @@
+{{ if images | count > 0}}
+    <!-- put a slider here. -->
+    <div class="container blog__post mt-8">
+        <div class="w-full hidden md:block md:w-2/12"></div>
+
+        <div class="swiper-container my-7 w-full md:w-8/12 h-full">
+            <div class="swiper-wrapper">
+                {{ images }}
+                    <div class="swiper-slide bg-cover bg-center " style="height: {{ height }}px; background-image:url('{{ url }}')"></div>
+                {{ /images }}
+            </div>
+            <div class="flex bottom-0 justify-between items-center relative mt-1">
+                {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-prev  left z-1 ml-4  transform rotate-180 dark:" }}
+                <!-- Add Pagination -->
+                <div class="swiper-pagination  left-0 right-0 bottom-50 pointer-events-none"></div>
+                <!-- Add Arrows -->
+                {{ partial:partials/link_arrow textColor="text-yellow" classes="custom-button-next  right-0 mr-4 z-1 " }}
+                
+            </div>
+
+        </div>
+    </div>
+{{ /if }}

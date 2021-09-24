@@ -1,0 +1,132 @@
+title: Core Services
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: strapline
+        field:
+          input_type: text
+          type: text
+          listable: hidden
+          display: Strapline
+          validate:
+            - required
+      -
+        import: hero
+      -
+        handle: introduction
+        field:
+          type: textarea
+          listable: hidden
+          display: Introduction
+      -
+        handle: tag_line_us
+        field:
+          placeholder: 'Inspiring quote'
+          input_type: text
+          type: text
+          instructions: 'The text you want to display when US is toggled'
+          listable: hidden
+          display: 'Tagline Us'
+          validate:
+            - required
+      -
+        handle: tag_line_you
+        field:
+          input_type: text
+          type: text
+          instructions: 'The text you want to display when YOU is toggled'
+          listable: hidden
+          display: 'Tagline You'
+          validate:
+            - required
+      -
+        handle: grid
+        field:
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: text
+              field:
+                restrict: true
+                automatic_line_breaks: true
+                automatic_links: true
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Top Text'
+                type: markdown
+                icon: markdown
+                listable: hidden
+                container: assets
+                folder: /
+            -
+              handle: bold_text
+              field:
+                input_type: text
+                antlers: false
+                display: 'Bold text'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: bottom_text
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Bottom Text'
+                type: markdown
+                icon: markdown
+                listable: hidden
+          mode: stacked
+          reorderable: true
+          display: Grid
+          type: grid
+          icon: grid
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          validate:
+            - required
+      -
+        handle: template
+        field:
+          hide_partials: true
+          type: template
+          listable: hidden
+          display: Template
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO
