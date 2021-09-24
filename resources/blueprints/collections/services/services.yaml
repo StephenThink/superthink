@@ -4,70 +4,10 @@ sections:
     display: Main
     fields:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          width: 50
-          validate:
-            - required
-      -
-        handle: thumbnail
-        field:
-          mode: grid
-          container: assets
-          folder: /
-          restrict: false
-          allow_uploads: true
-          max_files: 1
-          type: assets
-          instructions: 'To be displayed as a thumbnail when using this core service'
-          listable: hidden
-          display: Thumbnail
-          width: 50
-      -
-        import: hero
-      -
-        import: services-_header
-      -
-        handle: stepper
-        field:
-          sets:
-            new_set:
-              display: 'New Set'
-              fields:
-                -
-                  handle: label
-                  field:
-                    input_type: text
-                    type: text
-                    width: 50
-                    listable: hidden
-                    display: Label
-                -
-                  handle: image
-                  field:
-                    mode: grid
-                    restrict: false
-                    allow_uploads: true
-                    type: assets
-                    width: 50
-                    listable: hidden
-                    display: Image
-          type: replicator
-          listable: hidden
-          display: Stepper
-      -
-        handle: content
-        field:
-          restrict: false
-          automatic_line_breaks: true
-          automatic_links: false
-          escape_markup: false
-          smartypants: false
-          type: markdown
-          listable: hidden
-          display: Content
+        import: services_page
+        config:
+          title:
+            required: true
   sidebar:
     display: Sidebar
     fields:
@@ -96,10 +36,19 @@ sections:
           validate:
             - required
       -
-        handle: core-services
+        handle: core
         field:
           type: terms
           taxonomies:
-            - core-services
+            - core
           display: 'Core Services'
           mode: select
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

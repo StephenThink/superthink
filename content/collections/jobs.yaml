@@ -1,0 +1,10 @@
+title: Jobs
+template: jobs/show
+layout: layout
+mount: c78f08a9-bab6-40f3-9f77-6132946ac48b
+revisions: false
+route: '{{ mount }}/{{ slug }}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

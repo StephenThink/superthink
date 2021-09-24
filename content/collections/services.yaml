@@ -3,7 +3,7 @@ template: services/show
 layout: layout
 mount: 4b041b66-7921-4307-99a0-2aaecb2d2504
 taxonomies:
-  - core-services
+  - core
 revisions: false
 route: '/services/{slug}'
 date: true
@@ -14,13 +14,3 @@ date_behavior:
 structure:
   root: false
   max_depth: 1
-  tree:
-    -
-      entry: a220da5c-1433-4add-a21a-1c09c6998ad4
-    -
-      entry: d04db7c9-133c-46dd-93cf-9b551d2b83c9
-    -
-      entry: d04db7c9-133c-46dd-93cf-9b551d2b83c1
-    -
-      entry: a220da5c-1433-4add-a21a-1c09c6998ad2
-    

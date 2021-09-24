@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
+        <!-- <title>{{ title ?? site:name }}</title> -->
+
+        {{ seo_pro:meta }}
         {{# Preload fonts #}}
         {{# <link rel="preload" href="/fonts/geograph-web-black.eot" as="font" crossorigin="anonymous" />
         <link rel="preload" href="/fonts/geograph-web-black.woff" as="font" crossorigin="anonymous" />
@@ -29,7 +31,29 @@
         <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
         
     </head>
-    <body class="font-regular leading-normal text-dark site-wrap" data-barba="wrapper">
+    <body class="font-regular leading-normal text-dark dark:text-light site-wrap" data-barba="wrapper">
+
+    
+        <div class="loading-screens fixed z-101 h-screen w-screen  overflow-hidden pointer-events-none">
+
+            <div class="w-screen-plus-20 -ml-10% flex flex-wrap">
+                
+                {{ loop times="20"}}
+                    <div class="bubble shadow-lg bg-{{random_colour }} rounded-50 h-96 w-96 bg-red-500 relative z-101 transform scale-200">
+
+                    </div>
+                {{ /loop }}
+            
+            </div>
+
+
+            <!-- <div class="screen fixed z-101 {{ random_height_width }} screen-top-left     rounded-50 shadow-lg left-0  top-0    bg-yellow transform -translate-x-1/4 -translate-y-1/4  "></div> -->
+            <!-- <div class="screen fixed z-102 {{ random_height_width_zindex }} screen-top-right    rounded-50 shadow-lg right-0 top-0    bg-dark   transform translate-x-1/4 -translate-y-1/4  "></div> -->
+
+            <!-- <div class="screen fixed z-103 h-half-screen w-half-screen screen-bottom-left  rounded-50 shadow-lg left-0  bottom-0 bg-darker    "></div> -->
+            <!-- <div class="screen fixed z-104 h-half-screen w-half-screen screen-bottom-right rounded-50 shadow-lg right-0 bottom-0 bg-red-900   "></div> -->
+        </div>
+        
 
         <div class="block md:flex-col overflow_hidden">
             {{ partial:partials/nav }}

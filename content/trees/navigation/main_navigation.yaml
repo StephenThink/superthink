@@ -1,0 +1,19 @@
+tree:
+  -
+    entry: home
+  -
+    title: Work
+    url: /work
+  -
+    entry: 4b041b66-7921-4307-99a0-2aaecb2d2504
+  -
+    title: About
+    url: /about
+  -
+    title: Thinking
+    url: /thinking
+  -
+    entry: c78f08a9-bab6-40f3-9f77-6132946ac48b
+  -
+    title: Contact
+    url: /contact

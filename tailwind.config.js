@@ -6,18 +6,36 @@ module.exports = {
       './resources/views/*.html',   
     ],
     options: {
-      safelist: [
-        'think-toast', 
-        'think-loser-toast',
-        'toastify-width',
-        'overflow-visible',
-        'page-content',
-        'toggle-dot',
-        'threed-animation',
-        'swiper-button-disabled',
-      ]
+      safelist: {
+        standard : [
+          'think-toast', 
+          'think-loser-toast',
+          'toastify-width',
+          'overflow-visible',
+          'page-content',
+          'toggle-dot',
+          'threed-animation',
+          'swiper-button-disabled',
+          'bg-yellow',
+          'bg-darker',
+          'bg-dark',
+          'bg-header-dark',
+          'bg-mid-grey',
+          'bg-grey',
+          'bg-light-grey',
+          'burger',
+          'open', 'patty', 'handle', 'buns',
+          /^bg/,
+          /^handle/,
+          /patty$/,
+          /buns$/
+        ],
+        deep: [/open$/, /^handle/, /patty$/],
+        greedy: [/open$/, /patty$/]
+      }
     }
   },
+  darkMode: 'class',
   theme: {
     container: {
       padding: '2rem',
@@ -41,7 +59,15 @@ module.exports = {
       margin: {
         
       },
+      height: {
+        "half-screen" : '50vh'
+      },
+      width : {
+        "half-screen" : '50vw'
+      },
       spacing: {
+
+        "1px" : "1px",
         "screen": "100vw",
         handle: "5rem",
         "handle-nm": "calc( 100vw - 5rem )",
@@ -76,13 +102,16 @@ module.exports = {
         '11/12': '91.666667%',
         full: '100%',
         screen: '100vw',
+        'screen-plus-20': 'calc( 100vw + 20%)',
+        "10%": "10%"
       },
       fontFamily: {
         black: ['geo-black'],
         regular: ['geo-regular'],
         bold: ['geo-bold'],
         "regular-italic": ['geo-regular-italic'],
-        medium: ['geo-medium']
+        medium: ['geo-medium'],
+        light: ['geo-light']
       },
       fontSize: {
         "display-hero": "7rem",
@@ -126,11 +155,21 @@ module.exports = {
       zIndex: {
         '1': '1',
         '5': '5',
+        '101' : '101',
+        '102' : '102',
+        '103' : '103',
+        '104' : '104',
+        '105' : '105',
+        
       },
       colors: {
         yellow: "#FFC734",
         darker: "#2C2F33",
-        dark: "#42454A",
+        // dark: "#42454A",
+        dark: "#373737",
+        "header-dark" :"#292929",
+        "mid-grey" : "#7c7c7c",
+
         light: "#F7F7F7",
         grey: "#AFB0B3",
         blue: "#0A064D",
@@ -149,6 +188,12 @@ module.exports = {
       // }
       inset: {
         '1/2': '50%'
+      },
+      borderRadius: {
+        '50': '50%'
+      },
+      scale: {
+        '200': '2'
       }
     },
   },

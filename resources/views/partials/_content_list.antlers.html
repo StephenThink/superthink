@@ -1,20 +1,20 @@
-<div class="main__panel bg-light">
+<div class="main__panel bg-light dark:bg-dark">
 
     <div class="container">
         <div class="block md:flex border-b border-light-grey pb-12">
             <div class="w-full md:w-3/12">
-                <h2 class="text-yellow font-black leading-tight text-4xl">{{ header }}</h2>
+                <h2 class="text-dark font-black leading-tight text-4xl dark:text-light">{{ header }}</h2>
             </div>
             <div class="w-full ml-auto text-xl md:w-8/12">
                 {{ text }}
             </div>
         </div>
-        <div class="flex flex-col divide-y divide-light-grey items-end ">
+        <div class="flex flex-col  items-end ">
             {{ data }}
-                <div class="w-full md:w-2/3 py-16">
+                <div class="w-full md:w-2/3 pt-16" data-scroll data-scroll-call="campaign-section" >
 
                     {{ if you_us == 'step' }}
-                        <h3 class="text-yellow text-xl">{{ title }}</h3>
+                        <h3 class="title text-mid-grey text-xl" >{{ title }}</h3>
                         <div class="mt-6 font-black leading-tight text-5xl">
                             {{ noun }}
                         </div>
@@ -22,32 +22,39 @@
                     {{ /if }}
                     
                     {{ if you_us == 'us' }}
-                        <h3 class="text-yellow text-xl">{{ title }}</h3>
-                        <div class="mt-6 font-black leading-tight text-5xl">
+                        <h3 class="title text-mid-grey text-xl" >{{ title }}</h3>
+                        <div class="tagline mt-6 font-black leading-tight text-5xl">
                             {{ tag_line_us }}
                         </div>
                     {{ /if }}
 
                     {{ if you_us == 'you' }}
-                        <h3 class="text-grey text-lg">{{ strapline }}</h3>
-                        <div class="my-3 font-black leading-tight text-5xl">
-                            
-                                {{ tag_line_you }}
-                            </a>
+                        <h3 class="title text-grey text-lg" >{{ strapline }}</h3>
+                        <div class="tagline my-3 font-black leading-tight text-5xl">
+                            {{ tag_line_you }}
                         </div>
-                        <a href="{{ url }}">
+                        
+                        <a href="/services{{ url }}">
                             {{ partial:partials/link_arrow textSize="text-lg" textColor="text-yellow" text="View all {title} services" }}
                         </a>
                     {{ /if }}
                     
+                    <div class="h-1px w-full bg-light-grey my-16 bottom-line"  ></div>
+
                 </div>
+                
             {{ /data }}
 
             {{ if you_us == 'you'}}
-                <div class="w-full md:w-2/3 py-16">
-                    <h3 class="text-grey text-lg">Help! I already know what I need</h3>
+                <div class="w-full md:w-2/3 py-16 help-section" data-scroll data-scroll-call="help-section">
+                    <h3 class="text-grey text-lg flex items-center">
+                        <span class="help inline-block">Help!</span> 
+                        <span class="overflow-hidden ">
+                            <span class="after-help inline-block ml-2">I already know what I need</span>
+                        </span>
+                    </h3>
                     <div class="mt-6 font-black text-5xl">
-                        <p>That’s cool. Check out all our services below...</p>
+                        <p class="tagline">That’s cool. Check out all our services below...</p>
                     </div>
                 </div>
             {{ /if }}
@@ -58,7 +65,7 @@
             <div class="flex flex-col items-end">
                 <div class="w-full md:w-2/3 py-16">
                     <a href="/services">
-                        {{ partial:partials/link_arrow textColor="text-yellow" text="View all services" }}
+                        {{ partial:partials/link_arrow textColor="text-dark dark:text-yellow" text="View all services" }}
                     </a>
                 </div>
             </div>

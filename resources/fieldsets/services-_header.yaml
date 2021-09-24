@@ -14,7 +14,7 @@ fields:
         - h5
         - underline
         - strikethrough
-      save_html: false
+      save_html: true
       toolbar_mode: fixed
       link_noopener: false
       link_noreferrer: false
@@ -23,11 +23,10 @@ fields:
       fullscreen: true
       allow_source: true
       type: bard
-      instructions: 'Text to be displayed under the title'
-      localizable: false
+      instructions: 'Text to be displayed under the title -- This field is required but validation is left off so it can/can''t be overriden by geo pages'
       listable: hidden
       display: Introduction
-      validate: required
+      always_show_set_button: false
   -
     handle: header_animation
     field:
@@ -39,6 +38,5 @@ fields:
       max_files: 1
       type: assets
       instructions: 'display an animation to be loaded by lottie (edit:could enter this as text)'
-      localizable: false
       listable: hidden
       display: 'Header Animation'

@@ -1,0 +1,9 @@
+title: 'Geo Pages'
+template: geo-pages/show
+layout: layout
+revisions: false
+route: 'services/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

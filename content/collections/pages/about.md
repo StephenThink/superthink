@@ -2,7 +2,7 @@
 title: 'About Us'
 hero_text: 'Good people to think with'
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1602516126
+updated_at: 1616061704
 blueprint: about
 template: pages/about
 hero_intro: |
@@ -36,5 +36,9 @@ steps:
 call_to_action: 'View all our services'
 cta_link: 'entry::4b041b66-7921-4307-99a0-2aaecb2d2504'
 cta_button: 'View Services'
+seo:
+  title: 'About Think!Creative - Creative Design Agency'
+  description: 'Whether It''s brand development, creative graphic design, powerful content, or innovative digital solutions, our team''s got it covered. Call us on: 01253 297900'
+  site_name: false
 id: c220f30e-3f32-4a6d-958d-6d8577ff4e1b
 ---

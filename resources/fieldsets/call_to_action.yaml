@@ -5,18 +5,15 @@ fields:
     field:
       input_type: text
       type: text
-      localizable: false
       listable: hidden
       display: 'Call to action'
-      validate:
-        - required
       width: 50
+      antlers: false
   -
     handle: cta_button
     field:
       input_type: text
       type: text
-      localizable: false
       width: 50
       listable: hidden
       display: 'Call to action button'
@@ -24,6 +21,5 @@ fields:
     handle: cta_link
     field:
       type: link
-      localizable: false
       listable: hidden
       display: 'Call to action link'

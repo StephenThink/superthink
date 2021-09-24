@@ -1,0 +1,94 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          input_type: text
+          antlers: false
+          display: Name
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+          placeholder: 'Enter your full name'
+      -
+        handle: email
+        field:
+          input_type: email
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+            - email
+          placeholder: 'Enter your email address'
+      -
+        handle: mobile_number
+        field:
+          input_type: text
+          antlers: false
+          display: 'Mobile Number'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+          placeholder: 'Enetr your phone number'
+      -
+        handle: cover_letter
+        field:
+          mode: grid
+          container: assets
+          folder: application-forms/cover-letters
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Upload Cover Letter'
+          type: assets
+          icon: assets
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: uploaded_work_examples
+        field:
+          mode: grid
+          container: assets
+          folder: application-forms/uploaded-work
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Work Examples'
+          type: assets
+          icon: assets
+          listable: false
+      -
+        handle: uploaded_cv
+        field:
+          mode: grid
+          container: assets
+          folder: application-forms/cvs
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Upload CV'
+          type: assets
+          icon: assets
+          listable: false
+      -
+        handle: personal_website
+        field:
+          input_type: text
+          antlers: false
+          display: 'Personal Website'
+          type: text
+          icon: text
+          listable: false
+  new_section:
+    display: 'New Section'
+    fields: {  }

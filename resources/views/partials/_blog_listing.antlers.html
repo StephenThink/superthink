@@ -1,13 +1,20 @@
-<div class="w-full {{ width }}">
-    <a href="{{ url }}">
+<div class="w-full {{ width }} blog-listing-item overflow-hidden">
+    <a href="{{ url }}" class="w-full inline-block half-height-colour" data-trigger="blog-item-transition" >
         <div class="pb-2/3 relative">
             {{ if thumbnail }}
                 <img src="{{ thumbnail }}" class="h-full w-full absolute object-cover" loading=lazy>
             {{ /if }}
+            
+            {{ if main_image }}
+                <img src="{{ main_image }}" class="h-full w-full absolute object-cover main-image hidden" loading=lazy>
+            {{ /if }}
         </div>
     
-        <div class="mt-2 font-bold text-lg half-height-colour">
+        <div class="mt-2 font-bold text-lg ">
             <span class="underline-element yellow-underline">{{ title }}</span>
+        </div>
+        <div class="w-full font-black leading-none text-5xl md:text-7xl hidden">
+            {{ title }}
         </div>
     </a>
 </div>

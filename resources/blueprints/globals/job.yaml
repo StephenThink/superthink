@@ -1,0 +1,44 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: about_us
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: true
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'About Us'
+          type: markdown
+          icon: markdown
+          instructions: 'This will appear on the careers page in the about this section'
+          listable: hidden
+      -
+        handle: what_we_are_after
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: true
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'What we''re after'
+          type: markdown
+          icon: markdown
+          listable: hidden
+      -
+        handle: what_you_get
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: true
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'What you get'
+          type: markdown
+          icon: markdown
+          listable: hidden

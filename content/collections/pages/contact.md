@@ -2,10 +2,10 @@
 title: Contact
 template: pages/contact
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1600193234
+updated_at: 1616061756
 blueprint: contact
 slogan: 'Let’s work together'
-written_address: 'Think!Creative is located in number 32 Blackpool Road, just on the outskirts of Blackpool. Come and visit, or drop us a line.'
+written_address: 'We live in a house! You can come and visit us in number 32 Blackpool Road, just on the outskirts of Blackpool.'
 images:
   -
     image: contact/Screenshot-2020-09-15-at-18.38.55.png
@@ -22,5 +22,12 @@ images:
     width: flex-50
     type: new_set
     enabled: true
+maps_link: 'https://goo.gl/maps/EHSDYWYBapw'
+telephone_number_intro: 'Give us three rings on:'
+email_intro: 'Want to work together?'
+jobs_email_intro: 'Want to work for us?'
+seo:
+  title: 'Contact Us'
+  site_name_position: before
 id: 245b90b3-1382-45b2-8ea4-5ab7469ea872
 ---

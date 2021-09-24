@@ -24,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        // dd( $this->app['request']);
+
         // Statamic::script('app', 'cp');
         // Statamic::style('app', 'cp');
     }

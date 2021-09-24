@@ -1,0 +1,11 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: activities
+        field:
+          display: Activities
+          type: list
+          icon: list
+          listable: hidden

@@ -3,7 +3,7 @@
 {{ /if }}
 
 
-<section class="main__panel_small bg-gradient-blue-to-light pb-12 ">
+<section class="main__panel_small bg-gradient-blue-to-light pb-12 dark:bg-gradient-blue-to-dark">
     <div class="container flex">
         <div class="hidden w-full md:w-2/12 md:block"></div>
         <div class="w-full md:w-10/12">
@@ -14,18 +14,22 @@
                 </div>
 
                 <div class="w-full  px-4 mt-4 md:mt-0 md:w-1/3">
-                    <div class="bg-white p-4">
+                    <div class="bg-white p-4 dark:bg-dark">
                         <div class="flex space-between">
                             <div class="w-1/2 font-bold uppercase text-base">Sector</div>
                             <div>
-                                {{ sector | ul }}
+                                {{ if sector }}
+                                    {{ sector | ul }}
+                                {{ /if }}
                             </div>
                         </div>
 
                         <div class="flex space-between mt-4">
                             <div class="w-1/2 font-bold uppercase text-base">Services</div>
                             <div>
-                                {{ sector | ul }}
+                                {{ if sector }}
+                                    {{ sector | ul }}
+                                {{ /if }}
                             </div>
                         </div>
                     </div>
@@ -34,7 +38,8 @@
 
             <div class="mt-8">
                 {{ if secondary_image }}
-                    <div class="pb-2/3 relative threed-animation">
+                {{# threed-animation #}}
+                    <div class="pb-2/3 relative ">
                         <img src="{{ secondary_image }}" alt="" class="h-full w-full absolute object-cover" loading=lazy>
                     </div>
                 {{ /if }}
@@ -47,24 +52,34 @@
 {{ main_content }}
 
     {{ if type == "the_problem" }}
-        <div class="main__panel_x-small bg-light pt-0">
+        <div class="main__panel_x-small bg-light pt-0 dark:bg-dark">
             <div class="container flex">
                 <div class="w-full md:w-8/12 mx-auto">
-                    <h2 class="text-4xl font-black">The Problem</h2>
+                    <h2 class="text-4xl font-black">The Challenge</h2>
                     <p class="mt-4 w-full md:w-10/12">{{ intro }}</p>
 
                     <div class="pb-1/2 relative mt-8">
                         <img src="{{ image }}" alt="" class="w-full h-full object-cover absolute" loading=lazy>
                     </div>
 
-                    <p class="mt-8 text-yellow w-full md:w-7/12">{{ sign_off }}</p>
+                    <p class="mt-8 text-mid-grey w-full md:w-7/12 dark:text-white">{{ sign_off }}</p>
                 </div>
             </div>
         </div>
     {{ /if }}
 
+    {{ if full_image }}
+        <div class="main__panel_x-small bg-light dark:bg-dark full_image">
+            <img src="{{ full_image }}" alt="" class="w-full  object-cover" loading=lazy>
+        </div>
+    {{ /if}}
+
+    {{ if type == 'slider' }} 
+        {{ partial:partials/slider }} 
+    {{ /if }}
+
     {{ if type == "the_idea"}}
-        <div class="main__panel_x-small bg-light pt-0">
+        <div class="main__panel_x-small bg-light pt-0 dark:bg-dark">
             <div class="container flex">
                 <div class="w-full md:w-8/12 mx-auto">
                     <h2 class="text-4xl font-black">The Idea</h2>
@@ -73,16 +88,16 @@
             </div>
         </div>
 
-        {{ if full_image }}
-            <div class="full_image">
-                <img src="{{ full_image }}" alt="" class="w-full  object-cover" loading=lazy>
+        {{ if intro_full_image }}
+            <div class="main__panel_x-small bg-light dark:bg-dark full_image">
+                <img src="{{ intro_full_image }}" alt="" class="w-full  object-cover" loading=lazy>
             </div>
         {{ /if}}
 
-        <div class="main__panel_small bg-light">
+        <div class="main__panel_small bg-light dark:bg-dark">
             <div class="container flex">
                 <div class="w-full md:w-8/12 mx-auto">
-                    <p class="mt-4 w-full md:w-10/12">{{ intro }}</p>
+                    <p class="mt-4 w-full md:w-10/12">{{ outro }}</p>
                 </div>
             </div>
         </div>
@@ -95,7 +110,7 @@
 
 {{ main_content }}
     {{ if type == 'gallery'}}
-        <div class="main__panel_small bg-light">
+        <div class="main__panel_small bg-light dark:bg-dark">
             <div class="container flex">
                 <div class="w-full md:w-8/12 mx-auto">
                     <div class="flex flex-wrap -mx-2">
@@ -116,7 +131,7 @@
     {{ /if }}
 
     {{ if type == 'the_work'}}
-        <div class="main__panel_x-small pt-0 bg-light">
+        <div class="main__panel_x-small pt-0 bg-light dark:bg-dark">
             <div class="container flex">
                 <div class="w-full md:w-8/12 mx-auto">
                     <h2 class="text-4xl font-black">The Work</h2>
@@ -131,7 +146,7 @@
 
 {{ partial:partials/small_banner }}
 
-<section class="main__panel_x-small bg-light">
+<section class="main__panel_x-small bg-light dark:bg-dark content ">
     <div class="container flex">
         <div class="w-full md:w-8/12 mx-auto">
             <p class="mt-4 w-full md:w-2/3">{{ outro }}</p>
@@ -150,14 +165,19 @@
 
         {{ next }}
 
-            <a href="{{ link to='/work/{slug}' }}">
-                <div class="h-screen relative" >
-                    <img src="{{ hero_image }}" alt="" class="h-full absolute object-cover" loading=lazy>
-                    <div class="container p-24 relative text-5xl text-white font-black z-10">
-                        <p class="">Next project:</p>
-                        <p class=" mt-4">{{ title }}</p>
-                    </div>
+            <a href="{{ link to='/work/{slug}' }}" class="hover-button image">
+                
+                <div class="h-screen relative overflow-hidden" >
+                    <span class="">
+                        <div class="backdrop absolute bg-yellow top-0 h-full w-full opacity-0"></div>
+                        <img src="{{ hero_image }}" alt="" class="h-full absolute object-cover" loading=lazy>
+                        <div class="container p-24 relative text-5xl text-white font-black z-10">
+                            <p class="">Next project:</p>
+                            <p class=" mt-4">{{ title }}</p>
+                        </div>
+                    </span>
                 </div>
+                
             </a>
 
         {{ /next }}
