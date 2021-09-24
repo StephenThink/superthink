@@ -217,6 +217,7 @@ sections:
           localizable: true
           validate:
             - required
+            - 'unique_entry_value:{collection},{id},{site}'
       -
         handle: greatest_hits
         field:
