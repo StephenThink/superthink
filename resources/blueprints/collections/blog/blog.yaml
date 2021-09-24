@@ -135,6 +135,7 @@ sections:
           localizable: true
           validate:
             - required
+            - 'unique_entry_value:{collection},{id},{site}'
       -
         handle: date
         field:
@@ -161,7 +162,7 @@ sections:
           display: 'Employee heading'
           type: text
           listable: hidden
-          validate:
+          validate: null
       -
         handle: employee_list
         field:
