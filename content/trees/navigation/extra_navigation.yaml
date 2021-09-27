@@ -1,7 +1,9 @@
 tree:
   -
+    id: b7f63545-a9a7-4e77-be6f-c26fa7537451
     title: 'Tea Roulette'
     url: /tea-roulette
   -
+    id: ebddcd80-f390-40a2-8a4c-68fd29097efc
     title: 'Secret Santa'
     url: /secret-santa

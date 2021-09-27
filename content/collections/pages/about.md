@@ -1,11 +1,12 @@
 ---
+id: c220f30e-3f32-4a6d-958d-6d8577ff4e1b
+blueprint: about
 title: 'About Us'
 hero_text: 'Good people to think with'
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1616061704
-blueprint: about
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1632498639
 template: pages/about
-hero_intro: |
+hero_intro: |-
   We all sit together and crack your problem in the same room. That means we can work in a fast, integrated way, which means you only pay for what you need, 
   and nothing you don’t.
 quote: 'Think!Creative are always my ‘go-to guys’ when I need inspired, creative and thoughtful design. I’ve always found them to have an innate ability to understand not just the design brief but also the wider campaign context and objectives - a highly valued aspect of this highly valued team.'
@@ -40,5 +41,4 @@ seo:
   title: 'About Think!Creative - Creative Design Agency'
   description: 'Whether It''s brand development, creative graphic design, powerful content, or innovative digital solutions, our team''s got it covered. Call us on: 01253 297900'
   site_name: false
-id: c220f30e-3f32-4a6d-958d-6d8577ff4e1b
 ---

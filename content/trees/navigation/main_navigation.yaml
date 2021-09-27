@@ -1,19 +1,26 @@
 tree:
   -
+    id: 5084267e-229f-4faf-9928-ad7d1e8c8f98
     entry: home
   -
+    id: 8792cccf-7812-44dd-b498-3ea4e7951dde
     title: Work
     url: /work
   -
+    id: 17868a06-f060-4fd2-8561-7446055578ad
     entry: 4b041b66-7921-4307-99a0-2aaecb2d2504
   -
+    id: f7ef8a36-edb2-4366-a4e9-a34569309d98
     title: About
     url: /about
   -
+    id: 48d4a159-bdca-4f63-85fe-c450d21ec6c5
     title: Thinking
     url: /thinking
   -
+    id: 1116dd9e-78e0-4f68-8589-f9a48617f283
     entry: c78f08a9-bab6-40f3-9f77-6132946ac48b
   -
+    id: 0b0a95af-e85e-445e-9e44-a3765c2f18b1
     title: Contact
     url: /contact
