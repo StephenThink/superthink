@@ -56,6 +56,15 @@ module.exports = {
       medium: ['geo-medium']
     },
     extend: {
+      keyframes: {
+        'wiggle': {
+        '0%, 100%': { transform: 'rotate(-2deg)' },
+        '50%': { transform: 'rotate(2deg)' },
+        }
+      },
+      animation: {
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+      },
       margin: {
         
       },
@@ -160,6 +169,7 @@ module.exports = {
         '103' : '103',
         '104' : '104',
         '105' : '105',
+        'n1' : '-1',
         
       },
       colors: {
