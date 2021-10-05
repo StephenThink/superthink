@@ -34,16 +34,20 @@
     <body class="font-regular leading-normal text-dark dark:text-light site-wrap {{ if environment == "local" }}debug-screens{{ /if }}" data-barba="wrapper">
 
     
-        <div class="loading-screens fixed z-101 h-screen w-screen  overflow-hidden pointer-events-none">
+        <div class="loading-screens fixed z-101 h-screen w-screen overflow-hidden pointer-events-none">
 
             <div class="w-screen-plus-20 -ml-10% flex flex-wrap">
-                {{#
-                {{ loop times="20"}}
-                    <div class="bubble shadow-lg bg-{{random_colour }} rounded-50 h-96 w-96 bg-red-500 relative z-101 transform scale-200">
 
-                    </div>
-                {{ /loop }}
-            #}}
+                <!-- This was disabled for the local machine as it times out -->
+                {{ if environment != "local" }}
+                
+                    {{ loop times="20"}}
+                        <div class="bubble shadow-lg bg-{{random_colour }} rounded-50 h-96 w-96 bg-red-500 relative z-101 transform scale-200">
+
+                        </div>
+                    {{ /loop }}
+                {{ /if }}
+            
             </div>
 
 
@@ -56,14 +60,15 @@
         
 
         <div class="block md:flex-col overflow_hidden">
-            {{ partial:partials/nav }}
-            {{ partial:partials/handle }}
+            {{ partial:partials/nav }} <!-- This is the Navbar that slides out -->
+            {{ partial:partials/handle }} <!-- This appears on the top of a mobile phone, and left on all over screen sizes -->
             
             <div class="w-screen ml-0 md:w-handle-nm  md:ml-handle" data-barba="container">
+                    
                 {{ template_content }}
             </div>
             
-            {{ partial:partials/footer }}
+            {{ partial:partials/footer }} <!-- This is at the bottom of the site -->
 
         </div>
 
