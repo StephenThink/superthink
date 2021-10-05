@@ -1,6 +1,6 @@
 // This is all you.
 
-import './pageTransitions.js'
+//import './pageTransitions.js'
 import { page } from './default'
 
 page()

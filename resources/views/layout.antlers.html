@@ -39,15 +39,13 @@
             <div class="w-screen-plus-20 -ml-10% flex flex-wrap">
 
                 <!-- This was disabled for the local machine as it times out -->
-                {{ if environment != "local" }}
-                
-                    {{ loop times="20"}}
+                             
+                    {{# loop times="10"}}
                         <div class="bubble shadow-lg bg-{{random_colour }} rounded-50 h-96 w-96 bg-red-500 relative z-101 transform scale-200">
 
                         </div>
-                    {{ /loop }}
-                {{ /if }}
-            
+                    {{ /loop #}}
+                           
             </div>
 
 
