@@ -579,6 +579,10 @@ input[type="file"] {
             .inner  {
                 @apply p-5 flex flex-col justify-between h-full
             }
+
+            .text {
+                @apply text-black
+            }
             @media(md){
                 .inner {
                     @apply p-10

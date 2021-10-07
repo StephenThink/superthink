@@ -15,7 +15,7 @@
     <div class="flex flex-wrap p-2">
         <a href="{{ cp_route('collections.index') }}" class="w-full lg:w-1/2 p-2 flex items-start hover:bg-grey-20 rounded-md group">
             <div class="h-8 w-8 mr-2 text-grey-80">
-                @svg('collections')
+                {{-- @svg('collections') --}}
             </div>
             <div class="flex-1">
                 <h3 class="mb-1 text-blue">View Collections</h3>
@@ -24,11 +24,56 @@
         </a>
         <a href="{{ cp_route('assets.index') }}" class="w-full lg:w-1/2 p-2 flex items-start hover:bg-grey-20 rounded-md group">
             <div class="h-8 w-8 mr-2 text-grey-80">
-                @svg('assets')
+                {{-- @svg('assets') --}}
             </div>
             <div class="flex-1">
                 <h3 class="mb-1 text-blue">View Assets</h3>
                 <p>Add, edit, rename and delete images from the website</p>
+            </div>
+        </a>
+        <a href="{{ cp_route('collections.show', ['pages']) }}" class="w-full lg:w-1/2 p-2 flex items-start hover:bg-grey-20 rounded-md group">
+            <div class="h-8 w-8 mr-2 text-grey-80">
+                {{-- @svg('collections') --}}
+            </div>
+            <div class="flex-1">
+                <h3 class="mb-1 text-blue">View Pages</h3>
+                <p>Access and edit all pages on the website, including adding and editing Capabilities</p>
+            </div>
+        </a>
+        <a href="{{ cp_route('collections.show', ['blog']) }}" class="w-full lg:w-1/2 p-2 flex items-start hover:bg-grey-20 rounded-md group">
+            <div class="h-8 w-8 mr-2 text-grey-80">
+                {{-- @svg('collections') --}}
+            </div>
+            <div class="flex-1">
+                <h3 class="mb-1 text-blue">View Blog Posts</h3>
+                <p>Access and edit all pages on the website, including adding and editing Capabilities</p>
+            </div>
+        </a>
+        <a href="{{ cp_route('collections.show', ['case_studies']) }}" class="w-full lg:w-1/2 p-2 flex items-start hover:bg-grey-20 rounded-md group">
+            <div class="h-8 w-8 mr-2 text-grey-80">
+                {{-- @svg('collections') --}}
+            </div>
+            <div class="flex-1">
+                <h3 class="mb-1 text-blue">View Case Studies</h3>
+                <p>Access and edit all pages on the website, including adding and editing Capabilities</p>
+            </div>
+        </a>
+        <a href="{{ cp_route('collections.show', ['employees']) }}" class="w-full lg:w-1/2 p-2 flex items-start hover:bg-grey-20 rounded-md group">
+            <div class="h-8 w-8 mr-2 text-grey-80">
+                {{-- @svg('collections') --}}
+            </div>
+            <div class="flex-1">
+                <h3 class="mb-1 text-blue">View Employees</h3>
+                <p>Make additions or changes to the current members of the Think Team</p>
+            </div>
+        </a>
+        <a href="{{ cp_route('taxonomies.show', ['core']) }}" class="w-full lg:w-1/2 p-2 flex items-start hover:bg-grey-20 rounded-md group">
+            <div class="h-8 w-8 mr-2 text-grey-80">
+                {{-- @svg('collections') --}}
+            </div>
+            <div class="flex-1">
+                <h3 class="mb-1 text-blue">Core Services</h3>
+                <p>Make additions or changes to the current members of the Think Team</p>
             </div>
         </a>
     </div>
