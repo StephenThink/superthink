@@ -5,7 +5,7 @@ title: Home
 template: home
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1633527907
+updated_at: 1633607430
 why_us_headline: 'Want to make your brand more memorable? You’ve come to the right place.'
 why_us_content:
   -
@@ -42,5 +42,6 @@ layered_title: 'ways we can help you'
 layered_content: 'Let’s face it, the marketing world is unpredictable. That’s why we use big ideas to help your power your brand through the chaos. Then, we use that idea to inspire all your marketing materials, build your brand and (most importantly) get the results you deserve. We do that in 4 ways…'
 show_link: false
 you_us: us
+require_count: true
 ---
 Welcome to your new Statamic website.

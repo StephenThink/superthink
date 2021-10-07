@@ -13,6 +13,9 @@ fields:
       type: assets
       icon: assets
       listable: hidden
+      instructions: 'This is displayed on the services page at the bottom'
+      instructions_position: above
+      show_filename: true
   -
     import: hero
   -

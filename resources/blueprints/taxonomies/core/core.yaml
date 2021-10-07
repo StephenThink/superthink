@@ -1,22 +1,13 @@
 title: 'Core Services'
 sections:
-  main:
-    display: Main
+  hero:
+    display: Hero
     fields:
       -
         handle: title
         field:
           type: text
           required: true
-          validate:
-            - required
-      -
-        handle: strapline
-        field:
-          input_type: text
-          type: text
-          listable: hidden
-          display: Strapline
           validate:
             - required
       -
@@ -27,6 +18,12 @@ sections:
           type: textarea
           listable: hidden
           display: Introduction
+          instructions: 'Cannot find where this data is used'
+          instructions_position: above
+          antlers: false
+  main:
+    display: Main
+    fields:
       -
         handle: grid
         field:
@@ -83,9 +80,21 @@ sections:
           type: grid
           icon: grid
           listable: hidden
-  displayed_on_home:
-    display: 'Displayed on Home'
+  displayed_on_home_and_services:
+    display: 'Displayed on Home and Services'
     fields:
+      -
+        handle: strapline
+        field:
+          input_type: text
+          type: text
+          listable: hidden
+          display: Strapline
+          validate:
+            - required
+          instructions: 'This is displayed on the services page above Tagline You'
+          instructions_position: above
+          antlers: false
       -
         handle: tag_line_us
         field:

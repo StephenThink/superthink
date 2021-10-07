@@ -30,12 +30,14 @@ sections:
           restrict: false
           allow_uploads: true
           type: assets
-          instructions: 'image that''s offset from the blue container'
+          instructions: 'image that''s offset from the blue container, also appears at the bottom of the services SHOW page'
           listable: hidden
           display: 'Secondary Image'
           container: assets
           folder: /
           max_files: 1
+          instructions_position: above
+          show_filename: true
       -
         handle: mini_introduction
         field:

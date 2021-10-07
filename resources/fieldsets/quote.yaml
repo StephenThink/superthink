@@ -4,14 +4,15 @@ fields:
     handle: quote
     field:
       type: textarea
-      localizable: false
       listable: hidden
       display: Quote
+      instructions: 'This will appear on the about page in a yellow block with black text'
+      instructions_position: above
+      antlers: false
   -
     handle: cite
     field:
       input_type: text
       type: text
-      localizable: false
       listable: hidden
       display: Cite

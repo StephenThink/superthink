@@ -3,7 +3,8 @@
     <div  class="container">
         <div  class="block pb-12 border-b md:flex border-light-grey">
             <div class="w-full md:w-3/12">
-                <h2 class="text-4xl font-black leading-tight text-dark dark:text-light">{{ data | count }} {{ header }}</h2>
+                <!-- If the require_count is true then it will show a number before the header / title -->
+                <h2 class="text-4xl font-black leading-tight text-dark dark:text-light">{{ if require_count }}{{ data | count }} {{ /if }}{{ header }}</h2>
             </div>
             <div class="w-full ml-auto text-xl md:w-8/12">
                 {{ text }}
@@ -13,6 +14,7 @@
             {{ data }}
                 <div class="w-full pt-16 md:w-2/3" data-scroll data-scroll-call="campaign-section" >
 
+                    <!-- Shown on the About Page -->
                     {{ if you_us == 'step' }}
                         <h3 class="text-xl title text-mid-grey" >{{ title }}</h3>
                         <div class="mt-6 text-5xl font-black leading-tight">
@@ -21,6 +23,7 @@
                         <p>{{ text }}</p>
                     {{ /if }}
                     
+                    <!-- Displayed on Home page-->
                     {{ if you_us == 'us' }}
                         <h3 class="text-xl title text-mid-grey" >{{ title }}</h3>
                         <div class="mt-6 text-5xl font-black leading-tight tagline">
@@ -28,6 +31,7 @@
                         </div>
                     {{ /if }}
 
+                    <!-- Displayed on Services Page-->
                     {{ if you_us == 'you' }}
                         <h3 class="text-lg title text-grey" >{{ strapline }}</h3>
                         <div class="my-3 text-5xl font-black leading-tight tagline">

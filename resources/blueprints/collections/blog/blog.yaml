@@ -122,6 +122,9 @@ sections:
           display: Content
           type: bard
           listable: hidden
+          instructions_position: above
+          enable_input_rules: true
+          enable_paste_rules: true
       -
         import: two_third_banner
   sidebar:
@@ -162,7 +165,6 @@ sections:
           display: 'Employee heading'
           type: text
           listable: hidden
-          validate: null
       -
         handle: employee_list
         field:
