@@ -775,3 +775,15 @@ input#store:checked ~ .toggle-dot {
         } */
     }
 }
+
+/* Stephens CSS */
+/* Careers Show */
+.job__heading {
+    h1 {
+        @apply font-black text-4xl mb-4
+    }
+    h2 {
+        @apply font-black text-3xl mb-4
+    }
+   
+}
