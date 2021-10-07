@@ -12,6 +12,9 @@ sections:
             - required
       -
         import: hero
+  below_layered_block:
+    display: 'Below Layered Block'
+    fields:
       -
         import: call_to_action
   sidebar:
@@ -42,3 +45,12 @@ sections:
           type: template
           listable: hidden
           display: Template
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

@@ -1,7 +1,7 @@
 title: 'Case Study'
 sections:
-  main:
-    display: Main
+  work_page:
+    display: 'Work Page'
     fields:
       -
         handle: title
@@ -20,6 +20,9 @@ sections:
           instructions: 'To be shown on the case studies listing'
           listable: hidden
           display: Tagline
+  main:
+    display: Main
+    fields:
       -
         handle: secondary_image
         field:
@@ -47,8 +50,6 @@ sections:
           instructions: 'Keep adding to the list and they''ll be shown on the page'
           listable: hidden
           display: Sector
-      -
-        import: call_to_action
       -
         handle: main_content
         field:
@@ -206,6 +207,11 @@ sections:
           type: markdown
           icon: markdown
           listable: hidden
+  yellow_block:
+    display: 'Yellow Block'
+    fields:
+      -
+        import: call_to_action
   sidebar:
     display: Sidebar
     fields:

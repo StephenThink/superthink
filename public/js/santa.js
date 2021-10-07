@@ -267,7 +267,7 @@ axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios
 module.exports = axios;
 
 // Allow use of default import syntax in TypeScript
-module.exports.default = axios;
+module.exports["default"] = axios;
 
 
 /***/ }),
@@ -1932,7 +1932,7 @@ var addFormField = function addFormField(e) {
   inputEmail.classList.add('email', 'px-3', 'w-5/12');
   var removeInput = document.createElement('span');
   removeInput.classList.add('secret-santa-remove');
-  removeInput.addEventListener('click', _removeNameFromList__WEBPACK_IMPORTED_MODULE_0__.default);
+  removeInput.addEventListener('click', _removeNameFromList__WEBPACK_IMPORTED_MODULE_0__["default"]);
   removeInput.insertAdjacentHTML('beforeend', binSVG); // var remove = document.createTextNode('remove');
   // removeInput.appendChild(remove);
 
@@ -1958,11 +1958,11 @@ var addFormField = function addFormField(e) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "toggleFlip": () => (/* reexport safe */ _toggleFlip__WEBPACK_IMPORTED_MODULE_0__.default),
-/* harmony export */   "addFormField": () => (/* reexport safe */ _addFormField__WEBPACK_IMPORTED_MODULE_1__.default),
-/* harmony export */   "removeNameFromList": () => (/* reexport safe */ _removeNameFromList__WEBPACK_IMPORTED_MODULE_2__.default),
-/* harmony export */   "showFinalForm": () => (/* reexport safe */ _showFinalForm__WEBPACK_IMPORTED_MODULE_3__.default),
-/* harmony export */   "submitForm": () => (/* reexport safe */ _submitForm__WEBPACK_IMPORTED_MODULE_4__.default)
+/* harmony export */   "toggleFlip": () => (/* reexport safe */ _toggleFlip__WEBPACK_IMPORTED_MODULE_0__["default"]),
+/* harmony export */   "addFormField": () => (/* reexport safe */ _addFormField__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "removeNameFromList": () => (/* reexport safe */ _removeNameFromList__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "showFinalForm": () => (/* reexport safe */ _showFinalForm__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "submitForm": () => (/* reexport safe */ _submitForm__WEBPACK_IMPORTED_MODULE_4__["default"])
 /* harmony export */ });
 /* harmony import */ var _toggleFlip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggleFlip */ "./resources/js/secretsanta/toggleFlip.js");
 /* harmony import */ var _addFormField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addFormField */ "./resources/js/secretsanta/addFormField.js");
@@ -1997,7 +1997,7 @@ var removeNameFromList = function removeNameFromList(e) {
   var owMany = list.length;
 
   if (owMany <= 3) {
-    return (0,_components_message__WEBPACK_IMPORTED_MODULE_0__.default)('Can\'t have less than 3 to make the magic happen');
+    return (0,_components_message__WEBPACK_IMPORTED_MODULE_0__["default"])('Can\'t have less than 3 to make the magic happen');
   }
 
   e.target.parentNode.remove();
@@ -2078,14 +2078,14 @@ var submitForm = function submitForm(e) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/secret-santa-results', formData).then(function (response) {
     console.log('success');
     loader.classList.add('hidden');
-    (0,_components_message__WEBPACK_IMPORTED_MODULE_1__.default)('none', 'secretSantaMessage', response.data.success);
+    (0,_components_message__WEBPACK_IMPORTED_MODULE_1__["default"])('none', 'secretSantaMessage', response.data.success);
   })["catch"](function (_ref) {
     var response = _ref.response;
     console.log('catch error'); //  take off the disabled so we can re send
 
     button.classList.remove('disabled');
     loader.classList.add('hidden');
-    (0,_components_message__WEBPACK_IMPORTED_MODULE_1__.default)('none', 'secretSantaMessage', response.data.error);
+    (0,_components_message__WEBPACK_IMPORTED_MODULE_1__["default"])('none', 'secretSantaMessage', response.data.error);
   }).then();
 };
 
@@ -2432,11 +2432,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_toastify_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_toastify_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_toastify_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_toastify_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

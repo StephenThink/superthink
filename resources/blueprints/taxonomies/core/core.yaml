@@ -1,4 +1,4 @@
-title: Core Services
+title: 'Core Services'
 sections:
   main:
     display: Main
@@ -27,27 +27,6 @@ sections:
           type: textarea
           listable: hidden
           display: Introduction
-      -
-        handle: tag_line_us
-        field:
-          placeholder: 'Inspiring quote'
-          input_type: text
-          type: text
-          instructions: 'The text you want to display when US is toggled'
-          listable: hidden
-          display: 'Tagline Us'
-          validate:
-            - required
-      -
-        handle: tag_line_you
-        field:
-          input_type: text
-          type: text
-          instructions: 'The text you want to display when YOU is toggled'
-          listable: hidden
-          display: 'Tagline You'
-          validate:
-            - required
       -
         handle: grid
         field:
@@ -104,6 +83,30 @@ sections:
           type: grid
           icon: grid
           listable: hidden
+  displayed_on_home:
+    display: 'Displayed on Home'
+    fields:
+      -
+        handle: tag_line_us
+        field:
+          placeholder: 'Inspiring quote'
+          input_type: text
+          type: text
+          instructions: 'The text you want to display when US is toggled'
+          listable: hidden
+          display: 'Tagline Us'
+          validate:
+            - required
+      -
+        handle: tag_line_you
+        field:
+          input_type: text
+          type: text
+          instructions: 'The text you want to display when YOU is toggled'
+          listable: hidden
+          display: 'Tagline You'
+          validate:
+            - required
   sidebar:
     display: Sidebar
     fields:

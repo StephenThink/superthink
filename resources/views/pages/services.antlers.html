@@ -1,12 +1,14 @@
 
 {{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" }}
 
+<!-- Uses the Core Taxonomy to display the different areas -->
 {{ taxonomy:core as="data" }}
     {{  partial:partials/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
 {{ /taxonomy:core }}
 
 {{ partial:partials/cta }}
 
+<!-- Uses the Services collection that is passed to the grid partial -->
 {{ partial:partials/grid title="Services" what="services" }}
 
 

@@ -8,10 +8,18 @@ sections:
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         import: hero
+  top_layered_block:
+    display: 'Top Layered Block'
+    fields:
       -
         import: layered_block
+  below_layered_block:
+    display: 'Below Layered Block'
+    fields:
       -
         import: call_to_action
   sidebar:
@@ -24,6 +32,7 @@ sections:
           required: true
           localizable: true
           validate:
+            - required
             - 'unique_entry_value:{collection},{id},{site}'
       -
         handle: parent
@@ -34,3 +43,12 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO
