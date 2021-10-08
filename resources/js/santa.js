@@ -31,17 +31,21 @@ for (let index = 0; index < 3; index++) {
 }
 
 
-
+// After the Dom is loaded then
 window.addEventListener('DOMContentLoaded', (event) => {
     var current = 0,
     slides = document.querySelectorAll(".background-slideshow img");
 
-    setInterval(function() {
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = 0;
-    }
-    current = (current != slides.length - 1) ? current + 1 : 0;
-    slides[current].style.opacity = 1;
+    // Alert "Hello" every 3 seconds (3000 milliseconds):
+    // setInterval(function(){ alert("Hello"); }, 3000);
+
+    setInterval(function() 
+    {
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.opacity = 0;
+        }
+        current = (current != slides.length - 1) ? current + 1 : 0;
+        slides[current].style.opacity = 1;
     }, 7000);
 });
 
