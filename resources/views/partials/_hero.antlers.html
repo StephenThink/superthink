@@ -1,8 +1,9 @@
 <div class="hero h-vertical-handle-nm  flex items-center w-100 py-24 relative overflow-hidden  {{ text_small ? 'text-5xl md:text-7xl' : 'text-7xl md:text-18xl' }} {{classes}} md:h-screen" data-scroll-section>
 
+    <!-- Puts the bubbles in the top right hand corner of the page -->
     {{ if bubbles }}
-        <div class="bubbles-svg absolute top-0 right-0">
-            {{ svg src="assets/svgs/bubbles" class="text-dark fill-current mt-12 dark:text-yellow" }}
+        <div class="absolute top-0 right-0 bubbles-svg">
+            {{ svg src="assets/svgs/bubbles" class="mt-12 fill-current text-dark dark:text-yellow" }}
         </div>
     {{ /if }}
 
@@ -17,8 +18,9 @@
         <div class="container flex flex-col md:flex-row h-50 md:h-full">
             <div class="h-1/2 {{ show_playreel ?? 'w-2/3' ?? 'w-1/3' }} flex flex-col items-center justify-center md:h-full">
 
+                <!-- Displays the Hero Text in the middle of the screen -->
                 {{ if display }}
-                    <div class="hero-main-text w-full font-black leading-none fancy" data-scroll data-scroll-call="fancy" >
+                    <div class="w-full font-black leading-none hero-main-text fancy" data-scroll data-scroll-call="fancy" >
                         {{ display }}
                     </div>
                 {{ /if }}
@@ -31,14 +33,15 @@
                 {{ /if }}
 
                 {{ if hero_intro }}
-                    <div class="hero-intro w-full mt-12 text-white self-start text-lg md:w-1/2">
+                    <div class="self-start w-full mt-12 text-lg text-white hero-intro md:w-1/2">
                         {{ hero_intro }}
                     </div>
                 {{ /if }}
             </div>
 
+            <!-- Displays a button that is clickable -->
             {{ if show_playreel }}
-                <div class="h-1/2 w-full md:w-1/3 flex items-start justify-start md:items-end md:justify-end md:h-full">
+                <div class="flex items-start justify-start w-full h-1/2 md:w-1/3 md:items-end md:justify-end md:h-full">
                     {{ partial:partials/link_arrow text="Play Showreel" textColor="text-dark" }}
                 </div>
             {{ /if }}

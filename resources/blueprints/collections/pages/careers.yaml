@@ -1,7 +1,7 @@
 title: Careers
 sections:
-  main:
-    display: Main
+  hero:
+    display: Hero
     fields:
       -
         handle: title
@@ -12,6 +12,9 @@ sections:
             - required
       -
         import: hero
+  main:
+    display: Main
+    fields:
       -
         handle: page_title
         field:
@@ -34,6 +37,9 @@ sections:
           type: markdown
           icon: markdown
           listable: hidden
+  yellow_banner:
+    display: 'Yellow Banner'
+    fields:
       -
         import: call_to_action
   sidebar:

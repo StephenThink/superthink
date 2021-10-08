@@ -1,36 +1,40 @@
 <div id="startProject" class="main__panel bg-light dark:bg-dark">
 
     <div  class="container">
-        <div  class="block md:flex border-b border-light-grey pb-12">
+        <div  class="block pb-12 border-b md:flex border-light-grey">
             <div class="w-full md:w-3/12">
-                <h2 class="text-dark font-black leading-tight text-4xl dark:text-light">{{ header }}</h2>
+                <!-- If the require_count is true then it will show a number before the header / title -->
+                <h2 class="text-4xl font-black leading-tight text-dark dark:text-light">{{ if require_count }}{{ data | count }} {{ /if }}{{ header }}</h2>
             </div>
             <div class="w-full ml-auto text-xl md:w-8/12">
                 {{ text }}
             </div>
         </div>
-        <div class="flex flex-col  items-end ">
+        <div class="flex flex-col items-end ">
             {{ data }}
-                <div class="w-full md:w-2/3 pt-16" data-scroll data-scroll-call="campaign-section" >
+                <div class="w-full pt-16 md:w-2/3" data-scroll data-scroll-call="campaign-section" >
 
+                    <!-- Shown on the About Page -->
                     {{ if you_us == 'step' }}
-                        <h3 class="title text-mid-grey text-xl" >{{ title }}</h3>
-                        <div class="mt-6 font-black leading-tight text-5xl">
+                        <h3 class="text-xl title text-mid-grey" >{{ title }}</h3>
+                        <div class="mt-6 text-5xl font-black leading-tight">
                             {{ noun }}
                         </div>
                         <p>{{ text }}</p>
                     {{ /if }}
                     
+                    <!-- Displayed on Home page-->
                     {{ if you_us == 'us' }}
-                        <h3 class="title text-mid-grey text-xl" >{{ title }}</h3>
-                        <div class="tagline mt-6 font-black leading-tight text-5xl">
+                        <h3 class="text-xl title text-mid-grey" >{{ title }}</h3>
+                        <div class="mt-6 text-5xl font-black leading-tight tagline">
                             {{ tag_line_us }}
                         </div>
                     {{ /if }}
 
+                    <!-- Displayed on Services Page-->
                     {{ if you_us == 'you' }}
-                        <h3 class="title text-grey text-lg" >{{ strapline }}</h3>
-                        <div class="tagline my-3 font-black leading-tight text-5xl">
+                        <h3 class="text-lg title text-grey" >{{ strapline }}</h3>
+                        <div class="my-3 text-5xl font-black leading-tight tagline">
                             {{ tag_line_you }}
                         </div>
                         
@@ -39,21 +43,21 @@
                         </a>
                     {{ /if }}
                     
-                    <div class="h-1px w-full bg-light-grey my-16 bottom-line"  ></div>
+                    <div class="w-full my-16 h-1px bg-light-grey bottom-line"  ></div>
 
                 </div>
                 
             {{ /data }}
 
             {{ if you_us == 'you'}}
-                <div class="w-full md:w-2/3 py-16 help-section" data-scroll data-scroll-call="help-section">
-                    <h3 class="text-grey text-lg flex items-center">
-                        <span class="help inline-block">Help!</span> 
+                <div class="w-full py-16 md:w-2/3 help-section" data-scroll data-scroll-call="help-section">
+                    <h3 class="flex items-center text-lg text-grey">
+                        <span class="inline-block help">Help!</span> 
                         <span class="overflow-hidden ">
-                            <span class="after-help inline-block ml-2">I already know what I need</span>
+                            <span class="inline-block ml-2 after-help">I already know what I need</span>
                         </span>
                     </h3>
-                    <div class="mt-6 font-black text-5xl">
+                    <div class="mt-6 text-5xl font-black">
                         <p class="tagline">That’s cool. Check out all our services below...</p>
                     </div>
                 </div>
@@ -63,7 +67,7 @@
 
         {{ if you_us == 'us' }}
             <div class="flex flex-col items-end">
-                <div class="w-full md:w-2/3 py-16">
+                <div class="w-full py-16 md:w-2/3">
                     <a href="/services">
                         {{ partial:partials/link_arrow textColor="text-dark dark:text-yellow" text="View all services" }}
                     </a>

@@ -1,22 +1,13 @@
-title: Core Services
+title: 'Core Services'
 sections:
-  main:
-    display: Main
+  hero:
+    display: Hero
     fields:
       -
         handle: title
         field:
           type: text
           required: true
-          validate:
-            - required
-      -
-        handle: strapline
-        field:
-          input_type: text
-          type: text
-          listable: hidden
-          display: Strapline
           validate:
             - required
       -
@@ -27,27 +18,12 @@ sections:
           type: textarea
           listable: hidden
           display: Introduction
-      -
-        handle: tag_line_us
-        field:
-          placeholder: 'Inspiring quote'
-          input_type: text
-          type: text
-          instructions: 'The text you want to display when US is toggled'
-          listable: hidden
-          display: 'Tagline Us'
-          validate:
-            - required
-      -
-        handle: tag_line_you
-        field:
-          input_type: text
-          type: text
-          instructions: 'The text you want to display when YOU is toggled'
-          listable: hidden
-          display: 'Tagline You'
-          validate:
-            - required
+          instructions: 'Cannot find where this data is used'
+          instructions_position: above
+          antlers: false
+  main:
+    display: Main
+    fields:
       -
         handle: grid
         field:
@@ -104,6 +80,42 @@ sections:
           type: grid
           icon: grid
           listable: hidden
+  displayed_on_home_and_services:
+    display: 'Displayed on Home and Services'
+    fields:
+      -
+        handle: strapline
+        field:
+          input_type: text
+          type: text
+          listable: hidden
+          display: Strapline
+          validate:
+            - required
+          instructions: 'This is displayed on the services page above Tagline You'
+          instructions_position: above
+          antlers: false
+      -
+        handle: tag_line_us
+        field:
+          placeholder: 'Inspiring quote'
+          input_type: text
+          type: text
+          instructions: 'The text you want to display when US is toggled'
+          listable: hidden
+          display: 'Tagline Us'
+          validate:
+            - required
+      -
+        handle: tag_line_you
+        field:
+          input_type: text
+          type: text
+          instructions: 'The text you want to display when YOU is toggled'
+          listable: hidden
+          display: 'Tagline You'
+          validate:
+            - required
   sidebar:
     display: Sidebar
     fields:

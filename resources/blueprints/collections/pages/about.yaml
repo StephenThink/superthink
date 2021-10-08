@@ -1,7 +1,7 @@
 title: About
 sections:
-  main:
-    display: Main
+  hero:
+    display: Hero
     fields:
       -
         handle: title
@@ -12,8 +12,14 @@ sections:
             - required
       -
         import: hero
+  quote:
+    display: Quote
+    fields:
       -
         import: quote
+  main:
+    display: Main
+    fields:
       -
         import: layered_block
       -
@@ -79,3 +85,12 @@ sections:
           type: template
           listable: hidden
           display: Template
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

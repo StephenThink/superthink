@@ -3222,11 +3222,14 @@ submit.addEventListener('click', _secretsanta__WEBPACK_IMPORTED_MODULE_0__.submi
 
 for (var index = 0; index < 3; index++) {
   (0,_secretsanta__WEBPACK_IMPORTED_MODULE_0__.addFormField)();
-}
+} // After the Dom is loaded then
+
 
 window.addEventListener('DOMContentLoaded', function (event) {
   var current = 0,
-      slides = document.querySelectorAll(".background-slideshow img");
+      slides = document.querySelectorAll(".background-slideshow img"); // Alert "Hello" every 3 seconds (3000 milliseconds):
+  // setInterval(function(){ alert("Hello"); }, 3000);
+
   setInterval(function () {
     for (var i = 0; i < slides.length; i++) {
       slides[i].style.opacity = 0;

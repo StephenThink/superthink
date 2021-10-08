@@ -20,7 +20,7 @@ const nameToList = () => {
     var name_span = document.createElement('span');
     var delete_span = document.createElement('span');
 
-    // craete text nodes
+    // create text nodes
     var name = document.createTextNode(input.value);
     var cross = document.createTextNode('x');
 

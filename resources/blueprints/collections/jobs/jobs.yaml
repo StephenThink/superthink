@@ -1,7 +1,7 @@
 title: Job
 sections:
-  main:
-    display: Main
+  careers_page:
+    display: 'Careers Page'
     fields:
       -
         handle: title
@@ -10,15 +10,6 @@ sections:
           required: true
           validate:
             - required
-          width: 75
-      -
-        handle: show_additional_file_boxes
-        field:
-          display: 'Show Additional File Boxes'
-          type: toggle
-          icon: toggle
-          width: 25
-          listable: hidden
       -
         handle: experience
         field:
@@ -26,6 +17,9 @@ sections:
           type: integer
           icon: integer
           listable: hidden
+  main:
+    display: Main
+    fields:
       -
         handle: introduction
         field:
@@ -47,6 +41,9 @@ sections:
           type: markdown
           icon: markdown
           listable: hidden
+  applying:
+    display: Applying
+    fields:
       -
         handle: how_to_apply
         field:
@@ -60,6 +57,16 @@ sections:
           type: markdown
           icon: markdown
           listable: hidden
+      -
+        handle: show_additional_file_boxes
+        field:
+          display: 'Show Additional File Boxes'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions: 'This allows applicants to upload files'
+          instructions_position: above
+          default: true
   sidebar:
     display: Sidebar
     fields:

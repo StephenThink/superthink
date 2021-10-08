@@ -8,14 +8,18 @@ sections:
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         import: hero
+  why_us:
+    display: 'Why Us'
+    fields:
       -
         handle: why_us_headline
         field:
           input_type: text
           type: text
-          localizable: false
           listable: hidden
           display: 'Why us headline'
           validate:
@@ -78,11 +82,16 @@ sections:
                     validate:
                       - required
           type: replicator
-          localizable: false
           listable: hidden
           display: 'Why us content'
+  layered_block:
+    display: 'Layered Block'
+    fields:
       -
         import: layered_block
+  banner_below_layered_block:
+    display: 'Banner Below Layered Block'
+    fields:
       -
         import: banner
   sidebar:
@@ -95,6 +104,7 @@ sections:
           required: true
           localizable: true
           validate:
+            - required
             - 'unique_entry_value:{collection},{id},{site}'
       -
         handle: parent
@@ -105,3 +115,12 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

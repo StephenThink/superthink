@@ -8,6 +8,7 @@ module.exports = {
     options: {
       safelist: {
         standard : [
+          'job__heading',
           'think-toast', 
           'think-loser-toast',
           'toastify-width',

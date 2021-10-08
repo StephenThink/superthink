@@ -261,7 +261,7 @@ var nameToList = function nameToList() {
 
   var li = document.createElement("li");
   var name_span = document.createElement('span');
-  var delete_span = document.createElement('span'); // craete text nodes
+  var delete_span = document.createElement('span'); // create text nodes
 
   var name = document.createTextNode(input.value);
   var cross = document.createTextNode('x'); //  set attributes/classes
@@ -388,6 +388,7 @@ var start = function start() {
     'outerRadius': 180,
     'numSegments': segments.length,
     'segments': segments,
+    // This is where the Array of Names gets pushed to.
     'fillStyle': 'transparent',
     'textAlignment': 'outer',
     'textOrientation': 'horizontal',
@@ -400,7 +401,7 @@ var start = function start() {
     'animation': {
       'type': 'spinToStop',
       'duration': 6,
-      'spins': 4,
+      'spins': 10,
       'callbackFinished': _alertLoser__WEBPACK_IMPORTED_MODULE_1__.default
     } // 'pointerGuide'  :{
     //     'display'     : true,

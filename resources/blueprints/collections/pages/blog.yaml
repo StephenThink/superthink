@@ -1,7 +1,7 @@
 title: Blog
 sections:
-  main:
-    display: Main
+  hero:
+    display: Hero
     fields:
       -
         handle: title
@@ -12,6 +12,9 @@ sections:
             - required
       -
         import: hero
+  main:
+    display: Main
+    fields:
       -
         import: negative_image
   sidebar:
@@ -42,3 +45,12 @@ sections:
           display: Template
           type: template
           listable: hidden
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

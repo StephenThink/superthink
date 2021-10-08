@@ -622,6 +622,15 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default */ "./resources/js/default.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components */ "./resources/js/components/index.js");
+/* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./animations */ "./resources/js/animations/index.js");
+/* harmony import */ var locomotive_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./helpers */ "./resources/js/helpers/index.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 // This is all you.
 //import './pageTransitions.js'
 
@@ -632,21 +641,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var burger = document.querySelectorAll('.burger')[0];
 burger.addEventListener('click', _components__WEBPACK_IMPORTED_MODULE_1__.animateTheBurger, false); // Animations
-// import { wipe, animateIn, campaignSection, helpSection } from './animations';
-// import LocomotiveScroll from 'locomotive-scroll';
-// import { scroll, swipe, SharingIsCaring } from './helpers';
-// const locomotiveScroll = new LocomotiveScroll({
-//     el: document.querySelector(scroll.container),
-//     ...scroll.options,
-// })
-// locomotiveScroll.on('call', (value, way, obj) => {
-//     // do something
-//     if (value === "wipe") wipe(way, obj);
-//     if (value === "fancy") animateIn(obj.el);
-//     if (value === "campaign-section") campaignSection(obj.el)
-//     if (value === "help-section") helpSection(obj.el)
-// });
-//   enable hover effects on touch screens! 
+
+
+
+
+var locomotiveScroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_3__.default(_objectSpread({
+  el: document.querySelector(_helpers__WEBPACK_IMPORTED_MODULE_4__.scroll.container)
+}, _helpers__WEBPACK_IMPORTED_MODULE_4__.scroll.options));
+locomotiveScroll.on('call', function (value, way, obj) {
+  // do something
+  if (value === "wipe") (0,_animations__WEBPACK_IMPORTED_MODULE_2__.wipe)(way, obj);
+  if (value === "fancy") (0,_animations__WEBPACK_IMPORTED_MODULE_2__.animateIn)(obj.el);
+  if (value === "campaign-section") (0,_animations__WEBPACK_IMPORTED_MODULE_2__.campaignSection)(obj.el);
+  if (value === "help-section") (0,_animations__WEBPACK_IMPORTED_MODULE_2__.helpSection)(obj.el);
+}); //   enable hover effects on touch screens! 
 
 document.addEventListener("touchstart", function () {}, true); // Manually toggle light siwtch. 
 

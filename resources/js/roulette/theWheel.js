@@ -12,7 +12,7 @@ const start = ( segments = [{}] ) => {
     theWheel = new Winwheel({
         'outerRadius'    : 180,
         'numSegments'    : segments.length,
-        'segments'       : segments,
+        'segments'       : segments, // This is where the Array of Names gets pushed to.
         'fillStyle'      : 'transparent',
         'textAlignment'  : 'outer',
         'textOrientation': 'horizontal',
@@ -25,7 +25,7 @@ const start = ( segments = [{}] ) => {
         'animation'      : {
             'type'       : 'spinToStop',
             'duration'   : 6,
-            'spins'      : 4,                
+            'spins'      : 10,                
             'callbackFinished': alertLoser
         },
         // 'pointerGuide'  :{

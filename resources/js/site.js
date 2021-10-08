@@ -16,25 +16,25 @@ burger.addEventListener('click', animateTheBurger, false);
 
 
 // Animations
-// import { wipe, animateIn, campaignSection, helpSection } from './animations';
+import { wipe, animateIn, campaignSection, helpSection } from './animations';
 
-// import LocomotiveScroll from 'locomotive-scroll';
-// import { scroll, swipe, SharingIsCaring } from './helpers';
+import LocomotiveScroll from 'locomotive-scroll';
+import { scroll, swipe, SharingIsCaring } from './helpers';
 
-// const locomotiveScroll = new LocomotiveScroll({
-//     el: document.querySelector(scroll.container),
-//     ...scroll.options,
-// })
+const locomotiveScroll = new LocomotiveScroll({
+    el: document.querySelector(scroll.container),
+    ...scroll.options,
+})
 
-// locomotiveScroll.on('call', (value, way, obj) => {
+locomotiveScroll.on('call', (value, way, obj) => {
     
-//     // do something
-//     if (value === "wipe") wipe(way, obj);
-//     if (value === "fancy") animateIn(obj.el);
-//     if (value === "campaign-section") campaignSection(obj.el)
-//     if (value === "help-section") helpSection(obj.el)
+    // do something
+    if (value === "wipe") wipe(way, obj);
+    if (value === "fancy") animateIn(obj.el);
+    if (value === "campaign-section") campaignSection(obj.el)
+    if (value === "help-section") helpSection(obj.el)
 
-// });
+});
 
 
 

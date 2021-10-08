@@ -1,10 +1,12 @@
 ---
+id: e97c7289-09c3-49a7-ba00-c41ff2ca42b4
+blueprint: case_study
 title: 'Glover''s Swim School'
-greatest_hits: false
+greatest_hits: true
 core:
   - brand
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614781592
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1633603320
 hero_image: work/glovers-swim-school/Glovers-Business-Card-Dark-scaled.jpg
 secondary_image: work/glovers-swim-school/Glovers-Swim-Caps-Dark-scaled.jpg
 main_content:
@@ -48,5 +50,4 @@ services_filter:
   - illustration
   - print
   - web-design-and-development
-id: e97c7289-09c3-49a7-ba00-c41ff2ca42b4
 ---

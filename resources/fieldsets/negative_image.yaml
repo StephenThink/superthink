@@ -19,4 +19,6 @@ fields:
       display: Headline
       type: text
       listable: hidden
-      instructions: 'This content will appear in a yellow box on the negative image. Not always needed.'
+      instructions: 'This content will appear in a yellow box on the image on the thinking page ( matt calls it a negative image). Not always needed.'
+      instructions_position: above
+      antlers: false
