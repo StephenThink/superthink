@@ -74,6 +74,6 @@ return [
     |
     */
 
-    'link_to_docs' => true,
+    'link_to_docs' => false,
 
 ];
