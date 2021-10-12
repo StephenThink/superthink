@@ -749,7 +749,7 @@ input#store:checked ~ .toggle-dot {
         &:hover {
             img {
                 transition: transform .5s ease-in-out;
-                transform: scale(1.05) rotate(2deg);
+                transform: scale(1.05);
             }
             .backdrop {
                 opacity: 0.45;
