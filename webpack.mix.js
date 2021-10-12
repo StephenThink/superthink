@@ -43,10 +43,10 @@ if (mix.inProduction()) {
  |
  */
 
-// mix.js('resources/js/cp.js', 'public/vendor/app/js')
-//    .postCss('resources/css/cp.css', 'public/vendor/app/css', [
-//     require('postcss-import'),
-//     require('tailwindcss'),
-//     require('postcss-nested'),
-//     require('postcss-preset-env')({stage: 0})
-// ])
+mix.js('resources/js/cp.js', 'public/vendor/app/js')
+   .postCss('resources/css/cp.css', 'public/vendor/app/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('postcss-nested'),
+    require('postcss-preset-env')({stage: 0})
+])

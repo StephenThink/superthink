@@ -1,6 +1,11 @@
 <style>
     .think {
-        
+        :root {
+            --primary: rgb(255, 204, 0);
+            --primary-light: #ffe680;
+            --secondary: #373737;
+            --third: #808080;
+}
     }
 </style>
 <div class="widget_thinkcreative card p-0 content">
@@ -18,7 +23,7 @@
                  @cp_svg('collections') 
             </div>
             <div class="flex-1">
-                <h3 class="mb-1 text-blue">View Pages</h3>
+                <h3 class="mb-1" style="color:var(--primary);">View Pages</h3>
                 <p>See all the main pages that make the backbone of the site.</p>
             </div>
         </a>
@@ -27,7 +32,7 @@
                  @cp_svg('content-writing') 
             </div>
             <div class="flex-1">
-                <h3 class="mb-1 text-blue">View Blog Posts</h3>
+                <h3 class="mb-1" style="color:var(--primary);">View Blog Posts</h3>
                 <p>View all the Blog Posts.</p>
             </div>
         </a>
@@ -36,7 +41,7 @@
                 @cp_svg('content-writing')
             </div>
             <div class="flex-1">
-                <h3 class="mb-1 text-blue">View Case Studies</h3>
+                <h3 class="mb-1" style="color:var(--primary);">View Case Studies</h3>
                 <p>People we have worked with.</p>
             </div>
         </a>
@@ -45,7 +50,7 @@
                  @cp_svg('users-box') 
             </div>
             <div class="flex-1">
-                <h3 class="mb-1 text-blue">View Employees</h3>
+                <h3 class="mb-1" style="color:var(--primary);">View Employees</h3>
                 <p>Make additions or changes to the current members of the Think Team.</p>
             </div>
         </a>
@@ -54,7 +59,7 @@
                 @cp_svg('collections')
             </div>
             <div class="flex-1">
-                <h3 class="mb-1 text-blue">Core Services</h3>
+                <h3 class="mb-1" style="color:var(--primary);">Core Services</h3>
                 <p>This links to a collection called services, looks like it is a category style / filter.</p>
             </div>
         </a>
@@ -63,7 +68,7 @@
                  @cp_svg('collections') 
             </div>
             <div class="flex-1">
-                <h3 class="mb-1 text-blue">Services Filter</h3>
+                <h3 class="mb-1" style="color:var(--primary);">Services Filter</h3>
                 <p>This links to a collection called Case Studies.</p>
             </div>
         </a>
@@ -72,7 +77,7 @@
                  @cp_svg('toggle') 
             </div>
             <div class="flex-1">
-                <h3 class="mb-1 text-blue">Tea Roulette / Secret Santa</h3>
+                <h3 class="mb-1" style="color:var(--primary);">Tea Roulette / Secret Santa</h3>
                 <p>Choose which to show on the Main Nav of the site.</p>
             </div>
         </a>

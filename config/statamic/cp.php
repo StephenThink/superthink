@@ -76,4 +76,20 @@ return [
 
     'link_to_docs' => false,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Customising the CMS / CP
+    |--------------------------------------------------------------------------
+    |
+    | Show contextual links to documentation throughout the Control Panel.
+    |
+    */
+
+
+    'custom_logo_url' => [
+        //'nav' => '/assets/svgs/think.svg',
+        'outside' => '/assets/svgs/think.svg'
+    ],
+
+    'custom_css_url' => env('STATAMIC_CUSTOM_CSS_URL', null),
 ];
