@@ -8,32 +8,12 @@
         <div class="hidden w-full md:w-2/12 md:block"></div>
         <div class="w-full md:w-10/12">
             <div class="flex flex-wrap items-start -mx-4 md:flex-nowrap">
-                <div class="w-full px-4 text-white md:w-2/3">
+                <div class="w-full px-4 text-white">
                     <h1 class="text-4xl font-black leading-tight md:text-6xl">{{ title }}</h1>
                     <p class="w-11/12 mt-4 text-lg leading-tight">{{ mini_introduction }}</p>
                 </div>
 
-                <div class="w-full px-4 mt-4 md:mt-0 md:w-1/3">
-                    <div class="p-4 bg-white dark:bg-dark">
-                        <div class="flex space-between">
-                            <div class="w-1/2 text-base font-bold uppercase">Sector</div>
-                            <div>
-                                {{ if sector }}
-                                    {{ sector | ul }}
-                                {{ /if }}
-                            </div>
-                        </div>
-                        <!-- Question - Why is this repeated? -->
-                        <div class="flex mt-4 space-between">
-                            <div class="w-1/2 text-base font-bold uppercase">Services</div>
-                            <div>
-                                {{ if sector }}
-                                    {{ sector | ul }}
-                                {{ /if }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
             <div class="mt-8">
