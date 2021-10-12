@@ -47,3 +47,13 @@ sections:
           icon: text
           listable: hidden
           instructions_position: above
+      -
+        handle: email_subject
+        field:
+          input_type: text
+          antlers: false
+          display: 'Email Subject'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
