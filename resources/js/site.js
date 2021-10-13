@@ -3,6 +3,13 @@
 //import './pageTransitions.js'
 import { page } from './default'
 
+//Alpine
+import Alpine from 'alpinejs'
+ 
+window.Alpine = Alpine
+ 
+Alpine.start()
+
 page()
 
 // components

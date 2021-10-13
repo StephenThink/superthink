@@ -38,7 +38,7 @@ h6 {
 
 /* Modifys all the links in the menu */
 
-ul > li > a {
+.nav-main ul > li > a {
   background-color: rgb(255, 204, 0);
   background-color: var(--primary);
   color: #373737;
@@ -53,7 +53,7 @@ ul > li > a {
 
 /* Hover effect */
 
-ul > li > a:hover {
+.nav-main ul > li > a:hover {
   background: linear-gradient(90deg,#808080,#373737);
   background: linear-gradient(90deg,var(--third),var(--secondary));
   color: rgb(255, 204, 0) !important;
@@ -61,7 +61,7 @@ ul > li > a:hover {
   margin-left: -.5rem;
 }
 
-ul > li.current > a {
+.nav-main ul > li.current > a {
   background-color: #808080;
   background-color: var(--third);
   color: white !important;
@@ -135,4 +135,26 @@ ul > li.current > a {
 .forgot-password-link {
   color: rgb(255, 204, 0) !important;
   color: var(--primary) !important;
+}
+
+.pagination {
+  border-radius: 10px!important;
+}
+
+.pagination li.current a {
+  background-color: rgb(255, 204, 0);
+  background-color: var(--primary);
+  color:#373737!important;
+  color:var(--secondary)!important;
+  text-align: center;
+  /* padding-left: 20px; */
+}
+
+.pagination li a:hover {
+  background-color: #373737!important;
+  background-color: var(--secondary)!important;
+  margin-left: 0!important;
+  color: rgb(255, 204, 0)!important;
+  color: var(--primary)!important;
+  overflow: hidden;
 }

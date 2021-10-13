@@ -8,32 +8,12 @@
         <div class="hidden w-full md:w-2/12 md:block"></div>
         <div class="w-full md:w-10/12">
             <div class="flex flex-wrap items-start -mx-4 md:flex-nowrap">
-                <div class="w-full px-4 text-white md:w-2/3">
+                <div class="w-full px-4 text-dark">
                     <h1 class="text-4xl font-black leading-tight md:text-6xl">{{ title }}</h1>
                     <p class="w-11/12 mt-4 text-lg leading-tight">{{ mini_introduction }}</p>
                 </div>
 
-                <div class="w-full px-4 mt-4 md:mt-0 md:w-1/3">
-                    <div class="p-4 bg-white dark:bg-dark">
-                        <div class="flex space-between">
-                            <div class="w-1/2 text-base font-bold uppercase">Sector</div>
-                            <div>
-                                {{ if sector }}
-                                    {{ sector | ul }}
-                                {{ /if }}
-                            </div>
-                        </div>
-                        <!-- Question - Why is this repeated? -->
-                        <div class="flex mt-4 space-between">
-                            <div class="w-1/2 text-base font-bold uppercase">Services</div>
-                            <div>
-                                {{ if sector }}
-                                    {{ sector | ul }}
-                                {{ /if }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
             <div class="mt-8">
@@ -74,9 +54,9 @@
         </div>
     {{ /if}}
 
-    {{ if type == 'slider' }} 
-        {{ partial:partials/slider }} 
-    {{ /if }}
+    {{# {{ if type == 'slider' }} 
+        {{ partial:partials/slider custom-height="416" custom-width="740" }} 
+    {{ /if }} #}}
 
     {{ if type == "the_idea"}}
         <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
@@ -109,6 +89,9 @@
 {{ partial:partials/cta }}
 
 {{ main_content }}
+        {{ if type == 'slider' }} 
+            {{ partial:partials/slider custom-height="416" custom-width="740"}} 
+        {{ /if }}
     {{ if type == 'gallery'}}
         <div class="main__panel_small bg-light dark:bg-dark">
             <div class="container flex">
@@ -154,7 +137,7 @@
     </div>
 </section>
 
-{{ partial:partials/employees padding="pt-0"}}
+{{ partial:partials/employees padding="pt-0" justcocoa="1"}}
 
 <!--  collection next  -->
 <!-- This takes the next entry in the case studies collection and displays it, if there are no more entries then it displays the no_result -->
@@ -170,9 +153,9 @@
                 
                 <div class="relative h-screen overflow-hidden" >
                     <span class="">
-                        <div class="absolute top-0 w-full h-full opacity-0 backdrop bg-yellow"></div>
+                        <div class="absolute top-0 w-full transform -translate-y-56 bg-black opacity-0 h-1/4 backdrop"></div>
                         <img src="{{ hero_image }}" alt="" class="absolute object-cover h-full" loading=lazy>
-                        <div class="container relative z-10 p-24 text-5xl font-black text-white">
+                        <div class="container absolute top-0 z-10 p-8 text-5xl font-black text-white transform -translate-y-56">
                             <p class="">Next project:</p>
                             <p class="mt-4 ">{{ title }}</p>
                         </div>
