@@ -97,9 +97,9 @@ if (localStorage['thinkcreative.theme'] === 'dark' || (!('thinkcreative.theme' i
 }
 
 //  Always be at the top when entering the page.
-barba.hooks.enter(() => {
-    window.scrollTo(0, 0);
-});
+// barba.hooks.enter(() => {
+//     window.scrollTo(0, 0);
+// });
 
 //  Always close the navigation when leaving a page. 
 // barba.hooks.beforeLeave(() => {
@@ -109,22 +109,22 @@ barba.hooks.enter(() => {
 //     handle.classList.remove('open');
 // });
 
-barba.init({
-    transitions: [{
-        name: 'opacity-transition',
-        leave(data) {
+// barba.init({
+//     transitions: [{
+//         name: 'opacity-transition',
+//         leave(data) {
 
-            return gsap.to(data.current.container, {
-                opacity: 0
-            }, 5);
+//             return gsap.to(data.current.container, {
+//                 opacity: 0
+//             }, 5);
 
-        },
-        enter(data) {
-            inView('.fancy:not(.seen)').on('enter', animateIn);
-            console.log('ENTERING');
-            return gsap.from(data.next.container, {
-                opacity: 0
-            });
-        }
-      }]
-});
+//         },
+//         enter(data) {
+//             inView('.fancy:not(.seen)').on('enter', animateIn);
+//             console.log('ENTERING');
+//             return gsap.from(data.next.container, {
+//                 opacity: 0
+//             });
+//         }
+//       }]
+// });
