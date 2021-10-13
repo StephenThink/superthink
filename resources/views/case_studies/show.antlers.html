@@ -89,6 +89,9 @@
 {{ partial:partials/cta }}
 
 {{ main_content }}
+        {{ if type == 'slider' }} 
+            {{ partial:partials/slider }} 
+        {{ /if }}
     {{ if type == 'gallery'}}
         <div class="main__panel_small bg-light dark:bg-dark">
             <div class="container flex">
