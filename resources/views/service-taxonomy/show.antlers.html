@@ -1,5 +1,4 @@
 <!-- This is where we show a core service page - brand;communication;... -->
-
 {{ if hero_image }}
     {{ partial:partials/hero classes="" show_playreel="0"  }}
 {{ /if }}
@@ -13,23 +12,28 @@
             {{ grid }}
                 <div class="block {{ !last ?= 'pb-12' }} md:flex ">
                     <div class="w-full mbb-4 md:mb-0 md:w-3/12">
-                        <h2 class="text-dark font-black leading-tight text-4xl dark:text-light">{{ title }}</h2>
+                        <h2 class="text-4xl font-black leading-tight text-dark dark:text-light">{{ title }}</h2>
                     </div>
 
                     <div class="w-full md:w-1/12"></div>
 
                     <div class="w-full pb-12 ml-0 {{ !last ?= 'border-b border-light-grey' }} md:w-6/12">
-                        <div class="text-xl pb-8">
+                        <div class="pb-8 text-xl">
                             {{ text }}
                         </div>
                         {{ if bold_text }}
-                            <div class="pb-8 font-bold text-xl">
+                            <div class="pb-8 text-xl font-bold">
                                 <strong>{{ bold_text }}</strong>
                             </div>
                         {{ /if }}
                         <div class="content blog__post">
                             {{ bottom_text}}
                         </div>
+                        {{ if coll_image }}
+                            <div class="w-full mt-2 coll-image">
+                                <img class="" src="{{ coll_image }}" alt="" srcset="">
+                            </div>
+                        {{ /if }}
                     </div>
                 </div>
             {{ /grid}}
