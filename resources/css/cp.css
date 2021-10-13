@@ -33,7 +33,7 @@ h6 {
 }
 
 /* Modifys all the links in the menu */
-ul > li > a {
+.nav-main ul > li > a {
   background-color: var(--primary);
   color: var(--secondary);
   padding: 4px 10px 4px 10px !important; 
@@ -44,13 +44,13 @@ ul > li > a {
 }
 
 /* Hover effect */
-ul > li > a:hover {
+.nav-main ul > li > a:hover {
   background: linear-gradient(90deg,var(--third),var(--secondary));
   color: var(--primary) !important;
   margin-left: -.5rem;
 }
 
-ul > li.current > a {
+.nav-main ul > li.current > a {
   background-color: var(--third);
   color: white !important;
   margin-left: -.5rem;
@@ -108,4 +108,23 @@ ul > li.current > a {
 
 .forgot-password-link {
   color: var(--primary) !important;
+}
+
+.pagination {
+  border-radius: 10px!important;
+}
+
+.pagination li.current a {
+  background-color: var(--primary);
+  color:var(--secondary)!important;
+  text-align: center;
+  /* padding-left: 20px; */
+ }
+
+ .pagination li a:hover {
+  background-color: var(--secondary)!important;
+  margin-left: 0!important;
+  color: var(--primary)!important;
+  overflow: hidden;
+  
 }
