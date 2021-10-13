@@ -66,7 +66,7 @@
         background: linear-gradient(90deg, theme('colors.yellow') 65%, theme('colors.dark') 65%);
     }
     .bg-gradient-blue-to-light {
-        background: linear-gradient(0deg, theme('colors.light') 30%, theme('colors.blue') 30%);
+        background: linear-gradient(0deg, theme('colors.light') 30%, rgba(255,199,52,1) 30%);
     }
     .bg-gradient-transparent-to-yellow {
         background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
@@ -75,7 +75,7 @@
 
     .dark {
         .bg-gradient-blue-to-light {
-            background: linear-gradient(0deg, theme('colors.dark') 30%, theme('colors.blue') 30%);
+            background: linear-gradient(0deg, theme('colors.dark') 30%, rgba(255,199,52,1) 30%);
         }
         /* very specific, sould have a better way */
         .md\:bg-gradient-transparent-to-yellow {
