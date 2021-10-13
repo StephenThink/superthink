@@ -54,9 +54,9 @@
         </div>
     {{ /if}}
 
-    {{ if type == 'slider' }} 
+    {{# {{ if type == 'slider' }} 
         {{ partial:partials/slider custom-height="416" custom-width="740" }} 
-    {{ /if }}
+    {{ /if }} #}}
 
     {{ if type == "the_idea"}}
         <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
@@ -90,7 +90,7 @@
 
 {{ main_content }}
         {{ if type == 'slider' }} 
-            {{ partial:partials/slider }} 
+            {{ partial:partials/slider custom-height="416" custom-width="740"}} 
         {{ /if }}
     {{ if type == 'gallery'}}
         <div class="main__panel_small bg-light dark:bg-dark">
