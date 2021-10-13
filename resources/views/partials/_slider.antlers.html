@@ -6,7 +6,8 @@
         <div class="w-full h-full swiper-container my-7 md:w-8/12">
             <div class="swiper-wrapper">
                 {{ images }}
-                    <div class="bg-center bg-cover swiper-slide " style="height: {{ height }}px; background-image:url('{{ url }}')"></div>
+
+                    <div class="bg-center bg-cover swiper-slide " style="{{ if custom-width }}width: {custom-width}px!important;{{/if}} height: {{ custom-height > 1 ? {custom-height} : {height} }}px; background-image:url('{{ url }}')"></div>
                 {{ /images }}
             </div>
             <div class="relative bottom-0 flex items-center justify-between mt-1">
