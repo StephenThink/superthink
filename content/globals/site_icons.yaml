@@ -1,1 +1,5 @@
 title: 'Site Icons'
+data:
+  by32: icons/cropped-site-icon-2-32x32.png
+  by192: icons/cropped-site-icon-2-192x192.png
+  apple_touch: icons/cropped-site-icon-2-180x180.png

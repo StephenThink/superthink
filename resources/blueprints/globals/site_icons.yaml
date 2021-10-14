@@ -7,7 +7,7 @@ sections:
         field:
           mode: list
           container: assets
-          folder: /
+          folder: icons
           restrict: false
           allow_uploads: true
           show_filename: true
@@ -17,6 +17,7 @@ sections:
           icon: assets
           listable: hidden
           instructions_position: above
+          instructions: 'This should be a picture 32 x 32'
       -
         handle: by192
         field:
@@ -32,6 +33,7 @@ sections:
           icon: assets
           listable: hidden
           instructions_position: above
+          instructions: 'This should be a image 192 x 192'
       -
         handle: apple_touch
         field:
