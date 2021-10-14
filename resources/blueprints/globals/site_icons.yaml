@@ -1,0 +1,49 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: by32
+        field:
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: By32
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+      -
+        handle: by192
+        field:
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: By192
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+      -
+        handle: apple_touch
+        field:
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Apple Touch'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
