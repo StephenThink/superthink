@@ -18,11 +18,11 @@
                     <div class="w-full md:w-1/12"></div>
 
                     <div class="w-full pb-12 ml-0 {{ !last ?= 'border-b border-light-grey' }} md:w-6/12">
-                        <div class="pb-8 text-xl">
+                        <div class="pb-4 text-xl">
                             {{ text }}
                         </div>
                         {{ if bold_text }}
-                            <div @click="open = ! open" @click.outside="open = false" class="flex justify-between pb-8 text-xl font-bold">
+                            <div @click="open = ! open" @click.outside="open = false" class="flex justify-between pb-4 text-xl font-bold">
                                 <div><strong>{{ bold_text }}</strong></div>
                                 <div class="transition duration-500 ease-in-out origin-center transform" :class="!open ? '' : '-rotate-45'" >{{ partial:partials/plus }}</div>
                             </div>
