@@ -804,3 +804,10 @@ input#store:checked ~ .toggle-dot {
     opacity: 0.2;
     @apply mx-1;
   }
+
+
+/* Dark Mode Experiment */
+
+.test {
+    filter: invert(0);
+}

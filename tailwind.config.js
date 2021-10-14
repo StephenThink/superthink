@@ -36,6 +36,7 @@ module.exports = {
       }
     }
   },
+  darkMode: 'media',
   darkMode: 'class',
   theme: {
     container: {
@@ -57,6 +58,7 @@ module.exports = {
       medium: ['geo-medium']
     },
     extend: {
+      img: ['dark'],
       keyframes: {
         'wiggle': {
         '0%, 100%': { transform: 'rotate(-2deg)' },

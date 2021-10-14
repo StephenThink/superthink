@@ -130,7 +130,7 @@ var alertLoser = function alertLoser(loser) {
 
   (0,_roulette__WEBPACK_IMPORTED_MODULE_1__.clearOutBrewMakers)(); // theWheel.clearCanvas();
 
-  (0,_components_message__WEBPACK_IMPORTED_MODULE_0__["default"])("Get the kettle on...", loser.text);
+  (0,_components_message__WEBPACK_IMPORTED_MODULE_0__.default)("Get the kettle on...", loser.text);
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (alertLoser);
@@ -175,13 +175,13 @@ var getNames = function getNames() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "initWheelFunc": () => (/* reexport safe */ _initWheelFunc__WEBPACK_IMPORTED_MODULE_0__["default"]),
-/* harmony export */   "toggleNameAdder": () => (/* reexport safe */ _toggleNameAdder__WEBPACK_IMPORTED_MODULE_1__["default"]),
-/* harmony export */   "alertLoser": () => (/* reexport safe */ _alertLoser__WEBPACK_IMPORTED_MODULE_2__["default"]),
-/* harmony export */   "getNames": () => (/* reexport safe */ _getNames__WEBPACK_IMPORTED_MODULE_3__["default"]),
-/* harmony export */   "spinSpinSpin": () => (/* reexport safe */ _spinSpinSpin__WEBPACK_IMPORTED_MODULE_4__["default"]),
-/* harmony export */   "nameToList": () => (/* reexport safe */ _nameToList__WEBPACK_IMPORTED_MODULE_5__["default"]),
-/* harmony export */   "clearOutBrewMakers": () => (/* reexport safe */ _ClearOutBrewMakers__WEBPACK_IMPORTED_MODULE_6__["default"]),
+/* harmony export */   "initWheelFunc": () => (/* reexport safe */ _initWheelFunc__WEBPACK_IMPORTED_MODULE_0__.default),
+/* harmony export */   "toggleNameAdder": () => (/* reexport safe */ _toggleNameAdder__WEBPACK_IMPORTED_MODULE_1__.default),
+/* harmony export */   "alertLoser": () => (/* reexport safe */ _alertLoser__WEBPACK_IMPORTED_MODULE_2__.default),
+/* harmony export */   "getNames": () => (/* reexport safe */ _getNames__WEBPACK_IMPORTED_MODULE_3__.default),
+/* harmony export */   "spinSpinSpin": () => (/* reexport safe */ _spinSpinSpin__WEBPACK_IMPORTED_MODULE_4__.default),
+/* harmony export */   "nameToList": () => (/* reexport safe */ _nameToList__WEBPACK_IMPORTED_MODULE_5__.default),
+/* harmony export */   "clearOutBrewMakers": () => (/* reexport safe */ _ClearOutBrewMakers__WEBPACK_IMPORTED_MODULE_6__.default),
 /* harmony export */   "theWheel": () => (/* reexport safe */ _theWheel__WEBPACK_IMPORTED_MODULE_7__.theWheel),
 /* harmony export */   "start": () => (/* reexport safe */ _theWheel__WEBPACK_IMPORTED_MODULE_7__.start)
 /* harmony export */ });
@@ -225,9 +225,9 @@ __webpack_require__.r(__webpack_exports__);
 var initWheelFunc = function initWheelFunc() {
   // let nameToList = document.querySelector('.addNameToList');
   // let names = nameToList.querySelectorAll('li');
-  var segments = (0,_getNames__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  var segments = (0,_getNames__WEBPACK_IMPORTED_MODULE_1__.default)();
   (0,_theWheel__WEBPACK_IMPORTED_MODULE_0__.start)(segments);
-  (0,_toggleNameAdder__WEBPACK_IMPORTED_MODULE_2__["default"])(true);
+  (0,_toggleNameAdder__WEBPACK_IMPORTED_MODULE_2__.default)(true);
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initWheelFunc);
@@ -254,7 +254,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var nameToList = function nameToList() {
   var input = document.querySelector('.addNewName');
-  if ((0,_getNames__WEBPACK_IMPORTED_MODULE_1__["default"])().length >= 50) return (0,_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("You can't play with any more people");
+  if ((0,_getNames__WEBPACK_IMPORTED_MODULE_1__.default)().length >= 50) return (0,_components_message__WEBPACK_IMPORTED_MODULE_2__.default)("You can't play with any more people");
   if (input.value == '') return false; // Get the element we're gonna push the data to.
 
   var ul = document.getElementById("names"); // create elements
@@ -270,7 +270,7 @@ var nameToList = function nameToList() {
   name_span.setAttribute('class', 'name');
   delete_span.setAttribute('class', 'text-2xl leading-none cursor-pointer'); // add an event listener
 
-  delete_span.addEventListener('click', _removeNameFromList__WEBPACK_IMPORTED_MODULE_0__["default"]); //  append chilren
+  delete_span.addEventListener('click', _removeNameFromList__WEBPACK_IMPORTED_MODULE_0__.default); //  append chilren
 
   name_span.appendChild(name);
   delete_span.appendChild(cross);
@@ -304,7 +304,7 @@ var removeNameFromList = function removeNameFromList(e) {
   var names = document.querySelectorAll('#names > li');
 
   if (names.length <= 2) {
-    return (0,_components_message__WEBPACK_IMPORTED_MODULE_0__["default"])("You can't have less than 2 brew makers");
+    return (0,_components_message__WEBPACK_IMPORTED_MODULE_0__.default)("You can't have less than 2 brew makers");
   }
 
   var el = e.target;
@@ -337,21 +337,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var spinSpinSpin = function spinSpinSpin() {
-  var names = (0,_getNames__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  var names = (0,_getNames__WEBPACK_IMPORTED_MODULE_1__.default)();
   var items = _theWheel__WEBPACK_IMPORTED_MODULE_0__.theWheel.numSegments;
 
   if (items < 1 || names.length <= 0) {
-    (0,_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("You can't spin without any brew makers");
+    (0,_components_message__WEBPACK_IMPORTED_MODULE_2__.default)("You can't spin without any brew makers");
     return;
   }
 
   if (names.length <= 0) {
-    (0,_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("Something isn't right. Try adding some brew makers.");
+    (0,_components_message__WEBPACK_IMPORTED_MODULE_2__.default)("Something isn't right. Try adding some brew makers.");
     return;
   }
 
   if (items == 1) {
-    (0,_components_message__WEBPACK_IMPORTED_MODULE_2__["default"])("Flying solo? Get the kettle on <span class=\"font-bold\">".concat(names[0].text, "</span>"));
+    (0,_components_message__WEBPACK_IMPORTED_MODULE_2__.default)("Flying solo? Get the kettle on <span class=\"font-bold\">".concat(names[0].text, "</span>"));
     return;
   }
 
@@ -402,7 +402,7 @@ var start = function start() {
       'type': 'spinToStop',
       'duration': 6,
       'spins': 10,
-      'callbackFinished': _alertLoser__WEBPACK_IMPORTED_MODULE_1__["default"]
+      'callbackFinished': _alertLoser__WEBPACK_IMPORTED_MODULE_1__.default
     } // 'pointerGuide'  :{
     //     'display'     : true,
     //     'strokeStyle' : 'red',
@@ -441,7 +441,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var toggleNameAdder = function toggleNameAdder(close) {
-  var tl = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline();
+  var tl = gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();
   if (tl.isActive()) return false;
   var panel = document.querySelector('.addNamesPanel');
   var state = panel.dataset.state;
@@ -9312,11 +9312,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_toastify_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_toastify_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_toastify_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_toastify_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
