@@ -53,6 +53,16 @@ sections:
           listable: hidden
           display: Sector
       -
+        handle: short_blog
+        field:
+          default: false
+          display: 'Short Blog'
+          type: toggle
+          icon: toggle
+          instructions: 'If you only want to display one paragraph.'
+          listable: hidden
+          instructions_position: above
+      -
         handle: main_content
         field:
           always_show_set_button: false

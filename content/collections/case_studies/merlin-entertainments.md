@@ -10,7 +10,7 @@ sector:
   - Aerospace
   - Defence
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1634128955
+updated_at: 1634305962
 main_content:
   -
     type: paragraph
@@ -94,4 +94,5 @@ services_filter:
   - creative-design
 core:
   - strategy
+short_case: true
 ---

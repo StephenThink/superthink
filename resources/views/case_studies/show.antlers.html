@@ -58,29 +58,33 @@
         {{ partial:partials/slider custom-height="416" custom-width="740" }} 
     {{ /if }} #}}
 
-    {{ if type == "the_idea"}}
-        <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
-            <div class="container flex">
-                <div class="w-full mx-auto md:w-8/12">
-                    <h2 class="text-4xl font-black">The Idea</h2>
-                    <p class="w-full mt-4 md:w-10/12">{{ intro }}</p>
+    {{ if short_case != true }}
+
+        {{ if type == "the_idea"}}
+            <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
+                <div class="container flex">
+                    <div class="w-full mx-auto md:w-8/12">
+                        <h2 class="text-4xl font-black">The Idea</h2>
+                        <p class="w-full mt-4 md:w-10/12">{{ intro }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        {{ if intro_full_image }}
-            <div class="main__panel_x-small bg-light dark:bg-dark full_image">
-                <img src="{{ intro_full_image }}" alt="" class="object-cover w-full" loading=lazy>
-            </div>
-        {{ /if}}
+            {{ if intro_full_image }}
+                <div class="main__panel_x-small bg-light dark:bg-dark full_image">
+                    <img src="{{ intro_full_image }}" alt="" class="object-cover w-full" loading=lazy>
+                </div>
+            {{ /if}}
 
-        <div class="main__panel_small bg-light dark:bg-dark">
-            <div class="container flex">
-                <div class="w-full mx-auto md:w-8/12">
-                    <p class="w-full mt-4 md:w-10/12">{{ outro }}</p>
+            <div class="main__panel_small bg-light dark:bg-dark">
+                <div class="container flex">
+                    <div class="w-full mx-auto md:w-8/12">
+                        <p class="w-full mt-4 md:w-10/12">{{ outro }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        {{ /if }}
 
     {{ /if }}
 
@@ -90,44 +94,51 @@
 
 {{ main_content }}
         {{ if type == 'slider' }} 
-            {{ partial:partials/slider custom-height="416" custom-width="740"}} 
-        {{ /if }}
-    {{ if type == 'gallery'}}
         <div class="main__panel_small bg-light dark:bg-dark">
-            <div class="container flex">
-                <div class="w-full mx-auto md:w-8/12">
-                    <div class="flex flex-wrap -mx-2">
-                        {{ gallery }}
-                            <div class="w-1/2 p-2">
-                                <div class="relative pb-full">
-                                    <img src="{{ url }}" alt="" class="absolute object-cover w-full h-full" loading=lazy>
-                                </div>
-                                
-                            </div>
-                        {{ /gallery }}
-                    </div>
-
-                </div>
-            </div>
-        </div> 
-
-    {{ /if }}
-
-    {{ if type == 'the_work'}}
-        <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
-            <div class="container flex">
-                <div class="w-full mx-auto md:w-8/12">
-                    <h2 class="text-4xl font-black">The Work</h2>
-                    <p class="w-full mt-4 md:w-2/3">{{ intro }}</p>
-                </div>
-            </div>
+            {{ partial:partials/slider custom-height="416" custom-width="740"}} 
         </div>
+            {{ /if }}
 
+    {{ if short_case != true }}
+        {{ if type == 'gallery'}}
+            <div class="main__panel_small bg-light dark:bg-dark">
+                <div class="container flex">
+                    <div class="w-full mx-auto md:w-8/12">
+                        <div class="flex flex-wrap -mx-2">
+                            {{ gallery }}
+                                <div class="w-1/2 p-2">
+                                    <div class="relative pb-full">
+                                        <img src="{{ url }}" alt="" class="absolute object-cover w-full h-full" loading=lazy>
+                                    </div>
+                                    
+                                </div>
+                            {{ /gallery }}
+                        </div>
+
+                    </div>
+                </div>
+            </div> 
+
+        {{ /if }}
+
+        {{ if type == 'the_work'}}
+            <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
+                <div class="container flex">
+                    <div class="w-full mx-auto md:w-8/12">
+                        <h2 class="text-4xl font-black">The Work</h2>
+                        <p class="w-full mt-4 md:w-2/3">{{ intro }}</p>
+                    </div>
+                </div>
+            </div>
+
+        {{ /if }}
     {{ /if }}
 
 {{ /main_content }}
 
 {{ partial:partials/small_banner }}
+
+{{ if short_case != true }}
 
 <section class="main__panel_x-small bg-light dark:bg-dark content ">
     <div class="container flex">
@@ -137,7 +148,9 @@
     </div>
 </section>
 
-{{ partial:partials/employees padding="pt-0" justcocoa="1"}}
+{{ /if }}
+
+{{ partial:partials/employees padding="{!short_case ? 'pt-2' :'pt-0'}" justcocoa="1"}}
 
 <!--  collection next  -->
 <!-- This takes the next entry in the case studies collection and displays it, if there are no more entries then it displays the no_result -->
@@ -154,7 +167,7 @@
                 <div class="relative h-screen overflow-hidden" >
                     <span class="">
                         <div class="absolute top-0 w-full transform -translate-y-56 bg-black opacity-0 h-1/4 backdrop"></div>
-                        <img src="{{ hero_image }}" alt="" class="absolute object-cover h-full" loading=lazy>
+                        <img src="{{ hero_image }}" alt="" class="absolute object-cover h-full w-full" loading=lazy>
                         <div class="container absolute top-0 z-10 p-8 text-5xl font-black text-white transform -translate-y-56">
                             <p class="">Next project:</p>
                             <p class="mt-4 ">{{ title }}</p>
