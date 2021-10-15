@@ -1,6 +1,6 @@
 <!-- This is where we show a core service page - brand;communication;... -->
 {{ if hero_image }}
-    {{ partial:partials/hero classes="" show_playreel="0"  }}
+    {{ partial:partials/hero classes="" show_playreel="0" display={hero_title}  }}
 {{ /if }}
 
 
@@ -8,7 +8,7 @@
 
     <div class="container">
 
-        <div class="flex flex-col items-end ">
+        <div class="flex flex-col">
             {{ grid }}
                 <div x-data="{ open:false }" xcloak class="block {{ !last ?= 'pb-12' }} md:flex ">
                     <div class="w-full mbb-4 md:mb-0 md:w-3/12">

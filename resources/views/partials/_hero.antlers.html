@@ -9,9 +9,21 @@
 
     {{ if hero_image }}
 
-        {{ hero_image }}
-            <img src="{{ url }}" alt="{{ alt }}" class="h-screen w-screen object-cover {{ image_classes }}" loading=eager>
-        {{ /hero_image }}
+        {{ if video_choice == "Video" }}
+        
+        <video autoplay muted class="h-screen w-screen object-cover" src="{{ video }}"></video>
+
+        {{ else }}
+            {{ hero_image }}
+                <img src="{{ url }}" alt="{{ alt }}" class="h-screen w-screen object-cover {{ image_classes }}" loading=eager>
+            {{ /hero_image }}
+        {{ /if }}
+
+        {{ if service_tag }}
+            <div class="w-full absolute px-56 font-black leading-none fancy text-center" data-scroll data-scroll-call="fancy" >
+                {{ service_tag }}
+            </div>
+        {{ /if }}
         
     {{ else }}
     

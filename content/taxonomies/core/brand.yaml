@@ -2,7 +2,7 @@ title: Brand
 strapline: 'Help! We’re really good at what we do but nobody knows'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1634134527
+updated_at: 1634296676
 blueprint: core
 tag_line_us: 'Build a brand that makes you stand out'
 tag_line_you: 'You need a distinctive brand'
@@ -24,7 +24,7 @@ grid:
 
       Wrangling all that gets a lot easier when it all fits around one big idea. All the biggest and best brands have a core idea around which everything else sits. So we take a deep plunge into your brand strategy to find yours. Then, we bring it to life.
       Let’s get started.
-    coll_image: 3-BAE.jpg
+    coll_image: null
   -
     title: 'Brand Identity Creation'
     text: 'New. Pre-loved. A bit of a mess. Wherever you’re at with your brand identity, we’re ready to give it a creative shot in the arm.'
@@ -84,3 +84,4 @@ grid:
     bold_text: null
     bottom_text: null
     coll_image: null
+service_tag: 'What’s the big idea?'
