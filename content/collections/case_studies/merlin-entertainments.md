@@ -10,7 +10,7 @@ sector:
   - Aerospace
   - Defence
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1634305962
+updated_at: 1634306677
 main_content:
   -
     type: paragraph
@@ -95,4 +95,5 @@ services_filter:
 core:
   - strategy
 short_case: true
+short_para_title: 'Short Title'
 ---

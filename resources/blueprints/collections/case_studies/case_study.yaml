@@ -53,15 +53,30 @@ sections:
           listable: hidden
           display: Sector
       -
-        handle: short_blog
+        handle: short_case
         field:
           default: false
-          display: 'Short Blog'
+          display: 'Short Case'
           type: toggle
           icon: toggle
           instructions: 'If you only want to display one paragraph.'
           listable: hidden
           instructions_position: above
+          width: 33
+      -
+        handle: short_para_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Short Para Title'
+          type: text
+          icon: text
+          instructions: 'This will be displayed as a custom Header'
+          listable: hidden
+          instructions_position: above
+          if:
+            short_case: 'equals true'
+          width: 50
       -
         handle: main_content
         field:
