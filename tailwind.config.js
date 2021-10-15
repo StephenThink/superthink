@@ -8,6 +8,7 @@ module.exports = {
     options: {
       safelist: {
         standard : [
+          'target-filter',
           'job__heading',
           'think-toast', 
           'think-loser-toast',
@@ -36,7 +37,6 @@ module.exports = {
       }
     }
   },
-  darkMode: 'media',
   darkMode: 'class',
   theme: {
     container: {
@@ -58,7 +58,7 @@ module.exports = {
       medium: ['geo-medium']
     },
     extend: {
-      img: ['dark'],
+      filter: ['dark'],
       keyframes: {
         'wiggle': {
         '0%, 100%': { transform: 'rotate(-2deg)' },

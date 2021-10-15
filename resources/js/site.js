@@ -52,6 +52,8 @@ document.addEventListener("touchstart", function() {}, true);
 // Manually toggle light siwtch. 
 var lightswitch = document.querySelector('.switch');
 var html = document.getElementsByTagName('html')[0];
+var TF = document.querySelector('.target-filter');
+
 
 lightswitch.addEventListener('click', function(e) { 
 
@@ -59,6 +61,7 @@ lightswitch.addEventListener('click', function(e) {
         // dark mode needs turning off. 
         e.target.classList.remove('on');
         html.classList.remove('dark');
+        TF.classList.remove('invert');
         localStorage.setItem('thinkcreative.theme', 'light');
 
         return;
@@ -66,6 +69,7 @@ lightswitch.addEventListener('click', function(e) {
 
     e.target.classList.add('on');
     html.classList.add('dark');
+    TF.classList.add('invert');
     localStorage.setItem('thinkcreative.theme', 'dark');
 
 });

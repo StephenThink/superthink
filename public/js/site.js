@@ -3890,17 +3890,20 @@ document.addEventListener("touchstart", function () {}, true); // Manually toggl
 
 var lightswitch = document.querySelector('.switch');
 var html = document.getElementsByTagName('html')[0];
+var TF = document.querySelector('.target-filter');
 lightswitch.addEventListener('click', function (e) {
   if (html.classList.contains('dark')) {
     // dark mode needs turning off. 
     e.target.classList.remove('on');
     html.classList.remove('dark');
+    TF.classList.remove('invert');
     localStorage.setItem('thinkcreative.theme', 'light');
     return;
   }
 
   e.target.classList.add('on');
   html.classList.add('dark');
+  TF.classList.add('invert');
   localStorage.setItem('thinkcreative.theme', 'dark');
 }); // watch for Dark mode on the system, only when it's changed.
 
