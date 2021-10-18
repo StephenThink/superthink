@@ -1,9 +1,10 @@
 ---
+id: 245b90b3-1382-45b2-8ea4-5ab7469ea872
+blueprint: contact
 title: Contact
 template: pages/contact
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1616061756
-blueprint: contact
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1634547382
 slogan: 'Let’s work together'
 written_address: 'We live in a house! You can come and visit us in number 32 Blackpool Road, just on the outskirts of Blackpool.'
 images:
@@ -14,12 +15,12 @@ images:
     enabled: true
   -
     image: contact/Screenshot-2020-09-15-at-18.46.42.png
-    width: flex-50
+    width: flex-33
     type: new_set
     enabled: true
   -
     image: contact/Screenshot-2020-09-15-at-18.46.49.png
-    width: flex-50
+    width: flex-66
     type: new_set
     enabled: true
 maps_link: 'https://goo.gl/maps/EHSDYWYBapw'
@@ -29,5 +30,4 @@ jobs_email_intro: 'Want to work for us?'
 seo:
   title: 'Contact Us'
   site_name_position: before
-id: 245b90b3-1382-45b2-8ea4-5ab7469ea872
 ---

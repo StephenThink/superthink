@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: {
     content: [
       './public/assets/svgs/*.svg',
@@ -8,6 +9,8 @@ module.exports = {
     options: {
       safelist: {
         standard : [
+          'flex-50',
+          'award',
           'target-filter',
           'job__heading',
           'think-toast', 
@@ -128,7 +131,7 @@ module.exports = {
       fontSize: {
         "display-hero": "7rem",
         "2:5-xl": "1.25rem",
-        "4:5xl": "2.5rem",
+        "award": "2.5rem",
         "7xl": "5rem",
         "10xl": "6rem",
         "14xl": "7rem",
