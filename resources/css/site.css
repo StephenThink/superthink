@@ -126,16 +126,35 @@
     margin-right: -5.5rem;
 
     @screen md {
+        width: 300px;
+    }
+
+    @screen lg {
+        width: 400px;
+        margin-top: -9.5rem;
+        margin-right: -5.5rem;
+    }
+
+    @screen xl {
         width: 450px;
-        margin-top: -9rem;
-        margin-right: -9rem;
+        margin-top: -9.5rem;
+        margin-right: -5.5rem;
     }
 }
 .small_bubble_banner {
     height: 200%;
     top: -50%;
 }
+.bubbles-svg-nav {
+    width: 250px;
+    margin-top: -5.5rem;
+    margin-right: -5.5rem;
+    overflow: hidden;
 
+    @screen lg {
+        width: 450px;
+    }
+}
 .handle {
     & .syp {
         width: max-content;
@@ -805,9 +824,3 @@ input#store:checked ~ .toggle-dot {
     @apply mx-1;
   }
 
-
-/* Dark Mode Experiment */
-
-.test {
-    filter: invert(0);
-}

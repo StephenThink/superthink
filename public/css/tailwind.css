@@ -724,9 +724,25 @@ video {
 @media (min-width: 768px) {
 
 .bubbles-svg {
+        width: 300px
+}
+    }
+
+@media (min-width: 1024px) {
+
+.bubbles-svg {
+        width: 400px;
+        margin-top: -9.5rem;
+        margin-right: -5.5rem
+}
+    }
+
+@media (min-width: 1280px) {
+
+.bubbles-svg {
         width: 450px;
-        margin-top: -9rem;
-        margin-right: -9rem
+        margin-top: -9.5rem;
+        margin-right: -5.5rem
 }
     }
 
@@ -734,6 +750,20 @@ video {
     height: 200%;
     top: -50%;
 }
+
+.bubbles-svg-nav {
+    width: 250px;
+    margin-top: -5.5rem;
+    margin-right: -5.5rem;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+
+.bubbles-svg-nav {
+        width: 450px
+}
+    }
 
 .handle .syp {
         width: -webkit-max-content;
@@ -1580,12 +1610,6 @@ input#store:checked ~ .toggle-dot {
     margin-right: 0.25rem;
   }
 
-/* Dark Mode Experiment */
-
-.test {
-    filter: invert(0);
-}
-
 .container {
 	width: 100%;
 	margin-right: auto;
@@ -2088,10 +2112,6 @@ input#store:checked ~ .toggle-dot {
 	height: 2rem;
 }
 
-.h-2\/3 {
-	height: 66.666667%;
-}
-
 .h-6 {
 	height: 1.5rem;
 }
@@ -2224,14 +2244,6 @@ input#store:checked ~ .toggle-dot {
 	max-width: 500px;
 }
 
-.flex-100 {
-	flex: 1 0 100%;
-}
-
-.flex-1 {
-	flex: 1 1 0%;
-}
-
 .flex-50 {
 	flex: 1 0 50%;
 }
@@ -2242,6 +2254,14 @@ input#store:checked ~ .toggle-dot {
 
 .flex-66 {
 	flex: 1 0 66%;
+}
+
+.flex-100 {
+	flex: 1 0 100%;
+}
+
+.flex-1 {
+	flex: 1 1 0%;
 }
 
 .flex-grow {
@@ -2923,7 +2943,7 @@ input#store:checked ~ .toggle-dot {
 }
 
 .text-7xl {
-	font-size: 5rem;
+	font-size: 4rem;
 }
 
 .text-\[2\.5rem\] {
@@ -3662,7 +3682,7 @@ input#store:checked ~ .toggle-dot {
 	}
 
 	.md\:text-7xl {
-		font-size: 5rem;
+		font-size: 4rem;
 	}
 
 	.md\:text-18xl {
@@ -3702,10 +3722,6 @@ input#store:checked ~ .toggle-dot {
 
 	.lg\:ml-64 {
 		margin-left: 16rem;
-	}
-
-	.lg\:block {
-		display: block;
 	}
 
 	.lg\:h-full {

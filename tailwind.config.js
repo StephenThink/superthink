@@ -51,6 +51,7 @@ module.exports = {
         md: '720px',
         lg: '960px',
         xl: '1140px',
+        
       }
     },
     fontFamily: {
@@ -61,6 +62,10 @@ module.exports = {
       medium: ['geo-medium']
     },
     extend: {
+      screens: {
+        // 'ipadPro': {'min': '541px', 'max': '1024px'},
+        // 'portrait': {'raw': '(orientation: portrait)'},
+      },
       filter: ['dark'],
       keyframes: {
         'wiggle': {
@@ -81,7 +86,6 @@ module.exports = {
         "half-screen" : '50vw'
       },
       spacing: {
-
         "1px" : "1px",
         "screen": "100vw",
         handle: "5rem",
@@ -132,7 +136,7 @@ module.exports = {
         "display-hero": "7rem",
         "2:5-xl": "1.25rem",
         "award": "2.5rem",
-        "7xl": "5rem",
+        "7xl": "4rem",
         "10xl": "6rem",
         "14xl": "7rem",
         "18xl": "8rem"
