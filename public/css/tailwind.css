@@ -1610,6 +1610,12 @@ input#store:checked ~ .toggle-dot {
     margin-right: 0.25rem;
   }
 
+/* Filter invert */
+
+.sjinvert {
+    filter: invert(100%);
+}
+
 .container {
 	width: 100%;
 	margin-right: auto;
@@ -1812,10 +1818,6 @@ input#store:checked ~ .toggle-dot {
 
 .order-3 {
 	order: 3;
-}
-
-.-m-4 {
-	margin: -1rem;
 }
 
 .m-auto {
@@ -2508,12 +2510,6 @@ input#store:checked ~ .toggle-dot {
 	margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-	margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .self-start {
 	align-self: flex-start;
 }
@@ -2845,10 +2841,6 @@ input#store:checked ~ .toggle-dot {
 
 .pt-2 {
 	padding-top: 0.5rem;
-}
-
-.pr-6 {
-	padding-right: 1.5rem;
 }
 
 .pt-16 {
@@ -3434,6 +3426,10 @@ input#store:checked ~ .toggle-dot {
 		position: fixed;
 	}
 
+	.md\:-m-4 {
+		margin: -1rem;
+	}
+
 	.md\:mx-0 {
 		margin-left: 0px;
 		margin-right: 0px;
@@ -3640,6 +3636,10 @@ input#store:checked ~ .toggle-dot {
 	.md\:py-0 {
 		padding-top: 0px;
 		padding-bottom: 0px;
+	}
+
+	.md\:pr-6 {
+		padding-right: 1.5rem;
 	}
 
 	.md\:pr-16 {

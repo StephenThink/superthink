@@ -9,6 +9,8 @@ module.exports = {
     options: {
       safelist: {
         standard : [
+          'filter',
+          'invert',
           'flex-50',
           'award',
           'target-filter',

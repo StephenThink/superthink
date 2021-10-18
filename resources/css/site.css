@@ -824,3 +824,8 @@ input#store:checked ~ .toggle-dot {
     @apply mx-1;
   }
 
+/* Filter invert */
+
+.sjinvert {
+    filter: invert(100%);
+}
