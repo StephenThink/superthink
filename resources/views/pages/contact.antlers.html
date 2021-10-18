@@ -70,7 +70,14 @@
 
 <div class="flex flex-wrap">
     {{ images }}
-        <div class="{{ width }}">
+        <div class="
+        {{ if width == 'flex-50'}}w-1/2{{ else }}
+            {{ if width == 'flex-33'}}w-1/3{{ else }}
+                {{ if width == 'flex-66'}}w-2/3{{ else }}
+                    {{width}}
+                {{ /if }}
+            {{ /if }}
+        {{ /if }}">
             <img src="{{ image }}" alt="" class="object-cover h-full w-full" loading=lazy>
         </div>
     {{ /images }}
