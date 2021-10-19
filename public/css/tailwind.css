@@ -3671,6 +3671,11 @@ input#store:checked ~ .toggle-dot {
 		padding-bottom: 0px;
 	}
 
+	.md\:px-56 {
+		padding-left: 14rem;
+		padding-right: 14rem;
+	}
+
 	.md\:pr-6 {
 		padding-right: 1.5rem;
 	}
