@@ -3902,8 +3902,8 @@ lightswitch.addEventListener('click', function (e) {
     } catch (_unused) {}
 
     ;
-    localStorage.setItem('thinkcreative.theme', 'light');
-    console.log("Back to the Light");
+    localStorage.setItem('thinkcreative.theme', 'light'); // console.log("Back to the Light");
+
     return;
   }
 
@@ -3915,8 +3915,7 @@ lightswitch.addEventListener('click', function (e) {
   } catch (_unused2) {}
 
   ;
-  localStorage.setItem('thinkcreative.theme', 'dark');
-  console.log("Step back into the Dark");
+  localStorage.setItem('thinkcreative.theme', 'dark'); // console.log("Step back into the Dark");
 }); // watch for Dark mode on the system, only when it's changed.
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (event) {
@@ -3941,8 +3940,7 @@ if (localStorage['thinkcreative.theme'] === 'dark' || !('thinkcreative.theme' in
     TF.classList.add('sjinvert');
   } catch (_unused3) {}
 
-  ;
-  console.log("Dark");
+  ; // console.log("Dark");
 } else {
   html.classList.remove('dark');
   lightswitch.classList.remove('on');
@@ -3951,8 +3949,7 @@ if (localStorage['thinkcreative.theme'] === 'dark' || !('thinkcreative.theme' in
     TF.classList.remove('sjinvert');
   } catch (_unused4) {}
 
-  ;
-  console.log("Light");
+  ; // console.log("Light");
 } //  Always be at the top when entering the page.
 // barba.hooks.enter(() => {
 //     window.scrollTo(0, 0);

@@ -3,9 +3,9 @@
 <section class="main__panel bg-light dark:bg-dark job__heading">
     <div class="container">
         <div class="flex flex-wrap -mx-4">
-            <div class="w-3/12"></div>
+            <div class=hidden md:block w-3/12"></div>
 
-            <div class="w-6/12">
+            <div class="md:w-6/12">
                 <h1>About the role</h1>
                 
                 <div class="mt-8">{{ introduction | nl2br }}</div>
@@ -51,7 +51,7 @@
 
                 <div class="mt-8">
                     <a href="/apply/{{ slug }}" class="w-100 hover-button mt-8 md:mt-0 ">
-                        {{ partial:partials.hover_button text="Apply for the { title } role" class="text-yellow bg-dark dark:text-dark dark:bg-light" }}
+                        {{ partial:partials.hover_button text="Apply for the { title } role" class="text-yellow bg-dark dark:text-dark dark:bg-light text-center" }}
                     </a>
                 </div>
 

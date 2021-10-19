@@ -63,7 +63,7 @@ lightswitch.addEventListener('click', function(e) {
         html.classList.remove('dark');
         try {TF.classList.remove('sjinvert');}catch{};
         localStorage.setItem('thinkcreative.theme', 'light');
-        console.log("Back to the Light");
+        // console.log("Back to the Light");
         return;
     }
 
@@ -71,7 +71,7 @@ lightswitch.addEventListener('click', function(e) {
     html.classList.add('dark');
     try {TF.classList.add('sjinvert');}catch{};
     localStorage.setItem('thinkcreative.theme', 'dark');
-    console.log("Step back into the Dark");
+    // console.log("Step back into the Dark");
 
 });
 
@@ -98,13 +98,13 @@ if (localStorage['thinkcreative.theme'] === 'dark' || (!('thinkcreative.theme' i
     lightswitch.classList.add('on');
     try {TF.classList.add('sjinvert');}catch{};
 
-    console.log("Dark");
+    // console.log("Dark");
 
 } else {
     html.classList.remove('dark');
     lightswitch.classList.remove('on');
     try {TF.classList.remove('sjinvert');}catch{};
-    console.log("Light");
+    // console.log("Light");
 
 }
 
