@@ -838,3 +838,7 @@ input#store:checked ~ .toggle-dot {
     filter: invert(100%);
 }
 
+/* Mobile Spacing on things */
+.mobile-gap {
+    @apply pt-4 md:pt-0;
+}

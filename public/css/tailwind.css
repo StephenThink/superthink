@@ -1628,6 +1628,19 @@ input#store:checked ~ .toggle-dot {
     filter: invert(100%);
 }
 
+/* Mobile Spacing on things */
+
+.mobile-gap {
+	padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+
+	.mobile-gap {
+		padding-top: 0px;
+	}
+}
+
 .container {
 	width: 100%;
 	margin-right: auto;
@@ -2883,12 +2896,12 @@ input#store:checked ~ .toggle-dot {
 	padding-top: 8rem;
 }
 
-.pb-2 {
-	padding-bottom: 0.5rem;
-}
-
 .pt-4 {
 	padding-top: 1rem;
+}
+
+.pb-2 {
+	padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -3489,10 +3502,6 @@ input#store:checked ~ .toggle-dot {
 
 	.md\:block {
 		display: block;
-	}
-
-	.md\:inline {
-		display: inline;
 	}
 
 	.md\:flex {

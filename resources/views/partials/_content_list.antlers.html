@@ -6,7 +6,7 @@
                 <!-- If the require_count is true then it will show a number before the header / title -->
                 <h2 class="text-4xl font-black leading-tight text-dark dark:text-light">{{ if require_count }}{{ data | count }} {{ /if }}{{ header }}</h2>
             </div>
-            <div class="w-full ml-auto text-xl md:w-8/12">
+            <div class="w-full ml-auto text-xl md:w-8/12 mobile-gap">
                 {{ text }}
             </div>
         </div>
