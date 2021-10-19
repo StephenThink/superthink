@@ -1,5 +1,6 @@
 <div class="w-full mt-8">
-    {{ entries  limit="3" sort="random" as="results" }}
+    {{ entries  limit="3" sort="date:asc" as="results" }}
+    
         <div class="flex items-end justify-between">
             <h2 class="font-black font-base text-2xl">{{ header }}</h2>
             {{ if ! no_results }}
