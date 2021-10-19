@@ -7,15 +7,13 @@
         </div>
         <div class="w-8/12 mr-auto px-4">
             <h4 class="text-lg md:text-xl font-bold w-full md:w-7/12">Thanks for reading. Want more intel? Get Bruce the Moose in your inbox.</h4>
-            <div class="mt-6">
-                <form action="" class="flex flex-col md:flex-row ">
-                    <input type="text" class="appearance-none outline-none bg-transparent border-b border-dark placeholder-dark pb-4 flex-1" placeholder="Sign up for our newsletter... ">
-                    <button type="submit" class="w-100 hover-button mt-8 md:mt-0 ">
-                            {{ partial:partials.hover_button text="Sign up" class="text-dark bg-yellow" }}
-                    </button>
-                </form>
+            <div class="hidden md:block mt-6">
+                    {{ partial:partials/thinking/hulk_submit }}
             </div>
         </div>
-
+        
     </div>
+            <div class="w-10/12 md:hidden mt-6 mx-auto" >
+                {{ partial:partials/thinking/hulk_submit }}
+            </div>
 </div>

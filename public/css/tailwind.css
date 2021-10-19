@@ -2271,6 +2271,10 @@ input#store:checked ~ .toggle-dot {
 	width: 1.25rem;
 }
 
+.w-10\/12 {
+	width: 83.333333%;
+}
+
 .max-w-500 {
 	max-width: 500px;
 }
