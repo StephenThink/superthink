@@ -9,6 +9,7 @@ module.exports = {
     options: {
       safelist: {
         standard : [
+          'swiper-pagination-bullet',
           'filter',
           'invert',
           'flex-50',

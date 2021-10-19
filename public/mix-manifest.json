@@ -1,8 +1,8 @@
 {
-    "/js/site.js": "/js/site.js?id=aa2e03995dbf2f02c35d",
-    "/js/tea.js": "/js/tea.js?id=712584384dc471cd81bf",
-    "/js/santa.js": "/js/santa.js?id=f14a8489a80161c6b1bf",
-    "/vendor/app/js/cp.js": "/vendor/app/js/cp.js?id=d41d8cd98f00b204e980",
-    "/vendor/app/css/cp.css": "/vendor/app/css/cp.css?id=c157d4b8a4eb0d97f436",
-    "/css/tailwind.css": "/css/tailwind.css?id=580e47e5d216213104fa"
+    "/js/site.js": "/js/site.js",
+    "/js/tea.js": "/js/tea.js",
+    "/js/santa.js": "/js/santa.js",
+    "/vendor/app/js/cp.js": "/vendor/app/js/cp.js",
+    "/vendor/app/css/cp.css": "/vendor/app/css/cp.css",
+    "/css/tailwind.css": "/css/tailwind.css"
 }
