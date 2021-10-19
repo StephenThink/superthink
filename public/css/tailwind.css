@@ -983,7 +983,7 @@ video {
                 }
 
 .quote {    
-    font-size: 8rem;
+    font-size: 6rem;
     height: 136px;
     transform-origin: top right;
     
@@ -1971,6 +1971,10 @@ input#store:checked ~ .toggle-dot {
 	margin-bottom: 2rem;
 }
 
+.mb-2 {
+	margin-bottom: 0.5rem;
+}
+
 .mt-6 {
 	margin-top: 1.5rem;
 }
@@ -2239,14 +2243,6 @@ input#store:checked ~ .toggle-dot {
 	width: 2rem;
 }
 
-.w-2\/12 {
-	width: 16.666667%;
-}
-
-.w-9\/12 {
-	width: 75%;
-}
-
 .w-48 {
 	width: 12rem;
 }
@@ -2261,6 +2257,14 @@ input#store:checked ~ .toggle-dot {
 
 .w-5\/12 {
 	width: 41.666667%;
+}
+
+.w-2\/12 {
+	width: 16.666667%;
+}
+
+.w-9\/12 {
+	width: 75%;
 }
 
 .w-5 {
@@ -2473,10 +2477,6 @@ input#store:checked ~ .toggle-dot {
 
 .grid-cols-1 {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -2816,11 +2816,6 @@ input#store:checked ~ .toggle-dot {
 .py-24 {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
-}
-
-.px-56 {
-	padding-left: 14rem;
-	padding-right: 14rem;
 }
 
 .px-12 {
@@ -3661,6 +3656,11 @@ input#store:checked ~ .toggle-dot {
 		padding-right: 0px;
 	}
 
+	.md\:px-56 {
+		padding-left: 14rem;
+		padding-right: 14rem;
+	}
+
 	.md\:py-24 {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
@@ -3669,11 +3669,6 @@ input#store:checked ~ .toggle-dot {
 	.md\:py-0 {
 		padding-top: 0px;
 		padding-bottom: 0px;
-	}
-
-	.md\:px-56 {
-		padding-left: 14rem;
-		padding-right: 14rem;
 	}
 
 	.md\:pr-6 {

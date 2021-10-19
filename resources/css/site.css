@@ -398,7 +398,7 @@
 }
 
 .quote {    
-    font-size: 8rem;
+    font-size: 6rem;
     height: 136px;
     transform-origin: top right;
     &-left,

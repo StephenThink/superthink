@@ -6,9 +6,9 @@
     </div>
 
     <div class="container mt-8 ">
-        <div class="-mx-4 flex">
+        <div class="-mx-4 flex flex-wrap">
             {{ collection:employees }}
-                <div class="w-1/2 md:w-1/4 items-center px-4">
+                <div class="w-1/2 md:w-1/4 items-center px-4 mb-2">
                     {{ if employee_image }}
                         <div class="pb-full relative rounded-full overflow-hidden">
                             <img class="absolute h-full w-full object-cover" src="{{ employee_image }}" alt="" loading=lazy>
@@ -26,7 +26,7 @@
     </div>
 </section>
 
-{{ partial:partials/quote bg="bg-yellow"}}
+{{ partial:partials/about/quote bg="bg-yellow"}}
 
 {{ partial:partials/content_list header="{{ layered_title }}" text="{{ layered_content }}" :data="steps" }}
 
