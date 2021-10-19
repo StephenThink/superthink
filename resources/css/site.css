@@ -765,6 +765,25 @@ input#store:checked ~ .toggle-dot {
             z-index: 5;
             @apply -translate-y-56;
         }
+        .is-inview {
+            img {
+                transition: transform .5s ease-in-out;
+                transform: scale(1.05);
+                transition-delay: 1s;
+            }
+            .backdrop {
+                opacity: 0.75;
+                transition: all .5s ease-in-out;
+                transition-delay: 2s;
+                @apply translate-y-0;
+            }
+            .container {
+                transform: scale(1);
+                opacity: 1;
+                transition-delay: 2s;
+                @apply transition duration-500 delay-500 translate-y-0;
+            }
+        }
         img {
             transition: transform .5s ease-in-out;
         }
@@ -773,7 +792,7 @@ input#store:checked ~ .toggle-dot {
             transform: scale(0.9);
             opacity: 0;
         }
-        &:hover {
+        /* &:hover {
             img {
                 transition: transform .5s ease-in-out;
                 transform: scale(1.05);
@@ -788,7 +807,7 @@ input#store:checked ~ .toggle-dot {
                 opacity: 1;
                 @apply transition duration-500 delay-500 translate-y-0;
             }
-        }
+        } */
 
         /* & span {
             z-index: 1;
