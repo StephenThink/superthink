@@ -676,6 +676,13 @@ input#store:checked ~ .toggle-dot {
     }
 }
 
+/* The Socials Area */
+
+.custom-social {
+    @apply mx-2 text-xs leading-loose;
+}
+
+
 /*  Some animation stuff  */
 
 [data-scroll-call="fancy"] {
@@ -825,7 +832,9 @@ input#store:checked ~ .toggle-dot {
   }
 
 /* Filter invert */
+/* This is used in the awards partial for the light/dark so they are easily seen */
 
 .sjinvert {
     filter: invert(100%);
 }
+

@@ -1,0 +1,83 @@
+<div class="w-screen md:w-2/3 bg-yellow text-dark footer__panel px-0 md:pr-16 md:pl-0">
+    <div class="container h-full">
+        <div class="block justify-between h-full w-full flex-col w-11/12 ml-0 md:ml-auto md:flex">
+
+            <div class="w-full md:ml-auto text-dark font-black text-3xl">
+                <!-- Let's stay in touch -->
+                Get in touch
+            </div>
+            
+            <div class=" flex flex-col md:flex-row justify-between">
+                <div class="w-full md:w-1/2">
+                    <h5 class="font-bold">Want to work with us?</h5>
+                    <p>Email <a href="mailto:paul@thinkcreative.uk.com?subject='I want to work with you'">Paul</a></p>
+                    <p>Or call <a href="tel:{{ contact_information:tel }}">{{ contact_information:tel }}</a></p>
+                </div>
+                <div class="w-full mt-8 md:mt-0 md:w-1/2">
+                    <h5 class="font-bold">Need directions?</h5>
+                    
+                    {{ contact_information:company_address | nl2br}}
+                
+                </div>
+            </div>
+            
+            <div class="mt-8 md:mt-0">
+                <form action="" class="flex flex-col md:flex-row">
+                    <input type="text" class="w-100 appearance-none outline-none bg-transparent border-b border-dark placeholder-dark pb-4 flex-1" placeholder="Subscribe to Bruce's newsletter... ">
+
+                    <button type="submit" class="w-100 hover-button mt-8 md:mt-0 ">
+                            {{ partial:partials.hover_button text="Sign up" class="text-yellow bg-dark" }}
+                    </button>
+                </form>
+            </div>
+            <div>
+                    <!-- Mobile Display -->
+                    <nav class="md:hidden flex list-none pt-4">
+                        <ul>
+                            {{ if social:linkedin_link }}
+                            <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:linkedin_link}}">Linkedin</a></li>
+                            {{ /if }}
+                            {{ if social:twitter_link }}
+                            <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:twitter_link}}">Twitter</a></li>
+                            {{ /if }}
+                            {{ if social:instagram_link }}
+                            <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:instagram_link}}">Instagram</a></li>
+                            {{ /if }}
+                            {{ if social:facebook_link }}
+                            <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:facebook_link}}">Facebook</a></li>
+                            {{ /if }}
+                        </ul>
+                    </nav>
+
+                    <!-- Non Mobile Display -->
+                    <nav class="hidden md:flex list-none">
+                    {{ if social:linkedin_link }}
+                        <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:linkedin_link}}">Linkedin</a></li> <span class="custom-social">•</span>
+                    {{ /if }}
+                    {{ if social:twitter_link }}
+                        <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:twitter_link}}">Twitter</a></li> <span class="custom-social">•</span>
+                    {{ /if }}
+                    {{ if social:instagram_link }}
+                        <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:instagram_link}}">Instagram</a></li> <span class="custom-social">•</span>
+                    {{ /if }}
+                    {{ if social:facebook_link }}
+                        <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:facebook_link}}">Facebook</a></li>
+                    {{ /if }}
+                    </nav>
+                
+            </div>
+            <!-- Mobile Display -->
+            <div class="pt-4 md:hidden">
+                <p>&copy;Think!Creative &nbsp; 2006 - {{ date format="Y" }}
+                    <br>
+                <a href="#">Legal Stuff</a></p>
+            </div>
+
+            <!-- Non Mobile Display -->
+            <div class="hidden md:block">
+                <p>&copy;Think!Creative &nbsp; 2006 - {{ date format="Y" }} <span class="mx-2 text-xs">•</span> <a href="#">Legal Stuff</a></p>
+            </div>
+        </div>
+    </div>
+    
+</div>
