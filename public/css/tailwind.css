@@ -2907,6 +2907,10 @@ input#store:checked ~ .toggle-dot {
 	padding-bottom: 0.5rem;
 }
 
+.pl-12 {
+	padding-left: 3rem;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -3697,6 +3701,10 @@ input#store:checked ~ .toggle-dot {
 
 	.md\:pr-0 {
 		padding-right: 0px;
+	}
+
+	.md\:pl-24 {
+		padding-left: 6rem;
 	}
 
 	.md\:text-left {
