@@ -61,16 +61,17 @@ lightswitch.addEventListener('click', function(e) {
         // dark mode needs turning off. 
         e.target.classList.remove('on');
         html.classList.remove('dark');
-        TF.classList.remove('sjinvert');
+        try {TF.classList.remove('sjinvert');}catch{};
         localStorage.setItem('thinkcreative.theme', 'light');
-
+        console.log("Back to the Light");
         return;
     }
 
     e.target.classList.add('on');
     html.classList.add('dark');
-    TF.classList.add('sjinvert');
+    try {TF.classList.add('sjinvert');}catch{};
     localStorage.setItem('thinkcreative.theme', 'dark');
+    console.log("Step back into the Dark");
 
 });
 
@@ -95,9 +96,16 @@ window.matchMedia('(prefers-color-scheme: dark)')
 if (localStorage['thinkcreative.theme'] === 'dark' || (!('thinkcreative.theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     html.classList.add('dark');
     lightswitch.classList.add('on');
+    try {TF.classList.add('sjinvert');}catch{};
+
+    console.log("Dark");
+
 } else {
     html.classList.remove('dark');
     lightswitch.classList.remove('on');
+    try {TF.classList.remove('sjinvert');}catch{};
+    console.log("Light");
+
 }
 
 //  Always be at the top when entering the page.
