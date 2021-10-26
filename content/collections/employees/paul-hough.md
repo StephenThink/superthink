@@ -1,12 +1,13 @@
 ---
+id: 0bf776fa-9b67-4c59-8b37-3fcd892b35fa
+blueprint: employee
 title: 'Paul Hough'
 employee_role: 'Creative Director'
-email: matthew@thinkcreative.uk.com
-employee_image: employees/matt.png
+email: paul@thinkcreative.uk.com
+employee_image: employees/Boss-Paul.jpg
 expertise:
   - Management
   - 'Creative Direction'
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1600429043
-id: 0bf776fa-9b67-4c59-8b37-3fcd892b35fa
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1635263017
 ---
