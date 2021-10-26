@@ -1,8 +1,8 @@
 title: Brand
 strapline: 'Help! We’re really good at what we do but nobody knows'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1634296676
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1635262524
 blueprint: core
 tag_line_us: 'Build a brand that makes you stand out'
 tag_line_you: 'You need a distinctive brand'
@@ -55,18 +55,15 @@ grid:
     coll_image: null
   -
     title: 'Brand Guardians'
-    text: |-
-      You’ve already got a brilliant brand. So what you need from your creative team is the ability to take it in exciting new directions whilst protecting everything that made it so great in the first place. You need brand guardians. That’s us. We’ve had spandex suits made and everything…
-      Your brand’s big brother
-
+    text: 'You’ve already got a brilliant brand. So what you need from your creative team is the ability to take it in exciting new directions whilst protecting everything that made it so great in the first place. You need brand guardians. That’s us. We’ve had spandex suits made and everything…'
+    bold_text: 'Your brand’s big brother'
+    bottom_text: |-
       Having a brand that everyone knows and loves is a big advantage – so why would you mess with that? Great brands don’t need revolution. But they do need creatives who are happy to stand on the shoulders of those who went before them, creatives who’ll take what has always worked well and make it work even better. 
 
       We do that. But that’s not all we do, because a brand needs people on its side. So we work with you to make sure your team ‘gets it’, sharing our enthusiasm for it, so they can do the same with the people who really matter: your customers.
 
       Being a brand guardian is a responsibility. It’s a challenge. And if yours is a brand that has been around forever, it’s an honour to be its big brother for a while. 
       Got a brand you’re proud of? Let us run with it.
-    bold_text: null
-    bottom_text: null
     coll_image: null
   -
     title: 'Messaging & Tone of Voice'
@@ -76,12 +73,11 @@ grid:
     coll_image: null
   -
     title: Words-worth
-    text: |-
-      You must have seen them: two people squashed together on the underground trying hard not to look, touch or acknowledge one another. Awkward. Your brand’s words and pictures shouldn’t be like that. 
-
+    text: 'You must have seen them: two people squashed together on the underground trying hard not to look, touch or acknowledge one another.'
+    bold_text: 'Awkward. Your brand’s words and pictures shouldn’t be like that.'
+    bottom_text: |-
       They should be a great partnership: Lennon and McCartney. Ant and Dec. Tess & Claudia. Individually they can be good. Together they can be Strictly, tangoing up fab-u-lous reactions.
+
       That’s the value of getting the messaging and the tone of voice right. Because it’s not just what you say that matters. It’s not even purely about how you say it. It’s about finding a voice that’s uniquely yours - that fits your brand, every situation and every customer - and that helps you do that simplest (but most important) of things: connect.
-    bold_text: null
-    bottom_text: null
     coll_image: null
-service_tag: 'What’s the big idea?'
+video_choice: Image
