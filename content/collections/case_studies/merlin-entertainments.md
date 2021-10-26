@@ -10,7 +10,7 @@ sector:
   - Aerospace
   - Defence
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1634306677
+updated_at: 1635261646
 main_content:
   -
     type: paragraph
@@ -69,6 +69,11 @@ main_content:
         intro: 'INTRO - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at. Lectus arcu bibendum at varius. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Nisl pretium fusce id velit ut tortor. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Consectetur a erat nam at lectus urna duis. Lacus sed viverra tellus in hac habitasse platea dictumst. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. '
         sign_off: 'SIGN OFF - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at. Lectus arcu bibendum at varius. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Nisl pretium fusce id velit ut tortor. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Consectetur a erat nam at lectus urna duis. Lacus sed viverra tellus in hac habitasse platea dictumst. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. '
   -
+    type: set
+    attrs:
+      values:
+        type: vids
+  -
     type: paragraph
 call_to_action: 'See more of our design work'
 cta_button: 'Contact us'
@@ -94,6 +99,6 @@ services_filter:
   - creative-design
 core:
   - strategy
-short_case: true
+short_case: false
 short_para_title: 'Short Title'
 ---

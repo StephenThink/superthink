@@ -20,6 +20,21 @@ sections:
           instructions: 'To be shown on the case studies listing'
           listable: hidden
           display: Tagline
+      -
+        handle: thumbnail
+        field:
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Thumbnail
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
   main:
     display: Main
     fields:
@@ -92,6 +107,32 @@ sections:
                     listable: hidden
                     display: intro
                 -
+                  handle: video_choice
+                  field:
+                    options:
+                      - Image
+                      - Video
+                    inline: true
+                    cast_booleans: false
+                    default: Image
+                    display: 'Video Choice'
+                    type: radio
+                    icon: radio
+                    instructions: 'This is to choose between showing an Image or Video Clip as the Hero'
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: video
+                  field:
+                    display: Video
+                    type: video
+                    icon: video
+                    listable: hidden
+                    instructions_position: above
+                    instructions: 'Make sure you type in the directory of the video. ie  /assets/heros/service/sauce.mp4'
+                    if:
+                      video_choice: 'equals Video'
+                -
                   handle: image
                   field:
                     mode: grid
@@ -103,6 +144,10 @@ sections:
                     type: assets
                     listable: hidden
                     display: Image
+                    instructions_position: above
+                    show_filename: true
+                    if:
+                      video_choice: 'equals Image'
                 -
                   handle: sign_off
                   field:
@@ -191,6 +236,18 @@ sections:
                     type: assets
                     icon: assets
                     listable: hidden
+            vids:
+              display: Vids
+              fields:
+                -
+                  handle: videofile
+                  field:
+                    display: VideoFile
+                    type: video
+                    icon: video
+                    instructions: 'You have to make sure you know the address of the Video you want to play'
+                    listable: hidden
+                    instructions_position: above
           buttons:
             - h2
             - h3
@@ -219,6 +276,9 @@ sections:
           instructions: 'Add the blocks that you need or have content for - anything kept empty will be hidden. The order should be `Problem -> Idea -> Full Image -> Gallery -> Work`'
           listable: hidden
           display: 'Main Content'
+          instructions_position: above
+          enable_input_rules: true
+          enable_paste_rules: true
       -
         import: two_third_banner
       -

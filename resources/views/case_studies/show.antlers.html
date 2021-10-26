@@ -39,6 +39,11 @@
                     <p class="w-full mt-4 md:w-10/12">{{ intro }}</p>
 
                     <div class="relative mt-8 pb-1/2">
+                        {{ if video_choice == "Video" }}
+                            <video autoplay muted class="absolute object-cover w-full h-full" src="{{ video }}"></video>
+                        {{ else }}
+                            <img src="{{ image }}" alt="" class="absolute object-cover w-full h-full" loading=lazy>
+                        {{ /if }}
                         <img src="{{ image }}" alt="" class="absolute object-cover w-full h-full" loading=lazy>
                     </div>
 
