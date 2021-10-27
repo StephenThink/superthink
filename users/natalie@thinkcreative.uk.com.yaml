@@ -6,3 +6,6 @@ preferences:
   assets:
     assets:
       mode: table
+  collections:
+    case_studies:
+      after_save: continue_editing
