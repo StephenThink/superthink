@@ -10,7 +10,7 @@ updated_at: 1616061451
 blueprint: case_studies
 template: pages/work
 seo:
-  title: 'Blog from Think!Creative'
+  title: 'Work | Think!Creative'
   description: 'The latest news and articles from our North West creative design studio based besides the sea. Call us on 01253 297900'
   site_name: false
 id: 3be6a7b1-6a3d-4e2a-95a9-3b54a70f87c4
