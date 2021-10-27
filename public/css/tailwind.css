@@ -2627,12 +2627,12 @@ input#store:checked ~ .toggle-dot {
 	border-bottom-right-radius: 0.375rem;
 }
 
-.border {
-	border-width: 1px;
-}
-
 .border-2 {
 	border-width: 2px;
+}
+
+.border {
+	border-width: 1px;
 }
 
 .border-t {

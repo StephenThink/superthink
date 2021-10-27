@@ -10,7 +10,6 @@ preferences:
         - slug
         - greatest_hits
         - short_blog
-      after_save: continue_editing
     employees:
       columns:
         - title

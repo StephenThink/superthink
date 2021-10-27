@@ -3,22 +3,22 @@
 <section class="main__panel_x-small bg-light dark:bg-dark">
     <div class="container">
         <div class="flex font-medium">
-            <strong class=" mr-3">Show Me:</strong>
-            <span data-slide="hits" class="half-height-colour font-light content-slider mr-3 text-gray-500 active cursor-pointer dark:text-light">
-                <span class="underline-element yellow-underline pointer-events-none dark:light-underline">The Hits</span>
+            <strong class="mr-3 ">Show Me:</strong>
+            <span data-slide="hits" class="mr-3 font-light text-gray-500 cursor-pointer half-height-colour content-slider active dark:text-light">
+                <span class="pointer-events-none underline-element yellow-underline dark:light-underline">The Hits</span>
             </span>
-            <span data-slide="services" class="half-height-colour font-light content-slider mr-3 text-gray-500 cursor-pointer dark:text-light">
-                <span class="underline-element yellow-underline pointer-events-none dark:light-underline">Everything</span>
+            <span data-slide="services" class="mr-3 font-light text-gray-500 cursor-pointer half-height-colour content-slider dark:text-light">
+                <span class="pointer-events-none underline-element yellow-underline dark:light-underline">Everything</span>
             </span>
         </div>
     </div>
 </div>
 
-<div class="filter-section flex relative overflow-hidden bg-light md:ml-handle md:w-handle-nm dark:bg-dark h-screen ">
-    <section class="section section-hits transition w-full absolute flex-100 active ">
+<div class="relative flex h-screen overflow-hidden filter-section bg-light md:ml-handle md:w-handle-nm dark:bg-dark ">
+    <section class="absolute w-full transition section section-hits flex-100 active ">
         <div class="pb-12 bg-light dark:bg-dark">
             <div class="container">
-                <div class="grid grid-cols-1 grid-gap-4 -mx-4 md:grid-cols-2">
+                <div class="grid grid-cols-1 -mx-4 grid-gap-4 md:grid-cols-2">
                     {{ collection:case_studies limit="4" greatest_hits:is="true" }}
                         
                         {{ if no_results}}
@@ -32,7 +32,7 @@
                                             <img src="{{ !thumbnail ? hero_image : thumbnail }}" alt="" >
                                         </span>
                                     </div>
-                                    <h2 class="font-bold mt-4 text-2xl">{{ title }}</h2>
+                                    <h2 class="mt-4 text-2xl font-bold">{{ title }}</h2>
                                     <p class="">{{ tagline }}</p>
                                 </div>
                             </a>
@@ -45,35 +45,35 @@
 
         {{ partial:partials/cta}}
 
-        <div class="py-12 bg-light dark:bg-dark">
-            <div class="container">
-                <div class="grid grid-cols-1 grid-gap-4 -mx-4 md:grid-cols-2">
-                    {{ collection:case_studies limit="4" offset="4" greatest_hits:is="true" }}
-                        
-                        {{ if no_results}}
-                        {{ else }}
-                            <a href="{{ url }}">
-                                <div class="w-full p-4 md:w-1/2 filter-item" 
-                                    data-terms="{{ core-services }}{{ title | lower }}{{if !last }}|{{ /if }}{{ /core-services }}"
-                                >
-                                    <div class="hover-button image">
-                                        <span class="relative inline-block">
-                                            <img src="{{ !thumbnail ? hero_image : thumbnail }}" alt="" >
-                                        </span>
+            <div class="py-12 bg-light dark:bg-dark">
+                {{# <div class="container">
+                    <div class="grid grid-cols-1 -mx-4 grid-gap-4 md:grid-cols-2">
+                        {{ collection:case_studies limit="4" offset="4" greatest_hits:is="true" }}
+                            
+                            {{ if no_results}}
+                            {{ else }}
+                                <a href="{{ url }}">
+                                    <div class="w-full p-4 md:w-1/2 filter-item" 
+                                        data-terms="{{ core-services }}{{ title | lower }}{{if !last }}|{{ /if }}{{ /core-services }}"
+                                    >
+                                        <div class="hover-button image">
+                                            <span class="relative inline-block">
+                                                <img src="{{ !thumbnail ? hero_image : thumbnail }}" alt="" >
+                                            </span>
+                                        </div>
+                                        <h2 class="mt-4 text-2xl font-bold">{{ title }}</h2>
+                                        <p class="">{{ tagline }}</p>
                                     </div>
-                                    <h2 class="font-bold mt-4 text-2xl">{{ title }}</h2>
-                                    <p class="">{{ tagline }}</p>
-                                </div>
-                            </a>
-                        {{ /if }}
-                    
-                    {{ /collection:case_studies }}
-                </div>
+                                </a>
+                            {{ /if }}
+                        
+                        {{ /collection:case_studies }}
+                    </div>
+                </div> #}}
             </div>
-        </div>
     </section>
 
-    <section class="section section-services transition w-full absolute flex-100">
+    <section class="absolute w-full transition section section-services flex-100">
         <div class="py-12 bg-light dark:bg-dark">
             <div class="container">
                 <div class="flex flex-wrap -mx-4">

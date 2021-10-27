@@ -2,11 +2,11 @@
 id: e97c7289-09c3-49a7-ba00-c41ff2ca42b4
 blueprint: case_study
 title: 'Glover''s Swim School'
-greatest_hits: true
+greatest_hits: false
 core:
   - brand
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1633603320
+updated_at: 1635330515
 hero_image: work/glovers-swim-school/Glovers-Business-Card-Dark-scaled.jpg
 secondary_image: work/glovers-swim-school/Glovers-Swim-Caps-Dark-scaled.jpg
 main_content:
@@ -17,12 +17,14 @@ main_content:
         type: the_problem
         intro: 'When it comes to the competitive world of branding, it’s often a case of sink or swim. For Glover’s, we set out to ensure it was the latter. The Preston-based swim school approached us to freshen-up their brand identity. '
         image: work/glovers-swim-school/Glovers-Illustrations-scaled.jpg
+        video_choice: Image
   -
     type: set
     attrs:
       values:
         type: full_image
         full_image: work/glovers-swim-school/Glovers-Leaflet-Green-scaled.jpg
+        video_choice: Image
   -
     type: paragraph
   -
@@ -50,4 +52,5 @@ services_filter:
   - illustration
   - print
   - web-design-and-development
+short_case: false
 ---
