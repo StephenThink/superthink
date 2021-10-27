@@ -1,7 +1,7 @@
 name: Stephen
 super: true
 id: 35c7384a-60a0-4933-9645-d8850117c385
-password_hash: $2y$10$A7wSJ/skmLqcJ4EnBq3eEeLpDyWydQbXcPGD9Hbx/un8zsHJXYsxe
+password_hash: $2y$10$VJ0FVFstJXsUXVmVIX3AZepmNwcft/QX3Zzq6IzAoi9x2qZ/3KMsS
 preferences:
   collections:
     case_studies:
