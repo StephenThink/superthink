@@ -164,6 +164,32 @@ sections:
                     listable: hidden
                     display: Intro
                 -
+                  handle: video_choice
+                  field:
+                    options:
+                      - Image
+                      - Video
+                    inline: true
+                    cast_booleans: false
+                    default: Image
+                    display: 'Video Choice'
+                    type: radio
+                    icon: radio
+                    instructions: 'This is to choose between showing an Image or Video Clip as the Hero'
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: video
+                  field:
+                    display: Video
+                    type: video
+                    icon: video
+                    listable: hidden
+                    instructions_position: above
+                    instructions: 'Make sure you type in the directory of the video. ie  /assets/heros/service/sauce.mp4'
+                    if:
+                      video_choice: 'equals Video'
+                -
                   handle: intro_full_image
                   field:
                     mode: grid
@@ -176,6 +202,8 @@ sections:
                     type: assets
                     icon: assets
                     listable: hidden
+                    if:
+                      video_choice: 'equals Image'
                 -
                   handle: outro
                   field:
@@ -210,6 +238,32 @@ sections:
               display: 'Full Image'
               fields:
                 -
+                  handle: video_choice
+                  field:
+                    options:
+                      - Image
+                      - Video
+                    inline: true
+                    cast_booleans: false
+                    default: Image
+                    display: 'Video Choice'
+                    type: radio
+                    icon: radio
+                    instructions: 'This is to choose between showing an Image or Video Clip as the Hero'
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: video
+                  field:
+                    display: Video
+                    type: video
+                    icon: video
+                    listable: hidden
+                    instructions_position: above
+                    instructions: 'Make sure you type in the directory of the video. ie  /assets/heros/service/sauce.mp4'
+                    if:
+                      video_choice: 'equals Video'
+                -
                   handle: full_image
                   field:
                     mode: grid
@@ -221,6 +275,8 @@ sections:
                     type: assets
                     listable: hidden
                     display: 'Full Image'
+                    if:
+                      video_choice: 'equals Image'
             slider:
               display: Slider
               fields:
@@ -236,18 +292,6 @@ sections:
                     type: assets
                     icon: assets
                     listable: hidden
-            vids:
-              display: Vids
-              fields:
-                -
-                  handle: videofile
-                  field:
-                    display: VideoFile
-                    type: video
-                    icon: video
-                    instructions: 'You have to make sure you know the address of the Video you want to play'
-                    listable: hidden
-                    instructions_position: above
           buttons:
             - h2
             - h3
