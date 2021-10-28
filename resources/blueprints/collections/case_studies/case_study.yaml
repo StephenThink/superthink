@@ -387,6 +387,25 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+  next:
+    display: Next
+    fields:
+      -
+        handle: next_image
+        field:
+          mode: grid
+          container: assets
+          folder: work
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Next Image'
+          type: assets
+          icon: assets
+          instructions: 'This is displayed on the bottom of the page, for the next collection. Maybe different image as your not looking at the same image when you land on the next page.'
+          listable: hidden
+          instructions_position: above
   employees:
     display: Employees
     fields:
