@@ -16,6 +16,8 @@ preferences:
         - employee_role
     pages:
       after_save: continue_editing
+    blog:
+      after_save: continue_editing
   taxonomies:
     core:
       after_save: continue_editing
