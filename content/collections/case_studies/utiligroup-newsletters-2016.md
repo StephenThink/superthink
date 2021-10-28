@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614949837
-hero_image: work/utiligroup-newsletters-2016/1-Utiligroup-new-newsletter-v2.jpg
-secondary_image: work/utiligroup-newsletters-2016/2-Utiligroup-new-newsletter-v2.jpg
+hero_image: work/experience/utiligroup-newsletters-2016/1-Utiligroup-new-newsletter-v2.jpg
+secondary_image: work/experience/utiligroup-newsletters-2016/2-Utiligroup-new-newsletter-v2.jpg
 main_content:
   -
     type: set
@@ -14,10 +14,10 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/utiligroup-newsletters-2016/3-Utiligroup-new-newsletter-v2.jpg
-          - work/utiligroup-newsletters-2016/4-Utiligroup-new-newsletter-v2.jpg
-          - work/utiligroup-newsletters-2016/5-Utiligroup-new-newsletter-v2.jpg
-          - work/utiligroup-newsletters-2016/6-Utiligroup-new-newsletter-v2.jpg
+          - work/experience/utiligroup-newsletters-2016/3-Utiligroup-new-newsletter-v2.jpg
+          - work/experience/utiligroup-newsletters-2016/4-Utiligroup-new-newsletter-v2.jpg
+          - work/experience/utiligroup-newsletters-2016/5-Utiligroup-new-newsletter-v2.jpg
+          - work/experience/utiligroup-newsletters-2016/6-Utiligroup-new-newsletter-v2.jpg
   -
     type: set
     attrs:

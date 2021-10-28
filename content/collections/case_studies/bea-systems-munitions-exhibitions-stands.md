@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614605815
-hero_image: work/bea-systems-munitions-exhibitions-stands/1-BAE-munitions-stands-v2.jpg
-secondary_image: work/bea-systems-munitions-exhibitions-stands/3-BAE-munitions-stands-v2.jpg
+hero_image: work/experience/bea-systems-munitions-exhibitions-stands/1-BAE-munitions-stands-v2.jpg
+secondary_image: work/experience/bea-systems-munitions-exhibitions-stands/3-BAE-munitions-stands-v2.jpg
 main_content:
   -
     type: set
@@ -14,7 +14,7 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bea-systems-munitions-exhibitions-stands/2-BAE-munitions-stands-v2.jpg
+          - work/experience/bea-systems-munitions-exhibitions-stands/2-BAE-munitions-stands-v2.jpg
   -
     type: set
     attrs:

@@ -5,8 +5,8 @@ core:
   - campaign
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614605277
-hero_image: work/bae-too-good-to-waste-campaign/6-too-good-to-waste-v2.jpg
-secondary_image: work/bae-too-good-to-waste-campaign/4-too-good-to-waste-v2.jpg
+hero_image: work/campaign/bae-too-good-to-waste-campaign/6-too-good-to-waste-v2.jpg
+secondary_image: work/campaign/bae-too-good-to-waste-campaign/4-too-good-to-waste-v2.jpg
 main_content:
   -
     type: set
@@ -14,11 +14,11 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-too-good-to-waste-campaign/1-too-good-to-waste-v2.jpg
-          - work/bae-too-good-to-waste-campaign/2-too-good-to-waste-v2.jpg
-          - work/bae-too-good-to-waste-campaign/3-too-good-to-waste-v2.jpg
-          - work/bae-too-good-to-waste-campaign/5-too-good-to-waste-v2.jpg
-          - work/bae-too-good-to-waste-campaign/7-too-good-to-waste-v2.jpg
+          - work/campaign/bae-too-good-to-waste-campaign/1-too-good-to-waste-v2.jpg
+          - work/campaign/bae-too-good-to-waste-campaign/2-too-good-to-waste-v2.jpg
+          - work/campaign/bae-too-good-to-waste-campaign/3-too-good-to-waste-v2.jpg
+          - work/campaign/bae-too-good-to-waste-campaign/5-too-good-to-waste-v2.jpg
+          - work/campaign/bae-too-good-to-waste-campaign/7-too-good-to-waste-v2.jpg
   -
     type: set
     attrs:

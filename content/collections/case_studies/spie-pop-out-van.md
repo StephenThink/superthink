@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614877242
-hero_image: work/spie-pop-out-van/1-SPIE-v2.jpg
-secondary_image: work/spie-pop-out-van/4-SPIE-v2.jpg
+hero_image: work/experience/spie-pop-out-van/1-SPIE-v2.jpg
+secondary_image: work/experience/spie-pop-out-van/4-SPIE-v2.jpg
 main_content:
   -
     type: set
@@ -14,14 +14,14 @@ main_content:
       values:
         type: the_problem
         intro: 'SPIE had a simple message they wanted to relay to their customers, and they wanted it to be unforgettable. So we needed something that would remain on people’s desks, forever on the mind, and something that people just couldn’t ignore.'
-        image: work/spie-pop-out-van/3-SPIE-v2.jpg
+        image: work/experience/spie-pop-out-van/3-SPIE-v2.jpg
   -
     type: set
     attrs:
       values:
         type: gallery
         gallery:
-          - work/spie-pop-out-van/2-SPIE-v2.jpg
+          - work/experience/spie-pop-out-van/2-SPIE-v2.jpg
   -
     type: set
     attrs:

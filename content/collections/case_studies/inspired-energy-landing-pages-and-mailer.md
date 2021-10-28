@@ -5,8 +5,8 @@ core:
   - campaign
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614859125
-hero_image: work/inspired-energy-landing-pages-and-mailer/Inspired-Energy10.jpg
-secondary_image: work/inspired-energy-landing-pages-and-mailer/Inspired-Energy3.jpg
+hero_image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy10.jpg
+secondary_image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy3.jpg
 main_content:
   -
     type: set
@@ -14,13 +14,13 @@ main_content:
       values:
         type: the_problem
         intro: 'Breaking down industry changes, compliance regulations and partnership services into an easy-to-digest format was a task that required some bright ideas.'
-        image: work/inspired-energy-landing-pages-and-mailer/Inspired-Energy9.jpg
+        image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy9.jpg
   -
     type: set
     attrs:
       values:
         type: full_image
-        full_image: work/inspired-energy-landing-pages-and-mailer/Inspired-Energy11.jpg
+        full_image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy11.jpg
   -
     type: paragraph
   -
@@ -29,12 +29,12 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/inspired-energy-landing-pages-and-mailer/Feature-Inspired-Energy.jpg
-          - work/inspired-energy-landing-pages-and-mailer/Inspired-Energy12.jpg
-          - work/inspired-energy-landing-pages-and-mailer/Inspired-Energy13.jpg
-          - work/inspired-energy-landing-pages-and-mailer/Inspired-Energy15.jpg
-          - work/inspired-energy-landing-pages-and-mailer/Inspired-Energy16.jpg
-          - work/inspired-energy-landing-pages-and-mailer/Inspired-Energy17.jpg
+          - work/campaign/inspired-energy-landing-pages-and-mailer/Feature-Inspired-Energy.jpg
+          - work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy12.jpg
+          - work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy13.jpg
+          - work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy15.jpg
+          - work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy16.jpg
+          - work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy17.jpg
   -
     type: set
     attrs:

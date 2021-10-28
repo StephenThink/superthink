@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614856131
-hero_image: work/inspired-energy-edie-live-2019/Edie-Live-Posters.jpg
-secondary_image: work/inspired-energy-edie-live-2019/Edie-Live-Stand-v1.jpg
+hero_image: work/experience/inspired-energy-edie-live-2019/Edie-Live-Posters.jpg
+secondary_image: work/experience/inspired-energy-edie-live-2019/Edie-Live-Stand-v1.jpg
 main_content:
   -
     type: set
@@ -14,7 +14,7 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/inspired-energy-edie-live-2019/Feature-Image.jpg
+          - work/experience/inspired-energy-edie-live-2019/Feature-Image.jpg
   -
     type: set
     attrs:

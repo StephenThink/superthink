@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614866009
-hero_image: work/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map5.jpg
-secondary_image: work/merlin-entertainments-sea-life-blackpool-map/Feature-Merlin-SeaLife-Map.jpg
+hero_image: work/experience/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map5.jpg
+secondary_image: work/experience/merlin-entertainments-sea-life-blackpool-map/Feature-Merlin-SeaLife-Map.jpg
 main_content:
   -
     type: set
@@ -14,15 +14,15 @@ main_content:
       values:
         type: the_problem
         intro: 'Designing an all-new SEA LIFE map for Merlin Entertainments was a job we were immensely excited to take on.'
-        image: work/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map.jpg
+        image: work/experience/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map.jpg
   -
     type: set
     attrs:
       values:
         type: gallery
         gallery:
-          - work/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map-2.jpg
-          - work/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map7.jpg
+          - work/experience/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map-2.jpg
+          - work/experience/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map7.jpg
   -
     type: set
     attrs:

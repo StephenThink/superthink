@@ -26,7 +26,7 @@ fields:
     field:
       mode: grid
       container: assets
-      folder: /
+      folder: employees
       restrict: false
       allow_uploads: true
       max_files: 1
@@ -34,6 +34,8 @@ fields:
       type: assets
       listable: hidden
       width: 50
+      instructions_position: above
+      show_filename: true
   -
     handle: expertise
     field:

@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614869543
-hero_image: work/parkingeye-brochure-2016/4-ParkingEye-brochure-2016-v2.jpg
-secondary_image: work/parkingeye-brochure-2016/1-ParkingEye-brochure-2016-v2.jpg
+hero_image: work/experience/parkingeye-brochure-2016/4-ParkingEye-brochure-2016-v2.jpg
+secondary_image: work/experience/parkingeye-brochure-2016/1-ParkingEye-brochure-2016-v2.jpg
 main_content:
   -
     type: set
@@ -14,9 +14,9 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/parkingeye-brochure-2016/2-ParkingEye-brochure-2016-v2.jpg
-          - work/parkingeye-brochure-2016/parkingeye-brochure-feature.jpg
-          - work/parkingeye-brochure-2016/3-ParkingEye-brochure-2016-v2.jpg
+          - work/experience/parkingeye-brochure-2016/2-ParkingEye-brochure-2016-v2.jpg
+          - work/experience/parkingeye-brochure-2016/parkingeye-brochure-feature.jpg
+          - work/experience/parkingeye-brochure-2016/3-ParkingEye-brochure-2016-v2.jpg
   -
     type: set
     attrs:

@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614270382
-hero_image: work/bae-systems-bridging-brochure/BAE-Bridging-Spead-Cover-portfolio2.jpg
-secondary_image: work/bae-systems-bridging-brochure/BAE-Bridging-Cover-portfolio.jpg
+hero_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Spead-Cover-portfolio2.jpg
+secondary_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Cover-portfolio.jpg
 main_content:
   -
     type: set
@@ -22,11 +22,11 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-systems-bridging-brochure/BAE-Bridging-iPad-portfolio.jpg
-          - work/bae-systems-bridging-brochure/BAE-Bridging-iPad-portfolio2.jpg
-          - work/bae-systems-bridging-brochure/BAE-Bridging-Spread-Cover-portfolio.jpg
-          - work/bae-systems-bridging-brochure/BAE-Bridging-Spread-portfolio.jpg
-          - work/bae-systems-bridging-brochure/BAE-Bridging-Spread-portfolio2.jpg
+          - work/experience/bae-systems-bridging-brochure/BAE-Bridging-iPad-portfolio.jpg
+          - work/experience/bae-systems-bridging-brochure/BAE-Bridging-iPad-portfolio2.jpg
+          - work/experience/bae-systems-bridging-brochure/BAE-Bridging-Spread-Cover-portfolio.jpg
+          - work/experience/bae-systems-bridging-brochure/BAE-Bridging-Spread-portfolio.jpg
+          - work/experience/bae-systems-bridging-brochure/BAE-Bridging-Spread-portfolio2.jpg
   -
     type: paragraph
   -

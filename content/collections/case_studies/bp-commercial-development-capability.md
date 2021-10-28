@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614618001
-hero_image: work/bp-commercial-development-capability/BP-CDF-portfolio-3-scaled.jpg
-secondary_image: work/bp-commercial-development-capability/BP-CDF-portfolio-scaled.jpg
+hero_image: work/experience/bp-commercial-development-capability/BP-CDF-portfolio-3-scaled.jpg
+secondary_image: work/experience/bp-commercial-development-capability/BP-CDF-portfolio-scaled.jpg
 main_content:
   -
     type: set
@@ -14,14 +14,14 @@ main_content:
       values:
         type: the_problem
         intro: 'Interactive PDFs have a lot going for them: they’re engaging, paper-saving, intuitive and especially great for employee training material. Well aware of the benefits, our long-term clients BP approached us to produce a 72-page outcome which detailed the company’s Career Development Framework for their commercial team. Our goal was to simplify streams of information into a digestible and visually-appealing format. '
-        image: work/bp-commercial-development-capability/BP-CDF-portfolio-feature.jpg
+        image: work/experience/bp-commercial-development-capability/BP-CDF-portfolio-feature.jpg
   -
     type: set
     attrs:
       values:
         type: gallery
         gallery:
-          - work/bp-commercial-development-capability/BP-CDF-portfolio-2-scaled.jpg
+          - work/experience/bp-commercial-development-capability/BP-CDF-portfolio-2-scaled.jpg
   -
     type: paragraph
   -

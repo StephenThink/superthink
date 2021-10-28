@@ -5,8 +5,8 @@ core:
   - brand
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614877589
-hero_image: work/spinal-products-branding-and-website/1-Spinal-Products-v2.jpg
-secondary_image: work/spinal-products-branding-and-website/2-Spinal-Products.jpg
+hero_image: work/brand/spinal-products-branding-and-website/1-Spinal-Products-v2.jpg
+secondary_image: work/brand/spinal-products-branding-and-website/2-Spinal-Products.jpg
 main_content:
   -
     type: set
@@ -14,7 +14,7 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/spinal-products-branding-and-website/3-Spinal-Products.jpg
+          - work/brand/spinal-products-branding-and-website/3-Spinal-Products.jpg
   -
     type: set
     attrs:

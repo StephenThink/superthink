@@ -5,30 +5,30 @@ updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614854687
 core:
   - brand
-hero_image: work/ignition-rm-branding/3-RM-branding-v2.jpg
-secondary_image: work/ignition-rm-branding/5-RM-branding-v2.jpg
+hero_image: work/brand/ignition-rm-branding/3-RM-branding-v2.jpg
+secondary_image: work/brand/ignition-rm-branding/5-RM-branding-v2.jpg
 main_content:
   -
     type: set
     attrs:
       values:
         type: full_image
-        full_image: work/ignition-rm-branding/6-RM-branding-v2.jpg
+        full_image: work/brand/ignition-rm-branding/6-RM-branding-v2.jpg
   -
     type: set
     attrs:
       values:
         type: gallery
         gallery:
-          - work/ignition-rm-branding/1-RM-branding-v2.jpg
-          - work/ignition-rm-branding/10-RM-branding-v2.jpg
-          - work/ignition-rm-branding/11-RM-branding-v2.jpg
-          - work/ignition-rm-branding/2-RM-branding-v2.jpg
-          - work/ignition-rm-branding/4-RM-branding-v2.jpg
-          - work/ignition-rm-branding/7-RM-branding-v2.jpg
-          - work/ignition-rm-branding/8-RM-branding-v2.jpg
-          - work/ignition-rm-branding/9-RM-branding-v2.jpg
-          - work/ignition-rm-branding/F-RM-branding.jpg
+          - work/brand/ignition-rm-branding/1-RM-branding-v2.jpg
+          - work/brand/ignition-rm-branding/10-RM-branding-v2.jpg
+          - work/brand/ignition-rm-branding/11-RM-branding-v2.jpg
+          - work/brand/ignition-rm-branding/2-RM-branding-v2.jpg
+          - work/brand/ignition-rm-branding/4-RM-branding-v2.jpg
+          - work/brand/ignition-rm-branding/7-RM-branding-v2.jpg
+          - work/brand/ignition-rm-branding/8-RM-branding-v2.jpg
+          - work/brand/ignition-rm-branding/9-RM-branding-v2.jpg
+          - work/brand/ignition-rm-branding/F-RM-branding.jpg
   -
     type: set
     attrs:

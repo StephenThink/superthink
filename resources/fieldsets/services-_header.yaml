@@ -32,7 +32,7 @@ fields:
     field:
       mode: grid
       container: assets
-      folder: /
+      folder: service-header
       restrict: false
       allow_uploads: true
       max_files: 1
@@ -40,3 +40,5 @@ fields:
       instructions: 'display an animation to be loaded by lottie (edit:could enter this as text)'
       listable: hidden
       display: 'Header Animation'
+      instructions_position: above
+      show_filename: true

@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614351831
-hero_image: work/bae-systems-pension-booklets/portfolio-BAE-pensions-1-update.jpg
-secondary_image: work/bae-systems-pension-booklets/portfolio-BAE-pensions-7.jpg
+hero_image: work/experience/bae-systems-pension-booklets/portfolio-BAE-pensions-1-update.jpg
+secondary_image: work/experience/bae-systems-pension-booklets/portfolio-BAE-pensions-7.jpg
 main_content:
   -
     type: set
@@ -14,8 +14,8 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-systems-pension-booklets/portfolio-BAE-pensions-2-update.jpg
-          - work/bae-systems-pension-booklets/portfolio-BAE-pensions-3.jpg
+          - work/experience/bae-systems-pension-booklets/portfolio-BAE-pensions-2-update.jpg
+          - work/experience/bae-systems-pension-booklets/portfolio-BAE-pensions-3.jpg
   -
     type: set
     attrs:

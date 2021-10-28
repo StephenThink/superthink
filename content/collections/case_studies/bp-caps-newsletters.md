@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614606626
-hero_image: work/bp-caps-newsletters/1-BP-Newsletter-1.jpg
-secondary_image: work/bp-caps-newsletters/3-BP-Newsletter.jpg
+hero_image: work/experience/bp-caps-newsletters/1-BP-Newsletter-1.jpg
+secondary_image: work/experience/bp-caps-newsletters/3-BP-Newsletter.jpg
 main_content:
   -
     type: set
@@ -14,8 +14,8 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bp-caps-newsletters/2-BP-Newsletter.jpg
-          - work/bp-caps-newsletters/BP-caps-newsletter-feature.jpg
+          - work/experience/bp-caps-newsletters/2-BP-Newsletter.jpg
+          - work/experience/bp-caps-newsletters/BP-caps-newsletter-feature.jpg
   -
     type: set
     attrs:

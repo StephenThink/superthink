@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614261452
-hero_image: work/bae-system-heritage-book/2-BAE-heritage-book-v2.jpg
-secondary_image: work/bae-system-heritage-book/5-BAE-heritage-book-v2.jpg
+hero_image: work/experience/bae-system-heritage-book/2-BAE-heritage-book-v2.jpg
+secondary_image: work/experience/bae-system-heritage-book/5-BAE-heritage-book-v2.jpg
 main_content:
   -
     type: set
@@ -14,12 +14,12 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-system-heritage-book/1-BAE-heritage-book-v2.jpg
-          - work/bae-system-heritage-book/3-BAE-heritage-book-v2.jpg
-          - work/bae-system-heritage-book/4-BAE-heritage-book-v2.jpg
-          - work/bae-system-heritage-book/6-BAE-heritage-book-v2.jpg
-          - work/bae-system-heritage-book/7-BAE-heritage-book-v2.jpg
-          - work/bae-system-heritage-book/8-BAE-heritage-book-v2.jpg
+          - work/experience/bae-system-heritage-book/1-BAE-heritage-book-v2.jpg
+          - work/experience/bae-system-heritage-book/3-BAE-heritage-book-v2.jpg
+          - work/experience/bae-system-heritage-book/4-BAE-heritage-book-v2.jpg
+          - work/experience/bae-system-heritage-book/6-BAE-heritage-book-v2.jpg
+          - work/experience/bae-system-heritage-book/7-BAE-heritage-book-v2.jpg
+          - work/experience/bae-system-heritage-book/8-BAE-heritage-book-v2.jpg
   -
     type: set
     attrs:

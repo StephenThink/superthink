@@ -12,12 +12,12 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-systems-evp-animation/1-BAE-EVP-animation.jpg
-          - work/bae-systems-evp-animation/2-BAE-EVP-animation.jpg
-          - work/bae-systems-evp-animation/4-BAE-EVP-animation.jpg
-          - work/bae-systems-evp-animation/6-BAE-EVP-animation.jpg
-          - work/bae-systems-evp-animation/Ed-Hero-Scene.gif
-          - work/bae-systems-evp-animation/Nadia-production-mobile.gif
+          - work/experience/bae-systems-evp-animation/1-BAE-EVP-animation.jpg
+          - work/experience/bae-systems-evp-animation/2-BAE-EVP-animation.jpg
+          - work/experience/bae-systems-evp-animation/4-BAE-EVP-animation.jpg
+          - work/experience/bae-systems-evp-animation/6-BAE-EVP-animation.jpg
+          - work/experience/bae-systems-evp-animation/Ed-Hero-Scene.gif
+          - work/experience/bae-systems-evp-animation/Nadia-production-mobile.gif
   -
     type: set
     attrs:
@@ -27,7 +27,7 @@ main_content:
   -
     type: paragraph
 outro: 'If you are interested in seeing the video in full <a href="https://thinkcreative.uk.com/contact/">get in touch</a> with us!'
-hero_image: work/bae-systems-evp-animation/5-BAE-EVP-animation.jpg
-secondary_image: work/bae-systems-evp-animation/Nadia-scene-4.gif
+hero_image: work/experience/bae-systems-evp-animation/5-BAE-EVP-animation.jpg
+secondary_image: work/experience/bae-systems-evp-animation/Nadia-scene-4.gif
 id: f53b369f-81e7-4bab-83b4-7bdd17309d41
 ---

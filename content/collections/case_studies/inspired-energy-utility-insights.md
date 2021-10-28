@@ -5,8 +5,8 @@ core:
   - campaign
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614861939
-hero_image: work/inspired-energy-utility-insights/Inspired-Utility-Insights3-v3.jpg
-secondary_image: work/inspired-energy-utility-insights/Inspired-Utility-Insights6-v3.jpg
+hero_image: work/campaign/inspired-energy-utility-insights/Inspired-Utility-Insights3-v3.jpg
+secondary_image: work/campaign/inspired-energy-utility-insights/Inspired-Utility-Insights6-v3.jpg
 main_content:
   -
     type: set
@@ -14,13 +14,13 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/inspired-energy-utility-insights/Feature-Inspired-Utility-Insights-v2.jpg
-          - work/inspired-energy-utility-insights/Inspired-Utility-Insights10.jpg
-          - work/inspired-energy-utility-insights/Inspired-Utility-Insights4.jpg
-          - work/inspired-energy-utility-insights/Inspired-Utility-Insights5.jpg
-          - work/inspired-energy-utility-insights/Inspired-Utility-Insights7.jpg
-          - work/inspired-energy-utility-insights/Inspired-Utility-Insights8.jpg
-          - work/inspired-energy-utility-insights/Inspired-Utility-Insights9.jpg
+          - work/campaign/inspired-energy-utility-insights/Feature-Inspired-Utility-Insights-v2.jpg
+          - work/campaign/inspired-energy-utility-insights/Inspired-Utility-Insights10.jpg
+          - work/campaign/inspired-energy-utility-insights/Inspired-Utility-Insights4.jpg
+          - work/campaign/inspired-energy-utility-insights/Inspired-Utility-Insights5.jpg
+          - work/campaign/inspired-energy-utility-insights/Inspired-Utility-Insights7.jpg
+          - work/campaign/inspired-energy-utility-insights/Inspired-Utility-Insights8.jpg
+          - work/campaign/inspired-energy-utility-insights/Inspired-Utility-Insights9.jpg
   -
     type: set
     attrs:

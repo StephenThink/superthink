@@ -25,7 +25,7 @@ sections:
         field:
           mode: list
           container: assets
-          folder: /
+          folder: work
           restrict: false
           allow_uploads: true
           show_filename: true

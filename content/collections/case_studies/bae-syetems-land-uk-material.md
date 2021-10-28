@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614260712
-hero_image: work/bae-syetems-land-uk-material/1-BAE-land-uk-material-v2.jpg
-secondary_image: work/bae-syetems-land-uk-material/2-BAE-land-uk-material-v2.jpg
+hero_image: work/experience/bae-syetems-land-uk-material/1-BAE-land-uk-material-v2.jpg
+secondary_image: work/experience/bae-syetems-land-uk-material/2-BAE-land-uk-material-v2.jpg
 main_content:
   -
     type: set
@@ -14,7 +14,7 @@ main_content:
       values:
         type: the_idea
         intro: 'When your business is designing and manufacturing products that support and protect our troops, you require impactful material that demonstrates this. '
-        intro_full_image: work/bae-syetems-land-uk-material/3-BAE-land-uk-material-v2.jpg
+        intro_full_image: work/experience/bae-syetems-land-uk-material/3-BAE-land-uk-material-v2.jpg
   -
     type: paragraph
   -
@@ -23,10 +23,10 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-syetems-land-uk-material/7-BAE-land-uk-material-v2.jpg
-          - work/bae-syetems-land-uk-material/6-BAE-land-uk-material-v2.jpg
-          - work/bae-syetems-land-uk-material/4-BAE-land-uk-materia-v2.jpg
-          - work/bae-syetems-land-uk-material/5-BAE-land-uk-material-v2.jpg
+          - work/experience/bae-syetems-land-uk-material/7-BAE-land-uk-material-v2.jpg
+          - work/experience/bae-syetems-land-uk-material/6-BAE-land-uk-material-v2.jpg
+          - work/experience/bae-syetems-land-uk-material/4-BAE-land-uk-materia-v2.jpg
+          - work/experience/bae-syetems-land-uk-material/5-BAE-land-uk-material-v2.jpg
   -
     type: set
     attrs:

@@ -5,35 +5,35 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1619447978
-hero_image: work/utiligroup-interior-graphics/Utiligroup-interior-graphics.jpg
-secondary_image: work/utiligroup-interior-graphics/Utiligroup-interior-graphics2.jpg
+hero_image: work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics.jpg
+secondary_image: work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics2.jpg
 main_content:
   -
     type: set
     attrs:
       values:
         type: full_image
-        full_image: work/utiligroup-interior-graphics/Utiligroup-interior-graphics3.jpg
+        full_image: work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics3.jpg
   -
     type: set
     attrs:
       values:
         type: gallery
         gallery:
-          - work/utiligroup-interior-graphics/Utiligroup-interior-graphics4.jpg
-          - work/utiligroup-interior-graphics/Utiligroup-interior-graphics5.jpg
-          - work/utiligroup-interior-graphics/Utiligroup-interior-graphics7.jpg
+          - work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics4.jpg
+          - work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics5.jpg
+          - work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics7.jpg
   -
     type: set
     attrs:
       values:
         type: slider
         images:
-          - work/utiligroup-interior-graphics/Utiligroup-interior-graphics.jpg
-          - work/utiligroup-interior-graphics/Utiligroup-interior-graphics2.jpg
-          - work/utiligroup-interior-graphics/Utiligroup-interior-graphics3.jpg
-          - work/utiligroup-interior-graphics/Utiligroup-interior-graphics4.jpg
-          - work/utiligroup-interior-graphics/Utiligroup-interior-graphics5.jpg
+          - work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics.jpg
+          - work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics2.jpg
+          - work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics3.jpg
+          - work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics4.jpg
+          - work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics5.jpg
   -
     type: paragraph
   -

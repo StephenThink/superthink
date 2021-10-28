@@ -12,10 +12,10 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-systems-video-brochure/BAE-Systems-Video-Brochure-2.jpg
-          - work/bae-systems-video-brochure/BAE-Systems-Video-Brochure-6.jpg
-          - work/bae-systems-video-brochure/BAE_Systems_Video_Brochure_4.jpg
-          - work/bae-systems-video-brochure/BAE_Systems_Video_Brochure_3.jpg
+          - work/experience/bae-systems-video-brochure/BAE-Systems-Video-Brochure-2.jpg
+          - work/experience/bae-systems-video-brochure/BAE-Systems-Video-Brochure-6.jpg
+          - work/experience/bae-systems-video-brochure/BAE_Systems_Video_Brochure_4.jpg
+          - work/experience/bae-systems-video-brochure/BAE_Systems_Video_Brochure_3.jpg
   -
     type: set
     attrs:
@@ -31,7 +31,7 @@ services_filter:
   - illustration
   - print
   - video
-hero_image: work/bae-systems-video-brochure/BAE_Systems_Video_Brochure_1.jpg
-secondary_image: work/bae-systems-video-brochure/BAE-Systems-Video-Brochure-Feature-v2.jpg
+hero_image: work/experience/bae-systems-video-brochure/BAE_Systems_Video_Brochure_1.jpg
+secondary_image: work/experience/bae-systems-video-brochure/BAE-Systems-Video-Brochure-Feature-v2.jpg
 id: 92000782-76da-437b-9708-62bda0daedaa
 ---

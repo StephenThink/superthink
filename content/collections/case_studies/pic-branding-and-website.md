@@ -5,8 +5,8 @@ core:
   - brand
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614875142
-hero_image: work/pic-branding-and-website/1-PIC-branding-v2.jpg
-secondary_image: work/pic-branding-and-website/1-PIC-website-v2.jpg
+hero_image: work/brand/pic-branding-and-website/1-PIC-branding-v2.jpg
+secondary_image: work/brand/pic-branding-and-website/1-PIC-website-v2.jpg
 main_content:
   -
     type: set
@@ -14,12 +14,12 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/pic-branding-and-website/2-PIC-branding-v2.jpg
-          - work/pic-branding-and-website/2-PIC-website-v2.jpg
-          - work/pic-branding-and-website/3-PIC-branding-v2.jpg
-          - work/pic-branding-and-website/3-PIC-website-v2.jpg
-          - work/pic-branding-and-website/4-PIC-website-v2.jpg
-          - work/pic-branding-and-website/5-PIC-website.jpg
+          - work/brand/pic-branding-and-website/2-PIC-branding-v2.jpg
+          - work/brand/pic-branding-and-website/2-PIC-website-v2.jpg
+          - work/brand/pic-branding-and-website/3-PIC-branding-v2.jpg
+          - work/brand/pic-branding-and-website/3-PIC-website-v2.jpg
+          - work/brand/pic-branding-and-website/4-PIC-website-v2.jpg
+          - work/brand/pic-branding-and-website/5-PIC-website.jpg
   -
     type: set
     attrs:

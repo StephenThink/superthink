@@ -8,14 +8,14 @@ core:
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1635338270
 hero_image: The-Energy-Club-Website.jpg
-secondary_image: work/the-energy-club-website/Animated-Mockup-GIF-2.gif
+secondary_image: work/brand/the-energy-club-website/Animated-Mockup-GIF-2.gif
 main_content:
   -
     type: set
     attrs:
       values:
         type: full_image
-        full_image: work/the-energy-club-website/The-Energy-Club-Website-Animation.gif
+        full_image: work/brand/the-energy-club-website/The-Energy-Club-Website-Animation.gif
         video_choice: Image
   -
     type: set
@@ -23,10 +23,10 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-4.jpg
-          - work/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-3.jpg
-          - work/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-2.jpg
-          - work/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-1.jpg
+          - work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-4.jpg
+          - work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-3.jpg
+          - work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-2.jpg
+          - work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-1.jpg
   -
     type: set
     attrs:
@@ -39,10 +39,10 @@ main_content:
       values:
         type: slider
         images:
-          - work/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-1.jpg
-          - work/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-2.jpg
-          - work/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-3.jpg
-          - work/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-4.jpg
+          - work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-1.jpg
+          - work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-2.jpg
+          - work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-3.jpg
+          - work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Small-740x416.25-4.jpg
   -
     type: paragraph
 services_filter:
@@ -51,6 +51,6 @@ services_filter:
   - illustration
   - video
   - web-design-and-development
-thumbnail: work/the-energy-club-website/TheEnergyClub-8-Brand-Large-927x522-2.jpg
+thumbnail: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Large-927x522-2.jpg
 short_case: false
 ---

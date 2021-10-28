@@ -5,8 +5,8 @@ core:
   - campaign
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614603708
-hero_image: work/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign2.jpg
-secondary_image: work/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign3.jpg
+hero_image: work/campaign/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign2.jpg
+secondary_image: work/campaign/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign3.jpg
 main_content:
   -
     type: set
@@ -14,11 +14,11 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-systems-waste-campaign/Animated-Inforgraphics-Mockup-3.gif
-          - work/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign.jpg
-          - work/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign4.jpg
-          - work/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign5.jpg
-          - work/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign6.jpg
+          - work/campaign/bae-systems-waste-campaign/Animated-Inforgraphics-Mockup-3.gif
+          - work/campaign/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign.jpg
+          - work/campaign/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign4.jpg
+          - work/campaign/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign5.jpg
+          - work/campaign/bae-systems-waste-campaign/BAE-Systems-Waste-Campaign6.jpg
   -
     type: set
     attrs:

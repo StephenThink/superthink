@@ -7,8 +7,8 @@ core:
   - brand
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
 updated_at: 1635330515
-hero_image: work/glovers-swim-school/Glovers-Business-Card-Dark-scaled.jpg
-secondary_image: work/glovers-swim-school/Glovers-Swim-Caps-Dark-scaled.jpg
+hero_image: work/brand/glovers-swim-school/Glovers-Business-Card-Dark-scaled.jpg
+secondary_image: work/brand/glovers-swim-school/Glovers-Swim-Caps-Dark-scaled.jpg
 main_content:
   -
     type: set
@@ -16,14 +16,14 @@ main_content:
       values:
         type: the_problem
         intro: 'When it comes to the competitive world of branding, it’s often a case of sink or swim. For Glover’s, we set out to ensure it was the latter. The Preston-based swim school approached us to freshen-up their brand identity. '
-        image: work/glovers-swim-school/Glovers-Illustrations-scaled.jpg
+        image: work/brand/glovers-swim-school/Glovers-Illustrations-scaled.jpg
         video_choice: Image
   -
     type: set
     attrs:
       values:
         type: full_image
-        full_image: work/glovers-swim-school/Glovers-Leaflet-Green-scaled.jpg
+        full_image: work/brand/glovers-swim-school/Glovers-Leaflet-Green-scaled.jpg
         video_choice: Image
   -
     type: paragraph
@@ -33,10 +33,10 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/glovers-swim-school/Glovers-Copy-scaled.jpg
-          - work/glovers-swim-school/Glovers-Drawstring-Bags-Dark-scaled.jpg
-          - work/glovers-swim-school/Glovers-Tshirt-Green-scaled.jpg
-          - work/glovers-swim-school/Glovers-Website-v2.jpg
+          - work/brand/glovers-swim-school/Glovers-Copy-scaled.jpg
+          - work/brand/glovers-swim-school/Glovers-Drawstring-Bags-Dark-scaled.jpg
+          - work/brand/glovers-swim-school/Glovers-Tshirt-Green-scaled.jpg
+          - work/brand/glovers-swim-school/Glovers-Website-v2.jpg
   -
     type: set
     attrs:

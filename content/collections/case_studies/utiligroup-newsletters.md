@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614958675
-hero_image: work/utiligroup-newsletters/1-BGlobal-Rebrand-v2.jpg
-secondary_image: work/utiligroup-newsletters/2-Utiligroup-newsletter-2014-v2-1.jpg
+hero_image: work/experience/utiligroup-newsletters/1-BGlobal-Rebrand-v2.jpg
+secondary_image: work/experience/utiligroup-newsletters/2-Utiligroup-newsletter-2014-v2-1.jpg
 main_content:
   -
     type: set
@@ -14,11 +14,11 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/utiligroup-newsletters/1-Utiligroup-newsletter-2014-v2.jpg
-          - work/utiligroup-newsletters/2-Utiligroup-newsletters-14.jpg
-          - work/utiligroup-newsletters/3-Utiligroup-newsletters-14.jpg
-          - work/utiligroup-newsletters/4-Utiligroup-newsletters-14.jpg
-          - work/utiligroup-newsletters/5-Utiligroup-newsletters-14.jpg
+          - work/experience/utiligroup-newsletters/1-Utiligroup-newsletter-2014-v2.jpg
+          - work/experience/utiligroup-newsletters/2-Utiligroup-newsletters-14.jpg
+          - work/experience/utiligroup-newsletters/3-Utiligroup-newsletters-14.jpg
+          - work/experience/utiligroup-newsletters/4-Utiligroup-newsletters-14.jpg
+          - work/experience/utiligroup-newsletters/5-Utiligroup-newsletters-14.jpg
   -
     type: set
     attrs:

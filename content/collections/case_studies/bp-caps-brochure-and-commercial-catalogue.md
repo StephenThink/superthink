@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614606190
-hero_image: work/bp-caps-brochure-and-commercial-catalogue/1-caps-brochure.jpg
-secondary_image: work/bp-caps-brochure-and-commercial-catalogue/1-caps-brochure_V2.jpg
+hero_image: work/experience/bp-caps-brochure-and-commercial-catalogue/1-caps-brochure.jpg
+secondary_image: work/experience/bp-caps-brochure-and-commercial-catalogue/1-caps-brochure_V2.jpg
 main_content:
   -
     type: set
@@ -14,8 +14,8 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bp-caps-brochure-and-commercial-catalogue/1-caps-brochure_V4.jpg
-          - work/bp-caps-brochure-and-commercial-catalogue/BP-caps-brochure-feature.jpg
+          - work/experience/bp-caps-brochure-and-commercial-catalogue/1-caps-brochure_V4.jpg
+          - work/experience/bp-caps-brochure-and-commercial-catalogue/BP-caps-brochure-feature.jpg
   -
     type: set
     attrs:

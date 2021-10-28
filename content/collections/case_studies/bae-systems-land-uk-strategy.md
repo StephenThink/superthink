@@ -5,8 +5,8 @@ core:
   - experience
 updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_at: 1614351415
-hero_image: work/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy4.jpg
-secondary_image: work/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy2.jpg
+hero_image: work/experience/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy4.jpg
+secondary_image: work/experience/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy2.jpg
 main_content:
   -
     type: set
@@ -14,9 +14,9 @@ main_content:
       values:
         type: gallery
         gallery:
-          - work/bae-systems-land-uk-strategy/Feaure-BAE-LandUK-Strategy-3.jpg
-          - work/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy.jpg
-          - work/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy3.jpg
+          - work/experience/bae-systems-land-uk-strategy/Feaure-BAE-LandUK-Strategy-3.jpg
+          - work/experience/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy.jpg
+          - work/experience/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy3.jpg
   -
     type: set
     attrs:
