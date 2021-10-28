@@ -15,3 +15,4 @@ yarn-error.log
 .DS_Store
 .editorconfig
 .vscode/settings.json
+/public/assets
