@@ -9,3 +9,5 @@ preferences:
   collections:
     case_studies:
       after_save: continue_editing
+    employees:
+      after_save: continue_editing

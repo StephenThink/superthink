@@ -1,25 +1,40 @@
 ---
-title: 'PIC Branding and Website'
+id: aa96b51e-81ed-4d9d-b6a0-8d9c032dd4b3
+blueprint: case_study
+title: 'mc- PIC Branding and Website'
 greatest_hits: false
 core:
   - brand
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614875142
-hero_image: work/brand/pic-branding-and-website/1-PIC-branding-v2.jpg
-secondary_image: work/brand/pic-branding-and-website/1-PIC-website-v2.jpg
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1635786862
+hero_image: work/brand/pic-branding-and-website/Pic-6-Brand-Full-Image-1360x768.5.jpg
+secondary_image: work/brand/pic-branding-and-website/Pic-6-Brand-Secondary-Image-896x597.jpg
 main_content:
   -
     type: set
     attrs:
       values:
+        type: the_problem
+        video_choice: Image
+        image: work/brand/pic-branding-and-website/Pic-6-Brand-Large-927x522.jpg
+  -
+    type: set
+    attrs:
+      enabled: false
+      values:
         type: gallery
-        gallery:
-          - work/brand/pic-branding-and-website/2-PIC-branding-v2.jpg
-          - work/brand/pic-branding-and-website/2-PIC-website-v2.jpg
-          - work/brand/pic-branding-and-website/3-PIC-branding-v2.jpg
-          - work/brand/pic-branding-and-website/3-PIC-website-v2.jpg
-          - work/brand/pic-branding-and-website/4-PIC-website-v2.jpg
-          - work/brand/pic-branding-and-website/5-PIC-website.jpg
+  -
+    type: set
+    attrs:
+      values:
+        type: slider
+        images:
+          - work/brand/pic-branding-and-website/Pic-6-Brand-Small-740x416.25-1.jpg
+          - work/brand/pic-branding-and-website/Pic-6-Brand-Small-740x416.25-2.jpg
+          - work/brand/pic-branding-and-website/Pic-6-Brand-Small-740x416.25-3.jpg
+          - work/brand/pic-branding-and-website/Pic-6-Brand-Small-740x416.25-4.jpg
+          - work/brand/pic-branding-and-website/Pic-6-Brand-Small-740x416.25-5.jpg
+          - work/brand/pic-branding-and-website/Pic-6-Brand-Small-740x416.25-6.jpg
   -
     type: set
     attrs:
@@ -32,5 +47,5 @@ services_filter:
   - branding
   - digital
   - web-design-and-development
-id: aa96b51e-81ed-4d9d-b6a0-8d9c032dd4b3
+short_case: false
 ---

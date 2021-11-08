@@ -1,46 +1,50 @@
 ---
-title: 'Charlie James Pie and Mash'
+id: baf61092-7e62-41d3-9b01-b44cb32d6fd7
+blueprint: case_study
+title: 'mc- Charlie James Pie and Mash'
 greatest_hits: false
 core:
   - brand
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614611476
-hero_image: work/brand/charlie-james-pie-and-mash/CJ-Interior-Graphics_2.jpg
-secondary_image: work/brand/charlie-james-pie-and-mash/CJ_Branding.jpg
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1635785950
+hero_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Full-Image-1360x768.5.jpg
+secondary_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Secondary-Image-896x597.jpg
 main_content:
   -
     type: set
     attrs:
       values:
         type: the_problem
-        intro: 'When it came to building their em<span class="text-yellow">pie</span>re, Charlie James Pie &amp; Mash knew the perfect creative team they wanted to help with their vision. '
-        image: work/brand/charlie-james-pie-and-mash/CJ_SocialMedia.jpg
+        intro: 'With huge demand from their customers for an online view of their menus, Charlie James Pie & Mash knew exactly who could deliver the goods and came to us to help pack out their website. Showcasing the brands distinctive look and feel with injects of humour is our speciality so with their trust we took their menu from print to a fully-responsive website allowing customers to directly book takeaway deliveries or enquire about services and packages tailored to them. '
+        image: work/brand/charlie-james-pie-and-mash/charlieJames-1-Brand-Large-927x522.jpg
+        video_choice: Image
   -
     type: set
     attrs:
       values:
         type: full_image
-        full_image: work/brand/charlie-james-pie-and-mash/CJ-TakeawayMenu_Cover.jpg
+        full_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Full-Image-1360x768.5-2.jpg
+        video_choice: Image
+  -
+    type: set
+    attrs:
+      values:
+        type: slider
+        images:
+          - work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Small-740x416.25-1.jpg
+          - work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Small-740x416.25-2.jpg
+          - work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Small-740x416.25-3.jpg
+          - work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Small-740x416.25-4.jpg
+          - work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Small-740x416.25-5.jpg
+          - work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Small-740x416.25-6.jpg
   -
     type: paragraph
   -
     type: set
     attrs:
+      enabled: false
       values:
         type: gallery
-        gallery:
-          - work/brand/charlie-james-pie-and-mash/CJ-Clipboard_Menus_3.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-Interior-Graphics.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-Interior-Graphics_3.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-Interior-Graphics_4.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-Loyalty-Cards-v2.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-Menu-Pie-1.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-Menu-Pie-2.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-Signage.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-TakeawayMenu_Cover_v2.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-TakeawayMenu_Inside.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ-VIPie-Cards.jpg
-          - work/brand/charlie-james-pie-and-mash/CJ_Ipad.jpg
   -
     type: set
     attrs:
@@ -57,5 +61,6 @@ services_filter:
   - illustration
   - print
   - web-design-and-development
-id: baf61092-7e62-41d3-9b01-b44cb32d6fd7
+mini_introduction: 'When it came to building their em<b>pie</b>re, Charlie James Pie &amp; Mash knew the perfect creative team they wanted to help with their vision.'
+short_case: true
 ---

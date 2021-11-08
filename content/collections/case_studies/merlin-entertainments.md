@@ -10,7 +10,7 @@ sector:
   - Aerospace
   - Defence
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1635413918
+updated_at: 1635769596
 main_content:
   -
     type: paragraph
@@ -22,7 +22,8 @@ main_content:
         intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at. Lectus arcu bibendum at varius. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Nisl pretium fusce id velit ut tortor. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Consectetur a erat nam at lectus urna duis. Lacus sed viverra tellus in hac habitasse platea dictumst. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. '
         image: 1-Sealife.jpg
         sign_off: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at. Lectus arcu bibendum at varius.'
-        video_choice: Image
+        video_choice: Video
+        video: /assets/heros/service/sauce.mp4
   -
     type: set
     attrs:

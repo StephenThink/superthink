@@ -1,10 +1,12 @@
 ---
-title: 'BEA Systems Munitions Exhibitions Stands'
+id: 48b6e4a9-5c5b-46b3-a920-d62848d9d71b
+blueprint: case_study
+title: 'BAE Systems Munitions Exhibitions Stands'
 greatest_hits: false
 core:
   - experience
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614605815
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1636043141
 hero_image: work/experience/bea-systems-munitions-exhibitions-stands/1-BAE-munitions-stands-v2.jpg
 secondary_image: work/experience/bea-systems-munitions-exhibitions-stands/3-BAE-munitions-stands-v2.jpg
 main_content:
@@ -25,5 +27,5 @@ main_content:
     type: paragraph
 services_filter:
   - display
-id: 48b6e4a9-5c5b-46b3-a920-d62848d9d71b
+short_case: false
 ---

@@ -1,22 +1,44 @@
 ---
-title: 'BAE Systems Land UK Strategy'
+id: 57940e00-88c9-4be6-b0a0-301350a3c55d
+blueprint: case_study
+title: 'mc- BAE Systems Land UK Strategy'
 greatest_hits: false
 core:
   - experience
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614351415
-hero_image: work/experience/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy4.jpg
-secondary_image: work/experience/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy2.jpg
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1636025097
+hero_image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Full-Image-1360x768.5.jpg
+secondary_image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
     type: set
     attrs:
       values:
+        type: the_problem
+        video_choice: Image
+        image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Large-927x522.jpg
+  -
+    type: set
+    attrs:
+      values:
+        type: full_image
+        video_choice: Image
+        full_image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Full-Image-1360x768.5-2.jpg
+  -
+    type: set
+    attrs:
+      enabled: false
+      values:
         type: gallery
-        gallery:
-          - work/experience/bae-systems-land-uk-strategy/Feaure-BAE-LandUK-Strategy-3.jpg
-          - work/experience/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy.jpg
-          - work/experience/bae-systems-land-uk-strategy/portfolio-BAE-LandUK-Strategy3.jpg
+  -
+    type: set
+    attrs:
+      values:
+        type: slider
+        images:
+          - work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Small-740x416.25-1.jpg
+          - work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Small-740x416.25-2.jpg
+          - work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Small-740x416.25-3.jpg
   -
     type: set
     attrs:
@@ -28,5 +50,5 @@ main_content:
 services_filter:
   - print
   - design
-id: 57940e00-88c9-4be6-b0a0-301350a3c55d
+short_case: false
 ---

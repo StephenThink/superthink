@@ -1,12 +1,14 @@
 ---
-title: 'Merlin Entertainments - Sea Life Blackpool Map'
+id: 277c44c2-c0d9-4b24-bb30-22be90905ebc
+blueprint: case_study
+title: 'mc- Merlin Entertainments - Sea Life Blackpool Map'
 greatest_hits: true
 core:
   - experience
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614866009
-hero_image: work/experience/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map5.jpg
-secondary_image: work/experience/merlin-entertainments-sea-life-blackpool-map/Feature-Merlin-SeaLife-Map.jpg
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1636024592
+hero_image: work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Full-Image-1360x768.5.jpg
+secondary_image: work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
     type: set
@@ -14,15 +16,24 @@ main_content:
       values:
         type: the_problem
         intro: 'Designing an all-new SEA LIFE map for Merlin Entertainments was a job we were immensely excited to take on.'
-        image: work/experience/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map.jpg
+        image: work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Large-927x522.jpg
+        video_choice: Image
+  -
+    type: set
+    attrs:
+      enabled: false
+      values:
+        type: gallery
   -
     type: set
     attrs:
       values:
-        type: gallery
-        gallery:
-          - work/experience/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map-2.jpg
-          - work/experience/merlin-entertainments-sea-life-blackpool-map/Merlin-SeaLife-Map7.jpg
+        type: slider
+        images:
+          - work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Small-740x416.25-1.jpg
+          - work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Small-740x416.25-2.jpg
+          - work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Small-740x416.25-3.jpg
+          - work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Small-740x416.25-4.jpg
   -
     type: set
     attrs:
@@ -35,5 +46,5 @@ services_filter:
   - design
   - illustration
   - print
-id: 277c44c2-c0d9-4b24-bb30-22be90905ebc
+short_case: false
 ---

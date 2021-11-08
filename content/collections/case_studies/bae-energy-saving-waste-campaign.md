@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - campaign
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1635416920
+updated_at: 1635770009
 hero_image: work/campaign/bae-energy-saving-waste-campaign/3-Energy-Saving-Posters-v2.jpg
 secondary_image: work/campaign/bae-energy-saving-waste-campaign/2-Energy-Saving-Posters-v2.jpg
 main_content:

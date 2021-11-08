@@ -1,34 +1,48 @@
 ---
-title: 'Ignition RM Branding'
+id: ca711063-a9ec-4f68-be8c-16ce7bad0869
+blueprint: case_study
+title: 'mc- Ignition RM Branding'
 greatest_hits: false
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614854687
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1636024249
 core:
   - brand
-hero_image: work/brand/ignition-rm-branding/3-RM-branding-v2.jpg
-secondary_image: work/brand/ignition-rm-branding/5-RM-branding-v2.jpg
+hero_image: work/brand/ignition-rm-branding/Ignition-4-Brand-Full-Image-1360x768.5.jpg
+secondary_image: work/brand/ignition-rm-branding/Ignition-4-Brand-Secondary-Image-896x597.jpg
 main_content:
   -
     type: set
     attrs:
       values:
+        type: the_problem
+        intro: 'The outcome is an iconic mark with a vision for movement, along with strong messaging and an unusual approach to promotional material. Who wouldn’t pay attention when a beautifully silk screened parking ticket lands on their door mat? Who wouldn’t plug in when a company specialising in transport management offers you a USB ‘Key’? It just goes to show that a creative-led approach to your business’ brand can really set you apart from the competition. Your brand is the most precious thing you have – invest in it.'
+        video_choice: Image
+        image: work/brand/ignition-rm-branding/Ignition-4-Brand-Large-927x522.jpg
+  -
+    type: set
+    attrs:
+      enabled: false
+      values:
         type: full_image
-        full_image: work/brand/ignition-rm-branding/6-RM-branding-v2.jpg
+        video_choice: Image
+  -
+    type: set
+    attrs:
+      enabled: false
+      values:
+        type: gallery
   -
     type: set
     attrs:
       values:
-        type: gallery
-        gallery:
-          - work/brand/ignition-rm-branding/1-RM-branding-v2.jpg
-          - work/brand/ignition-rm-branding/10-RM-branding-v2.jpg
-          - work/brand/ignition-rm-branding/11-RM-branding-v2.jpg
-          - work/brand/ignition-rm-branding/2-RM-branding-v2.jpg
-          - work/brand/ignition-rm-branding/4-RM-branding-v2.jpg
-          - work/brand/ignition-rm-branding/7-RM-branding-v2.jpg
-          - work/brand/ignition-rm-branding/8-RM-branding-v2.jpg
-          - work/brand/ignition-rm-branding/9-RM-branding-v2.jpg
-          - work/brand/ignition-rm-branding/F-RM-branding.jpg
+        type: slider
+        images:
+          - work/brand/ignition-rm-branding/Ignition-4-Brand-Small-740x416.25-1.jpg
+          - work/brand/ignition-rm-branding/Ignition-4-Brand-Small-740x416.25-2.jpg
+          - work/brand/ignition-rm-branding/Ignition-4-Brand-Small-740x416.25-3.jpg
+          - work/brand/ignition-rm-branding/Ignition-4-Brand-Small-740x416.25-4.jpg
+          - work/brand/ignition-rm-branding/Ignition-4-Brand-Small-740x416.25-5.jpg
+          - work/brand/ignition-rm-branding/Ignition-4-Brand-Small-740x416.25-6.jpg
   -
     type: set
     attrs:
@@ -41,5 +55,6 @@ services_filter:
   - branding
   - digital
   - print
-id: ca711063-a9ec-4f68-be8c-16ce7bad0869
+mini_introduction: 'Ignition RM offer Fleet Risk Management to clients across the UK, and in need of a strong brand presence in the market, they appreciate that this needs a creative-led approach.'
+short_case: false
 ---

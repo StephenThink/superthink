@@ -17,9 +17,11 @@ sections:
         field:
           input_type: text
           type: text
-          instructions: 'To be shown on the case studies listing'
+          instructions: 'To be shown on the case studies (work on the front end) listing'
           listable: hidden
           display: Tagline
+          instructions_position: above
+          antlers: false
       -
         handle: thumbnail
         field:
@@ -39,6 +41,13 @@ sections:
     display: Main
     fields:
       -
+        handle: mini_introduction
+        field:
+          type: textarea
+          instructions: 'To be displayed underneath the title on the case study page.'
+          listable: hidden
+          display: 'Mini Introduction'
+      -
         handle: secondary_image
         field:
           mode: grid
@@ -53,13 +62,6 @@ sections:
           max_files: 1
           instructions_position: above
           show_filename: true
-      -
-        handle: mini_introduction
-        field:
-          type: textarea
-          instructions: 'To be displayed underneath the title on the case study page.'
-          listable: hidden
-          display: 'Mini Introduction'
       -
         handle: sector
         field:

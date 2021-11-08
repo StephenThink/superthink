@@ -1,10 +1,12 @@
 ---
-title: 'Utiligroup Webiste Update'
+id: b55150db-dd3e-4a6a-aa24-e12693ab78ac
+blueprint: case_study
+title: 'Utiligroup Website Update'
 greatest_hits: false
 core:
   - experience
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614961291
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1636036613
 hero_image: work/experience/utiligroup-webiste-update/5-Utiligroup-website-update-v2.jpg
 secondary_image: work/experience/utiligroup-webiste-update/7-Utiligroup-website-update-v2.jpg
 main_content:
@@ -29,5 +31,5 @@ main_content:
 services_filter:
   - digital
   - web-design-and-development
-id: b55150db-dd3e-4a6a-aa24-e12693ab78ac
+short_case: false
 ---

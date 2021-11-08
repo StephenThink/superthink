@@ -1,4 +1,8 @@
 name: Michael
 super: true
 id: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-password_hash: $2y$10$C6/ucFgS7C7q.nD1zCiT5eE3c8w7sFNteZotaqLREBwYYisnsXe2W
+password_hash: $2y$10$hGFVDS/soyC3GJ59SSTVAug1oj9LTUjBUTLrxqtRCle1Z2p7RWo7O
+preferences:
+  collections:
+    case_studies:
+      after_save: continue_editing
