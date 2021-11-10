@@ -4,7 +4,7 @@ blueprint: careers
 title: Careers
 hero_text: 'Your next destination?'
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1636549256
+updated_at: 1636556912
 template: pages/careers
 page_title: 'WE ARE LOOKING FOR TALENTED PEOPLE TO JOIN OUR TEAM.'
 introduction: |-
@@ -21,4 +21,5 @@ seo:
 before_experience: 'For people with'
 after_experience: '+ years experience'
 no_jobs: 'There''s no jobs currently available.'
+award_title: 'Awards & Accreditations'
 ---

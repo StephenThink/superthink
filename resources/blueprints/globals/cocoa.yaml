@@ -57,3 +57,14 @@ sections:
           icon: text
           listable: hidden
           instructions_position: above
+      -
+        handle: email_me_text
+        field:
+          input_type: text
+          antlers: false
+          default: 'Email Me'
+          display: 'Email Me Text'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

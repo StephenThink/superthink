@@ -1,0 +1,48 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: get_in_touch
+        field:
+          input_type: text
+          antlers: false
+          default: 'Get in touch'
+          display: 'Get in touch'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: work_with_us
+        field:
+          input_type: text
+          antlers: false
+          default: 'Want to work with us?'
+          display: 'Work with us'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: need_directions
+        field:
+          input_type: text
+          antlers: false
+          default: 'Need directions?'
+          display: 'Need Directions'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: company_name
+        field:
+          input_type: text
+          antlers: false
+          default: Think!Creative
+          display: 'Company Name'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

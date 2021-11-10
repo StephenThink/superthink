@@ -85,6 +85,18 @@ sections:
           type: template
           listable: hidden
           display: Template
+      -
+        handle: award_title
+        field:
+          input_type: text
+          antlers: false
+          default: 'Awards & Accreditations'
+          display: 'Award Title'
+          type: text
+          icon: text
+          instructions: 'This will be displayed next to the Awards we have won.'
+          listable: hidden
+          instructions_position: above
   SEO:
     display: SEO
     fields:

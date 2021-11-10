@@ -4,17 +4,17 @@
 
             <div class="w-full md:ml-auto text-dark font-black text-3xl">
                 <!-- Let's stay in touch -->
-                Get in touch
+                {{ footer:get_in_touch }}
             </div>
             
             <div class=" flex flex-col md:flex-row justify-between">
                 <div class="w-full md:w-1/2">
-                    <h5 class="font-bold">Want to work with us?</h5>
+                    <h5 class="font-bold">{{ footer:work_with_us }}</h5>
                     <p>Email <a href="mailto:paul@thinkcreative.uk.com?subject='I want to work with you'">Paul</a></p>
                     <p>Or call <a href="tel:{{ contact_information:tel }}">{{ contact_information:tel }}</a></p>
                 </div>
                 <div class="w-full mt-8 md:mt-0 md:w-1/2">
-                    <h5 class="font-bold">Need directions?</h5>
+                    <h5 class="font-bold">{{ footer:need_directions }}</h5>
                     
                     {{ contact_information:company_address | nl2br}}
                 
@@ -68,14 +68,14 @@
             </div>
             <!-- Mobile Display -->
             <div class="pt-4 md:hidden">
-                <p>&copy;Think!Creative &nbsp; 2006 - {{ date format="Y" }}
+                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }}
                     <br>
                 <a href="#">Legal Stuff</a></p>
             </div>
 
             <!-- Non Mobile Display -->
             <div class="hidden md:block">
-                <p>&copy;Think!Creative &nbsp; 2006 - {{ date format="Y" }} <span class="mx-2 text-xs">•</span> <a href="#">Legal Stuff</a></p>
+                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }} <span class="mx-2 text-xs">•</span> <a href="#">Legal Stuff</a></p>
             </div>
         </div>
     </div>

@@ -79,7 +79,7 @@ sections:
     display: 'Yellow Banner'
     fields:
       -
-        import: call_to_action
+        import: call_to_action   
   sidebar:
     display: Sidebar
     fields:
@@ -109,6 +109,18 @@ sections:
           type: template
           icon: template
           listable: hidden
+      -
+        handle: award_title
+        field:
+          input_type: text
+          antlers: false
+          default: 'Awards & Accreditations'
+          display: 'Award Title'
+          type: text
+          icon: text
+          instructions: 'This will be displayed next to the Awards we have won.'
+          listable: hidden
+          instructions_position: above
   SEO:
     display: SEO
     fields:
