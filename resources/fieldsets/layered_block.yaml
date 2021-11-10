@@ -8,7 +8,7 @@ fields:
       instructions: 'Bold yellow text'
       listable: hidden
       display: Title
-      width: 33
+      width: 50
   -
     handle: you_us
     field:
@@ -29,21 +29,17 @@ fields:
       display: You/Us
       validate:
         - required
-      width: 33
+      width: 50
   -
     handle: show_link
     field:
       type: toggle
       instructions: 'DO you want to show links to the services?'
-      listable: true
-      display: 'Show Link'
-      width: 33
-  -
-    handle: layered_content
-    field:
-      type: textarea
       listable: hidden
-      display: Content
+      display: 'Show Link'
+      width: 50
+      instructions_position: above
+      default: false
   -
     handle: require_count
     field:
@@ -56,3 +52,32 @@ fields:
       instructions_position: above
       validate:
         - required
+      width: 50
+  -
+    handle: layered_content
+    field:
+      type: textarea
+      listable: hidden
+      display: Content
+  -
+    handle: small_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'You Title'
+      type: text
+      icon: text
+      instructions: 'This will display on the home page if "You" is selected.'
+      listable: hidden
+      instructions_position: above
+  -
+    handle: you_tagline
+    field:
+      input_type: text
+      antlers: false
+      display: 'You Tagline'
+      type: text
+      icon: text
+      instructions: 'This will show on the home page when you select "You"'
+      listable: hidden
+      instructions_position: above

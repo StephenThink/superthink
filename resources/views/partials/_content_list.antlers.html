@@ -38,9 +38,11 @@
                             {{ tag_line_you }}
                         </div>
                         
+                        {{ if show_link }}
                         <a href="/services{{ url }}">
                             {{ partial:partials/link_arrow textSize="text-lg" textColor="text-yellow" text="View all {title} services" }}
                         </a>
+                        {{ /if }}
                     {{ /if }}
                     
                     <div class="w-full my-16 h-1px bg-light-grey bottom-line"  ></div>
@@ -54,11 +56,11 @@
                     <h3 class="flex items-center text-lg text-grey">
                         <span class="inline-block help">Help!</span> 
                         <span class="overflow-hidden ">
-                            <span class="inline-block ml-2 after-help">I already know what I need</span>
+                            <span class="inline-block ml-2 after-help">{{ small_title ?? "I already know what I need" }}</span>
                         </span>
                     </h3>
                     <div class="mt-6 text-5xl font-black">
-                        <p class="tagline">That’s cool. Check out all our services below...</p>
+                        <p class="tagline">{{ you_tagline ?? "That’s cool. Check out all our services below..." }}</p>
                     </div>
                 </div>
             {{ /if }}
