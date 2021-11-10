@@ -2,13 +2,11 @@
 id: c220f30e-3f32-4a6d-958d-6d8577ff4e1b
 blueprint: about
 title: 'About Us'
-hero_text: 'Good people to think with'
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1633607391
+hero_text: 'Good people to connect the dots'
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1636462764
 template: pages/about
-hero_intro: |-
-  We all sit together and crack your problem in the same room. That means we can work in a fast, integrated way, which means you only pay for what you need, 
-  and nothing you don’t.
+hero_intro: 'We reckon great things happen when you put stuff together. That''s why our people combine a whole range of creative disciplines. Oh and we''re dead nice too.'
 quote: 'Think!Creative are always my ‘go-to guys’ when I need inspired, creative and thoughtful design. I’ve always found them to have an innate ability to understand not just the design brief but also the wider campaign context and objectives - a highly valued aspect of this highly valued team.'
 cite: '— Greg Trew, Communications Manager – BP Refining'
 layered_title: 'How it works'

@@ -1,12 +1,12 @@
 ---
 id: e9c9694d-2e31-44be-9012-435a3d07fd0c
 blueprint: case_study
-title: 'mc- Parking Eye Bochure 2016'
+title: 'mc- Parking Eye Brochure 2016'
 greatest_hits: false
 core:
   - experience
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636029658
+updated_at: 1636366901
 hero_image: work/experience/parkingeye-brochure-2016/ParkingEyeBrochure-10-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/parkingeye-brochure-2016/ParkingEyeBrochure-10-Experience-Secondary-Image-896x597.jpg
 main_content:

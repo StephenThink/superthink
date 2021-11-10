@@ -1,12 +1,14 @@
 ---
-title: 'Climavent Website'
+id: 99c40e18-3250-4259-aa9d-c5525d3c3919
+blueprint: case_study
+title: 'mc- Climavent Website'
 greatest_hits: false
 core:
   - experience
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614616950
-hero_image: work/experience/climavent-website/Climavent-website3.jpg
-secondary_image: work/experience/climavent-website/climavent-website-feature.jpg
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1636369337
+hero_image: work/experience/climavent-website/Climavent-Website-30-Experience-Full-Image-1360x768.5.jpg
+secondary_image: work/experience/climavent-website/Climavent-Website-30-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
     type: set
@@ -14,14 +16,22 @@ main_content:
       values:
         type: the_problem
         intro: 'Climavent came to us to freshen up their brand and to create a responsive new website that could perform across multiple devices. '
-        image: work/experience/climavent-website/Climavent-website-phone.jpg
+        image: work/experience/climavent-website/Climavent-Website-30-Experience-Large-927x522.jpg
+        video_choice: Image
+  -
+    type: set
+    attrs:
+      enabled: false
+      values:
+        type: gallery
   -
     type: set
     attrs:
       values:
-        type: gallery
-        gallery:
-          - work/experience/climavent-website/Climavent-website.jpg
+        type: slider
+        images:
+          - work/experience/climavent-website/Climavent-Website-30-Experience-Small-740x416.25-1.jpg
+          - work/experience/climavent-website/Climavent-Website-30-Experience-Small-740x416.25-2.jpg
   -
     type: set
     attrs:
@@ -34,5 +44,5 @@ services_filter:
   - design
   - digital
   - web-design-and-development
-id: 99c40e18-3250-4259-aa9d-c5525d3c3919
+short_case: false
 ---
