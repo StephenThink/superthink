@@ -4,8 +4,8 @@ blueprint: homepage
 title: Home
 template: home
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1636475907
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1636548441
 why_us_headline: 'Want to make your brand more memorable? You’ve come to the right place.'
 why_us_content:
   -
@@ -15,6 +15,7 @@ why_us_content:
     link_text: 'See what we''ve done'
     type: new_set
     enabled: true
+    link_url: 'http://www.aol.com'
   -
     image: homepage/meeting.jpg
     heading: 'Method and madness'
@@ -53,5 +54,6 @@ layered_content: |-
 show_link: false
 you_us: us
 require_count: false
+why_title: 'Why Think?'
 ---
 Welcome to your new Statamic website.
