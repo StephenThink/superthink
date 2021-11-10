@@ -100,6 +100,57 @@ sections:
           display: 'Why us content'
           instructions_position: above
           collapse: false
+  screen_block:
+    display: 'Screen Block'
+    fields:
+      -
+        handle: block_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Block Title'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: top_line
+        field:
+          input_type: text
+          antlers: false
+          display: 'Top Line'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: bottom_line
+        field:
+          input_type: text
+          antlers: false
+          display: 'Bottom Line'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: link_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Link Text'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: block_link
+        field:
+          display: 'Block Link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
   layered_block:
     display: 'Layered Block'
     fields:

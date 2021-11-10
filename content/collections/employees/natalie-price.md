@@ -4,10 +4,12 @@ blueprint: employee
 title: 'Natalie Price'
 employee_role: 'Creative Designer'
 email: natalie@thinkcreative.uk.com
-employee_image: employees/Natalie.jpg
 expertise:
   - 'Motion Graphics, Animation'
   - Puns
+  - 'Queen of Todo''s'
+  - Organisation
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1636016898
+updated_at: 1636552511
+employee_image: employees/Natalie.jpg
 ---

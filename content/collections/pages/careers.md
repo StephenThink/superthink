@@ -3,8 +3,8 @@ id: c78f08a9-bab6-40f3-9f77-6132946ac48b
 blueprint: careers
 title: Careers
 hero_text: 'Your next destination?'
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1635860519
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1636549256
 template: pages/careers
 page_title: 'WE ARE LOOKING FOR TALENTED PEOPLE TO JOIN OUR TEAM.'
 introduction: |-
@@ -18,4 +18,7 @@ seo:
   title: 'Careers with Think!Creative'
   description: 'TALENT WANTED We are looking for someone to delve into their passion, develop and learn quickly to adapt their skills. Call us 01253 297900'
   site_name: false
+before_experience: 'For people with'
+after_experience: '+ years experience'
+no_jobs: 'There''s no jobs currently available.'
 ---

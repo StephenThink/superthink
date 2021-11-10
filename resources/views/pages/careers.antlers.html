@@ -23,12 +23,12 @@
                     {{ collection:jobs }}
                         
                         {{ if no_results }}
-                            There's no jobs currently available.
+                            {{ no_jobs }}
                         {{ else }}
                             <a href="{{ url }}" class="block hover:bg-yellow hover:text-light">
                                 <div class="flex place-content-between border-t border-dark dark:border-light py-5 px-2">
                                     <div>{{ title }}</div>
-                                    <div class="text-right">For people with {{ experience }}+ years experience</div>
+                                    <div class="text-right">{{ before_experience }} {{ experience }}{{ after_experience }}</div>
                                 </div>
                             </a>
                             

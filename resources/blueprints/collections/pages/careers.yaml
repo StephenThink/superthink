@@ -37,6 +37,44 @@ sections:
           type: markdown
           icon: markdown
           listable: hidden
+  jobs_available:
+    display: 'Jobs available'
+    fields:
+      -
+        handle: before_experience
+        field:
+          input_type: text
+          antlers: false
+          display: 'Before Experience'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          instructions: 'this is displayed around the years experience. eg For people with {experience} years experience'
+      -
+        handle: after_experience
+        field:
+          input_type: text
+          antlers: false
+          display: 'After Experience'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+  no_jobs:
+    display: 'No Jobs'
+    fields:
+      -
+        handle: no_jobs
+        field:
+          input_type: text
+          antlers: false
+          display: 'No Jobs'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          instructions: 'This is displayed if we have no jobs available.'
   yellow_banner:
     display: 'Yellow Banner'
     fields:

@@ -40,14 +40,14 @@
     
     <div class="container flex flex-col justify-between h-full">
         <div class="">
-            <h2 class="accent__yellow">The Think! way of doing things</h2>
+            <h2 class="accent__yellow">{{ block_title ?? "The Think! way of doing things" }}</h2>
         </div>
         <div class="text-5xl font-black md:text-display-hero">
-            <div class="leading-tight text-white fancy" data-scroll data-scroll-call="fancy">Stand out ideas get</div>
-            <div class="leading-tight text-yellow fancy" data-scroll data-scroll-call="fancy">outstanding results</div>
+            <div class="leading-tight text-white fancy" data-scroll data-scroll-call="fancy"> {{ top_line ?? "Stand out ideas get" }}</div>
+            <div class="leading-tight text-yellow fancy" data-scroll data-scroll-call="fancy">{{ bottom_line ?? "outstanding results" }}</div>
         </div>
         <div class="">
-            {{ partial:partials/link_arrow textColor="text-yellow" text="See how" }}
+            <a href="{{block_link}}">{{ partial:partials/link_arrow textColor="text-yellow" text="{{link_text}}" }}</a>
         </div>
     </div>
 

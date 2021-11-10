@@ -5,7 +5,7 @@ title: Home
 template: home
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1636548441
+updated_at: 1636551638
 why_us_headline: 'Want to make your brand more memorable? You’ve come to the right place.'
 why_us_content:
   -
@@ -15,7 +15,6 @@ why_us_content:
     link_text: 'See what we''ve done'
     type: new_set
     enabled: true
-    link_url: 'http://www.aol.com'
   -
     image: homepage/meeting.jpg
     heading: 'Method and madness'
@@ -52,8 +51,12 @@ layered_content: |-
 
   We put integrated creative thinking at the heart of everything we do at Think!Creative. Whatever problem you're chewing over, chances are you need help with one (or a combination) of these...
 show_link: false
-you_us: us
+you_us: you
 require_count: false
 why_title: 'Why Think?'
+block_title: 'The Think! way of doing things'
+top_line: 'Stand out ideas get'
+bottom_line: 'outstanding results'
+link_text: 'see how'
 ---
 Welcome to your new Statamic website.
