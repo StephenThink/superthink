@@ -1,10 +1,10 @@
 title: Strategy
 strapline: 'Help! We’re not sure what will work best'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614267975
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1636629172
 blueprint: core
-tag_line_us: 'You know exactly what you need to do to succeed'
+tag_line_us: 'What comes before how. We can help you with strategic blueprints and plans that make sure the creative work is on point.'
 tag_line_you: 'You need a strategy'
 template: service-taxonomy/show
 grid:
@@ -12,53 +12,58 @@ grid:
     title: Strategy
     text: '"The possibilities are endless!" When you’re stood at the dessert buffet they’re the best words in the world. When you’re thinking about your brand and marketing? Not so much. Because branding needs focus. Purpose. Direction. Your branding needs strategy. And this is where you find it.'
     bold_text: 'Set your direction'
-    bottom_text: |
+    bottom_text: |-
       Sure, you could spend the rest of your life throwing marketing ideas at the wall and seeing what sticks, but you probably don’t have time for that. You definitely won’t have the budget for that.
       That’s why you need a strategy. It’s how you nail what really matters. Before the creatives start doing their whizzy stuff, a strategy is how you make sure that a) this will have an impact and b) it will have the impact you actually want. 
-      
+
       The possibilities are endless. So let’s start whittling them down to the ones that can really make a difference with a clear, smart and simple strategy. Here’s how...
+    coll_image: null
   -
     title: 'Research & Insights'
     text: '"Research is creating new knowledge". Neil Armstrong said that, which just goes to show there was a good career in marketing waiting for him if he ever grew tired of the astronaut stuff. But what new knowledge do you need?'
     bold_text: 'Knowledge. Not assumptions.'
-    bottom_text: |
+    bottom_text: |-
       At Think! Creative, research doesn’t come freeze dried and prepacked (unlike Neil’s lunch). We don’t start with the answers and design a survey to arrive at what we thought in the first place. 
       With us, you’ll find fresh insights that confirm your suspicions or data. You’ll find insights that surprise you and make the conventional wisdom look silly. And you’ll find the occasional answer that raises questions you simply never thought of before. Often, those can be the best insights of all.
-      
+
       It’s good to know what’s going on in your business. So when you need to ask…
       •	What do your customers think?
       •	What do the people who aren’t (yet) your customers think?
       •	What are your competitors doing?
       •	How well known are you?
       •	How are perceptions of your brand/business changing over time? 
-      
+
       ...ask us to find out.
+    coll_image: null
   -
     title: 'Brand Strategy'
-    text: |
+    text: |-
       You’ve already got a brand. Ok, so it’s not Coke or iPhone (unless it is, in which case, well done you) but it’s well respected in the industry and performing perfectly well thank you very much. 
       But then, something happens...
     bold_text: 'For brands that do the business'
-    bottom_text: |
+    bottom_text: |-
       Some upstart muscles in on your territory, leaving your brand feeling a bit yesterday and you’re not sure why. You find the brand that used to fit you like a glove now restricts you like a tiny leotard or fits about as well as a cheap Xmas jumper. Or you grow and merge and acquire until one day you find you’re the proud owner of several brands, and now you have to work out where to put your marketing attention (and budget). 
-      
+
       That’s what your brand strategy is for. It’s about digging into the DNA of your business(es) to understand what really matters, what fits where, and what to prioritise. It’s about quick campaign wins and long-term awareness.
-      
+
       It’s about making sure a brand that once did the business, still can.
       Here’s how we do that.
+    coll_image: null
   -
     title: 'Marketing Strategy'
-    text: |
+    text: |-
       You have big ambitions. But let’s get real: your business just isn’t big enough or well-known enough to enjoy the gravitational pull of its own brand. Yet. 
-      
+
       What you need is an approach to marketing that fits where your business is now and takes you to where you want to be next. That’s why you need to make your marketing strategy your best friend.
     bold_text: 'Let’s make friends'
-    bottom_text: |
+    bottom_text: |-
       The right marketing strategy helps you find your place in the world. It helps you get a grip on what your customers want to see and hear from you. It’s about picking your targets, working out how to reach them, and learning how to do it in a way that fits the bigger picture.
-      
+
       With the right marketing strategy, you don’t plan one ‘quick hit’. You build a strategy to keep the conversation going so new customers become repeat customers and repeat customers become fans and friends.
-      
+
       And if we’re really getting down to brass tacks, the right marketing strategy gives you the biggest possible bang for every last buck of your budget.
-      
+
       Here’s how we make that happen.
+    coll_image: null
 hero_image: 9-ParkingEye.jpg
+video_choice: Image
