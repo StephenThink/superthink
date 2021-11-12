@@ -1,0 +1,126 @@
+title: 'Terms Of Business'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: paragraphs
+        field:
+          collapse: false
+          sets:
+            outer:
+              display: Outer
+              fields:
+                -
+                  handle: yellow_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Yellow Title'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: inner
+                  field:
+                    collapse: false
+                    sets:
+                      inner:
+                        display: Inner
+                        fields:
+                          -
+                            handle: heading
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Heading
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: content
+                            field:
+                              restrict: false
+                              automatic_line_breaks: true
+                              automatic_links: true
+                              escape_markup: false
+                              smartypants: false
+                              antlers: false
+                              display: Content
+                              type: markdown
+                              icon: markdown
+                              listable: hidden
+                              instructions_position: above
+                    display: Inner
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+          display: Paragraphs
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+      -
+        handle: last_updated
+        field:
+          mode: single
+          time_enabled: false
+          time_required: false
+          earliest_date: '1900-01-01'
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Last Updated'
+          type: date
+          icon: date
+          listable: hidden
+          instructions_position: above
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO

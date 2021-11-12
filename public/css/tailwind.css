@@ -1660,6 +1660,32 @@ input#store:checked ~ .toggle-dot {
 	}
 }
 
+/* Legal Policies */
+
+.policy-header {
+	margin-top: 1rem;
+	font-family: geo-bold;
+}
+
+.policy-content {
+	margin-top: 1rem;
+}
+
+.policy-content a {
+	--tw-text-opacity: 1;
+	color: rgba(255, 199, 52, var(--tw-text-opacity));
+	text-decoration: underline;
+}
+
+.yellow-heading {
+	margin-top: 1rem;
+	font-family: geo-bold;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	--tw-text-opacity: 1;
+	color: rgba(255, 199, 52, var(--tw-text-opacity));
+}
+
 .container {
 	width: 100%;
 	margin-right: auto;
@@ -2890,6 +2916,10 @@ input#store:checked ~ .toggle-dot {
 	padding-top: 0.5rem;
 }
 
+.pb-4 {
+	padding-bottom: 1rem;
+}
+
 .pt-16 {
 	padding-top: 4rem;
 }
@@ -2908,10 +2938,6 @@ input#store:checked ~ .toggle-dot {
 
 .pb-screen {
 	padding-bottom: 100vw;
-}
-
-.pb-4 {
-	padding-bottom: 1rem;
 }
 
 .pt-32 {
@@ -3610,6 +3636,10 @@ input#store:checked ~ .toggle-dot {
 		width: 41.666667%;
 	}
 
+	.md\:w-9\/12 {
+		width: 75%;
+	}
+
 	.md\:w-4\/12 {
 		width: 33.333333%;
 	}
@@ -3624,10 +3654,6 @@ input#store:checked ~ .toggle-dot {
 
 	.md\:w-3\/12 {
 		width: 25%;
-	}
-
-	.md\:w-9\/12 {
-		width: 75%;
 	}
 
 	.md\:w-handle {

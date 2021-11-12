@@ -70,12 +70,15 @@
             <div class="pt-4 md:hidden">
                 <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }}
                     <br>
-                <a href="#">Legal Stuff</a></p>
+                    {{ nav:legal_nav }}
+                <a href="{{url}}">{{title}}</a></p>
+                {{ /nav:legal_nav }}
+
             </div>
 
             <!-- Non Mobile Display -->
             <div class="hidden md:block">
-                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }} <span class="mx-2 text-xs">•</span> <a href="#">Legal Stuff</a></p>
+                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }} {{nav:legal_nav}}<span class="mx-2 text-xs">•</span> <a href="{{url}}">{{title}}</a>{{/nav:legal_nav}}</p>
             </div>
         </div>
     </div>

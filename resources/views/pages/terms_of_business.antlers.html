@@ -1,0 +1,22 @@
+<div class="main__panel bg-light dark:bg-dark">
+        <div class="container">
+            <div class="block pb-12 border-b md:flex border-light-grey">
+    
+                <div class="w-full md:w-9/12">
+                    <div class="text-5xl font-bold pb-4">{{ title }}</div>
+                    {{ if last_updated }}<div class="policy-header">Last Updated: {{ last_updated }}</div>{{/if}}
+                    {{ paragraphs }}
+                        <div class="yellow-heading">{{ yellow_title }}</div>
+                        {{ inner }}
+                        <div class="policy-header">
+                            {{ heading }}
+                        </div>
+                        <div class="policy-content">
+                            {{ content }}
+                        </div>
+                        {{ /inner }}
+                    {{ /paragraphs }}
+                </div>
+            </div>
+        </div>
+    </div>

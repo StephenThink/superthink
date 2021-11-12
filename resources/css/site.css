@@ -861,3 +861,21 @@ input#store:checked ~ .toggle-dot {
 .mobile-gap {
     @apply pt-4 md:pt-0;
 }
+
+/* Legal Policies */
+
+.policy-header {
+    @apply font-bold mt-4;
+}
+
+.policy-content {
+    @apply mt-4;
+}
+
+.policy-content a {
+    @apply text-yellow underline;
+}
+
+.yellow-heading {
+    @apply font-bold mt-4 text-yellow text-3xl;
+}
