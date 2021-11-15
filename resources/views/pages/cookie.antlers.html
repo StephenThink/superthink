@@ -1,15 +1,15 @@
 <div class="main__panel bg-light dark:bg-dark">
     <div class="container">
-        <div class="block pb-12 border-b md:flex border-light-grey">
+        <div class="block pb-12 md:flex">
 
             <div class="w-full md:w-9/12">
-                <div class="text-5xl font-bold pb-4">{{ title }}</div>
+                <div class="text-5xl font-bold pb-4 border-b border-light-grey">{{ title }}</div>
                 <div class="policy-header">Last Updated: {{ last_updated }}</div>
                 {{ paragraphs }}
                     <div class="policy-header">
                         {{ heading }}
                     </div>
-                    <div class="policy-content">
+                    <div class="policy-content {{ if last }}pb-4 border-b border-light-grey{{ /if }}">
                         {{ content }}
                     </div>
                 {{ /paragraphs }}

@@ -68,17 +68,18 @@
             </div>
             <!-- Mobile Display -->
             <div class="pt-4 md:hidden">
-                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }}
-                    <br>
-                    {{ nav:legal_nav }}
+                {{ nav:legal_nav }}
                 <a href="{{url}}">{{title}}</a></p>
                 {{ /nav:legal_nav }}
+                <br>
+                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }}
 
             </div>
 
             <!-- Non Mobile Display -->
             <div class="hidden md:block">
-                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }} {{nav:legal_nav}}<span class="mx-2 text-xs">•</span> <a href="{{url}}">{{title}}</a>{{/nav:legal_nav}}</p>
+                <p>{{nav:legal_nav}}{{ if !first }}<span class="mx-2 text-xs">•</span>{{ /if}}<a href="{{url}}">{{title}}</a>{{/nav:legal_nav}}</p>
+                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }} </p>
             </div>
         </div>
     </div>
