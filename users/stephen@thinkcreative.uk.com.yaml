@@ -21,6 +21,3 @@ preferences:
       after_save: continue_editing
     services:
       after_save: continue_editing
-  taxonomies:
-    core:
-      after_save: continue_editing

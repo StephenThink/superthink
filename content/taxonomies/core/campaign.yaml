@@ -2,8 +2,8 @@ route: core-services/testing
 title: Campaign
 content: 'Help! We’re really good at what we do but nobody knows'
 strapline: 'Help! We’re really good at what we do but nobody knows'
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1636629150
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1637243204
 blueprint: core
 tag_line_us: 'Get noticed. Simple. Spark imaginations and create conversations in print, digital and beyond.'
 tag_line_you: 'You need a campaign'
@@ -52,3 +52,18 @@ grid:
       We’d like to show you how that could work for your brand.
     coll_image: null
 video_choice: Image
+v2_service_title: Campaign
+v2_service_content: 'Last night, within about 30 minutes, you watched a bit of TV, checked your phone’s news feed, watched a cat video your mum sent you and searched for a birthday present for your brother. So how the hell are you supposed to grab the attention span of customers who don’t have one?'
+v2_left_list:
+  - 'Campaign Planning'
+  - 'Media Management'
+  - 'Social Media'
+  - 'Out of Home'
+v2_right_list:
+  - Radio
+  - 'Digital Display'
+  - Print
+  - Search
+v2_service_image:
+  - 3-BAE.jpg
+v2_service_button_label: 'Click Here'
