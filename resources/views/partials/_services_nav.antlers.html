@@ -1,9 +1,9 @@
-<div class="h-20 bg-yellow flex flex-row items-center justify-center p-2 space-x-2 uppercase text-dark font-bold text-2xl">
+<div class="h-20 bg-yellow flex flex-row items-center justify-center p-2 uppercase text-dark font-bold text-2xl">
 
     
     {{ data }}
-    {{ dump }}
-    <div>{{ v2_service_title }}</div>
+
+    <a href="#{{slug}}">{{ if !first }}<span class="mx-2 text-md">•</span>{{ /if}}{{ v2_service_title }}</a>
     {{ /data }}
 
 </div>

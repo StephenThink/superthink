@@ -7,12 +7,18 @@
 
 {{ /taxonomy:core }}
 
-
-
 <!-- Uses the Core Taxonomy to display the different areas -->
 {{ taxonomy:core as="data" }}
-    {{  partial:partials/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
+    {{  partial:partials/v2_content_list :data="data" }}
 {{ /taxonomy:core }}
+
+
+{{# Not required, however left in just incase it is required in the future #}}
+{{# Told by Steve 18/11/21 #}}
+<!-- Uses the Core Taxonomy to display the different areas -->
+{{# taxonomy:core as="data" }}
+    {{  partial:partials/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
+{{ /taxonomy:core #}}
 
 {{ partial:partials/cta }}
 
@@ -20,5 +26,4 @@
 {{# Not required, however left in just incase it is required in the future #}}
 {{# Told by Steve 18/11/21 #}}
 {{# partial:partials/grid title="Services" what="services" #}}
-
 

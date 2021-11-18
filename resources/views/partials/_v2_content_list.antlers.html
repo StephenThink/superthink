@@ -1,0 +1,41 @@
+<div id="startProject" class="main__panel bg-light dark:bg-dark !pt-16">
+
+    <div class="w-7/12 mx-auto">
+        {{ data }}
+
+        <div id="{{ slug }}" class=" pt-12 pb-16 m-12 h-auto flex text-dark {{ if !last }}border-b{{ /if }}">
+
+            <div class="flex {{ if count | mod:2 }} flex-row {{ else }} flex-row-reverse {{ /if }} w-full justify-between">
+                <div class="w-2/3 flex  flex-col {{ if count | mod:2 }} pr-20 {{ else }} pl-20 {{ /if }}">
+                    <div  class="text-5xl pb-10 font-bold">{{ v2_service_title }}</div>
+                    <div class="text-2xl pb-12">{{ v2_service_content }}</div>
+                    <div class="grid grid-cols-2 text-xl">
+                        <ul>{{ v2_left_list }}
+                            <li class="list-inside list-disc font-bold">{{value}}</li>
+                            {{ /v2_left_list }}
+                        </ul>
+                        <ul>{{ v2_right_list }}
+                            <li class="list-inside list-disc font-bold">{{value}}</li>
+                            {{ /v2_right_list }}
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-1/3 flex flex-col h-1/2">
+                    {{v2_service_image}}
+                    <img src="{{ url }}" class="pt-6 aspect-w-3 aspect-h-2 !pb-12">
+                    {{/v2_service_image}}
+
+                    <a href="{{ if v2_service_button_link }}{{ v2_service_button_link }} {{ else }} /services/core/{{slug}}{{ /if}}" class="cursor-pointer w-full flex justify-center items-center h-1/2">
+                        {{ partial:partials.hover_button text="{{ v2_service_button_label }}" class="text-dark bg-yellow text-lg" }}
+                        </a>
+                </div>
+            </div>
+
+        </div>
+
+        {{ /data }}
+
+    </div>
+
+</div>
+

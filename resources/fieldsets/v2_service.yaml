@@ -66,3 +66,13 @@ fields:
       icon: text
       listable: hidden
       instructions_position: above
+      width: 50
+  -
+    handle: service_button_link
+    field:
+      display: 'Service Button Link'
+      type: link
+      icon: link
+      width: 50
+      listable: hidden
+      instructions_position: above

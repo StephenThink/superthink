@@ -1,5 +1,7 @@
 /* This is all you. */
-
+html {
+    scroll-behavior: smooth;
+  }
 /* $handleWidth: 5rem; */
 :root {
     --handleWidth: 5rem;
