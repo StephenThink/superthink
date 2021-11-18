@@ -195,3 +195,9 @@ sections:
           type: seo_pro
           listable: false
           display: SEO
+  v2:
+    display: V2
+    fields:
+      -
+        import: v2_service
+        prefix: v2_

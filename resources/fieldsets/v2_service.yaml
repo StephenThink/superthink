@@ -1,0 +1,68 @@
+title: 'V2 Service'
+fields:
+  -
+    handle: service_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Service Title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+  -
+    handle: service_content
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: false
+      antlers: false
+      display: 'Service Content'
+      type: markdown
+      icon: markdown
+      listable: hidden
+      instructions_position: above
+  -
+    handle: left_list
+    field:
+      display: 'Left List'
+      type: list
+      icon: list
+      listable: hidden
+      instructions_position: above
+      width: 50
+  -
+    handle: right_list
+    field:
+      display: 'Right List'
+      type: list
+      icon: list
+      listable: hidden
+      instructions_position: above
+      width: 50
+  -
+    handle: service_image
+    field:
+      mode: list
+      container: assets
+      folder: work
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: 'Service Image'
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+  -
+    handle: service_button_label
+    field:
+      input_type: text
+      antlers: false
+      display: 'Service Button Label'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above

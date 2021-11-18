@@ -1,8 +1,8 @@
 title: Strategy
 strapline: 'Help! We’re not sure what will work best'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1636629172
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1637242283
 blueprint: core
 tag_line_us: 'What comes before how. We can help you with strategic blueprints and plans that make sure the creative work is on point.'
 tag_line_you: 'You need a strategy'
@@ -67,3 +67,18 @@ grid:
     coll_image: null
 hero_image: 9-ParkingEye.jpg
 video_choice: Image
+v2_service_title: 'Creative Strategy'
+v2_service_content: '“The possibilities are endless!” When you’re stood at the dessert buffet they’re the best words in the world. When you’re thinking about your brand and marketing? Not so much. Because branding needs focus. Purpose. Direction. Your branding needs strategy. And this is where you find it.'
+v2_left_list:
+  - Research
+  - 'Branding Positioning'
+  - 'Customer Journey'
+  - 'Campaign Frameworks'
+v2_right_list:
+  - Audits
+  - Workshops
+  - 'Brand Architecture'
+  - Briefing
+v2_service_image:
+  - 3-BAE.jpg
+v2_service_button_label: 'Click Here'
