@@ -4,8 +4,8 @@ blueprint: homepage
 title: Home
 template: home
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1636629514
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1637240232
 why_us_headline: 'Want to make your brand more memorable? You’ve come to the right place.'
 why_us_content:
   -
@@ -50,7 +50,7 @@ layered_content: |-
 
   We put integrated creative thinking at the heart of everything we do at Think!Creative. Whatever problem you're chewing over, chances are you need help with one (or a combination) of these...
 show_link: true
-you_us: us
+you_us: you
 require_count: false
 why_title: 'Why Think?'
 block_title: 'The Think! way of doing things'
