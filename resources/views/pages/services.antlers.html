@@ -1,6 +1,14 @@
 
 {{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" }}
 
+
+{{ taxonomy:core as="data"}}
+{{ partial:partials/services_nav :data="data"}}
+
+{{ /taxonomy:core }}
+
+
+
 <!-- Uses the Core Taxonomy to display the different areas -->
 {{ taxonomy:core as="data" }}
     {{  partial:partials/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
@@ -9,6 +17,8 @@
 {{ partial:partials/cta }}
 
 <!-- Uses the Services collection that is passed to the grid partial -->
-{{ partial:partials/grid title="Services" what="services" }}
+{{# Not required, however left in just incase it is required in the future #}}
+{{# Told by Steve 18/11/21 #}}
+{{# partial:partials/grid title="Services" what="services" #}}
 
 
