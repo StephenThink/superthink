@@ -1,8 +1,8 @@
 title: Brand
 strapline: 'Help! We’re really good at what we do but nobody knows'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1636628984
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1637243109
 blueprint: core
 tag_line_us: 'It''s all in the story. Build or refresh your brand so you look the business and do the business.'
 tag_line_you: 'You need a distinctive brand'
@@ -81,3 +81,18 @@ grid:
       That’s the value of getting the messaging and the tone of voice right. Because it’s not just what you say that matters. It’s not even purely about how you say it. It’s about finding a voice that’s uniquely yours - that fits your brand, every situation and every customer - and that helps you do that simplest (but most important) of things: connect.
     coll_image: null
 video_choice: Image
+v2_service_title: Brand
+v2_service_content: 'Know what? Your brand doesn’t live where you think it does. It doesn’t live on the website. It’s not in the social media channel, brochure or online ad. Done right, your brand lives in the head of everyone who knows you. Done wrong it…er… doesn’t. Let’s do your brand right.'
+v2_left_list:
+  - 'Brand Identity'
+  - 'Messaging & Tone'
+  - 'Brand Audits'
+  - Naming
+v2_right_list:
+  - 'Brand Guardians'
+  - 'Touchpoint Activations'
+  - Training
+  - 'Brand Audits'
+v2_service_image:
+  - 3-BAE.jpg
+v2_service_button_label: 'Click Here'
