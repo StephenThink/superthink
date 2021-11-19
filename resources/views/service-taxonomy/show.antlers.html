@@ -35,7 +35,7 @@
             <div class="flex flex-col-reverse {{ if count | mod:2 }} xl:flex-row {{ else }} xl:flex-row-reverse {{ /if }} w-full justify-between">
                 <div class="xl:w-1/2 flex  flex-col ">
                     <div  class="text-4xl font-black leading-tight text-dark dark:text-light pb-6">{{ content_title }}</div>
-                    <div class="text-xl pb-12">{{ content_text }}</div>
+                    <div class="text-xl pb-12 text-dark dark:text-light">{{ content_text }}</div>
                   
                         <div class="block xl:hidden 2xl:block">
                             <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}">{{ partial:partials/link_arrow textColor="text-yellow" text="{{ content_link_text }}" }}</a>
@@ -151,24 +151,24 @@
     const sjj = document.querySelector('#subsjj');
     const topOfsjj = sjj.offsetTop;
   
-    let handle = document.getElementById('handle');
-    let nav = document.getElementById('navigation-panel');
-    
-    let openCheck = document.getElementById('navigation-panel').classList.contains("open");
+console.log(topOfsjj)
 
     function fixsjj() {
       //console.log(topOfsjj, window.scrollY);
       if(window.scrollY >= topOfsjj) {
-        let handle = document.getElementById('handle');
+            let handle = document.getElementById('handle');
              let nav = document.getElementById('navigation-panel');
              nav.classList.remove('open');
              handle.classList.remove('open');
         document.body.style.paddingTop = sjj.offsetHeight + 'px';
         document.body.classList.add('fixed-sjj');
+
       } else {
 
         document.body.style.paddingTop = 0;
         document.body.classList.remove('fixed-sjj');
+
+
       }
     }
   
