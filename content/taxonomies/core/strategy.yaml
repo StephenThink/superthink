@@ -2,7 +2,7 @@ title: Strategy
 strapline: 'Help! We’re not sure what will work best'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1637254685
+updated_at: 1637316745
 blueprint: core
 tag_line_us: 'What comes before how. We can help you with strategic blueprints and plans that make sure the creative work is on point.'
 tag_line_you: 'You need a strategy'
@@ -65,7 +65,6 @@ grid:
 
       Here’s how we make that happen.
     coll_image: null
-hero_image: 9-ParkingEye.jpg
 video_choice: Image
 v2_service_title: 'Creative Strategy'
 v2_service_content: '“The possibilities are endless!” When you’re stood at the dessert buffet they’re the best words in the world. When you’re thinking about your brand and marketing? Not so much. Because branding needs focus. Purpose. Direction. Your branding needs strategy. And this is where you find it.'
@@ -82,3 +81,32 @@ v2_right_list:
 v2_service_image:
   - 3-BAE.jpg
 v2_service_button_label: 'Click Here'
+hero_text: Strategy
+hero_intro: 'The possibilities are endless. So let’s start whittling them down to the ones that can really make a difference with a clear, smart and simple strategy.'
+content_grid:
+  -
+    content_title: 'Research & Insights'
+    content_text: '“Research is creating new knowledge”. Neil Armstrong said that, which just goes to show there was a good career in marketing waiting for him if he ever grew tired of the astronaut stuff. But what new knowledge do you need? At Think! Creative, research doesn’t come freeze dried and prepacked (unlike Neil’s lunch). With us, you’ll find insights that surprise you and make the conventional wisdom look silly. And you’ll find the occasional answer that raises questions you simply never thought of before.'
+    content_image: 3-BAE.jpg
+    content_link_text: 'See the work'
+    content_link: null
+  -
+    content_title: 'Brand Strategy'
+    content_text: 'You’ve already got a brand. Ok, so it’s not Coke or iPhone (unless it is, in which case, well done you) but it’s well respected in the industry and performing perfectly well thank you very much. But then, something happens… Some upstart muscles in on your territory. You find the brand that used to fit you like a glove now restricts you like a tiny leotard or fits about as well as a cheap Xmas jumper. That’s what your brand strategy is for. It’s about digging into the DNA of your business(es) to understand what really matters, what fits where, and what to prioritise. It’s about making sure a brand'
+    content_image: 3-BAE.jpg
+    content_link_text: 'Let''s talk about that today'
+    content_link: null
+  -
+    content_title: Positioning
+    content_text: XX
+    content_image: 3-BAE.jpg
+    content_link_text: 'See the work'
+    content_link: null
+  -
+    content_title: 'Campaign Frameworks'
+    content_text: XX
+    content_image: 3-BAE.jpg
+    content_link_text: 'See the work'
+    content_link: null
+call_to_action: 'Need a hand planning your next steps? Give us a nudge…'
+handle_text: 'Let’s Think! together'

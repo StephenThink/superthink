@@ -2349,8 +2349,8 @@ input#store:checked ~ .toggle-dot {
 	width: 2rem;
 }
 
-.w-9\/12 {
-	width: 75%;
+.w-7\/12 {
+	width: 58.333333%;
 }
 
 .w-48 {
@@ -2373,6 +2373,10 @@ input#store:checked ~ .toggle-dot {
 	width: 16.666667%;
 }
 
+.w-9\/12 {
+	width: 75%;
+}
+
 .w-8\/12 {
 	width: 66.666667%;
 }
@@ -2383,10 +2387,6 @@ input#store:checked ~ .toggle-dot {
 
 .w-5 {
 	width: 1.25rem;
-}
-
-.w-7\/12 {
-	width: 58.333333%;
 }
 
 .max-w-500 {
@@ -2754,6 +2754,10 @@ input#store:checked ~ .toggle-dot {
 	border-bottom-width: 1px;
 }
 
+.border-b-2 {
+	border-bottom-width: 2px;
+}
+
 .border-dark {
 	--tw-border-opacity: 1;
 	border-color: rgba(55, 55, 55, var(--tw-border-opacity));
@@ -3021,12 +3025,16 @@ input#store:checked ~ .toggle-dot {
 	padding-bottom: 6rem;
 }
 
-.pb-16 {
-	padding-bottom: 4rem;
+.\!pt-16 {
+	padding-top: 4rem !important;
 }
 
 .pt-12 {
 	padding-top: 3rem;
+}
+
+.pb-16 {
+	padding-bottom: 4rem;
 }
 
 .pr-20 {
@@ -3065,8 +3073,12 @@ input#store:checked ~ .toggle-dot {
 	padding-bottom: 0.5rem;
 }
 
-.\!pt-16 {
-	padding-top: 4rem !important;
+.pl-10 {
+	padding-left: 2.5rem;
+}
+
+.pr-10 {
+	padding-right: 2.5rem;
 }
 
 .text-center {

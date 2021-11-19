@@ -76,3 +76,4 @@ fields:
       width: 50
       listable: hidden
       instructions_position: above
+      instructions: 'If this is left blank it will revert to the page that the service is.'

@@ -1,7 +1,65 @@
+{{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
+<div class="h-20 bg-yellow flex flex-row items-center justify-center p-2 uppercase text-dark font-bold text-2xl">
+
+    
+    {{ content_grid }}
+    <a href="#{{slug}}">{{ if !first }}<span class="mx-2 text-md">•</span>{{ /if}}{{ content_title }}</a>
+    
+    
+    {{ /content_grid }}
+
+</div>
+
+<div class="main__panel bg-light dark:bg-dark !pt-16">
+    <div class="w-7/12 mx-auto">
+        {{ content_grid }}
+
+        <div id="{{ slug }}" class=" pt-12 pb-16 m-12 h-auto flex text-dark {{ if !last }}border-b-2 border-dark{{ /if }}">
+
+            <div class="flex {{ if count | mod:2 }} flex-row {{ else }} flex-row-reverse {{ /if }} w-full justify-between">
+                <div class="w-1/2 flex  flex-col border ">
+                    <div  class="text-5xl pb-10 font-bold">{{ content_title }}</div>
+                    <div class="text-md pb-12">{{ content_text }}</div>
+                    <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}" class="cursor-pointer w-full flex justify-center items-center h-1/2">
+                        {{ partial:partials.hover_button text="{{ content_link_text }}" class="text-dark bg-yellow text-lg" }}
+                        </a>
+                    
+                </div>
+                <div class="w-1/2 flex flex-col h-1/2 {{ if count | mod:2 }} pl-10 {{ else }} pr-10 {{ /if }} border">
+                    {{content_image}}
+                    <img src="{{ url }}" class="aspect-w-3 aspect-h-2 !pb-12">
+                    {{/content_image}}
+
+                </div>
+            </div>
+
+        </div>
+
+        {{ /content_grid }}
+
+    </div>
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- This is where we show a core service page - brand;communication;... -->
+{{# 
 {{ if hero_image }}
     {{ partial:partials/hero classes="" show_playreel="0"  }}
 {{ /if }}
+
+
 
 
 <div class="main__panel bg-light dark:bg-dark">
@@ -36,7 +94,7 @@
                         {{# x-transition:leave="transition ease-in duration-300"
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-90" #}}
-                        
+                        {{#
                         
                         class="content blog__post">
                             {{ bottom_text}}
@@ -49,7 +107,7 @@
                             {{# x-transition:leave="transition ease-out duration-300"
                             x-transition:leave-start="opacity-100 transform scale-100"
                             x-transition:leave-end="opacity-0 transform scale-90" #}}
-                            
+                           {{# 
                             class="w-full mt-2 coll-image">
                                 <img class="" src="{{ coll_image }}" alt="" srcset="">
                             </div>
@@ -62,9 +120,10 @@
     </div>
 
 </div>
+#}}
 
 
-{{ partial:partials/cta custom_cta="Need an idea? Get in touch for a chat..." }}
+{{ partial:partials/cta }}
 
 <!-- Featured strategy projects here --- Need to tag a case study to a service -->
 {{ partial:partials/grid_filter title="Featured {{title}} Projects" what="case_studies" filter="{slug}" limit="4" random="true"}}
