@@ -1,35 +1,53 @@
+<style>
+
+    nav {
+        top: 0;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+    body.fixed-nav nav {
+        position: fixed;
+        left: 2.5rem;
+      }
+
+      @media only screen and (max-width: 767px) {
+        body.fixed-nav nav {
+            top:8rem;
+            left:0;
+          }
+      }
+</style>
+
 {{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
-<div class="h-20 bg-yellow flex flex-row items-center justify-center p-2 uppercase text-dark font-bold text-xl">
-
-    
+<nav id="subnav" class="h-20 bg-yellow flex flex-wrap items-center justify-center p-2 uppercase text-dark font-bold text-md xl:text-xl">
     {{ content_grid }}
-    <a href="#{{slug}}">{{ if !first }}<span class="mr-2 text-xl">.</span>{{ /if}}{{ content_title }}</a>
-    
-    
+        <a class="mr-2" href="#{{content_title | slugify}}">{{ content_title }}.</a>   
     {{ /content_grid }}
-
-</div>
+</nav>
 
 <div class="main__panel bg-light dark:bg-dark !pt-16">
-    <div class="w-7/12 mx-auto">
+    <div class="w-11/12 xl:w-10/12 mx-auto">
         {{ content_grid }}
-
-        <div id="{{ slug }}" class=" pt-12 pb-16 m-12 h-auto flex text-dark {{ if !last }}border-b-2 border-dark{{ /if }}">
-
-            <div class="flex {{ if count | mod:2 }} flex-row {{ else }} flex-row-reverse {{ /if }} w-full justify-between">
-                <div class="w-1/2 flex  flex-col border ">
+        <div class=" pt-12 pb-16 mx-12 h-auto flex text-dark {{ if !last }}border-b-2 border-dark{{ /if }} relative">
+            <div id="{{ content_title | slugify }}" class="absolute -top-52 md:-top-20 xl:-top-10"></div>
+            <div class="flex flex-col-reverse {{ if count | mod:2 }} xl:flex-row {{ else }} xl:flex-row-reverse {{ /if }} w-full justify-between">
+                <div class="xl:w-1/2 flex  flex-col ">
                     <div  class="text-4xl font-black leading-tight text-dark dark:text-light pb-6">{{ content_title }}</div>
                     <div class="text-xl pb-12">{{ content_text }}</div>
                   
-                        <div class="">
+                        <div class="block xl:hidden 2xl:block">
                             <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}">{{ partial:partials/link_arrow textColor="text-yellow" text="{{ content_link_text }}" }}</a>
                         </div>
                 </div>
-                <div class="w-1/2 flex flex-col h-1/2 {{ if count | mod:2 }} pl-10 {{ else }} pr-10 {{ /if }} border">
+                <div class="xl:w-1/2 flex flex-col h-1/2 {{ if count | mod:2 }} xl:pl-10 {{ else }} xl:pr-10 {{ /if }}">
                     {{content_image}}
                     <img src="{{ url }}" class="aspect-w-3 aspect-h-2 !pb-12">
                     {{/content_image}}
-
+                    <div class="hidden xl:block 2xl:hidden">
+                        <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}">{{ partial:partials/link_arrow textColor="text-yellow" text="{{ content_link_text }}" }}</a>
+                    </div>
                 </div>
             </div>
 
@@ -127,3 +145,25 @@
 
 <!-- Featured strategy projects here --- Need to tag a case study to a service -->
 {{ partial:partials/grid_filter title="Featured {{title}} Projects" what="case_studies" filter="{slug}" limit="4" random="true"}}
+
+<script>
+
+    const nav = document.querySelector('#subnav');
+    const topOfNav = nav.offsetTop;
+  
+  
+    function fixNav() {
+      //console.log(topOfNav, window.scrollY);
+      if(window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.style.paddingTop = 0;
+        document.body.classList.remove('fixed-nav');
+      }
+    }
+  
+  
+    window.addEventListener('scroll', fixNav);
+
+</script>

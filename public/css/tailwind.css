@@ -1891,6 +1891,22 @@ input#store:checked ~ .toggle-dot {
 	left: -0.75rem;
 }
 
+.-top-20 {
+	top: -5rem;
+}
+
+.-top-36 {
+	top: -9rem;
+}
+
+.-top-56 {
+	top: -14rem;
+}
+
+.-top-52 {
+	top: -13rem;
+}
+
 .z-101 {
 	z-index: 101;
 }
@@ -2296,6 +2312,10 @@ input#store:checked ~ .toggle-dot {
 	height: 1.25rem;
 }
 
+.h-56 {
+	height: 14rem;
+}
+
 .max-h-700 {
 	max-height: 700px;
 }
@@ -2634,6 +2654,10 @@ input#store:checked ~ .toggle-dot {
 
 .flex-row-reverse {
 	flex-direction: row-reverse;
+}
+
+.flex-col-reverse {
+	flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -3672,6 +3696,10 @@ input#store:checked ~ .toggle-dot {
 		position: fixed;
 	}
 
+	.md\:-top-20 {
+		top: -5rem;
+	}
+
 	.md\:-m-4 {
 		margin: -1rem;
 	}
@@ -4011,6 +4039,10 @@ input#store:checked ~ .toggle-dot {
 		height: 100%;
 	}
 
+	.lg\:h-20 {
+		height: 5rem;
+	}
+
 	.lg\:w-2\/12 {
 		width: 16.666667%;
 	}
@@ -4033,6 +4065,14 @@ input#store:checked ~ .toggle-dot {
 
 	.lg\:w-7\/12 {
 		width: 58.333333%;
+	}
+
+	.lg\:w-1\/2 {
+		width: 50%;
+	}
+
+	.lg\:w-10\/12 {
+		width: 83.333333%;
 	}
 
 	.lg\:grid-cols-2 {
@@ -4063,6 +4103,14 @@ input#store:checked ~ .toggle-dot {
 		padding-left: 0px;
 	}
 
+	.lg\:pl-10 {
+		padding-left: 2.5rem;
+	}
+
+	.lg\:pr-10 {
+		padding-right: 2.5rem;
+	}
+
 	.lg\:text-14xl {
 		font-size: 7rem;
 	}
@@ -4080,12 +4128,24 @@ input#store:checked ~ .toggle-dot {
 
 @media (min-width: 1280px) {
 
+	.xl\:-top-10 {
+		top: -2.5rem;
+	}
+
 	.xl\:mt-0 {
 		margin-top: 0px;
 	}
 
+	.xl\:block {
+		display: block;
+	}
+
 	.xl\:flex {
 		display: flex;
+	}
+
+	.xl\:hidden {
+		display: none;
 	}
 
 	.xl\:w-6\/12 {
@@ -4102,6 +4162,10 @@ input#store:checked ~ .toggle-dot {
 
 	.xl\:w-5\/12 {
 		width: 41.666667%;
+	}
+
+	.xl\:w-1\/2 {
+		width: 50%;
 	}
 
 	.xl\:flex-row {
@@ -4123,9 +4187,30 @@ input#store:checked ~ .toggle-dot {
 	.xl\:pl-0 {
 		padding-left: 0px;
 	}
+
+	.xl\:pl-10 {
+		padding-left: 2.5rem;
+	}
+
+	.xl\:pr-10 {
+		padding-right: 2.5rem;
+	}
+
+	.xl\:text-xl {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
 }
 
 @media (min-width: 1536px) {
+
+	.\32xl\:block {
+		display: block;
+	}
+
+	.\32xl\:hidden {
+		display: none;
+	}
 
 	.\32xl\:w-7\/12 {
 		width: 58.333333%;

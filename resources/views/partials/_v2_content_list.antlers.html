@@ -3,8 +3,9 @@
     <div class="w-11/12 md:w-10/12  mx-auto">
         {{ data }}
         
-        <div id="{{ slug }}" class=" h-20"></div>
-        <div  class=" pt-12 pb-16 mx-12 h-auto flex text-dark {{ if !last }}border-b{{ /if }}">
+        
+        <div  class=" pt-12 pb-16 mx-12 h-auto flex text-dark {{ if !last }}border-b{{ /if }} relative">
+            <div id="{{ slug }}" class="absolute -top-52 md:-top-20 xl:-top-10"></div>
 
             <div class="flex flex-col {{ if count | mod:2 }} xl:flex-row {{ else }} xl:flex-row-reverse {{ /if }} w-full justify-between">
                 <div class="xl:w-7/12 flex  flex-col {{ if count | mod:2 }} xl:pr-20 {{ else }} xl:pl-20 {{ /if }}">
