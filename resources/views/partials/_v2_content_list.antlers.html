@@ -1,28 +1,29 @@
 <div id="startProject" class="main__panel bg-light dark:bg-dark !pt-16">
 
-    <div class="w-7/12 mx-auto">
+    <div class="w-11/12 md:w-10/12  mx-auto">
         {{ data }}
+        
+        <div id="{{ slug }}" class=" h-20"></div>
+        <div  class=" pt-12 pb-16 mx-12 h-auto flex text-dark {{ if !last }}border-b{{ /if }}">
 
-        <div id="{{ slug }}" class=" pt-12 pb-16 m-12 h-auto flex text-dark {{ if !last }}border-b{{ /if }}">
-
-            <div class="flex {{ if count | mod:2 }} flex-row {{ else }} flex-row-reverse {{ /if }} w-full justify-between">
-                <div class="w-7/12 flex  flex-col {{ if count | mod:2 }} pr-20 {{ else }} pl-20 {{ /if }}">
-                    <div  class="text-5xl pb-10 font-bold">{{ v2_service_title }}</div>
+            <div class="flex flex-col {{ if count | mod:2 }} xl:flex-row {{ else }} xl:flex-row-reverse {{ /if }} w-full justify-between">
+                <div class="xl:w-7/12 flex  flex-col {{ if count | mod:2 }} xl:pr-20 {{ else }} xl:pl-20 {{ /if }}">
+                    <div  class="text-4xl font-black leading-tight text-dark dark:text-light pb-6">{{ v2_service_title }}</div>
                     <div class="text-xl pb-12">{{ v2_service_content }}</div>
-                    <div class="grid grid-cols-2 text-xl">
-                        <ul>{{ v2_left_list }}
-                            <li class="list-inside list-disc font-bold">{{value}}</li>
+                    <div class="grid grid-cols-1 md:grid-cols-2 text-xl pl-4 xl:pl-0">
+                        <ul class="pl-3">{{ v2_left_list }}
+                            <li class="list-disc font-bold"><strong>{{value}}</strong></li>
                             {{ /v2_left_list }}
                         </ul>
-                        <ul>{{ v2_right_list }}
-                            <li class="list-inside list-disc font-bold">{{value}}</li>
+                        <ul class="pl-3">{{ v2_right_list }}
+                            <li class="list-disc font-bold -pl-2"><strong>{{value}}</strong></li>
                             {{ /v2_right_list }}
                         </ul>
                     </div>
                 </div>
-                <div class="w-5/12 flex flex-col h-1/2">
+                <div class="xl:w-5/12 flex flex-col h-1/2 mt-12 xl:mt-0">
                     {{v2_service_image}}
-                    <img src="{{ url }}" class="pt-6 aspect-w-3 aspect-h-2 !pb-12">
+                    <img src="{{ url }}" class="aspect-w-3 aspect-h-2 !pb-12">
                     {{/v2_service_image}}
 
                     <a href="{{ if v2_service_button_link }}{{ v2_service_button_link }} {{ else }} /services/core/{{slug}}{{ /if}}" class="cursor-pointer w-full flex justify-center items-center h-1/2">
@@ -30,7 +31,6 @@
                         </a>
                 </div>
             </div>
-
         </div>
 
         {{ /data }}

@@ -1,9 +1,9 @@
 {{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
-<div class="h-20 bg-yellow flex flex-row items-center justify-center p-2 uppercase text-dark font-bold text-2xl">
+<div class="h-20 bg-yellow flex flex-row items-center justify-center p-2 uppercase text-dark font-bold text-xl">
 
     
     {{ content_grid }}
-    <a href="#{{slug}}">{{ if !first }}<span class="mx-2 text-md">•</span>{{ /if}}{{ content_title }}</a>
+    <a href="#{{slug}}">{{ if !first }}<span class="mr-2 text-xl">.</span>{{ /if}}{{ content_title }}</a>
     
     
     {{ /content_grid }}
@@ -18,12 +18,12 @@
 
             <div class="flex {{ if count | mod:2 }} flex-row {{ else }} flex-row-reverse {{ /if }} w-full justify-between">
                 <div class="w-1/2 flex  flex-col border ">
-                    <div  class="text-5xl pb-10 font-bold">{{ content_title }}</div>
-                    <div class="text-md pb-12">{{ content_text }}</div>
-                    <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}" class="cursor-pointer w-full flex justify-center items-center h-1/2">
-                        {{ partial:partials.hover_button text="{{ content_link_text }}" class="text-dark bg-yellow text-lg" }}
-                        </a>
-                    
+                    <div  class="text-4xl font-black leading-tight text-dark dark:text-light pb-6">{{ content_title }}</div>
+                    <div class="text-xl pb-12">{{ content_text }}</div>
+                  
+                        <div class="">
+                            <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}">{{ partial:partials/link_arrow textColor="text-yellow" text="{{ content_link_text }}" }}</a>
+                        </div>
                 </div>
                 <div class="w-1/2 flex flex-col h-1/2 {{ if count | mod:2 }} pl-10 {{ else }} pr-10 {{ /if }} border">
                     {{content_image}}

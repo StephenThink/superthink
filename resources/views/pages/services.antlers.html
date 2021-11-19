@@ -1,3 +1,27 @@
+<style>
+
+    nav {
+
+        top: 0;
+        width: 100%;
+
+        position: relative;
+        z-index: 1;
+      }
+
+    body.fixed-nav nav {
+        position: fixed;
+        left: 2.5rem;
+      }
+
+      @media only screen and (max-width: 767px) {
+        body.fixed-nav nav {
+            top:8rem;
+            left:0;
+          }
+      }
+</style>
+
 
 {{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" }}
 
@@ -27,3 +51,24 @@
 {{# Told by Steve 18/11/21 #}}
 {{# partial:partials/grid title="Services" what="services" #}}
 
+<script>
+
+    const nav = document.querySelector('#subnav');
+    const topOfNav = nav.offsetTop;
+  
+  
+    function fixNav() {
+      //console.log(topOfNav, window.scrollY);
+      if(window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.style.paddingTop = 0;
+        document.body.classList.remove('fixed-nav');
+      }
+    }
+  
+  
+    window.addEventListener('scroll', fixNav);
+
+</script>

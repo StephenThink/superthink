@@ -102,13 +102,13 @@ content_grid:
     content_title: 'Brand Identity'
     content_text: 'Yes, brand identity means taking a look at your logo, but it’s so much more than that. It’s the type and tone of the words your business uses when it talks to people. It’s the colours that really work (imagine if the McDonalds golden arches weren’t golden). It’s the ‘ding’ or whoosh’ that tells everyone who hears it that it’s you (think the ‘da-dum oooohhhhh’ when you load up Netflix). It’s words, pictures and sounds.'
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
+    content_link_text: 'Read More'
     content_link: null
   -
     content_title: Naming
     content_text: 'The Big Mac started life as The Aristocrat. Vaseline started out as Wonder Jelly. Which is kind of terrifying.  A great brand or product name needs to be simple to say, spell and remember. Which is just one reason why IBM probably didn’t sell too many computers back when they were the Computing Tabulating Recording Corporation. If you need to explain it, repeat it or get a flipchart out and draw diagrams about it, your name probably doesn’t work. So let’s create names that need no explanation…'
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
+    content_link_text: 'Read More'
     content_link: null
   -
     content_title: 'Brand Guardians'
@@ -116,13 +116,13 @@ content_grid:
       Having a brand that everyone knows and loves is a big advantage – so why would you mess with that? Great brands don’t need revolution. But they do need creatives who are happy to stand on the shoulders of those who went before them, creatives who’ll take what has always worked well and make it work even better. You need brand guardians. 
       That’s us.
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
+    content_link_text: 'Read More'
     content_link: null
   -
     content_title: 'Messaging & Tone of Voice'
     content_text: 'Hello. Hi. Hey! Wazzuuup? It’s funny isn’t it? Just by changing the one word you choose to greet people, you can completely change their perception of you. Imagine the difference the rest of what you say can make. Your brand’s words and pictures should be a great partnership: Lennon and McCartney. Ant and Dec. Tess & Claudia. Individually they can be good. Together they can be Strictly, tangoing up fab-u-lous reactions. That’s the value of getting the messaging and the tone of voice right.'
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
+    content_link_text: 'Read More'
     content_link: null
 call_to_action: 'Give your brand a boost. Get in touch and tell us your story...'
 cta_button: 'Contact us'

@@ -32,7 +32,7 @@
             </div>
             <div>
                     <!-- Mobile Display -->
-                    <nav class="md:hidden flex list-none pt-4">
+                    <div class="md:hidden flex list-none pt-4">
                         <ul>
                             {{ if social:linkedin_link }}
                             <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:linkedin_link}}">Linkedin</a></li>
@@ -47,10 +47,10 @@
                             <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:facebook_link}}">Facebook</a></li>
                             {{ /if }}
                         </ul>
-                    </nav>
+                    </div>
 
                     <!-- Non Mobile Display -->
-                    <nav class="hidden md:flex list-none">
+                    <div class="hidden md:flex list-none">
                     {{ if social:linkedin_link }}
                         <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:linkedin_link}}">Linkedin</a></li> <span class="custom-social">•</span>
                     {{ /if }}
@@ -63,7 +63,7 @@
                     {{ if social:facebook_link }}
                         <li class="half-height-colour"><a class="underline-element light-underline" href="{{social:facebook_link}}">Facebook</a></li>
                     {{ /if }}
-                    </nav>
+                    </div>
                 
             </div>
             <!-- Mobile Display -->

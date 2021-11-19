@@ -1,9 +1,9 @@
-<div class="h-20 bg-yellow flex flex-row items-center justify-center p-2 uppercase text-dark font-bold text-2xl">
+<nav id="subnav" class="h-20 bg-yellow flex flex-row items-center justify-center p-2 uppercase text-dark font-bold text-xl">
 
     
     {{ data }}
 
-    <a href="#{{slug}}">{{ if !first }}<span class="mx-2 text-md">•</span>{{ /if}}{{ v2_service_title }}</a>
+    <a href="#{{slug}}">{{ if !first }}<span class="mr-2 text-xl">.</span>{{ /if}}{{ v2_service_title }}</a>
     {{ /data }}
 
-</div>
+</nav>

@@ -88,7 +88,7 @@ content_grid:
     content_title: 'Research & Insights'
     content_text: '“Research is creating new knowledge”. Neil Armstrong said that, which just goes to show there was a good career in marketing waiting for him if he ever grew tired of the astronaut stuff. But what new knowledge do you need? At Think! Creative, research doesn’t come freeze dried and prepacked (unlike Neil’s lunch). With us, you’ll find insights that surprise you and make the conventional wisdom look silly. And you’ll find the occasional answer that raises questions you simply never thought of before.'
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
+    content_link_text: 'Read More'
     content_link: null
   -
     content_title: 'Brand Strategy'
@@ -100,13 +100,13 @@ content_grid:
     content_title: Positioning
     content_text: XX
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
+    content_link_text: 'Read More'
     content_link: null
   -
     content_title: 'Campaign Frameworks'
     content_text: XX
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
+    content_link_text: 'Read More'
     content_link: null
 call_to_action: 'Need a hand planning your next steps? Give us a nudge…'
 handle_text: 'Let’s Think! together'
