@@ -3609,7 +3609,14 @@ var animateTheBurger = function animateTheBurger(e) {
   var handle = document.getElementById('handle');
   var nav = document.getElementById('navigation-panel');
   nav.classList.toggle('open');
-  handle.classList.toggle('open');
+  handle.classList.toggle('open'); // document.body.classList.add('fixed-sjj');
+
+  var fixedsubnav = document.body.classList.contains('fixed-sjj');
+
+  if (fixedsubnav) {
+    document.body.style.paddingTop = 0;
+    document.body.classList.remove('fixed-sjj');
+  }
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (animateTheBurger);

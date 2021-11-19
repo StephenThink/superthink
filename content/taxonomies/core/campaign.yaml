@@ -3,7 +3,7 @@ title: Campaign
 content: 'Help! We’re really good at what we do but nobody knows'
 strapline: 'Help! We’re really good at what we do but nobody knows'
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1637316741
+updated_at: 1637333774
 blueprint: core
 tag_line_us: 'Get noticed. Simple. Spark imaginations and create conversations in print, digital and beyond.'
 tag_line_you: 'You need a campaign'
@@ -88,13 +88,14 @@ content_grid:
     content_title: 'Conversion campaigns'
     content_text: 'We promise not to get all nerdy about this, but there are two types of campaign. One is the long term brand builder. But equally important is the short term, ‘here’s our product/service, buy it now’ sort of campaign. This is all about getting your customer to do something. For that, you’ll need messages and offers that get them over the line. Whether that’s via digital display, search, or something that hasn’t been invented yet - we’ve got you covered.'
     content_image: 3-BAE.jpg
-    content_link_text: 'Read More'
+    content_link_text: 'See the work'
     content_link: null
   -
     content_title: 'Creative Concepts'
     content_text: 'Mail’s arrived. On your desk right now are some brown envelopes you really don’t want to open, the odd brochure, and a bit of junk mail that may as well have ‘bin’ written in big letters on it. Your inbox and social feeds are the same. Lots of offers you skip. Lots of ads you ignore. But what’s this? Something clever. Something that makes you laugh or say, ‘I’ve never seen that before’. Something that gets your fingers tapping, clicking or unfolding. That’s the result we’re after. It’s the ad that grabs. It’s the poster or banner on the bus stop, bridge or building. It’s the box you package your products in that’s says, ‘this really is worth paying a premium for’. That’s creative concepts at Think!Creative.'
     content_image: 3-BAE.jpg
-    content_link_text: 'Read More'
+    content_link_text: 'See the work'
     content_link: null
 call_to_action: 'Need a campaign that gets things moving? Let us know!'
 handle_text: 'Let’s Think! together'
+where_do_i_go: 4

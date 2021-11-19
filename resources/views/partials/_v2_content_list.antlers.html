@@ -7,7 +7,7 @@
         <div  class=" pt-12 pb-16 mx-12 h-auto flex text-dark {{ if !last }}border-b{{ /if }} relative">
             <div id="{{ slug }}" class="absolute -top-52 md:-top-20 xl:-top-10"></div>
 
-            <div class="flex flex-col {{ if count | mod:2 }} xl:flex-row {{ else }} xl:flex-row-reverse {{ /if }} w-full justify-between">
+            <div class="flex flex-col-reverse {{ if count | mod:2 }} xl:flex-row {{ else }} xl:flex-row-reverse {{ /if }} w-full justify-between">
                 <div class="xl:w-7/12 flex  flex-col {{ if count | mod:2 }} xl:pr-20 {{ else }} xl:pl-20 {{ /if }}">
                     <div  class="text-4xl font-black leading-tight text-dark dark:text-light pb-6">{{ v2_service_title }}</div>
                     <div class="text-xl pb-12">{{ v2_service_content }}</div>
@@ -20,14 +20,17 @@
                             <li class="list-disc font-bold -pl-2"><strong>{{value}}</strong></li>
                             {{ /v2_right_list }}
                         </ul>
-                    </div>
+                    </div class="flex justify-center">
+                    <a href="{{ if v2_service_button_link }}{{ v2_service_button_link }} {{ else }} /services/core/{{slug}}{{ /if}}" class="cursor-pointer w-full flex justify-center items-center h-1/2 xl:hidden mt-12">
+                        {{ partial:partials.hover_button text="{{ v2_service_button_label }}" class="text-dark bg-yellow text-lg" }}
+                        </a>
                 </div>
                 <div class="xl:w-5/12 flex flex-col h-1/2 mt-12 xl:mt-0">
                     {{v2_service_image}}
                     <img src="{{ url }}" class="aspect-w-3 aspect-h-2 !pb-12">
                     {{/v2_service_image}}
 
-                    <a href="{{ if v2_service_button_link }}{{ v2_service_button_link }} {{ else }} /services/core/{{slug}}{{ /if}}" class="cursor-pointer w-full flex justify-center items-center h-1/2">
+                    <a href="{{ if v2_service_button_link }}{{ v2_service_button_link }} {{ else }} /services/core/{{slug}}{{ /if}}" class="cursor-pointer w-full  justify-center items-center h-1/2 hidden xl:flex ">
                         {{ partial:partials.hover_button text="{{ v2_service_button_label }}" class="text-dark bg-yellow text-lg" }}
                         </a>
                 </div>

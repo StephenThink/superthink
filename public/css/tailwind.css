@@ -2204,6 +2204,10 @@ input#store:checked ~ .toggle-dot {
 	margin-right: auto;
 }
 
+.mt-3 {
+	margin-top: 0.75rem;
+}
+
 .block {
 	display: block;
 }

@@ -1,19 +1,19 @@
 <style>
 
-    nav {
+    sjj {
         top: 0;
         width: 100%;
         position: relative;
         z-index: 1;
       }
 
-    body.fixed-nav nav {
+    body.fixed-sjj sjj {
         position: fixed;
         left: 2.5rem;
       }
 
       @media only screen and (max-width: 767px) {
-        body.fixed-nav nav {
+        body.fixed-sjj sjj {
             top:8rem;
             left:0;
           }
@@ -21,11 +21,11 @@
 </style>
 
 {{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
-<nav id="subnav" class="h-20 bg-yellow flex flex-wrap items-center justify-center p-2 uppercase text-dark font-bold text-md xl:text-xl">
+<sjj id="subsjj" class="h-20 bg-yellow flex flex-wrap items-center justify-center p-2 uppercase text-dark font-bold text-md xl:text-xl">
     {{ content_grid }}
         <a class="mr-2" href="#{{content_title | slugify}}">{{ content_title }}.</a>   
     {{ /content_grid }}
-</nav>
+</sjj>
 
 <div class="main__panel bg-light dark:bg-dark !pt-16">
     <div class="w-11/12 xl:w-10/12 mx-auto">
@@ -148,22 +148,31 @@
 
 <script>
 
-    const nav = document.querySelector('#subnav');
-    const topOfNav = nav.offsetTop;
+    const sjj = document.querySelector('#subsjj');
+    const topOfsjj = sjj.offsetTop;
   
-  
-    function fixNav() {
-      //console.log(topOfNav, window.scrollY);
-      if(window.scrollY >= topOfNav) {
-        document.body.style.paddingTop = nav.offsetHeight + 'px';
-        document.body.classList.add('fixed-nav');
+    let handle = document.getElementById('handle');
+    let nav = document.getElementById('navigation-panel');
+    
+    let openCheck = document.getElementById('navigation-panel').classList.contains("open");
+
+    function fixsjj() {
+      //console.log(topOfsjj, window.scrollY);
+      if(window.scrollY >= topOfsjj) {
+        let handle = document.getElementById('handle');
+             let nav = document.getElementById('navigation-panel');
+             nav.classList.remove('open');
+             handle.classList.remove('open');
+        document.body.style.paddingTop = sjj.offsetHeight + 'px';
+        document.body.classList.add('fixed-sjj');
       } else {
+
         document.body.style.paddingTop = 0;
-        document.body.classList.remove('fixed-nav');
+        document.body.classList.remove('fixed-sjj');
       }
     }
   
   
-    window.addEventListener('scroll', fixNav);
+    window.addEventListener('scroll', fixsjj);
 
 </script>

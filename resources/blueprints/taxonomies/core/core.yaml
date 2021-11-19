@@ -226,6 +226,15 @@ sections:
           icon: text
           listable: hidden
           instructions_position: above
+      -
+        handle: where_do_i_go
+        field:
+          display: 'Where Do I Go'
+          type: integer
+          icon: integer
+          instructions: 'This will change the order it is displayed on the pages'
+          listable: hidden
+          instructions_position: above
   SEO:
     display: SEO
     fields:

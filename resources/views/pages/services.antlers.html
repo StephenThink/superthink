@@ -26,13 +26,13 @@
 {{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" }}
 
 
-{{ taxonomy:core as="data"}}
+{{ taxonomy:core as="data" sort="where_do_i_go"}}
 {{ partial:partials/services_nav :data="data"}}
 
 {{ /taxonomy:core }}
 
 <!-- Uses the Core Taxonomy to display the different areas -->
-{{ taxonomy:core as="data" }}
+{{ taxonomy:core as="data" sort="where_do_i_go" }}
     {{  partial:partials/v2_content_list :data="data" }}
 {{ /taxonomy:core }}
 
