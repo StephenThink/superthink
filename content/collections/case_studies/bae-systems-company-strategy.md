@@ -1,18 +1,27 @@
 ---
-title: 'BAE Systems Company Strategy'
+id: 047c75d7-785c-45ab-a29f-4b7cc5469d26
+blueprint: case_study
+title: 'mc- BAE Systems Company Strategy'
 greatest_hits: false
 core:
   - experience
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614270935
-hero_image: work/experience/bae-systems-company-strategy/Company-Strategy-Print2.jpg
-secondary_image: work/experience/bae-systems-company-strategy/Company-Strategy-iPDF.jpg
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1637686099
+hero_image: work/experience/bae-systems-company-strategy/BAE-15-Company-Strategy-Full-Image-1360x768.5.jpg
+secondary_image: work/experience/bae-systems-company-strategy/BAE-15-Company-Strategy-Secondary-Image-896x597.jpg
 main_content:
   -
     type: set
     attrs:
       values:
         type: gallery
+  -
+    type: set
+    attrs:
+      values:
+        type: the_problem
+        video_choice: Image
+        image: work/experience/bae-systems-company-strategy/BAE-15-Company-Strategy-Large-927x522.jpg
   -
     type: paragraph
   -
@@ -23,5 +32,5 @@ main_content:
         intro: 'An attempt to define BAE Systems’ aims and strategic plans for the upcoming year ahead, the Company Strategy booklet was produced with the goal of inspiring employees to consider how they can contribute to their own future success. With specific focus given towards performance development, the outcome consisted of a printed booklet, as well as interactive and static PDFs. The interactive PDF was an engaging, functional, user-friendly solution which allowed us to effectively communicate how BAE Systems and its employees share a commitment towards personal improvement.'
   -
     type: paragraph
-id: 047c75d7-785c-45ab-a29f-4b7cc5469d26
+short_case: true
 ---
