@@ -5,8 +5,8 @@ title: 'mc- BAE Systems ''Beware the Brew'' Campaign'
 greatest_hits: false
 core:
   - campaign
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1638201459
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1638276157
 hero_image: work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Full-Image-1360x768.5.jpg
 secondary_image: work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Secondary-Image-896x597.jpg
 main_content:
@@ -39,4 +39,5 @@ services_filter:
   - print
   - package-design
   - print-design
+short_para_title: Shorty
 ---

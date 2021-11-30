@@ -11,6 +11,7 @@ preferences:
         - greatest_hits
         - core
       after_save: continue_editing
+      per_page: 100
     employees:
       columns:
         - title
