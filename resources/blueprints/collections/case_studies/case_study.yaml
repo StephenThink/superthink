@@ -103,6 +103,16 @@ sections:
               display: 'The Problem'
               fields:
                 -
+                  handle: custom_header
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Custom Header'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
                   handle: intro
                   field:
                     type: textarea
@@ -159,6 +169,16 @@ sections:
             the_idea:
               display: 'The Idea'
               fields:
+                -
+                  handle: custom_header
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Custom Header'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
                 -
                   handle: intro
                   field:
@@ -230,6 +250,16 @@ sections:
             the_work:
               display: 'The Work'
               fields:
+                -
+                  handle: custom_header
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Custom Header'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
                 -
                   handle: intro
                   field:

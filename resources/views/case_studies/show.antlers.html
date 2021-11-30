@@ -35,7 +35,8 @@
         <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
             <div class="container flex">
                 <div class="w-full mx-auto md:w-8/12">
-                    <h2 class="text-4xl font-black">{{ if short_case }}{{short_para_title}}{{else}}The Challenge{{ /if }}</h2>
+
+                    <h2 class="text-4xl font-black">{{ if short_case }}{{short_para_title}}{{else}}{{ custom_header ? custom_header : 'The Challenge' }}{{ /if }}</h2>
                     <p class="w-full mt-4 md:w-10/12">{{ intro }}</p>
 
                     <div class="relative mt-8 pb-1/2">
@@ -70,7 +71,7 @@
             <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
                 <div class="container flex">
                     <div class="w-full mx-auto md:w-8/12">
-                        <h2 class="text-4xl font-black">The Idea</h2>
+                        <h2 class="text-4xl font-black">{{ custom_header ? custom_header : 'The Idea' }}</h2>
                         <p class="w-full mt-4 md:w-10/12">{{ intro }}</p>
                     </div>
                 </div>
@@ -135,7 +136,7 @@
             <div class="pt-0 main__panel_x-small bg-light dark:bg-dark">
                 <div class="container flex">
                     <div class="w-full mx-auto md:w-8/12">
-                        <h2 class="text-4xl font-black">The Work</h2>
+                        <h2 class="text-4xl font-black">{{ custom_header ? custom_header : 'The Work' }}</h2>
                         <p class="w-full mt-4 md:w-2/3">{{ intro }}</p>
                     </div>
                 </div>
@@ -160,7 +161,7 @@
 {{ /if }}
 {{ /if }}
 
-{{ partial:partials/employees padding="{{ if short_case }} pt-0 {{ else }} main__panel_x-small{{ /if}}" justcocoa="1"}}
+{{ partial:partials/employees padding="main__panel_x-small" justcocoa="1"}}
 
 <!--  collection next  -->
 <!-- This takes the next entry in the case studies collection and displays it, if there are no more entries then it displays the no_result -->
