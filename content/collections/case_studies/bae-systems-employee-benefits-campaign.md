@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Employee Benefits Campaign'
 greatest_hits: false
 core:
   - campaign
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636391345
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1638194075
 hero_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Full-Image-1360x768.5.jpg
 secondary_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Secondary-Image-896x597.jpg
 main_content:
@@ -17,6 +17,14 @@ main_content:
         type: the_problem
         video_choice: Image
         image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Large-927x522.jpg
+        intro: 'After a frosty initial reception to their employee benefit scheme, BAE Systems came to us to warm things up a bit. '
+  -
+    type: set
+    attrs:
+      values:
+        type: the_idea
+        intro: 'The goal? To increase traffic to an online web portal and encourage sign ups. After a bit of a think about the format, we found an idea that sold employees on the benefits of the scheme and made sign up a lot easier. We also did some Olympics-grade postal gymnastics to get round Royal Mail’s tight mail guidelines. '
+        video_choice: Image
   -
     type: set
     attrs:
@@ -27,15 +35,9 @@ main_content:
   -
     type: set
     attrs:
-      enabled: false
-      values:
-        type: gallery
-  -
-    type: set
-    attrs:
       values:
         type: the_work
-        intro: 'A mailer with serious doormat appeal that will excite the audience (BAE Systems employees and their families) and deliver a message that will drive traffic to sign-up to an employee benefit scheme online. After careful consideration to the format, layout, messaging, imagery/graphics and appeasing the Royal Mail’s strict guidelines, 34,000 mailers have been designed, printed with personalisation and mailed around the world, and the whole process has been organised by the team at Think!Creative. A range of posters and e-cards have also been created to strengthen the message.'
+        intro: 'Once we’d sorted all that, we printed and personalised 34,000 mailers. The mailers were sent around the world along with posters and e-cards to stretch the campaign into multiple media. The result? A lot more signups and a much happier client. '
   -
     type: set
     attrs:
@@ -46,7 +48,9 @@ main_content:
           - work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Small-Image-740x416.25-4.jpg
           - work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Small-Image-740x416.25-3.jpg
           - work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Small-Image-740x416.25-2.jpg
-  -
-    type: paragraph
 short_case: false
+services_filter:
+  - design
+  - print
+  - print-design
 ---

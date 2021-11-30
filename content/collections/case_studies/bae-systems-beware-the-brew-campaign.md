@@ -5,8 +5,8 @@ title: 'mc- BAE Systems ''Beware the Brew'' Campaign'
 greatest_hits: false
 core:
   - campaign
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636385349
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1638201459
 hero_image: work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Full-Image-1360x768.5.jpg
 secondary_image: work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Secondary-Image-896x597.jpg
 main_content:
@@ -14,23 +14,29 @@ main_content:
     type: set
     attrs:
       values:
-        type: slider
-        images:
-          - work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Small-Image-740x416.25-2.jpg
-          - work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Small-Image-740x416.25.jpg
+        type: the_problem
+        intro: 'How do you get a serious message across? Conventional wisdom says that your message should also be serious. Right? Actually, erm... no. If you want to get attention, you have to pay attention to what people pay attention to, if you catch our drift. That''s usually not boring information, as you''ll know from the last time you ignored the safety demonstration on a plane.'
+        video_choice: Image
+        image: work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Small-Image-740x416.25-2.jpg
   -
     type: set
     attrs:
-      enabled: false
       values:
-        type: gallery
+        type: the_idea
+        intro: 'So when BAE Systems asked us to develop a campaign to remind people of the dangers in a hot drink, we knew exactly what to do. With its mischievous face and devilish personality staring back at employees ‘Beware of the Brew’ was the perfect way to get our message noticed and talked about.'
+        video_choice: Image
+        intro_full_image: work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Large-Image-927x522.jpg
   -
     type: set
     attrs:
       values:
         type: the_work
-        intro: 'Brief: a poster to warn employees of the risks involved when making a brew in the workplace. Something that people will pay attention to, not ignore and forget about. Hold on, we can have some real fun with this and create a campaign that will really get noticed. A campaign that will be talked about, one that will last. And so ‘Beware of the Brew’ was born. With its mischievous monster face and devilish personality staring at employees from strategically positioned posters and the very cups they brew up in, it’s hard not to talk about it. Message heard loud and clear, so we’re told.'
+        intro: 'And with strategically placed posters and cups, we were able to make sure the message was heard loud and clear. The lesson here? Sometimes a bit of nonsense actually makes perfect sense.'
   -
     type: paragraph
 short_case: false
+services_filter:
+  - print
+  - package-design
+  - print-design
 ---
