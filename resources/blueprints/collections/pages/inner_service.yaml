@@ -8,6 +8,8 @@ sections:
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         import: hero
       -
@@ -42,7 +44,6 @@ sections:
           fullscreen: true
           allow_source: true
           type: bard
-          localizable: false
           listable: hidden
           display: content
   sidebar:
@@ -55,6 +56,7 @@ sections:
           required: true
           localizable: true
           validate:
+            - required
             - 'unique_entry_value:{collection},{id},{site}'
       -
         handle: parent
@@ -65,3 +67,30 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: handle_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Handle Text'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: handle_link
+        field:
+          display: 'Handle Link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO
