@@ -79,7 +79,7 @@ sections:
     display: 'Yellow Banner'
     fields:
       -
-        import: call_to_action   
+        import: call_to_action
   sidebar:
     display: Sidebar
     fields:
@@ -119,6 +119,24 @@ sections:
           type: text
           icon: text
           instructions: 'This will be displayed next to the Awards we have won.'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: handle_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Handle Text'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: handle_link
+        field:
+          display: 'Handle Link'
+          type: link
+          icon: link
           listable: hidden
           instructions_position: above
   SEO:

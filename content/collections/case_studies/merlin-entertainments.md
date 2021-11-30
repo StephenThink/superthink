@@ -10,7 +10,7 @@ sector:
   - Aerospace
   - Defence
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1635769596
+updated_at: 1638284968
 main_content:
   -
     type: paragraph
@@ -24,6 +24,7 @@ main_content:
         sign_off: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at. Lectus arcu bibendum at varius.'
         video_choice: Video
         video: /assets/heros/service/sauce.mp4
+        custom_header: Test
   -
     type: set
     attrs:
@@ -100,4 +101,6 @@ core:
   - strategy
 short_case: false
 short_para_title: 'Short Title'
+video_choice: Image
+video: /assets/heros/service/sauce.mp4
 ---
