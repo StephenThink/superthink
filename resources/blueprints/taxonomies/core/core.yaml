@@ -22,32 +22,6 @@ sections:
           instructions_position: above
           antlers: false
       -
-        handle: video_choice
-        field:
-          options:
-            - Image
-            - Video
-          inline: true
-          cast_booleans: false
-          default: Image
-          display: 'Video Choice'
-          type: radio
-          icon: radio
-          instructions: 'This is to choose between showing an Image or Video Clip as the Hero'
-          listable: hidden
-          instructions_position: above
-      -
-        handle: video
-        field:
-          display: Video
-          type: video
-          icon: video
-          listable: hidden
-          instructions_position: above
-          instructions: 'Make sure you type in the directory of the video. ie  /assets/heros/service/sauce.mp4'
-          if:
-            video_choice: 'equals Video'
-      -
         handle: service_tag
         field:
           input_type: text
