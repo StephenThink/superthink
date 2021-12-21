@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - brand
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1635787041
+updated_at: 1638377527
 hero_image: work/brand/spinal-products-branding-and-website/SpinalProducts-7-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/spinal-products-branding-and-website/SpinalProducts-7-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -15,9 +15,12 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'Spinal Products are a company that specialise in devices that support your spine and help you to ‘love your back’. They needed a strong brand presence and functional e-commerce website to really make their mark in the industry by offering their customers a simple and effective purchasing experience with style. And they needed a brand that people would trust their bodies to. We’ve given them exactly that, helping them stand tall amongst the competition.'
+        intro: |-
+          Spinal Products specialise in devices that support your spine and help you to ‘love your back’. When when you're asking people to trust their body to a brand, it has to inspire complete confidence. So that's why we helped them develop a strong brand presence and functional e-commerce website. The strong image supports a simple and effective online buying experience (with style of course.) 
+          Overall, we've been able to help Spinal Products make their mark - and to stand tall above the competition.
         video_choice: Image
         image: work/brand/spinal-products-branding-and-website/SpinalProducts-7-Brand-Large-927x522.jpg
+        custom_header: 'The Work'
   -
     type: set
     attrs:
@@ -25,16 +28,10 @@ main_content:
       values:
         type: gallery
   -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: the_work
-        intro: 'Spinal Products are a company that specialise in devices that support your spine and help you to ‘love your back’. They needed a strong brand presence and functional e-commerce website to really make their mark in the industry by offering their customers a simple and effective purchasing experience with style, and they needed a brand that people would trust their bodies to. We’ve given them exactly that, helping them stand tall amongst the competition.'
-  -
     type: paragraph
 services_filter:
   - branding
   - web-design-and-development
 short_case: false
+video_choice: Image
 ---

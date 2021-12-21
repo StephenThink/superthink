@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Munitions Exhibitions Stands'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1637686507
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640087215
 hero_image: work/experience/bae-systems-munitions-exhibitions-stands/BAE-1-Experience-Munitions-Full-Image.jpg
 secondary_image: work/experience/bae-systems-munitions-exhibitions-stands/BAE-1-Experience-Munitions-Secondary-Image.jpg
 main_content:
@@ -14,13 +14,15 @@ main_content:
     type: set
     attrs:
       values:
-        type: gallery
+        type: the_work
+        intro: 'Three exhibition stands demonstrating three solid reasons why BAE Systems are the premier partner for ammunition solutions. With exhibition stands, impact is key, along with a short and insightful message. People generally don’t stand and read paragraphs and paragraphs of text, but they are attracted to beautiful imagery, and will walk away remembering your message if you keep it short and sweet. The exhibition stand is a tool; use it wisely.'
+        custom_header: 'The Work'
   -
     type: set
     attrs:
+      enabled: false
       values:
-        type: the_work
-        intro: 'Three exhibition stands demonstrating three solid reasons why BAE Systems are the premier partner for ammunition solutions. With exhibition stands, impact is key, along with a short and insightful message. People generally don’t stand and read paragraphs and paragraphs of text, but they are attracted to beautiful imagery, and will walk away remembering your message if you keep it short and sweet. The exhibition stand is a tool; use it wisely.'
+        type: gallery
   -
     type: set
     attrs:
@@ -32,5 +34,6 @@ main_content:
     type: paragraph
 services_filter:
   - display
-short_case: true
+short_case: false
+video_choice: Image
 ---
