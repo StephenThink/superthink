@@ -8,17 +8,17 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "autoprefixer": "^10.2.5",
+        "autoprefixer": "^10.4.0",
         "browser-sync": "^2.26.13",
         "browser-sync-webpack-plugin": "^2.2.2",
         "cross-env": "^5.1",
         "laravel-mix": "^6.0.19",
         "laravel-mix-purgecss": "^4.1.0",
-        "postcss": "^8.3.0",
+        "postcss": "^8.4.5",
         "postcss-import": "^12.0.1",
         "postcss-nested": "^4.2.1",
         "postcss-preset-env": "^6.7.0",
-        "tailwindcss": "^2.1.2",
+        "tailwindcss": "^3.0.7",
         "tailwindcss-debug-screens": "^1.1.0",
         "vue-template-compiler": "^2.6.11"
     },

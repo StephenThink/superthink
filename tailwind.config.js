@@ -1,7 +1,5 @@
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
+  content: [
       './public/assets/svgs/*.svg',
       './resources/views/**/*.html',
       './resources/views/*.html',   
@@ -41,8 +39,8 @@ module.exports = {
         deep: [/open$/, /^handle/, /patty$/],
         greedy: [/open$/, /patty$/]
       }
-    }
-  },
+    },
+  
   darkMode: 'class',
   theme: {
     container: {
