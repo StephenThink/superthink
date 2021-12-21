@@ -24,7 +24,7 @@
 
 /* Move the Nav Menu to the left  */
 .nav-main {
-   @apply -ml-2;
+   @apply -ml-2 overflow-hidden;
   }
 
 /* Make all the headings larger */

@@ -27,6 +27,7 @@
 
 .nav-main {
   margin-left: -0.5rem;
+  overflow: hidden;
 }
 
 /* Make all the headings larger */
