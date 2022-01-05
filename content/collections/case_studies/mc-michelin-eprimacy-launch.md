@@ -10,9 +10,18 @@ main_content:
     type: set
     attrs:
       values:
+        type: the_problem
+        custom_header: ' '
+        video_choice: Video
+        video: /assets/work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Secondary-Image-896x597.mp4
+  -
+    type: set
+    attrs:
+      values:
         type: the_idea
         video_choice: Image
         intro_full_image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Large-927x522.jpg
+        video: /assets/work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Secondary-Image-896x597.mp4
   -
     type: set
     attrs:
@@ -36,7 +45,7 @@ services_filter:
   - print
   - print-design
   - video
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641396074
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1641397709
 secondary_image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Secondary-Image-896x597.mp4
 ---
