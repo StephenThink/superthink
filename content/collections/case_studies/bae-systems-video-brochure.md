@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Video Brochure'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636366111
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640260955
 main_content:
   -
     type: set
@@ -15,12 +15,8 @@ main_content:
         type: the_problem
         video_choice: Image
         image: work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Large-927x522.jpg
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
+        custom_header: ' '
+        intro: 'In a digital world, there''s something special about a nicely printed brochure. But hold up! Who says you can''t combine the two? Well that''s exactly what we did when BAE Systems came to us to showcase their long standing partnership with Saudi Arabia. We created a design that combined the tactile feel of print with an engaging video combined with infographics. The whole package made for an enhanced and immersive read. So if you''re on the fence about about whether to choose digital or print - maybe go for both. '
   -
     type: set
     attrs:
@@ -31,12 +27,6 @@ main_content:
           - work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Small-740x416.25-2.jpg
           - work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Small-740x416.25-3.jpg
           - work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Small-740x416.25-4.jpg
-  -
-    type: set
-    attrs:
-      values:
-        type: the_work
-        intro: 'If there is anything better than a nicely printed brochure, its one with an added extra when you open it… video brochures do just that! BAE Systems approached us to help produce a brochure with wow factor to showcase their long standing partnership with Saudi Arabia. Our high impact solution combines the tactile nature print offers with an engaging video and infographic, enhancing the overall experience for the viewer with an immersive presentation package.'
   -
     type: paragraph
 services_filter:
@@ -49,4 +39,5 @@ services_filter:
 hero_image: work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Secondary-Image-896x597.jpg
 short_case: false
+video_choice: Image
 ---

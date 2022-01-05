@@ -5,8 +5,8 @@ title: 'mc- BP Downstream People Handbook'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636048801
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640275823
 hero_image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -15,21 +15,13 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'Our branding experts were approached by BP to create a pocket-sized z-card and accompanying interactive PDF. The outcomes were designed to promote the company’s vision of becoming the industry’s leading Downstream business. Both formats required different considerations in terms of brand application, layout and spacing.'
+        intro: |-
+          Any business is only as good as its people. We all know it - but not every business says it. Not BP though. They came to us to create a pocket guide and interactive PDF to promote their vision of becoming the industry’s leading Downstream business. As you can imagine, both formats were wildly different and so they needed attacking differently to showcase the brand properly. 
+
+          Our guides communicated BP’s ambition to place people at the heart of its organisation. On top of that, BP asked us to help them produce the z-card in multiple languages. Being an international company, it was important that they were able to engage their employees and be inclusive to a diverse workforce. 
         image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Large-927x522-2.jpg
         video_choice: Image
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
-  -
-    type: set
-    attrs:
-      values:
-        type: the_work
-        intro: 'We were able to produce engaging, functional designs which effectively communicated BP’s ambition to place people at the heart of its organisation. BP being an international company, in order to engage its employees and remain inclusive to its diverse workforce the z-card was produced in multiple languages.'
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -57,4 +49,5 @@ services_filter:
   - print
   - branding
 short_case: false
+video_choice: Image
 ---

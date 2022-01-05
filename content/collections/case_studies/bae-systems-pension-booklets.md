@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Pension Booklets'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636044695
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640177587
 hero_image: work/experience/bae-systems-pension-booklets/BAE-Pensions-20-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-systems-pension-booklets/BAE-Pensions-20-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -17,18 +17,14 @@ main_content:
         type: the_problem
         video_choice: Image
         image: work/experience/bae-systems-pension-booklets/BAE-Pensions-20-Experience-Large-927x522.jpg
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
+        custom_header: ' '
   -
     type: set
     attrs:
       values:
         type: the_work
-        intro: 'We are proud to design and oversee the mailing of Pensions Booklets to thousands of BAE Systems’ retired pension scheme members. We work to a strict schedule to produce approximately 200,000 copies of various informative newsletters, some of which travel overseas. A great deal of work goes into producing each outcome – we relish the scale of the project and the responsibility that comes with it.'
+        intro: 'Trust. It''s easy to talk about but hard to get. And it''s something we definitely have from our friends at BAE Systems. We''ve been overseeing the management and design of Pensions Booklets for thousands of BAE Systems’ retired pension scheme members for years now. We work to a strict schedule to deliver over 200,000 copies of informative newsletters, some of which travel all around the world. A chunk of work goes into making each one – and we love the scale of the project and the responsibility that comes with it.'
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -44,4 +40,5 @@ services_filter:
   - design
   - print
 short_case: false
+video_choice: Image
 ---

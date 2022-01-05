@@ -5,8 +5,8 @@ title: 'mc- Utiligroup Newsletters 2016'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636037293
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640112392
 hero_image: work/experience/utiligroup-newsletters-2016/Utiligroup-Newsletter-14-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/utiligroup-newsletters-2016/Utiligroup-Newsletter-14-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -17,6 +17,7 @@ main_content:
         type: the_problem
         video_choice: Image
         image: work/experience/utiligroup-newsletters-2016/Utiligroup-Newsletter-14-Experience-Large-927x522.jpg
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -28,7 +29,8 @@ main_content:
     attrs:
       values:
         type: the_work
-        intro: 'After designing wall wraps, signage, glass manifestations and clever installations for Utiligroup’s new purpose-built offices, along with an update to their website, they now needed an equally exciting bi-monthly newsletter to connect with both their workforce and their clients. The stylish square format keeps the newsletter comfortable in the palm of the hand whilst preventing the pages from being too content heavy, the vibrancy of the pages excites the reader, and the concise breakdown of the text means their message is being well received.'
+        intro: 'What happens once that rebrand is finished and your swish website is online? Good question. And it''s one we had to answer for our friends at Utiligroup. They needed to expand their revitalised brand with an exciting bi-monthly newsletter to connect with both their workforce and clients. We went for a stylish square format that had the dual benefit of being a bit different to your average A4 newsletter, while also creating a layout that isn''t too content heavy. Hot on the heels of a bright and breezy rebrand - a bright and breeze set newsletter was just the job.'
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -44,4 +46,5 @@ main_content:
 services_filter:
   - print
 short_case: false
+video_choice: Image
 ---

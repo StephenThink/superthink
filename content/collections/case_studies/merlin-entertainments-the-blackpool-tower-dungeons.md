@@ -5,8 +5,8 @@ title: 'mc- Merlin Entertainments - The Blackpool Tower Dungeons'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1637678904
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640100585
 hero_image: work/experience/merlin-entertainments-the-blackpool-tower-dungeons/Merlin-2-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/merlin-entertainments-the-blackpool-tower-dungeons/Merlin-2-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -15,21 +15,13 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'From tram stops to pillar posters and billboards, it’s immensely rewarding to see our work on display in our local area. Our campaign for the Blackpool Tower Dungeons, which also included screen-based visuals, was designed to appeal to families seeking a fun and scary experience.'
+        intro: |-
+          Scary. Fun. Not 2 things you normally put in the same sentence. But that's exactly what our friends at Merlin Entertainments needed from us. Their launch of the new Blackpool Tower Dungeons was a big deal. And so they wanted to make a big noise about it. 
+
+          We created an integrated concept called "survive the fun" that ran across multiple media. From bus-shells to leaflets, from websites to landing pages, we covered it all. A campaign designed to appeal to families who want a fun and scary experience? Job done.
         image: work/experience/merlin-entertainments-the-blackpool-tower-dungeons/Merlin-2-Experience-Large-927x522-2.jpg
         video_choice: Image
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
-  -
-    type: set
-    attrs:
-      values:
-        type: the_work
-        intro: 'Advertising all-new attractions and shows for 2019, our outcomes were some of the first to be produced as part of our newfound relationship with Merlin Entertainments. Here’s hoping that we continue scaring audiences for many years to come...'
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -49,4 +41,5 @@ services_filter:
   - print
   - web-design-and-development
 short_case: false
+video_choice: Image
 ---

@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Gender Report'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636043294
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640113057
 hero_image: work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -17,18 +17,11 @@ main_content:
         type: the_problem
         video_choice: Image
         image: work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Large-927x522.jpg
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
-  -
-    type: set
-    attrs:
-      values:
-        type: the_work
-        intro: 'When dealing with large amounts of statistical data, it is important to present information in a way that people can break down easily. The BAE Gender Report required us to translate heavy streams of data via creative infographics, charts and tables, all designed with the aim of helping audiences to easily interpret the relevant information. The report’s infographics and charts retain BAE Systems’ branding, resulting in a consistent, engaging outcome which continuously highlights the value that BAE Systems places on equal opportunities.'
+        custom_header: ' '
+        intro: |-
+          If you're not careful, your message can easily get lost in translation. That's doubly true when your message is based on hefty reports and analytical data. But that's exactly the challenge BAE Systems came to us with. Their yearly gender report is designed to help employees understand their progress towards gender equality.
+
+          We helped them through that challenge by designing a report featuring creative infographics, charts and tables. The visuals both retain BAE Systems’ branding and bring the data to life. This not only makes for an engaging read, but it also highlights the value that BAE Systems puts on promoting equal opportunities.
   -
     type: set
     attrs:
@@ -42,4 +35,11 @@ main_content:
   -
     type: paragraph
 short_case: false
+video_choice: Image
+services_filter:
+  - design
+  - digital
+  - print
+  - print-design
+  - illustration
 ---

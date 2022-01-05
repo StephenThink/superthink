@@ -5,8 +5,8 @@ title: 'mc- Evolution Interiors'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1638380606
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640101895
 hero_image: work/experience/evolution-interiors/Experience-5-Evolution-Interiors-Full-Image.jpg
 secondary_image: work/experience/evolution-interiors/Experience-5-Evolution-Secondary-Image.jpg
 main_content:
@@ -16,10 +16,11 @@ main_content:
       values:
         type: the_problem
         intro: |-
-          There’s nothing we like more than when a business moves into a brand-spanking new office and enlists our help in adding a splash of branding to the walls. For long-term clients Evolution, we looked to make use of the sweeping blue and green logo elements, which we felt really showed off the versatility of the brand.
-          We created glass manifestations, entrance signage, interior wall graphics and a meeting room table-top design, with each solution based around the concept of development, progression and moving forward. That’s Evolution.
+          There’s nothing we like more than when a business moves into a brand-spanking new office. OK we'll level with you. There is something we like more. We really like it when they ask us to add a splash of branding to their freshly painted walls. 
+
+          For long-term client Evolution, we made the most of their sweeping blue and green logo elements, which we felt really showed off the versatility of the brand. We created glass manifestations, entrance signage, interior wall graphics and a meeting room table-top design, with each design based around the concept of development, progression and moving forward. After all - that's Evolution.
         image: work/experience/evolution-interiors/Experience-5-Evolution-Large.jpg
-        custom_header: 'The Work'
+        custom_header: ' '
         video_choice: Image
   -
     type: paragraph

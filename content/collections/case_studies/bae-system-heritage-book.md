@@ -5,8 +5,8 @@ title: 'mc- BAE System Heritage Book'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636033041
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640177354
 hero_image: work/experience/bae-system-heritage-book/BAE-Heritage-19-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-system-heritage-book/BAE-Heritage-19-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -15,21 +15,10 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: '180 pages of beautiful print. As society rapidly becomes digitised, it’s nice to sometimes still hold something with substance in your hand. BAE Systems created an extensive word-processed document covering the 167 year history of the Tank Factory, but heritage like this deserves an appropriate platform. Clean layouts, manageable blocks of text, creative typography considerations and a consistent approach throughout gives this publication both style and substance. Whether you read a little or you read a lot, it should always be a pleasurable experience.'
+        intro: 'When you''re dealing with a story stretching back 167 years, a 4 inch screen just won''t cut it. So when BAE Systems came to us for an idea to celebrate the history of The Tank Factory, we strongly recommended that they do it in print. Using archive photography, we crafted an editorial design that balances a clean and modern layout with the historical character of the photos. We also included colourful bars set off against bold typography and callouts to take readers on a journey into the hidden story of the factory. '
         video_choice: Image
         image: work/experience/bae-system-heritage-book/BAE-Heritage-19-Experience-Large-927x522.jpg
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: the_work
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -43,4 +32,8 @@ main_content:
   -
     type: paragraph
 short_case: false
+video_choice: Image
+services_filter:
+  - print
+  - print-design
 ---

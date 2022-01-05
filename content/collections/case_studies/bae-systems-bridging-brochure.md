@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Bridging Brochure'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1637685822
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640105460
 hero_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Brochure-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Brochure-Secondary-Image-896x597.jpg
 main_content:
@@ -53,4 +53,11 @@ main_content:
   -
     type: paragraph
 short_case: false
+video_choice: Image
+services_filter:
+  - branding
+  - design
+  - digital
+  - illustration
+  - print
 ---

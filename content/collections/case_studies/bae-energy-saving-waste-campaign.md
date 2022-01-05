@@ -5,8 +5,8 @@ title: 'mc- BAE ''Energy Saving Waste'' Campaign'
 greatest_hits: false
 core:
   - campaign
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1638381707
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1640167883
 hero_image: work/campaign/bae-energy-saving-waste-campaign/BAE-4-Campaign-Full-Image-1360x768.5.jpg
 secondary_image: work/campaign/bae-energy-saving-waste-campaign/BAE-4-Campaign-Secondary-Image-896x597.jpg
 main_content:
@@ -45,4 +45,9 @@ main_content:
     type: paragraph
 short_case: false
 video_choice: Image
+services_filter:
+  - design
+  - print
+  - print-design
+  - creative-design
 ---
