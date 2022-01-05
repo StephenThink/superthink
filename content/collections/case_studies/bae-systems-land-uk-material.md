@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Land (UK) Material'
 greatest_hits: false
 core:
   - experience
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640105999
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1641398637
 hero_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -39,7 +39,7 @@ main_content:
     type: paragraph
   -
     type: paragraph
-short_case: true
+short_case: false
 thumbnail: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Full-Image-1360x768.5-thumbnail.jpg
 video_choice: Image
 services_filter:

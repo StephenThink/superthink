@@ -5,8 +5,8 @@ title: 'mc- Charlie James Pie and Mash'
 greatest_hits: false
 core:
   - brand
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1635785950
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1641398618
 hero_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -18,6 +18,7 @@ main_content:
         intro: 'With huge demand from their customers for an online view of their menus, Charlie James Pie & Mash knew exactly who could deliver the goods and came to us to help pack out their website. Showcasing the brands distinctive look and feel with injects of humour is our speciality so with their trust we took their menu from print to a fully-responsive website allowing customers to directly book takeaway deliveries or enquire about services and packages tailored to them. '
         image: work/brand/charlie-james-pie-and-mash/charlieJames-1-Brand-Large-927x522.jpg
         video_choice: Image
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -62,5 +63,6 @@ services_filter:
   - print
   - web-design-and-development
 mini_introduction: 'When it came to building their em<b>pie</b>re, Charlie James Pie &amp; Mash knew the perfect creative team they wanted to help with their vision.'
-short_case: true
+short_case: false
+video_choice: Image
 ---
