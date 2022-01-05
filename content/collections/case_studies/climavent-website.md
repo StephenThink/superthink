@@ -5,8 +5,8 @@ title: 'mc- Climavent Website'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636369337
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1641400243
 hero_image: work/experience/climavent-website/Climavent-Website-30-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/climavent-website/Climavent-Website-30-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -45,4 +45,5 @@ services_filter:
   - digital
   - web-design-and-development
 short_case: false
+video_choice: Image
 ---

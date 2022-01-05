@@ -8,6 +8,7 @@
     <div class="container flex">
         <!-- <div class="w-full hidden md:block md:w-1/12"></div> -->
         <div class="w-full md:w-10/12 flex flex-col bg-yellow p-16">
+            {{ if !banner_text}}
             <p class="w-full md:w-10/12">{{ social:rhyme }}</p>
             <div>
                 <button class="sharing-is-caring half-height-colour cursor-pointer font-bold text-lg block mt-4" onClick="javascript:copyToClipboard(window.location.href)"> 
@@ -16,6 +17,17 @@
                 <span class="copied-to-clipboard hidden">URL copied to clipboard!</span>
             </div>
             <span id="sharing_url" class="hidden">{{ current_url }}</span>
+            {{ else }}
+            <p class="w-full md:w-10/12">{{ banner_text }}</p>
+            <div>
+                <button class="sharing-is-caring half-height-colour cursor-pointer font-bold text-lg block mt-4" onClick="javascript:copyToClipboard(window.location.href)"> 
+                    <span class="underline-element light-underline">{{ who_said_it }}</span>
+                </button>
+                <span class="copied-to-clipboard hidden">URL copied to clipboard!</span>
+            </div>
+            <span id="sharing_url" class="hidden">{{ current_url }}</span>
+
+            {{ /if }}
         </div>
     </div>
 </div>

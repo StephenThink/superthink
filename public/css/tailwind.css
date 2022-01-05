@@ -473,6 +473,28 @@ html {
     display: inline-block;
 }
 
+@responsive {
+    .bg-gradient-yellow-to-dark {
+        background: linear-gradient(90deg, #FFC734 65%, #373737 65%);
+    }
+    .bg-gradient-blue-to-light {
+        background: linear-gradient(0deg, #F7F7F7 30%, rgba(255,199,52,1) 30%);
+    }
+    .bg-gradient-transparent-to-yellow {
+        background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
+    }
+        .dark .bg-gradient-blue-to-light {
+            background: linear-gradient(0deg, #373737 30%, rgba(255,199,52,1) 30%);
+        }
+        /* very specific, sould have a better way */
+        .dark .md\:bg-gradient-transparent-to-yellow {
+            background: linear-gradient(90deg, #373737 50%, #FFC734 50%);
+        }
+        .dark .md\:bg-gradient-yellow-to-dark:not(.not-affected-by-dark) {
+            background: linear-gradient(90deg, #FFC734 65%, rgba(221,221,221,1) 65%);
+        }
+}
+
 .dark .accent {
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
