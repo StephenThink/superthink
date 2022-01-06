@@ -3496,7 +3496,10 @@ var findTheActiveOne = function findTheActiveOne(selector, returnFlag) {
   var tallest;
   if (!wrapper) return false;
   wrapper.querySelectorAll('.section').forEach(function (el) {
+    tallest = 1195;
     tallest = el.getBoundingClientRect().height >= tallest ? tallest : el.getBoundingClientRect().height;
+    console.log(el);
+    console.log(tallest);
 
     if (el.classList.contains('active')) {
       if (returnFlag) {

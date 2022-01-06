@@ -2142,6 +2142,10 @@ input#store:checked ~ .toggle-dot {
   height: 1.25rem;
 }
 
+.h-\[1050px\] {
+  height: 1050px;
+}
+
 .max-h-700 {
   max-height: 700px;
 }
