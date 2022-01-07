@@ -5,8 +5,8 @@ title: 'mc- RBSL Datasheets'
 greatest_hits: false
 core:
   - experience
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636027011
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1641470875
 services_filter:
   - branding
   - design
@@ -18,7 +18,7 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'Our team was tasked with creating a set of printed A4 datasheets showcasing RBSL’s range of impressive vehicles.'
+        intro: 'Stats. Data. The vitals. Whatever you want to call it - sometimes you have to show it off simply. So when the joint venture between Rheinmetall and BAE Systems Land needed product sheets for their range of impressive vehicles, they knew exactly who to call. Not only did we create the RBSL brand, but we knew their products inside out too. '
         image: work/experience/rbsl-datasheets/RBSL-Datasheets-32-Experience-Large-927x522.jpg
         video_choice: Image
   -
@@ -32,22 +32,16 @@ main_content:
           - work/experience/rbsl-datasheets/RBSL-Datasheets-32-Experience-Small-740x416.25-3.jpg
           - work/experience/rbsl-datasheets/RBSL-Datasheets-32-Experience-Small-740x416.25-4.jpg
   -
-    type: paragraph
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
-  -
     type: set
     attrs:
       values:
         type: the_work
-        intro: 'With the joint venture between Rheinmetall and BAE Systems Land in its infancy, our task was to produce refreshed outcomes which incorporated the newly-formed company’s branding. Combining photography with bespoke illustrations, infographics and tables, this time-conscious project was met with glowing feedback. '
+        intro: 'We produced bold, fresh printed A4 datasheets shaped by the newly-formed company’s branding. Combining photography with bespoke illustrations, infographics and tables, this project was both turned around quickly and met with glowing feedback. '
+        custom_header: ' '
   -
     type: paragraph
 hero_image: work/experience/rbsl-datasheets/RBSL-Datasheets-32-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/rbsl-datasheets/RBSL-Datasheets-32-Experience-Secondary-Image-896x597.jpg
 short_case: false
+video_choice: Image
 ---
