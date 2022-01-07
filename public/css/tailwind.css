@@ -473,28 +473,6 @@ html {
     display: inline-block;
 }
 
-@responsive {
-    .bg-gradient-yellow-to-dark {
-        background: linear-gradient(90deg, #FFC734 65%, #373737 65%);
-    }
-    .bg-gradient-blue-to-light {
-        background: linear-gradient(0deg, #F7F7F7 30%, rgba(255,199,52,1) 30%);
-    }
-    .bg-gradient-transparent-to-yellow {
-        background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
-    }
-        .dark .bg-gradient-blue-to-light {
-            background: linear-gradient(0deg, #373737 30%, rgba(255,199,52,1) 30%);
-        }
-        /* very specific, sould have a better way */
-        .dark .md\:bg-gradient-transparent-to-yellow {
-            background: linear-gradient(90deg, #373737 50%, #FFC734 50%);
-        }
-        .dark .md\:bg-gradient-yellow-to-dark:not(.not-affected-by-dark) {
-            background: linear-gradient(90deg, #FFC734 65%, rgba(221,221,221,1) 65%);
-        }
-}
-
 .dark .accent {
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
@@ -2150,10 +2128,6 @@ input#store:checked ~ .toggle-dot {
   height: calc(100vh - 120px);
 }
 
-.h-56 {
-  height: 14rem;
-}
-
 .h-1\/2 {
   height: 50%;
 }
@@ -2256,10 +2230,6 @@ input#store:checked ~ .toggle-dot {
 
 .w-16 {
   width: 4rem;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .w-4 {
@@ -2682,14 +2652,14 @@ input#store:checked ~ .toggle-dot {
   border-color: rgb(221 221 221 / var(--tw-border-opacity));
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .border-gray-300 {
@@ -3120,11 +3090,6 @@ input#store:checked ~ .toggle-dot {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-gray-700 {
@@ -3624,16 +3589,16 @@ input#store:checked ~ .toggle-dot {
     height: 100vh;
   }
 
+  .md\:h-56 {
+    height: 14rem;
+  }
+
   .md\:h-full {
     height: 100%;
   }
 
   .md\:h-750 {
     height: 750px;
-  }
-
-  .md\:h-56 {
-    height: 14rem;
   }
 
   .md\:max-h-auto {
@@ -3712,12 +3677,12 @@ input#store:checked ~ .toggle-dot {
     width: 5rem;
   }
 
-  .md\:w-11\/12 {
-    width: 91.666667%;
-  }
-
   .md\:w-56 {
     width: 14rem;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .md\:flex-grow-0 {
