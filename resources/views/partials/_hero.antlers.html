@@ -1,4 +1,8 @@
-<div class="hero h-vertical-handle-nm  flex items-center w-100 py-24 relative overflow-hidden  {{ text_small ? 'text-5xl md:text-7xl' : 'text-5xl md:text-18xl' }} {{classes}} md:h-screen" data-scroll-section>
+<div class="hero h-vertical-handle-nm  flex items-center w-100 py-24 relative overflow-hidden {{ text_small ? 'text-5xl md:text-7xl' : 'text-5xl md:text-18xl' }} {{classes}} md:h-screen" data-scroll-section>
+
+    <div class="show-reel">
+        <video onclick="pausePlay()" class="h-screen w-screen object-contain md:object-cover" src="{{ show_reel:video }}"></video>
+    </div>
 
     <!-- Puts the bubbles in the top right hand corner of the page -->
     {{ if bubbles }}
@@ -54,7 +58,9 @@
             <!-- Displays a button that is clickable -->
             {{ if show_playreel }}
                 <div class="flex items-start justify-start w-full h-1/2 md:w-1/3 md:items-end md:justify-end md:h-full">
+                    <div onclick="showVid()">
                     {{ partial:partials/link_arrow text="Play Showreel" textColor="text-dark" }}
+                    </div>
                 </div>
             {{ /if }}
 
@@ -63,3 +69,31 @@
 
     
 </div>
+
+<script>
+    function toggleMute(element) {
+        element.autoplay = true;
+        element.play()
+    }
+    const showVideo = document.querySelector('.show-reel');
+    const vid = showVideo.querySelector('video');
+
+    function showVid() {
+        //console.log(showVideo);
+        console.log("Show Video Clicked");
+        vid.classList.add('show');
+        setTimeout(function () {
+            toggleMute(document.querySelector('video'));
+        }, 4000);
+        console.log(vid);
+    }
+
+    function pausePlay() {
+        
+        if (!vid.paused) {
+            vid.pause();
+        } else {
+            vid.play();
+        }
+    }
+</script>

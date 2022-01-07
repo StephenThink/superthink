@@ -1,0 +1,13 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: video
+        field:
+          display: Video
+          type: video
+          icon: video
+          instructions: 'This will display if the play show reel button is pressed'
+          listable: hidden
+          instructions_position: above
