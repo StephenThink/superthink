@@ -80,7 +80,9 @@
 <script defer>
 
     let safariAgent = navigator.userAgent.indexOf("Safari") > -1;
-
+console.log(navigator.userAgent);
+let mobileAgent = navigator.userAgent.indexOf("iPhone") > -1;
+console.log(mobileAgent)
     // This is to be the same as the CSS amount
     // ? found in the site.css file animation: showVideo 4s
     const timeoutDelay = 2000; 
@@ -99,10 +101,16 @@
 
         element.autoplay = true;
         element.playsinline = true;
-        if (safariAgent) {
-            hideModal()
+
+        if (mobileAgent) {
+           playModal.classList.remove("hidden");
+           playModal.classList.add("flex");
         } else {
-        element.play();
+            if (safariAgent) {
+                hideModal()
+            } else {
+                element.play();
+            }
         }
 
         

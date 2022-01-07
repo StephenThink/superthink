@@ -2146,10 +2146,6 @@ input#store:checked ~ .toggle-dot {
   height: calc(100vh - 120px);
 }
 
-.h-56 {
-  height: 14rem;
-}
-
 .h-1\/2 {
   height: 50%;
 }
@@ -2252,10 +2248,6 @@ input#store:checked ~ .toggle-dot {
 
 .w-16 {
   width: 4rem;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .w-4 {
@@ -3615,16 +3607,16 @@ input#store:checked ~ .toggle-dot {
     height: 100vh;
   }
 
+  .md\:h-56 {
+    height: 14rem;
+  }
+
   .md\:h-full {
     height: 100%;
   }
 
   .md\:h-750 {
     height: 750px;
-  }
-
-  .md\:h-56 {
-    height: 14rem;
   }
 
   .md\:max-h-auto {
@@ -3703,12 +3695,12 @@ input#store:checked ~ .toggle-dot {
     width: 5rem;
   }
 
-  .md\:w-11\/12 {
-    width: 91.666667%;
-  }
-
   .md\:w-56 {
     width: 14rem;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .md\:flex-grow-0 {
