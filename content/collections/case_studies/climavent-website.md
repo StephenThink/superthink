@@ -5,25 +5,25 @@ title: 'mc- Climavent Website'
 greatest_hits: false
 core:
   - experience
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1641400243
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1641467006
 hero_image: work/experience/climavent-website/Climavent-Website-30-Experience-Full-Image-1360x768.5.jpg
-secondary_image: work/experience/climavent-website/Climavent-Website-30-Experience-Secondary-Image-896x597.jpg
+secondary_image: work/experience/climavent-website/Climavent-Website-30-Experience-Secondary-Image-896x597-2.jpg
 main_content:
   -
     type: set
     attrs:
       values:
         type: the_problem
-        intro: 'Climavent came to us to freshen up their brand and to create a responsive new website that could perform across multiple devices. '
+        intro: |-
+          If you're a leading manufacturing business, you probably got where you are because you know how to make incredible stuff rather than how to sell it. But knowing how to sell it matters, especially when you've got startups and international competition all chomping at the bit to chomp at your bit of the market. 
+
+          That's why Climavent came to us. They asked us to freshen up their brand and create a bespoke responsive website that would make life easier for their customers. Our response? A revitalised creative approach that repositioned their brand. Rather than just focussing on what they did, we talked about why that might matter to a customer. 
+
+          With that work done, we created a focused website with search functionality that allows users to easily find what they're looking for, whether that's a service or a product tailored for their industry.
         image: work/experience/climavent-website/Climavent-Website-30-Experience-Large-927x522.jpg
         video_choice: Image
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -32,12 +32,6 @@ main_content:
         images:
           - work/experience/climavent-website/Climavent-Website-30-Experience-Small-740x416.25-1.jpg
           - work/experience/climavent-website/Climavent-Website-30-Experience-Small-740x416.25-2.jpg
-  -
-    type: set
-    attrs:
-      values:
-        type: the_work
-        intro: 'We gave them a new creative approach to reposition their brand delivering a focused website with a search functionality that allows users to easily find what it is they are looking for, whether it be service solutions or products targeted to their industry.'
   -
     type: paragraph
 services_filter:
