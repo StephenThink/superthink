@@ -100,8 +100,7 @@
         element.autoplay = true;
         element.playsinline = true;
         if (safariAgent) {
-            playModal.classList.toggle("hidden");
-            playModal.classList.toggle("flex");
+            hideModal()
         } else {
         element.play();
         }
@@ -111,15 +110,8 @@
     }
 
     function hideModal() {
-        console.log("Hide me");
         playModal.classList.toggle("flex");
         playModal.classList.toggle("hidden");
-    }
-
-    function showModal() {
-        console.log("Show me");
-        playModal.classList.toggle("hidden");
-        playModal.classList.toggle("flex");
     }
 
     function showVid() {
@@ -137,12 +129,11 @@
     }
 
     function pausePlay() {      
-        if (!vid.paused) {
-            showModal();
+        hideModal();
 
+        if (!vid.paused) {
             vid.pause();
         } else {
-            hideModal();
             vid.play();
         }
     }
@@ -151,6 +142,8 @@
         // Hide the Video once off screen.
         vid.pause();
         vid.classList.remove('show');
+        playModal.classList.remove("flex");
+        playModal.classList.add("hidden");
     }
 
     // ? When the window scrolls
@@ -159,7 +152,7 @@
     function ScrollCheck() {
       if (body.scrollTop > vidBox.height || document.documentElement.scrollTop > vidBox.height) {
         hideAgain();
-        hideModal();
+        
       } 
     }
 </script>
