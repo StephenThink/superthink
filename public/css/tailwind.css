@@ -1819,6 +1819,10 @@ input#store:checked ~ .toggle-dot {
   z-index: 1000;
 }
 
+.z-\[1001\] {
+  z-index: 1001;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -2674,14 +2678,14 @@ input#store:checked ~ .toggle-dot {
   border-color: rgb(221 221 221 / var(--tw-border-opacity));
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .border-gray-300 {
@@ -3112,11 +3116,6 @@ input#store:checked ~ .toggle-dot {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-gray-700 {
@@ -3624,6 +3623,10 @@ input#store:checked ~ .toggle-dot {
     height: 750px;
   }
 
+  .md\:h-56 {
+    height: 14rem;
+  }
+
   .md\:max-h-auto {
     max-height: auto;
   }
@@ -3704,6 +3707,10 @@ input#store:checked ~ .toggle-dot {
     width: 91.666667%;
   }
 
+  .md\:w-56 {
+    width: 14rem;
+  }
+
   .md\:flex-grow-0 {
     flex-grow: 0;
   }
@@ -3751,6 +3758,11 @@ input#store:checked ~ .toggle-dot {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:border-black {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
   }
 
   .md\:px-0 {
@@ -3836,6 +3848,11 @@ input#store:checked ~ .toggle-dot {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .md\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
     .md\:bg-gradient-yellow-to-dark {
         background: linear-gradient(90deg, #FFC734 65%, #373737 65%);
     }
@@ -3880,11 +3897,6 @@ input#store:checked ~ .toggle-dot {
 
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
-  }
-
-  .lg\:object-cover {
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 
   .lg\:text-14xl {
