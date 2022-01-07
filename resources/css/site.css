@@ -891,28 +891,20 @@ input#store:checked ~ .toggle-dot {
 }
 
 .show {
-    /* width: 100%;
-    height: 100%; */
-    animation: showVideo 4s forwards;
-    width: 0;
-    height: 0;
+
+    animation: showVideo 4s ease-in forwards;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
     @apply bg-black absolute top-0 left-0;
 }
 
 @keyframes showVideo {
     0% {
-        width: 0;
-        height: 0;
+       margin-left:-100%;
     }
-    20% {
-        height: 10%;
-    }
-
-    30% {
-        width: 100%;
-    }
-
+    
     100% {
-        height: 100%;
+       margin-left: 0;
     }
 }

@@ -473,6 +473,28 @@ html {
     display: inline-block;
 }
 
+@responsive {
+    .bg-gradient-yellow-to-dark {
+        background: linear-gradient(90deg, #FFC734 65%, #373737 65%);
+    }
+    .bg-gradient-blue-to-light {
+        background: linear-gradient(0deg, #F7F7F7 30%, rgba(255,199,52,1) 30%);
+    }
+    .bg-gradient-transparent-to-yellow {
+        background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
+    }
+        .dark .bg-gradient-blue-to-light {
+            background: linear-gradient(0deg, #373737 30%, rgba(255,199,52,1) 30%);
+        }
+        /* very specific, sould have a better way */
+        .dark .md\:bg-gradient-transparent-to-yellow {
+            background: linear-gradient(90deg, #373737 50%, #FFC734 50%);
+        }
+        .dark .md\:bg-gradient-yellow-to-dark:not(.not-affected-by-dark) {
+            background: linear-gradient(90deg, #FFC734 65%, rgba(221,221,221,1) 65%);
+        }
+}
+
 .dark .accent {
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
@@ -1565,12 +1587,13 @@ input#store:checked ~ .toggle-dot {
 }
 
 .show {
-    /* width: 100%;
-    height: 100%; */
-    -webkit-animation: showVideo 4s forwards;
-            animation: showVideo 4s forwards;
-    width: 0;
-    height: 0;
+
+    -webkit-animation: showVideo 4s ease-in forwards;
+
+            animation: showVideo 4s ease-in forwards;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1580,37 +1603,21 @@ input#store:checked ~ .toggle-dot {
 
 @-webkit-keyframes showVideo {
     0% {
-        width: 0;
-        height: 0;
+       margin-left:-100%;
     }
-    20% {
-        height: 10%;
-    }
-
-    30% {
-        width: 100%;
-    }
-
+    
     100% {
-        height: 100%;
+       margin-left: 0;
     }
 }
 
 @keyframes showVideo {
     0% {
-        width: 0;
-        height: 0;
+       margin-left:-100%;
     }
-    20% {
-        height: 10%;
-    }
-
-    30% {
-        width: 100%;
-    }
-
+    
     100% {
-        height: 100%;
+       margin-left: 0;
     }
 }
 

@@ -71,29 +71,51 @@
 </div>
 
 <script>
-    function toggleMute(element) {
+
+    // This is to be the same as the CSS amount
+    // ? found in the site.css file animation: showVideo 4s
+    const timeoutDelay = 4000; 
+
+    const showVideo = document.querySelector('.show-reel');
+    const vid = showVideo.querySelector('video');
+    const vidBox = vid.getBoundingClientRect();
+    const body = document.body;
+    
+    function toggleAutoplay(element) {
         element.autoplay = true;
         element.play()
     }
-    const showVideo = document.querySelector('.show-reel');
-    const vid = showVideo.querySelector('video');
 
     function showVid() {
         //console.log(showVideo);
         console.log("Show Video Clicked");
         vid.classList.add('show');
         setTimeout(function () {
-            toggleMute(document.querySelector('video'));
-        }, 4000);
+            toggleAutoplay(document.querySelector('video'));
+        }, timeoutDelay);
         console.log(vid);
     }
 
-    function pausePlay() {
-        
+    function pausePlay() {      
         if (!vid.paused) {
             vid.pause();
         } else {
             vid.play();
         }
+    }
+
+    function hideAgain() {
+        // Hide the Video once off screen.
+        vid.pause();
+        vid.classList.remove('show');
+    }
+
+    // ? When the window scrolls
+    window.onscroll = () => ScrollCheck();
+
+    function ScrollCheck() {
+      if (body.scrollTop > vidBox.height || document.documentElement.scrollTop > vidBox.height) {
+        hideAgain();
+      } 
     }
 </script>
