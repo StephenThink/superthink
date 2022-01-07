@@ -64,7 +64,7 @@
 
             <!-- Displays a button that is clickable -->
             {{ if show_playreel }}
-                <div class="flex items-start justify-start w-full h-1/2 md:w-1/3 md:items-end md:justify-end md:h-full">
+                <div class="flex items-start justify-start w-full h-1/2 md:w-1/3 md:items-end md:justify-end md:h-full show-playreel">
                     <div onclick="showVid()">
                     {{ partial:partials/link_arrow text="Play Showreel" textColor="text-dark" }}
                     </div>
@@ -92,8 +92,12 @@ console.log(mobileAgent)
     const playModal = showVideo.querySelector('.play-modal');
     const vidBox = vid.getBoundingClientRect();
     const body = document.body;
+    const showPlayReel = document.querySelector('.show-playreel');
     
-    
+    // ? Hide the Play Showreel div if on an i-phone and using safari.
+    if (safariAgent && mobileAgent) {
+        showPlayReel.classList.add('hidden');
+    }
 
     function toggleAutoplay(element) {
         //if (safariAgent) {element.muted = true;}
