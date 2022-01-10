@@ -72,14 +72,14 @@
                 <a href="{{url}}">{{title}}</a></p>
                 {{ /nav:legal_nav }}
                 <br>
-                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }}
+                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ today format="Y" }}
 
             </div>
 
             <!-- Non Mobile Display -->
             <div class="hidden md:block">
                 <p>{{nav:legal_nav}}{{ if !first }}<span class="mx-2 text-xs">•</span>{{ /if}}<a href="{{url}}">{{title}}</a>{{/nav:legal_nav}}</p>
-                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ date format="Y" }} </p>
+                <p>&copy;{{ footer:company_name }} &nbsp; 2006 - {{ today format="Y" }} </p>
             </div>
         </div>
     </div>
