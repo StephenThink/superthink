@@ -52,6 +52,9 @@
             {{ /data }}
 
             {{ if you_us == 'you'}}
+            <!-- Removed as it is no longer required by Steve Daniels 10/1/2022 -->
+
+            {{# 
                 <div class="w-full py-16 md:w-2/3 help-section" data-scroll data-scroll-call="help-section">
                     <h3 class="flex items-center text-lg text-grey">
                         <span class="inline-block help">Help!</span> 
@@ -63,6 +66,7 @@
                         <p class="tagline">{{ you_tagline ?? "That’s cool. Check out all our services below..." }}</p>
                     </div>
                 </div>
+                #}}
             {{ /if }}
             
         </div>
