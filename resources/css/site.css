@@ -497,7 +497,9 @@ input[type="file"] {
 }
 
 /*  any time we use markup as content  */
-.content, .blog__post {  
+
+
+.content, .blog__post, .intro-links {  
     h2 {
         @apply font-bold text-lg my-8
     }

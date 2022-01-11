@@ -473,28 +473,6 @@ html {
     display: inline-block;
 }
 
-@responsive {
-    .bg-gradient-yellow-to-dark {
-        background: linear-gradient(90deg, #FFC734 65%, #373737 65%);
-    }
-    .bg-gradient-blue-to-light {
-        background: linear-gradient(0deg, #F7F7F7 30%, rgba(255,199,52,1) 30%);
-    }
-    .bg-gradient-transparent-to-yellow {
-        background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
-    }
-        .dark .bg-gradient-blue-to-light {
-            background: linear-gradient(0deg, #373737 30%, rgba(255,199,52,1) 30%);
-        }
-        /* very specific, sould have a better way */
-        .dark .md\:bg-gradient-transparent-to-yellow {
-            background: linear-gradient(90deg, #373737 50%, #FFC734 50%);
-        }
-        .dark .md\:bg-gradient-yellow-to-dark:not(.not-affected-by-dark) {
-            background: linear-gradient(90deg, #FFC734 65%, rgba(221,221,221,1) 65%);
-        }
-}
-
 .dark .accent {
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
@@ -997,25 +975,25 @@ input[type="file"]::-webkit-file-upload-button,
 
 /*  any time we use markup as content  */
 
-.content h2, .blog__post h2 {
+.content h2, .blog__post h2, .intro-links h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.content h2, .blog__post h2 {
+.content h2, .blog__post h2, .intro-links h2 {
   font-family: geo-bold;
 }
 
-.content h2, .blog__post h2 {
+.content h2, .blog__post h2, .intro-links h2 {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.content p, .blog__post p {
+.content p, .blog__post p, .intro-links p {
   margin-top: 1rem;
 }
 
-.content a, .blog__post a { 
+.content a, .blog__post a, .intro-links a { 
         text-decoration: underline;
         display: inline;
         background-image: linear-gradient(transparent 60%, #FFC734 60%, #FFC734 85%,transparent 85%,transparent 100%);
@@ -1024,21 +1002,21 @@ input[type="file"]::-webkit-file-upload-button,
         transition: .5s cubic-bezier(.645,.045,.355,1);
     }
 
-.content a:hover, .content a:active, .blog__post a:hover, .blog__post a:active{
+.content a:hover, .content a:active, .blog__post a:hover, .blog__post a:active, .intro-links a:hover, .intro-links a:active{
             text-decoration: none;
             transition: .5s cubic-bezier(.645,.045,.355,1);
             background-size: 100% 100%;
         }
 
-.content strong, .blog__post strong {
+.content strong, .blog__post strong, .intro-links strong {
         font-family: 'geo-bold';
     }
 
-.content ul,.blog__post ul{
+.content ul,.blog__post ul,.intro-links ul{
         margin: 1rem 0;
     }
 
-.content ul li, .blog__post ul li {
+.content ul li, .blog__post ul li, .intro-links ul li {
             margin-left: 1rem;
             list-style-image: url(/assets/misc/list-item.png);
             list-style-position: inherit;
