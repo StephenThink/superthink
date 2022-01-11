@@ -5,16 +5,9 @@ title: Home
 template: home
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1641831634
+updated_at: 1641903805
 why_us_headline: 'Want to make your brand more memorable? You’ve come to the right place.'
 why_us_content:
-  -
-    image: homepage/nibby.jpg
-    heading: 'Big brand thinking'
-    excerpt: 'Can you think of a successful business that doesn''t have a brand? Nope. Us neither. That''s why we use bold ideas to tell your brand story in a way that sets you well apart from your competition.'
-    link_text: 'See what we''ve done'
-    type: new_set
-    enabled: true
   -
     image: homepage/meeting.jpg
     heading: 'Method and madness'
@@ -22,6 +15,15 @@ why_us_content:
     link_text: 'See what we can do for you'
     type: new_set
     enabled: true
+    link_url: 'entry::4b041b66-7921-4307-99a0-2aaecb2d2504'
+  -
+    image: homepage/nibby.jpg
+    heading: 'Big brand thinking'
+    excerpt: 'Can you think of a successful business that doesn''t have a brand? Nope. Us neither. That''s why we use bold ideas to tell your brand story in a way that sets you well apart from your competition.'
+    link_text: 'See what we''ve done'
+    type: new_set
+    enabled: true
+    link_url: 'entry::3be6a7b1-6a3d-4e2a-95a9-3b54a70f87c4'
   -
     image: homepage/winners.jpg
     heading: 'Joined up service'

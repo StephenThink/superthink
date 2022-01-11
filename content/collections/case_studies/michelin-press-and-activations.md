@@ -8,12 +8,11 @@ main_content:
   -
     type: set
     attrs:
-      enabled: false
       values:
-        type: the_idea
+        type: the_problem
         custom_header: ' '
         video_choice: Image
-        intro_full_image: work/experience/michelin-press-activations/Michelin-Various-35-Experience-Large-927x522.jpg
+        image: work/experience/michelin-press-activations/Michelin-Various-35-Experience-Large-927x522.jpg
   -
     type: paragraph
 greatest_hits: false
@@ -24,5 +23,5 @@ services_filter:
   - design
   - print
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641573593
+updated_at: 1641917317
 ---

@@ -10,26 +10,19 @@ main_content:
     type: set
     attrs:
       values:
-        type: the_idea
-        custom_header: '  '
+        type: the_problem
+        custom_header: ' '
+        intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
         video_choice: Image
-        intro_full_image: work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Large-927x522.jpg
+        image: work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Large-927x522.jpg
   -
     type: set
     attrs:
       values:
-        type: the_idea
+        type: the_problem
         custom_header: ' '
         video_choice: Video
         video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-1.mp4
-  -
-    type: set
-    attrs:
-      values:
-        type: the_idea
-        video_choice: Video
-        video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
-        custom_header: ' '
   -
     type: set
     attrs:
@@ -39,6 +32,14 @@ main_content:
           - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-3.jpg
           - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-4.jpg
           - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-5.jpg
+  -
+    type: set
+    attrs:
+      values:
+        type: the_problem
+        custom_header: ' '
+        video_choice: Video
+        video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
   -
     type: paragraph
 greatest_hits: false
@@ -50,5 +51,5 @@ services_filter:
   - video
   - print-design
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641828652
+updated_at: 1641906832
 ---

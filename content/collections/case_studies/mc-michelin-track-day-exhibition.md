@@ -10,9 +10,10 @@ main_content:
     type: set
     attrs:
       values:
-        type: the_idea
+        type: the_problem
+        intro: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
         video_choice: Image
-        intro_full_image: work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Large-927x522.jpg
+        image: work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Large-927x522.jpg
   -
     type: set
     attrs:
@@ -30,5 +31,6 @@ services_filter:
   - design
   - display
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641556437
+updated_at: 1641910488
+mini_introduction: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 ---

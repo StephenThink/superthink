@@ -10,16 +10,17 @@ main_content:
     type: set
     attrs:
       values:
-        type: the_idea
+        type: the_problem
         custom_header: ' '
+        intro: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
         video_choice: Image
-        intro_full_image: work/experience/bfgoodrich-assets/Michelin-BFG-34-Experience-Large-927x522.jpg
+        image: work/experience/bfgoodrich-assets/Michelin-BFG-34-Experience-Large-927x522.jpg
   -
     type: set
     attrs:
       values:
-        type: gallery
-        gallery:
+        type: slider
+        images:
           - work/experience/bfgoodrich-assets/Michelin-BFG-34-Experience-Small-740x416.25-1.jpg
           - work/experience/bfgoodrich-assets/Michelin-BFG-34-Experience-Small-740x416.25-2.jpg
   -
@@ -32,5 +33,6 @@ services_filter:
   - design
   - print-design
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641488142
+updated_at: 1641918007
+mini_introduction: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
 ---
