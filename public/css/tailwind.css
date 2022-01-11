@@ -3609,7 +3609,7 @@ input#store:checked ~ .toggle-dot {
   }
 
   .md\:w-handle-nm {
-    width: calc( 100vw - 6rem );
+    width: calc( 100vw - 5rem );
   }
 
   .md\:w-2\/12 {
