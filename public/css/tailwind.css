@@ -2801,8 +2801,8 @@ input#store:checked ~ .toggle-dot {
   padding: 2rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-1px {
@@ -2815,10 +2815,6 @@ input#store:checked ~ .toggle-dot {
 
 .p-1 {
   padding: 0.25rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .px-2 {
@@ -2854,11 +2850,6 @@ input#store:checked ~ .toggle-dot {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .px-6 {
@@ -2982,6 +2973,14 @@ input#store:checked ~ .toggle-dot {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pl-16 {
+  padding-left: 4rem;
 }
 
 .text-center {
@@ -3883,6 +3882,10 @@ input#store:checked ~ .toggle-dot {
     margin-left: 16rem;
   }
 
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:h-full {
     height: 100%;
   }
@@ -3897,6 +3900,14 @@ input#store:checked ~ .toggle-dot {
 
   .lg\:w-11\/12 {
     width: 91.666667%;
+  }
+
+  .lg\:w-3\/12 {
+    width: 25%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 
   .lg\:flex-nowrap {
@@ -3988,6 +3999,10 @@ input#store:checked ~ .toggle-dot {
     padding-right: 2.5rem;
   }
 
+  .xl\:pl-16 {
+    padding-left: 4rem;
+  }
+
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -4002,6 +4017,10 @@ input#store:checked ~ .toggle-dot {
 
   .\32xl\:hidden {
     display: none;
+  }
+
+  .\32xl\:pl-16 {
+    padding-left: 4rem;
   }
 }
 

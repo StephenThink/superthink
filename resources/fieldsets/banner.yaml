@@ -5,24 +5,58 @@ fields:
     field:
       input_type: text
       type: text
-      localizable: false
       listable: hidden
       display: Heading
   -
     handle: banner_text
     field:
       type: textarea
-      localizable: false
-      width: 50
       listable: hidden
       display: Text
+  -
+    handle: email_or_custom_text
+    field:
+      default: false
+      display: 'Email or Custom Text'
+      type: toggle
+      icon: toggle
+      listable: hidden
+      instructions_position: above
   -
     handle: banner_email
     field:
       input_type: text
       type: text
-      instructions: 'If we need to display an email in here, we can d=o'
-      localizable: false
+      instructions: 'If we need to display an email in here, we can do'
       width: 50
       listable: hidden
       display: Email
+      instructions_position: above
+      antlers: false
+      if:
+        email_or_custom_text: 'equals 0'
+  -
+    handle: custom_button_text
+    field:
+      input_type: text
+      antlers: false
+      display: 'Custom Button Text'
+      type: text
+      icon: text
+      instructions: 'This will be displayed as a button if required'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      unless:
+        email_or_custom_text: 'equals 0'
+  -
+    handle: custom_button_link
+    field:
+      display: 'Custom Button Link'
+      type: link
+      icon: link
+      width: 50
+      listable: hidden
+      instructions_position: above
+      unless:
+        email_or_custom_text: 'equals 0'

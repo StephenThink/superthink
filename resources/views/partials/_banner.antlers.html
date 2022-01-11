@@ -5,12 +5,26 @@
         </div>
     {{ /if }}
     <div class="container">
+        {{ if email_or_custom_text }}
+        <div class="flex flex-col lg:flex-row">
+        {{ /if }}
         <div class="flex flex-col">
             <h4 class="font-black text-3xl mb-4">{{ heading }}</h4>
             <div class="text-xl leading-tight">
                 <p>{{ text }}</p>
-                <p><a href="mailto:{{ email }}">{{ email }}</a></p>
+                <p><a href="mailto:{{ banner_email ?? email }}">{{ banner_email ?? email }}</a></p>
             </div>
         </div>
+            {{ if email_or_custom_text }}
+            <div class="w-full mt-8 lg:w-3/12 lg:mt-0 flex items-center pl-4 xl:pl-16">
+                <a href="{{ custom_button_link ?? '/contact' }}" class="hover-button">
+                    {{ partial:partials.hover_button text="{{ custom_button_text ?? "Contact us" }}" class="bg-dark text-yellow" }}
+                </a>
+            </div>
+            {{ /if }}
+            {{ if email_or_custom_text }}
+        </div>
+            {{ /if }}
+    </div>
     </div>
 </div>
