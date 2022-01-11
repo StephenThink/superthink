@@ -5,8 +5,8 @@ title: 'mc- Glover''s Swim School'
 greatest_hits: false
 core:
   - brand
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636023760
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1641812043
 hero_image: work/brand/glovers-swim-school/Glovers-3-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/glovers-swim-school/Glovers-3-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -15,9 +15,10 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'The Preston-based swim school approached us to freshen-up their brand identity. From logo updates to the introduction of doodle illustrations and a light-hearted, inspirational tone of voice, we offered both print and digital solutions which provided Glover’s with the branding boost they desired. Cleaner, simpler, warmer and fresh. '
+        intro: 'The Preston-based swim school approached us to freshen-up their brand identity. From logo updates to the introduction of doodle illustrations and a light-hearted, inspirational tone of voice, we offered both print and digital creative to give Glover’s with the branding boost they needed. Cleaner, simpler, warmer and fresh. '
         image: work/brand/glovers-swim-school/Glovers-3-Brand-Large-927x522.jpg
         video_choice: Image
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -37,22 +38,6 @@ main_content:
           - work/brand/glovers-swim-school/Glovers-3-Brand-Small-740x416.25-4.jpg
           - work/brand/glovers-swim-school/Glovers-3-Brand-Small-740x416.25-5.jpg
           - work/brand/glovers-swim-school/Glovers-3-Brand-Small-740x416.25-6.jpg
-  -
-    type: paragraph
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
-  -
-    type: set
-    attrs:
-      values:
-        type: the_work
-        intro: 'From logo updates to the introduction of doodle illustrations and a light-hearted, inspirational tone of voice, we offered both print and digital solutions which provided Glover’s with the branding boost they desired. Cleaner, simpler, warmer and fresh. '
-  -
-    type: paragraph
 services_filter:
   - branding
   - design
@@ -62,4 +47,5 @@ services_filter:
   - web-design-and-development
 short_case: false
 mini_introduction: 'When it comes to the competitive world of branding, it’s often a case of sink or swim. For Glover’s, we set out to ensure it was the latter.'
+video_choice: Image
 ---

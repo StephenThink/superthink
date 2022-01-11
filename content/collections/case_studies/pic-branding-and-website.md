@@ -5,8 +5,8 @@ title: 'mc- PIC Branding and Website'
 greatest_hits: false
 core:
   - brand
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1635786862
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1641816965
 hero_image: work/brand/pic-branding-and-website/Pic-6-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/pic-branding-and-website/Pic-6-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -17,12 +17,8 @@ main_content:
         type: the_problem
         video_choice: Image
         image: work/brand/pic-branding-and-website/Pic-6-Brand-Large-927x522.jpg
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
+        custom_header: ' '
+        intro: 'PIC aren''t your traditional investment company. And when you''re not traditional, you don''t want your brand to be traditional either. They came to us to find a brand that would a help them stand out and show off their values. The wordmark and structured graphic uses a geometric triangular grid to reinforce strength and reliability. The angled elements within the mark are a little nod to the idea of forward thinking. '
   -
     type: set
     attrs:
@@ -40,7 +36,8 @@ main_content:
     attrs:
       values:
         type: the_work
-        intro: 'PIC are a property investment company with a difference, who required a brand that both expressed their values whilst looking nothing like your traditional finance company. After all, traditional they are not. The selected wordmark and structured graphic uses a geometric triangular grid to reinforce strength and reliability, whilst symbolising cubic space and area. Angled elements on the wordmark subtly depict a forward thinking direction. That’s forward thinking direction for a forward thinking company. Creative stationery and a fully responsive website with personality soon followed, giving PIC the brand perception they so rightly desired.'
+        intro: 'We followed the brand up with creative stationery and a fully responsive website, which showed off PIC''s forward thinking, strong and reliable credentials. A forward thinking, strong and reliable investment company? Sounds like a safe bet to us. '
+        custom_header: ' '
   -
     type: paragraph
 services_filter:
@@ -48,4 +45,5 @@ services_filter:
   - digital
   - web-design-and-development
 short_case: false
+video_choice: Image
 ---

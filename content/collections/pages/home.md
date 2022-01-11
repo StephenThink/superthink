@@ -5,7 +5,7 @@ title: Home
 template: home
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1638282192
+updated_at: 1641831634
 why_us_headline: 'Want to make your brand more memorable? You’ve come to the right place.'
 why_us_content:
   -
@@ -29,6 +29,7 @@ why_us_content:
     link_text: 'Meet the team'
     type: new_set
     enabled: true
+    link_url: 'entry::c220f30e-3f32-4a6d-958d-6d8577ff4e1b'
 banner:
   -
     type: paragraph
@@ -61,5 +62,6 @@ small_title: 'I already know what I need'
 you_tagline: 'That’s cool. Check out all our services below...'
 award_title: 'Awards & Accreditations'
 clients_title: 'Some of our amazing clients'
+video_choice: Image
 ---
 Welcome to your new Statamic website.
