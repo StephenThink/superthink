@@ -4,10 +4,10 @@ blueprint: case_study
 title: 'mc- Evolution Branding and Website'
 short_case: false
 greatest_hits: false
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1641398608
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1641811661
 hero_image: Evolution-2-Brand-Full-Image-1360x768.5.jpg
-mini_introduction: 'Evolution came to us looking for a brand, and they came with an open mind and a vision, allowing us to truly understand what they wanted to achieve – one of the most important factors behind shaping brand perception.'
+mini_introduction: 'Evolution are a brand on a mission. From their roots as a small start up, they came to Think! to turn them into a powerhouse of a brand in a short space of time.'
 secondary_image: work/brand/evolution-branding-and-website/Evolution-2-Brand-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -15,7 +15,10 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'An energetic and iconic logo, accompanied by a strong suite of material and a dynamic and professional online presence has helped grow Evolution from a small start-up into a leading brand in only a short space of time – testament to a company with the confidence to build their business with a creative-led strategy. '
+        intro: |-
+          The way do that is to make sure our clients stand out. Through a combination of collaborative workshops and creative sessions at Think! we created a palette of distinctive assets to set Evolution apart from the crowd. 
+
+          We then applied them to everything from websites to workwear, business cards to their vans. Their client list started to grow quickly, as well as the list of services they offer. Now a fully fledged full service contractor, Evolution show what you can do when you've got the confidence to build your business with a creative-led strategy.
         video_choice: Image
         image: work/brand/evolution-branding-and-website/Evolution-2-Brand-Large-927x522-2.jpg
         custom_header: ' '
@@ -32,4 +35,10 @@ main_content:
   -
     type: paragraph
 video_choice: Image
+services_filter:
+  - branding
+  - design
+  - digital
+  - web-design-and-development
+  - print
 ---

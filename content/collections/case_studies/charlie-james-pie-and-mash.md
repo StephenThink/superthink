@@ -5,8 +5,8 @@ title: 'mc- Charlie James Pie and Mash'
 greatest_hits: false
 core:
   - brand
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1641398618
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1641810635
 hero_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -15,10 +15,10 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'With huge demand from their customers for an online view of their menus, Charlie James Pie & Mash knew exactly who could deliver the goods and came to us to help pack out their website. Showcasing the brands distinctive look and feel with injects of humour is our speciality so with their trust we took their menu from print to a fully-responsive website allowing customers to directly book takeaway deliveries or enquire about services and packages tailored to them. '
+        intro: 'With huge demand from their customers for online menus, Charlie James Pie & Mash came to us to help pack out their website. We were also able to turn their printed menu into a fully-responsive website. That allowed customers to directly book takeaway deliveries or ask about services and packages tailored to them. '
         image: work/brand/charlie-james-pie-and-mash/charlieJames-1-Brand-Large-927x522.jpg
         video_choice: Image
-        custom_header: ' '
+        custom_header: '  '
   -
     type: set
     attrs:
@@ -39,19 +39,12 @@ main_content:
           - work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Small-740x416.25-5.jpg
           - work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Small-740x416.25-6.jpg
   -
-    type: paragraph
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
-  -
     type: set
     attrs:
       values:
         type: the_work
-        intro: 'We created a new, inclusive brand based upon their values, then applied it across digital content for social media, a website, print materials such as menus and loyalty cards, display signage and window graphics. Instore, we consulted on interior elements and design considerations to help create a strong sense of the brand’s image from the moment you step inside, and ensure a continuity of branding from webpage to store.'
+        intro: 'With a new distinctive look and feel in hand, we applied it across digital content for social media, printed materials such as menus and loyalty cards, display signage and window graphics. Instore, we consulted on interior design to help create a consistent link with the brand’s image. From the moment you visit the website or step inside the store, you get continuity that works from the first click to the first bite.'
+        custom_header: ' '
   -
     type: paragraph
 services_filter:
@@ -62,7 +55,7 @@ services_filter:
   - illustration
   - print
   - web-design-and-development
-mini_introduction: 'When it came to building their em<b>pie</b>re, Charlie James Pie &amp; Mash knew the perfect creative team they wanted to help with their vision.'
+mini_introduction: 'When it came to building their em<b>pie</b>re, Charlie James Pie &amp; Mash knew the perfect creative team to help.'
 short_case: false
 video_choice: Image
 ---

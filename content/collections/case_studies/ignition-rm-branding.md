@@ -3,8 +3,8 @@ id: ca711063-a9ec-4f68-be8c-16ce7bad0869
 blueprint: case_study
 title: 'mc- Ignition RM Branding'
 greatest_hits: false
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1636024249
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1641812364
 core:
   - brand
 hero_image: work/brand/ignition-rm-branding/Ignition-4-Brand-Full-Image-1360x768.5.jpg
@@ -15,22 +15,10 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'The outcome is an iconic mark with a vision for movement, along with strong messaging and an unusual approach to promotional material. Who wouldn’t pay attention when a beautifully silk screened parking ticket lands on their door mat? Who wouldn’t plug in when a company specialising in transport management offers you a USB ‘Key’? It just goes to show that a creative-led approach to your business’ brand can really set you apart from the competition. Your brand is the most precious thing you have – invest in it.'
+        intro: 'We worked with the team at Ignition to develop a collaborative, creative project that would turn their brand story into an asset. The distinctiveness starts with an iconic monogram, and is paired with strong messaging and an unusual approach to promotional materials. '
         video_choice: Image
         image: work/brand/ignition-rm-branding/Ignition-4-Brand-Large-927x522.jpg
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: full_image
-        video_choice: Image
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
+        custom_header: '  '
   -
     type: set
     attrs:
@@ -48,13 +36,15 @@ main_content:
     attrs:
       values:
         type: the_work
-        intro: 'Ignition RM offer Fleet Risk Management to clients across the UK, and in need of a strong brand presence in the market, they appreciate that this needs a creative-led approach. The outcome is an iconic mark with a vision for movement, along with strong messaging and an unusual approach to promotional material. Who wouldn’t pay attention when a beautifully silk screened parking ticket lands on their door mat? Who wouldn’t plug in when a company specialising in transport management offers you a USB ‘Key’? It just goes to show that a creative-led approach to your business’ brand can really set you apart from the competition. Your brand is the most precious thing you have – invest in it.'
+        intro: 'Who can ignore a beautiful silk screened parking ticket landing on their door mat? And who wouldn’t plug in when a company specialising in transport management offers you a USB key? It just goes to show that a creative-led approach to your business’ brand can really set you apart from the competition. In fact, your brand is most precious thing you have. Invest in it.'
+        custom_header: ' '
   -
     type: paragraph
 services_filter:
   - branding
   - digital
   - print
-mini_introduction: 'Ignition RM offer Fleet Risk Management to clients across the UK, and in need of a strong brand presence in the market, they appreciate that this needs a creative-led approach.'
+mini_introduction: 'In need of a strong brand presence? Well that''s exactly what our client Ignition RM were thinking when they came to us. They knew they needed a more creative approach to tell the story of their approach to Fleet Risk Management to clients across the UK.'
 short_case: false
+video_choice: Image
 ---

@@ -38,6 +38,7 @@ main_content:
         images:
           - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-3.jpg
           - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-4.jpg
+          - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-5.jpg
   -
     type: paragraph
 greatest_hits: false
@@ -49,5 +50,5 @@ services_filter:
   - video
   - print-design
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641488195
+updated_at: 1641828652
 ---

@@ -5,8 +5,8 @@ title: 'mc- Parking Eye Rebrand'
 greatest_hits: false
 core:
   - brand
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1635786715
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1641816783
 hero_image: work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -15,31 +15,18 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'ParkingEye’s brand and supporting material was very authoritative, portrayed through its strong use of a black and yellow colour palette, angular chevron graphics and strong messaging. This is no longer the brand perception they want; it no longer represents their brand values. So we have crafted their brand based around a creative strategy to re-establish them as a company they are – on they efficiently manages carparks, to the benefit of both the owner and their customers. '
+        intro: 'But that isn''t who Parking Eye are. So we helped them come up with a brand to support their strategic ambitions for the long term. Their goal? To help land owners take control of parking on their sites and to reduce costs with smart technology.'
         image: work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Large-927x522.jpg
         video_choice: Image
+        custom_header: ' '
   -
     type: set
     attrs:
       values:
         type: the_idea
-        intro: 'We have crafted their brand based around a creative strategy to re-establish them as the company they are – one that efficiently manages carparks, to the benefit of both the owner and their customers.'
+        intro: 'To help get that message across - we gave the brand a lighter touch. Through a fresh colour palette, a softer typeface and a new tone of voice, Parking Eye started to show how they oversee rather than enforce. And you know what? It worked. The transformation of ParkingEye’s brand has been a huge success, which just goes to show the importance of brand perception.'
         video_choice: Image
-  -
-    type: paragraph
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: full_image
-        video_choice: Image
-  -
-    type: set
-    attrs:
-      enabled: false
-      values:
-        type: gallery
+        custom_header: '  '
   -
     type: set
     attrs:
@@ -53,18 +40,13 @@ main_content:
           - work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Small-740x416.25-5.jpg
           - work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Small-740x416.25-6.jpg
   -
-    type: set
-    attrs:
-      values:
-        type: the_work
-        intro: 'This has been done by softening the brand – a fresher colour palette that utilises white space well, a softer typeface, a new tone of voice for all messaging that talks to the audience, not at them, easy-on-the-eye graphics that appear less authoritative and supporting imagery that suggests an overseeing approach rather than an enforcing one. Along with considerations to layout formats and print finishes, the evolution of ParkingEye’s brand has proved a great success for a company that understands the importance of brand perception.'
-  -
     type: paragraph
 services_filter:
   - branding
   - display
   - print
 thumbnail: work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Full-Image-1360x768.5-thumbnail.jpg
-mini_introduction: 'ParkingEye’s brand and supporting material was very authoritative, portrayed through its strong use of a black and yellow colour palette, angular chevron graphics and strong messaging. This is no longer the brand perception they want; it no longer represents their brand values. So we have crafted their brand based around a creative strategy to re-establish them as a company they are – on they efficiently manages carparks, to the benefit of both the owner and their customers.'
+mini_introduction: 'People get itchy at the idea of surveillance. But almost by accident, Parking Eye had created the wrong impression with its old brand. With strong black and yellow colours, angular chevron graphics and strong messaging, they looked and sounded way too authoritarian.'
 short_case: false
+video_choice: Image
 ---
