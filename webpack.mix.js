@@ -14,7 +14,8 @@ require('laravel-mix-purgecss');
 mix
     .js('resources/js/site.js', 'public/js')
     .js('resources/js/tea.js', 'public/js')
-    .js('resources/js/santa.js', 'public/js');
+    .js('resources/js/santa.js', 'public/js')
+    .js('resources/js/showReel.js', 'public/js');
 
 mix.postCss('resources/css/tailwind.css', 'public/css', [
     require('postcss-import'),

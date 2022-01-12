@@ -11,11 +11,16 @@ console.log("iPhone: ", mobileAgent); // This is to be the same as the CSS amoun
 
 var timeoutDelay = 2000;
 var showVideo = document.querySelector('.show-reel');
-var vid = showVideo.querySelector('video');
-var playModal = showVideo.querySelector('.play-modal');
+var vid = document.querySelector('video');
+var playModal = document.querySelector('.play-modal');
 var vidBox = vid.getBoundingClientRect();
 var body = document.body;
-var showPlayReel = document.querySelector('.show-playreel'); // ? Hide the Play Showreel div if on an i-phone and using safari.
+var showPlayReel = document.querySelector('.show-playreel');
+var showReel = document.getElementById('showReel');
+var hideModalView = document.getElementById('hideModal');
+showReel.addEventListener("click", showVid);
+hideModalView.addEventListener("click", hideModal);
+vid.addEventListener("click", pausePlay); // ? Hide the Play Showreel div if on an i-phone and using safari.
 
 if (safariAgent && mobileAgent) {
   showPlayReel.classList.add('hidden');

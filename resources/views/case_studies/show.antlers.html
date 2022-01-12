@@ -39,9 +39,9 @@
                     <h2 class="text-4xl font-black">{{ custom_header ? custom_header : 'The Challenge' }}</h2>
                     <p class="w-full mt-4 md:w-10/12">{{ intro }}</p>
 
-                    <div class="relative mt-8 pb-1/2">
+                    <div class="relative mt-8 {{#pb-1/2#}}">
                         {{ if video_choice == "Video" }}
-                            <video autoplay muted class="absolute object-cover w-full h-full" src="{{ video }}"></video>
+                        {{ partial:partials/video/case_video }}
                         {{ else }}
                             <img src="{{ image }}" alt="" class="absolute object-fill w-full h-full" loading=lazy>
                         {{ /if }}
@@ -77,7 +77,7 @@
                 </div>
             </div>
             {{ if video_choice == "Video" }}
-                <video autoplay muted class="object-cover w-full" src="{{ video }}"></video>
+                {{ partial:partials/video/case_video }}
             {{ else }}
                 {{ if intro_full_image }}
                     <div class="main__panel_x-small bg-light dark:bg-dark full_image">
@@ -85,6 +85,13 @@
                     </div>
                 {{ /if}}
             {{ /if }}
+
+               
+
+
+
+
+
             {{ if outro }}
             <div class="main__panel_small bg-light dark:bg-dark">
                 <div class="container flex">
@@ -217,3 +224,59 @@
     
 
 {{ /collection:next }}
+
+<script defer>
+    const caseVideoParent = document.querySelectorAll('.case-video-parent');
+    // const test = Array.from(document.getElementsByClassName('case-video-parent'));
+    // console.log(test);
+    const caseVideo = document.querySelector('.case-video');
+    const casePlayModal = document.querySelectorAll('.play-case-modal')
+    
+    
+
+    function casePausePlay(event) {
+       // If the element has a class of play-case-modal (clicking on the gray box)
+       if (event.target.classList.contains('play-case-modal')) {
+           hidePlayModal();
+           if(!event.target.nextElementSibling.paused)
+        {
+            event.target.nextElementSibling.pause();
+
+        } 
+        else {
+            event.target.nextElementSibling.play();
+        }
+       } 
+        // If they click on the Play Button
+       else {
+           event.target.parentElement.classList.toggle("opacity-50");
+           event.target.parentElement.classList.toggle("opacity-0");
+           event.target.parentElement.children[0].classList.toggle("flex");
+           event.target.parentElement.children[0].classList.toggle("hidden");
+           if(!event.target.parentNode.nextElementSibling.paused)
+           {
+               event.target.parentNode.nextElementSibling.pause();
+   
+           } else {
+               event.target.parentNode.nextElementSibling.play();
+           }
+       }
+
+       function hidePlayModal() {
+        event.target.classList.toggle("opacity-50");
+        event.target.classList.toggle("opacity-0");
+        event.target.children[0].classList.toggle("flex");
+        event.target.children[0].classList.toggle("hidden");
+       }
+        
+    }
+        
+
+        
+
+  //      .addEventListener('ended',myHandler,false);
+ //   function myHandler(e) {
+        // What you want to do after the event
+  //  }
+    
+</script>

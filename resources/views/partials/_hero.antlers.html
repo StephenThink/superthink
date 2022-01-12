@@ -1,14 +1,14 @@
 <div class="hero h-vertical-handle-nm  flex items-center w-100 py-24 relative overflow-hidden {{ text_small ? 'text-5xl md:text-7xl' : 'text-5xl md:text-18xl' }} {{classes}} md:h-screen" data-scroll-section>
 
     <div class="show-reel">
-        <div  class="play-modal bg-gray-800 opacity-50 absolute w-full h-full top-0 left-0 hidden justify-center items-center z-[1000] pointer-events-none">
-            <div onclick="hideModal()" class="play-button p-4 w-96 h-96 md:w-56 md:h-56 border-white md:border-black border-2 rounded-full text-2xl text-white md:text-black flex justify-center items-center cursor-pointer z-[1001]" >
+        <div class="play-modal bg-gray-800 opacity-50 absolute w-full h-full top-0 left-0 hidden justify-center items-center z-[1000] pointer-events-none">
+            <div id="hideModal" class="play-button p-4 w-96 h-96 md:w-56 md:h-56 border-white md:border-black border-2 rounded-full text-2xl text-white md:text-black flex justify-center items-center cursor-pointer z-[1001]" >
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-96 h-96 md:w-56 md:h-56" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
                   </svg>
             </div>
         </div>
-        <video  onclick="pausePlay()" class="h-screen w-screen object-contain z-[900]" src="{{ show_reel:video }}"></video>
+        <video  class="h-screen w-screen object-contain z-[900]" src="{{ show_reel:video }}"></video>
     </div>
 
     <!-- Puts the bubbles in the top right hand corner of the page -->
@@ -65,7 +65,7 @@
             <!-- Displays a button that is clickable -->
             {{ if show_playreel }}
                 <div class="flex items-start justify-start w-full h-1/2 md:w-1/3 md:items-end md:justify-end md:h-full show-playreel">
-                    <div onclick="showVid()">
+                    <div id="showReel">
                     {{ partial:partials/link_arrow text="Play Showreel" textColor="text-dark" }}
                     </div>
                 </div>
@@ -77,94 +77,3 @@
     
 </div>
 
-<script defer>
-
-    let safariAgent = navigator.userAgent.indexOf("Safari") > -1;
-console.log(navigator.userAgent);
-let mobileAgent = navigator.userAgent.indexOf("iPhone") > -1;
-console.log(mobileAgent)
-    // This is to be the same as the CSS amount
-    // ? found in the site.css file animation: showVideo 4s
-    const timeoutDelay = 2000; 
-
-    const showVideo = document.querySelector('.show-reel');
-    const vid = showVideo.querySelector('video');
-    const playModal = showVideo.querySelector('.play-modal');
-    const vidBox = vid.getBoundingClientRect();
-    const body = document.body;
-    const showPlayReel = document.querySelector('.show-playreel');
-    
-    // ? Hide the Play Showreel div if on an i-phone and using safari.
-    if (safariAgent && mobileAgent) {
-        showPlayReel.classList.add('hidden');
-    }
-
-    function toggleAutoplay(element) {
-        //if (safariAgent) {element.muted = true;}
-          
-
-        element.autoplay = true;
-        element.playsinline = true;
-
-        if (mobileAgent) {
-           playModal.classList.remove("hidden");
-           playModal.classList.add("flex");
-        } else {
-            if (safariAgent) {
-                hideModal()
-            } else {
-                element.play();
-            }
-        }
-
-        
-        //setTimeout(() => element.muted = false, 4000);
-    }
-
-    function hideModal() {
-        playModal.classList.toggle("flex");
-        playModal.classList.toggle("hidden");
-    }
-
-    function showVid() {
-        //console.log(showVideo);
-        
-        console.log("Show Video Clicked");
-        vid.classList.add('show');
-        setTimeout(function () {
-            toggleAutoplay(document.querySelector('video'),
-            );
-        }, timeoutDelay);
-        
-        
-        // console.log(vid);
-    }
-
-    function pausePlay() {      
-        hideModal();
-
-        if (!vid.paused) {
-            vid.pause();
-        } else {
-            vid.play();
-        }
-    }
-
-    function hideAgain() {
-        // Hide the Video once off screen.
-        vid.pause();
-        vid.classList.remove('show');
-        playModal.classList.remove("flex");
-        playModal.classList.add("hidden");
-    }
-
-    // ? When the window scrolls
-    window.onscroll = () => ScrollCheck();
-
-    function ScrollCheck() {
-      if (body.scrollTop > vidBox.height || document.documentElement.scrollTop > vidBox.height) {
-        hideAgain();
-        
-      } 
-    }
-</script>

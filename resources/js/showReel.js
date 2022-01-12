@@ -10,11 +10,17 @@ console.log("iPhone: ", mobileAgent)
     const timeoutDelay = 2000; 
 
     const showVideo = document.querySelector('.show-reel');
-    const vid = showVideo.querySelector('video');
-    const playModal = showVideo.querySelector('.play-modal');
+    const vid = document.querySelector('video');
+    const playModal = document.querySelector('.play-modal');
     const vidBox = vid.getBoundingClientRect();
     const body = document.body;
     const showPlayReel = document.querySelector('.show-playreel');
+    const showReel = document.getElementById('showReel');
+    const hideModalView = document.getElementById('hideModal');
+    
+    showReel.addEventListener("click", showVid);
+    hideModalView.addEventListener("click", hideModal);
+    vid.addEventListener("click", pausePlay);
     
     // ? Hide the Play Showreel div if on an i-phone and using safari.
     if (safariAgent && mobileAgent) {

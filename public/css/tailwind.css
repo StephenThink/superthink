@@ -1847,6 +1847,14 @@ input#store:checked ~ .toggle-dot {
   z-index: 20;
 }
 
+.z-\[9\] {
+  z-index: 9;
+}
+
+.z-\[10\] {
+  z-index: 10;
+}
+
 .order-2 {
   order: 2;
 }
@@ -2787,11 +2795,6 @@ input#store:checked ~ .toggle-dot {
 .object-fill {
   -o-object-fit: fill;
      object-fit: fill;
-}
-
-.object-none {
-  -o-object-fit: none;
-     object-fit: none;
 }
 
 .object-left-top {
