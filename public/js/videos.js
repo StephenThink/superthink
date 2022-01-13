@@ -7,6 +7,13 @@ var caseVideoParent = document.querySelectorAll('.case-video-parent');
 caseVideoParent.forEach(function (item) {
   item.addEventListener('click', function (event) {
     var playState = item.dataset.state;
+    var imageState = item.dataset.source; // if there is an Video Thumbnail then get rid of the thumbnail and opacity
+
+    if (imageState) {
+      event.currentTarget.firstElementChild.style.backgroundImage = null;
+      event.currentTarget.firstElementChild.style.opacity = null;
+    }
+
     stopAllVideos();
 
     if (playState == "paused") {
@@ -30,6 +37,7 @@ function stopAllVideos() {
 
 function hidePlayModal(element) {
   //   console.log("hide")
+  console.log(element);
   element.firstElementChild.classList.remove("opacity-50");
   element.firstElementChild.classList.add("opacity-0");
   element.firstElementChild.firstElementChild.classList.remove("flex");

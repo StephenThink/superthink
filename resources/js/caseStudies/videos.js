@@ -4,6 +4,16 @@ const caseVideoParent = document.querySelectorAll('.case-video-parent');
 caseVideoParent.forEach((item) => {
     item.addEventListener('click', (event) => {
         const playState = item.dataset.state
+        const imageState = item.dataset.source
+
+
+
+// if there is an Video Thumbnail then get rid of the thumbnail and opacity
+        if(imageState) {
+            event.currentTarget.firstElementChild.style.backgroundImage=null
+            event.currentTarget.firstElementChild.style.opacity=null
+        } 
+        
 
         stopAllVideos()
 
@@ -31,6 +41,7 @@ function stopAllVideos() {
 
 function hidePlayModal(element) {
     //   console.log("hide")
+        console.log(element)
     element.firstElementChild.classList.remove("opacity-50");
     element.firstElementChild.classList.add("opacity-0");
     element.firstElementChild.firstElementChild.classList.remove("flex");
