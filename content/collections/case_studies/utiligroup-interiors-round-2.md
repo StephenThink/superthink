@@ -4,7 +4,6 @@ blueprint: case_study
 title: 'NAP - Utiligroup Interiors Round 2'
 video_choice: Image
 hero_image: Experience-4-Utiligroup-Interiors-Full-Image.jpg
-mini_introduction: 'Interior design is the art and science of understanding people’s behaviour to create functional spaces within a building, we understand how people are influenced by their environments. We create innovative commercial spaces that connect your brand combining interior and identity design, whether to inspire your employees in offices, wow potential clients in meeting spaces or create relaxed atmospheres for your customer in retail.'
 secondary_image: work/experience/utiligroup-interiors-round2/Experience-4-Utiligroup-Interiors-Secondary-Image.jpg
 short_case: false
 main_content:
@@ -13,8 +12,8 @@ main_content:
     attrs:
       values:
         type: the_problem
-        custom_header: ' Energising employees '
-        intro: 'Every workplace is different and has particular needs, but all should reflect your brand and inspire your employees. It’s important your offices reflect and enhance the powerful brand you are building and give your potential customers a visual sense of your goals, who you are and how you want them to feel. '
+        custom_header: ' '
+        intro: 'The spaces we work in are important. Very important. So when Utiligroup (now ESG Global) got in touch with us to give their office spaces a creative twist, we were more than happy to help. '
         video_choice: Image
         image: work/experience/utiligroup-interiors-round2/Experience-4-Utiligroup-Interiors-Large-4.jpg
   -
@@ -43,33 +42,30 @@ main_content:
     attrs:
       values:
         type: the_problem
-        custom_header: 'Branded spaces'
-        intro: 'We can oversee all aspects of the process from creative concept to installation, consulting on design considerations to help create a strong sense of the brands image from the moment your customers walk in. Understanding consumer behaviour we create immersive atmospheres that embodies the brand in an experience for them that tells the narrative of your brand visually. '
+        custom_header: ' '
+        intro: 'With a sense of fun right off the bat, we set out to create a concept that would both inspire employees and wow clients. '
         video_choice: Image
         image: work/experience/utiligroup-interiors-round2/Experience-4-Utiligroup-Interiors-Large-10.jpg
-  -
-    type: paragraph
   -
     type: set
     attrs:
       values:
         type: the_problem
-        custom_header: 'Curated creative'
-        intro: |-
-          Do you want to improve innovation, inspiration and influence within the workspace then get in touch with our creative team that can transform any space. 
-
-          See how we can transform your event space with our display service. 
+        custom_header: ' '
+        intro: 'Using classic board games as our inspiration, we worked collaboratively with the guys at Utiligroup to design and fit themed meeting spaces throughout their facility, adding playful wall wraps, props and glass graphics to make every meeting room a discussion point in themselves.'
         video_choice: Image
         image: work/experience/utiligroup-interiors-round2/Experience-4-Utiligroup-Interiors-Large-7.jpg
   -
     type: paragraph
 greatest_hits: false
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640101791
+updated_at: 1642075662
 core:
   - experience
 services_filter:
   - design
   - creative-design
   - display
+  - print-design
+  - illustration
 ---
