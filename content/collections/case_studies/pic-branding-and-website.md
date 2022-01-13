@@ -5,8 +5,8 @@ title: 'mc- PIC Branding and Website'
 greatest_hits: false
 core:
   - brand
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1641816965
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1642008631
 hero_image: work/brand/pic-branding-and-website/Pic-6-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/pic-branding-and-website/Pic-6-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -44,6 +44,7 @@ services_filter:
   - branding
   - digital
   - web-design-and-development
+  - brand-identity
 short_case: false
 video_choice: Image
 ---

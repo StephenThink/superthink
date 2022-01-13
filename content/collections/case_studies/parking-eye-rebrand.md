@@ -5,8 +5,8 @@ title: 'mc- Parking Eye Rebrand'
 greatest_hits: false
 core:
   - brand
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1641816783
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1642008604
 hero_image: work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -45,6 +45,7 @@ services_filter:
   - branding
   - display
   - print
+  - brand-identity
 thumbnail: work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Full-Image-1360x768.5-thumbnail.jpg
 mini_introduction: 'People get itchy at the idea of surveillance. But almost by accident, Parking Eye had created the wrong impression with its old brand. With strong black and yellow colours, angular chevron graphics and strong messaging, they looked and sounded way too authoritarian.'
 short_case: false

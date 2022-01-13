@@ -3,8 +3,8 @@ id: ca711063-a9ec-4f68-be8c-16ce7bad0869
 blueprint: case_study
 title: 'mc- Ignition RM Branding'
 greatest_hits: false
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1641812364
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1642008589
 core:
   - brand
 hero_image: work/brand/ignition-rm-branding/Ignition-4-Brand-Full-Image-1360x768.5.jpg
@@ -44,6 +44,7 @@ services_filter:
   - branding
   - digital
   - print
+  - brand-identity
 mini_introduction: 'In need of a strong brand presence? Well that''s exactly what our client Ignition RM were thinking when they came to us. They knew they needed a more creative approach to tell the story of their approach to Fleet Risk Management to clients across the UK.'
 short_case: false
 video_choice: Image
