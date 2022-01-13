@@ -23,6 +23,7 @@ main_content:
         custom_header: ' '
         video_choice: Video
         video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-1.mp4
+        video_thumbnail: 9-ParkingEye.jpg
   -
     type: set
     attrs:
@@ -50,6 +51,6 @@ services_filter:
   - digital
   - video
   - print-design
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641906832
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1642075028
 ---

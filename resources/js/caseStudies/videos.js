@@ -56,7 +56,7 @@ function showPlayModal(element) {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         showPlayModal(entry.target)
-        console.log(entry.target, entry.isIntersecting)
+       // console.log(entry.target, entry.isIntersecting)
        // ? Before Refactoring
        // entry.target.dataset.state = "paused"
        // entry.target.lastElementChild.pause();
