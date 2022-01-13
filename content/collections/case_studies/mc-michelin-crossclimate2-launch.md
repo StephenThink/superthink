@@ -42,6 +42,14 @@ main_content:
         video_choice: Video
         video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
   -
+    type: set
+    attrs:
+      values:
+        type: the_problem
+        custom_header: 'Test Image'
+        video_choice: Image
+        image: 1-Sealife.jpg
+  -
     type: paragraph
 greatest_hits: false
 core:
@@ -52,5 +60,6 @@ services_filter:
   - video
   - print-design
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1642075028
+updated_at: 1642079852
+video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
 ---

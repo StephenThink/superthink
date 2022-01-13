@@ -39,7 +39,7 @@
                     <h2 class="text-4xl font-black">{{ custom_header ? custom_header : 'The Challenge' }}</h2>
                     <p class="w-full mt-4 md:w-10/12">{{ intro }}</p>
 
-                    <div class="relative mt-8 {{#pb-1/2#}}">
+                    <div class="relative mt-8 {{ if video_choice == "Image" }}pb-1/2{{/if}}">
                         {{ if video_choice == "Video" }}
                         {{ partial:partials/video/case_video }}
                         {{ else }}
