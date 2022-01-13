@@ -226,57 +226,80 @@
 {{ /collection:next }}
 
 <script defer>
+    
     const caseVideoParent = document.querySelectorAll('.case-video-parent');
-    // const test = Array.from(document.getElementsByClassName('case-video-parent'));
-    // console.log(test);
-    const caseVideo = document.querySelector('.case-video');
-    const casePlayModal = document.querySelectorAll('.play-case-modal')
+    const casePlayButton = document.querySelectorAll('.case-video-parent');
+    const videoElement = caseVideoParent.lastElementChild;
+    var playing = false
     
-    
-
-    function casePausePlay(event) {
-       // If the element has a class of play-case-modal (clicking on the gray box)
-       if (event.target.classList.contains('play-case-modal')) {
-           hidePlayModal();
-           if(!event.target.nextElementSibling.paused)
-        {
-            event.target.nextElementSibling.pause();
-
-        } 
-        else {
-            event.target.nextElementSibling.play();
-        }
-       } 
-        // If they click on the Play Button
-       else {
-           event.target.parentElement.classList.toggle("opacity-50");
-           event.target.parentElement.classList.toggle("opacity-0");
-           event.target.parentElement.children[0].classList.toggle("flex");
-           event.target.parentElement.children[0].classList.toggle("hidden");
-           if(!event.target.parentNode.nextElementSibling.paused)
-           {
-               event.target.parentNode.nextElementSibling.pause();
    
-           } else {
-               event.target.parentNode.nextElementSibling.play();
+    caseVideoParent.forEach((item) => {
+        item.addEventListener('click', (event) => {
+          const playState = item.dataset.state
+                     
+          
+      
+
+
+           stopAllVideos()
+           
+           if(playState == "paused") {
+               hidePlayModal()
+            } else {
+               showPlayModal()
            }
-       }
+           console.log("playing:",playing)
+           
+        }, {capture:true})
+    })
 
-       function hidePlayModal() {
-        event.target.classList.toggle("opacity-50");
-        event.target.classList.toggle("opacity-0");
-        event.target.children[0].classList.toggle("flex");
-        event.target.children[0].classList.toggle("hidden");
-       }
-        
+    function stopAllVideos() {
+
+        console.log("Stopping all videos")
+
+        for(let i = 0; i < caseVideoParent.length; i++) {
+            // Pause all Videos
+            caseVideoParent[i].lastElementChild.pause()
+            caseVideoParent[i].dataset.state="paused"
+            
+            
+            // Show Play Modal
+            caseVideoParent[i].firstElementChild.classList.remove("opacity-0")
+            caseVideoParent[i].firstElementChild.classList.add("opacity-50")
+            caseVideoParent[i].firstElementChild.lastElementChild.classList.remove("hidden")
+            caseVideoParent[i].firstElementChild.lastElementChild.classList.add("flex")
+            
+            playing = false
+        }
     }
-        
 
-        
+    function hidePlayModal() {
+         console.log("hide")
+      event.currentTarget.firstElementChild.classList.remove("opacity-50");
+      event.currentTarget.firstElementChild.classList.add("opacity-0");
+      event.currentTarget.firstElementChild.firstElementChild.classList.remove("flex");
+      event.currentTarget.firstElementChild.firstElementChild.classList.add("hidden");
 
-  //      .addEventListener('ended',myHandler,false);
- //   function myHandler(e) {
-        // What you want to do after the event
-  //  }
-    
+      event.currentTarget.lastElementChild.play()
+      event.currentTarget.dataset.state="play"
+      playing = true
+
+     }
+ 
+     function showPlayModal() {
+         console.log("show")
+      event.currentTarget.firstElementChild.classList.add("opacity-50");
+      event.currentTarget.firstElementChild.classList.remove("opacity-0");
+      event.currentTarget.firstElementChild.firstElementChild.classList.add("flex");
+      event.currentTarget.firstElementChild.firstElementChild.classList.remove("hidden");
+
+      event.currentTarget.lastElementChild.pause()
+
+      event.currentTarget.dataset.state="paused"
+      playing = false
+
+     }
+ 
+
+
 </script>

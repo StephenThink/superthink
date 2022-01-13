@@ -1,5 +1,6 @@
 <div class="hero h-vertical-handle-nm  flex items-center w-100 py-24 relative overflow-hidden {{ text_small ? 'text-5xl md:text-7xl' : 'text-5xl md:text-18xl' }} {{classes}} md:h-screen" data-scroll-section>
 
+    {{ if slug=="home"}}
     <div class="show-reel">
         <div class="play-modal bg-gray-800 opacity-50 absolute w-full h-full top-0 left-0 hidden justify-center items-center z-[1000] pointer-events-none">
             <div id="hideModal" class="play-button p-4 w-96 h-96 md:w-56 md:h-56 border-white md:border-black border-2 rounded-full text-2xl text-white md:text-black flex justify-center items-center cursor-pointer z-[1001]" >
@@ -10,6 +11,7 @@
         </div>
         <video  class="h-screen w-screen object-contain z-[900]" src="{{ show_reel:video }}"></video>
     </div>
+    {{ /if}}
 
     <!-- Puts the bubbles in the top right hand corner of the page -->
     {{ if bubbles }}
