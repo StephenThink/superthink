@@ -8,9 +8,9 @@ caseVideoParent.forEach((item) => {
         stopAllVideos()
 
         if (playState == "paused") {
-            hidePlayModal()
+            hidePlayModal(event.currentTarget)
         } else {
-            showPlayModal()
+            showPlayModal(event.currentTarget)
         }
         // console.log("playing:",playing)
 
@@ -25,62 +25,50 @@ function stopAllVideos() {
 
     for (let i = 0; i < caseVideoParent.length; i++) {
         // Pause all Videos
-        caseVideoParent[i].lastElementChild.pause()
-        caseVideoParent[i].dataset.state = "paused"
-
-
-        // Show Play Modal
-        caseVideoParent[i].firstElementChild.classList.remove("opacity-0")
-        caseVideoParent[i].firstElementChild.classList.add("opacity-50")
-        caseVideoParent[i].firstElementChild.lastElementChild.classList.remove("hidden")
-        caseVideoParent[i].firstElementChild.lastElementChild.classList.add("flex")
-
-
+        showPlayModal(caseVideoParent[i])
     }
 }
 
-function hidePlayModal() {
+function hidePlayModal(element) {
     //   console.log("hide")
-    event.currentTarget.firstElementChild.classList.remove("opacity-50");
-    event.currentTarget.firstElementChild.classList.add("opacity-0");
-    event.currentTarget.firstElementChild.firstElementChild.classList.remove("flex");
-    event.currentTarget.firstElementChild.firstElementChild.classList.add("hidden");
+    element.firstElementChild.classList.remove("opacity-50");
+    element.firstElementChild.classList.add("opacity-0");
+    element.firstElementChild.firstElementChild.classList.remove("flex");
+    element.firstElementChild.firstElementChild.classList.add("hidden");
 
-    event.currentTarget.lastElementChild.play()
-    event.currentTarget.dataset.state = "play"
+    element.lastElementChild.play()
+    element.dataset.state = "play"
 
 
 }
 
-function showPlayModal() {
+function showPlayModal(element) {
     //   console.log("show")
-    event.currentTarget.firstElementChild.classList.add("opacity-50");
-    event.currentTarget.firstElementChild.classList.remove("opacity-0");
-    event.currentTarget.firstElementChild.firstElementChild.classList.add("flex");
-    event.currentTarget.firstElementChild.firstElementChild.classList.remove("hidden");
-
-    event.currentTarget.lastElementChild.pause()
-
-    event.currentTarget.dataset.state = "paused"
-
-
+    element.firstElementChild.classList.add("opacity-50");
+    element.firstElementChild.classList.remove("opacity-0");
+    element.firstElementChild.firstElementChild.classList.add("flex");
+    element.firstElementChild.firstElementChild.classList.remove("hidden");
+    element.lastElementChild.pause()
+    element.dataset.state = "paused"
 }
 
 // Monitoring if the video is on or off screen
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-       // console.log(entry.target, entry.isIntersecting)
-        entry.target.dataset.state = "paused"
-        entry.target.lastElementChild.pause();
-        entry.target.firstElementChild.classList.add("opacity-50");
-        entry.target.firstElementChild.classList.remove("opacity-0");
-        entry.target.firstElementChild.firstElementChild.classList.add("flex");
-        entry.target.firstElementChild.firstElementChild.classList.remove("hidden");
+        showPlayModal(entry.target)
+        console.log(entry.target, entry.isIntersecting)
+       // ? Before Refactoring
+       // entry.target.dataset.state = "paused"
+       // entry.target.lastElementChild.pause();
+       // entry.target.firstElementChild.classList.add("opacity-50");
+       // entry.target.firstElementChild.classList.remove("opacity-0");
+       // entry.target.firstElementChild.firstElementChild.classList.add("flex");
+       // entry.target.firstElementChild.firstElementChild.classList.remove("hidden");
     })
     //console.log(entries)
 })
 
+// Get all the videos there own observer
 caseVideoParent.forEach(item => {
     observer.observe(item)
-
 })
