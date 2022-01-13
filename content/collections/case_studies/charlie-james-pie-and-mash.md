@@ -5,8 +5,8 @@ title: 'mc- Charlie James Pie and Mash'
 greatest_hits: false
 core:
   - brand
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1641810635
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1642008545
 hero_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -55,6 +55,7 @@ services_filter:
   - illustration
   - print
   - web-design-and-development
+  - brand-identity
 mini_introduction: 'When it came to building their em<b>pie</b>re, Charlie James Pie &amp; Mash knew the perfect creative team to help.'
 short_case: false
 video_choice: Image
