@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - experience
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640105460
+updated_at: 1642080543
 hero_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Brochure-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Brochure-Secondary-Image-896x597.jpg
 main_content:
@@ -25,21 +25,14 @@ main_content:
         intro: 'For businesses who deal with the sophisticated and the high-tech, the presentation of in-service products requires a concise, easy-to-follow format which engages audiences. '
         video_choice: Image
         image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Brochure-Large-927x522.jpg
-  -
-    type: paragraph
-  -
-    type: set
-    attrs:
-      values:
-        type: gallery
-  -
-    type: paragraph
+        custom_header: ' '
   -
     type: set
     attrs:
       values:
         type: the_work
         intro: 'The BAE Bridging Brochure, produced in both printed and digital format, combines illustrated technical drawings with photographs and in-depth, informative content (such as equipment specifications and results of testing processes). The technical drawings serve to highlight the impressive scale of the projects, ensuring that impact is retained throughout the 36-page feature.'
+        custom_header: '  '
   -
     type: set
     attrs:

@@ -40,7 +40,8 @@ main_content:
         type: the_problem
         custom_header: ' '
         video_choice: Video
-        video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
+        video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Large-927x522-3.mp4
+        video_thumbnail: work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Large-927x522-3_242.jpg
   -
     type: set
     attrs:
@@ -59,7 +60,7 @@ services_filter:
   - digital
   - video
   - print-design
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1642079852
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1642157820
 video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
 ---
