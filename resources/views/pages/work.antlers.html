@@ -1,4 +1,4 @@
-{{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
+{{ partial:partials/global/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
 
 <section class="main__panel_x-small bg-light dark:bg-dark">
     <div class="container">
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        {{ partial:partials/cta}}
+        {{ partial:partials/global/cta}}
 
             <div class="py-12 bg-light dark:bg-dark">
                 {{# <div class="container">
@@ -83,7 +83,7 @@
                     <!-- query_scope="group_case_studies" -->
                     
                     {{ taxonomy:services_filter }}
-                        {{ partial:partials/group_case_studies :header="title" :slug="slug" }}                
+                        {{ partial:partials/work/group_case_studies :header="title" :slug="slug" }}                
                     {{ /taxonomy:services_filter  }}
 
 

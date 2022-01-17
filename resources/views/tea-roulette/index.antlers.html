@@ -35,7 +35,7 @@
 
 <div class="addNamesPanel h-screen w-screen ml-0 transform -translate-y-full top-0 left-0 z-30 bg-dark fixed   md:w-handle-nm md:ml-handle" data-state="closed">
     <div class="w-11/12 m-auto pt-32 pb-12 h-screen overflow-hidden flex-1 flex-row flex-wrap items-center justify-between md:w-1/2 relative">
-        {{ partial:partials/close classes="close_addNamesPanel text-5xl hover:text-white" }}
+        {{ partial:partials/global/close classes="close_addNamesPanel text-5xl hover:text-white" }}
                 
         <div class="w-full flex items-center mb-10">
             <input type="text" class="addNewName text-yellow appearance-none outline-none rounded-none bg-transparent border-b border-yellow placeholder-yellow pb-4 flex-1" placeholder="add a brew maker">
@@ -55,7 +55,7 @@
     </div>
 </div>
     
-{{ partial:partials/messages }}
+{{ partial:partials/tea/messages }}
 
 
 {{ section:scripts }}

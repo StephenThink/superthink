@@ -1,5 +1,5 @@
 {{ if hero_image}}
-    {{ partial:partials/hero classes="" display="{{hero_image}}" show_playreel="0" }}
+    {{ partial:partials/global/hero classes="" display="{{hero_image}}" show_playreel="0" }}
 {{ /if }}
 
 
@@ -108,7 +108,7 @@
 
 {{ /main_content }}
 <div class="pb-12 bg-light dark:bg-dark">
-{{ partial:partials/cta }}
+{{ partial:partials/global/cta }}
 </div>
 {{ main_content }}
         {{ if type == 'slider' }} 
@@ -154,7 +154,7 @@
 
 {{ /main_content }}
 
-{{ partial:partials/small_banner  }}
+{{ partial:partials/work/small_banner  }}
 
 
 {{ if outro }}
@@ -168,7 +168,7 @@
 {{ /if }}
 
 
-{{ partial:partials/employees padding="main__panel_x-small" justcocoa="1"}}
+{{ partial:partials/work/employees padding="main__panel_x-small" justcocoa="1"}}
 
 <!--  collection next  -->
 <!-- This takes the next entry in the case studies collection and displays it, if there are no more entries then it displays the no_result -->

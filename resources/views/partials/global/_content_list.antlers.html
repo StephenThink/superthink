@@ -40,7 +40,7 @@
                         
                         {{ if show_link }}
                         <a href="/services{{ url }}">
-                            {{ partial:partials/link_arrow textSize="text-lg" textColor="text-yellow" text="View all {title} services" }}
+                            {{ partial:partials/global/link_arrow textSize="text-lg" textColor="text-yellow" text="View all {title} services" }}
                         </a>
                         {{ /if }}
                     {{ /if }}
@@ -75,7 +75,7 @@
             <div class="flex flex-col items-end">
                 <div class="w-full py-16 md:w-2/3">
                     <a href="/services">
-                        {{ partial:partials/link_arrow textColor="text-dark dark:text-yellow" text="View all services" }}
+                        {{ partial:partials/global/link_arrow textColor="text-dark dark:text-yellow" text="View all services" }}
                     </a>
                 </div>
             </div>

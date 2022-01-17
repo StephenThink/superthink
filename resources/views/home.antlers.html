@@ -3,7 +3,7 @@
 <!-- classes is a variable called in the partial -->
 <!-- display is a variable called in the partial that makes the hero text displayed -->
 <!-- show_playreel is a variable called in the partial that shows the a button that is clickable -->
-{{ partial:partials/hero classes="bg-yellow text-dark dark:bg-header-dark dark:text-yellow " bubbles="1" display="{{hero_text}}" show_playreel="1" }}
+{{ partial:partials/global/hero classes="bg-yellow text-dark dark:bg-header-dark dark:text-yellow " bubbles="1" display="{{hero_text}}" show_playreel="1" }}
 
 <div class="main__panel bg-light dark:bg-dark dark:text-light" data-scroll-section id="VideoStop">
     <div class="container">
@@ -47,19 +47,19 @@
             <div class="leading-tight text-yellow fancy" data-scroll data-scroll-call="fancy">{{ bottom_line ?? "outstanding results" }}</div>
         </div>
         <div class="">
-            <a href="{{block_link}}">{{ partial:partials/link_arrow textColor="text-yellow" text="{{link_text}}" }}</a>
+            <a href="{{block_link}}">{{ partial:partials/global/link_arrow textColor="text-yellow" text="{{link_text}}" }}</a>
         </div>
     </div>
 
 </div>
 
 {{ taxonomy:core as="data" sort="where_do_i_go" }}
-    {{  partial:partials/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
+    {{  partial:partials/global/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
 {{ /taxonomy:core }}
 
 <!-- Yellow Banner -->
 
-{{ partial:partials/banner 
+{{ partial:partials/home/banner 
     heading="{{ banner_heading }}" 
     text="{{ banner_text }}"
     email="{{ banner_email }}"
@@ -69,10 +69,10 @@
 }}
 
 <!-- Information from Clients in the Globals -->
-{{ partial:partials/client_list }}
+{{ partial:partials/home/client_list }}
 
 <!-- Information from Awards in the Globals -->
-{{ partial:partials/awards_list }}
+{{ partial:partials/footer/footer/awards_list }}
 
 {{ section:scripts }}
     <script src="{{ mix src='/js/showReel.js' }}" type="text/javascript"></script>

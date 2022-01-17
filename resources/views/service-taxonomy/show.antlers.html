@@ -20,7 +20,7 @@
       }
 </style>
 
-{{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
+{{ partial:partials/global/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
 <sjj id="subsjj" class="h-20 bg-yellow flex flex-wrap items-center justify-center p-2 uppercase text-dark font-bold text-md xl:text-xl">
     {{ content_grid }}
         <a class="mr-2" href="#{{content_title | slugify}}">{{ content_title }}.</a>   
@@ -38,7 +38,7 @@
                     <div class="text-xl pb-12 text-dark dark:text-light">{{ content_text }}</div>
                   
                         <div class="block xl:hidden 2xl:block">
-                            <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}">{{ partial:partials/link_arrow textColor="text-yellow" text="{{ content_link_text }}" }}</a>
+                            <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}">{{ partial:partials/global/link_arrow textColor="text-yellow" text="{{ content_link_text }}" }}</a>
                         </div>
                 </div>
                 <div class="xl:w-1/2 flex flex-col h-1/2 {{ if count | mod:2 }} xl:pl-10 {{ else }} xl:pr-10 {{ /if }}">
@@ -46,7 +46,7 @@
                     <img src="{{ url }}" class="aspect-w-3 aspect-h-2 !pb-12">
                     {{/content_image}}
                     <div class="hidden xl:block 2xl:hidden">
-                        <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}">{{ partial:partials/link_arrow textColor="text-yellow" text="{{ content_link_text }}" }}</a>
+                        <a href="{{ if content_link }}{{ content_link }} {{ else }} /services/core/{{slug}}{{ /if}}">{{ partial:partials/global/link_arrow textColor="text-yellow" text="{{ content_link_text }}" }}</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
 <!-- This is where we show a core service page - brand;communication;... -->
 {{# 
 {{ if hero_image }}
-    {{ partial:partials/hero classes="" show_playreel="0"  }}
+    {{ partial:partials/global/hero classes="" show_playreel="0"  }}
 {{ /if }}
 
 
@@ -100,7 +100,7 @@
                         {{ if bold_text }}
                             <div @click="open = ! open" @click.outside="open = false" class="flex justify-between pb-4 text-xl font-bold">
                                 <div><strong>{{ bold_text }}</strong></div>
-                                <div class="transition duration-500 ease-in-out origin-center transform" :class="!open ? '' : '-rotate-45'" >{{ partial:partials/plus }}</div>
+                                <div class="transition duration-500 ease-in-out origin-center transform" :class="!open ? '' : '-rotate-45'" >{{ partial:partials/work/plus }}</div>
                             </div>
 
 
@@ -141,10 +141,10 @@
 #}}
 
 
-{{ partial:partials/cta }}
+{{ partial:partials/global/cta }}
 
 <!-- Featured strategy projects here --- Need to tag a case study to a service -->
-{{ partial:partials/grid_filter title="Featured {{title}} Projects" what="case_studies" filter="{slug}" limit="4" random="true"}}
+{{ partial:partials/work/grid_filter title="Featured {{title}} Projects" what="case_studies" filter="{slug}" limit="4" random="true"}}
 
 <script>
 

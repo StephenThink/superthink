@@ -1,9 +1,9 @@
 <div class="" data-barba-namespace="blog-item">
-    {{ partial:partials/hero classes="text-dark bg-light dark:bg-dark dark:text-light" display="{{hero_text}}" show_playreel="0" }}
+    {{ partial:partials/global/hero classes="text-dark bg-light dark:bg-dark dark:text-light" display="{{hero_text}}" show_playreel="0" }}
 
     {{ collection:blog limit="1" as="single" sort="date:desc"}}
         {{ single }}
-            {{ partial:partials/negative_image }}
+            {{ partial:partials/work/negative_image }}
         {{ /single }}
     {{ /collection:blog }}
 

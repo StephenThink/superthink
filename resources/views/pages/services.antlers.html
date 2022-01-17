@@ -23,17 +23,17 @@
 </style>
 
 
-{{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" }}
+{{ partial:partials/global/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" }}
 
 
 {{ taxonomy:core as="data" sort="where_do_i_go"}}
-{{ partial:partials/services_nav :data="data"}}
+{{ partial:partials/nav/services_nav :data="data"}}
 
 {{ /taxonomy:core }}
 
 <!-- Uses the Core Taxonomy to display the different areas -->
 {{ taxonomy:core as="data" sort="where_do_i_go" }}
-    {{  partial:partials/v2_content_list :data="data" }}
+    {{  partial:partials/work/v2_content_list :data="data" }}
 {{ /taxonomy:core }}
 
 
@@ -41,10 +41,10 @@
 {{# Told by Steve 18/11/21 #}}
 <!-- Uses the Core Taxonomy to display the different areas -->
 {{# taxonomy:core as="data" }}
-    {{  partial:partials/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
+    {{  partial:partials/global/content_list header="{ layered_title }" text="{ layered_content }" :data="data" }}
 {{ /taxonomy:core #}}
 
-{{ partial:partials/cta }}
+{{ partial:partials/global/cta }}
 
 <!-- Uses the Services collection that is passed to the grid partial -->
 {{# Not required, however left in just incase it is required in the future #}}

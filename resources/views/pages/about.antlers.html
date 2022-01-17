@@ -1,4 +1,4 @@
-{{ partial:partials/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
+{{ partial:partials/global/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
 
 <section class="main__panel bg-light dark:bg-dark">
     <div class="container flex">
@@ -28,8 +28,8 @@
 
 {{ partial:partials/about/quote bg="bg-yellow"}}
 
-{{ partial:partials/content_list header="{{ layered_title }}" text="{{ layered_content }}" :data="steps" }}
+{{ partial:partials/global/content_list header="{{ layered_title }}" text="{{ layered_content }}" :data="steps" }}
 
-{{ partial:partials/cta }}
+{{ partial:partials/global/cta }}
 
-{{ partial:partials/awards_list }}
+{{ partial:partials/footer/footer/awards_list }}

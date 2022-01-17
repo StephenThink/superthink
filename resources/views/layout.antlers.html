@@ -62,15 +62,15 @@
         
 
         <div class="block md:flex-col overflow_hidden">
-            {{ partial:partials/nav }} <!-- This is the Navbar that slides out -->
-            {{ partial:partials/handle }} <!-- This appears on the top of a mobile phone, and left on all over screen sizes -->
+            {{ partial:partials/nav/nav }} <!-- This is the Navbar that slides out -->
+            {{ partial:partials/nav/handle }} <!-- This appears on the top of a mobile phone, and left on all over screen sizes -->
             
             <div class="w-screen ml-0 md:w-handle-nm md:ml-handle start-template" data-barba="container">
                     
                 {{ template_content }}
             </div>
             
-            {{ partial:partials/footer }} <!-- This is at the bottom of the site -->
+            {{ partial:partials/footer/footer }} <!-- This is at the bottom of the site -->
 
         </div>
 
