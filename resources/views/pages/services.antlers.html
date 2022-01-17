@@ -1,7 +1,6 @@
 <style>
 
     sjj {
-
         top: 0;
         width: 100%;
 
@@ -16,7 +15,6 @@
 
       @media only screen and (max-width: 767px) {
         body.fixed-sjj sjj {
-            top:8rem;
             left:0;
           }
       }
@@ -53,27 +51,43 @@
 
 <script>
 
-  const sjj = document.querySelector('#subsjj');
+  // Variables
+  const body = document.body;
+  const windowHeight = window.innerHeight;
+  const sjj = document.querySelector('sjj');
+  const handle = document.querySelector('#handle');
+  const handleHeight = handle.clientHeight // Height of the Navbar normally (103 for mobile view)
+  const nav = document.getElementById('navigation-panel');
+  const cta = document.querySelector('#cta')
+
+
   const topOfsjj = sjj.offsetTop;
-  console.log(topOfsjj)
+console.log(windowHeight)
 
   function fixsjj() {
-    //console.log(topOfsjj, window.scrollY);
-    if(window.scrollY >= topOfsjj) {
-          let handle = document.getElementById('handle');
-           let nav = document.getElementById('navigation-panel');
+
+    if(window.scrollY + windowHeight >= cta.offsetTop) {
+      
+      body.classList.remove('fixed-sjj');
+      sjj.style.top = 0;
+     
+    } 
+    //console.log(topOfsjj, window.scrollY + handleHeight);
+    if(window.scrollY + handleHeight >= topOfsjj && window.scrollY + windowHeight <= cta.offsetTop ) {
            nav.classList.remove('open');
            handle.classList.remove('open');
-      document.body.style.paddingTop = sjj.offsetHeight + 'px';
-      document.body.classList.add('fixed-sjj');
- 
+      sjj.style.top = handleHeight + 'px';
+      body.classList.add('fixed-sjj');
+
      } else {
 
-      document.body.style.paddingTop = 0;
-      document.body.classList.remove('fixed-sjj');
+      body.style.paddingTop = 0;
+      body.classList.remove('fixed-sjj');
+      sjj.style.top = 0 + 'px';
 
     }
   }
+
 
 
   window.addEventListener('scroll', fixsjj);
