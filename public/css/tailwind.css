@@ -2202,6 +2202,10 @@ input#store:checked ~ .toggle-dot {
   height: 1.25rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .max-h-700 {
   max-height: 700px;
 }
@@ -2573,6 +2577,10 @@ input#store:checked ~ .toggle-dot {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -2901,6 +2909,11 @@ input#store:checked ~ .toggle-dot {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pb-full {
