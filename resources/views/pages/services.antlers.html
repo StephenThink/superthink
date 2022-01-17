@@ -55,6 +55,7 @@
   const body = document.body;
   const windowHeight = window.innerHeight;
   const sjj = document.querySelector('sjj');
+  const sjjHeight = sjj.clientHeight
   const handle = document.querySelector('#handle');
   const handleHeight = handle.clientHeight // Height of the Navbar normally (103 for mobile view)
   const nav = document.getElementById('navigation-panel');
@@ -62,33 +63,27 @@
 
 
   const topOfsjj = sjj.offsetTop;
-console.log(windowHeight)
+
 
   function fixsjj() {
 
-    if(window.scrollY + windowHeight >= cta.offsetTop) {
-      
-      body.classList.remove('fixed-sjj');
-      sjj.style.top = 0;
-     
-    } 
+    
     //console.log(topOfsjj, window.scrollY + handleHeight);
-    if(window.scrollY + handleHeight >= topOfsjj && window.scrollY + windowHeight <= cta.offsetTop ) {
+    if(window.scrollY + handleHeight >= topOfsjj && window.scrollY + windowHeight + handleHeight + sjjHeight <= cta.offsetTop ) {
            nav.classList.remove('open');
            handle.classList.remove('open');
       sjj.style.top = handleHeight + 'px';
       body.classList.add('fixed-sjj');
 
      } else {
-
-      body.style.paddingTop = 0;
-      body.classList.remove('fixed-sjj');
-      sjj.style.top = 0 + 'px';
-
+      removeMiniNav();
     }
   }
 
-
+function removeMiniNav() {
+  body.classList.remove('fixed-sjj');
+  sjj.style.top = 0;
+}
 
   window.addEventListener('scroll', fixsjj);
 
