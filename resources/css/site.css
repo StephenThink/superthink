@@ -914,3 +914,23 @@ input#store:checked ~ .toggle-dot {
 .wording-services {
     @apply text-5xl font-black leading-tight landscape:text-3xl
 }
+
+
+sjj {
+        top: 0;
+        width: 100%;
+
+        position: relative;
+        z-index: 1;
+      }
+
+    body.fixed-sjj sjj {
+        position: fixed;
+        /*left: 2.5rem;*/
+      }
+
+      @media only screen and (max-width: 767px) {
+        body.fixed-sjj sjj {
+            left:0;
+          }
+      }

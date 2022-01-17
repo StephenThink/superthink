@@ -1,25 +1,3 @@
-<style>
-
-    sjj {
-        top: 0;
-        width: 100%;
-
-        position: relative;
-        z-index: 1;
-      }
-
-    body.fixed-sjj sjj {
-        position: fixed;
-        /*left: 2.5rem;*/
-      }
-
-      @media only screen and (max-width: 767px) {
-        body.fixed-sjj sjj {
-            left:0;
-          }
-      }
-</style>
-
 
 {{ partial:partials/global/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" }}
 
@@ -51,61 +29,4 @@
 {{# Told by Steve 18/11/21 #}}
 {{# partial:partials/grid title="Services" what="services" #}}
 
-<script>
-
-  // Variables
-  const body = document.body;
-  const windowHeight = window.innerHeight;
-  const sjj = document.querySelector('sjj');
-
-  var sjjWidth = sjj.clientWidth
-  const sjjHeight = sjj.clientHeight
-  const handle = document.querySelector('#handle');
-  var handleHeight = handle.clientHeight // Height of the Navbar normally (103 for mobile view)
-  const nav = document.getElementById('navigation-panel');
-  const cta = document.querySelector('#cta')
-  
-  const topOfsjj = sjj.offsetTop;
-  
-  handleHeight = (handleHeight > handle.clientWidth) ? 0 : handleHeight;
-  const ctaTop = cta.offsetTop + handleHeight + sjjHeight
-
-  function fixsjj() {
-
-
-    // These are help to stop the flickering
-if(window.scrollY >= ctaTop) {
-  sjj.classList.remove('flex')
-  sjj.classList.add('hidden')
-}
-
-if(window.scrollY <= ctaTop - 10) {
-  sjj.classList.add('flex')
-  sjj.classList.remove('hidden')
-}
-
-    //console.log(topOfsjj, window.scrollY + handleHeight);
-    if(window.scrollY + handleHeight >= topOfsjj && window.scrollY <= ctaTop ) {
-           nav.classList.remove('open');
-           handle.classList.remove('open');
-      sjj.style.top = handleHeight + 'px';
-      sjj.style.width = sjjWidth + 'px';
-      body.classList.add('fixed-sjj');
-
-     } else {
-      removeMiniNav();
-    }
-  }
-
-function removeMiniNav() {
-  body.classList.remove('fixed-sjj');
-  sjj.style.top = 0;
-}
-
-  window.addEventListener('scroll', fixsjj);
-
-  window.addEventListener('resize', () => {
-    handleHeight = (handleHeight > handle.clientWidth) ? 0 : handleHeight;
-    sjjWidth = sjj.clientWidth
-  })
-</script>
+<script src="{{ mix src='/js/mininav.js' }}" type="text/javascript"></script>
