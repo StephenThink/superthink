@@ -908,3 +908,9 @@ input#store:checked ~ .toggle-dot {
         transform: translateX(0);
     }
 }
+
+/* Content List - Home page */
+
+.wording-services {
+    @apply text-5xl font-black leading-tight landscape:text-3xl
+}

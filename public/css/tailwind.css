@@ -1618,6 +1618,22 @@ input#store:checked ~ .toggle-dot {
     }
 }
 
+/* Content List - Home page */
+
+.wording-services {
+  font-family: geo-black;
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
+@media (orientation: landscape) {
+
+  .wording-services {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -2071,6 +2087,10 @@ input#store:checked ~ .toggle-dot {
 
 .-mr-24 {
   margin-right: -6rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
 }
 
 .block {
@@ -3975,26 +3995,48 @@ input#store:checked ~ .toggle-dot {
 
 @media (orientation: landscape) {
 
-  .landscape\:-mt-4 {
-    margin-top: -1rem;
-  }
-
   .landscape\:-mt-8 {
     margin-top: -2rem;
+  }
+
+  .landscape\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .landscape\:ml-20 {
+    margin-left: 5rem;
   }
 
   .landscape\:hidden {
     display: none;
   }
 
-  .landscape\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .landscape\:w-full {
+    width: 100%;
+  }
+
+  .landscape\:flex-col {
+    flex-direction: column;
+  }
+
+  .landscape\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .landscape\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
   }
 
   .landscape\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .landscape\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
