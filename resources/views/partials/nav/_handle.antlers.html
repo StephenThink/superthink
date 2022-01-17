@@ -27,7 +27,7 @@
     <div class="w-16 hidden md:block"> 
         <div>
             <div class="hidden md:block transform md:-rotate-90 md:mb-12 text-white dark:text-dark">
-                <span class="syp half-height-colour inline-block ">
+                <span class="syp half-height-colour hidden landscape:hidden md:inline-block ">
                     <span class="underline-element yellow-underline">
                         {{# Show this unless on the contact page #}}
                         {{ if slug == "contact"}}
@@ -40,9 +40,9 @@
             </div>
         </div>
         
-        
-        {{ partial:partials.lightswitch}}
-        
+        <div class="hidden landscape:hidden md:block light-block">
+        {{ partial:partials/nav/lightswitch}}
+    </div>
 
     </div>
 

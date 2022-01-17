@@ -47,11 +47,7 @@ module.exports = {
       padding: '2rem',
       center: true,
       screens: {
-        "none": "100%",
-        sm: '540px',
-        md: '720px',
-        lg: '960px',
-        xl: '1140px',
+       
         
       }
     },
@@ -64,8 +60,13 @@ module.exports = {
     },
     extend: {
       screens: {
-        // 'ipadPro': {'min': '541px', 'max': '1024px'},
-        // 'portrait': {'raw': '(orientation: portrait)'},
+        "none": "100%",
+        sm: '540px',
+        md: '720px',
+        lg: '960px',
+        xl: '1140px',
+        // 'iphone': {'min': '541px', 'max': '801px'},
+        'landscape': {'raw': '(orientation: landscape)'},
       },
       filter: ['dark'],
       keyframes: {
