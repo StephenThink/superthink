@@ -2505,6 +2505,10 @@ input#store:checked ~ .toggle-dot {
   resize: none;
 }
 
+.resize {
+  resize: both;
+}
+
 .list-none {
   list-style-type: none;
 }

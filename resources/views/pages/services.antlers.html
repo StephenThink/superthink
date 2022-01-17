@@ -58,7 +58,7 @@
   const windowHeight = window.innerHeight;
   const sjj = document.querySelector('sjj');
 
-  const sjjWidth = sjj.clientWidth
+  var sjjWidth = sjj.clientWidth
   const sjjHeight = sjj.clientHeight
   const handle = document.querySelector('#handle');
   var handleHeight = handle.clientHeight // Height of the Navbar normally (103 for mobile view)
@@ -103,4 +103,9 @@ function removeMiniNav() {
 }
 
   window.addEventListener('scroll', fixsjj);
+
+  window.addEventListener('resize', () => {
+    handleHeight = (handleHeight > handle.clientWidth) ? 0 : handleHeight;
+    sjjWidth = sjj.clientWidth
+  })
 </script>
