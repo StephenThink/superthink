@@ -10,7 +10,7 @@
 
     body.fixed-sjj sjj {
         position: fixed;
-        left: 2.5rem;
+        /*left: 2.5rem;*/
       }
 
       @media only screen and (max-width: 767px) {
@@ -25,6 +25,7 @@
 
 
 {{ taxonomy:core as="data" sort="where_do_i_go"}}
+
 {{ partial:partials/nav/services_nav :data="data"}}
 
 {{ /taxonomy:core }}
@@ -32,6 +33,7 @@
 <!-- Uses the Core Taxonomy to display the different areas -->
 {{ taxonomy:core as="data" sort="where_do_i_go" }}
     {{  partial:partials/work/v2_content_list :data="data" }}
+
 {{ /taxonomy:core }}
 
 
@@ -55,24 +57,39 @@
   const body = document.body;
   const windowHeight = window.innerHeight;
   const sjj = document.querySelector('sjj');
+
+  const sjjWidth = sjj.clientWidth
   const sjjHeight = sjj.clientHeight
   const handle = document.querySelector('#handle');
-  const handleHeight = handle.clientHeight // Height of the Navbar normally (103 for mobile view)
+  var handleHeight = handle.clientHeight // Height of the Navbar normally (103 for mobile view)
   const nav = document.getElementById('navigation-panel');
   const cta = document.querySelector('#cta')
-
-
+  
   const topOfsjj = sjj.offsetTop;
-
+  
+  handleHeight = (handleHeight > handle.clientWidth) ? 0 : handleHeight;
+  const ctaTop = cta.offsetTop + handleHeight + sjjHeight
 
   function fixsjj() {
 
-    
+
+    // These are help to stop the flickering
+if(window.scrollY >= ctaTop) {
+  sjj.classList.remove('flex')
+  sjj.classList.add('hidden')
+}
+
+if(window.scrollY <= ctaTop - 10) {
+  sjj.classList.add('flex')
+  sjj.classList.remove('hidden')
+}
+
     //console.log(topOfsjj, window.scrollY + handleHeight);
-    if(window.scrollY + handleHeight >= topOfsjj && window.scrollY + windowHeight + handleHeight + sjjHeight <= cta.offsetTop ) {
+    if(window.scrollY + handleHeight >= topOfsjj && window.scrollY <= ctaTop ) {
            nav.classList.remove('open');
            handle.classList.remove('open');
       sjj.style.top = handleHeight + 'px';
+      sjj.style.width = sjjWidth + 'px';
       body.classList.add('fixed-sjj');
 
      } else {
@@ -86,5 +103,4 @@ function removeMiniNav() {
 }
 
   window.addEventListener('scroll', fixsjj);
-
 </script>
