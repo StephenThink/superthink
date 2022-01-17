@@ -23,16 +23,6 @@ main_content:
         custom_header: ' '
         video_choice: Video
         video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-1.mp4
-        video_thumbnail: 9-ParkingEye.jpg
-  -
-    type: set
-    attrs:
-      values:
-        type: slider
-        images:
-          - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-3.jpg
-          - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-4.jpg
-          - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-5.jpg
   -
     type: set
     attrs:
@@ -46,10 +36,11 @@ main_content:
     type: set
     attrs:
       values:
-        type: the_problem
-        custom_header: 'Test Image'
-        video_choice: Image
-        image: 1-Sealife.jpg
+        type: slider
+        images:
+          - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-3.jpg
+          - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-4.jpg
+          - work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-5.jpg
   -
     type: paragraph
 greatest_hits: false
@@ -61,6 +52,6 @@ services_filter:
   - video
   - print-design
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1642157820
+updated_at: 1642159557
 video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
 ---
