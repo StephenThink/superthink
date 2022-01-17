@@ -3975,8 +3975,26 @@ input#store:checked ~ .toggle-dot {
 
 @media (orientation: landscape) {
 
+  .landscape\:-mt-4 {
+    margin-top: -1rem;
+  }
+
+  .landscape\:-mt-8 {
+    margin-top: -2rem;
+  }
+
   .landscape\:hidden {
     display: none;
+  }
+
+  .landscape\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .landscape\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
