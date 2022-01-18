@@ -62,11 +62,12 @@ module.exports = {
       screens: {
         "none": "100%",
         sm: '540px',
+        landscape:{'min': '650px', 'max': '800px'},
         md: '720px',
         lg: '960px',
         xl: '1140px',
         // 'iphone': {'min': '541px', 'max': '801px'},
-        'landscape': {'raw': '(orientation: landscape)'},
+
       },
       filter: ['dark'],
       keyframes: {

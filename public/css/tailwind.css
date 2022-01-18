@@ -1718,7 +1718,7 @@ body.fixed-sjj sjj {
   }
 }
 
-@media (orientation: landscape) {
+@media (min-width: 650px) and (max-width: 800px) {
 
   .debug-screens::before {
     content: 'screen: landscape';
@@ -2913,11 +2913,6 @@ body.fixed-sjj sjj {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .px-10 {
