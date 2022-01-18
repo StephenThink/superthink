@@ -48,6 +48,7 @@ module.exports = {
       center: true,
       screens: {
        
+        
       }
     },
     fontFamily: {
@@ -65,9 +66,8 @@ module.exports = {
         md: '720px',
         lg: '960px',
         xl: '1140px',
-        
-        // 'ipadPro': {'min': '541px', 'max': '1024px'},
-        // 'portrait': {'raw': '(orientation: portrait)'},
+        // 'iphone': {'min': '541px', 'max': '801px'},
+
       },
       filter: ['dark'],
       keyframes: {

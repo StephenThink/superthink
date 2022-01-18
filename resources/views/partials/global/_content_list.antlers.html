@@ -17,7 +17,7 @@
                     <!-- Shown on the About Page -->
                     {{ if you_us == 'step' }}
                         <h3 class="text-xl title text-mid-grey" >{{ title }}</h3>
-                        <div class="mt-6 text-5xl font-black leading-tight">
+                        <div class="mt-6 wording-services">
                             {{ noun }}
                         </div>
                         <p>{{ text }}</p>
@@ -26,7 +26,7 @@
                     <!-- Displayed on Home page-->
                     {{ if you_us == 'us' }}
                         <h3 class="text-xl title text-mid-grey" >{{ title }}</h3>
-                        <div class="mt-6 text-5xl font-black leading-tight tagline">
+                        <div class="mt-6 wording-services tagline">
                             {{ tag_line_us }}
                         </div>
                     {{ /if }}
@@ -34,7 +34,7 @@
                     <!-- Displayed on Services Page-->
                     {{ if you_us == 'you' }}
                         <h3 class="text-lg title text-grey" >{{ strapline }}</h3>
-                        <div class="my-3 text-5xl font-black leading-tight tagline">
+                        <div class="my-3 wording-services tagline">
                             {{ tag_line_you }}
                         </div>
                         
