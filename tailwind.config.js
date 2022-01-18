@@ -49,6 +49,7 @@ module.exports = {
       screens: {
         "none": "100%",
         sm: '540px',
+        land: '650px',
         md: '720px',
         lg: '960px',
         xl: '1140px',
