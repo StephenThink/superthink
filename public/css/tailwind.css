@@ -1596,22 +1596,6 @@ input#store:checked ~ .toggle-dot {
     }
 }
 
-/* Content List - Home page */
-
-.wording-services {
-  font-family: geo-black;
-  font-size: 3rem;
-  line-height: 1.25;
-}
-
-@media (orientation: landscape) {
-
-  .wording-services {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
-
 sjj {
         top: 0;
         width: 100%;
@@ -2038,10 +2022,6 @@ body.fixed-sjj sjj {
   margin-bottom: 2.5rem;
 }
 
-.ml-20 {
-  margin-left: 5rem;
-}
-
 .mr-0 {
   margin-right: 0px;
 }
@@ -2142,6 +2122,14 @@ body.fixed-sjj sjj {
   height: 0.75rem;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .h-11\/12 {
   height: 91.666667%;
 }
@@ -2188,14 +2176,6 @@ body.fixed-sjj sjj {
 
 .h-10 {
   height: 2.5rem;
-}
-
-.h-16 {
-  height: 4rem;
-}
-
-.h-8 {
-  height: 2rem;
 }
 
 .h-5 {
@@ -2258,6 +2238,14 @@ body.fixed-sjj sjj {
   width: 66.666667%;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -2276,14 +2264,6 @@ body.fixed-sjj sjj {
 
 .w-9\/12 {
   width: 75%;
-}
-
-.w-16 {
-  width: 4rem;
-}
-
-.w-4 {
-  width: 1rem;
 }
 
 .w-48 {
@@ -2690,6 +2670,16 @@ body.fixed-sjj sjj {
   border-color: rgb(221 221 221 / var(--tw-border-opacity));
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -2698,16 +2688,6 @@ body.fixed-sjj sjj {
 .border-yellow {
   --tw-border-opacity: 1;
   border-color: rgb(255 199 52 / var(--tw-border-opacity));
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-yellow {
@@ -2817,16 +2797,16 @@ body.fixed-sjj sjj {
   padding: 2rem;
 }
 
+.p-1px {
+  padding: 1px;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
 
 .p-3 {
   padding: 0.75rem;
-}
-
-.p-1px {
-  padding: 1px;
 }
 
 .p-16 {
@@ -2891,6 +2871,11 @@ body.fixed-sjj sjj {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-10 {
@@ -3563,10 +3548,6 @@ body.fixed-sjj sjj {
     display: block;
   }
 
-  .md\:inline-block {
-    display: inline-block;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -3982,58 +3963,6 @@ body.fixed-sjj sjj {
 
   .\32xl\:hidden {
     display: none;
-  }
-}
-
-@media (orientation: landscape) {
-
-  .landscape\:ml-20 {
-    margin-left: 5rem;
-  }
-
-  .landscape\:-mt-8 {
-    margin-top: -2rem;
-  }
-
-  .landscape\:hidden {
-    display: none;
-  }
-
-  .landscape\:w-full {
-    width: 100%;
-  }
-
-  .landscape\:flex-col {
-    flex-direction: column;
-  }
-
-  .landscape\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .landscape\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .landscape\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .landscape\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .landscape\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .landscape\:text-7xl {
-    font-size: 4rem;
   }
 }
 

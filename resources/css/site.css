@@ -909,12 +909,6 @@ input#store:checked ~ .toggle-dot {
     }
 }
 
-/* Content List - Home page */
-
-.wording-services {
-    @apply text-5xl font-black leading-tight landscape:text-3xl
-}
-
 
 sjj {
         top: 0;
@@ -933,4 +927,4 @@ sjj {
         body.fixed-sjj sjj {
             left:0;
           }
-      }
+      } 

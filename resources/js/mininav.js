@@ -37,7 +37,7 @@ sjj.classList.remove('hidden')
     sjj.style.width = sjjWidth + 'px';
     body.classList.add('fixed-sjj');
 
-   } else {
+} else {
     removeMiniNav();
   }
 }
@@ -52,4 +52,4 @@ window.addEventListener('scroll', fixsjj);
 window.addEventListener('resize', () => {
   handleHeight = (handleHeight > handle.clientWidth) ? 0 : handleHeight;
   sjjWidth = sjj.clientWidth
-})
+}) 
