@@ -473,28 +473,6 @@ html {
     display: inline-block;
 }
 
-@responsive {
-    .bg-gradient-yellow-to-dark {
-        background: linear-gradient(90deg, #FFC734 65%, #373737 65%);
-    }
-    .bg-gradient-blue-to-light {
-        background: linear-gradient(0deg, #F7F7F7 30%, rgba(255,199,52,1) 30%);
-    }
-    .bg-gradient-transparent-to-yellow {
-        background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
-    }
-        .dark .bg-gradient-blue-to-light {
-            background: linear-gradient(0deg, #373737 30%, rgba(255,199,52,1) 30%);
-        }
-        /* very specific, sould have a better way */
-        .dark .md\:bg-gradient-transparent-to-yellow {
-            background: linear-gradient(90deg, #373737 50%, #FFC734 50%);
-        }
-        .dark .md\:bg-gradient-yellow-to-dark:not(.not-affected-by-dark) {
-            background: linear-gradient(90deg, #FFC734 65%, rgba(221,221,221,1) 65%);
-        }
-}
-
 .dark .accent {
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
@@ -597,14 +575,14 @@ html {
     margin-right: -5.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
 
 .bubbles-svg {
         width: 300px
 }
     }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
 
 .bubbles-svg {
         width: 400px;
@@ -613,7 +591,7 @@ html {
 }
     }
 
-@media (min-width: 1280px) {
+@media (min-width: 1140px) {
 
 .bubbles-svg {
         width: 450px;
@@ -634,7 +612,7 @@ html {
     overflow: hidden;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
 
 .bubbles-svg-nav {
         width: 450px
@@ -786,7 +764,7 @@ html {
         transform: translate( calc( 100vw ) );
     }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
         #navigation-panel.open {
             transform: translate( calc( 100vw + 5rem ) );
         }
@@ -871,7 +849,7 @@ html {
         transform-origin: center center;
     }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
 
 .quote {
         font-size: 10rem
@@ -880,7 +858,7 @@ html {
 }
     }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
 
 .quote {
         font-size: 12rem
@@ -889,7 +867,7 @@ html {
 }
     }
 
-@media (min-width: 1280px) {
+@media (min-width: 1140px) {
 
 .quote {
         font-size: 16rem
@@ -1533,7 +1511,7 @@ input#store:checked ~ .toggle-dot {
   padding-top: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
 
   .mobile-gap {
     padding-top: 0px;
@@ -1618,47 +1596,31 @@ input#store:checked ~ .toggle-dot {
     }
 }
 
+sjj {
+        top: 0;
+        width: 100%;
+
+        position: relative;
+        z-index: 1;
+      }
+
+body.fixed-sjj sjj {
+        position: fixed;
+        /*left: 2.5rem;*/
+      }
+
+@media only screen and (max-width: 767px) {
+        body.fixed-sjj sjj {
+            left:0;
+          }
+      }
+
 .container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 2rem;
   padding-left: 2rem;
-}
-
-@media (min-width: 100%) {
-
-  .container {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 540px) {
-
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 720px) {
-
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 960px) {
-
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1140px) {
-
-  .container {
-    max-width: 1140px;
-  }
 }
 
 .debug-screens::before {
@@ -1676,28 +1638,28 @@ input#store:checked ~ .toggle-dot {
   content: 'screen: _';
 }
 
-@media (min-width: 640px) {
+@media (min-width: 540px) {
 
   .debug-screens::before {
     content: 'screen: sm';
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
 
   .debug-screens::before {
     content: 'screen: md';
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
 
   .debug-screens::before {
     content: 'screen: lg';
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1140px) {
 
   .debug-screens::before {
     content: 'screen: xl';
@@ -1708,6 +1670,20 @@ input#store:checked ~ .toggle-dot {
 
   .debug-screens::before {
     content: 'screen: 2xl';
+  }
+}
+
+@media (min-width: 100%) {
+
+  .debug-screens::before {
+    content: 'screen: none';
+  }
+}
+
+@media (min-width: 650px) and (max-width: 800px) {
+
+  .debug-screens::before {
+    content: 'screen: landscape';
   }
 }
 
@@ -2198,12 +2174,12 @@ input#store:checked ~ .toggle-dot {
   height: calc(100vh - 120px);
 }
 
-.h-5 {
-  height: 1.25rem;
-}
-
 .h-10 {
   height: 2.5rem;
+}
+
+.h-5 {
+  height: 1.25rem;
 }
 
 .max-h-700 {
@@ -2507,10 +2483,6 @@ input#store:checked ~ .toggle-dot {
 
 .resize-none {
   resize: none;
-}
-
-.resize {
-  resize: both;
 }
 
 .list-none {
@@ -2909,11 +2881,6 @@ input#store:checked ~ .toggle-dot {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .pb-full {
@@ -3470,7 +3437,7 @@ input#store:checked ~ .toggle-dot {
   color: rgb(55 55 55 / var(--tw-text-opacity));
 }
 
-@media (min-width: 640px) {
+@media (min-width: 540px) {
 
   .sm\:flex {
     display: flex;
@@ -3506,7 +3473,7 @@ input#store:checked ~ .toggle-dot {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
 
   .md\:container {
     width: 100%;
@@ -3515,44 +3482,6 @@ input#store:checked ~ .toggle-dot {
     padding-right: 2rem;
     padding-left: 2rem;
   }
-}
-
-@media (min-width: 768px) and (min-width: 100%) {
-
-  .md\:container {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 540px) {
-
-  .md\:container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 720px) {
-
-  .md\:container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 960px) {
-
-  .md\:container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 1140px) {
-
-  .md\:container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 768px) {
 
   .md\:fixed {
     position: fixed;
@@ -3881,7 +3810,7 @@ input#store:checked ~ .toggle-dot {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
 
   .lg\:order-1 {
     order: 1;
@@ -3946,7 +3875,7 @@ input#store:checked ~ .toggle-dot {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1140px) {
 
   .xl\:-top-10 {
     top: -2.5rem;

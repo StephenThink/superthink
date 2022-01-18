@@ -47,13 +47,7 @@ module.exports = {
       padding: '2rem',
       center: true,
       screens: {
-        "none": "100%",
-        sm: '540px',
-        land: '650px',
-        md: '720px',
-        lg: '960px',
-        xl: '1140px',
-        
+       
       }
     },
     fontFamily: {
@@ -65,6 +59,13 @@ module.exports = {
     },
     extend: {
       screens: {
+        "none": "100%",
+        sm: '540px',
+        landscape:{'min': '650px', 'max': '800px'},
+        md: '720px',
+        lg: '960px',
+        xl: '1140px',
+        
         // 'ipadPro': {'min': '541px', 'max': '1024px'},
         // 'portrait': {'raw': '(orientation: portrait)'},
       },

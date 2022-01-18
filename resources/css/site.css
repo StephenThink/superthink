@@ -908,3 +908,23 @@ input#store:checked ~ .toggle-dot {
         transform: translateX(0);
     }
 }
+
+
+sjj {
+        top: 0;
+        width: 100%;
+
+        position: relative;
+        z-index: 1;
+      }
+
+    body.fixed-sjj sjj {
+        position: fixed;
+        /*left: 2.5rem;*/
+      }
+
+      @media only screen and (max-width: 767px) {
+        body.fixed-sjj sjj {
+            left:0;
+          }
+      } 
