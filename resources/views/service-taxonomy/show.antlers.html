@@ -9,7 +9,7 @@
 <div class="main__panel bg-light dark:bg-dark !pt-16">
     <div class="w-11/12 xl:w-10/12 mx-auto">
         {{ content_grid }}
-        <div class=" pt-12 pb-16 mx-12 h-auto flex text-dark {{ if !last }}border-b-2 border-dark{{ /if }} relative">
+        <div class=" pt-12 pb-16  h-auto flex text-dark {{ if !last }}border-b-2 border-dark dark:border-light{{ /if }} relative">
             <div id="{{ content_title | slugify }}" class="absolute -top-52 md:-top-20 xl:-top-10"></div>
             <div class="flex flex-col-reverse {{ if count | mod:2 }} xl:flex-row {{ else }} xl:flex-row-reverse {{ /if }} w-full justify-between">
                 <div class="xl:w-1/2 flex  flex-col ">
