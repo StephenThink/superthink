@@ -15,19 +15,19 @@
         </div>
     </div>
 
-    <div class="flex-grow  sm:px-24 md:px-0 md:flex-grow-0 flex justify-end">
+    <div class="flex-grow   md:px-0 md:flex-grow-0 flex justify-end">
         <a href="{{ link to='/' }}" aria-label="Think!Creative home page">
             <span class="hidden">Think!Creative Logo</span>
             {{ svg src="assets/svgs/logo_horizontal" class="logo hidden text-yellow md:block fill-current dark:text-dark" }}
             {{# svg src="assets/svgs/logo" class="logo block md:hidden text-yellow fill-current dark:bg-dark"  <- You have a floating Black background with gray #}}
-            {{ svg src="assets/svgs/logo" class="logo h-10 w-full md:hidden text-yellow fill-current dark:text-dark" }}
+            {{ svg src="assets/svgs/logo" class="logo h-10 md:hidden text-yellow fill-current dark:text-dark" }}
         </a>
     </div>
     <!-- Hide the light switch on mobile devices -->
     <div class="w-16 hidden md:block"> 
         <div>
             <div class="hidden md:block transform md:-rotate-90 md:mb-12 text-white dark:text-dark">
-                <span class="syp half-height-colour hidden landscape:hidden md:inline-block ">
+                <span class="syp half-height-colour hidden land:hidden md:inline-block ">
                     <span class="underline-element yellow-underline">
                         {{# Show this unless on the contact page #}}
                         {{ if slug == "contact"}}
@@ -40,7 +40,7 @@
             </div>
         </div>
         
-        <div class="hidden landscape:hidden md:block light-block">
+        <div class="hidden land:hidden md:block light-block">
         {{ partial:partials/nav/lightswitch}}
     </div>
 

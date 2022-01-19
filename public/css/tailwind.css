@@ -1718,10 +1718,10 @@ body.fixed-sjj sjj {
   }
 }
 
-@media (min-width: 650px) and (max-width: 800px) {
+@media (min-width: 650px) and (max-width: 820px) {
 
   .debug-screens::before {
-    content: 'screen: landscape';
+    content: 'screen: land';
   }
 }
 
@@ -3508,6 +3508,15 @@ body.fixed-sjj sjj {
     padding-left: 6rem;
     padding-right: 6rem;
   }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .sm\:text-7xl {
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 720px) {
@@ -4005,57 +4014,65 @@ body.fixed-sjj sjj {
   .\32xl\:hidden {
     display: none;
   }
+
+  .\32xl\:text-20xl {
+    font-size: 22rem;
+  }
 }
 
-@media (orientation: landscape) {
+@media (min-width: 650px) and (max-width: 820px) {
 
-  .landscape\:ml-20 {
+  .land\:ml-20 {
     margin-left: 5rem;
   }
 
-  .landscape\:-mt-8 {
+  .land\:-mt-8 {
     margin-top: -2rem;
   }
 
-  .landscape\:hidden {
+  .land\:hidden {
     display: none;
   }
 
-  .landscape\:w-full {
+  .land\:w-full {
     width: 100%;
   }
 
-  .landscape\:flex-col {
+  .land\:flex-col {
     flex-direction: column;
   }
 
-  .landscape\:px-6 {
+  .land\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
-  .landscape\:text-5xl {
+  .land\:text-5xl {
     font-size: 3rem;
     line-height: 1;
   }
 
-  .landscape\:text-2xl {
+  .land\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  .landscape\:text-3xl {
+  .land\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
 
-  .landscape\:text-8xl {
+  .land\:text-8xl {
     font-size: 6rem;
     line-height: 1;
   }
 
-  .landscape\:text-7xl {
-    font-size: 4rem;
+  .land\:leading-7 {
+    line-height: 1.75rem;
+  }
+
+  .land\:leading-10 {
+    line-height: 2.5rem;
   }
 }
 

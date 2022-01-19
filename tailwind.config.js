@@ -62,7 +62,7 @@ module.exports = {
       screens: {
         "none": "100%",
         sm: '540px',
-        landscape:{'min': '650px', 'max': '800px'},
+        land:{'min': '650px', 'max': '820px'},
         md: '720px',
         lg: '960px',
         xl: '1140px',
@@ -142,7 +142,8 @@ module.exports = {
         "7xl": "4rem",
         "10xl": "6rem",
         "14xl": "7rem",
-        "18xl": "8rem"
+        "18xl": "8rem",
+        "20xl": "22rem"
       },
       transitionProperty: {
         'background-color': 'background-color'
