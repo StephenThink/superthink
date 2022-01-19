@@ -4,7 +4,7 @@ blueprint: about
 title: 'About Us'
 hero_text: 'Good people to connect the dots'
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1636556747
+updated_at: 1642605533
 template: pages/about
 hero_intro: 'We reckon great things happen when you put stuff together. That''s why our people combine a whole range of creative disciplines. Oh and we''re dead nice too.'
 quote: 'Think!Creative are always my ‘go-to guys’ when I need inspired, creative and thoughtful design. I’ve always found them to have an innate ability to understand not just the design brief but also the wider campaign context and objectives - a highly valued aspect of this highly valued team.'
@@ -41,4 +41,6 @@ seo:
   site_name: false
 require_count: false
 award_title: 'Awards & Accreditations'
+video_choice: Image
+below_hero: 'Your creative family'
 ---

@@ -12,6 +12,17 @@ sections:
             - required
       -
         import: hero
+      -
+        handle: below_hero
+        field:
+          input_type: text
+          antlers: false
+          default: 'Your creative family'
+          display: 'Below Hero'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
   quote:
     display: Quote
     fields:
@@ -64,7 +75,6 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
           validate:
             - required
