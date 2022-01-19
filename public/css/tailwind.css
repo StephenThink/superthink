@@ -1996,10 +1996,6 @@ body.fixed-sjj sjj {
   margin-top: 3rem;
 }
 
-.-mt-64 {
-  margin-top: -16rem;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -2220,8 +2216,20 @@ body.fixed-sjj sjj {
   height: 2rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .h-5 {
   height: 1.25rem;
+}
+
+.h-56 {
+  height: 14rem;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .max-h-700 {
@@ -2320,12 +2328,24 @@ body.fixed-sjj sjj {
   width: 83.333333%;
 }
 
+.w-64 {
+  width: 16rem;
+}
+
 .w-8 {
   width: 2rem;
 }
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-500 {
@@ -3504,16 +3524,6 @@ body.fixed-sjj sjj {
     justify-content: space-between;
   }
 
-  .sm\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  .sm\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .sm\:text-7xl {
     font-size: 4rem;
   }
@@ -3840,6 +3850,11 @@ body.fixed-sjj sjj {
     font-size: 4rem;
   }
 
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .md\:text-18xl {
     font-size: 8rem;
   }
@@ -3884,6 +3899,10 @@ body.fixed-sjj sjj {
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-1\/6 {
+    height: 16.666667%;
   }
 
   .lg\:w-2\/12 {
@@ -3967,6 +3986,10 @@ body.fixed-sjj sjj {
     width: 41.666667%;
   }
 
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .xl\:flex-row {
     flex-direction: row;
   }
@@ -4015,8 +4038,8 @@ body.fixed-sjj sjj {
     display: none;
   }
 
-  .\32xl\:text-20xl {
-    font-size: 22rem;
+  .\32xl\:w-1\/2 {
+    width: 50%;
   }
 }
 
@@ -4034,8 +4057,28 @@ body.fixed-sjj sjj {
     display: none;
   }
 
+  .land\:h-1\/4 {
+    height: 25%;
+  }
+
+  .land\:h-32 {
+    height: 8rem;
+  }
+
+  .land\:h-36 {
+    height: 9rem;
+  }
+
   .land\:w-full {
     width: 100%;
+  }
+
+  .land\:w-32 {
+    width: 8rem;
+  }
+
+  .land\:w-36 {
+    width: 9rem;
   }
 
   .land\:flex-col {
@@ -4045,6 +4088,11 @@ body.fixed-sjj sjj {
   .land\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .land\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .land\:text-5xl {
@@ -4057,18 +4105,9 @@ body.fixed-sjj sjj {
     line-height: 2rem;
   }
 
-  .land\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .land\:text-8xl {
     font-size: 6rem;
     line-height: 1;
-  }
-
-  .land\:leading-7 {
-    line-height: 1.75rem;
   }
 
   .land\:leading-10 {
