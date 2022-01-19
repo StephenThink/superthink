@@ -31,12 +31,12 @@
                         <span class="pagination-left">
                             {{ if prev_page }}
                                 <a href="{{ prev_page }}" rel="prev" class="relative inline-flex items-center hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150" aria-label="{{ trans:pagination.previous }}">
-                                    {{ partial:partials.link_arrow classes="transform rotate-180" }}
+                                    {{ partial:partials/global/link_arrow classes="transform rotate-180" }}
                                 </a>
                             {{ else }}
                                 <span aria-disabled="true" aria-label="{{ trans:pagination.previous }}">
                                     <span class="invisible relative inline-flex items-center  cursor-default " aria-hidden="true">
-                                        {{ partial:partials.link_arrow classes="transform rotate-180" }}
+                                        {{ partial:partials/global/link_arrow classes="transform rotate-180" }}
                                     </span>
                                 </span>
                             {{ /if }}
@@ -106,12 +106,12 @@
                         <span class="pagination-right">
                             {{ if next_page }}
                                 <a href="{{ next_page }}" rel="next" class="relative inline-flex items-center  focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue" aria-label="{{ trans:pagination.next }}">
-                                    {{ partial:partials.link_arrow classes="" }}
+                                    {{ partial:partials/global/link_arrow classes="" }}
                                 </a>
                             {{ else }}
                                 <span aria-disabled="true" aria-label="{{ trans:pagination.next }}">
                                     <span class="invisible relative inline-flex items-center cursor-default rounded-r-md leading-5" aria-hidden="true">
-                                        {{ partial:partials.link_arrow classes="text-dark disabled" }}
+                                        {{ partial:partials/global/link_arrow classes="text-dark disabled" }}
                                     </span>
                                 </span>
                             {{ /if }}
