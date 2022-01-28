@@ -14,8 +14,8 @@
             </div>
             <div class="w-screen md:w-5/12 bg-dark text-white main__panel flex items-center">
                 <div class="container">
-                    <p class="mt-6">{{ written_address }}</p>
-                    <p class="mt-6">{{ contact_information:company_address_alt }}</p>
+                    <p class="mt-6 land:mt-2 md:mt-6">{{ written_address }}</p>
+                    <p class="mt-6 land:mt-2 md:mt-6">{{ contact_information:company_address_alt }}</p>
                     <div>
                         <a href="{{ maps_link }}" class="text-yellow inline-block">
                             <span class="half-height-colour">
@@ -27,7 +27,7 @@
                         </a>
                     </div>
 
-                    <div class="mt-6"> 
+                    <div class="mt-6 land:mt-2 md:mt-6"> 
                         <a href="tel:{{ contact_information:tel}}" class="text-white inline-block">
                             <span class="half-height-colour">
                                 <span class="text-yellow">{{ telephone_number_intro }}</span>
@@ -38,7 +38,7 @@
                         </a>
                     </div>
 
-                    <div class="mt-6">
+                    <div class="mt-6 land:mt-2 md:mt-6">
                         <a href="tel:{{ contact_information:email}}">
                             <span class="half-height-colour">
                                 <p class="text-yellow">{{ email_intro }}</p>
@@ -49,7 +49,7 @@
                         </a>
                     </div>
 
-                    <div class="mt-6">  
+                    <div class="mt-6 land:mt-2 md:mt-6">  
                         <a href="tel:{{ contact_information:jobs_email }}">
                             <span class="half-height-colour">
                                 <p class="text-yellow">{{ jobs_email_intro }}</p>
