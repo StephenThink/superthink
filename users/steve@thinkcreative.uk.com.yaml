@@ -2,3 +2,7 @@ name: 'Steve Daniels'
 super: true
 id: 6fb67458-0db4-428c-8f86-8445dcb283dc
 password_hash: $2y$10$NyO7C87PrvnoVxKUsHAgkut33ZdTgZ00t4nSRmRuW.jC6Q172Itsy
+preferences:
+  collections:
+    case_studies:
+      per_page: 500

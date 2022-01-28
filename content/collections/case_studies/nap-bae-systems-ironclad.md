@@ -13,7 +13,7 @@ main_content:
       values:
         type: the_problem
         custom_header: ' '
-        intro: 'Exhibited at 2017’s Defence and Security Equipment International conference in London, BAE Systems’ Ironclad is a small unmanned ground vehicle designed to take on dangerous jobs that soldiers would normally face. We were delighted to produce a series of illustrated technical drawings and posters which showcased the extraordinary potential that Ironclad possesses. The technical drawings were an extremely effective way of visualising Ironclad’s adaptability, whilst the copy content of our posters successfully communicated the stats behind the impressive machine. '
+        intro: 'To boldly go… BAE Systems’ Ironclad is a small, unmanned ground vehicle designed to undertake those dangerous tasks that would endanger soldiers’ lives. So when BAE Systems approached us ahead of the 2017 Defence and Security Equipment International Conference in London to produce the supporting materials, we jumped at the chance. From illustrated technical drawings and photo-real visuals, to posters showcasing the extraordinary multi-role potential of Ironclad, we worked hard with BAE within a tight timescale to deliver in time for the launch.'
         video_choice: Image
         image: work/experience/bae-systems-ironclad/BAE-Ironclad-7-Large-927x522.jpg
   -
@@ -27,5 +27,5 @@ services_filter:
   - illustration
   - print
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640105306
+updated_at: 1643384562
 ---

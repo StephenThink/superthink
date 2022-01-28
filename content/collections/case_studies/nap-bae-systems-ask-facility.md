@@ -13,7 +13,7 @@ main_content:
       values:
         type: the_problem
         custom_header: 'Full Creative Support? Just ASK'
-        intro: 'Providing creative support for BAE Systems is something that comes naturally to us by now. But knowing a brand inside-out doesn’t make each new project any less exciting – quite the opposite, in fact. When we were approached to produce a range of material for the company’s Academy for Skills & Knowledge (ASK), a cutting-edge learning experience based at Samlesbury Aerospace Enterprise Zone, we were more than happy to take on the creative challenge. '
+        intro: 'After working with BAE Systems for over a decade, providing them creative support is something that comes naturally to us. However knowing a brand inside-out doesn’t make each new project any less exciting - quite the opposite. When we were approached to produce a range of material for the company’s Academy for Skills & Knowledge (ASK), a cutting-edge learning experience based at Samlesbury Aerospace Enterprise Zone, we were more than happy to take on the creative challenge. '
         video_choice: Video
         video: assets/work/experience/bae-systems-ask-facility/ASK-Facility-Video-Brochure-v4-1920x900.mp4
   -
@@ -22,7 +22,7 @@ main_content:
       values:
         type: the_problem
         custom_header: 'Designed to engage'
-        intro: 'High-tech training facilities should be all about memorable experiences. Of course, printed outcomes do what they do best – communicate and engage in equal measure. Combining the power of video with the tangibility of print, however, is just one creative way of making an even deeper impact. The ASK Facility video-box brochure is a tactile, memorable outcome which perfectly captures what the ASK is all about; technology-led learning. '
+        intro: 'High-tech training facilities should be all about memorable experiences. Combining the power of video with the striking printed collateral and head-turning large-scale graphics defined our approach to the brief from the start, to capture the essence and excitement of technology-led learning.'
         video_choice: Image
         image: work/experience/bae-systems-ask-facility/Experience-8-BAE-ASK-Large-927x522-3.jpg
   -
@@ -30,18 +30,10 @@ main_content:
     attrs:
       values:
         type: the_problem
-        custom_header: ' Values at heart'
-        intro: 'Our long-lasting relationship with BAE Systems ensured that we were well-placed to apply our creative expertise. From core values to brand guidelines – whatever the outcome – we always protect the brand.'
+        custom_header: ' A lasting impact '
+        intro: 'Nothing makes an impression quite like large-format display graphics. Inspirational quotes, eye-catching illustrations and way-finding signage transform windows and walls into head-turning attractions. Developing its own distinctive sub-brand identity became core to the brief, which we carried across internal and external graphics, digital and physical signage, printed material and innovative gifts for executive international guests. From core values to brand guidelines, BAE Systems trust us to always protect and develop their brand, through any scale of project.'
         video_choice: Image
         image: work/experience/bae-systems-ask-facility/Experience-8-BAE-ASK-Large-927x522.jpg
-  -
-    type: set
-    attrs:
-      values:
-        type: the_problem
-        custom_header: 'A lasting impact '
-        intro: 'Nothing makes an impression quite like large-format display graphics. Inspirational quotes, eye-catching illustrations and wayfinding signage transform windows and walls into head-turning attractions, timely-reminders of the trust that BAE Systems laces in us to deliver, no matter what the scale.  '
-        video_choice: Image
   -
     type: set
     attrs:
@@ -68,5 +60,5 @@ services_filter:
   - video
   - print-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640167856
+updated_at: 1643384718
 ---
