@@ -1,12 +1,12 @@
 ---
 id: 8ad7aac3-7830-46ea-97a0-325fe37c2d77
 blueprint: case_study
-title: 'NAP - Utiligroup Newsletters'
+title: 'NAP - Utiligroup SwitchOn Newsletters'
 greatest_hits: false
 core:
   - experience
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640113685
+updated_at: 1643385499
 hero_image: work/experience/utiligroup-newsletters/1-BGlobal-Rebrand-v2.jpg
 secondary_image: work/experience/utiligroup-newsletters/2-Utiligroup-newsletter-2014-v2-1.jpg
 main_content:

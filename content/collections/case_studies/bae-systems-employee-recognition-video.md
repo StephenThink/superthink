@@ -5,8 +5,8 @@ title: 'NAP - BAE Systems Employee Recognition Video'
 greatest_hits: false
 core:
   - experience
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640112860
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1643386158
 hero_image: work/experience/bae-systems-employee-recognition-video/BAE-Recognition-Video-portfolio.jpg
 secondary_image: work/experience/bae-systems-employee-recognition-video/BAE-Recognition-Video-portfolio2.jpg
 main_content:
@@ -21,7 +21,7 @@ main_content:
 
           The result? BAE Systems bringing out the best in their staff brought the best out in us too. Managers got a timely reminder of just how important it is to recognise the efforts of others. And we used conceptual thinking, copywriting, storyboarding, illustration and motion graphics to create an engaging and impactful video. A nice little bit of teamwork we'd say. 
         video_choice: Video
-        video: assets/work/experience/bae-systems-employee-recognition-video/BAE-16-Employee-Recognition-Video-Large.mp4
+        video: /assets/work/experience/bae-systems-employee-recognition-video/BAE-16-Employee-Recognition-Video-Large.mp4
   -
     type: paragraph
 video_choice: Image

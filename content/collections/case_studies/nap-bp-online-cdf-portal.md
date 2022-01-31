@@ -15,9 +15,9 @@ main_content:
         custom_header: ' '
         intro: 'When it comes to internal communication, large companies are faced with significant problems, particularly when they’re based in diverse locations across the world. bp’s problem was that their career development materials were difficult to manage and roll out internationally, so easily fell out of step with the latest information. '
         video_choice: Video
-        video: assets/work/experience/bp-online-cdf/BP-Online-CDF-Careers-Full-Video.mp4
+        video: /assets/work/experience/bp-online-cdf/BP-Online-CDF-Careers-Full-Video.mp4
         image: work/experience/bp-online-cdf/BP-Online-CDF-Careers-Full-Video.mp4
-        video_thumbnail: work/experience/bp-online-cdf/BP-Online-CDF-Careers-Thumbnail-1360x768.5.jpg
+        video_thumbnail: work/experience/bp-online-cdf/BP-Online-CDF-Careers-Thumbnail-1360x768.jpg
   -
     type: set
     attrs:
@@ -47,7 +47,7 @@ services_filter:
   - design
   - video
   - illustration
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643383460
-video: assets/work/experience/bp-online-cdf/BP-Online-CDF-Home-Full-Video.mp4
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1643388131
+video: /assets/work/experience/bp-online-cdf/BP-Online-CDF-Home-Full-Video.mp4
 ---

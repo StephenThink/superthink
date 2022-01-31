@@ -12,7 +12,7 @@ main_content:
       values:
         type: the_problem
         custom_header: ' '
-        intro: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+        intro: 'We''ve done vehicle liveries for events on the side of a mountain, we''ve created stickers designed like retro Les Mans liveries, and we''ve supported them with digital banners. Whatever the job, our inspiration from the history of the brand means that we''re as enthusiastic about the brand as their customers are. '
         video_choice: Image
         image: work/experience/bfgoodrich-assets/Michelin-BFG-34-Experience-Large-927x522.jpg
   -
@@ -32,7 +32,8 @@ services_filter:
   - creative-design
   - design
   - print-design
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1642081952
-mini_introduction: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+  - display
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1643385705
+mini_introduction: 'BFGoodrich tyres are for the true enthusiasts of this world. Their customers are adventurous people who take life off-road. With a distinctive heritage stretching back over 150 years, we''ve helped the brand get that message across with ongoing promotional material.'
 ---
