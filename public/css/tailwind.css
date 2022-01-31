@@ -2013,6 +2013,10 @@ body.fixed-sjj sjj {
   margin-bottom: 2.5rem;
 }
 
+.ml-20 {
+  margin-left: 5rem;
+}
+
 .mr-0 {
   margin-right: 0px;
 }
@@ -2107,14 +2111,6 @@ body.fixed-sjj sjj {
 
 .h-3 {
   height: 0.75rem;
-}
-
-.h-16 {
-  height: 4rem;
-}
-
-.h-8 {
-  height: 2rem;
 }
 
 .h-11\/12 {
@@ -2233,14 +2229,6 @@ body.fixed-sjj sjj {
   width: 66.666667%;
 }
 
-.w-16 {
-  width: 4rem;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -2259,6 +2247,14 @@ body.fixed-sjj sjj {
 
 .w-9\/12 {
   width: 75%;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-48 {
@@ -2669,16 +2665,6 @@ body.fixed-sjj sjj {
   border-color: rgb(221 221 221 / var(--tw-border-opacity));
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -2687,6 +2673,16 @@ body.fixed-sjj sjj {
 .border-yellow {
   --tw-border-opacity: 1;
   border-color: rgb(255 199 52 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-yellow {
@@ -2796,16 +2792,16 @@ body.fixed-sjj sjj {
   padding: 2rem;
 }
 
-.p-1px {
-  padding: 1px;
-}
-
 .p-1 {
   padding: 0.25rem;
 }
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-1px {
+  padding: 1px;
 }
 
 .p-16 {
@@ -2870,11 +2866,6 @@ body.fixed-sjj sjj {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .px-10 {
@@ -3179,6 +3170,10 @@ body.fixed-sjj sjj {
 
 .opacity-50 {
   opacity: 0.5;
+}
+
+.bg-blend-overlay {
+  background-blend-mode: overlay;
 }
 
 .shadow-lg {
@@ -3554,6 +3549,10 @@ body.fixed-sjj sjj {
     display: block;
   }
 
+  .md\:inline-block {
+    display: inline-block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -3640,6 +3639,10 @@ body.fixed-sjj sjj {
 
   .md\:w-1\/12 {
     width: 8.333333%;
+  }
+
+  .md\:w-\[740px\] {
+    width: 740px;
   }
 
   .md\:w-3\/12 {

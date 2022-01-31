@@ -3,11 +3,11 @@
     <div class="container mt-8 blog__post ">
         <div class="hidden w-full md:block md:w-2/12"></div>
 
-        <div class="w-full h-full swiper-container my-7 md:w-8/12">
+        <div class="w-full h-full swiper-container my-7 md:w-[740px]">
             <div class="swiper-wrapper">
                 {{ images }}
                     {{ if custom }}
-                    <div class="bg-center bg-cover swiper-slide" style="{{ if custom-width }}width: {custom-width}px!important;{{/if}} height: {{ custom-height > 1 ? {custom-height} : {height} }}px; background-image:url('{{ url }}')"></div>
+                    <div class="bg-center bg-cover swiper-slide" style="width: {custom-width}px!important; height: {{ custom-height > 1 ? {custom-height} : {height} }}px; background-image:url('{{ url }}')"></div>
                     {{ else }}
                     <div class="bg-center bg-cover swiper-slide " style="height: {{ height }}px; background-image:url('{{ url }}')"></div>
                     {{ /if }}
