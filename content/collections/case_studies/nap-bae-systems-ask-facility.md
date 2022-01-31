@@ -15,7 +15,7 @@ main_content:
         custom_header: 'Full Creative Support? Just ASK'
         intro: 'After working with BAE Systems for over a decade, providing them creative support is something that comes naturally to us. However knowing a brand inside-out doesn’t make each new project any less exciting - quite the opposite. When we were approached to produce a range of material for the company’s Academy for Skills & Knowledge (ASK), a cutting-edge learning experience based at Samlesbury Aerospace Enterprise Zone, we were more than happy to take on the creative challenge. '
         video_choice: Video
-        video: assets/work/experience/bae-systems-ask-facility/ASK-Facility-Video-Brochure-v4-1920x900.mp4
+        video: /assets/work/experience/bae-systems-ask-facility/ASK-Facility-Video-Brochure-v4-1920x900.mp4
   -
     type: set
     attrs:
@@ -59,6 +59,6 @@ services_filter:
   - print
   - video
   - print-design
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643384718
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1643386243
 ---

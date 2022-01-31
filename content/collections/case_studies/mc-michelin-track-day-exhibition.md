@@ -11,9 +11,10 @@ main_content:
     attrs:
       values:
         type: the_problem
-        intro: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+        intro: 'We supported Michelin with visuals that would prompt and remind the dealers of CrossClimate2 in a number of ways. First of all there were a range of pull-up and trackside banners to show off the hero artwork for the tyre.'
         video_choice: Image
         image: work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Large-927x522.jpg
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -23,6 +24,13 @@ main_content:
           - work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Small-740x416.25-1.jpg
           - work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Small-740x416.25-2.jpg
   -
+    type: set
+    attrs:
+      values:
+        type: the_work
+        custom_header: ' '
+        intro: 'But there were also curved pop-up display stands, digital screens and even mugs for the partners to take away. All in all, a few nice touches went a long way to helping people remember what the CrossClimate2 is, and what it can do. '
+  -
     type: paragraph
 greatest_hits: false
 core:
@@ -30,7 +38,7 @@ core:
 services_filter:
   - design
   - display
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641910488
-mini_introduction: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1643387197
+mini_introduction: 'Promotional events are the lifeblood of a brand with as many products as Michelin. To make a point, you''ve got to get your message across in a very real way. That''s why Michelin asked us to help them with an event where the CrossClimate2 tyre would be demonstrated to dealers on track.'
 ---

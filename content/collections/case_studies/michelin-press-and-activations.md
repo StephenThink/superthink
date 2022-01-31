@@ -10,9 +10,10 @@ main_content:
     attrs:
       values:
         type: the_problem
-        custom_header: ' '
+        custom_header: '  '
         video_choice: Image
         image: work/experience/michelin-press-activations/Michelin-Various-35-Experience-Large-927x522.jpg
+        intro: 'Sometimes you need a hand for all those jobs that just need doing. As well as working with our friends at Michelin on big creative projects, they still need to maintain a strong presence in the trade press, run one-off campaigns and just generally make a noise on a regular basis. We''re proud to help them develop and manage their press and activation presence every year. '
   -
     type: paragraph
 greatest_hits: false
@@ -22,6 +23,6 @@ services_filter:
   - creative-design
   - design
   - print
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641917317
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1643387304
 ---

@@ -12,10 +12,17 @@ main_content:
     attrs:
       values:
         type: the_problem
-        custom_header: ' '
-        intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        custom_header: '  '
+        intro: 'Goodwood Festival of Speed is one of the most prestigious events on the motorsport calendar. So it''s no surprise, that anticipation was at fever pitch heading into 2021, as Goodwood returned after a year away. '
         video_choice: Image
         image: work/experience/michelin-festival-of-speed/Michelin-FOS-33-Experience-Large-927x522.jpg
+  -
+    type: set
+    attrs:
+      values:
+        type: the_work
+        custom_header: ' '
+        intro: 'Michelin came to us with a clear brief. We had to come up with a concept that would get their key message of "Performance made to last" across in a dynamic way, but also within the Black & White colour scheme that is unique to Goodwood.'
   -
     type: set
     attrs:
@@ -27,6 +34,13 @@ main_content:
           - work/experience/michelin-festival-of-speed/Michelin-FOS-33-Experience-Small-740x416.25-3.jpg
           - work/experience/michelin-festival-of-speed/Michelin-FOS-33-Experience-Small-740x416.25-4.jpg
   -
+    type: set
+    attrs:
+      values:
+        type: the_work
+        custom_header: ' '
+        intro: 'Working alongside the stand building team, we took inspiration from the key message to use Michelin Man in a range of dynamic poses. Twinned with the heavy slab typography of the Michelin typeface - we created a visually impactful stand for Michelin''s return to Goodwood, attracting the likes of Jenson Button across the weekend.'
+  -
     type: paragraph
 greatest_hits: false
 core:
@@ -35,6 +49,7 @@ core:
 services_filter:
   - creative-design
   - design
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641907090
+  - display
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1643385657
 ---

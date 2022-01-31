@@ -14,14 +14,14 @@ main_content:
         custom_header: ' '
         video_choice: Video
         video: /assets/work/experience/michelin-eprimacy-launch/eprimacy-social-videos_large.mp4
-        intro: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.'
+        intro: 'That idea helped us contribute creatively to the rollout of this campaign. Before we started on any creative work, we worked with Michelin and their media agency to work out which assets would work best for different stages of the customer journey.'
   -
     type: set
     attrs:
       values:
         type: the_problem
         custom_header: ' '
-        intro: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+        intro: 'This featured a range of creative executions, including online video and social media. Each asset was customised to get a different response, depending on where the customer will be on their road to buying a new set of tyres.'
         video_choice: Image
         image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Large-927x522.jpg
   -
@@ -33,6 +33,13 @@ main_content:
           - work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Small-740x416.25-3.jpg
           - work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Small-740x416.25-1.jpg
           - work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Small-740x416.25-4.jpg
+  -
+    type: set
+    attrs:
+      values:
+        type: the_work
+        custom_header: ' '
+        intro: 'We also crafted news media content to complement the visual assets. We wrote a duo of articles about the key benefits of the tyre to appear in major news platforms like the Evening Standard, the Mirror and more. '
   -
     type: paragraph
 greatest_hits: false
@@ -46,8 +53,8 @@ services_filter:
   - print
   - print-design
   - video
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1641910127
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1643387456
 secondary_image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Secondary-Image-896x597.jpg
-mini_introduction: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+mini_introduction: 'We helped Michelin launch their ePrimacy tyre in April and May 2021. Rather than starting with a specific media or execution, we helped them build on the 2 selling points of the tyre, namely that it''s better for the environment and it can save you money on fuel.'
 ---
