@@ -33,6 +33,7 @@ services_filter:
   - design
   - digital
   - video
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643388600
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1643627647
+hero_image: 1-Sealife.jpg
 ---

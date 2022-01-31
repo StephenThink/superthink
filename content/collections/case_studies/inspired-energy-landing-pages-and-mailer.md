@@ -1,10 +1,12 @@
 ---
-title: 'Inspired Energy Landing Pages and Mailer'
+id: e997e47e-bb0e-45f7-b085-65415675dae3
+blueprint: case_study
+title: 'NAP - Inspired Energy Landing Pages and Mailer'
 greatest_hits: false
 core:
   - campaign
-updated_by: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_at: 1614859125
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1643628179
 hero_image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy10.jpg
 secondary_image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy3.jpg
 main_content:
@@ -15,12 +17,14 @@ main_content:
         type: the_problem
         intro: 'Breaking down industry changes, compliance regulations and partnership services into an easy-to-digest format was a task that required some bright ideas.'
         image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy9.jpg
+        video_choice: Image
   -
     type: set
     attrs:
       values:
         type: full_image
         full_image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy11.jpg
+        video_choice: Image
   -
     type: paragraph
   -
@@ -49,5 +53,5 @@ services_filter:
   - digital
   - print
   - web-design-and-development
-id: e997e47e-bb0e-45f7-b085-65415675dae3
+video_choice: Image
 ---

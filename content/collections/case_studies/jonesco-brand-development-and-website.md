@@ -1,7 +1,7 @@
 ---
 id: 7e472fa5-1248-452c-aeb9-05e1a3217152
 blueprint: case_study
-title: 'Jonesco Brand Development & Website'
+title: 'NAP - Jonesco Brand Development & Website'
 video_choice: Video
 video: /assets/work/brand/jonesco-brand-development-and-website/Jonesco-12-Brand-Hero.mp4
 thumbnail: work/brand/jonesco-brand-development-and-website/Jonesco-12-Brand-thumbnail.jpg
@@ -65,6 +65,7 @@ services_filter:
   - print-design
   - web-design-and-development
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643389398
+updated_at: 1643628283
 mini_introduction: 'In a way creating a brand from scratch is easy. But finding the best way for a brand to modernise a rich and successful heritage is much trickier. And that''s the  challenge our friends at Jonesco came to us with. They needed to create a brand foundation that would let them build a more distinctive offer in a world of lookalike products and competitors. But crucially they needed us to do that while maintaining their heritage in a modern way.'
+hero_image: work/brand/jonesco-brand-development-and-website/Jonesco-12-Brand-thumbnail.jpg
 ---
