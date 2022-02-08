@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Gender Report'
 greatest_hits: false
 core:
   - experience
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640113057
+updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
+updated_at: 1644336288
 hero_image: work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Secondary-Image-896x597.jpg
 main_content:

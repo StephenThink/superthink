@@ -1,8 +1,8 @@
 title: Brand
 strapline: 'Help! We’re really good at what we do but nobody knows'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1637333780
+updated_by: 6fb67458-0db4-428c-8f86-8445dcb283dc
+updated_at: 1644326738
 blueprint: core
 tag_line_us: 'It''s all in the story. Build or refresh your brand so you look the business and do the business.'
 tag_line_you: 'You need a distinctive brand'
@@ -87,11 +87,13 @@ v2_left_list:
   - 'Messaging & Tone'
   - 'Brand Audits'
   - Naming
+  - 'Brand Architecture'
 v2_right_list:
   - 'Brand Guardians'
-  - 'Touchpoint Activations'
   - Training
-  - 'Brand Audits'
+  - 'Experience Ecosystem'
+  - 'Brand Platform'
+  - 'Brand Positioning'
 v2_service_image:
   - 3-BAE.jpg
 v2_service_button_label: 'Click Here'
@@ -100,31 +102,30 @@ hero_intro: 'New. Pre-loved. A bit of a mess. Wherever you''re at with your bran
 content_grid:
   -
     content_title: 'Brand Identity'
-    content_text: 'Yes, brand identity means taking a look at your logo, but it’s so much more than that. It’s the type and tone of the words your business uses when it talks to people. It’s the colours that really work (imagine if the McDonalds golden arches weren’t golden). It’s the ‘ding’ or whoosh’ that tells everyone who hears it that it’s you (think the ‘da-dum oooohhhhh’ when you load up Netflix). It’s words, pictures and sounds.'
+    content_text: 'Yes, brand identity means taking a look at your logo, but it’s so much more than that. It’s the type and tone of the words your business uses when it talks to people. It’s the colours that really work (imagine if the McDonalds golden arches weren’t golden). It’s the ‘ding’ or whoosh’ that tells everyone who hears it that it’s you (think the ‘da-dum oooohhhhh’ when you load up Netflix). It’s words, pictures and sounds. Wrangling all that gets a lot easier when it all fits around one big idea.'
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
-    content_link: null
+    content_link_text: 'Let''s create yours'
+    content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
   -
     content_title: Naming
-    content_text: 'The Big Mac started life as The Aristocrat. Vaseline started out as Wonder Jelly. Which is kind of terrifying.  A great brand or product name needs to be simple to say, spell and remember. Which is just one reason why IBM probably didn’t sell too many computers back when they were the Computing Tabulating Recording Corporation. If you need to explain it, repeat it or get a flipchart out and draw diagrams about it, your name probably doesn’t work. So let’s create names that need no explanation…'
+    content_text: 'The Big Mac started life as The Aristocrat. Vaseline started out as Wonder Jelly. Which is kind of terrifying. A great brand or product name needs to be simple to say, spell and remember. Which is just one reason why IBM probably didn’t sell too many computers back when they were the Computing Tabulating Recording Corporation. If you need to explain it, repeat it or get a flipchart out and draw diagrams about it, your name probably doesn’t work. So let’s create names that need no explanation…'
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
-    content_link: null
+    content_link_text: 'Get a name to remember'
+    content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
   -
     content_title: 'Brand Guardians'
-    content_text: |-
-      Having a brand that everyone knows and loves is a big advantage – so why would you mess with that? Great brands don’t need revolution. But they do need creatives who are happy to stand on the shoulders of those who went before them, creatives who’ll take what has always worked well and make it work even better. You need brand guardians. 
-      That’s us.
+    content_text: 'Having a brand that everyone knows and loves is a big advantage – so why would you mess with that? Great brands don’t need revolution. But they do need creatives who are happy to stand on the shoulders of those who went before them, creatives who’ll take what has always worked well and make it work even better. You need brand guardians. That’s us. Got a brand you’re proud of?'
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
-    content_link: null
+    content_link_text: 'Let us run with it'
+    content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
   -
     content_title: 'Messaging & Tone of Voice'
     content_text: 'Hello. Hi. Hey! Wazzuuup? It’s funny isn’t it? Just by changing the one word you choose to greet people, you can completely change their perception of you. Imagine the difference the rest of what you say can make. Your brand’s words and pictures should be a great partnership: Lennon and McCartney. Ant and Dec. Tess & Claudia. Individually they can be good. Together they can be Strictly, tangoing up fab-u-lous reactions. That’s the value of getting the messaging and the tone of voice right.'
     content_image: 3-BAE.jpg
-    content_link_text: 'See the work'
-    content_link: null
+    content_link_text: 'Be words-worth'
+    content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
 call_to_action: 'Give your brand a boost. Get in touch and tell us your story...'
 cta_button: 'Contact us'
 handle_text: 'Let’s Think! together'
 where_do_i_go: 2
+cta_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'

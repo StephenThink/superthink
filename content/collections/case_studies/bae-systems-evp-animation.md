@@ -3,8 +3,8 @@ id: f53b369f-81e7-4bab-83b4-7bdd17309d41
 blueprint: case_study
 title: 'NAP - BAE Systems EVP Animation'
 greatest_hits: false
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640178128
+updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
+updated_at: 1644245933
 core:
   - experience
 main_content:
@@ -14,8 +14,11 @@ main_content:
       values:
         type: the_problem
         custom_header: 'Employee Value Proposition'
-        intro: 'In every business, employer and employee are part of a deal – with a shared understanding of the things expected from both parties. But how often do we actually articulate that relationship? And if you do articulate it, how do you do it in a way that makes people sit up and listen? That was our challenge: to create a video that told the story of BAE Systems’ Employee Value Proposition (EVP) in the most ‘full service’ of ways.'
+        intro: |-
+          In every business, employer and employee are part of a deal – with a shared understanding of the things expected from both parties. But how often do we actually articulate that relationship? And if you do articulate it, how do you do it in a way that makes people sit up and listen? That was our challenge. Create a video that told the story of BAE Systems’ Employee Value Proposition (EVP) in the most ‘full service’ of ways.
+          It was a collaborative project that spanned all our skillsets, from scriptwriting, character design and illustration, to animation, editing and sound. 
         video_choice: Image
+        image: work/experience/bae-systems-evp-animation/6-BAE-EVP-animation.jpg
   -
     type: set
     attrs:
@@ -26,15 +29,6 @@ main_content:
           - work/experience/bae-systems-evp-animation/2-BAE-EVP-animation.jpg
           - work/experience/bae-systems-evp-animation/4-BAE-EVP-animation.jpg
           - work/experience/bae-systems-evp-animation/Nadia-production-mobile.gif
-  -
-    type: set
-    attrs:
-      values:
-        type: the_problem
-        custom_header: 'Creating Motivation'
-        intro: 'It was a collaborative project that spanned all our skillsets, from scriptwriting to character design and illustration, to animation, editing and sound. Together, we brought to life David, Nadia, Ed and Janet, BAE Systems team members and managers who, whilst entirely fictional, shared many of the traits of their real-world counterparts.'
-        video_choice: Image
-        image: work/experience/bae-systems-evp-animation/6-BAE-EVP-animation.jpg
   -
     type: set
     attrs:

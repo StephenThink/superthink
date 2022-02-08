@@ -5,8 +5,8 @@ title: 'mc- Charlie James Pie and Mash'
 greatest_hits: false
 core:
   - brand
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1642008545
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1644338072
 hero_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Full-Image-1360x768.5.jpg
 secondary_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Secondary-Image-896x597.jpg
 main_content:

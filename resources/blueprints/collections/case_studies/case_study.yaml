@@ -434,8 +434,11 @@ sections:
           type: terms
           taxonomies:
             - services_filter
-          display: 'Services Filter'
+          display: 'Case Studies Category'
           mode: select
+          instructions_position: above
+          listable: hidden
+          create: true
       -
         handle: parent
         field:
