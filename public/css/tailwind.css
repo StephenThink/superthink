@@ -573,12 +573,23 @@ html {
     width: 250px;
     margin-top: -5.5rem;
     margin-right: -5.5rem;
+
 }
+
+@media (min-width: 650px) and (max-width: 820px) {
+
+.bubbles-svg {
+    display: 250px;
+    margin-top: -9.5rem
+
+}
+    }
 
 @media (min-width: 720px) {
 
 .bubbles-svg {
         width: 300px
+
 }
     }
 
@@ -588,6 +599,7 @@ html {
         width: 400px;
         margin-top: -9.5rem;
         margin-right: -5.5rem
+
 }
     }
 
@@ -597,6 +609,7 @@ html {
         width: 450px;
         margin-top: -9.5rem;
         margin-right: -5.5rem
+
 }
     }
 

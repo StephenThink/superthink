@@ -127,9 +127,15 @@ html {
     margin-top: -5.5rem;
     margin-right: -5.5rem;
 
+    @screen land {
+    display: 250px;
+    margin-top: -9.5rem;
+    }
+    
     @screen md {
         width: 300px;
     }
+
 
     @screen lg {
         width: 400px;
@@ -142,6 +148,7 @@ html {
         margin-top: -9.5rem;
         margin-right: -5.5rem;
     }
+
 }
 .small_bubble_banner {
     height: 200%;
