@@ -21,10 +21,9 @@ var hideModalView = document.getElementById('hideModal');
 showReel.addEventListener("click", showVid);
 hideModalView.addEventListener("click", hideModal);
 vid.addEventListener("click", pausePlay); // ? Hide the Play Showreel div if on an i-phone and using safari.
-
-if (safariAgent && mobileAgent) {
-  showPlayReel.classList.add('hidden');
-}
+// if (safariAgent && mobileAgent) {
+//     showPlayReel.classList.add('hidden');
+// }
 
 function toggleAutoplay(element) {
   //if (safariAgent) {element.muted = true;}
