@@ -3,8 +3,8 @@ id: c220f30e-3f32-4a6d-958d-6d8577ff4e1b
 blueprint: about
 title: 'About Us'
 hero_text: 'Good people to connect the dots'
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1642605533
+updated_by: 6fb67458-0db4-428c-8f86-8445dcb283dc
+updated_at: 1644338841
 template: pages/about
 hero_intro: 'We reckon great things happen when you put stuff together. That''s why our people combine a whole range of creative disciplines. Oh and we''re dead nice too.'
 quote: 'Think!Creative are always my ‘go-to guys’ when I need inspired, creative and thoughtful design. I’ve always found them to have an innate ability to understand not just the design brief but also the wider campaign context and objectives - a highly valued aspect of this highly valued team.'
@@ -16,20 +16,26 @@ layered_content: 'Whatever we work with you on, we use a process where ideas com
 steps:
   -
     title: 'Step 1'
-    noun: Discovery
-    text: 'First, we need to ask you loads of questions. What makes you tick? Why do you do what you do? Who are your customers? What’s working? And what isn’t? Getting to know you so well means we can understand your problems and create a plan for the way forward.'
+    noun: Define
+    text: 'It’s hard to know where you’re going without a map. Our mapping process is a series of exercises and workshops designed to uncover exactly what’s going on. We''ll ask you lots of questions, talk to your customers and develop a map of the market. We''ll look at the trends and the basic principles of great creative work. Together, we can build a picture of where you''re competing before we work out how to compete.'
     type: new_set
     enabled: true
   -
     title: 'Step 2'
-    noun: 'The big Think!'
-    text: 'Once we’ve agreed on a plan, we’ll start work on coming up with big, bold ideas that help get your brand noticed. Most companies sell the same things in the same places to the same people. Because of that, how you sell it really matters. Our dedication to ideas gives you first class creativity that moves the dial in a big way.'
+    noun: Plan
+    text: 'In an ideal world you''d have unlimited budget. But in the real world you have to make choices about what you will (and won''t) spend your hard earned budget on. If mapping shows you the territory, now you can work out what you''re going to do with it. Where will you play? Who will you target and who will you ignore? What will you say? This is where we''ll help you plan the next steps. Through strategies, briefing and frameworks, we''ll link your commercial needs with creative opportunity. That way you get work that both looks the business and does the business.'
     type: new_set
     enabled: true
   -
     title: 'Step 3'
-    noun: Rollout
-    text: 'But creativity is just the start. Next we bring our ideas to life and roll them out. In our experience, it’s those little details that make the difference between a good rollout and a brilliant one. Our dedication to getting everything spot on is why our clients trust us to do the business for them both creatively and commercially.'
+    noun: 'Story & Identity'
+    text: 'If you want big results, you need an agency who will turf up every rock on the beach to find the best possible answer to your brief. In short you need big ideas. Big ideas give you the unbeatable advantage of being interesting. That helps us tell your story in fresh and exciting ways so you get noticed and talked about, both online and off.'
+    type: new_set
+    enabled: true
+  -
+    title: 'Step 4'
+    noun: Activate
+    text: 'But creativity is just the start. In our experience it’s the details that are the difference between a job done and a job done well. Our dedication to getting everything spot-on runs from before the first phone call until well after sign off. Whether you want to bring your brand to life onscreen or off, or just make a big noise about something - we can help.'
     type: new_set
     enabled: true
 call_to_action: 'View all our services'
