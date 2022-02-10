@@ -5,9 +5,9 @@ title: 'mc- Glover''s Swim School'
 greatest_hits: false
 core:
   - brand
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1642008564
-hero_image: work/brand/glovers-swim-school/Glovers-3-Brand-Full-Image-1360x768.5.jpg
+updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
+updated_at: 1644505151
+hero_image: Glovers-3-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/glovers-swim-school/Glovers-3-Brand-Secondary-Image-896x597.jpg
 main_content:
   -

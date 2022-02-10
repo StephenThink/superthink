@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Video Brochure'
 greatest_hits: false
 core:
   - experience
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640260955
+updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
+updated_at: 1644504272
 main_content:
   -
     type: set
@@ -36,8 +36,8 @@ services_filter:
   - illustration
   - print
   - video
-hero_image: work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Secondary-Image-896x597.jpg
 short_case: false
 video_choice: Image
+hero_image: BAE-Video-Brochure-21-Experience-Full-Image-2732x1536-1644503937.jpg
 ---

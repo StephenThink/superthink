@@ -2,8 +2,8 @@ route: core-services/testing
 title: Campaign
 content: 'Help! We’re really good at what we do but nobody knows'
 strapline: 'Help! We’re really good at what we do but nobody knows'
-updated_by: 6fb67458-0db4-428c-8f86-8445dcb283dc
-updated_at: 1644326715
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1644499592
 blueprint: core
 tag_line_us: 'Get noticed. Simple. Spark imaginations and create conversations in print, digital and beyond.'
 tag_line_you: 'You need a campaign'
@@ -67,7 +67,7 @@ v2_right_list:
   - Search
   - 'Asset creation'
 v2_service_image:
-  - 3-BAE.jpg
+  - service-thumbnail/Services-Campaign.jpg
 v2_service_button_label: 'Click Here'
 hero_text: Campaigns
 hero_intro: 'Let’s not be delicate about it, selling is what a marketing campaign is designed to do. And when the world is this bloomin’ noisy, that’s no mean feat. So how are you going to do it?'
