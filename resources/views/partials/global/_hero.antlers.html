@@ -1,4 +1,4 @@
-<div class="hero h-vertical-handle-nm  flex items-center w-100 py-24 relative overflow-hidden {{ text_small ? 'text-5xl sm:text-7xl land:text-7xl md:text-7xl ' : 'text-5xl sm:text-7xl land:text-6xl md:text-18xl ' }}  {{classes}} md:h-screen" data-scroll-section>
+<div class="hero   flex items-center w-100  relative overflow-hidden {{ text_small ? 'text-5xl sm:text-7xl land:text-7xl md:text-7xl ' : 'text-5xl sm:text-7xl land:text-6xl md:text-18xl ' }}  {{classes}} {{ if collection == 'case_studies' }}h-1/2 md:h-screen{{ else }}h-screen py-24 h-vertical-handle-nm{{/if}} " data-scroll-section>
 
     {{ if slug=="home"}}
     <div class="show-reel">
@@ -27,9 +27,9 @@
         <video autoplay muted class="h-screen w-screen object-cover" src="{{ video }}"></video>
 
         {{ else }}
-            {{ hero_image }}
-                <img src="{{ url }}" alt="{{ alt }}" class="h-screen w-screen object-cover {{ image_classes }}" loading=eager>
-            {{ /hero_image }}
+            {{ glide:hero_image fit="crop_focal" }}
+                <img src="{{ url }}" alt="{{ alt }}" class="sm:h-1/2 md:h-screen w-screen object-cover {{ image_classes }}" loading=eager>
+            {{ /glide:hero_image }}
         {{ /if }}
 
         {{ if service_tag }}
