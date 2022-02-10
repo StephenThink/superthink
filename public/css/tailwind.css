@@ -2212,6 +2212,10 @@ body.fixed-sjj sjj {
   height: 1.25rem;
 }
 
+.h-36 {
+  height: 9rem;
+}
+
 .max-h-700 {
   max-height: 700px;
 }
@@ -4065,6 +4069,14 @@ body.fixed-sjj sjj {
     height: 9rem;
   }
 
+  .land\:h-full {
+    height: 100%;
+  }
+
+  .land\:h-96 {
+    height: 24rem;
+  }
+
   .land\:w-1\/3 {
     width: 33.333333%;
   }
@@ -4075,6 +4087,10 @@ body.fixed-sjj sjj {
 
   .land\:w-36 {
     width: 9rem;
+  }
+
+  .land\:w-10\/12 {
+    width: 83.333333%;
   }
 
   .land\:flex-col {
