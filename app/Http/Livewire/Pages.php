@@ -6,10 +6,14 @@ use App\Models\Page;
 
 use Livewire\Component;
 use Illuminate\Validation\Rule;
+use Livewire\WithPagination;
 
 class Pages extends Component
 {
+    use WithPagination;
     public $modalFormVisible = false;
+    public $modalConfirmDeleteVisible = false;
+    public $modelId;
     public $slug;
     public $title;
     public $content;
@@ -23,9 +27,20 @@ class Pages extends Component
     {
        return [
            'title' => 'required',
-           'slug' => ['required', Rule::unique('pages','slug')],
+           'slug' => ['required', Rule::unique('pages','slug')->ignore($this->modelId)],
            'content' => 'required',
        ];
+    }
+
+    /**
+     * This runs when the page loads.
+     *
+     * @return void
+     */
+    public function mount()
+    {
+        // Resets the pagingation after reloading the page.
+        $this->resetPage();
     }
 
     /**
@@ -65,6 +80,55 @@ class Pages extends Component
         $this->resetVars();
     }
 
+
+    /**
+     * Reads the data from the database
+     *
+     * @return void
+     */
+    public function read()
+    {
+        return Page::paginate(5);
+    }
+
+    /**
+     * the update function.
+     *
+     * @return void
+     */
+    public function update()
+    {
+        $this->validate();
+        Page::find($this->modelId)->update($this->modelData());
+        $this->modalFormVisible = false;
+    }
+
+
+    /**
+     * the delete function.
+     *
+     * @return void
+     */
+    public function delete()
+    {
+       Page::destroy($this->modelId);
+       $this->modalConfirmDeleteVisible = false;
+       $this->resetPage();
+    }
+
+    /**
+     * Loads the model data of this component.
+     *
+     * @return void
+     */
+    public function loadModel()
+    {
+        $data = Page::find($this->modelId);
+        $this->title = $data->title;
+        $this->slug = $data->slug;
+        $this->content = $data->content;
+    }
+
     /**
      * Shows the form modal of the create function.
      *
@@ -72,8 +136,40 @@ class Pages extends Component
      */
     public function createShowModal()
     {
+        $this->resetValidation();
+        $this->resetVars();
         $this->modalFormVisible = true;
     }
+
+
+    /**
+     * Shows the form modal in update mode.
+     *
+     * @param  mixed $id
+     * @return void
+     */
+    public function updateShowModal($id)
+    {
+        $this->resetValidation();
+        $this->resetVars();
+        $this->modelId = $id;
+        $this->modalFormVisible = true;
+        $this->loadModel();
+    }
+
+    /**
+     * Shows the delete confirmation modal.
+     *
+     * @param  mixed $id
+     * @return void
+     */
+    public function deleteShowModal($id)
+    {
+        $this->modelId = $id;
+        $this->modalConfirmDeleteVisible = true;
+
+    }
+
 
     /**
      * The data for the model mapped in this component.
@@ -98,6 +194,7 @@ class Pages extends Component
      */
     public function resetVars()
     {
+        $this->modelId = null;
         $this->title = null;
         $this->slug = null;
         $this->content = null;
@@ -110,6 +207,8 @@ class Pages extends Component
      */
     public function render()
     {
-        return view('livewire.pages');
+        return view('livewire.pages', [
+            'data' => $this->read(),
+        ]);
     }
 }

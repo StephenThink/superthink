@@ -2,6 +2,48 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@font-face {
+    font-family: "geo-black";
+    src: url('/fonts/geograph-web-black.eot') format("eot");
+    src: url('/fonts/geograph-web-black.woff') format("woff");
+    src: url('/fonts/geograph-web-black.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-regular";
+    src: url('/fonts/geograph-web-regular.eot') format("eot");
+    src: url('/fonts/geograph-web-regular.woff') format("woff");
+    src: url('/fonts/geograph-web-regular.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-bold";
+    src: url('/fonts/geograph-web-bold.eot') format("eot");
+    src: url('/fonts/geograph-web-bold.woff') format("woff");
+    src: url('/fonts/geograph-web-bold.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-regular-italic";
+    src: url('/fonts/geograph-web-regular-italic.eot') format("eot");
+    src: url('/fonts/geograph-web-regular-italic.woff') format("woff");
+    src: url('/fonts/geograph-web-regular-italic.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-medium";
+    src: url('/fonts/geograph-web-medium.eot') format("eot");
+    src: url('/fonts/geograph-web-medium.woff') format("woff");
+    src: url('/fonts/geograph-web-medium.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: "geo-light";
+    src: url('/fonts/geograph-web-light.eot') format("eot");
+    src: url('/fonts/geograph-web-light.woff') format("woff");
+    src: url('/fonts/geograph-web-light.woff2') format("woff2");
+}
+
 .body-content {
     max-height: 300px !important;
     overflow-y: scroll;

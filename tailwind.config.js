@@ -9,12 +9,40 @@ module.exports = {
     ],
 
     theme: {
+        debugScreens: {
+            position: ['bottom', 'right'],
+          },
+          fontFamily: {
+            black: ['geo-black'],
+            regular: ['geo-regular'],
+            bold: ['geo-bold'],
+            italic: ['geo-regular-italic'],
+            medium: ['geo-medium']
+          },
+          container: {
+            padding: '2rem',
+
+          },
         extend: {
-            fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-            },
+
+            colors: {
+                yellow: "#FFC734",
+                darker: "#2C2F33",
+                // dark: "#42454A",
+                dark: "#373737",
+                "header-dark" :"#292929",
+                "mid-grey" : "#7c7c7c",
+
+                light: "#F7F7F7",
+                grey: "#AFB0B3",
+                blue: "#0A064D",
+                "light-blue": "#3369FF",
+                "light-grey": "#DDDDDD",
+              },
+
         },
+
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('tailwindcss-debug-screens'),],
 };
