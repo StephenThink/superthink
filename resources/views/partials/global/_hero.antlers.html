@@ -24,7 +24,7 @@
 
         {{ if video_choice == "Video" }}
         
-        <video autoplay muted class="h-screen w-screen object-cover" src="{{ video }}"></video>
+        <video autoplay muted playsinline loop class="h-1/2 md:h-screen w-screen object-cover" src="{{ video }}"></video>
 
         {{ else }}
             {{ glide:hero_image fit="crop_focal" }}
