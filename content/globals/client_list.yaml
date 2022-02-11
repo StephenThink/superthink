@@ -27,7 +27,37 @@ data:
       type: client
       enabled: true
     -
-      client_logo: client-list/Utiligroup.svg
-      client_name: Utiligroup
+      client_logo: client-list/ESG-Logo-Landscape-Grey.svg
+      client_name: ESG
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/Michelin-Logo-Landscape-Grey.svg
+      client_name: Michelin
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/BFG-Logo-Landscape-Grey.svg
+      client_name: BFGoodrich
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/bp-grey-bg2.svg
+      client_name: bp
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/NHS-Logo-Landscape-Grey.svg
+      client_name: NHS
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/RBSL-Logo-Landscape-Grey.svg
+      client_name: RBSL
+      type: client
+      enabled: true
+    -
+      client_logo: client-list/Uclan-Logo-Landscape-Grey.svg
+      client_name: UCLan
       type: client
       enabled: true

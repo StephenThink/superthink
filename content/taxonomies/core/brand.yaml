@@ -2,7 +2,7 @@ title: Brand
 strapline: 'Help! We’re really good at what we do but nobody knows'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1644497051
+updated_at: 1644577678
 blueprint: core
 tag_line_us: 'It''s all in the story. Build or refresh your brand so you look the business and do the business.'
 tag_line_you: 'You need a distinctive brand'
@@ -95,8 +95,8 @@ v2_right_list:
   - 'Brand Platform'
   - 'Brand Positioning'
 v2_service_image:
-  - service-thumbnail/Services-Brand.jpg
-v2_service_button_label: 'Click Here'
+  - service-thumbnail/Services-Strategy.jpg
+v2_service_button_label: 'Read More'
 hero_text: Brand
 hero_intro: 'New. Pre-loved. A bit of a mess. Wherever you''re at with your brand identity, we''re ready to give it a creative shot in the arm.'
 content_grid:
