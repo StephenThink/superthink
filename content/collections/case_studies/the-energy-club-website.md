@@ -5,8 +5,8 @@ title: 'NAP - The Energy Club Website'
 greatest_hits: false
 core:
   - brand
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1641817425
+updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
+updated_at: 1644509887
 hero_image: work/brand/the-energy-club-website/The-Energy-Club-Website-Animation.gif
 secondary_image: work/brand/the-energy-club-website/Animated-Mockup-GIF-2.gif
 main_content:
@@ -38,7 +38,6 @@ services_filter:
   - web-design-and-development
 thumbnail: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Large-927x522-2.jpg
 short_case: false
-tagline: 'Driving online audiences to save money'
 short_para_title: 'Old Content'
 video_choice: Image
 ---

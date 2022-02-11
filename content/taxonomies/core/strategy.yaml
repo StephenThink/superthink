@@ -1,8 +1,8 @@
 title: Strategy
 strapline: 'Help! We’re not sure what will work best'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: 6fb67458-0db4-428c-8f86-8445dcb283dc
-updated_at: 1644326702
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1644573618
 blueprint: core
 tag_line_us: 'What comes before how. We can help you with strategic blueprints and plans that make sure the creative work is on point.'
 tag_line_you: 'You need a strategy'
@@ -87,7 +87,7 @@ content_grid:
   -
     content_title: 'Research & Insights'
     content_text: '“Research is creating new knowledge”. Neil Armstrong said that, which just goes to show there was a good career in marketing waiting for him if he ever grew tired of the astronaut stuff. But what new knowledge do you need? At Think! Creative, research doesn’t come freeze dried and prepacked (unlike Neil’s lunch). With us, you’ll find insights that surprise you and make the conventional wisdom look silly. And you’ll find the occasional answer that raises questions you simply never thought of before.'
-    content_image: 3-BAE.jpg
+    content_image: 'service-thumbnail/Services-Creative-Research&Insights.jpg'
     content_link_text: 'What’s going on? Let''s find out'
     content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
   -
