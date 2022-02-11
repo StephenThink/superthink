@@ -13,7 +13,10 @@ main_content:
       values:
         type: the_problem
         custom_header: ' '
-        intro: 'As more events went digital in 2020, our friends at Bioscript needed to up their digital conference game. That’s why they came to us ahead of a prestigious medical publications event where they were exhibiting. “How” they asked us, “can we tell our story when we’ll only get a few seconds to tell it?”'
+        intro: |-
+          As more events went digital in 2020, our friends at Bioscript needed to up their digital conference game. That’s why they came to us ahead of a prestigious medical publications event where they were exhibiting. “How” they asked us, “can we tell our story when we’ll only get a few seconds to tell it?”
+
+          Good question. And one we were happy to answer. We worked with the Bioscript team to whittle their points downs so they were sharper than sharp. And then, we developed supporting visuals that reflected what was being said in the words. Maybe it wasn't the same as being there in person. But we made sure Bioscript got their message across in a simple and clear way.
         video_choice: Video
         video: /assets/work/brand/bioscript-animation/Bioscript-Brand-11-Large-927x522.mp4
   -
@@ -22,7 +25,6 @@ main_content:
       values:
         type: the_work
         custom_header: ' '
-        intro: 'Good question. And one we were happy to answer. We worked with the Bioscript team to whittle their points downs so they were sharper than sharp. And then, we developed supporting visuals that reflected what was being said in the words. Maybe it wasn''t the same as being there in person. But we made sure Bioscript got their message across in a simple and clear way.'
   -
     type: paragraph
 greatest_hits: false
@@ -34,6 +36,6 @@ services_filter:
   - digital
   - video
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
-updated_at: 1644506034
+updated_at: 1644587871
 hero_image: work/brand/bioscript-animation/Bioscript-Brand-11-Secondary-Image-896x597.jpg
 ---

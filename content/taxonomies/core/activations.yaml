@@ -131,9 +131,9 @@ v2_right_list:
   - 'Web Development'
 v2_service_image:
   - service-thumbnail/Services-Activation.jpg
-v2_service_button_label: 'Click Here'
+v2_service_button_label: 'Read More'
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1644499504
+updated_at: 1644577446
 blueprint: core
 hero_text: Activations
 hero_intro: 'You have a brand. But now, what are you going to do with it? Let’s lick it into shape.'

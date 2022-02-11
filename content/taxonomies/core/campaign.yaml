@@ -3,7 +3,7 @@ title: Campaign
 content: 'Help! We’re really good at what we do but nobody knows'
 strapline: 'Help! We’re really good at what we do but nobody knows'
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1644499592
+updated_at: 1644577510
 blueprint: core
 tag_line_us: 'Get noticed. Simple. Spark imaginations and create conversations in print, digital and beyond.'
 tag_line_you: 'You need a campaign'
@@ -68,7 +68,7 @@ v2_right_list:
   - 'Asset creation'
 v2_service_image:
   - service-thumbnail/Services-Campaign.jpg
-v2_service_button_label: 'Click Here'
+v2_service_button_label: 'Read More'
 hero_text: Campaigns
 hero_intro: 'Let’s not be delicate about it, selling is what a marketing campaign is designed to do. And when the world is this bloomin’ noisy, that’s no mean feat. So how are you going to do it?'
 content_grid:
