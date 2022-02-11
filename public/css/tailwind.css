@@ -1532,6 +1532,12 @@ input#store:checked ~ .toggle-dot {
     margin-right: 0.25rem;
   }
 
+.dark .swiper-pagination-bullet {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  opacity: 0.5;
+}
+
 /* Filter invert */
 
 /* This is used in the awards partial for the light/dark so they are easily seen */
@@ -1957,11 +1963,6 @@ body.fixed-sjj sjj {
   margin-right: 0.5rem;
 }
 
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .-mx-8 {
   margin-left: -2rem;
   margin-right: -2rem;
@@ -2083,12 +2084,12 @@ body.fixed-sjj sjj {
   margin-bottom: 2.5rem;
 }
 
-.ml-20 {
-  margin-left: 5rem;
-}
-
 .mr-0 {
   margin-right: 0px;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .ml-2 {
@@ -2133,6 +2134,14 @@ body.fixed-sjj sjj {
 
 .-mr-24 {
   margin-right: -6rem;
+}
+
+.-mt-4 {
+  margin-top: -1rem;
+}
+
+.-mt-12 {
+  margin-top: -3rem;
 }
 
 .block {
@@ -2349,6 +2358,10 @@ body.fixed-sjj sjj {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-\[740px\] {
+  width: 740px;
 }
 
 .max-w-500 {
@@ -2656,6 +2669,10 @@ body.fixed-sjj sjj {
   overflow: hidden;
 }
 
+.overflow-visible {
+  overflow: visible;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -2819,8 +2836,16 @@ body.fixed-sjj sjj {
   background-size: cover;
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
 .bg-center {
   background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .fill-current {
@@ -3099,10 +3124,6 @@ body.fixed-sjj sjj {
   line-height: 1.75rem;
 }
 
-.text-\[2\.5rem\] {
-  font-size: 2.5rem;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -3129,6 +3150,10 @@ body.fixed-sjj sjj {
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-nat {
+  line-height: 1.2;
 }
 
 .text-dark {
@@ -3216,6 +3241,10 @@ body.fixed-sjj sjj {
 
 .placeholder-transparent::placeholder {
   color: transparent;
+}
+
+.opacity-25 {
+  opacity: 0.25;
 }
 
 .opacity-75 {
@@ -3530,6 +3559,10 @@ body.fixed-sjj sjj {
   .sm\:text-7xl {
     font-size: 4rem;
   }
+
+  .sm\:leading-tight {
+    line-height: 1.25;
+  }
 }
 
 @media (min-width: 720px) {
@@ -3619,6 +3652,10 @@ body.fixed-sjj sjj {
 
   .md\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .md\:ml-20 {
+    margin-left: 5rem;
   }
 
   .md\:ml-auto {
@@ -3826,6 +3863,14 @@ body.fixed-sjj sjj {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:bg-cover {
+    background-size: cover;
+  }
+
+  .md\:p-12 {
+    padding: 3rem;
   }
 
   .md\:px-56 {
@@ -4136,6 +4181,14 @@ body.fixed-sjj sjj {
 
   .land\:w-36 {
     width: 9rem;
+  }
+
+  .land\:w-\[740px\] {
+    width: 740px;
+  }
+
+  .land\:w-\[476px\] {
+    width: 476px;
   }
 
   .land\:flex-col {

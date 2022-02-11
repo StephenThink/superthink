@@ -858,7 +858,7 @@ input#store:checked ~ .toggle-dot {
     border-radius: 50%;
     background: #000;
     opacity: 0.2;
-    @apply mx-1;
+    @apply mx-1 dark:bg-white dark:opacity-50;
   }
 
 /* Filter invert */

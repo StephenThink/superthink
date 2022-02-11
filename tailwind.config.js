@@ -222,7 +222,11 @@ module.exports = {
       },
       scale: {
         '200': '2'
+      },
+      lineHeight: {
+        'nat': '1.2',
       }
+
     },
   },
   corePlugins: {
