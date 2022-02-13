@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 // This will only allow people who are authicated and have verfied their emails
 Route::group(['middleware' => [
     'auth:sanctum',
-    'verified'
+    'verified',
+    'accessrole'
 ]], function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
