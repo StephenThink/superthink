@@ -53,8 +53,11 @@ class EnsureUserRoleIsAllowedToAccess
                 'dashboard',
             ],
             'admin' => [
+                'dashboard',
                 'pages',
                 'navigation-menus',
+                'users',
+                'user-permissions'
             ],
         ];
     }
