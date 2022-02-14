@@ -27,9 +27,9 @@
         <video autoplay muted playsinline loop class="h-1/2 md:h-screen w-screen object-cover" src="{{ video }}"></video>
 
         {{ else }}
-            {{ glide:hero_image fit="crop_focal" }}
-                <img src="{{ url }}" alt="{{ alt }}" class="sm:h-1/2 md:h-screen w-screen object-cover {{ image_classes }}" loading=eager>
-            {{ /glide:hero_image }}
+
+                <img src="{{ hero_image }}" alt="{{ alt }}" class="sm:h-1/2 md:h-screen w-screen object-cover {{ image_classes }}" loading=eager>
+
         {{ /if }}
 
         {{ if service_tag }}
