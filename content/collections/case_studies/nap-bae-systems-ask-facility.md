@@ -49,7 +49,7 @@ main_content:
     type: paragraph
 greatest_hits: true
 core:
-  - experience
+  - activations
 services_filter:
   - brand-identity
   - print-design

@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'NAP - BAE Systems Employee Recognition Video'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
 updated_at: 1643386158
 hero_image: work/experience/bae-systems-employee-recognition-video/BAE-Recognition-Video-portfolio.jpg

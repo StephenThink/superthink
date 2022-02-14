@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- BAE Systems Company Strategy'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
 updated_at: 1641398647
 hero_image: work/experience/bae-systems-company-strategy/BAE-15-Company-Strategy-Full-Image-1360x768.5.jpg

@@ -6,7 +6,7 @@ greatest_hits: false
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
 updated_at: 1644245933
 core:
-  - experience
+  - activations
 main_content:
   -
     type: set

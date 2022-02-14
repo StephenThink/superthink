@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- Climavent Brochure and Magazine Ad'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1640274376
 hero_image: work/experience/climavent-brochure-and-magazine-ad/Climavent-23-Experience-Full-Image-1360x768.5.jpg

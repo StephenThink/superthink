@@ -28,7 +28,7 @@ main_content:
     type: paragraph
 greatest_hits: false
 core:
-  - experience
+  - activations
 services_filter:
   - print-design
   - digital-design

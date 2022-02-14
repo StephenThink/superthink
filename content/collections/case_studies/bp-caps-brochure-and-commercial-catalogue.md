@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'NAP - BP CAPs Brochure and Commercial Catalogue'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
 updated_at: 1641391821
 hero_image: work/experience/bp-caps-brochure-and-commercial-catalogue/1-caps-brochure.jpg

@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- BAE Systems Gender Report'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
 updated_at: 1644336288
 hero_image: work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Full-Image-1360x768.5.jpg

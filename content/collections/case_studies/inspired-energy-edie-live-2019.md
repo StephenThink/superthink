@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- Inspired Energy - Edie Live 2019'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1640278371
 hero_image: work/experience/inspired-energy-edie-live-2019/Inspired-Edie-29-Experience-Full-Image-1360x768.5.jpg

@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- Merlin Entertainments - Sea Life Blackpool Map'
 greatest_hits: true
 core:
-  - experience
+  - activations
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
 updated_at: 1644488739
 hero_image: work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Full-Image-1360x768.5.jpg

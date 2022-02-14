@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'NAP - BP Commercial Development Capability'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1640276981
 hero_image: work/experience/bp-commercial-development-capability/BP-CDF-portfolio-3-scaled.jpg

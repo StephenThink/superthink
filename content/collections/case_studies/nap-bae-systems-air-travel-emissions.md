@@ -31,7 +31,7 @@ main_content:
 greatest_hits: false
 core:
   - activations
-  - experience
+  - activations
 services_filter:
   - print-design
   - digital-design

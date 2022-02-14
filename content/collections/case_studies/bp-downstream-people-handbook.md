@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- BP Downstream People Handbook'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1640275823
 hero_image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Full-Image-1360x768.5.jpg

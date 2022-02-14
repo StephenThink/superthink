@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- BAE Systems Land (UK) Material'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
 updated_at: 1641398637
 hero_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Full-Image-1360x768.5.jpg

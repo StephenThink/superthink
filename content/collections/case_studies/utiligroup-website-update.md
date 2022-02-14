@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- Utiligroup Website Update'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
 updated_at: 1644246175
 hero_image: work/experience/utiligroup-website-update/Utiligroup-Website-28-Experience-Full-Image-1360x768.5.jpg

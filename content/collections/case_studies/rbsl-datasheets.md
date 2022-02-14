@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- RBSL Datasheets'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1641470875
 services_filter:

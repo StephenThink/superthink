@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- SPIE Pop out van'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1640112229
 hero_image: work/experience/spie-pop-out-van/SPIE-PopOutVan-13-Experience-Full-Image-1360x768.5.jpg

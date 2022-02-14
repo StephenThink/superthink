@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- BAE Systems Bridging Brochure'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
 updated_at: 1644335294
 hero_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Brochure-Full-Image-1360x768.5.jpg

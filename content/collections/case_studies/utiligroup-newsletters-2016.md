@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- Utiligroup Newsletters 2016'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
 updated_at: 1642497982
 hero_image: work/experience/utiligroup-newsletters-2016/Utiligroup-Newsletter-14-Experience-Full-Image-1360x768.5.jpg

@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- BAE Systems Video Brochure'
 greatest_hits: false
 core:
-  - experience
+  - activations
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
 updated_at: 1644504272
 main_content:
