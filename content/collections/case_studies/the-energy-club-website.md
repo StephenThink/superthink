@@ -34,7 +34,7 @@ services_filter:
   - brand-identity
   - print-design
   - illustration
-  - video
+  - film-and-animation
   - digital-design
 thumbnail: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Large-927x522-2.jpg
 short_case: false

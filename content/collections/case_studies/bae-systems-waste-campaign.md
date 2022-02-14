@@ -42,7 +42,7 @@ services_filter:
   - digital-design
   - display
   - illustration
-  - video
+  - film-and-animation
 video_choice: Image
 short_case: false
 ---

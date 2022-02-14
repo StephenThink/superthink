@@ -30,5 +30,5 @@ services_filter:
   - print-design
   - digital-design
   - illustration
-  - video
+  - film-and-animation
 ---

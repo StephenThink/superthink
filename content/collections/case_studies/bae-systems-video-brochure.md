@@ -34,7 +34,7 @@ services_filter:
   - digital-design
   - display
   - illustration
-  - video
+  - film-and-animation
 secondary_image: work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Secondary-Image-896x597.jpg
 short_case: false
 video_choice: Image

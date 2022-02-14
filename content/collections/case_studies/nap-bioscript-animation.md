@@ -33,7 +33,7 @@ core:
 services_filter:
   - print-design
   - digital-design
-  - video
+  - film-and-animation
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
 updated_at: 1644587871
 hero_image: work/brand/bioscript-animation/Bioscript-Brand-11-Secondary-Image-896x597.jpg

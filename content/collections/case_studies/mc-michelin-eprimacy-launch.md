@@ -49,7 +49,7 @@ core:
 services_filter:
   - print-design
   - digital-design
-  - video
+  - film-and-animation
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1643387456
 secondary_image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Secondary-Image-896x597.jpg

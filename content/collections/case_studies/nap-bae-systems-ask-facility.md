@@ -54,7 +54,7 @@ services_filter:
   - brand-identity
   - print-design
   - display
-  - video
+  - film-and-animation
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
 updated_at: 1643386243
 ---
