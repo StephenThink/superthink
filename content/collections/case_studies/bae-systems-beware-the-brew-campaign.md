@@ -37,6 +37,6 @@ main_content:
 short_case: false
 services_filter:
   - print-design
-  - package-design
+  - packaging-design
 short_para_title: Shorty
 ---

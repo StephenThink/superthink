@@ -58,7 +58,7 @@ core:
 services_filter:
   - brand-identity
   - print-design
-  - package-design
+  - packaging-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1643388962
 ---
