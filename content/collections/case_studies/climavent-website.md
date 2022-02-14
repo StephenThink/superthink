@@ -36,8 +36,7 @@ main_content:
     type: paragraph
 services_filter:
   - print-design
-  - digital
-  - web-design-and-development
+  - digital-design
 short_case: false
 video_choice: Image
 ---

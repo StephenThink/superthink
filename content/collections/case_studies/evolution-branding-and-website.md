@@ -38,6 +38,5 @@ video_choice: Image
 services_filter:
   - brand-identity
   - print-design
-  - digital
-  - web-design-and-development
+  - digital-design
 ---

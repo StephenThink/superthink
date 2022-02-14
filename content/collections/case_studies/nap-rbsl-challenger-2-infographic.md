@@ -37,7 +37,7 @@ core:
   - activations
 services_filter:
   - print-design
-  - digital
+  - digital-design
   - illustration
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1643384440

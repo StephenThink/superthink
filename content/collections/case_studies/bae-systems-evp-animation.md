@@ -47,7 +47,7 @@ video_choice: Image
 short_case: false
 services_filter:
   - print-design
-  - digital
+  - digital-design
   - illustration
   - video
 ---

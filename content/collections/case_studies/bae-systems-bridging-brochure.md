@@ -50,6 +50,6 @@ video_choice: Image
 services_filter:
   - brand-identity
   - print-design
-  - digital
+  - digital-design
   - illustration
 ---

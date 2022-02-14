@@ -35,7 +35,7 @@ services_filter:
   - print-design
   - illustration
   - video
-  - web-design-and-development
+  - digital-design
 thumbnail: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Large-927x522-2.jpg
 short_case: false
 short_para_title: 'Old Content'

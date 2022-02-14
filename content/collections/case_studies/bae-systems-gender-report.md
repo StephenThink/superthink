@@ -38,6 +38,6 @@ short_case: false
 video_choice: Image
 services_filter:
   - print-design
-  - digital
+  - digital-design
   - illustration
 ---

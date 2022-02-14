@@ -39,7 +39,7 @@ main_content:
     type: paragraph
 services_filter:
   - print-design
-  - digital
+  - digital-design
   - display
   - illustration
   - video

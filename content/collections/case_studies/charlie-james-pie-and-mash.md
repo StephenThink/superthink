@@ -50,10 +50,9 @@ main_content:
 services_filter:
   - brand-identity
   - print-design
-  - digital
+  - digital-design
   - display
   - illustration
-  - web-design-and-development
 mini_introduction: 'When it came to building their em<b>pie</b>re, Charlie James Pie &amp; Mash knew the perfect creative team to help.'
 short_case: false
 video_choice: Image

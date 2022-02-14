@@ -32,7 +32,7 @@ core:
   - brand
 services_filter:
   - print-design
-  - digital
+  - digital-design
   - video
 updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
 updated_at: 1644587871

@@ -44,7 +44,7 @@ main_content:
     type: paragraph
 services_filter:
   - print-design
-  - digital
+  - digital-design
   - display
   - brand-identity
 short_case: false

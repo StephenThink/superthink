@@ -36,7 +36,7 @@ main_content:
 services_filter:
   - brand-identity
   - print-design
-  - digital
+  - digital-design
 video_choice: Image
 short_case: false
 ---

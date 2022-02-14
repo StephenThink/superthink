@@ -41,9 +41,8 @@ main_content:
 services_filter:
   - brand-identity
   - print-design
-  - digital
+  - digital-design
   - illustration
-  - web-design-and-development
 short_case: false
 mini_introduction: 'When it comes to the competitive world of branding, it’s often a case of sink or swim. For Glover’s, we set out to ensure it was the latter.'
 video_choice: Image

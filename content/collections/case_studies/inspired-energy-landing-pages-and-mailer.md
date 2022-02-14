@@ -50,7 +50,6 @@ main_content:
 services_filter:
   - brand-identity
   - print-design
-  - digital
-  - web-design-and-development
+  - digital-design
 video_choice: Image
 ---

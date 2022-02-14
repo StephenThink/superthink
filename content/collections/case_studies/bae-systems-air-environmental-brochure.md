@@ -39,7 +39,7 @@ core:
 services_filter:
   - print-design
   - illustration
-  - digital
+  - digital-design
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
 updated_at: 1643627769
 ---

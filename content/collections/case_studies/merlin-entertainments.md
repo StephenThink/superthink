@@ -95,7 +95,7 @@ greatest_hits: true
 main_services:
   - brand-identity
 services_filter:
-  - web-design-and-development
+  - digital-design
   - print-design
 core:
   - strategy

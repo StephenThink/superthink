@@ -42,7 +42,7 @@ main_content:
     type: paragraph
 services_filter:
   - brand-identity
-  - digital
+  - digital-design
   - print-design
 mini_introduction: 'In need of a strong brand presence? Well that''s exactly what our client Ignition RM were thinking when they came to us. They knew they needed a more creative approach to tell the story of their approach to Fleet Risk Management to clients across the UK.'
 short_case: false
