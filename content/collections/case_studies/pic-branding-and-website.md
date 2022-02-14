@@ -41,10 +41,9 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
+  - brand-identity
   - digital
   - web-design-and-development
-  - brand-identity
 short_case: false
 video_choice: Image
 ---

@@ -43,7 +43,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
+  - brand-identity
   - print
 short_case: false
 ---

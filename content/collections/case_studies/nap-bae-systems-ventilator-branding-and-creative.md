@@ -56,12 +56,11 @@ greatest_hits: false
 core:
   - brand
 services_filter:
-  - branding
   - brand-identity
   - creative-design
   - package-design
   - print
-  - design
+  - print-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1643388962
 ---

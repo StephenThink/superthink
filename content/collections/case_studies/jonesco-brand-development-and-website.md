@@ -54,10 +54,9 @@ greatest_hits: false
 core:
   - brand
 services_filter:
-  - branding
   - brand-identity
   - creative-design
-  - design
+  - print-design
   - digital
   - illustration
   - package-design

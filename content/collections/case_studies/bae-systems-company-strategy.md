@@ -31,6 +31,6 @@ video_choice: Image
 services_filter:
   - digital
   - print
-  - design
+  - print-design
   - print-design
 ---

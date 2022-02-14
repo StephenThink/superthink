@@ -34,8 +34,8 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - digital
 video_choice: Image
 short_case: false

@@ -52,9 +52,8 @@ core:
   - experience
 services_filter:
   - brand-identity
-  - branding
   - creative-design
-  - design
+  - print-design
   - display
   - print
   - video

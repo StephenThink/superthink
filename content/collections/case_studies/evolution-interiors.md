@@ -38,10 +38,10 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - design
+  - print-design
   - display
   - print
-  - branding
+  - brand-identity
 video_choice: Image
 short_case: false
 thumbnail: work/experience/evolution-interiors/Experience-5-Evolution-Interiors-Thumbnail.jpg

@@ -43,11 +43,11 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - design
+  - print-design
   - digital
   - display
   - print
-  - branding
+  - brand-identity
 short_case: false
 video_choice: Image
 ---

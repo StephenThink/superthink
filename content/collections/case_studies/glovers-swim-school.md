@@ -39,13 +39,12 @@ main_content:
           - work/brand/glovers-swim-school/Glovers-3-Brand-Small-740x416.25-5.jpg
           - work/brand/glovers-swim-school/Glovers-3-Brand-Small-740x416.25-6.jpg
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - digital
   - illustration
   - print
   - web-design-and-development
-  - brand-identity
 short_case: false
 mini_introduction: 'When it comes to the competitive world of branding, it’s often a case of sink or swim. For Glover’s, we set out to ensure it was the latter.'
 video_choice: Image

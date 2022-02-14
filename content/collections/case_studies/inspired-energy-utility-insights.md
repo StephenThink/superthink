@@ -46,8 +46,8 @@ main_content:
           - work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-Large-4.jpg
           - work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-Large-5.jpg
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - digital
   - display
   - print

@@ -41,10 +41,10 @@ greatest_hits: false
 core:
   - activations
 services_filter:
-  - branding
+  - brand-identity
   - creative-design
   - digital
-  - design
+  - print-design
   - video
   - illustration
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385

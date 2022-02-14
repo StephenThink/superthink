@@ -30,7 +30,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - design
+  - print-design
   - digital
   - display
   - illustration

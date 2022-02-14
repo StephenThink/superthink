@@ -35,7 +35,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - design
+  - print-design
   - digital
   - web-design-and-development
 short_case: false

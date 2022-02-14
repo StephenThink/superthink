@@ -40,8 +40,8 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - display
   - print
 video_choice: Image

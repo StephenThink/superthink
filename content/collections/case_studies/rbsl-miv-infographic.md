@@ -43,8 +43,8 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - print
   - illustration
 short_case: false

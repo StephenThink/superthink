@@ -37,7 +37,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - design
+  - print-design
   - print
 short_case: false
 video_choice: Image

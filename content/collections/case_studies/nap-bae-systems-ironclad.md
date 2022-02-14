@@ -22,7 +22,7 @@ greatest_hits: false
 core:
   - experience
 services_filter:
-  - design
+  - print-design
   - display
   - illustration
   - print

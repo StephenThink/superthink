@@ -32,7 +32,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - design
+  - print-design
   - illustration
   - print
 short_case: false

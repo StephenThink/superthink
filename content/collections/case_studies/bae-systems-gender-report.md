@@ -37,7 +37,7 @@ main_content:
 short_case: false
 video_choice: Image
 services_filter:
-  - design
+  - print-design
   - digital
   - print
   - print-design

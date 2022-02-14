@@ -8,8 +8,8 @@ core:
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1641470875
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - illustration
   - print
 main_content:

@@ -39,7 +39,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
+  - brand-identity
   - display
   - print
 short_case: false

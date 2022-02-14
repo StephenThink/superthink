@@ -36,8 +36,8 @@ main_content:
     type: paragraph
 video_choice: Image
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - digital
   - web-design-and-development
   - print

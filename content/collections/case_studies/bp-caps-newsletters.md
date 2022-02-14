@@ -32,7 +32,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - design
+  - print-design
   - digital
 short_case: false
 video_choice: Image

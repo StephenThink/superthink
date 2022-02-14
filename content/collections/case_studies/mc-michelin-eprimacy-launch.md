@@ -48,7 +48,7 @@ core:
   - experience
 services_filter:
   - creative-design
-  - design
+  - print-design
   - digital
   - print
   - print-design

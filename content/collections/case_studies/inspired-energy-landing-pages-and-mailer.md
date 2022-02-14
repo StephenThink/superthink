@@ -48,8 +48,8 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - digital
   - print
   - web-design-and-development

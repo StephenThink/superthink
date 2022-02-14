@@ -36,7 +36,7 @@ greatest_hits: false
 core:
   - activations
 services_filter:
-  - design
+  - print-design
   - digital
   - illustration
   - print-design

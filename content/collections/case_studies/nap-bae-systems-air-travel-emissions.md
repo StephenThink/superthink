@@ -34,7 +34,7 @@ core:
   - experience
 services_filter:
   - creative-design
-  - design
+  - print-design
   - digital
   - illustration
   - video

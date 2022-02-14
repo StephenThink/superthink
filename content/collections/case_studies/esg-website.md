@@ -22,7 +22,7 @@ greatest_hits: false
 core:
   - activations
 services_filter:
-  - design
+  - print-design
   - digital
 updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
 updated_at: 1642444645

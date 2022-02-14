@@ -22,9 +22,8 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
-  - web-design-and-development
   - brand-identity
+  - web-design-and-development
 short_case: false
 video_choice: Image
 ---

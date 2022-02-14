@@ -9,7 +9,7 @@ core:
   - activations
   - experience
 services_filter:
-  - design
+  - print-design
   - digital
   - creative-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10

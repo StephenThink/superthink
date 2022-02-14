@@ -50,7 +50,7 @@ main_content:
           - work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Small-Image-740x416.25-2.jpg
 short_case: false
 services_filter:
-  - design
+  - print-design
   - print
   - print-design
 ---

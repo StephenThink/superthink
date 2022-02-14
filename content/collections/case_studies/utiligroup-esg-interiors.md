@@ -63,7 +63,7 @@ updated_at: 1642079468
 core:
   - experience
 services_filter:
-  - design
+  - print-design
   - creative-design
   - display
   - print-design

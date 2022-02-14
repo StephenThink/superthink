@@ -42,10 +42,9 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
+  - brand-identity
   - display
   - print
-  - brand-identity
 thumbnail: work/brand/parking-eye-rebrand/ParkingEye-5-Brand-Full-Image-1360x768.5-thumbnail.jpg
 mini_introduction: 'People get itchy at the idea of surveillance. But almost by accident, Parking Eye had created the wrong impression with its old brand. With strong black and yellow colours, angular chevron graphics and strong messaging, they looked and sounded way too authoritarian.'
 short_case: false

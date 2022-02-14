@@ -48,8 +48,8 @@ main_content:
 short_case: false
 video_choice: Image
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - digital
   - illustration
   - print

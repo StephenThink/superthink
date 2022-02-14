@@ -38,7 +38,7 @@ core:
   - experience
 services_filter:
   - creative-design
-  - design
+  - print-design
   - illustration
   - digital
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385

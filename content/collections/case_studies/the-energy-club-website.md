@@ -31,8 +31,8 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - branding
-  - design
+  - brand-identity
+  - print-design
   - illustration
   - video
   - web-design-and-development
