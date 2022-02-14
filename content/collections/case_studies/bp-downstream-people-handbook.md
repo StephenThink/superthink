@@ -46,7 +46,6 @@ services_filter:
   - print-design
   - digital
   - display
-  - print
   - brand-identity
 short_case: false
 video_choice: Image

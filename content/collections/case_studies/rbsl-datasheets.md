@@ -11,7 +11,6 @@ services_filter:
   - brand-identity
   - print-design
   - illustration
-  - print
 main_content:
   -
     type: set

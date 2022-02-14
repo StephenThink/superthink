@@ -38,7 +38,6 @@ services_filter:
   - digital
   - display
   - illustration
-  - print
   - web-design-and-development
 short_case: false
 video_choice: Image

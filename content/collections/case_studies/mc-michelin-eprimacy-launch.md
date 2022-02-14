@@ -47,11 +47,8 @@ core:
   - activations
   - experience
 services_filter:
-  - creative-design
   - print-design
   - digital
-  - print
-  - print-design
   - video
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1643387456

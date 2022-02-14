@@ -46,7 +46,7 @@ secondary_image: work/experience/bae-systems-evp-animation/Nadia-scene-4.gif
 video_choice: Image
 short_case: false
 services_filter:
-  - creative-design
+  - print-design
   - digital
   - illustration
   - video

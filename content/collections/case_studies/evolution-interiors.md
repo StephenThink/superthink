@@ -40,7 +40,6 @@ main_content:
 services_filter:
   - print-design
   - display
-  - print
   - brand-identity
 video_choice: Image
 short_case: false

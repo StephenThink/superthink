@@ -51,6 +51,4 @@ main_content:
 short_case: false
 services_filter:
   - print-design
-  - print
-  - print-design
 ---

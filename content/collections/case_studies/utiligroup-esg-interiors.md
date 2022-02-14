@@ -64,8 +64,6 @@ core:
   - experience
 services_filter:
   - print-design
-  - creative-design
   - display
-  - print-design
   - illustration
 ---

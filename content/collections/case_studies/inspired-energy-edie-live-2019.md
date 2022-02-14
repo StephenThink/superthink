@@ -41,7 +41,7 @@ main_content:
 services_filter:
   - brand-identity
   - display
-  - print
+  - print-design
 short_case: false
 video_choice: Image
 ---

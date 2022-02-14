@@ -43,7 +43,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - print
+  - print-design
 hero_image: work/experience/bp-fvc-commercial-capability-booklet/BP-FVC-Booklet-26-Experience-Full-Image-1360x768.5.jpg
 secondary_image: work/experience/bp-fvc-commercial-capability-booklet/BP-FVC-Booklet-26-Experience-Secondary-Image-896x597.jpg
 short_case: false

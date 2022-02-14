@@ -33,7 +33,6 @@ core:
   - activations
   - experience
 services_filter:
-  - creative-design
   - print-design
   - digital
   - illustration

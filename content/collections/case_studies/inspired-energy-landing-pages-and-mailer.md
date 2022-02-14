@@ -51,7 +51,6 @@ services_filter:
   - brand-identity
   - print-design
   - digital
-  - print
   - web-design-and-development
 video_choice: Image
 ---

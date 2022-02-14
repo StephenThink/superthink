@@ -34,7 +34,6 @@ main_content:
 services_filter:
   - print-design
   - illustration
-  - print
 short_case: false
 video_choice: Image
 ---

@@ -40,5 +40,4 @@ services_filter:
   - print-design
   - digital
   - web-design-and-development
-  - print
 ---

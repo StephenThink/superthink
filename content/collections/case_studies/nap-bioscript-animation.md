@@ -31,7 +31,6 @@ greatest_hits: false
 core:
   - brand
 services_filter:
-  - creative-design
   - print-design
   - digital
   - video

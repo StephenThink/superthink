@@ -55,13 +55,10 @@ core:
   - brand
 services_filter:
   - brand-identity
-  - creative-design
   - print-design
   - digital
   - illustration
   - package-design
-  - print
-  - print-design
   - web-design-and-development
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1643628283

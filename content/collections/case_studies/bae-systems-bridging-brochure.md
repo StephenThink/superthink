@@ -52,5 +52,4 @@ services_filter:
   - print-design
   - digital
   - illustration
-  - print
 ---

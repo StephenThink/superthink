@@ -39,7 +39,6 @@ core:
   - brand
 services_filter:
   - brand-identity
-  - creative-design
   - print-design
   - digital
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10

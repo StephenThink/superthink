@@ -43,5 +43,5 @@ short_case: false
 thumbnail: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Full-Image-1360x768.5-thumbnail.jpg
 video_choice: Image
 services_filter:
-  - print
+  - print-design
 ---

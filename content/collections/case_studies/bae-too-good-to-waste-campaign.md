@@ -44,6 +44,6 @@ main_content:
     type: paragraph
 services_filter:
   - brand-identity
-  - print
+  - print-design
 short_case: false
 ---

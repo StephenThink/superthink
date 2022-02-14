@@ -42,7 +42,6 @@ services_filter:
   - digital
   - display
   - illustration
-  - print
   - video
 video_choice: Image
 short_case: false

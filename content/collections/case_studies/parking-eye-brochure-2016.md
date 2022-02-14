@@ -41,7 +41,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - print
+  - print-design
 thumbnail: work/experience/parkingeye-brochure-2016/ParkingEyeBrochure-10-Experience-Full-Image-1360x768.5-thumbnail.jpg
 short_case: false
 video_choice: Image

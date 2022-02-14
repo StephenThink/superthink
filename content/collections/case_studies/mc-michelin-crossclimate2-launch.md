@@ -59,7 +59,6 @@ services_filter:
   - print-design
   - digital
   - video
-  - print-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1643387374
 video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4

@@ -30,7 +30,6 @@ greatest_hits: false
 core:
   - experience
 services_filter:
-  - creative-design
   - print-design
   - digital
   - illustration

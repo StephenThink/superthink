@@ -53,7 +53,6 @@ services_filter:
   - digital
   - display
   - illustration
-  - print
   - web-design-and-development
 mini_introduction: 'When it came to building their em<b>pie</b>re, Charlie James Pie &amp; Mash knew the perfect creative team to help.'
 short_case: false

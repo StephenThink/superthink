@@ -41,7 +41,6 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - print
   - print-design
 short_case: false
 video_choice: Image

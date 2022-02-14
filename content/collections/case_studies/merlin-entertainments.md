@@ -96,7 +96,7 @@ main_services:
   - brand-identity
 services_filter:
   - web-design-and-development
-  - creative-design
+  - print-design
 core:
   - strategy
 short_case: false

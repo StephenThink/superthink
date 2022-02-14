@@ -43,7 +43,6 @@ services_filter:
   - brand-identity
   - print-design
   - display
-  - print
 video_choice: Image
 short_case: false
 ---

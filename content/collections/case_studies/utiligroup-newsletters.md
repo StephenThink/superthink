@@ -33,7 +33,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - print
+  - print-design
 video_choice: Image
 short_case: false
 ---

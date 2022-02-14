@@ -33,8 +33,6 @@ main_content:
 services_filter:
   - print-design
   - digital
-  - print
-  - print-design
 video_choice: Image
 short_case: false
 ---

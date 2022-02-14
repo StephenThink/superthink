@@ -42,9 +42,8 @@ core:
   - activations
 services_filter:
   - brand-identity
-  - creative-design
-  - digital
   - print-design
+  - digital
   - video
   - illustration
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385

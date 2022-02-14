@@ -50,7 +50,6 @@ services_filter:
   - print-design
   - digital
   - display
-  - print
   - web-design-and-development
 video_choice: Image
 mini_introduction: 'Sub-brands are tricky to get right. Sometimes you need them to be a close cousin of your main brand and others they need to be poles apart. So when Inspired Energy came to us to develop a sub-brand - our pencils were sharp and ready to go.'

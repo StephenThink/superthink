@@ -36,8 +36,7 @@ main_content:
     type: paragraph
 short_case: false
 services_filter:
-  - print
-  - package-design
   - print-design
+  - package-design
 short_para_title: Shorty
 ---

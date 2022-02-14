@@ -34,7 +34,6 @@ services_filter:
   - digital
   - display
   - illustration
-  - print
   - video
 secondary_image: work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Secondary-Image-896x597.jpg
 short_case: false
