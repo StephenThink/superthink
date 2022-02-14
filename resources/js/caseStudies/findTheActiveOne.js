@@ -3,11 +3,11 @@ import gsap from 'gsap';
 
 const hits = document.querySelector('.section-hits');
 var hitsHeight = 0;
+// console.log(hits.offsetHeight);
 if (hits) {
-    hitsHeight = hits.offsetHeight;
-} else {
-    hitsHeight = 1040;
-}
+    hitsHeight = hits.offsetHeight + 200;
+} 
+// console.info(hitsHeight);
 
 
 
