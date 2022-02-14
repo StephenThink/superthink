@@ -56,3 +56,8 @@
 .error {
     color: red;
 }
+
+
+.event-notification-box {
+    @apply fixed right-0 top-0 text-white bg-green-400 mt-3 mr-3 px-5 py-3 rounded-sm shadow-lg transform duration-700;
+}

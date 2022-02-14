@@ -21,6 +21,8 @@ class Pages extends Component
     public $isSetToDefaultHomePage;
     public $isSetToDefaultNotFoundPage;
 
+
+
     /**
      * The validation rules
      *
@@ -109,6 +111,11 @@ class Pages extends Component
         Page::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
+
+        $this->dispatchBrowserEvent('event-notification', [
+            'eventName' => 'New Page',
+            'eventMessage' => 'You have created a new page!',
+        ]);
     }
 
 
@@ -134,6 +141,11 @@ class Pages extends Component
         $this->unassignDefaultNotFoundPage();
         Page::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+
+        $this->dispatchBrowserEvent('event-notification', [
+            'eventName' => 'Updated Page',
+            'eventMessage' => 'You have updated the '. $this->title .' page!',
+        ]);
     }
 
 
@@ -147,6 +159,11 @@ class Pages extends Component
        Page::destroy($this->modelId);
        $this->modalConfirmDeleteVisible = false;
        $this->resetPage();
+
+       $this->dispatchBrowserEvent('event-notification', [
+        'eventName' => 'Deleted',
+        'eventMessage' => 'You have deleted a page!',
+    ]);
     }
 
     /**
@@ -223,7 +240,18 @@ class Pages extends Component
         ];
     }
 
-
+    /**
+     * Notifications
+     *
+     * @return void
+     */
+    public function dispatchEvent()
+    {
+        $this->dispatchBrowserEvent('event-notification', [
+            'eventName' => 'Sample Event',
+            'eventMessage' => 'You have a sample event notification!',
+        ]);
+    }
 
     /**
      * The livewire render function.

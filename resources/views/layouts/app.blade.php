@@ -38,6 +38,8 @@
 
             <!-- Page Content -->
             <main>
+                <div class="event-notification-box opacity-0">
+                </div>
                 {{ $slot }}
             </main>
         </div>
@@ -45,5 +47,9 @@
         @stack('modals')
 
         @livewireScripts
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
     </body>
 </html>
