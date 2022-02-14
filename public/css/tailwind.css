@@ -2140,6 +2140,10 @@ body.fixed-sjj sjj {
   margin-right: -6rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -2952,6 +2956,21 @@ body.fixed-sjj sjj {
   padding-right: 2.5rem;
 }
 
+.py-9 {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .pb-full {
   padding-bottom: 100%;
 }
@@ -3718,6 +3737,10 @@ body.fixed-sjj sjj {
     height: 100%;
   }
 
+  .md\:h-1\/2 {
+    height: 50%;
+  }
+
   .md\:max-h-auto {
     max-height: auto;
   }
@@ -4165,6 +4188,18 @@ body.fixed-sjj sjj {
 
   .land\:h-96 {
     height: 24rem;
+  }
+
+  .land\:h-full {
+    height: 100%;
+  }
+
+  .land\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .land\:h-screen {
+    height: 100vh;
   }
 
   .land\:w-1\/3 {
