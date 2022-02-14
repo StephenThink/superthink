@@ -1,0 +1,17 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: greatest_hits_limit
+        field:
+          default: '3'
+          display: 'Greatest Hits Limit'
+          type: integer
+          icon: integer
+          instructions: 'The amount of hits to display in the case studies page.'
+          listable: hidden
+          instructions_position: above
+          validate:
+            - required
+            - integer

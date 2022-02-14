@@ -18,7 +18,7 @@ const animateIn = function (el) {
 
         if( intro ) {
 
-            console.log( intro )
+            // console.log( intro )
             tl.from( intro, {
                 autoAlpha: 0,
                 duration: 2,
