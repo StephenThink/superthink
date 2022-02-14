@@ -6,7 +6,7 @@
 <section class="pb-12 main__panel_small bg-gradient-blue-to-light dark:bg-gradient-blue-to-dark">
     <div class="container flex">
         <div class="hidden w-full md:w-2/12 land:hidden md:block"></div>
-        <div class="w-full md:w-10/12">
+        <div class="w-full md:w-10/12 {{ if !secondary_image }} pb-36 {{ /if }}">
             <div class="flex flex-wrap items-start -mx-4 md:flex-nowrap">
                 <div class="w-full px-4 text-dark">
                     <h1 class="text-4xl font-black leading-tight md:text-6xl">{{ title }}</h1>
