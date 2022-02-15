@@ -4162,6 +4162,10 @@ body.fixed-sjj sjj {
     margin-top: 0px;
   }
 
+  .land\:block {
+    display: block;
+  }
+
   .land\:hidden {
     display: none;
   }
