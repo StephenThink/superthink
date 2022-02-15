@@ -1,5 +1,5 @@
 title: Customising
 data:
   greatest_hits_limit: 4
-  show_case_studies_count: true
+  show_case_studies_count: false
   case_studies_limit: 3

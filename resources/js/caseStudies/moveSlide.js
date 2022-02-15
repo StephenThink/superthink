@@ -44,4 +44,6 @@ const moveSlide = (e) => {
     
 }
 
+
+
 export default moveSlide

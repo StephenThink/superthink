@@ -1,23 +1,3 @@
-<style>
-    .swiper {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-  
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 200px;
-        height: 200px;
-      }
-  
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-      }
-</style>
-
 {{# Mobile View #}}
 <div class="md:hidden w-full mt-8">
     {{ entries sort="date:asc" as="results" }}
@@ -33,29 +13,32 @@
                 </p>
             {{ /if }}
         </div>
+        <div class="SWrapper">
         <div class="swiper mySwiper">
 
         <div class="swiper-wrapper relative">
             {{ if no_results }}
-                <div class="w-full px-4">
+                {{# <div class="w-full px-4">
                     <p class="">We've nothing yet to show how great we are yet, but rest assured we're masters of <span class="font-bold">{{ header }}</span>, {{ random_sports }}.</p>
-                </div>
+                </div> #}}
             {{ else }}
                 {{ results }}
                     <div class="swiper-slide">
                         <a href="{{ url }}" class="">
-                            <div class="relative overflow-hidden pb-2/3">
+                            <div class="">
                                 {{ if thumbnail }}
                                         <span class="hover-button image">
                                             <span>
-                                                <img src="{{ thumbnail}}" alt="{{ alt }}" class="absolute object-cover w-full h-full " loading=lazy>
+                                                <img src="{{ thumbnail}}" alt="{{ alt }}" class="object-cover w-full h-full swiper-lazy" loading=lazy>
+
                                             </span>
                                         </span>
                                 {{ else }}
                                     {{ hero_image }}
                                         <span class="hover-button image">
                                             <span>
-                                                <img src="{{ url }}" alt="{{ alt }}" class="absolute object-cover w-full h-full " loading=lazy>
+                                                <img src="{{ url }}" alt="{{ alt }}" class="object-cover w-full h-full swiper-lazy" loading=lazy>
+
                                             </span>
                                         </span>
                                     {{ /hero_image }}
@@ -67,19 +50,22 @@
                 {{ /results }}
             {{ /if }}
         </div>
+        <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
+</div>
         {{ /if }}
     {{ /entries }}
 </div>
 
 
 {{# Desktop View #}}
-<div class="hidden land:block md:block w-full mt-8">
-    {{ entries  limit="{ customising:case_studies_limit }" sort="date:asc" as="results" }}
+{{# <div class="hidden land:block md:block w-full mt-8">
+    {{ entries  limit="3" sort="date:asc" as="results" }}
     
         {{ if entries_count >= customising:case_studies_limit }}
         <div class="flex items-end justify-between">
-            <h2 class="text-2xl font-black font-base">{{ header }}  {{ if customising:show_case_studies_count }}<span class="superscript">{{entries_count}}</span>{{ /if }}</h2>
+            <h2 class="text-2xl font-black font-base">{{ header }}  {{ if customising:show_case_studies_count }}<sup class="superscript">{{entries_count}}</sup>{{ /if }}</h2>
             {{ if ! no_results }}
                 <p>
                     <a href="/work/{{ slug | lower }}/all" class="half-height-colour">
@@ -101,7 +87,8 @@
                                 {{ if thumbnail }}
                                         <span class="hover-button image">
                                             <span>
-                                                <img src="{{ thumbnail}}" alt="{{ alt }}" class="absolute object-cover w-full h-full " loading=lazy>
+                                                <img src="{{ thumbnail}}" alt="{{ alt }}" class="absolute object-cover w-full h-full swiper-lazy " loading=lazy>
+                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                                             </span>
                                         </span>
                                 {{ else }}
@@ -122,37 +109,4 @@
         </div>
         {{ /if }}
     {{ /entries }}
-</div>
-<script src="/js/swiper.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-
-    var swiper2 = new Swiper(".mySwiper2", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      }
-    });
-  </script>
+</div> #}}

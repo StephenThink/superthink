@@ -1661,6 +1661,49 @@ sup {
       vertical-align:super;
       }
 
+.SWrapper {
+    position: relative;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.swiper-slide img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    
+  }
+
+.swiper-button-next, .swiper-button-prev {
+    color: #FFC734 !important;
+    /*top: 42% !important;*/
+  }
+
+.swiper-button-next {
+      right: -16px !important;
+  }
+
+.swiper-button-prev {
+      left: -16px !important;
+  }
+
 .container {
   width: 100%;
   margin-right: auto;
