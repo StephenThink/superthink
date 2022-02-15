@@ -25,3 +25,13 @@ sections:
           instructions: 'If you turn this on, this will show numbers after the headers to state how many we have.'
           listable: hidden
           instructions_position: above
+      -
+        handle: case_studies_limit
+        field:
+          default: '3'
+          display: 'Case Studies Limit'
+          type: integer
+          icon: integer
+          instructions: 'This will be the amount of Case Studies to be shown on the display everything.'
+          listable: hidden
+          instructions_position: above
