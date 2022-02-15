@@ -1656,11 +1656,10 @@ body.fixed-sjj sjj {
           }
       }
 
-.superscript
-{
-    vertical-align: super;
-    font-size:1rem;
-}
+sup {
+      font-size:xx-small; 
+      vertical-align:super;
+      }
 
 .container {
   width: 100%;
