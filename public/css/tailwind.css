@@ -1656,6 +1656,12 @@ body.fixed-sjj sjj {
           }
       }
 
+.superscript
+{
+    vertical-align: super;
+    font-size:1rem;
+}
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -2138,10 +2144,6 @@ body.fixed-sjj sjj {
 
 .-mr-24 {
   margin-right: -6rem;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
 }
 
 .block {
@@ -2951,24 +2953,14 @@ body.fixed-sjj sjj {
   padding-right: 2rem;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.py-9 {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .pb-full {
@@ -2981,6 +2973,10 @@ body.fixed-sjj sjj {
 
 .pb-12 {
   padding-bottom: 3rem;
+}
+
+.pb-36 {
+  padding-bottom: 9rem;
 }
 
 .pb-2\/3 {
@@ -3057,10 +3053,6 @@ body.fixed-sjj sjj {
 
 .pb-2 {
   padding-bottom: 0.5rem;
-}
-
-.pb-36 {
-  padding-bottom: 9rem;
 }
 
 .text-center {
@@ -3535,10 +3527,6 @@ body.fixed-sjj sjj {
 
 @media (min-width: 540px) {
 
-  .sm\:absolute {
-    position: absolute;
-  }
-
   .sm\:block {
     display: block;
   }
@@ -3737,10 +3725,6 @@ body.fixed-sjj sjj {
     height: 100%;
   }
 
-  .md\:h-1\/2 {
-    height: 50%;
-  }
-
   .md\:max-h-auto {
     max-height: auto;
   }
@@ -3838,12 +3822,12 @@ body.fixed-sjj sjj {
     transform: var(--tw-transform);
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -4107,10 +4091,6 @@ body.fixed-sjj sjj {
     width: 41.666667%;
   }
 
-  .xl\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .xl\:flex-row {
     flex-direction: row;
   }
@@ -4186,24 +4166,20 @@ body.fixed-sjj sjj {
     display: none;
   }
 
-  .land\:h-36 {
-    height: 9rem;
-  }
-
-  .land\:h-96 {
-    height: 24rem;
+  .land\:h-screen {
+    height: 100vh;
   }
 
   .land\:h-full {
     height: 100%;
   }
 
-  .land\:h-\[600px\] {
-    height: 600px;
+  .land\:h-36 {
+    height: 9rem;
   }
 
-  .land\:h-screen {
-    height: 100vh;
+  .land\:h-96 {
+    height: 24rem;
   }
 
   .land\:w-1\/3 {

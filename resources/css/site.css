@@ -935,3 +935,9 @@ sjj {
             left:0;
           }
       } 
+
+.superscript
+{
+    vertical-align: super;
+    font-size:1rem;
+}

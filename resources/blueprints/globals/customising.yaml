@@ -15,3 +15,13 @@ sections:
           validate:
             - required
             - integer
+      -
+        handle: show_case_studies_count
+        field:
+          default: false
+          display: 'Show Case Studies Count'
+          type: toggle
+          icon: toggle
+          instructions: 'If you turn this on, this will show numbers after the headers to state how many we have.'
+          listable: hidden
+          instructions_position: above

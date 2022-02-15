@@ -1,8 +1,9 @@
 <div class="w-full mt-8">
     {{ entries  limit="3" sort="date:asc" as="results" }}
     
+        {{ if entries_count >= 3 }}
         <div class="flex items-end justify-between">
-            <h2 class="text-2xl font-black font-base">{{ header }}</h2>
+            <h2 class="text-2xl font-black font-base">{{ header }}  {{ if customising:show_case_studies_count }}<span class="superscript">{{entries_count}}</span>{{ /if }}</h2>
             {{ if ! no_results }}
                 <p>
                     <a href="/work/{{ slug | lower }}/all" class="half-height-colour">
@@ -43,5 +44,6 @@
                 {{ /results }}
             {{ /if }}
         </div>
+        {{ /if }}
     {{ /entries }}
 </div>
