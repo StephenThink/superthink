@@ -3575,7 +3575,41 @@ var moveSlide = function moveSlide(e) {
   var slide = e.target.dataset.slide;
   var mainSection = document.querySelectorAll('.filter-section')[0];
   var buttons = document.querySelectorAll('.content-slider');
-  sectionOutMove = (0,_findTheActiveOne__WEBPACK_IMPORTED_MODULE_0__.default)('.filter-section', true); //bail if we have press the same button. 
+  var allSwipers = document.querySelectorAll('.mySwiper');
+  var setSwipers = false;
+  sectionOutMove = (0,_findTheActiveOne__WEBPACK_IMPORTED_MODULE_0__.default)('.filter-section', true);
+
+  if (!sectionOutMove.classList.contains('section-services')) {
+    // When on everything
+    // This only allows the function to run once
+    if (!setSwipers) {
+      setSwipers = true;
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    }
+
+    allSwipers.forEach(function ($item) {
+      $item.classList.remove('hidden');
+    });
+  } else {
+    // The Time out is there just so that you dont lose the pictures before the end of the transition.
+    setTimeout(function () {
+      // Hides all the Swipers
+      allSwipers.forEach(function ($item) {
+        $item.classList.add('hidden');
+      });
+    }, 500);
+  } //bail if we have press the same button. 
+
 
   if (sectionOutMove.classList.contains('section-' + slide)) {
     return 'bail';
