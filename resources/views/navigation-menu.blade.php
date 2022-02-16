@@ -115,6 +115,17 @@
                 <x-jet-dropdown-link href="{{ route('user-permissions') }}" :active="request()->routeIs('user-permissions')">
                     {{ __('User Permissions') }}
                 </x-jet-dropdown-link>
+
+                <!-- Users Management -->
+                <div class="block px-4 py-2 text-xs text-gray-400">
+                    {{ __('Manage Holidays') }}
+                </div>
+
+                <!-- Pages / Nav Options -->
+
+                <x-jet-dropdown-link href="{{ route('holidays') }}" :active="request()->routeIs('holidays')">
+                    {{ __('Holidays') }}
+                </x-jet-dropdown-link>
             </div>
         </x-slot>
     </x-jet-dropdown>
@@ -151,11 +162,11 @@
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
 
-                            {{-- @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
                                     {{ __('API Tokens') }}
                                 </x-jet-dropdown-link>
-                            @endif --}}
+                            @endif
 
                             <div class="border-t border-gray-100"></div>
 
@@ -233,7 +244,7 @@
                 </form>
 
                 <!-- Team Management -->
-                {{-- @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
+                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="border-t border-gray-200"></div>
 
                     <div class="block px-4 py-2 text-xs text-gray-400">
@@ -261,7 +272,7 @@
                     @foreach (Auth::user()->allTeams() as $team)
                         <x-jet-switchable-team :team="$team" component="jet-responsive-nav-link" />
                     @endforeach
-                @endif --}}
+                @endif
             </div>
         </div>
     </div>

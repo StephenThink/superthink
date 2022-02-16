@@ -79,6 +79,11 @@
             @error('passwordConfirmation') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div class="mt-4">
+            <x-jet-label for="dateStarted" value="{{ __('Start Date') }}" />
+            <x-jet-input wire:model.defer="dateStarted" id="" class="block mt-1 w-full" type="date" />
+            @error('dateStarted') <span class="error">{{ $message }}</span> @enderror
+        </div>
+        <div class="mt-4">
             <x-jet-label for="role" value="{{ __('Role') }}" />
             <select wire:model.defer="role" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option value="">-- Select a Role --</option>
@@ -91,7 +96,7 @@
     </x-slot>
 
     <x-slot name="footer">
-        <x-jet-secondary-button wire:click="$toggle('modalFormVisible')" wire:loading.attr="disabled">
+        <x-jet-secondary-button wire:click="$toggle('modalCreateFormVisible')" wire:loading.attr="disabled">
             {{ __('Nevermind') }}
         </x-jet-secondary-button>
 
@@ -118,6 +123,11 @@
                 <x-jet-label for="name" value="{{ __('Name') }}" />
                 <x-jet-input wire:model="name" id="" class="block mt-1 w-full" type="text" />
                 @error('name') <span class="error">{{ $message }}</span> @enderror
+            </div>
+            <div class="mt-4">
+                <x-jet-label for="dateStarted" value="{{ __('Start Date') }}" />
+                <x-jet-input wire:model.defer="dateStarted" id="" class="block mt-1 w-full" type="date" />
+                @error('dateStarted') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mt-4">
                 <x-jet-label for="role" value="{{ __('Role') }}" />

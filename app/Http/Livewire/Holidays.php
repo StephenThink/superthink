@@ -2,11 +2,13 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\UserPermission;
+use App\Models\Holiday;
 use Livewire\Component;
+use App\Http\Livewire\Users;
+use App\Models\User;
 use Livewire\WithPagination;
 
-class UserPermissions extends Component
+class Holidays extends Component
 {
     use WithPagination;
 
@@ -17,8 +19,13 @@ class UserPermissions extends Component
     /**
      * Put your custom public properties here!
      */
-    public $role;
-    public $routeName;
+    public $user_id;
+    public $start;
+    public $end;
+    public $halfDay;
+    public $dateAuthorised;
+    public $daysTaken;
+    public $authorisedBy;
 
     /**
      * The validation rules
@@ -28,9 +35,19 @@ class UserPermissions extends Component
     public function rules()
     {
         return [
-            'role' => 'required',
-            'routeName' => 'required',
+            'user_id' => 'required',
         ];
+    }
+
+     /**
+     * Runs everytime the title gets updated
+     *
+     * @param  mixed $value
+     * @return void
+     */
+    public function updatedEnd($value)
+    {
+        $this->daysTaken = 2;
     }
 
     /**
@@ -41,10 +58,16 @@ class UserPermissions extends Component
      */
     public function loadModel()
     {
-        $data = UserPermission::find($this->modelId);
+        $data = Holiday::find($this->modelId);
         // Assign the variables here
-        $this->role = $data->role;
-        $this->routeName = $data->route_name;
+        $this->user_id = $data->user_id;
+        $this->start = $data->start;
+        $this->end = $data->end;
+        $this->halfDay = $data->halfDay;
+        $this->dateAuthorised = $data->dateAuthorised;
+        $this->daysTaken = $data->daysTaken;
+        $this->authorisedBy = $data->authorisedBy;
+
     }
 
     /**
@@ -56,8 +79,13 @@ class UserPermissions extends Component
     public function modelData()
     {
         return [
-            'role' => $this->role,
-            'route_name' => $this->routeName,
+            'user_id' => $this->user_id,
+            'start' => $this->start,
+            'end' => $this->end,
+            'halfDay' => $this->halfDay,
+            'dateAuthorised' => $this->dateAuthorised,
+            'daysTaken' => $this->daysTaken,
+            'authorisedBy' => $this->authorisedBy,
         ];
     }
 
@@ -69,7 +97,9 @@ class UserPermissions extends Component
     public function create()
     {
         $this->validate();
-        UserPermission::create($this->modelData());
+        $this->daysTaken = 2;
+        $this->authorisedBy = Auth()->user()->id;
+        Holiday::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
     }
@@ -81,7 +111,7 @@ class UserPermissions extends Component
      */
     public function read()
     {
-        return UserPermission::paginate(10);
+        return Holiday::paginate(10);
     }
 
     /**
@@ -91,8 +121,8 @@ class UserPermissions extends Component
      */
     public function update()
     {
-        $this->validate();
-        UserPermission::find($this->modelId)->update($this->modelData());
+        // $this->validate();
+        Holiday::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -103,7 +133,7 @@ class UserPermissions extends Component
      */
     public function delete()
     {
-        UserPermission::destroy($this->modelId);
+        Holiday::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -150,8 +180,11 @@ class UserPermissions extends Component
 
     public function render()
     {
-        return view('livewire.user-permissions', [
+        $staffNames = User::all();
+
+        return view('livewire.holidays', [
             'data' => $this->read(),
+            'staffMembers' => $staffNames
         ]);
     }
 }

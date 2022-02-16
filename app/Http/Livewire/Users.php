@@ -25,6 +25,7 @@ class Users extends Component
     public $email;
     public $password;
     public $passwordConfirmation;
+    public $dateStarted;
 
 /**
  * Needed for creating a Teams with a new user
@@ -43,6 +44,7 @@ public $newUserId;
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|same:passwordConfirmation',
+            'dateStarted' => 'required|date|date_format:Y-m-d',
         ];
     }
 
@@ -57,6 +59,7 @@ public $newUserId;
         $data = User::find($this->modelId);
         $this->role = $data->role;
         $this->name = $data->name;
+        $this->dateStarted = $data->dateStarted;
     }
 
     /**
@@ -70,6 +73,7 @@ public $newUserId;
         return [
             'role' => $this->role,
             'name' => $this->name,
+            'dateStarted' => $this->dateStarted,
         ];
     }
 
@@ -86,6 +90,7 @@ public $newUserId;
             'name' => $this->name,
             'email' => $this->email,
             'password' => Hash::make($this->password),
+            'dateStarted' => $this->dateStarted
         ];
     }
     /**
@@ -131,7 +136,10 @@ public $newUserId;
      */
     public function update()
     {
-        $this->validate();
+        // dd($this->dateStarted);
+        // Had to turn off validation as it doesnt work with the dateStarted????
+        // $this->validate();
+
         User::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }

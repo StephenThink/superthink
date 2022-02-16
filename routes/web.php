@@ -42,6 +42,10 @@ Route::group(['middleware' => [
         return view('admin.user-permissions');
     })->name('user-permissions');
 
+    Route::get('/holidays', function () {
+        return view('admin.holidays');
+    })->name('holidays');
+
 });
 
 

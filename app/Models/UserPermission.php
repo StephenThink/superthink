@@ -23,6 +23,7 @@ class UserPermission extends Model
             'dashboard',
             'users',
             'user-permissions',
+            'holidays'
         ];
     }
 

@@ -26,7 +26,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name', 'email', 'password','role',
+        'name', 'email', 'password','role','dateStarted'
     ];
 
     /**
@@ -48,6 +48,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        // 'dateStarted' => 'date:d-m-Y',
     ];
 
     /**
@@ -70,5 +71,10 @@ class User extends Authenticatable
             'admin' => 'Admin',
             'user' => 'User'
         ];
+    }
+
+    public function holidays()
+    {
+        return $this->hasMany('App\Models\Holiday');
     }
 }
