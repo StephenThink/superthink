@@ -982,7 +982,7 @@ sjj {
 
   .swiper-button-next, .swiper-button-prev {
     color: theme('colors.yellow') !important;
-    /*top: 42% !important;*/
+    top: 42% !important;
   }
 
   .swiper-button-next {

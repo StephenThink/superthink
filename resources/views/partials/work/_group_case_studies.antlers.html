@@ -3,7 +3,7 @@
     {{ entries sort="date:asc" as="results" }}
     
         {{ if entries_count >= customising:case_studies_limit }}
-        <div class="flex items-end justify-between mt-8">
+        <div class="flex items-end justify-between {{ if !first }}mt-8{{ /if }}">
             <h2 class="text-2xl font-black font-base">{{ header }}  {{ if customising:show_case_studies_count }}<sup class="superscript">{{entries_count}}</sup>{{ /if }}</h2>
             {{ if ! no_results }}
                 <p>
