@@ -982,7 +982,15 @@ sjj {
 
   .swiper-button-next, .swiper-button-prev {
     color: theme('colors.yellow') !important;
-    top: 42% !important;
+    top: 45% !important;
+    width: 40px !important;
+    height: 40px !important;
+    @apply bg-dark rounded-full !p-2 flex justify-center items-center
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 20px !important;
   }
 
   .swiper-button-next {
