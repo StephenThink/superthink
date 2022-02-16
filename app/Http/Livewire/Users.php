@@ -144,6 +144,8 @@ public $newUserId;
     public function delete()
     {
         User::destroy($this->modelId);
+        // Delete the team as well
+        DB::table('teams')->where('user_id',$this->modelId)->delete();
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
