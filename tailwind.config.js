@@ -96,6 +96,7 @@ module.exports = {
         "1px" : "1px",
         "screen": "100vw",
         handle: "5rem",
+        tea: "22.5rem",
         "handle-nm": "calc( 100vw - 5rem )",
         "vertical-handle-nm": "calc(100vh - 120px)",
         "750": "750px",
