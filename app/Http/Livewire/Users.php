@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class Users extends Component
@@ -24,6 +25,11 @@ class Users extends Component
     public $email;
     public $password;
     public $passwordConfirmation;
+
+/**
+ * Needed for creating a Teams with a new user
+ */
+public $newUserId;
 
     /**
      * The validation rules
@@ -91,6 +97,19 @@ class Users extends Component
     {
         $this->validate();
         User::create($this->createModelData());
+        // Find out New Users ID
+        $this->newUserId = User::where('email', $this->email)->first();
+
+        // Get the new Team ID
+        $newTeamId = DB::table('teams')->get()->count() + 1;
+
+        // Create Team for User
+        DB::table('teams')->insert([
+            'user_id' => $this->newUserId->id,
+            'name' => explode(' ', $this->newUserId->name, 2)[0]  . "'s Team",
+            'personal_team' => 1,
+        ]);
+
         $this->modalCreateFormVisible = false;
         $this->reset();
     }
@@ -102,7 +121,7 @@ class Users extends Component
      */
     public function read()
     {
-        return User::paginate(5);
+        return User::paginate(10);
     }
 
     /**
@@ -171,6 +190,7 @@ class Users extends Component
 
     public function render()
     {
+
         return view('livewire.users', [
             'data' => $this->read(),
         ]);
