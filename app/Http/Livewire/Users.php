@@ -5,12 +5,14 @@ namespace App\Http\Livewire;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Hash;
 
 class Users extends Component
 {
     use WithPagination;
 
     public $modalFormVisible;
+    public $modalCreateFormVisible;
     public $modalConfirmDeleteVisible;
     public $modelId;
 
@@ -19,6 +21,9 @@ class Users extends Component
      */
     public $role;
     public $name;
+    public $email;
+    public $password;
+    public $passwordConfirmation;
 
     /**
      * The validation rules
@@ -30,6 +35,8 @@ class Users extends Component
         return [
             'role' => 'required',
             'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6|same:passwordConfirmation',
         ];
     }
 
@@ -61,6 +68,21 @@ class Users extends Component
     }
 
     /**
+     * The data for the model mapped
+     * in this component.
+     *
+     * @return void
+     */
+    public function createModelData()
+    {
+        return [
+            'role' => $this->role,
+            'name' => $this->name,
+            'email' => $this->email,
+            'password' => Hash::make($this->password),
+        ];
+    }
+    /**
      * The create function.
      *
      * @return void
@@ -68,8 +90,8 @@ class Users extends Component
     public function create()
     {
         $this->validate();
-        User::create($this->modelData());
-        $this->modalFormVisible = false;
+        User::create($this->createModelData());
+        $this->modalCreateFormVisible = false;
         $this->reset();
     }
 
@@ -116,7 +138,7 @@ class Users extends Component
     {
         $this->resetValidation();
         $this->reset();
-        $this->modalFormVisible = true;
+        $this->modalCreateFormVisible = true;
     }
 
     /**
