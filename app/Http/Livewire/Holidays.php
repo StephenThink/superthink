@@ -6,6 +6,7 @@ use App\Models\Holiday;
 use Livewire\Component;
 use App\Http\Livewire\Users;
 use App\Models\User;
+use Carbon\Carbon;
 use Livewire\WithPagination;
 
 class Holidays extends Component
@@ -36,6 +37,9 @@ class Holidays extends Component
     {
         return [
             'user_id' => 'required',
+            'start' => 'required|date',
+            'end' => 'required|date|after_or_equal:start',
+            'dateAuthorised' => 'required|date',
         ];
     }
 
@@ -45,10 +49,30 @@ class Holidays extends Component
      * @param  mixed $value
      * @return void
      */
-    public function updatedEnd($value)
+    public function calcDaysTaken()
     {
-        $this->daysTaken = 2;
+        // Grab the dates that we need to work out.
+        $d = Carbon::parse($this->start)->floatDiffInDays($this->end);
+
+        // If the start and end are the same date, check to see if the person wants half a day or not
+        if ($d === 0) {
+            if ($this->halfDay) {
+                $this->daysTaken = 0.5;
+            } else {
+                $this->daysTaken = 1;
+            }
+        // Again checking to see if the person wants half a day on top of their choosen dates 
+        } else {
+            if( $this->halfDay) {
+                $this->daysTaken = $d + 0.5;
+            } else {
+                $this->daysTaken = $d;
+            }
+        }
+
+        return $this->daysTaken;
     }
+
 
     /**
      * Loads the model data
@@ -96,12 +120,20 @@ class Holidays extends Component
      */
     public function create()
     {
+
         $this->validate();
-        $this->daysTaken = 2;
+
+        $this->calcDaysTaken();
+
         $this->authorisedBy = Auth()->user()->id;
         Holiday::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
+    }
+
+    protected function daysTakenAmount()
+    {
+
     }
 
     /**
@@ -121,7 +153,8 @@ class Holidays extends Component
      */
     public function update()
     {
-        // $this->validate();
+        $this->validate();
+        $this->calcDaysTaken();
         Holiday::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
@@ -147,6 +180,11 @@ class Holidays extends Component
     {
         $this->resetValidation();
         $this->reset();
+
+        // To default the Date Authorised to today.
+        $this->dateAuthorised = Carbon::now()->toDateString();
+
+
         $this->modalFormVisible = true;
     }
 

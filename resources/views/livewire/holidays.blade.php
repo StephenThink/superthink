@@ -28,7 +28,9 @@
                                         <td class="px-6 py-2">{{ $item->users->name }}</td>
                                         <td class="px-6 py-2">{{ $item->start }}</td>
                                         <td class="px-6 py-2">{{ $item->end }}</td>
-                                        <td class="px-6 py-2">{{ $item->halfDay }}</td>
+                                        <td class="px-6 py-2">@if ( $item->halfDay  == 1)
+                                            Yes
+                                        @endif</td>
                                         <td class="px-6 py-2">{{ $item->daysTaken }}</td>
                                         <td class="px-6 py-2 flex justify-end">
                                             <x-jet-button wire:click="updateShowModal({{ $item->id }})">
@@ -86,13 +88,8 @@
             </div>
             <div class="mt-4">
                 <x-jet-label for="halfDay" value="{{ __('Half a Day?') }}" />
-                <x-jet-checkbox wire:model.defer="halfDay" id="" class="block mt-1 w-full" type="date" />
+                <x-jet-checkbox wire:model.defer="halfDay" id="" class="block mt-1" type="checkbox" />
                 @error('halfDay') <span class="error">{{ $message }}</span> @enderror
-            </div>
-            <div class="mt-4">
-                <x-jet-label for="daysTaken" value="{{ __('Days Taken') }}" />
-                <x-jet-input wire:model.defer="daysTaken" id="" class="block mt-1 w-full" type="number" />
-                @error('daysTaken') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mt-4">
                 <x-jet-label for="dateAuthorised" value="{{ __('Date Authorised') }}" />
