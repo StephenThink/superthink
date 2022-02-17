@@ -36,9 +36,11 @@
                                             <x-jet-button wire:click="updateShowModal({{ $item->id }})">
                                                 {{ __('Update') }}
                                             </x-jet-button>
+                                            @if ( $item->start >= now() )
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
                                                 {{ __('Delete') }}
                                             </x-jet-button>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach
@@ -65,12 +67,18 @@
         </x-slot>
 
         <x-slot name="content">
+            <div class="mt-4" x-data="{ show: @entangle('daysErrorVisible') }">
+                <div x-show="open" class="bg-red-200 border border-red-600 text-red-600 p-2 rounded-lg">
+                    You dont have enough days to take.
+                </div>
+
+            </div>
             <div class="mt-4">
                 <x-jet-label for="user_id" value="{{ __('Staff Member') }}" />
                 <select wire:model.defer="user_id" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                     <option value="">-- Select a Staff Member --</option>
                     @foreach ($staffMembers as $s)
-                    <option value="{{$s->id}}">{{$s->name}}</option>
+                    <option value="{{$s->id}}">{{$s->name}} - ( {{$s->leaveDays}} days left )</option>
                     @endforeach
 
                 </select>

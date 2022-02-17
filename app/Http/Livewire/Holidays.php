@@ -16,6 +16,7 @@ class Holidays extends Component
     public $modalFormVisible;
     public $modalConfirmDeleteVisible;
     public $modelId;
+    public $daysErrorVisible;
 
     /**
      * Put your custom public properties here!
@@ -27,6 +28,9 @@ class Holidays extends Component
     public $dateAuthorised;
     public $daysTaken;
     public $authorisedBy;
+
+    public $leaveDays;
+
 
     /**
      * The validation rules
@@ -40,6 +44,7 @@ class Holidays extends Component
             'start' => 'required|date',
             'end' => 'required|date|after_or_equal:start',
             'dateAuthorised' => 'required|date',
+            'daysTaken' => 'gte:leaveDays'
         ];
     }
 
@@ -61,12 +66,13 @@ class Holidays extends Component
             } else {
                 $this->daysTaken = 1;
             }
-        // Again checking to see if the person wants half a day on top of their choosen dates 
+        // Again checking to see if the person wants half a day on top of their choosen dates
+        // The one is so that it works it out correctly
         } else {
             if( $this->halfDay) {
-                $this->daysTaken = $d + 0.5;
+                $this->daysTaken = $d + 1.5;
             } else {
-                $this->daysTaken = $d;
+                $this->daysTaken = $d + 1;
             }
         }
 
@@ -120,23 +126,34 @@ class Holidays extends Component
      */
     public function create()
     {
+        // Find out how many leave days they have left
+        $user = User::findOrFail($this->user_id);
+        $this->leaveDays = $user->pluck('leaveDays')->first();
 
         $this->validate();
 
         $this->calcDaysTaken();
 
+        // The User who has logged in
         $this->authorisedBy = Auth()->user()->id;
-        Holiday::create($this->modelData());
-        $this->modalFormVisible = false;
-        $this->reset();
+
+        // If they have enough days let them book the holiday.
+        if ($this->leaveDays > $this->daysTaken) {
+            Holiday::create($this->modelData());
+
+            // Remove Days Leave
+            User::findOrFail($this->user_id)->decrement('leaveDays', $this->daysTaken);
+
+            $this->modalFormVisible = false;
+            $this->reset();
+        } else {
+            $this->daysErrorVisible = true;
+
+        }
+
     }
 
-    protected function daysTakenAmount()
-    {
-
-    }
-
-    /**
+       /**
      * The read function.
      *
      * @return void
@@ -166,6 +183,11 @@ class Holidays extends Component
      */
     public function delete()
     {
+        $dTaken = Holiday::findOrFail($this->modelId)->pluck('daysTaken')->first();
+        $dUser =Holiday::findOrFail($this->modelId)->pluck('user_id')->first();
+        // Remove Days Leave
+        User::findOrFail($dUser)->increment('leaveDays', $dTaken);
+
         Holiday::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
@@ -184,7 +206,7 @@ class Holidays extends Component
         // To default the Date Authorised to today.
         $this->dateAuthorised = Carbon::now()->toDateString();
 
-
+        $this->daysErrorVisible = false;
         $this->modalFormVisible = true;
     }
 
