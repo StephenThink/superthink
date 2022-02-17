@@ -16,7 +16,7 @@ class AddDatesForHolidaysToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             //
             $table->date('dateStarted')->default('2022-01-01')->after('name');
-            $table->integer('leaveDays')->default('20')->after('dateStarted');
+            $table->float('leaveDays')->default('20')->after('dateStarted');
 
         });
     }

@@ -44,7 +44,7 @@ class Holidays extends Component
             'start' => 'required|date',
             'end' => 'required|date|after_or_equal:start',
             'dateAuthorised' => 'required|date',
-            'daysTaken' => 'gte:leaveDays'
+            // 'daysTaken' => 'gte:leaveDays'
         ];
     }
 
@@ -77,6 +77,45 @@ class Holidays extends Component
         }
 
         return $this->daysTaken;
+    }
+
+    /**
+     * This takes the Days that should of been taken and adds them back to the user field
+     *
+     * @return void
+     */
+    public function addingDaysBack() {
+        $dTaken = Holiday::findOrFail($this->modelId)->pluck('daysTaken')->first();
+        $dUser =Holiday::findOrFail($this->modelId)->pluck('user_id')->first();
+        // Remove Days Leave
+        User::findOrFail($dUser)->increment('leaveDays', $dTaken);
+    }
+
+    /**
+     * Calculates wether or not people should have days added or taken away.
+     *
+     * @return void
+     */
+    public function updateLeaveDays()
+    {
+        $oriDays = Holiday::find($this->modelId)->pluck('daysTaken')->first();
+
+        if ($oriDays != $this->daysTaken) {
+            if ($oriDays <= $this->daysTaken) {
+                // If There have been less days been taken do this
+                $dayDifference = $oriDays - $this->daysTaken;
+
+                User::findOrFail($this->user_id)->increment('leaveDays', $dayDifference);
+
+            } else {
+            // If There have been more days been taken do this
+            $dayDifference = $this->daysTaken - $oriDays;
+
+
+                User::findOrFail($this->user_id)->decrement('leaveDays', $dayDifference);
+
+            }
+        }
     }
 
 
@@ -147,7 +186,7 @@ class Holidays extends Component
             $this->modalFormVisible = false;
             $this->reset();
         } else {
-            $this->daysErrorVisible = true;
+            dd("Opps");
 
         }
 
@@ -170,8 +209,11 @@ class Holidays extends Component
      */
     public function update()
     {
+
+
         $this->validate();
         $this->calcDaysTaken();
+        $this->updateLeaveDays();
         Holiday::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
@@ -183,11 +225,8 @@ class Holidays extends Component
      */
     public function delete()
     {
-        $dTaken = Holiday::findOrFail($this->modelId)->pluck('daysTaken')->first();
-        $dUser =Holiday::findOrFail($this->modelId)->pluck('user_id')->first();
-        // Remove Days Leave
-        User::findOrFail($dUser)->increment('leaveDays', $dTaken);
 
+        $this->addingDaysBack();
         Holiday::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();

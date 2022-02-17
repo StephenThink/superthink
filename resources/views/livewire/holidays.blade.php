@@ -59,7 +59,6 @@
     <div class="mt-5">
     {{ $data->links() }}
     </div>
-`
     {{-- Modal Form --}}
     <x-jet-dialog-modal wire:model="modalFormVisible">
         <x-slot name="title">
