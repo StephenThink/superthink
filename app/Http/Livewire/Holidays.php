@@ -16,7 +16,7 @@ class Holidays extends Component
     public $modalFormVisible;
     public $modalConfirmDeleteVisible;
     public $modelId;
-    public $daysErrorVisible;
+    public $daysErrorVisible = false;
 
     /**
      * Put your custom public properties here!
@@ -186,7 +186,7 @@ class Holidays extends Component
             $this->modalFormVisible = false;
             $this->reset();
         } else {
-            dd("Opps");
+            $this->daysErrorVisible = true;
 
         }
 

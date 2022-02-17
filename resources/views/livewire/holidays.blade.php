@@ -66,7 +66,7 @@
         </x-slot>
 
         <x-slot name="content">
-            <div class="mt-4" x-data="{ show: @entangle('daysErrorVisible') }">
+            <div class="mt-4" x-data="{ open: @entangle('daysErrorVisible') }">
                 <div x-show="open" class="bg-red-200 border border-red-600 text-red-600 p-2 rounded-lg">
                     You dont have enough days to take.
                 </div>
