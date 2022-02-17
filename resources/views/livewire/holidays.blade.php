@@ -26,8 +26,8 @@
                                 @foreach ($data as $item)
                                     <tr>
                                         <td class="px-6 py-2">{{ $item->users->name }}</td>
-                                        <td class="px-6 py-2">{{ $item->start }}</td>
-                                        <td class="px-6 py-2">{{ $item->end }}</td>
+                                        <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->start)->format('D jS M, Y') }}</td>
+                                        <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->end)->format('D jS M, Y') }}</td>
                                         <td class="px-6 py-2">@if ( $item->halfDay  == 1)
                                             Yes
                                         @endif</td>

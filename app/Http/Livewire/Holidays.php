@@ -199,7 +199,10 @@ class Holidays extends Component
      */
     public function read()
     {
-        return Holiday::paginate(10);
+        return Holiday::where('start', '>=', now())
+        ->orWhere('end','>',now())
+        ->orderBy('start', 'asc')
+        ->paginate(10);
     }
 
     /**
