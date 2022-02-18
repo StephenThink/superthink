@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Holiday;
 use Livewire\Component;
@@ -12,7 +13,8 @@ class HolidayOverview extends Component
 {
     use WithPagination;
 
-
+    public $modalConfirmDeleteVisible;
+    public $modelId;
 
     /**
      * The read function.
@@ -24,32 +26,53 @@ class HolidayOverview extends Component
         return User::paginate(10);
     }
 
+    /**
+     * The delete function.
+     *
+     * @return void
+     */
+    public function delete()
+    {
+
+        app('App\Http\Livewire\Holidays')->addingDaysBack();
+        Holiday::destroy($this->modelId);
+        $this->modalConfirmDeleteVisible = false;
+        $this->resetPage();
+    }
+
+    /**
+     * Shows the delete confirmation modal.
+     *
+     * @param  mixed $id
+     * @return void
+     */
+    public function deleteShowModal($id)
+    {
+        $this->modelId = $id;
+        $this->modalConfirmDeleteVisible = true;
+    }
 
 
     public function render()
     {
+        // Get all users
+        $users = User::all();
 
-        $users = User::all(); // Get all users
-        $usersIds = $users->pluck('id'); // Get users id's
-        $holidays = Holiday::orderBy('start')->get();
+        // Get Current Year
+        $currentYear = Carbon::now()->year;
 
+        // Get all the holidays for this year and order them by the start date
+        $holidays = Holiday::whereYear('start', $currentYear)->orderBy('start')->get();
+
+        // Create Blank Array
         $allHolidays = [];
-        $allHolidays = $usersIds;
 
-        foreach ($users as $key => $user) {
-
+        foreach ($users as $user) {
+                // See if a user has a holiday and if they do add them to their array
                 $allHolidays[$user->name] = $holidays->where('user_id', '=', $user->id);
-
         }
 
 
-        foreach ($users as $key => $user ){
-
-            unset($allHolidays[$key]);
-        }
-
-
-// dd($allHolidays);
 
         return view('livewire.holiday-overview', [
             'staff' => $this->read(),
