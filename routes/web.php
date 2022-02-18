@@ -46,6 +46,10 @@ Route::group(['middleware' => [
         return view('admin.holidays');
     })->name('holidays');
 
+    Route::get('/holidays/overview', function () {
+        return view('admin.holidays-overview');
+    })->name('holidays-overview');
+
 });
 
 

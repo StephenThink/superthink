@@ -24,4 +24,8 @@ class Holiday extends Model
         return $this->belongsTo('App\Models\User', 'user_id');
     }
 
+    public function authorisedBys()
+    {
+        return $this->belongsTo('App\Models\User', 'authorisedBy');
+    }
 }

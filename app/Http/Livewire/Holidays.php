@@ -127,6 +127,7 @@ class Holidays extends Component
      */
     public function loadModel()
     {
+
         $data = Holiday::find($this->modelId);
         // Assign the variables here
         $this->user_id = $data->user_id;
