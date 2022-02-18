@@ -185,7 +185,11 @@ class CurrentUserHolidays extends Component
      */
     public function read()
     {
-        return Holiday::where('user_id',auth()->user()->id)->get();
+        return Holiday::where('user_id',auth()->user()->id)
+        ->where('start', '>=', now())
+        ->orWhere('end','>',now())
+        ->orderBy('start')
+        ->get();
     }
 
        /**

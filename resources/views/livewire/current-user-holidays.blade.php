@@ -6,7 +6,7 @@
             Holidays <span wire:poll class="text-sm"> by the way you have {{ auth()->user()->leaveDays }} day's left to take before the end of the year.</span>
         </div>
         <x-jet-button wire:click="createShowModal">
-            {{ __('Create') }}
+            {{ __('Request Holiday') }}
         </x-jet-button>
         </div>
 
