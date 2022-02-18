@@ -85,10 +85,10 @@ class Holidays extends Component
      * @return void
      */
     public function addingDaysBack() {
-        $dTaken = Holiday::findOrFail($this->modelId)->pluck('daysTaken')->first();
-        $dUser =Holiday::findOrFail($this->modelId)->pluck('user_id')->first();
+
+        $event = Holiday::findOrFail($this->modelId);
         // Remove Days Leave
-        User::findOrFail($dUser)->increment('leaveDays', $dTaken);
+        User::findOrFail($event->user_id)->increment('leaveDays', $event->daysTaken);
     }
 
     /**
