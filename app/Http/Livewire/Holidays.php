@@ -70,7 +70,7 @@ class Holidays extends Component
         // The one is so that it works it out correctly
         } else {
             if( $this->halfDay) {
-                $this->daysTaken = $d + 1.5;
+                $this->daysTaken = $d + 1 - .5;
             } else {
                 $this->daysTaken = $d + 1;
             }

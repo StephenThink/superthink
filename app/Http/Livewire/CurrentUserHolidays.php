@@ -6,14 +6,9 @@ use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Holiday;
 use Livewire\Component;
-use Livewire\WithPagination;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
 
-class HolidayOverview extends Component
+class CurrentUserHolidays extends Component
 {
-    use WithPagination;
-
     public $modalFormVisible;
     public $modalConfirmDeleteVisible;
     public $modelId;
@@ -48,7 +43,7 @@ class HolidayOverview extends Component
         ];
     }
 
-     /**
+         /**
      * Runs everytime the title gets updated
      *
      * @param  mixed $value
@@ -79,7 +74,7 @@ class HolidayOverview extends Component
         return $this->daysTaken;
     }
 
-    /**
+        /**
      * Calculates wether or not people should have days added or taken away.
      *
      * @return void
@@ -106,7 +101,7 @@ class HolidayOverview extends Component
         }
     }
 
-    /**
+       /**
      * Loads the model data
      * of this component.
      *
@@ -127,7 +122,7 @@ class HolidayOverview extends Component
 
     }
 
-    /**
+        /**
      * The data for the model mapped
      * in this component.
      *
@@ -155,8 +150,10 @@ class HolidayOverview extends Component
     public function create()
     {
         // Find out how many leave days they have left
+        $this->user_id = auth()->user()->id;
         $user = User::findOrFail($this->user_id);
         $this->leaveDays = $user->pluck('leaveDays')->first();
+
 
         $this->validate();
 
@@ -181,17 +178,17 @@ class HolidayOverview extends Component
 
     }
 
-    /**
+     /**
      * The read function.
      *
      * @return void
      */
     public function read()
     {
-        return User::paginate(10);
+        return Holiday::where('user_id',auth()->user()->id)->get();
     }
 
-        /**
+       /**
      * The update function
      *
      * @return void
@@ -240,7 +237,7 @@ class HolidayOverview extends Component
         $this->loadModel();
     }
 
-    /**
+       /**
      * The delete function.
      *
      * @return void
@@ -272,31 +269,12 @@ class HolidayOverview extends Component
     }
 
 
+
     public function render()
     {
-        // Get all users
-        $users = User::all();
-
-        // Get Current Year
-        $currentYear = Carbon::now()->year;
-
-        // Get all the holidays for this year and order them by the start date
-        $holidays = Holiday::whereYear('start', $currentYear)->orderBy('start')->get();
-
-        // Create Blank Array
-        $allHolidays = [];
-
-        foreach ($users as $user) {
-                // See if a user has a holiday and if they do add them to their array
-                $allHolidays[$user->name] = $holidays->where('user_id', '=', $user->id);
-        }
-
-
-
-        return view('livewire.holiday-overview', [
-            'staff' => $this->read(),
-            'data' => $allHolidays,
-            'staffMembers' => User::all(),
+        return view('livewire.current-user-holidays',
+        [
+            'holidays' => $this->read(),
         ]);
     }
 }

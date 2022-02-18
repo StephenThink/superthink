@@ -1,7 +1,7 @@
 <div class="p-6">
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between mx-2">
 
-    <div class="ml-2 text-2xl p-2">
+    <div class="text-2xl p-2">
         Holiday by Staff Members
     </div>
     <x-jet-button wire:click="createShowModal">
