@@ -1,6 +1,6 @@
-<div>
+<div class="p-6">
 
-    <div class="flex items-center justify-between mx-2">
+    <div class="flex items-center justify-between mb-2">
 
         <div class=" text-2xl p-2">
             Holidays <span wire:poll class="text-sm"> by the way you have {{ auth()->user()->leaveDays }} day's left to take before the end of the year.</span>
@@ -30,19 +30,30 @@
                             @if ($holidays->count())
                                 @foreach ($holidays as $item)
                                     <tr>
+
                                         <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->start)->format('D jS M, Y') }}</td>
                                         <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->end)->format('D jS M, Y') }}</td>
                                         <td class="px-6 py-2">@if ( $item->halfDay  == 1)
                                             Yes
                                         @endif</td>
-                                        <td class="px-6 py-2">{{ $item->daysTaken }}</td>
+                                        <td class="px-6 py-2">@if ($item->pending)
+                                            Pending
+                                        @else
+                                        {{ $item->daysTaken }}
+                                        @endif</td>
                                         <td class="px-6 py-2 flex justify-end">
                                             {{-- Coming Later --}}
                                             {{-- <x-jet-button wire:click="">
                                                 {{ __('Download') }}
                                             </x-jet-button> --}}
+                                            @if ($item->authorised)
 
+                                            <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
+                                                {{ __('Cancel') }}
+                                                </x-jet-button>
+                                            @endif
                                         </td>
+
                                     </tr>
                                 @endforeach
                             @else
@@ -60,13 +71,13 @@
         {{-- Modal Form --}}
         <x-jet-dialog-modal wire:model="modalFormVisible">
             <x-slot name="title">
-                {{ __('Create') }}
+                {{ __('Request Holiday') }}
             </x-slot>
 
             <x-slot name="content">
                 <div class="mt-4" x-data="{ open: @entangle('daysErrorVisible') }">
                     <div x-show="open" class="bg-red-200 border border-red-600 text-red-600 p-2 rounded-lg">
-                        You dont have enough days to take.
+                        You dont have enough days to take, you only have {{ auth()->user()->leaveDays }} days left.
                     </div>
 
                 </div>
@@ -86,11 +97,6 @@
                     <x-jet-checkbox wire:model.defer="halfDay" id="" class="block mt-1" type="checkbox" />
                     @error('halfDay') <span class="error">{{ $message }}</span> @enderror
                 </div>
-                <div class="mt-4">
-                    <x-jet-label for="dateAuthorised" value="{{ __('Date Authorised') }}" />
-                    <x-jet-input wire:model.defer="dateAuthorised" id="" class="block mt-1 w-full" type="date" />
-                    @error('dateAuthorised') <span class="error">{{ $message }}</span> @enderror
-                </div>
             </x-slot>
 
             <x-slot name="footer">
@@ -109,4 +115,25 @@
                 @endif
             </x-slot>
         </x-jet-dialog-modal>
+
+        {{-- The Delete Modal --}}
+<x-jet-dialog-modal wire:model="modalConfirmDeleteVisible">
+    <x-slot name="title">
+        {{ __('Cancel Holiday') }}
+    </x-slot>
+
+    <x-slot name="content">
+        {{ __('Are you sure you want to cancel this holiday?') }}
+    </x-slot>
+
+    <x-slot name="footer">
+        <x-jet-secondary-button wire:click="$toggle('modalConfirmDeleteVisible')" wire:loading.attr="disabled">
+            {{ __('Nevermind') }}
+        </x-jet-secondary-button>
+
+        <x-jet-danger-button class="ml-2" wire:click="delete" wire:loading.attr="disabled">
+            {{ __('Cancel Holiday') }}
+        </x-jet-danger-button>
+    </x-slot>
+</x-jet-dialog-modal>
 </div>

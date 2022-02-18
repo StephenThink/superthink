@@ -17,6 +17,8 @@ class Holiday extends Model
     'halfDay',
     'daysTaken',
     'dateAuthorised',
+    'pending',
+    'authorised',
     ];
 
     public function users()

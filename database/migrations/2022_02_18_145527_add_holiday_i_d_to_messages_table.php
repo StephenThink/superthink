@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddAuthorisedUserToHolidaysTable extends Migration
+class AddHolidayIDToMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class AddAuthorisedUserToHolidaysTable extends Migration
      */
     public function up()
     {
-        Schema::table('holidays', function (Blueprint $table) {
+        Schema::table('messages', function (Blueprint $table) {
             //
-            $table->bigInteger('authorisedBy')->nullable()->default('1')->after('dateAuthorised');
-
+            $table->integer('requestedId')->default(0)->after('subject');
         });
     }
 
@@ -27,7 +26,7 @@ class AddAuthorisedUserToHolidaysTable extends Migration
      */
     public function down()
     {
-        Schema::table('holidays', function (Blueprint $table) {
+        Schema::table('messages', function (Blueprint $table) {
             //
         });
     }

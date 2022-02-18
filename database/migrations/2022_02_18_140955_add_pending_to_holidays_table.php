@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddAuthorisedUserToHolidaysTable extends Migration
+class AddPendingToHolidaysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,8 @@ class AddAuthorisedUserToHolidaysTable extends Migration
     {
         Schema::table('holidays', function (Blueprint $table) {
             //
-            $table->bigInteger('authorisedBy')->nullable()->default('1')->after('dateAuthorised');
-
+            $table->boolean('pending')->default('0')->after('daysTaken');
+            $table->boolean('authorised')->default('0')->after('pending');
         });
     }
 

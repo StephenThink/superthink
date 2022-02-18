@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Holiday;
 use Livewire\Component;
+use App\Models\Message;
 
 class CurrentUserHolidays extends Component
 {
@@ -24,6 +25,8 @@ class CurrentUserHolidays extends Component
     public $dateAuthorised;
     public $daysTaken;
     public $authorisedBy;
+    public $pending;
+    public $authorised;
 
     public $leaveDays;
 
@@ -38,7 +41,7 @@ class CurrentUserHolidays extends Component
             'user_id' => 'required',
             'start' => 'required|date',
             'end' => 'required|date|after_or_equal:start',
-            'dateAuthorised' => 'required|date',
+            //'dateAuthorised' => 'required|date',
             // 'daysTaken' => 'gte:leaveDays'
         ];
     }
@@ -119,6 +122,8 @@ class CurrentUserHolidays extends Component
         $this->dateAuthorised = $data->dateAuthorised;
         $this->daysTaken = $data->daysTaken;
         $this->authorisedBy = $data->authorisedBy;
+        $this->pending = $data->pending;
+        $this->authorised = $data->authorised;
 
     }
 
@@ -138,6 +143,8 @@ class CurrentUserHolidays extends Component
             'dateAuthorised' => $this->dateAuthorised,
             'daysTaken' => $this->daysTaken,
             'authorisedBy' => $this->authorisedBy,
+            'pending' => $this->pending,
+            'authorised' => $this->authorised,
         ];
     }
 
@@ -156,15 +163,27 @@ class CurrentUserHolidays extends Component
 
 
         $this->validate();
-
+        $this->pending = 1;
+        $this->authorised = 0;
         $this->calcDaysTaken();
 
         // The User who has logged in
-        $this->authorisedBy = Auth()->user()->id;
+        // $this->authorisedBy = Auth()->user()->id;
 
         // If they have enough days let them book the holiday.
         if ($this->leaveDays > $this->daysTaken) {
-            Holiday::create($this->modelData());
+
+            $newHol = Holiday::create($this->modelData());
+
+            Message::create([
+                'user_id' => 1, // Need to change to pauls in future
+                'from' => auth()->user()->id,
+                'subject' => 'Holiday Request',
+                'message' => auth()->user()->name . " is requesting a holiday from " . $this->start . " - (" . $this->daysTaken . " days).",
+                'requestedId' => $newHol->id,
+                'read' => 0,
+            ]);
+
 
             // Remove Days Leave
             User::findOrFail($this->user_id)->decrement('leaveDays', $this->daysTaken);
@@ -185,9 +204,9 @@ class CurrentUserHolidays extends Component
      */
     public function read()
     {
-        return Holiday::where('user_id',auth()->user()->id)
+
+        return Holiday::where('user_id','=',auth()->user()->id)
         ->where('start', '>=', now())
-        ->orWhere('end','>',now())
         ->orderBy('start')
         ->get();
     }
@@ -202,6 +221,8 @@ class CurrentUserHolidays extends Component
 
 
         $this->validate();
+        $this->pending = 0;
+        $this->authorised = 0;
         $this->calcDaysTaken();
         $this->updateLeaveDays();
         Holiday::find($this->modelId)->update($this->modelData());
@@ -254,9 +275,18 @@ class CurrentUserHolidays extends Component
         // Remove Days Leave
         User::findOrFail($event->user_id)->increment('leaveDays', $event->daysTaken);
 
+        Message::create([
+            'user_id' => 1,
+            'from' => auth()->user()->id,
+            'subject' => 'Holiday Cancelled',
+            'message' => $event->users->name . " has canceling a holiday from " . $event->start . " - (" . $event->daysTaken . " days).",
+            'requestedId' => 0,
+            'read' => 0,
+        ]);
+
         Holiday::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
-        $this->resetPage();
+
 
     }
 

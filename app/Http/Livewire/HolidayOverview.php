@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Holiday;
+use App\Models\Message;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
@@ -29,6 +30,7 @@ class HolidayOverview extends Component
     public $dateAuthorised;
     public $daysTaken;
     public $authorisedBy;
+    public $authorised;
 
     public $leaveDays;
 
@@ -124,6 +126,7 @@ class HolidayOverview extends Component
         $this->dateAuthorised = $data->dateAuthorised;
         $this->daysTaken = $data->daysTaken;
         $this->authorisedBy = $data->authorisedBy;
+        $this->authorised = $data->authorised;
 
     }
 
@@ -143,6 +146,7 @@ class HolidayOverview extends Component
             'dateAuthorised' => $this->dateAuthorised,
             'daysTaken' => $this->daysTaken,
             'authorisedBy' => $this->authorisedBy,
+            'authorised' => $this->authorised,
         ];
     }
 
@@ -161,7 +165,7 @@ class HolidayOverview extends Component
         $this->validate();
 
         $this->calcDaysTaken();
-
+        $this->authorised = 1;
         // The User who has logged in
         $this->authorisedBy = Auth()->user()->id;
 
@@ -172,8 +176,21 @@ class HolidayOverview extends Component
             // Remove Days Leave
             User::findOrFail($this->user_id)->decrement('leaveDays', $this->daysTaken);
 
+
+            // Send message to User to say its granted
+
+            Message::create([
+                'user_id' => $this->user_id,
+                'from' => auth()->user()->id,
+                'subject' => 'Holiday Granted',
+                'message' => $this->daysTaken . " days starting from " . $this->start,
+                'requestedId' => 0,
+                'read' => 0,
+            ]);
+
             $this->modalFormVisible = false;
             $this->reset();
+
         } else {
             $this->daysErrorVisible = true;
 
@@ -205,6 +222,16 @@ class HolidayOverview extends Component
         $this->updateLeaveDays();
         Holiday::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+
+         // Send message to User to say its granted
+         Message::create([
+            'user_id' => $this->user_id,
+            'from' => auth()->user()->id,
+            'subject' => 'Holiday Updated',
+            'message' => $this->daysTaken . " days starting from " . $this->start,
+            'requestedId' => 0,
+            'read' => 0,
+        ]);
     }
 
         /**
@@ -254,6 +281,16 @@ class HolidayOverview extends Component
         User::findOrFail($event->user_id)->increment('leaveDays', $event->daysTaken);
 
         Holiday::destroy($this->modelId);
+
+         // Send message to User to say its granted
+         Message::create([
+            'user_id' => $event->user_id,
+            'from' => auth()->user()->id,
+            'subject' => 'Holiday Removed',
+            'message' => $event->daysTaken . " days starting from " . $event->start,
+            'requestedId' => 0,
+            'read' => 0,
+        ]);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
 
