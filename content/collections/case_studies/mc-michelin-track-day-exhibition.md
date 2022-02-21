@@ -3,8 +3,8 @@ id: bdea1cc4-f071-45cd-8116-2f32373cab17
 blueprint: case_study
 title: 'mc- Michelin Track Day Exhibition'
 video_choice: Image
-hero_image: work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Full-Image-1360x768.5.jpg
-secondary_image: work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Secondary-Image-896x597.jpg
+hero_image: work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Full-Image-2732x1536.jpg
+secondary_image: work/experience/michelin-track-day-exhibition/Michelin-TrackDay-50-Experience-Secondary-Image-896x597-v2.jpg
 main_content:
   -
     type: set
@@ -38,7 +38,8 @@ core:
 services_filter:
   - print-design
   - display
+  - branded-spaces
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643387197
+updated_at: 1645453341
 mini_introduction: 'Promotional events are the lifeblood of a brand with as many products as Michelin. To make a point, you''ve got to get your message across in a very real way. That''s why Michelin asked us to help them with an event where the CrossClimate2 tyre would be demonstrated to dealers on track.'
 ---

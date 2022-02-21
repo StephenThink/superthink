@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645199630
+updated_at: 1645452703
 hero_image: work/campaign/bae-energy-saving-waste-campaign/BAE-4-Campaign-Full-Image-2732x1536.jpg
 secondary_image: work/campaign/bae-energy-saving-waste-campaign/BAE-4-Campaign-Secondary-Image-896x597.jpg
 main_content:
@@ -31,4 +31,5 @@ short_case: false
 video_choice: Image
 services_filter:
   - print-design
+  - copywriting
 ---
