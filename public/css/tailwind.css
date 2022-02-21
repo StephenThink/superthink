@@ -1102,8 +1102,13 @@ input[type="file"]::-webkit-file-upload-button,
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 40px;
-    }
+        padding: 40px}
+
+.think-loser-toast .wrapper > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
 
 /* Secret Santa  */
 
@@ -1934,6 +1939,14 @@ sup {
   top: -13rem;
 }
 
+.left-16 {
+  left: 4rem;
+}
+
+.bottom-72 {
+  bottom: 18rem;
+}
+
 .bottom-10 {
   bottom: 2.5rem;
 }
@@ -2006,12 +2019,12 @@ sup {
   z-index: 10;
 }
 
-.order-1 {
-  order: 1;
-}
-
 .order-2 {
   order: 2;
+}
+
+.order-1 {
+  order: 1;
 }
 
 .order-3 {
@@ -2319,6 +2332,10 @@ sup {
   height: 50%;
 }
 
+.h-tea {
+  height: 22.5rem;
+}
+
 .h-3\/4 {
   height: 75%;
 }
@@ -2409,6 +2426,10 @@ sup {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
 }
 
 .w-5\/12 {
@@ -3723,6 +3744,14 @@ sup {
     top: -5rem;
   }
 
+  .md\:left-24 {
+    left: 6rem;
+  }
+
+  .md\:bottom-56 {
+    bottom: 14rem;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -4059,12 +4088,12 @@ sup {
 
 @media (min-width: 960px) {
 
-  .lg\:order-2 {
-    order: 2;
-  }
-
   .lg\:order-1 {
     order: 1;
+  }
+
+  .lg\:order-2 {
+    order: 2;
   }
 
   .lg\:order-3 {
@@ -4083,16 +4112,16 @@ sup {
     height: 100%;
   }
 
-  .lg\:w-full {
-    width: 100%;
+  .lg\:w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .lg\:w-8\/12 {
+    width: 66.666667%;
   }
 
   .lg\:w-11\/12 {
     width: 91.666667%;
-  }
-
-  .lg\:w-4\/12 {
-    width: 33.333333%;
   }
 
   .lg\:w-3\/12 {
@@ -4144,6 +4173,10 @@ sup {
     display: none;
   }
 
+  .xl\:h-screen {
+    height: 100vh;
+  }
+
   .xl\:w-1\/6 {
     width: 16.666667%;
   }
@@ -4156,8 +4189,8 @@ sup {
     width: 50%;
   }
 
-  .xl\:w-6\/12 {
-    width: 50%;
+  .xl\:w-9\/12 {
+    width: 75%;
   }
 
   .xl\:w-7\/12 {
@@ -4207,6 +4240,10 @@ sup {
 }
 
 @media (min-width: 1536px) {
+
+  .\32xl\:left-20 {
+    left: 5rem;
+  }
 
   .\32xl\:block {
     display: block;

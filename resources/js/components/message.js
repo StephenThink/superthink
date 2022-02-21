@@ -57,7 +57,7 @@ const message = (text, loser, data) => {
             <div class="wrapper">
                 <h1 class="block  text-3xl">${text}</h1>
                 <p class="font-bold text-4xl">${loser}</p>
-                <a class="button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56">click to close</a>
+                <a class="button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56 rounded-full">CLICK TO CLOSE</a>
             </div>`,
         // 15 minutes 
         duration: 900000, 

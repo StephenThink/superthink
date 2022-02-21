@@ -584,9 +584,11 @@ input[type="file"] {
         flex-direction: column;
         justify-content: center;
         padding: 40px;
-    }
-}
 
+        @apply space-y-6 
+    }
+    
+}
 /* Secret Santa  */
 
 .secret-santa {
