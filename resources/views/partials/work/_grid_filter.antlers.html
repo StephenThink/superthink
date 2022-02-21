@@ -13,15 +13,15 @@
                             <div class="pb-2/3 relative">
                                 {{ if thumbnail }}
                                     {{ thumbnail }}
+                                    
                                         <div class="hover-button image">
-                                            <span>
+                                            <span> 
                                                 <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full absolute object-cover" loading=lazy>
                                             </span>
                                         </div> 
                                     {{ /thumbnail }}
-                                {{ /if }}
+                                {{ else }}
 
-                                {{ if secondary_image}}
                                     {{ secondary_image }}
                                         <div class="hover-button image">
                                             <span>
