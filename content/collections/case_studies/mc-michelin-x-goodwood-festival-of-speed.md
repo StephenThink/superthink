@@ -3,7 +3,7 @@ id: c88a8e97-32de-4a27-bae8-c069008300a5
 blueprint: case_study
 title: 'mc- Michelin X Goodwood - Festival of Speed'
 video_choice: Image
-hero_image: work/experience/michelin-festival-of-speed/Michelin-FOS-33-Experience-Full-Image-1360x768.5.jpg
+hero_image: work/experience/michelin-festival-of-speed/Michelin-FOS-33-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/michelin-festival-of-speed/Michelin-FOS-33-Experience-Secondary-Image-896x597.jpg
 short_case: false
 main_content:
@@ -50,5 +50,5 @@ services_filter:
   - print-design
   - display
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643385657
+updated_at: 1645453907
 ---

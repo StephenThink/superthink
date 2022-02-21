@@ -3,7 +3,7 @@ id: 33480a23-70d5-4386-9e13-b91c83eaa7e5
 blueprint: case_study
 title: 'mc- Michelin Press & Activations'
 video_choice: Image
-hero_image: work/experience/michelin-press-activations/Michelin-Various-35-Experience-Full-Image-1360x768.5.jpg
+hero_image: work/experience/michelin-press-activations/Michelin-Various-35-Experience-Full-Image-2732x1536.jpg
 main_content:
   -
     type: set
@@ -22,5 +22,5 @@ core:
 services_filter:
   - print-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643387304
+updated_at: 1645457737
 ---
