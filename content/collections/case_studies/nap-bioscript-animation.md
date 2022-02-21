@@ -31,10 +31,12 @@ greatest_hits: false
 core:
   - brand
 services_filter:
-  - print-design
   - digital-design
   - film-and-animation
+  - digital-and-ux-design
+  - display
+  - illustration
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645203355
+updated_at: 1645453052
 hero_image: work/brand/bioscript-animation/Bioscript-Brand-11-Large-2732x1536.jpg
 ---

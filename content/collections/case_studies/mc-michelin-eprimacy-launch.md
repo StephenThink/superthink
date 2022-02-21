@@ -50,8 +50,10 @@ services_filter:
   - print-design
   - digital-design
   - film-and-animation
+  - campaigns
+  - strategy
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645205502
+updated_at: 1645453136
 secondary_image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Secondary-Image-896x597.jpg
 mini_introduction: 'We helped Michelin launch their ePrimacy tyre in April and May 2021. Rather than starting with a specific media or execution, we helped them build on the 2 selling points of the tyre, namely that it''s better for the environment and it can save you money on fuel.'
 ---
