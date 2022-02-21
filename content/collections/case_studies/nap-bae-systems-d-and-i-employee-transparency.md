@@ -3,7 +3,7 @@ id: e5ec804d-5fab-4337-bffa-596cc6f2cdb9
 blueprint: case_study
 title: 'NAP - BAE Systems D&I Employee Transparency'
 video_choice: Image
-hero_image: 'work/experience/bae-systems-employee-transparency/45-BAE-D&I-Employee-Transparency-Full-Image.jpg'
+hero_image: 'work/experience/bae-systems-employee-transparency/45-BAE-D&I-Employee-Transparency-Full-Image-2.jpg'
 secondary_image: 'work/experience/bae-systems-employee-transparency/45-BAE-D&I-Employee-Transparency-Secondary-Image.jpg'
 main_content:
   -
@@ -14,7 +14,7 @@ main_content:
         custom_header: ' '
         intro: 'As they say, a picture paints a thousand words, so naturally we all find it easier to engage with complex data when it’s communicated visually. BAE Systems has ambitious plans to assemble comprehensive data about diversity within the workforce. Big challenge, starting with engaging everyone in the process.'
         video_choice: Image
-        intro_full_image: 'work/experience/bae-systems-employee-transparency/45-BAE-D&I-Employee-Transparency-large-Image-2.jpg'
+        intro_full_image: 'work/experience/bae-systems-employee-transparency/45-BAE-D&I-Employee-Transparency-Full-Image-3.jpg'
   -
     type: set
     attrs:
@@ -27,13 +27,10 @@ main_content:
   -
     type: paragraph
 greatest_hits: false
-core:
-  - activations
-  - activations
 services_filter:
   - print-design
   - illustration
   - digital-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643635075
+updated_at: 1645462157
 ---

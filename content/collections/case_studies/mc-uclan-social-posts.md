@@ -7,13 +7,14 @@ short_case: false
 greatest_hits: false
 core:
   - activations
-  - activations
 services_filter:
   - print-design
   - digital-design
+  - copywriting
+  - campaigns
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643387535
-hero_image: work/experience/uclan-social-posts/UCLan-Socials-37-Experience-Full-Image-1360x768.5.jpg
+updated_at: 1645454526
+hero_image: work/experience/uclan-social-posts/UCLan-Socials-37-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/uclan-social-posts/UCLan-Socials-37-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
