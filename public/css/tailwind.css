@@ -1225,7 +1225,7 @@ input[type="file"]::-webkit-file-upload-button,
 
 .secret-santa-form input {
   --tw-bg-opacity: 1;
-  background-color: rgb(55 55 55 / var(--tw-bg-opacity));
+  background-color: rgb(214 214 214 / var(--tw-bg-opacity));
 }
 
 .secret-santa-form input {
@@ -1240,7 +1240,22 @@ input[type="file"]::-webkit-file-upload-button,
 
 .secret-santa-form input {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(55 55 55 / var(--tw-text-opacity));
+}
+
+.secret-santa-form input::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.secret-santa-form input:-ms-input-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.secret-santa-form input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
 .secret-santa-form textarea {
@@ -1249,7 +1264,7 @@ input[type="file"]::-webkit-file-upload-button,
 
 .secret-santa-form textarea {
   --tw-bg-opacity: 1;
-  background-color: rgb(55 55 55 / var(--tw-bg-opacity));
+  background-color: rgb(214 214 214 / var(--tw-bg-opacity));
 }
 
 .secret-santa-form textarea {
@@ -1264,7 +1279,22 @@ input[type="file"]::-webkit-file-upload-button,
 
 .secret-santa-form textarea {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(55 55 55 / var(--tw-text-opacity));
+}
+
+.secret-santa-form textarea::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.secret-santa-form textarea:-ms-input-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.secret-santa-form textarea::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
 .toggle-dot {
@@ -2301,12 +2331,12 @@ sup {
   height: calc(100vh - 120px);
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-16 {
   height: 4rem;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-8 {
@@ -2706,6 +2736,12 @@ sup {
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
 .self-start {
   align-self: flex-start;
 }
@@ -2856,13 +2892,13 @@ sup {
   background-color: rgb(41 41 41 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-light-grey {
   --tw-bg-opacity: 1;
   background-color: rgb(221 221 221 / var(--tw-bg-opacity));
-}
-
-.bg-transparent {
-  background-color: transparent;
 }
 
 .bg-white {
@@ -3046,6 +3082,10 @@ sup {
   padding-top: 0.5rem;
 }
 
+.pl-0 {
+  padding-left: 0px;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -3108,14 +3148,6 @@ sup {
 
 .pb-2 {
   padding-bottom: 0.5rem;
-}
-
-.pl-0 {
-  padding-left: 0px;
-}
-
-.pl-8 {
-  padding-left: 2rem;
 }
 
 .text-center {

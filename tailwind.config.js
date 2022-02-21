@@ -197,7 +197,8 @@ module.exports = {
         dark: "#373737",
         "header-dark" :"#292929",
         "mid-grey" : "#7c7c7c",
-
+        "santa-text": "#666",
+        "santa-bg": "#d6d6d6",
         light: "#F7F7F7",
         grey: "#AFB0B3",
         blue: "#0A064D",

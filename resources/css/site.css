@@ -646,10 +646,10 @@ input[type="file"] {
 
     &-form {
         input {
-            @apply px-3 py-2 text-white rounded-sm bg-dark;
+            @apply px-3 py-2 text-dark rounded-sm bg-santa-bg placeholder:text-santa-text;
         }
         textarea {
-            @apply px-3 py-2 text-white rounded-sm bg-dark;
+            @apply px-3 py-2 text-dark rounded-sm bg-santa-bg placeholder:text-santa-text;
         }
 
     }

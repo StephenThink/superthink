@@ -22,7 +22,7 @@
                             {{ information }}
                         </div>
                         <div class="buttons flex justify-around mt-4">
-                            {{ partial:secret-santa/partials/button text="Next" classes="secret-santa-next" }}
+                            {{ partial:secret-santa/partials/button text="NEXT" classes="secret-santa-next" }}
                         </div>    
                     </div>
                 </div>
@@ -30,11 +30,11 @@
                     <div class="inner">
                         
                         {{ partial:secret-santa/partials/logo }}
-                        <div class="text">
-                            {{ instructions }}
-                            <strong class="mt-4">
+                        <div class="text flex flex-col space-y-1">
+                            <div>{{ instructions }}</div>
+                            <div><strong class="mt-4">
                                 {{ disclaimer }}
-                            </strong>
+                            </strong></div>
                         </div>
                         <div class="relative h-3/5 text-xs lg:text-sm">
                             <form action="" id="secret-santa-main-form" enctype="application/x-www-form-urlencoded">
@@ -46,8 +46,8 @@
                                     </div>
 
                                     <div class="buttons flex justify-around">
-                                        {{ partial:secret-santa/partials/button text="Add more names" classes="secret-santa-add-more" }}
-                                        {{ partial:secret-santa/partials/button text="Next" classes="secret-santa-final" }}
+                                        {{ partial:secret-santa/partials/button text="ADD NAMES" classes="secret-santa-add-more" }}
+                                        {{ partial:secret-santa/partials/button text="NEXT" classes="secret-santa-final" }}
                                     </div>
                                 </div>
                                 <div class="page-2 absolute secret-santa-form page-content hide flex flex-col h-full w-full justify-between">
@@ -82,8 +82,8 @@
                                     </div>
                                     <!-- buttons -->
                                     <div class="buttons flex justify-around mt-4">
-                                        {{ partial:secret-santa/partials/button text="Back" classes="secret-santa-back-to-page-1" }}
-                                        {{ partial:secret-santa/partials/button text="Send out email" classes="secret-santa-submit" loading="show" }}
+                                        {{ partial:secret-santa/partials/button text="BACK" classes="secret-santa-back-to-page-1" }}
+                                        {{ partial:secret-santa/partials/button text="SEND OUT EMAIL" classes="secret-santa-submit" loading="show" }}
                                     </div>
                                 </div>
                             </form>
