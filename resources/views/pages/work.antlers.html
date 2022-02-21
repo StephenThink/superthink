@@ -1,3 +1,23 @@
+<div onbeforeunload="return myFunction()"></div>
+
+<script>
+    // Scroll Window to the top on broswer.
+    function myFunction() {
+        window.scrollTop(0);
+        window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
+    }
+
+
+    window.addEventListener('load', () =>{
+        window.scrollTo(0,0);
+        window.scrollTop = 0;
+        setTimeout(() => {
+        window.scrollTop = 0;
+        window.scrollTo(0,0);
+        }, 0)
+    })
+    </script>
+
 {{ partial:partials/global/hero classes="text-yellow bg-header-dark" display="{{hero_text}}" show_playreel="0" hero_intro="{hero_intro}" }}
 
 <section class="main__panel_x-small bg-light dark:bg-dark">
