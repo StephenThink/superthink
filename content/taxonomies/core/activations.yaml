@@ -133,7 +133,7 @@ v2_service_image:
   - service-thumbnail/Services-Activation.jpg
 v2_service_button_label: 'Read More'
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1644577446
+updated_at: 1645101920
 blueprint: core
 hero_text: Activations
 hero_intro: 'You have a brand. But now, what are you going to do with it? Let’s lick it into shape.'
@@ -141,7 +141,7 @@ content_grid:
   -
     content_title: 'Creative Design'
     content_text: 'When you get down to it, design needs to turn insights into action and ideas into reality. But beyond a funky surface makeover (and we promise your stuff will look very funky indeed), creative design is about going further. It’s about giving people a wry smile. A nod of appreciation. A chuckle to no one in particular. That’s when you know your little moment of ‘wow’ has made an impact. That’s when you know they’ll remember you. From digital to print, websites to brochures, to expo stands and even the walls of your office, we can (literally) take your brand further and make it work harder without you needing to do anything other than call us.'
-    content_image: service-thumbnail/Services-Activations-Creative-Design.jpg
+    content_image: service-thumbnail/Services-Activations-Creative-Design-2.jpg
     content_link_text: 'Let''s get creative'
     content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
   -
@@ -165,7 +165,7 @@ content_grid:
   -
     content_title: '3D Design'
     content_text: 'You make extremely cool stuff that comes in lots of shapes, sizes and colour options. You could take a shot of every single one. In every possible setting. From every angle and in every combination. But by the time you’ve finished it’ll be 2050 and your photographer will be old and (probably) very rich. Let’s speed things up a bit. 3D design is about flexibility and possibilities. It’s about seeing what that sofa could look like in any of 100 different fabrics without needing the sofa or the fabric to exist just yet. That’s great for eCommerce. But it could also make your app appeal, your promo video pop or the expo explode. 2D could do the job. 3D will make the difference.'
-    content_image: service-thumbnail/Services-Activations-3D-Design.jpg
+    content_image: service-thumbnail/Services-Activations-3D-Design-2.jpg
     content_link_text: 'Possibilities from every angle'
     content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
   -

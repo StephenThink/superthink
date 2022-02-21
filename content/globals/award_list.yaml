@@ -2,7 +2,22 @@ title: 'Award List'
 data:
   award:
     -
+      logo: awards-list/RRA-2021-Finalist-v2.2.svg
+      award_name: 'Red Rose Award 2021 Finalist'
+      type: award
+      enabled: true
+    -
+      logo: awards-list/BIBA-finalist-2.svg
+      award_name: 'BIBAs 2021 Finalist'
+      type: award
+      enabled: true
+    -
       logo: awards-list/red_rose_award.png
-      award_name: 'Red Rose Award 2020'
+      award_name: 'Red Rose Award 2020 Winner'
+      type: award
+      enabled: true
+    -
+      logo: awards-list/DEA-Finalist-Logo-3.svg
+      award_name: 'DEA 2017 Finalist'
       type: award
       enabled: true

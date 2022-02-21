@@ -3,8 +3,8 @@ id: f313e487-cb7d-45fd-ab36-94db897a8b00
 blueprint: case_study
 title: 'NAP - Bioscript Animation'
 video_choice: Video
-video: /assets/work/brand/bioscript-animation/Bioscript-Brand-11-Hero-1360x768.mp4
-thumbnail: work/brand/bioscript-animation/Bioscript-Brand-11-Small-Image-740x416.25.jpg
+video: /assets/work/brand/bioscript-animation/Bioscript-Brand-11-Hero-2732x1572.mp4
+thumbnail: work/brand/bioscript-animation/Bioscript-Brand-11-Large-2732x1536.jpg
 secondary_image: work/brand/bioscript-animation/Bioscript-Brand-11-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -34,7 +34,7 @@ services_filter:
   - print-design
   - digital-design
   - film-and-animation
-updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
-updated_at: 1644587871
-hero_image: work/brand/bioscript-animation/Bioscript-Brand-11-Secondary-Image-896x597.jpg
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1645203355
+hero_image: work/brand/bioscript-animation/Bioscript-Brand-11-Large-2732x1536.jpg
 ---

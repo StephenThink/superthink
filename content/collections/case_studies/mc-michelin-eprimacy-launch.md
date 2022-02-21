@@ -3,7 +3,7 @@ id: 64ed6744-4fc2-44fe-9cc5-f27bcd97b3cf
 blueprint: case_study
 title: 'mc- Michelin ePrimacy Launch'
 video_choice: Image
-hero_image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Full-Image-1360x768.5.jpg
+hero_image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Full-Image-2732x1536.jpg
 short_case: false
 main_content:
   -
@@ -51,7 +51,7 @@ services_filter:
   - digital-design
   - film-and-animation
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643387456
+updated_at: 1645205502
 secondary_image: work/experience/michelin-eprimacy-launch/Michelin-Eprimacy-38-Experience-Secondary-Image-896x597.jpg
 mini_introduction: 'We helped Michelin launch their ePrimacy tyre in April and May 2021. Rather than starting with a specific media or execution, we helped them build on the 2 selling points of the tyre, namely that it''s better for the environment and it can save you money on fuel.'
 ---

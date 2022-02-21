@@ -2,7 +2,7 @@ title: Strategy
 strapline: 'Help! We’re not sure what will work best'
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1644577597
+updated_at: 1645098768
 blueprint: core
 tag_line_us: 'What comes before how. We can help you with strategic blueprints and plans that make sure the creative work is on point.'
 tag_line_you: 'You need a strategy'
@@ -93,19 +93,19 @@ content_grid:
   -
     content_title: 'Brand Strategy'
     content_text: 'You’ve already got a brand. Ok, so it’s not Coke or iPhone (unless it is, in which case, well done you) but it’s well respected in the industry and performing perfectly well thank you very much. But then, something happens… Some upstart muscles in on your territory. You find the brand that used to fit you like a glove now restricts you like a tiny leotard or fits about as well as a cheap Xmas jumper. That’s what your brand strategy is for. It’s about digging into the DNA of your business(es) to understand what really matters, what fits where, and what to prioritise. It’s about making sure a brand'
-    content_image: 3-BAE.jpg
+    content_image: service-thumbnail/Services-Strategy-Brand-Strategy.jpg
     content_link_text: 'Let''s talk about that today'
     content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
   -
     content_title: Positioning
     content_text: 'Disney+ is a streaming service just like Netflix and Amazon Prime. But Disney don''t tell you that. Instead they offer you "the greatest stories in one place." Disney know something plenty of companies can learn from too. People don''t buy. They choose. That''s why you don''t get time to walk people through the finer points of your logic. Instead, you need a simple, compelling position for your brand if you want people to sit up and notice it.'
-    content_image: 3-BAE.jpg
+    content_image: service-thumbnail/Services-Strategy-Positioning.jpg
     content_link_text: 'Let''s find your story'
     content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
   -
     content_title: 'Frameworks & Maps'
     content_text: 'Here''s the big secret. Creativity needs structure and planning just as much as a fancy building needs an architect. From experience, we can tell you that pretty pictures don''t cut it on their own. Our strategies comes with a hand-picked selection of useful frameworks and mapping tools that help you see the wood from the trees (and plot your next steps.) Want to work out where you are and where you''re going next?'
-    content_image: 3-BAE.jpg
+    content_image: service-thumbnail/Services-Strategy-Frameworks.jpg
     content_link_text: 'Map your next steps'
     content_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
 call_to_action: 'Need a hand planning your next steps? Give us a nudge…'
