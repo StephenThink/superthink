@@ -209,6 +209,16 @@ sections:
           instructions: 'This will change the order it is displayed on the pages'
           listable: hidden
           instructions_position: above
+      -
+        handle: bouncing_arrow
+        field:
+          default: false
+          display: 'Bouncing Arrow'
+          type: toggle
+          icon: toggle
+          instructions: 'Shows a bouncing arrow at the bottom of the hero.'
+          listable: hidden
+          instructions_position: above
   SEO:
     display: SEO
     fields:

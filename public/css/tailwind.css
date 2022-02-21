@@ -1904,6 +1904,10 @@ sup {
   top: -13rem;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .z-101 {
   z-index: 101;
 }
@@ -1950,6 +1954,10 @@ sup {
 
 .z-\[900\] {
   z-index: 900;
+}
+
+.z-5 {
+  z-index: 5;
 }
 
 .z-50 {

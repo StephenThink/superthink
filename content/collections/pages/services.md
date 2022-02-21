@@ -5,7 +5,7 @@ title: Services
 author: 44ff6e56-6b78-49e2-a074-616caf791879
 template: pages/services
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1644501528
+updated_at: 1645452840
 hero_text: 'Services that  work (together).'
 layered_title: 'Services that work (together)'
 you_us: you
@@ -15,5 +15,6 @@ call_to_action: 'Got a brief? Need an idea? Get in touch for a chat…'
 require_count: false
 video_choice: Image
 hero_intro: 'In an age of templates and quick fixes, we put integrated thinking first whatever we’re working with you on. Oh, and we go beyond "good enough" to make sure you get big results. What do you need help with?'
+bouncing_arrow: true
 ---
 Some text from the Services:Pages entry.

@@ -2,8 +2,8 @@ route: core-services/testing
 title: Campaign
 content: 'Help! We’re really good at what we do but nobody knows'
 strapline: 'Help! We’re really good at what we do but nobody knows'
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645105485
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1645453370
 blueprint: core
 tag_line_us: 'Get noticed. Simple. Spark imaginations and create conversations in print, digital and beyond.'
 tag_line_you: 'You need a campaign'
@@ -103,3 +103,4 @@ handle_text: 'Let’s Think! together'
 where_do_i_go: 4
 cta_button: 'Contact us'
 cta_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
+bouncing_arrow: true

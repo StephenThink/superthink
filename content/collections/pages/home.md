@@ -4,8 +4,8 @@ blueprint: homepage
 title: Home
 template: home
 author: 44ff6e56-6b78-49e2-a074-616caf791879
-updated_by: 6fb67458-0db4-428c-8f86-8445dcb283dc
-updated_at: 1644327830
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1645450793
 why_us_headline: 'Marketing is fragmented. It''s time to unite it.'
 why_us_content:
   -
@@ -62,7 +62,7 @@ bottom_line: 'outstanding results'
 link_text: 'see how'
 small_title: 'I already know what I need'
 you_tagline: 'That’s cool. Check out all our services below...'
-award_title: 'Awards & Accreditations'
+award_title: Awards
 clients_title: 'Some of our amazing clients'
 video_choice: Image
 custom_button_text: 'Contact Us'

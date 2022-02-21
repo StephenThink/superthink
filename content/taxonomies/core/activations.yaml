@@ -132,8 +132,8 @@ v2_right_list:
 v2_service_image:
   - service-thumbnail/Services-Activation.jpg
 v2_service_button_label: 'Read More'
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645101920
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1645453358
 blueprint: core
 hero_text: Activations
 hero_intro: 'You have a brand. But now, what are you going to do with it? Let’s lick it into shape.'
@@ -179,3 +179,4 @@ handle_text: 'Let’s Think! together'
 where_do_i_go: 3
 cta_button: 'Contact us'
 cta_link: 'entry::245b90b3-1382-45b2-8ea4-5ab7469ea872'
+bouncing_arrow: true

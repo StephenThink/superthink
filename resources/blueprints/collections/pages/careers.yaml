@@ -87,7 +87,6 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
           validate:
             - required
@@ -137,6 +136,16 @@ sections:
           display: 'Handle Link'
           type: link
           icon: link
+          listable: hidden
+          instructions_position: above
+      -
+        handle: bouncing_arrow
+        field:
+          default: false
+          display: 'Bouncing Arrow'
+          type: toggle
+          icon: toggle
+          instructions: 'Shows a bouncing arrow at the bottom of the hero.'
           listable: hidden
           instructions_position: above
   SEO:

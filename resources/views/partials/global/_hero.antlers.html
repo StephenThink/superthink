@@ -75,7 +75,22 @@
 
         </div>
     {{ /if }}
-
-    
+    {{ if bouncing_arrow }}
+        <div class="absolute bottom-10 left-0 right-0 text-yellow z-5 text-lg w-screen flex justify-center">
+            {{ svg src="/assets/svgs/arrow-down" class="animate-bounce cursor-pointer fill-current stroke-current h-16 w-16" }}
+        </div>
+    {{ /if }}
 </div>
 
+<script defer>
+    const downButton = document.querySelector('.animate-bounce');
+    const hero = document.querySelector('.hero')
+    console.log(hero.offsetHeight)
+    downButton.addEventListener('click', () => {
+        window.scroll({
+            top: hero.offsetHeight,
+            left: 0,
+            behavior: 'smooth'
+        });
+    })
+</script>
