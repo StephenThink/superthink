@@ -85,12 +85,14 @@
 <script defer>
     const downButton = document.querySelector('.animate-bounce');
     const hero = document.querySelector('.hero')
-    console.log(hero.offsetHeight)
-    downButton.addEventListener('click', () => {
-        window.scroll({
-            top: hero.offsetHeight,
-            left: 0,
-            behavior: 'smooth'
-        });
-    })
+    if (downButton) {
+
+        downButton.addEventListener('click', () => {
+            window.scroll({
+                top: hero.offsetHeight,
+                left: 0,
+                behavior: 'smooth'
+            });
+        })
+    }
 </script>
