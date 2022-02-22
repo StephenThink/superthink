@@ -122,10 +122,6 @@
                 </div>
 
                 <!-- Pages / Nav Options -->
-
-                <x-jet-dropdown-link href="{{ route('holidays') }}" :active="request()->routeIs('holidays')">
-                    {{ __('Maintain Holidays') }}
-                </x-jet-dropdown-link>
                 <x-jet-dropdown-link href="{{ route('holidays-overview') }}" :active="request()->routeIs('holidays-overview')">
                     {{ __('Holidays Overview') }}
                 </x-jet-dropdown-link>
