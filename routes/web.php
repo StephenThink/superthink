@@ -22,6 +22,13 @@ Route::group(['middleware' => [
     'verified',
     'accessrole'
 ]], function () {
+
+    $allRoutes = App\Models\Route::all();
+    $availableRoutes = [];
+    foreach ($availableRoutes as $key => $r) {
+        return Route::get('/'.$r->address), function() { return view($r->view); })->name($r->name);
+        };
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
@@ -53,6 +60,10 @@ Route::group(['middleware' => [
     Route::get('/roles', function () {
         return view('admin.roles');
     })->name('roles');
+
+    Route::get('/routes', function () {
+        return view('admin.routes');
+    })->name('routes');
 
 });
 

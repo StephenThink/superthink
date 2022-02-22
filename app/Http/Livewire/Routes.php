@@ -2,12 +2,11 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\UserPermission;
+use App\Models\Route;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Illuminate\Support\Facades\Route;
 
-class UserPermissions extends Component
+class Routes extends Component
 {
     use WithPagination;
 
@@ -15,16 +14,13 @@ class UserPermissions extends Component
     public $modalConfirmDeleteVisible;
     public $modelId;
 
-    public $perPage = 10;
-    public $search = '';
-    public $orderBy = 'role';
-    public $orderAsc = true;
-
     /**
      * Put your custom public properties here!
      */
-    public $role;
-    public $routeName;
+    public $type;
+    public $address;
+    public $view;
+    public $name;
 
     /**
      * The validation rules
@@ -34,9 +30,16 @@ class UserPermissions extends Component
     public function rules()
     {
         return [
-            'role' => 'required',
-            'routeName' => 'required',
+            'type' => 'required',
+            'address' => 'required',
+            'view' => 'required',
+            'name' => 'required',
         ];
+    }
+
+    public function updatedAddress() {
+        $this->name = $this->address;
+        $this->view = $this->address;
     }
 
     /**
@@ -47,10 +50,12 @@ class UserPermissions extends Component
      */
     public function loadModel()
     {
-        $data = UserPermission::find($this->modelId);
+        $data = Route::find($this->modelId);
         // Assign the variables here
-        $this->role = $data->role;
-        $this->routeName = $data->route_name;
+        $this->type = $data->type;
+        $this->address = $data->address;
+        $this->view = $data->view;
+        $this->name = $data->name;
     }
 
     /**
@@ -62,8 +67,10 @@ class UserPermissions extends Component
     public function modelData()
     {
         return [
-            'role' => $this->role,
-            'route_name' => $this->routeName,
+            'type' => $this->type,
+            'address' => $this->address,
+            'view' => $this->view,
+            'name' => $this->name,
         ];
     }
 
@@ -75,7 +82,7 @@ class UserPermissions extends Component
     public function create()
     {
         $this->validate();
-        UserPermission::create($this->modelData());
+        Route::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
     }
@@ -87,9 +94,7 @@ class UserPermissions extends Component
      */
     public function read()
     {
-        return UserPermission::search($this->search)
-        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-        ->paginate($this->perPage);
+        return Route::paginate(20);
     }
 
     /**
@@ -100,7 +105,7 @@ class UserPermissions extends Component
     public function update()
     {
         $this->validate();
-        UserPermission::find($this->modelId)->update($this->modelData());
+        Route::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -111,7 +116,7 @@ class UserPermissions extends Component
      */
     public function delete()
     {
-        UserPermission::destroy($this->modelId);
+        Route::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -158,8 +163,7 @@ class UserPermissions extends Component
 
     public function render()
     {
-
-        return view('livewire.user-permissions', [
+        return view('livewire.routes', [
             'data' => $this->read(),
         ]);
     }
