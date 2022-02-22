@@ -25,6 +25,7 @@ class UserPermission extends Model
             'user-permissions',
             'holidays',
             'holidays-overview',
+            'roles'
         ];
     }
 

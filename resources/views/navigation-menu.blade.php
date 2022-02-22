@@ -112,6 +112,9 @@
                 <x-jet-dropdown-link href="{{ route('users') }}" :active="request()->routeIs('users')">
                     {{ __('Users') }}
                 </x-jet-dropdown-link>
+                <x-jet-dropdown-link href="{{ route('roles') }}" :active="request()->routeIs('roles')">
+                    {{ __('User Roles') }}
+                </x-jet-dropdown-link>
                 <x-jet-dropdown-link href="{{ route('user-permissions') }}" :active="request()->routeIs('user-permissions')">
                     {{ __('User Permissions') }}
                 </x-jet-dropdown-link>

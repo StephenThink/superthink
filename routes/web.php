@@ -50,6 +50,10 @@ Route::group(['middleware' => [
         return view('admin.holidays-overview');
     })->name('holidays-overview');
 
+    Route::get('/roles', function () {
+        return view('admin.roles');
+    })->name('roles');
+
 });
 
 
