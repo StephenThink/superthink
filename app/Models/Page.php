@@ -11,4 +11,12 @@ class Page extends Model
 
     // Allows Mass Assignment
     protected $guarded = [];
+
+    public static function search($search)
+    {
+        return empty($search) ? static::query()
+            : static::query()->where('title', 'like', '%'.$search.'%')
+                ->orWhere('link', 'like', '%'.$search.'%')
+                ->orWhere('content', 'like', '%'.$search.'%');
+    }
 }

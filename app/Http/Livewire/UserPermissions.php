@@ -14,6 +14,11 @@ class UserPermissions extends Component
     public $modalConfirmDeleteVisible;
     public $modelId;
 
+    public $perPage = 10;
+    public $search = '';
+    public $orderBy = 'role';
+    public $orderAsc = true;
+
     /**
      * Put your custom public properties here!
      */
@@ -81,7 +86,9 @@ class UserPermissions extends Component
      */
     public function read()
     {
-        return UserPermission::paginate(10);
+        return UserPermission::search($this->search)
+        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+        ->paginate($this->perPage);
     }
 
     /**

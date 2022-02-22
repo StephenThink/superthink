@@ -21,6 +21,11 @@ class Pages extends Component
     public $isSetToDefaultHomePage;
     public $isSetToDefaultNotFoundPage;
 
+    public $perPage = 10;
+    public $search = '';
+    public $orderBy = 'title';
+    public $orderAsc = true;
+
     /**
      * The validation rules
      *
@@ -119,7 +124,9 @@ class Pages extends Component
      */
     public function read()
     {
-        return Page::paginate(5);
+        return Page::search($this->search)
+        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+        ->paginate($this->perPage);
     }
 
     /**

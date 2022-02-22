@@ -11,9 +11,12 @@ use Livewire\WithPagination;
 class Messages extends Component
 {
     use WithPagination;
-
-
     public $modelId;
+
+    public $perPage = 10;
+    public $search = '';
+    public $orderBy = 'created_at';
+    public $orderAsc = true;
 
 public function granted($eventId, $messageId)
 {
@@ -73,7 +76,11 @@ public function readMessage($id)
      */
     public function read()
     {
-        return Message::whereUserId(auth()->user()->id)->whereRead(0)->paginate(10);
+        return Message::search($this->search)
+        ->whereUserId(auth()->user()->id)
+        ->whereRead(0)
+        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+        ->paginate($this->perPage);
     }
 
     public function render()

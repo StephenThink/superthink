@@ -19,6 +19,10 @@ class NavigationMenus extends Component
     public $sequence = 1;
     public $type = 'SidebarNav';
 
+    public $perPage = 10;
+    public $search = '';
+    public $orderBy = 'type';
+    public $orderAsc = true;
 
     /**
      * The validation rules
@@ -86,7 +90,9 @@ class NavigationMenus extends Component
      */
     public function read()
     {
-        return NavigationMenu::paginate(5);
+        return NavigationMenu::search($this->search)
+        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+        ->paginate($this->perPage);
     }
 
     /**

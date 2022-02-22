@@ -30,4 +30,6 @@ class Holiday extends Model
     {
         return $this->belongsTo('App\Models\User', 'authorisedBy');
     }
+
+    
 }

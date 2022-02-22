@@ -27,5 +27,13 @@ class Message extends Model
         {
             return $this->belongsTo('App\Models\User', 'from');
         }
+
+        public static function search($search)
+    {
+        return empty($search) ? static::query()
+            : static::query()->where('created_at', 'like', '%'.$search.'%')
+                ->orWhere('from', 'like', '%'.$search.'%')
+                ->orWhere('message', 'like', '%'.$search.'%');
+    }
 }
 
