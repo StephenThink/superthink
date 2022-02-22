@@ -3,8 +3,8 @@ id: 718b4fd8-366c-4c90-8bd9-33d4843f58e5
 blueprint: case_study
 title: 'NAP - BP Online CDF Portal'
 video_choice: Video
-hero_image: BP-Online-CDF-39-Activations-Thumbnail-1360x768.5.jpg
-thumbnail: work/BP-Online-CDF-39-Activations-Thumbnail-1360x768.5.jpg
+hero_image: work/experience/bp-online-cdf/BP-Online-CDF-39-Activations-Thumbnail-2732x1536.jpg
+thumbnail: work/experience/bp-online-cdf/BP-Online-CDF-39-Activations-Thumbnail-2732x1536.jpg
 secondary_image: work/experience/bp-online-cdf/BP-Online-CDF-39-Activations-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -46,7 +46,7 @@ services_filter:
   - digital-design
   - film-and-animation
   - illustration
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1643388131
-video: /assets/work/experience/bp-online-cdf/BP-Online-CDF-Home-Full-Video.mp4
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1645533190
+video: /assets/work/experience/bp-online-cdf/BP-Online-CDF-Home-Full-Video-2.mp4
 ---
