@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
+use Laravel\Jetstream\HasTeams;
+use Laravel\Sanctum\HasApiTokens;
+use Laravel\Jetstream\HasProfilePhoto;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
-use Laravel\Jetstream\HasTeams;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -67,10 +68,13 @@ class User extends Authenticatable
      */
     public static function userRoleList()
     {
-        return [
-            'admin' => 'Admin',
-            'user' => 'User'
-        ];
+        $roles = Role::all();
+        $roleArray = [];
+        foreach ($roles as $key => $role) {
+            $roleArray[Str::lower($role->name)] = Str::ucfirst($role->name);
+        }
+
+        return $roleArray;
     }
 
     public function holidays()

@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Role;
 use App\Models\User;
 use Livewire\Component;
+use Illuminate\Support\Str;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -207,6 +209,7 @@ public $newUserId;
 
     public function render()
     {
+
 
         return view('livewire.users', [
             'data' => $this->read(),
