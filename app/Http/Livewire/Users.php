@@ -17,6 +17,11 @@ class Users extends Component
     public $modalConfirmDeleteVisible;
     public $modelId;
 
+    public $perPage = 10;
+    public $search = '';
+    public $orderBy = 'name';
+    public $orderAsc = true;
+
     /**
      * Put your custom public properties here!
      */
@@ -126,7 +131,9 @@ public $newUserId;
      */
     public function read()
     {
-        return User::paginate(10);
+        return User::search($this->search)
+        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+        ->paginate($this->perPage);
     }
 
     /**
