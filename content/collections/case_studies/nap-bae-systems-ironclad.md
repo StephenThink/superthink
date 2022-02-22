@@ -3,7 +3,7 @@ id: 9c986042-a89b-4d4c-905b-f2e9e5b5cffb
 blueprint: case_study
 title: 'NAP - BAE Systems Ironclad'
 video_choice: Image
-hero_image: work/experience/bae-systems-ironclad/BAE-Ironclad-7-Experience-Full-Image-1360x768.5.jpg
+hero_image: work/experience/bae-systems-ironclad/BAE-Ironclad-7-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-systems-ironclad/BAE-Ironclad-7-Secondary-Image-896x597.jpg
 short_case: false
 main_content:
@@ -26,5 +26,5 @@ services_filter:
   - display
   - illustration
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643384562
+updated_at: 1645527193
 ---

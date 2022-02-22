@@ -1,9 +1,9 @@
 ---
 id: 9b733646-7b15-4f8b-b0f8-5f4d9c11df35
 blueprint: case_study
-title: 'NAP - BAE Systems Ventilator Branding and Creative'
+title: 'NAP - BAE Systems Ventilator Branding & Creative'
 video_choice: Image
-hero_image: work/brand/bae-systems-ventilator/BAEVentilator-10-Brand-Full-Image-1360x768.5.jpg
+hero_image: work/brand/bae-systems-ventilator/BAEVentilator-10-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/bae-systems-ventilator/BAEVentilator-10-Brand-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -60,5 +60,5 @@ services_filter:
   - print-design
   - packaging-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643388962
+updated_at: 1645528720
 ---
