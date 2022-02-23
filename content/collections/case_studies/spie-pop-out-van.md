@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640112229
-hero_image: work/experience/spie-pop-out-van/SPIE-PopOutVan-13-Experience-Full-Image-1360x768.5.jpg
+updated_at: 1645536971
+hero_image: work/experience/spie-pop-out-van/SPIE-PopOutVan-13-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/spie-pop-out-van/Spie-PopOutVan-13-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -33,7 +33,7 @@ main_content:
       values:
         type: the_idea
         video_choice: Image
-        intro_full_image: work/experience/spie-pop-out-van/Spie-PopOutVan-13-Experience-Large-927x522-2.jpg
+        intro_full_image: work/experience/spie-pop-out-van/Spie-PopOutVan-13-Experience-Large-2732x1536-2.jpg
         custom_header: ' '
   -
     type: set

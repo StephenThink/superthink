@@ -5,9 +5,9 @@ title: 'NAP - The Energy Club Website'
 greatest_hits: false
 core:
   - brand
-updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
-updated_at: 1644509887
-hero_image: work/brand/the-energy-club-website/The-Energy-Club-Website-Animation.gif
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1645550386
+hero_image: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/the-energy-club-website/Animated-Mockup-GIF-2.gif
 main_content:
   -
@@ -36,8 +36,9 @@ services_filter:
   - illustration
   - film-and-animation
   - digital-design
-thumbnail: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Large-927x522-2.jpg
+thumbnail: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Full-Image-2732x1536.jpg
 short_case: false
 short_para_title: 'Old Content'
-video_choice: Image
+video_choice: Video
+video: /assets/work/brand/the-energy-club-website/TC3473-Inspired---The-Energy-Club-Scenes-v1---Animation-Blue-BG.mp4
 ---

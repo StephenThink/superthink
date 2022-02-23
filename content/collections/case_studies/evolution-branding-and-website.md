@@ -1,12 +1,12 @@
 ---
 id: 37e73bec-b8d9-49d2-9fad-76566db82731
 blueprint: case_study
-title: 'mc- Evolution Branding and Website'
+title: 'mc- Evolution Branding & Website'
 short_case: false
 greatest_hits: false
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1641811661
-hero_image: Evolution-2-Brand-Full-Image-1360x768.5.jpg
+updated_at: 1645620281
+hero_image: work/brand/evolution-branding-and-website/Evolution-2-Brand-Full-Image-2732x1536-2.jpg
 mini_introduction: 'Evolution are a brand on a mission. From their roots as a small start up, they came to Think! to turn them into a powerhouse of a brand in a short space of time.'
 secondary_image: work/brand/evolution-branding-and-website/Evolution-2-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -39,4 +39,6 @@ services_filter:
   - brand-identity
   - print-design
   - digital-design
+  - display
+  - branded-spaces
 ---

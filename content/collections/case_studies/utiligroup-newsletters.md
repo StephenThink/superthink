@@ -6,9 +6,9 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643385499
-hero_image: work/experience/utiligroup-newsletters/1-BGlobal-Rebrand-v2.jpg
-secondary_image: work/experience/utiligroup-newsletters/2-Utiligroup-newsletter-2014-v2-1.jpg
+updated_at: 1645540555
+hero_image: work/experience/utiligroup-switchedon-newsletters/41-Utiligroup-SwitchedOn-Newsletters-Full-Image-2732x1536.jpg
+secondary_image: work/experience/utiligroup-switchedon-newsletters/41-Utiligroup-SwitchedOn-Newsletters-Secondary-Image.jpg
 main_content:
   -
     type: set
@@ -16,11 +16,10 @@ main_content:
       values:
         type: slider
         images:
-          - work/experience/utiligroup-newsletters/1-Utiligroup-newsletter-2014-v2.jpg
-          - work/experience/utiligroup-newsletters/2-Utiligroup-newsletters-14.jpg
-          - work/experience/utiligroup-newsletters/3-Utiligroup-newsletters-14.jpg
-          - work/experience/utiligroup-newsletters/4-Utiligroup-newsletters-14.jpg
-          - work/experience/utiligroup-newsletters/5-Utiligroup-newsletters-14.jpg
+          - work/experience/utiligroup-switchedon-newsletters/2-Utiligroup-newsletters-14.jpg
+          - work/experience/utiligroup-switchedon-newsletters/3-Utiligroup-newsletters-14.jpg
+          - work/experience/utiligroup-switchedon-newsletters/5-Utiligroup-newsletters-14.jpg
+          - work/experience/utiligroup-switchedon-newsletters/4-Utiligroup-newsletters-14.jpg
   -
     type: paragraph
   -
