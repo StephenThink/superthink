@@ -26,7 +26,7 @@ class UserPermission extends Model
             'holidays',
             'holidays-overview',
             'roles',
-            'routes',
+            'workingdays',
         ];
     }
 

@@ -1019,13 +1019,13 @@ select {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
 }
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1625,14 +1625,14 @@ select {
 .pr-8 {
   padding-right: 2rem;
 }
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
 .pt-8 {
   padding-top: 2rem;
 }
 .pl-2 {
   padding-left: 0.5rem;
-}
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 .text-left {
   text-align: left;

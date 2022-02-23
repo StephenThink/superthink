@@ -87,6 +87,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Message');
     }
 
+    public function workday()
+    {
+        return $this->hasOne('App\Models\WorkingDay');
+    }
+
     public static function search($search)
     {
         return empty($search) ? static::query()

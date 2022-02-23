@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Holiday;
 use Livewire\Component;
 use App\Models\Message;
+use App\Models\WorkingDay;
 
 class CurrentUserHolidays extends Component
 {
@@ -54,6 +55,7 @@ class CurrentUserHolidays extends Component
      */
     public function calcDaysTaken()
     {
+
         // Grab the dates that we need to work out.
         $d = Carbon::parse($this->start)->floatDiffInDays($this->end);
 
@@ -73,6 +75,29 @@ class CurrentUserHolidays extends Component
                 $this->daysTaken = $d + 1;
             }
         }
+
+        // calculate True Days
+
+        $workDays = WorkingDay::where('user_id', $this->user_id)
+        ->select('monday','tuesday','wednesday','thursday','friday','saturday','sunday')
+        ->first()
+        ->toArray();
+
+        $total = 0;
+
+
+       // Print out Days
+       $datesList = [];
+
+        for ($i=0; $i < $this->daysTaken; $i++) {
+            $datesList[Carbon::parse($this->start)->addDays($i)->isoFormat('dddd')] = 1;
+        }
+
+        foreach ($datesList as $key => $value) {
+            if($workDays[strtolower($key)] == 1)
+            $total++;
+        }
+        $this->daysTaken = $total;
 
         return $this->daysTaken;
     }
