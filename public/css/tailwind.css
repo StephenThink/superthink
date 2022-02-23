@@ -473,28 +473,6 @@ html {
     display: inline-block;
 }
 
-@responsive {
-    .bg-gradient-yellow-to-dark {
-        background: linear-gradient(90deg, #FFC734 65%, #373737 65%);
-    }
-    .bg-gradient-blue-to-light {
-        background: linear-gradient(0deg, #F7F7F7 30%, rgba(255,199,52,1) 30%);
-    }
-    .bg-gradient-transparent-to-yellow {
-        background: linear-gradient(90deg, rgba(247,247,247, 1) 50%, rgba(255,199,52,1) 50%);
-    }
-        .dark .bg-gradient-blue-to-light {
-            background: linear-gradient(0deg, #373737 30%, rgba(255,199,52,1) 30%);
-        }
-        /* very specific, sould have a better way */
-        .dark .md\:bg-gradient-transparent-to-yellow {
-            background: linear-gradient(90deg, #373737 50%, #FFC734 50%);
-        }
-        .dark .md\:bg-gradient-yellow-to-dark:not(.not-affected-by-dark) {
-            background: linear-gradient(90deg, #FFC734 65%, rgba(221,221,221,1) 65%);
-        }
-}
-
 .dark .accent {
   --tw-text-opacity: 1;
   color: rgb(247 247 247 / var(--tw-text-opacity));
@@ -1939,14 +1917,6 @@ sup {
   top: -13rem;
 }
 
-.left-16 {
-  left: 4rem;
-}
-
-.bottom-72 {
-  bottom: 18rem;
-}
-
 .bottom-10 {
   bottom: 2.5rem;
 }
@@ -2332,10 +2302,6 @@ sup {
   height: 50%;
 }
 
-.h-tea {
-  height: 22.5rem;
-}
-
 .h-3\/4 {
   height: 75%;
 }
@@ -2426,10 +2392,6 @@ sup {
 
 .w-6 {
   width: 1.5rem;
-}
-
-.w-7\/12 {
-  width: 58.333333%;
 }
 
 .w-5\/12 {
@@ -3744,14 +3706,6 @@ sup {
     top: -5rem;
   }
 
-  .md\:left-24 {
-    left: 6rem;
-  }
-
-  .md\:bottom-56 {
-    bottom: 14rem;
-  }
-
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -4173,10 +4127,6 @@ sup {
     display: none;
   }
 
-  .xl\:h-screen {
-    height: 100vh;
-  }
-
   .xl\:w-1\/6 {
     width: 16.666667%;
   }
@@ -4189,8 +4139,8 @@ sup {
     width: 50%;
   }
 
-  .xl\:w-9\/12 {
-    width: 75%;
+  .xl\:w-6\/12 {
+    width: 50%;
   }
 
   .xl\:w-7\/12 {
@@ -4199,10 +4149,6 @@ sup {
 
   .xl\:w-5\/12 {
     width: 41.666667%;
-  }
-
-  .xl\:w-6\/12 {
-    width: 50%;
   }
 
   .xl\:flex-row {
@@ -4245,10 +4191,6 @@ sup {
 
 @media (min-width: 1536px) {
 
-  .\32xl\:left-20 {
-    left: 5rem;
-  }
-
   .\32xl\:block {
     display: block;
   }
@@ -4259,22 +4201,6 @@ sup {
 
   .\32xl\:w-1\/2 {
     width: 50%;
-  }
-
-  .\32xl\:w-9\/12 {
-    width: 75%;
-  }
-
-  .\32xl\:w-4\/12 {
-    width: 33.333333%;
-  }
-
-  .\32xl\:w-5\/12 {
-    width: 41.666667%;
-  }
-
-  .\32xl\:w-\[400px\] {
-    width: 400px;
   }
 }
 

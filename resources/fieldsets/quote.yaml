@@ -1,18 +1,35 @@
 title: Quote
 fields:
   -
-    handle: quote
+    handle: quote_me
     field:
-      type: textarea
+      collapse: false
+      sets:
+        quote:
+          display: Quote
+          fields:
+            -
+              handle: quote
+              field:
+                antlers: false
+                display: Quote
+                type: textarea
+                icon: textarea
+                listable: hidden
+                instructions_position: above
+                instructions: 'This will appear on the about page in a yellow block with black text'
+            -
+              handle: cite
+              field:
+                input_type: text
+                antlers: false
+                display: Cite
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+      display: 'Quote Me'
+      type: replicator
+      icon: replicator
       listable: hidden
-      display: Quote
-      instructions: 'This will appear on the about page in a yellow block with black text'
       instructions_position: above
-      antlers: false
-  -
-    handle: cite
-    field:
-      input_type: text
-      type: text
-      listable: hidden
-      display: Cite
