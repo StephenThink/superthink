@@ -1,13 +1,13 @@
 ---
 id: 10e86465-ab1a-40a5-b9ab-255165bcfbab
 blueprint: case_study
-title: 'mc- BAE System Heritage Book'
+title: 'mc- BAE Systems Heritage Book'
 greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640177354
-hero_image: work/experience/bae-system-heritage-book/BAE-Heritage-19-Experience-Full-Image-1360x768.5.jpg
+updated_at: 1645617427
+hero_image: work/experience/bae-system-heritage-book/BAE-Heritage-19-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-system-heritage-book/BAE-Heritage-19-Experience-Secondary-Image-896x597.jpg
 main_content:
   -

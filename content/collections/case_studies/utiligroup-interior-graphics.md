@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640101123
-hero_image: work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics2.jpg
+updated_at: 1645545046
+hero_image: work/experience/utiligroup-interior-graphics/Experience-3-Utiligroup-Interiors-Full-Image-2732x1536.jpg
 secondary_image: work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics.jpg
 main_content:
   -
@@ -25,7 +25,7 @@ main_content:
     attrs:
       values:
         type: full_image
-        full_image: work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics3.jpg
+        full_image: work/experience/utiligroup-interior-graphics/Experience-3-Utiligroup-Interiors-Large-2732x1536.jpg
         video_choice: Image
   -
     type: set
@@ -43,6 +43,8 @@ services_filter:
   - brand-identity
   - print-design
   - display
+  - branded-spaces
+  - illustration
 video_choice: Image
 short_case: false
 ---

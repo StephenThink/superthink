@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640101895
-hero_image: work/experience/evolution-interiors/Experience-5-Evolution-Interiors-Full-Image.jpg
+updated_at: 1645620632
+hero_image: work/experience/evolution-interiors/Experience-5-Evolution-Interiors-Full-Image-2732x1536.jpg
 secondary_image: work/experience/evolution-interiors/Experience-5-Evolution-Secondary-Image.jpg
 main_content:
   -

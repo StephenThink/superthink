@@ -3,7 +3,7 @@ id: 6e665ff9-77b1-40f1-b8f4-bbd63bf6e985
 blueprint: case_study
 title: 'mc- Michelin CrossClimate2 Launch'
 video_choice: Image
-hero_image: work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Full-Image-1360x768.5.jpg
+hero_image: work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -60,6 +60,6 @@ services_filter:
   - digital-design
   - film-and-animation
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643387374
+updated_at: 1645619179
 video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
 ---
