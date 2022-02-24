@@ -2,11 +2,13 @@
 
 namespace App\Http\Livewire;
 
+use Carbon\Carbon;
+use App\Models\User;
 use App\Models\Holiday;
 use Livewire\Component;
+use Carbon\CarbonPeriod;
+use App\Models\WorkingDay;
 use App\Http\Livewire\Users;
-use App\Models\User;
-use Carbon\Carbon;
 use Livewire\WithPagination;
 
 class Holidays extends Component
@@ -56,27 +58,32 @@ class Holidays extends Component
      */
     public function calcDaysTaken()
     {
-        // Grab the dates that we need to work out.
-        $d = Carbon::parse($this->start)->floatDiffInDays($this->end);
+         // calculate True Days
 
-        // If the start and end are the same date, check to see if the person wants half a day or not
-        if ($d === 0) {
-            if ($this->halfDay) {
-                $this->daysTaken = 0.5;
-            } else {
-                $this->daysTaken = 1;
-            }
-        // Again checking to see if the person wants half a day on top of their choosen dates
-        // The one is so that it works it out correctly
-        } else {
-            if( $this->halfDay) {
-                $this->daysTaken = $d + 1 - .5;
-            } else {
-                $this->daysTaken = $d + 1;
-            }
-        }
+         $workDays = WorkingDay::where('user_id', $this->user_id)
+         ->select('monday','tuesday','wednesday','thursday','friday','saturday','sunday')
+         ->first()
+         ->toArray();
 
-        return $this->daysTaken;
+         $total = 0;
+
+         // This creates a Carbon Period (Array) of days requested
+         $period = CarbonPeriod::create($this->start, $this->end);
+
+         // Foreach Day, it converts the value to a day and compares it against where they work or not.
+         foreach ($period as $key => $value) {
+             $index = strtolower(Carbon::parse($value)->format('l'));
+             if ($workDays[$index] == 1)
+             $total++;
+         }
+
+         // If you they take half a day then subtract it from the total.
+         if($this->halfDay) {
+             $this->daysTaken = $total - .5;
+         } else {
+             $this->daysTaken = $total;
+         }
+         return $this->daysTaken;
     }
 
     /**

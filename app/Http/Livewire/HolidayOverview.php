@@ -3,9 +3,12 @@
 namespace App\Http\Livewire;
 
 use Carbon\Carbon;
+use Carbon\CarbonPeriod;
 use App\Models\User;
 use App\Models\Holiday;
 use App\Models\Message;
+use App\Models\WorkingDay;
+
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
@@ -50,7 +53,7 @@ class HolidayOverview extends Component
         ];
     }
 
-     /**
+         /**
      * Runs everytime the title gets updated
      *
      * @param  mixed $value
@@ -58,26 +61,32 @@ class HolidayOverview extends Component
      */
     public function calcDaysTaken()
     {
-        // Grab the dates that we need to work out.
-        $d = Carbon::parse($this->start)->floatDiffInDays($this->end);
 
-        // If the start and end are the same date, check to see if the person wants half a day or not
-        if ($d === 0) {
-            if ($this->halfDay) {
-                $this->daysTaken = 0.5;
-            } else {
-                $this->daysTaken = 1;
-            }
-        // Again checking to see if the person wants half a day on top of their choosen dates
-        // The one is so that it works it out correctly
-        } else {
-            if( $this->halfDay) {
-                $this->daysTaken = $d + 1 - .5;
-            } else {
-                $this->daysTaken = $d + 1;
-            }
+        // calculate True Days
+
+        $workDays = WorkingDay::where('user_id', $this->user_id)
+        ->select('monday','tuesday','wednesday','thursday','friday','saturday','sunday')
+        ->first()
+        ->toArray();
+
+        $total = 0;
+
+        // This creates a Carbon Period (Array) of days requested
+        $period = CarbonPeriod::create($this->start, $this->end);
+
+        // Foreach Day, it converts the value to a day and compares it against where they work or not.
+        foreach ($period as $key => $value) {
+            $index = strtolower(Carbon::parse($value)->format('l'));
+            if ($workDays[$index] == 1)
+            $total++;
         }
 
+        // If you they take half a day then subtract it from the total.
+        if($this->halfDay) {
+            $this->daysTaken = $total - .5;
+        } else {
+            $this->daysTaken = $total;
+        }
         return $this->daysTaken;
     }
 
@@ -165,6 +174,7 @@ class HolidayOverview extends Component
         $this->validate();
 
         $this->calcDaysTaken();
+
         $this->authorised = 1;
         // The User who has logged in
         $this->authorisedBy = Auth()->user()->id;
@@ -307,6 +317,55 @@ class HolidayOverview extends Component
         $this->modelId = $id;
         $this->modalConfirmDeleteVisible = true;
     }
+
+    public function granted($eventId)
+    {
+
+
+        // Need to change the holiday from pending to autorised
+        $event = Holiday::find($eventId);
+        $event->update([
+            'pending' => 0,
+            'authorised' => 1,
+        ]);
+
+        // Send message to User to say its granted
+        $message = Message::create([
+            'user_id' => $event->user_id,
+            'from' => auth()->user()->id,
+            'subject' => 'Holiday Granted',
+            'message' => $event->daysTaken . " days starting from " . $event->start,
+            'requestedId' => $event->id,
+            'read' => 0,
+        ]);
+
+        // Remove Message from the Holiday Managers
+        $unreadMessage = Message::where('requestedId', $eventId)->first();
+        $unreadMessage->update([
+            'read' => 1,
+        ]);
+    }
+
+    public function denyed($eventId)
+{
+    // Need to change the holiday from pending to not authorised
+    $event = Holiday::find($eventId);
+
+    User::findOrFail($event->user_id)->increment('leaveDays', $event->daysTaken);
+    Holiday::destroy($eventId);
+
+    // Send message to User to say its granted
+    Message::create([
+        'user_id' => $event->user_id,
+        'from' => auth()->user()->id,
+        'subject' => 'Holiday Denyed',
+        'message' => $event->daysTaken . " days not starting from " . $event->start,
+        'requestedId' => 0,
+        'read' => 0,
+    ]);
+
+}
+
 
 
     public function render()

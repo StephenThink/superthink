@@ -48,7 +48,6 @@
 
                             @forelse ($items as $item)
                             <tr>
-
                                 <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->start)->format('D jS M, Y') }}
                                 </td>
                                 <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->end)->format('D jS M, Y') }}</td>
@@ -59,6 +58,14 @@
                                 <td class="px-6 py-2">{{ $item->dateAuthorised }} by {{ $item->authorisedBys->name }}
                                 </td>
                                 <td class="px-6 py-2 flex justify-end">
+                                    @if ($item->pending)
+                                    <x-jet-button wire:click="granted({{$item->id}})">
+                                        {{ __('Grant') }}
+                                    </x-jet-button>
+                                    <x-jet-danger-button class="ml-2" wire:click="denyed({{$item->id}})">
+                                        {{ __('Deny') }}
+                                    </x-jet-button>
+                                    @else
                                     <x-jet-button wire:click="updateShowModal({{ $item->id }})">
                                         {{ __('Update') }}
                                     </x-jet-button>
@@ -67,6 +74,8 @@
                                         {{ __('Delete') }}
                                         </x-jet-button>
                                         @endif
+
+                                    @endif
                                 </td>
                             </tr>
                             @empty
