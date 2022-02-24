@@ -130,6 +130,49 @@
             </select>
             @error('role') <span class="error">{{ $message }}</span> @enderror
         </div>
+        
+        <div class="mt-4">
+            <label class="flex items-center">
+                <x-jet-checkbox wire:model.defer="monday" :value="$monday"/>
+                <span class="ml-2 text-sm text-gray-600">Monday</span>
+            </label>
+            </div>
+            <div class="mt-4">
+                <label class="flex items-center">
+                    <x-jet-checkbox wire:model.defer="tuesday" :value="$tuesday"/>
+                    <span class="ml-2 text-sm text-gray-600">Tuesday</span>
+                </label>
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="wednesday" :value="$wednesday"/>
+                        <span class="ml-2 text-sm text-gray-600">Wednesday</span>
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="thursday" :value="$thursday"/>
+                        <span class="ml-2 text-sm text-gray-600">Thursday</span>
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="friday" :value="$friday"/>
+                        <span class="ml-2 text-sm text-gray-600">Friday</span>
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="saturday" :value="$saturday"/>
+                        <span class="ml-2 text-sm text-gray-600">Saturday</span>
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="sunday" :value="$sunday"/>
+                        <span class="ml-2 text-sm text-gray-600">Sunday</span>
+                    </label>
+                </div>
     </x-slot>
 
     <x-slot name="footer">

@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Role;
 use App\Models\User;
 use Livewire\Component;
+use App\Models\WorkingDay;
 use Illuminate\Support\Str;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
@@ -33,6 +34,14 @@ class Users extends Component
     public $password;
     public $passwordConfirmation;
     public $dateStarted;
+
+    public $monday;
+    public $tuesday;
+    public $wednesday;
+    public $thursday;
+    public $friday;
+    public $saturday;
+    public $sunday;
 
 /**
  * Needed for creating a Teams with a new user
@@ -81,6 +90,7 @@ public $newUserId;
             'role' => $this->role,
             'name' => $this->name,
             'dateStarted' => $this->dateStarted,
+
         ];
     }
 
@@ -97,9 +107,25 @@ public $newUserId;
             'name' => $this->name,
             'email' => $this->email,
             'password' => Hash::make($this->password),
-            'dateStarted' => $this->dateStarted
+            'dateStarted' => $this->dateStarted,
+
         ];
     }
+
+public function workDayModelData()
+{
+    return [
+
+        'monday' => $this->monday,
+        'tuesday' => $this->tuesday,
+        'wednesday' => $this->wednesday,
+        'thursday' => $this->thursday,
+        'friday' => $this->friday,
+        'saturday' => $this->saturday,
+        'sunday' => $this->sunday,
+    ];
+}
+
     /**
      * The create function.
      *
@@ -121,6 +147,26 @@ public $newUserId;
             'name' => explode(' ', $this->newUserId->name, 2)[0]  . "'s Team",
             'personal_team' => 1,
         ]);
+
+        ($this->monday == true) ? $this->monday = true : $this->monday = false;
+        ($this->tuesday == true) ? $this->tuesday = true : $this->tuesday = false;
+        ($this->wednesday == true) ? $this->wednesday = true : $this->wednesday = false;
+        ($this->thursday == true) ? $this->thursday = true : $this->thursday = false;
+        ($this->friday == true) ? $this->friday = true : $this->friday = false;
+        ($this->saturday == true) ? $this->saturday = true : $this->saturday = false;
+        ($this->sunday == true) ? $this->sunday = true : $this->sunday = false;
+
+        WorkingDay::create([
+            'user_id'=> $this->newUserId->id,
+            'monday' => $this->monday,
+            'tuesday' => $this->tuesday,
+            'wednesday' => $this->wednesday,
+            'thursday' => $this->thursday,
+            'friday' => $this->friday,
+            'saturday' => $this->saturday,
+            'sunday' => $this->sunday,
+        ]);
+
 
         $this->modalCreateFormVisible = false;
         $this->reset();

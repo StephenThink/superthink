@@ -68,6 +68,15 @@ class WorkingDays extends Component
      */
     public function modelData()
     {
+        ($this->monday == true) ? $this->monday = true : $this->monday = false;
+        ($this->tuesday == true) ? $this->tuesday = true : $this->tuesday = false;
+        ($this->wednesday == true) ? $this->wednesday = true : $this->wednesday = false;
+        ($this->thursday == true) ? $this->thursday = true : $this->thursday = false;
+        ($this->friday == true) ? $this->friday = true : $this->friday = false;
+        ($this->saturday == true) ? $this->saturday = true : $this->saturday = false;
+        ($this->sunday == true) ? $this->sunday = true : $this->sunday = false;
+
+
         return [
             'user_id' => $this->user_id,
             'monday' => $this->monday,

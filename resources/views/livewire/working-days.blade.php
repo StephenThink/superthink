@@ -142,48 +142,40 @@
                         <x-jet-checkbox wire:model.defer="wednesday" :value="$wednesday"/>
                         <span class="ml-2 text-sm text-gray-600">Wednesday</span>
                     </label>
-                    </div>
-                    <div class="mt-4">
-                        <label class="flex items-center">
-                            <x-jet-checkbox wire:model.defer="thursday" :value="$thursday"/>
-                            <span class="ml-2 text-sm text-gray-600">Thursday</span>
-                        </label>
-                        </div>
-                        <div class="mt-4">
-                            <label class="flex items-center">
-                                <x-jet-checkbox wire:model.defer="friday" :value="$friday"/>
-                                <span class="ml-2 text-sm text-gray-600">Friday</span>
-                            </label>
-                            </div>
-                            <div class="mt-4">
-                                <label class="flex items-center">
-                                    <x-jet-checkbox wire:model.defer="saturday" :value="$saturday"/>
-                                    <span class="ml-2 text-sm text-gray-600">Saturday</span>
-                                </label>
-                                </div>
-                                <div class="mt-4">
-                                    <label class="flex items-center">
-                                        <x-jet-checkbox wire:model.defer="sunday" :value="$sunday"/>
-                                        <span class="ml-2 text-sm text-gray-600">Sunday</span>
-                                    </label>
-                                    </div>
-
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="thursday" :value="$thursday"/>
+                        <span class="ml-2 text-sm text-gray-600">Thursday</span>
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="friday" :value="$friday"/>
+                        <span class="ml-2 text-sm text-gray-600">Friday</span>
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="saturday" :value="$saturday"/>
+                        <span class="ml-2 text-sm text-gray-600">Saturday</span>
+                    </label>
+                </div>
+                <div class="mt-4">
+                    <label class="flex items-center">
+                        <x-jet-checkbox wire:model.defer="sunday" :value="$sunday"/>
+                        <span class="ml-2 text-sm text-gray-600">Sunday</span>
+                    </label>
+                </div>
         </x-slot>
 
         <x-slot name="footer">
             <x-jet-secondary-button wire:click="$toggle('modalFormVisible')" wire:loading.attr="disabled">
                 {{ __('Nevermind') }}
             </x-jet-secondary-button>
-
-            @if ($modelId)
-                <x-jet-button class="ml-2" wire:click="update" wire:loading.attr="disabled">
-                    {{ __('Update') }}
-                </x-jet-danger-button>
-            @else
-                <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
-                    {{ __('Create') }}
-                </x-jet-danger-button>
-            @endif
+            <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
+                {{ __('Create') }}
+            </x-jet-danger-button>
         </x-slot>
     </x-jet-dialog-modal>
 
