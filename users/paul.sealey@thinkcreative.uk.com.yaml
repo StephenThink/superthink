@@ -2,3 +2,7 @@ name: 'Paul Sealey'
 super: true
 id: c080c544-1e5b-44fb-913c-aaff9b0032aa
 password_hash: $2y$10$6oZhDL39ZmOfd7D3P7YHw.GIr2VSiP.cMaGhAthLtcDMUvp4fATSC
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing

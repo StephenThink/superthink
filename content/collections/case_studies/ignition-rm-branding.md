@@ -3,11 +3,11 @@ id: ca711063-a9ec-4f68-be8c-16ce7bad0869
 blueprint: case_study
 title: 'mc- Ignition RM Branding'
 greatest_hits: false
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1644337981
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1645713011
 core:
   - brand
-hero_image: work/brand/ignition-rm-branding/Ignition-4-Brand-Full-Image-1360x768.5.jpg
+hero_image: work/brand/ignition-rm-branding/Ignition-4-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/ignition-rm-branding/Ignition-4-Brand-Secondary-Image-896x597.jpg
 main_content:
   -

@@ -3,8 +3,8 @@ id: c220f30e-3f32-4a6d-958d-6d8577ff4e1b
 blueprint: about
 title: 'About Us'
 hero_text: 'Good people to connect the dots'
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1645632906
+updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
+updated_at: 1645635548
 template: pages/about
 hero_intro: 'We reckon great things happen when you put stuff together. That''s why our people combine a whole range of creative disciplines. Oh and we''re dead nice too.'
 layered_title: 'How it works'
@@ -50,7 +50,57 @@ below_hero: 'Your creative family'
 quote_me:
   -
     quote: 'Think!Creative are always my ‘go-to guys’ when I need inspired, creative and thoughtful design. I’ve always found them to have an innate ability to understand not just the design brief but also the wider campaign context and objectives - a highly valued aspect of this highly valued team.'
-    cite: '— Greg Trew, Communications Manager – BP Refining'
+    cite: 'Greg Trew, Communications Manager – BP Refining'
+    type: quote
+    enabled: true
+  -
+    quote: |-
+      We’ve been working with the team at Think!Creative for many years and rate them as strong, collaborative
+      and reliable creative partners on a wide range of projects and deliverables. They apply creativity
+      and stretch thoughtfully, based on a thorough understanding of our brand requirements. We also
+      value their diligence – running projects efficiently and effectively to deliver on time and on budget, pulling
+      out the stops when our deadlines are pressing and keeping us informed throughout.
+    cite: 'Charlotte McGrath Head of Group Communications, Corporate Communications – BAE Systems plc'
+    type: quote
+    enabled: true
+  -
+    type: quote
+    enabled: true
+    quote: |-
+      The team at Think! are nimble, smart and professional. Their style is collaborative, we can pose an open
+      design problem or a half developed concept and either way they surprise us with the creativity of the
+      solution. They are efficient and timely turning work around and communicative in managing expectations,
+      always delivering against our deadlines and budgets. Most importantly though, they partner with us to
+      understand our needs and create customer centric, creative solutions valued by our users.
+    cite: 'Fiona Marley Director Commercial, Sales, Marketing & Retail Capabilities, People & Culture – BP International Ltd'
+  -
+    quote: |-
+      We have worked with Think!Creative for a number of years. They are a team of highly-talented, creative
+      professionals, but what we really value about them, is that they know the importance of strategic and
+      business goals. We cannot emphasise enough the variety in projects we have asked for their support on
+      over the years, and they deliver compelling creative solutions each time. They are our go-to supplier, we
+      can trust them, and they deliver outstanding, quality work. Highly recommend.
+    cite: 'Holly Wild External Communications Manager – RBSL Ltd'
+    type: quote
+    enabled: true
+  -
+    quote: |-
+      From the first time we met Think! to discuss and outline future marketing initiatives, it was clear that
+      they grasped what was being expected from them. Think!Creative came into their own and the results
+      showed immediately in our order book. In a market where it is impossible to achieve a like for like price, we know that we received excellent value for money.
+    cite: 'Paul Garside Former CEO – SPIE GarsideLaycock'
+    type: quote
+    enabled: true
+  -
+    quote: 'Think!Creative have consistently provided an excellent service along with innovative ideas, an understanding of our requirements and attention to detail. Every project has been an enjoyable experience and we are in no doubt that our excellent working relationship with them will continue.'
+    cite: 'Matthew Hirst CEO – Utiligroup / ESG Global'
+    type: quote
+    enabled: true
+  -
+    quote: |-
+      Think!Creative is a design agency that offers creative marketing materials whilst adhering closely to
+      brand policy which is of paramount importance to a company such as BAE Systems. I would not hesitate to recommend them to other companies.
+    cite: 'Kate Roberts Communications Manager – BAE Systems plc'
     type: quote
     enabled: true
 bouncing_arrow: false
