@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Carbon\Carbon;
+use Carbon\CarbonPeriod;
 use App\Models\User;
 use App\Models\Holiday;
 use Livewire\Component;
@@ -85,18 +86,17 @@ class CurrentUserHolidays extends Component
 
         $total = 0;
 
+        // This creates a Carbon Period (Array) of days requested
+        $period = CarbonPeriod::create($this->start, $this->end);
 
-       // Print out Days
-       $datesList = [];
-
-        for ($i=0; $i < $this->daysTaken; $i++) {
-            $datesList[Carbon::parse($this->start)->addDays($i)->isoFormat('dddd')] = 1;
-        }
-
-        foreach ($datesList as $key => $value) {
-            if($workDays[strtolower($key)] == 1)
+        // Foreach Day, it converts the value to a day and compares it against where they work or not.
+        foreach ($period as $key => $value) {
+            $index = strtolower(Carbon::parse($value)->format('l'));
+            if ($workDays[$index] == 1)
             $total++;
         }
+
+
         $this->daysTaken = $total;
 
         return $this->daysTaken;
