@@ -167,6 +167,31 @@ class WorkingDays extends Component
         $this->modalConfirmDeleteVisible = true;
     }
 
+
+    /**
+     * Change a Day Clicked from Yes to No and Vice Versa
+     *
+     * @param  integer $id
+     * @param  string $day
+     * @return void
+     */
+    public function invertDay($id, $day)
+    {
+        if(WorkingDay::find($id)->pluck($day)->first() == 1) {
+            WorkingDay::findOrFail($id)->decrement($day);
+        } else {
+            WorkingDay::findOrFail($id)->increment($day);
+        }
+        $this->resetPage();
+    }
+
+
+
+
+
+
+
+
     public function render()
     {
         // Grab all Users

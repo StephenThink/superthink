@@ -1,8 +1,12 @@
 <div class="p-6">
     <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
+
+        @if (count($staffmembers) > 0)
         <x-jet-button wire:click="createShowModal">
             {{ __('Create') }}
         </x-jet-button>
+        @endif
+
     </div>
 
     {{-- The data table --}}
@@ -30,18 +34,58 @@
                                 @foreach ($data as $item)
                                     <tr>
                                         <td class="px-6 py-2">{{ $item->user->name }}</td>
-                                        <td class="px-6 py-2">{{ $item->monday }}</td>
-                                        <td class="px-6 py-2">{{ $item->tuesday }}</td>
-                                        <td class="px-6 py-2">{{ $item->wednesday }}</td>
-                                        <td class="px-6 py-2">{{ $item->thursday }}</td>
-                                        <td class="px-6 py-2">{{ $item->friday }}</td>
-                                        <td class="px-6 py-2">{{ $item->saturday }}</td>
-                                        <td class="px-6 py-2">{{ $item->sunday }}</td>
+                                        <td class="px-6 py-2 " wire:click="invertDay({{ $item->id}}, 'monday')">
+                                        @if ($item->monday)
+                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                        @else
+                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                        @endif
+                                    </td>
+                                    <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'tuesday')">
+                                        @if ($item->tuesday)
+                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                        @else
+                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                        @endif
+                                    </td>
+                                    <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'wednesday')">
+                                        @if ($item->wednesday)
+                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                        @else
+                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                        @endif
+                                    </td>
+                                    <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'thursday')">
+                                        @if ($item->thursday)
+                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                        @else
+                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                        @endif
+                                    </td>
+                                    <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'friday')">
+                                        @if ($item->friday)
+                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                        @else
+                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                        @endif
+                                    </td>
+                                    <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'saturday')">
+                                        @if ($item->saturday)
+                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                        @else
+                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                        @endif
+                                    </td>
+                                    <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'sunday')">
+                                        @if ($item->sunday)
+                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                        @else
+                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                        @endif
+                                    </td>
 
                                         <td class="px-6 py-2 flex justify-end">
-                                            <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                                                {{ __('Update') }}
-                                            </x-jet-button>
+
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
                                                 {{ __('Delete') }}
                                             </x-jet-button>
@@ -67,7 +111,7 @@
     {{-- Modal Form --}}
     <x-jet-dialog-modal wire:model="modalFormVisible">
         <x-slot name="title">
-            {{ __('Create or Update Form') }}
+            {{ __('Add Staff Member') }}
         </x-slot>
 
         <x-slot name="content">
