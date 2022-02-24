@@ -1,96 +1,81 @@
 <style>
   
-.review__items {
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 10px;
-    align-items: center;
-}
-  
-
- 
-.review__items {
-    display: none;
-}</style>
-
-<div class="main__panel_x-small {{ bg }} dark:text-dark">
-{{#<div class="container">
-
-    {{ quote_me }}
+    .review__items {
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+    }
+      
+    
+     
+    .review__items {
+        display: none;
+    }</style>
+    
+    <div class="main__panel_x-small {{ bg }} dark:text-dark">
     <div class="flex">
-        <div class="w-2/12 font-black text-white relative dark:text-dark">
-            <div class="absolute flex">
-                <span class="quote quote-left leading-none top-0 ">'</span>
-                <span class="quote quote-right leading-none top-0 ">'</span>
-            </div>
-        </div>
-        <div class="w-9/12">
-            <p class="text-lg">{{ quote }}</p>
-            <i class="block mt-2"> - {{ cite }}</i>
-        </div>
-    </div>
-    {{ /quote_me }}
-</div>#}}
-<div class="container">
-    {{ quote_me }}
-
-    <div class="review__items">
-        <div class="flex">
-            <div class="w-2/12 font-black text-white relative dark:text-dark">
-                <div class="absolute flex">
-                    <span class="quote quote-left leading-none top-0 ">'</span>
-                    <span class="quote quote-right leading-none top-0 ">'</span>
+        <div class="w-3/12 flex self-start justify-end"> <button id="prev" onclick="previousReview()">
+            {{ partial:partials/global/link_arrow textColor="text-dark" classes="custom-button-prev  left z-1 ml-4  transform rotate-180 dark:" }}
+        </button></div>
+        <div class="w-6/12">
+            {{ quote_me }}
+        
+            <div class="review__items">
+                <div class="flex">
+                    <div class="w-2/12 font-black text-white relative dark:text-dark">
+                        <div class="absolute flex">
+                            <span class="quote quote-left leading-none top-0 ">'</span>
+                            <span class="quote quote-right leading-none top-0 ">'</span>
+                        </div>
+                    </div>
+                    <div class="w-9/12">
+                        <p class="text-lg">{{ quote }}</p>
+                        <i class="block mt-2"> - {{ cite }}</i>
+                    </div>
                 </div>
             </div>
-            <div class="w-9/12">
-                <p class="text-lg">{{ quote }}</p>
-                <i class="block mt-2"> - {{ cite }}</i>
-            </div>
+            {{ /quote_me}}
+            
+        </div>
+        <div class="w-3/12 flex self-start justify-start">
+            <button id="next" onclick="nextReview()">
+                {{ partial:partials/global/link_arrow textColor="text-dark" classes="custom-button-next  right-0 mr-4 z-1 " }}
+            </button>
         </div>
     </div>
-    {{ /quote_me}}
-  
-    <div class="flex justify-between">
-        <button id="prev" onclick="previousReview()">
-            {{ partial:partials/global/link_arrow textColor="text-dark" classes="custom-button-prev  left z-1 ml-4  transform rotate-180 dark:" }}
-        </button>
-          
-        <button id="next" onclick="nextReview()">
-            {{ partial:partials/global/link_arrow textColor="text-dark" classes="custom-button-next  right-0 mr-4 z-1 " }}
-        </button>
+    
     </div>
-</div>
-</div>
-<script>
-    let rev = 0;
-    carousel(rev);
-
-    function previousReview() {
-        rev = rev - 1;
+    <script>
+        let rev = 0;
         carousel(rev);
-    }
-
-    function nextReview() {
-        rev = rev + 1;
-        carousel(rev);
-    }
-
-    function carousel(review) {
-        let reviews = document
-            .getElementsByClassName("review__items");
-
-        if (review >= reviews.length) {
-            review = 0;
-            rev = 0;
+    
+        function previousReview() {
+            rev = rev - 1;
+            carousel(rev);
         }
-        if (review < 0) {
-            review = reviews.length - 1;
-            rev = reviews.length - 1;
+    
+        function nextReview() {
+            rev = rev + 1;
+            carousel(rev);
         }
-        for (let i = 0; i < reviews.length; i++) {
-            reviews[i].style.display = "none";
+    
+        function carousel(review) {
+            let reviews = document
+                .getElementsByClassName("review__items");
+    
+            if (review >= reviews.length) {
+                review = 0;
+                rev = 0;
+            }
+            if (review < 0) {
+                review = reviews.length - 1;
+                rev = reviews.length - 1;
+            }
+            for (let i = 0; i < reviews.length; i++) {
+                reviews[i].style.display = "none";
+            }
+            reviews[review].style.display = "block";
         }
-        reviews[review].style.display = "block";
-    }
-</script>
+    </script>
