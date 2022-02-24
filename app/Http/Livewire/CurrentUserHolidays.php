@@ -57,25 +57,25 @@ class CurrentUserHolidays extends Component
     public function calcDaysTaken()
     {
 
-        // Grab the dates that we need to work out.
-        $d = Carbon::parse($this->start)->floatDiffInDays($this->end);
+        // // Grab the dates that we need to work out.
+        // $d = Carbon::parse($this->start)->floatDiffInDays($this->end);
 
-        // If the start and end are the same date, check to see if the person wants half a day or not
-        if ($d === 0) {
-            if ($this->halfDay) {
-                $this->daysTaken = 0.5;
-            } else {
-                $this->daysTaken = 1;
-            }
-        // Again checking to see if the person wants half a day on top of their choosen dates
-        // The one is so that it works it out correctly
-        } else {
-            if( $this->halfDay) {
-                $this->daysTaken = $d + 1 - .5;
-            } else {
-                $this->daysTaken = $d + 1;
-            }
-        }
+        // // If the start and end are the same date, check to see if the person wants half a day or not
+        // if ($d === 0) {
+        //     if ($this->halfDay) {
+        //         $this->daysTaken = 0.5;
+        //     } else {
+        //         $this->daysTaken = 1;
+        //     }
+        // // Again checking to see if the person wants half a day on top of their choosen dates
+        // // The one is so that it works it out correctly
+        // } else {
+        //     if( $this->halfDay) {
+        //         $this->daysTaken = $d + 1 - .5;
+        //     } else {
+        //         $this->daysTaken = $d + 1;
+        //     }
+        // }
 
         // calculate True Days
 
@@ -97,8 +97,12 @@ class CurrentUserHolidays extends Component
         }
 
 
-        $this->daysTaken = $total;
-
+        // If you they take half a day then subtract it from the total.
+        if($this->halfDay) {
+            $this->daysTaken = $total - .5;
+        } else {
+            $this->daysTaken = $total;
+        }
         return $this->daysTaken;
     }
 
