@@ -39,26 +39,26 @@
                     </div>
 
                     <div class="mt-6 land:mt-2 md:mt-6">
-                        <a href="tel:{{ contact_information:email}}">
+                        <button id="message">
                             <span class="half-height-colour">
                                 <p class="text-yellow">{{ email_intro }}</p>
                                 <span class="underline-element yellow-underline">        
-                                    {{ contact_information:email}}                  
+                                    {{ message_us }}          
                                 </span>
                             </span>
-                        </a>
+                        </button>
                     </div>
 
                     <div class="mt-6 land:mt-2 md:mt-6">  
-                        <a href="tel:{{ contact_information:jobs_email }}">
+                        <button id="who">
                             <span class="half-height-colour">
                                 <p class="text-yellow">{{ jobs_email_intro }}</p>
                                 <span class="underline-element yellow-underline">
-                                    {{ contact_information:jobs_email }}
+                                    {{ job_us }}          
                                 </span>
                             </span>
                             
-                        </a>
+                        </button>
                     </div>
 
                 </div>
@@ -68,6 +68,22 @@
     </div>
 </section>
 
+<div id="messageBox" class="bg-dark hidden">
+
+    <div class="container bg-yellow">
+        {{ partial:partials/contact/contact }}
+    
+    </div>
+</div>
+<div id="whoBox" class="bg-dark hidden">
+
+    <div class="container bg-yellow">
+        {{ partial:partials/contact/career }}
+    
+    </div>
+</div>
+
+
 <div class="flex flex-wrap">
     {{ images }}
         <div class="{{ if width == 'flex-50'}}w-1/2{{ else }}{{ if width == 'flex-33'}}w-1/3{{ else }}{{ if width == 'flex-66'}}w-2/3{{ else }}{{width}}{{ /if }}{{ /if }}{{ /if }}">
@@ -75,3 +91,29 @@
         </div>
     {{ /images }}
 </div>
+
+<script>
+const messageBtn = document.getElementById('message');
+const whoBtn = document.getElementById('who');
+
+const messageBox = document.getElementById('messageBox');
+const whoBox = document.getElementById('whoBox');
+
+function toggleMessageBox()
+{
+    messageBox.classList.toggle('hidden');
+}
+
+function toggleWhoBox()
+{
+    whoBox.classList.toggle('hidden');
+}
+
+messageBtn.addEventListener('click', ()=> {
+    toggleMessageBox();
+});
+
+whoBtn.addEventListener('click', ()=> {
+    toggleWhoBox();
+    });
+</script>

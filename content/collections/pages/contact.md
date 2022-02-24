@@ -4,7 +4,7 @@ blueprint: contact
 title: Contact
 template: pages/contact
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1634547382
+updated_at: 1645721248
 slogan: 'Let’s work together'
 written_address: 'We live in a house! You can come and visit us in number 32 Blackpool Road, just on the outskirts of Blackpool.'
 images:
@@ -30,4 +30,6 @@ jobs_email_intro: 'Want to work for us?'
 seo:
   title: 'Contact Us'
   site_name_position: before
+message_us: 'Drop us a message'
+job_us: 'Send us your info'
 ---

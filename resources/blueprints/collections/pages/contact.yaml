@@ -51,6 +51,17 @@ sections:
           icon: text
           listable: hidden
       -
+        handle: message_us
+        field:
+          input_type: text
+          antlers: false
+          display: 'Message Us'
+          type: text
+          icon: text
+          instructions: 'The Message for the Message us button.'
+          listable: hidden
+          instructions_position: above
+      -
         handle: jobs_email_intro
         field:
           input_type: text
@@ -59,6 +70,17 @@ sections:
           type: text
           icon: text
           listable: hidden
+      -
+        handle: job_us
+        field:
+          input_type: text
+          antlers: false
+          display: 'Job Us'
+          type: text
+          icon: text
+          instructions: 'The Message for the Work for us button.'
+          listable: hidden
+          instructions_position: above
       -
         handle: images
         field:
@@ -108,7 +130,6 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
           validate:
             - required
