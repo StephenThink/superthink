@@ -23,4 +23,9 @@ class Client extends Model
         return empty($search) ? static::query()
             : static::query()->where('title', 'like', '%'.$search.'%');
     }
+
+    public function passwords()
+    {
+        return $this->hasMany('App\Models\Password');
+    }
 }
