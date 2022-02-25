@@ -2,7 +2,7 @@
     <div class="h-full w-screen md:container">
         <div class="h-full flex flex-col md:flex-row ">
     
-            <div class="w-screen md:w-7/12 bg-yellow text-dark main__panel flex items-center">
+            <div class="w-screen md:w-7/12 bg-yellow text-dark main__panel flex items-center land:h-screen h-vertical-handle-nm md:h-screen">
                 <div class="container">
                     <div class="flex flex-col">
                         <div class="w-full text-7xl font-black fancy leading-none lg:text-14xl" data-scroll data-scroll-call="fancy">
@@ -12,7 +12,7 @@
                 </div>
                 
             </div>
-            <div class="w-screen md:w-5/12 bg-dark text-white main__panel flex items-center">
+            <div class="w-screen md:w-5/12 bg-dark text-white main__panel flex items-center land:h-screen h-vertical-handle-nm md:h-screen">
                 <div class="container">
                     <p class="mt-6 land:mt-2 md:mt-6">{{ written_address }}</p>
                     <p class="mt-6 land:mt-2 md:mt-6">{{ contact_information:company_address_alt }}</p>
@@ -39,26 +39,26 @@
                     </div>
 
                     <div class="mt-6 land:mt-2 md:mt-6">
-                        <button id="message">
+                        <div id="message">
                             <span class="half-height-colour">
                                 <p class="text-yellow">{{ email_intro }}</p>
-                                <span class="underline-element yellow-underline">        
+                                <span class="underline-element yellow-underline cursor-pointer">        
                                     {{ message_us }}          
                                 </span>
                             </span>
-                        </button>
+                        </div>
                     </div>
 
                     <div class="mt-6 land:mt-2 md:mt-6">  
-                        <button id="who">
+                        <div id="who">
                             <span class="half-height-colour">
                                 <p class="text-yellow">{{ jobs_email_intro }}</p>
-                                <span class="underline-element yellow-underline">
+                                <span class="underline-element yellow-underline cursor-pointer">
                                     {{ job_us }}          
                                 </span>
                             </span>
                             
-                        </button>
+                        </div>
                     </div>
 
                 </div>
@@ -68,16 +68,16 @@
     </div>
 </section>
 
-<div id="messageBox" class="bg-dark hidden">
+<div id="messageBox" class="bg-white hidden md:h-1/2 relative  flex justify-center items-center">
 
-    <div class="container bg-yellow">
+    <div class="container bg-white  py-6 ">
         {{ partial:partials/contact/contact }}
     
     </div>
 </div>
-<div id="whoBox" class="bg-dark hidden">
+<div id="whoBox" class="bg-white hidden md:h-screen relative flex justify-center items-center">
 
-    <div class="container bg-yellow">
+    <div class="container bg-white py-6 ">
         {{ partial:partials/contact/career }}
     
     </div>
@@ -95,18 +95,28 @@
 <script>
 const messageBtn = document.getElementById('message');
 const whoBtn = document.getElementById('who');
+const sectionBox = document.querySelector('section');
+const secHeight = sectionBox.offsetHeight;
 
 const messageBox = document.getElementById('messageBox');
 const whoBox = document.getElementById('whoBox');
 
 function toggleMessageBox()
 {
-    messageBox.classList.toggle('hidden');
+    messageBox.classList.remove('hidden');
+    whoBox.classList.add('hidden');
+    console.log("m", messageBox.offsetTop);
+
+    window.scrollTo(0,secHeight);
 }
 
 function toggleWhoBox()
 {
-    whoBox.classList.toggle('hidden');
+    whoBox.classList.remove('hidden');
+    messageBox.classList.add('hidden');
+
+    window.scrollTo(0,secHeight);
+
 }
 
 messageBtn.addEventListener('click', ()=> {

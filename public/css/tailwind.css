@@ -2292,6 +2292,10 @@ sup {
   height: 0.75rem;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-11\/12 {
   height: 91.666667%;
 }
@@ -2318,10 +2322,6 @@ sup {
 
 .h-auto {
   height: auto;
-}
-
-.h-1\/2 {
-  height: 50%;
 }
 
 .h-3\/4 {
@@ -2751,6 +2751,12 @@ sup {
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
 .self-start {
   align-self: flex-start;
 }
@@ -2905,14 +2911,14 @@ sup {
   background-color: transparent;
 }
 
-.bg-light-grey {
-  --tw-bg-opacity: 1;
-  background-color: rgb(221 221 221 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-light-grey {
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 221 221 / var(--tw-bg-opacity));
 }
 
 .bg-gray-400 {
@@ -3011,6 +3017,11 @@ sup {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-12 {
@@ -3732,6 +3743,11 @@ sup {
     top: -5rem;
   }
 
+  .md\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -3819,6 +3835,10 @@ sup {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:h-1\/2 {
+    height: 50%;
   }
 
   .md\:max-h-auto {

@@ -38,7 +38,7 @@ sections:
           listable: hidden
           validate:
             - required
-          placeholder: 'Enetr your phone number'
+          placeholder: 'Enter your phone number'
       -
         handle: cover_letter
         field:

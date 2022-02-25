@@ -13,6 +13,7 @@ sections:
           listable: hidden
           validate:
             - required
+          placeholder: 'Enter your full name'
       -
         handle: email
         field:
@@ -25,6 +26,7 @@ sections:
           validate:
             - required
             - email
+          placeholder: 'Enter your email address'
       -
         handle: mobile_number
         field:
@@ -36,12 +38,13 @@ sections:
           listable: hidden
           validate:
             - required
+          placeholder: 'Enter your phone number'
       -
         handle: assets
         field:
           mode: grid
           container: assets
-          folder: application-forms
+          folder: application-forms/cover-letters
           restrict: true
           allow_uploads: true
           max_files: 1
@@ -60,6 +63,7 @@ sections:
           type: text
           icon: text
           listable: hidden
+          placeholder: 'Enter your current position'
       -
         handle: current_job_title
         field:
@@ -69,6 +73,7 @@ sections:
           type: text
           icon: text
           listable: hidden
+          placeholder: 'Enter your current job title'
       -
         handle: current_what_did_you_do
         field:
@@ -77,6 +82,7 @@ sections:
           type: textarea
           icon: textarea
           listable: hidden
+          placeholder: 'What did you do'
       -
         handle: past_position
         field:
@@ -86,6 +92,7 @@ sections:
           type: text
           icon: text
           listable: hidden
+          placeholder: 'Enter your past position'
       -
         handle: past_title
         field:
@@ -95,6 +102,7 @@ sections:
           type: text
           icon: text
           listable: hidden
+          placeholder: 'Enter your past title'
       -
         handle: past_what_you_did
         field:
@@ -103,12 +111,14 @@ sections:
           type: textarea
           icon: textarea
           listable: hidden
+          placeholder: 'Enter your what your previously did'
+
       -
         handle: work_examples
         field:
           mode: grid
           container: assets
-          folder: application-forms
+          folder: application-forms/uploaded-work
           restrict: true
           allow_uploads: true
           max_files: 1
@@ -123,7 +133,7 @@ sections:
         field:
           mode: grid
           container: assets
-          folder: application-forms
+          folder: application-forms/cvs
           restrict: true
           allow_uploads: true
           max_files: 1

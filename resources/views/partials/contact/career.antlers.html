@@ -1,22 +1,35 @@
-<div>Career</div>
 {{ form:application_form }}
 {{ captcha:head }}
-        <!-- Add your fields like normal -->
-        {{ fields }}
-        <div class="p-2">
-            <label>{{ display }}</label>
-            <div class="p-1">{{ field }}</div>
-            {{ if error }}
-                <p class="text-gray-500">{{ error }}</p>
-            {{ /if }}
-        </div>
-    {{ /fields }}
-    <button type="submit">Submit</button>
+<h3 class="font-black text-5xl mt-6 py-6">Tell Us About Yourself</h3>
+<!-- Add your fields like normal -->
+{{ fields }}
+{{ if listable }}
+{{ if type == 'assets'}}
+{{ partial:partials.form.file :type="type" :name="handle" :display="display" }}
+{{ else }}
+{{ partial:partials.form.text   }}
+{{ /if }}
+{{ /if }}
 
+
+
+{{ /fields }}
+<div class="flex justify-between items-center pb-4 md:mx-4 flex-col md:flex-row space-y-2 m:space-y-0">
+    <div> 
         {{ captcha }}
 
         {{ if error:captcha }}
-          <p>{{ error:captcha }}</p>
+        <p>{{ error:captcha }}</p>
         {{ /if }}
+    </div>
+    <div class="flex  items-center"> 
+        <button type="submit" class="w-100 hover-button ">
+            {{ partial:partials.hover_button text="Reach Out" class="text-yellow bg-dark " }}
+        </button>
+    </div>
+    
+
+
+</div>
 
     {{ /form:application_form }}

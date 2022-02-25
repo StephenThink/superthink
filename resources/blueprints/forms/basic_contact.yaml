@@ -14,6 +14,8 @@ sections:
           instructions_position: above
           validate:
             - required
+          placeholder: 'Enter your full name'
+          
       -
         handle: business_name
         field:
@@ -24,6 +26,8 @@ sections:
           icon: text
           listable: hidden
           instructions_position: above
+          placeholder: 'Enter your business name'
+
       -
         handle: email
         field:
@@ -37,6 +41,8 @@ sections:
           validate:
             - required
             - email
+          placeholder: 'Enter your email'
+          
       -
         handle: telephone
         field:
@@ -49,6 +55,8 @@ sections:
           instructions_position: above
           validate:
             - required
+          placeholder: 'Enter your contact number'
+
       -
         handle: message
         field:
@@ -60,3 +68,5 @@ sections:
           instructions_position: above
           validate:
             - required
+          placeholder: 'Whats the message'
+          
