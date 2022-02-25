@@ -132,6 +132,15 @@
                     {{ __('Holidays Overview') }}
                 </x-jet-dropdown-link>
 
+                <!-- Users Management -->
+                <div class="block px-4 py-2 text-xs text-gray-400">
+                    {{ __('Manage Clients') }}
+                </div>
+
+                <!-- Pages / Nav Options -->
+                <x-jet-dropdown-link href="{{ route('clients') }}" :active="request()->routeIs('clients')">
+                    {{ __('Clients') }}
+                </x-jet-dropdown-link>
 
             </div>
         </x-slot>

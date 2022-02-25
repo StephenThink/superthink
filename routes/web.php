@@ -59,6 +59,9 @@ Route::group(['middleware' => [
         return view('admin.workingdays');
     })->name('workingdays');
 
+    Route::get('/clients', function () {
+        return view('clients.clients');
+    })->name('clients');
 });
 
 
