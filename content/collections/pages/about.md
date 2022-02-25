@@ -3,8 +3,8 @@ id: c220f30e-3f32-4a6d-958d-6d8577ff4e1b
 blueprint: about
 title: 'About Us'
 hero_text: 'Good people to connect the dots'
-updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
-updated_at: 1645635548
+updated_by: 35c7384a-60a0-4933-9645-d8850117c385
+updated_at: 1645782373
 template: pages/about
 hero_intro: 'We reckon great things happen when you put stuff together. That''s why our people combine a whole range of creative disciplines. Oh and we''re dead nice too.'
 layered_title: 'How it works'

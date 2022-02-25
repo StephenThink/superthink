@@ -6,16 +6,37 @@
         width: 100%;
         padding: 10px;
         align-items: center;
-    }
-      
+    }   
     
-     
-    .review__items {
+      
+   .review__items {
         display: none;
-    }</style>
+    }
+
+    .hideQuote {
+        animation: gentleHide 3s ease-in-out forwards;
+
+    }
+
+    .showQuote {
+        animation: gentleHide 3s ease-in-out reverse backwards;
+
+    }
+    
+    @keyframes gentleHide {
+        0%   {opacity: 1; height: 100%}
+        100% {opacity: 0; height: 0%} 
+    }
+
+    
+
+
+   
+
+</style>
     
     <div class="main__panel_x-small {{ bg }} dark:text-dark">
-    <div class="flex">
+    <div id="hBox" class="flex">
         <div class="w-3/12 flex self-start justify-end"> <button id="prev" onclick="previousReview()">
             {{ partial:partials/global/link_arrow textColor="text-dark" classes="custom-button-prev  left z-1 ml-4  transform rotate-180 dark:" }}
         </button></div>
@@ -23,14 +44,14 @@
             {{ quote_me }}
         
             <div class="review__items">
-                <div class="flex">
+                <div  class="flex">
                     <div class="w-2/12 font-black text-white relative dark:text-dark">
                         <div class="absolute flex">
                             <span class="quote quote-left leading-none top-0 ">'</span>
                             <span class="quote quote-right leading-none top-0 ">'</span>
                         </div>
                     </div>
-                    <div class="w-9/12">
+                    <div class="w-9/12 actual-quote transform">
                         <p class="text-lg">{{ quote }}</p>
                         <i class="block mt-2"> - {{ cite }}</i>
                     </div>
@@ -48,19 +69,34 @@
     
     </div>
     <script>
+
+        const quote = document.getElementsByClassName('actual-quote');
+        const heightBox = document.getElementById('hBox');
+        
+
         let rev = 0;
         carousel(rev);
+        
+        var prevHeight;
+        var newHeight;
     
         function previousReview() {
             rev = rev - 1;
             carousel(rev);
+            console.log(heightBox.offsetHeight);
+
+
         }
     
         function nextReview() {
             rev = rev + 1;
             carousel(rev);
+            console.log(heightBox.offsetHeight);
+
         }
     
+
+
         function carousel(review) {
             let reviews = document
                 .getElementsByClassName("review__items");
@@ -76,6 +112,14 @@
             for (let i = 0; i < reviews.length; i++) {
                 reviews[i].style.display = "none";
             }
+
+            
+            quote[rev].classList.add('hideQuote');
+            quote[rev].classList.remove('showQuote');
             reviews[review].style.display = "block";
+            quote[rev].classList.add('showQuote');
+            quote[rev].classList.remove('hideQuote');
         }
+
+
     </script>
