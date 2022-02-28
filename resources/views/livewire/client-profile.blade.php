@@ -22,28 +22,32 @@
                                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Login</th>
                                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Password</th>
                                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">URL</th>
-                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Description</th>
                                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"></th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 @if ($data->count())
                                     @foreach ($data as $item)
-                                        <tr>
-                                            <td class="px-6 py-2">{{ $item->title }}</td>
-                                            <td class="px-6 py-2">{{ $item->login }}</td>
-                                            <td class="px-6 py-2">{{ $item->password }}</td>
-                                            <td class="px-6 py-2"><a href="{{ $item->url }}">{{ $item->url }}</a></td>
-                                            <td class="px-6 py-2">{{ $item->description }}</td>
-                                            <td class="px-6 py-2 flex justify-end">
-                                                <x-jet-button class="ml-2" wire:click="updateShowModal({{ $item->id }})">
-                                                    {{ __('Update') }}
-                                                </x-jet-button>
-                                                <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                    {{ __('Delete') }}
-                                                </x-jet-button>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td class="px-6 py-2">{{ $item->description }}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-2">{{ $item->title }}</td>
+                                        <td class="px-6 py-2">{{ $item->login }}</td>
+                                        <td class="px-6 py-2">{{ $item->password }}</td>
+                                        <td class="px-6 py-2">{{ $item->url }}</td>
+
+                                        <td class="px-6 py-2 flex justify-end">
+                                            <x-jet-button class="ml-2" wire:click="updateShowModal({{ $item->id }})">
+                                                {{ __('Update') }}
+                                            </x-jet-button>
+                                            <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
+                                                {{ __('Delete') }}
+                                            </x-jet-button>
+                                        </td>
+                                    </tr>
+
                                     @endforeach
                                 @else
                                     <tr>

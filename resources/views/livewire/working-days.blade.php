@@ -34,7 +34,7 @@
                                 @foreach ($data as $item)
                                     <tr>
                                         <td class="px-6 py-2">{{ $item->user->name }}</td>
-                                        <td class="px-6 py-2 " wire:click="invertDay({{ $item->id}}, 'monday')">
+                                        <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'monday')">
                                         @if ($item->monday)
                                             <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
                                         @else
