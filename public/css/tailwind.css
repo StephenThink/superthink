@@ -2288,12 +2288,12 @@ sup {
   height: 50vh;
 }
 
-.h-3 {
-  height: 0.75rem;
+.h-vertical-handle-nm {
+  height: calc(100vh - 120px);
 }
 
-.h-1\/2 {
-  height: 50%;
+.h-3 {
+  height: 0.75rem;
 }
 
 .h-11\/12 {
@@ -2324,16 +2324,16 @@ sup {
   height: auto;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-3\/4 {
   height: 75%;
 }
 
 .h-1px {
   height: 1px;
-}
-
-.h-vertical-handle-nm {
-  height: calc(100vh - 120px);
 }
 
 .h-16 {
@@ -2964,6 +2964,11 @@ sup {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .object-left-top {
@@ -3825,6 +3830,10 @@ sup {
     height: 100vh;
   }
 
+  .md\:h-1\/2 {
+    height: 50%;
+  }
+
   .md\:h-750 {
     height: 750px;
   }
@@ -3835,10 +3844,6 @@ sup {
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-1\/2 {
-    height: 50%;
   }
 
   .md\:max-h-auto {
