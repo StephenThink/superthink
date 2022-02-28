@@ -127,19 +127,24 @@
                     {{ __('Manage Holidays') }}
                 </div>
 
-                <!-- Pages / Nav Options -->
+                <!-- Holiday Options -->
                 <x-jet-dropdown-link href="{{ route('holidays-overview') }}" :active="request()->routeIs('holidays-overview')">
                     {{ __('Holidays Overview') }}
                 </x-jet-dropdown-link>
 
-                <!-- Users Management -->
+                <!-- Client Management -->
                 <div class="block px-4 py-2 text-xs text-gray-400">
                     {{ __('Manage Clients') }}
                 </div>
 
-                <!-- Pages / Nav Options -->
+                <!-- Client Options -->
                 <x-jet-dropdown-link href="{{ route('clients') }}" :active="request()->routeIs('clients')">
                     {{ __('Clients') }}
+                </x-jet-dropdown-link>
+
+                <!-- Client Options -->
+                <x-jet-dropdown-link href="{{ route('vaults') }}" :active="request()->routeIs('vaults')">
+                    {{ __('Vault') }}
                 </x-jet-dropdown-link>
 
             </div>

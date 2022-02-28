@@ -26,6 +26,6 @@ class Client extends Model
 
     public function passwords()
     {
-        return $this->hasMany('App\Models\Password');
+        return $this->hasMany('App\Models\Vault');
     }
 }

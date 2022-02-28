@@ -27,7 +27,8 @@ class UserPermission extends Model
             'holidays-overview',
             'roles',
             'workingdays',
-            'clients'
+            'clients',
+            'vaults'
         ];
     }
 

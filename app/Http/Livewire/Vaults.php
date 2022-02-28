@@ -2,11 +2,12 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Password;
+use App\Models\Vault;
+use App\Models\Client;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class Passwords extends Component
+class Vaults extends Component
 {
     use WithPagination;
 
@@ -14,9 +15,20 @@ class Passwords extends Component
     public $modalConfirmDeleteVisible;
     public $modelId;
 
+    public $perPage = 10;
+    public $search = '';
+    public $orderBy = 'client_id';
+    public $orderAsc = true;
+
     /**
      * Put your custom public properties here!
      */
+    public $client_id;
+    public $title;
+    public $password;
+    public $login;
+    public $url;
+    public $description;
 
     /**
      * The validation rules
@@ -26,6 +38,9 @@ class Passwords extends Component
     public function rules()
     {
         return [
+            'client_id' => 'required',
+            'title' => 'required',
+            'password' => 'required',
         ];
     }
 
@@ -37,8 +52,14 @@ class Passwords extends Component
      */
     public function loadModel()
     {
-        $data = Password::find($this->modelId);
+        $data = Vault::find($this->modelId);
         // Assign the variables here
+        $this->client_id = $data->client_id;
+        $this->title = $data->title;
+        $this->password = $data->password;
+        $this->login = $data->login;
+        $this->url = $data->url;
+        $this->description = $data->description;
     }
 
     /**
@@ -50,6 +71,12 @@ class Passwords extends Component
     public function modelData()
     {
         return [
+            'client_id' => $this->client_id,
+            'title' => $this->title,
+            'password' => $this->password,
+            'login' => $this->login,
+            'url' => $this->url,
+            'description' => $this->description,
         ];
     }
 
@@ -61,7 +88,8 @@ class Passwords extends Component
     public function create()
     {
         $this->validate();
-        Password::create($this->modelData());
+        dd($this->password);
+        Vault::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
     }
@@ -73,7 +101,9 @@ class Passwords extends Component
      */
     public function read()
     {
-        return Password::paginate(5);
+        return Vault::search($this->search)
+        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+        ->paginate($this->perPage);
     }
 
     /**
@@ -84,7 +114,7 @@ class Passwords extends Component
     public function update()
     {
         $this->validate();
-        Password::find($this->modelId)->update($this->modelData());
+        Vault::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -95,7 +125,7 @@ class Passwords extends Component
      */
     public function delete()
     {
-        Password::destroy($this->modelId);
+        Vault::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -142,8 +172,12 @@ class Passwords extends Component
 
     public function render()
     {
-        return view('livewire.passwords', [
+        $clients = Client::all();
+
+        return view('livewire.vaults', [
             'data' => $this->read(),
+            'clients' => $clients,
         ]);
     }
+
 }

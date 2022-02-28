@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePasswordsTable extends Migration
+class CreateVaultsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreatePasswordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('passwords', function (Blueprint $table) {
+        Schema::create('vaults', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id');
             $table->string('title');
             $table->string('password');
-            $table->string('login');
-            $table->string('url');
+            $table->string('login')->nullable();
+            $table->string('url')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreatePasswordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('passwords');
+        Schema::dropIfExists('vaults');
     }
 }
