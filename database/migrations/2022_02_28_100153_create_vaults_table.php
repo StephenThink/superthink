@@ -15,7 +15,7 @@ class CreateVaultsTable extends Migration
     {
         Schema::create('vaults', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('client_id');
+            $table->foreignId('client_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->string('password');
             $table->string('login')->nullable();
