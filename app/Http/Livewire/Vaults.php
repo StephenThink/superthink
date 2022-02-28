@@ -7,6 +7,7 @@ use App\Models\Client;
 use Livewire\Component;
 use Livewire\WithPagination;
 
+
 class Vaults extends Component
 {
     use WithPagination;
@@ -40,7 +41,7 @@ class Vaults extends Component
         return [
             'client_id' => 'required',
             'title' => 'required',
-            'password' => 'required',
+            'password' => 'required|min:6',
         ];
     }
 
@@ -52,6 +53,8 @@ class Vaults extends Component
      */
     public function loadModel()
     {
+
+
         $data = Vault::find($this->modelId);
         // Assign the variables here
         $this->client_id = $data->client_id;
@@ -73,7 +76,7 @@ class Vaults extends Component
         return [
             'client_id' => $this->client_id,
             'title' => $this->title,
-            'password' => $this->password,
+            'password' => encrypt($this->password),
             'login' => $this->login,
             'url' => $this->url,
             'description' => $this->description,

@@ -40,9 +40,18 @@ class Vault extends Model
     public static function search($search)
     {
         return empty($search) ? static::query()
-            : static::query()->where('client_id', 'like', '%'.$search.'%')
-                ->orWhere('title', 'like', '%'.$search.'%')
+            : static::query()
+                ->Where('title', 'like', '%'.$search.'%')
                 ->orWhere('login', 'like', '%'.$search.'%')
                 ->orWhere('url', 'like', '%'.$search.'%');
+    }
+
+    public function getPasswordAttribute($value)
+    {
+        if(!empty($value))
+            return decrypt($value);
+
+        return '';
+
     }
 }

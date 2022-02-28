@@ -11,7 +11,7 @@
         </div>
         <div class="w-1/6 relative mx-1">
             <select wire:model="orderBy" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                <option value="client_id">Client</option>
+
                 <option value="title">Title</option>
                 <option value="login">Login</option>
                 <option value="url">URL</option>
@@ -52,6 +52,7 @@
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Client</th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Title</th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Login</th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Password</th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">URL</th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Description</th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"></th>
@@ -64,10 +65,11 @@
                                         <td class="px-6 py-2">{{ $item->clients->title }}</td>
                                         <td class="px-6 py-2">{{ $item->title }}</td>
                                         <td class="px-6 py-2">{{ $item->login }}</td>
+                                        <td class="px-6 py-2">{{ $item->password }}</td>
                                         <td class="px-6 py-2">{{ $item->url }}</td>
                                         <td class="px-6 py-2">{{ $item->description }}</td>
                                         <td class="px-6 py-2 flex justify-end">
-                                            <x-jet-button wire:click="updateShowModal({{ $item->id }})">
+                                            <x-jet-button class="ml-2" wire:click="updateShowModal({{ $item->id }})">
                                                 {{ __('Update') }}
                                             </x-jet-button>
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
@@ -175,4 +177,7 @@
             </x-jet-danger-button>
         </x-slot>
     </x-jet-dialog-modal>
+
+
+
 </div>
