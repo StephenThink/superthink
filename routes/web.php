@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Frontpage;
+use App\Models\Client;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,8 @@ Route::group(['middleware' => [
 ]], function () {
 
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        $clients = Client::all();
+        return view('dashboard', ['clients' => $clients]);
     })->name('dashboard');
 
     Route::get('/pages', function () {
