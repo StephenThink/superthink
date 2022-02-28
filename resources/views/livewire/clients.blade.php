@@ -52,7 +52,10 @@
                                     <tr>
                                         <td class="px-6 py-2">{{ $item->title }}</td>
                                         <td class="px-6 py-2 flex justify-end">
-                                            <x-jet-button wire:click="updateShowModal({{ $item->id }})">
+                                            <x-jet-button wire:click="eventShow('{{ $item->id }}')">
+                                                {{ __('Show') }}
+                                            </x-jet-button>
+                                            <x-jet-button class="ml-2" wire:click="updateShowModal({{ $item->id }})">
                                                 {{ __('Update') }}
                                             </x-jet-button>
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">

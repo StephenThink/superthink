@@ -46,7 +46,7 @@ class Vault extends Model
                 ->orWhere('url', 'like', '%'.$search.'%');
     }
 
-    public function getPasswordAttribute($value)
+     public function getPasswordAttribute($value)
     {
         if(!empty($value))
             return decrypt($value);

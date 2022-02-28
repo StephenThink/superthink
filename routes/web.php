@@ -66,6 +66,10 @@ Route::group(['middleware' => [
     Route::get('/vaults', function () {
         return view('clients.vaults');
     })->name('vaults');
+
+    Route::get('/clients/profile/{id}', function ($id) {
+        return view('clients.profile', ['id'=>$id]);
+    })->name('client-profile');
 });
 
 

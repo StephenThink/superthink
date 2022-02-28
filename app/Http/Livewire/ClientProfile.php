@@ -8,7 +8,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 
-class Vaults extends Component
+class ClientProfile extends Component
 {
     use WithPagination;
 
@@ -31,7 +31,10 @@ class Vaults extends Component
     public $url;
     public $description;
 
-    /**
+    public $client;
+    public $vaults;
+
+     /**
      * The validation rules
      *
      * @return void
@@ -43,7 +46,14 @@ class Vaults extends Component
             'title' => 'required',
             'password' => 'required|min:6',
             'url' => 'url',
+
         ];
+    }
+
+    public function mount($id)
+    {
+        $this->client = Client::find($id);
+        $this->vaults = Vault::where('client_id', $this->client->id)->get();
     }
 
     /**
@@ -54,8 +64,6 @@ class Vaults extends Component
      */
     public function loadModel()
     {
-
-
         $data = Vault::find($this->modelId);
         // Assign the variables here
         $this->client_id = $data->client_id;
@@ -91,25 +99,14 @@ class Vaults extends Component
      */
     public function create()
     {
+
         $this->validate();
         Vault::create($this->modelData());
         $this->modalFormVisible = false;
-        $this->reset();
+        // $this->reset();
     }
 
-    /**
-     * The read function.
-     *
-     * @return void
-     */
-    public function read()
-    {
-        return Vault::search($this->search)
-        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-        ->paginate($this->perPage);
-    }
-
-    /**
+/**
      * The update function
      *
      * @return void
@@ -138,10 +135,11 @@ class Vaults extends Component
      *
      * @return void
      */
-    public function createShowModal()
+    public function createShowModal($id)
     {
         $this->resetValidation();
-        $this->reset();
+        $this->client_id = $id;
+        // $this->reset();
         $this->modalFormVisible = true;
     }
 
@@ -155,7 +153,7 @@ class Vaults extends Component
     public function updateShowModal($id)
     {
         $this->resetValidation();
-        $this->reset();
+        // $this->reset();
         $this->modalFormVisible = true;
         $this->modelId = $id;
         $this->loadModel();
@@ -175,12 +173,12 @@ class Vaults extends Component
 
     public function render()
     {
-        $clients = Client::all();
 
-        return view('livewire.vaults', [
-            'data' => $this->read(),
-            'clients' => $clients,
+
+        return view('livewire.client-profile', [
+            'client' => $this->client,
+            'data' => $this->vaults,
+            'clients' => Client::all(),
         ]);
     }
-
 }

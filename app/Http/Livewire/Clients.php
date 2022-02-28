@@ -152,6 +152,12 @@ class Clients extends Component
         $this->modalConfirmDeleteVisible = true;
     }
 
+    public function eventShow($id)
+    {
+
+        return redirect()->route('client-profile', $id);
+    }
+
     public function render()
     {
         return view('livewire.clients', [
