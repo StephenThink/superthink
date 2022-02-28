@@ -52,7 +52,8 @@ class EnsureUserRoleIsAllowedToAccess
         return [
             'admin' => [
                 'dashboard',
-                'user-permissions'
+                'user-permissions',
+                'roles'
             ],
         ];
     }
