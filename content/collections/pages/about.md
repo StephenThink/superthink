@@ -4,7 +4,7 @@ blueprint: about
 title: 'About Us'
 hero_text: 'Good people to connect the dots'
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1645782373
+updated_at: 1646070691
 template: pages/about
 hero_intro: 'We reckon great things happen when you put stuff together. That''s why our people combine a whole range of creative disciplines. Oh and we''re dead nice too.'
 layered_title: 'How it works'
@@ -103,5 +103,5 @@ quote_me:
     cite: 'Kate Roberts Communications Manager – BAE Systems plc'
     type: quote
     enabled: true
-bouncing_arrow: false
+bouncing_arrow: true
 ---
