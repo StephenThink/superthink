@@ -4370,13 +4370,6 @@ sup {
   }
 }
 
-@media (min-width: 1750px) {
-
-  .\33xl\:w-5\/12 {
-    width: 41.666667%;
-  }
-}
-
 @media (min-width: 1920px) {
 
   .\34xl\:w-\[400px\] {
