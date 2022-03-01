@@ -69,6 +69,9 @@ module.exports = {
         md: '720px',
         lg: '960px',
         xl: '1140px',
+        '2xl': '1460px',
+        '3xl': '1750px',
+        '4xl': '1920px'
         
         // 'ipadPro': {'min': '541px', 'max': '1024px'},
         // 'portrait': {'raw': '(orientation: portrait)'},

@@ -1876,7 +1876,7 @@ var message = function message(text, loser, data) {
 
 
   var toastEL = toastify_js__WEBPACK_IMPORTED_MODULE_0___default()({
-    text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <a class=\"button error-btn bg-dark py-2 px-4 mt-3 mx-auto w-56 rounded-full\">CLICK TO CLOSE</a>\n            </div>"),
+    text: "\n            <div class=\"wrapper\">\n                <h1 class=\"block  text-3xl\">".concat(text, "</h1>\n                <p class=\"font-bold text-4xl\">").concat(loser, "</p>\n                <a class=\"button error-btn bg-dark py-4 px-10 mt-3 mx-auto w-56 rounded-full\">CLICK TO CLOSE</a>\n            </div>"),
     // 15 minutes 
     duration: 900000,
     gravity: "bottom",

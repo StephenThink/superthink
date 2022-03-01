@@ -1,22 +1,17 @@
 
-<section class="bg-yellow flex flex-row flex-wrap items-center w-screen h-full lg:flex-nowrap md:w-handle-nm">
+<section class="bg-yellow flex flex-row flex-wrap items-center w-screen h-screen lg:flex-nowrap md:w-handle-nm relative">
 
-    <div class="flex-1 h-1/2 bg-yellow order-2 lg:order-1 lg:w-2/12 lg:h-full py-4">
-        <div class="flex justify-center items-center h-full ">
-            {{ partial:tea-roulette/partials/button classes="showNameSelector" text="Names" }}
-        </div>
-    </div>
-
-    <div class="w-full h-1/2 bg-yellow order-1 lg:order-2 lg:w-8/12 lg:h-full">
+    <div class="w-full h-1/2 bg-yellow order-1 lg:order-2 absolute top-0 ">
         <div class="flex-col h-full">
             
-            <div class="w-11/12 relative m-auto z-10 sm:w-9/12 lg:w-11/12 xl:w-6/12">
+            <div class="w-11/12 relative m-auto z-10 sm:w-9/12 lg:w-8/12 xl:w-6/12">
                 <img src="assets/tea-roulette/teapot-pointer.png" alt="" class="m-auto">
             </div>
     
-            <div class="w-11/12 relative m-auto sm:w-9/12 lg:w-11/12 xl:w-6/12 ">
+
+            <div class="w-11/12 relative m-auto sm:w-9/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12  mt-40 xl:mt-0">
                 <img src="assets/tea-roulette/cut-out-teacup.png" alt="" class="relative -mt-48 mx-auto">
-                <canvas id="canvas" class="the_Wheel absolute inset-0 m-auto w-5/12" width="400" height="400" >
+                <canvas id="canvas" class="the_Wheel absolute inset-0 m-auto w-5/12 4xl:w-[400px]" width="400" height="400" >
                     <p class="font-bold text-red-800 text-center">Sorry, your browser doesn't support canvas. Please try another.</p>
                 </canvas>
             </div>
@@ -24,7 +19,11 @@
         </div>
     </div>
 
-    <div class="flex-1 h-1/2  bg-yellow order-3 lg:order-3 lg:w-2/12 lg:h-full py-4">
+
+<div class="flex absolute w-full justify-center space-x-28 md:space-x-80 lg:space-x-[40rem] top-[50rem] md:top-[17rem] 2xl:top-[25rem]">
+        <div class="flex justify-center items-center h-full ">
+            {{ partial:tea-roulette/partials/button classes="showNameSelector" text="Names" }}
+        </div>
         <div class="flex justify-center items-center h-full ">
             {{ partial:tea-roulette/partials/button classes="spinTheWheel" text="Spin" }}
         </div>
