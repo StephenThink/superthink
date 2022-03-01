@@ -4112,6 +4112,10 @@ sup {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .md\:leading-10 {
+    line-height: 2.5rem;
+  }
     .md\:bg-gradient-yellow-to-dark {
         background: linear-gradient(90deg, #FFC734 65%, #373737 65%);
     }
@@ -4182,6 +4186,10 @@ sup {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4rem;
   }
 }
 
