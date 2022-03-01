@@ -393,6 +393,7 @@ var start = function start() {
     'textAlignment': 'outer',
     'textOrientation': 'horizontal',
     'textFontFamily': 'geo-regular',
+    'textFontSize': 36,
     'textFillStyle': '#FFF',
     'lineWidth': 0,
     'drawMode': 'image',
