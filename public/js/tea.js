@@ -392,7 +392,7 @@ var start = function start() {
     'fillStyle': 'transparent',
     'textAlignment': 'outer',
     'textOrientation': 'horizontal',
-    'textFontFamily': 'Geograph',
+    'textFontFamily': 'geo-regular',
     'textFillStyle': '#FFF',
     'lineWidth': 0,
     'drawMode': 'image',
