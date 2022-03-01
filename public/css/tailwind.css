@@ -1943,6 +1943,26 @@ sup {
   bottom: 2.5rem;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.-top-1 {
+  top: -0.25rem;
+}
+
+.-top-3 {
+  top: -0.75rem;
+}
+
+.-top-\[2\.75rem\] {
+  top: -2.75rem;
+}
+
 .z-101 {
   z-index: 101;
 }
@@ -2703,6 +2723,10 @@ sup {
   place-content: space-between;
 }
 
+.content-between {
+  align-content: space-between;
+}
+
 .items-start {
   align-items: flex-start;
 }
@@ -3077,6 +3101,11 @@ sup {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .pb-full {
