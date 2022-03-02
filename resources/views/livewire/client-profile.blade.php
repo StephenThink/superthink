@@ -5,7 +5,11 @@
         </h2>
     </x-slot>
     <div class="p-6">
-        <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
+        <div class="flex items-center justify-between px-4 py-3 text-right sm:px-6">
+            <div class="text-2xl p-2">
+                Passwords
+            </div>
+
             <x-jet-button wire:click="createShowModal({{$client->id}})">
                 {{ __('Add Password') }}
             </x-jet-button>

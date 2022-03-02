@@ -1,11 +1,15 @@
-<div class="p-6">
-    <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
+<div class="p-6" wire:poll>
+    <div class="flex items-center justify-between px-4 py-3 text-right sm:px-6">
+        <div class="text-2xl p-2">
+            Staff Members
+        </div>
+
         <x-jet-button wire:click="createShowModal">
             {{ __('Add Staff Member') }}
         </x-jet-button>
     </div>
 
-    <div wire:poll>
+    <div >
         @if ($data->count())
         <div class="grid grid-cols-3 gap-2">
             @foreach ($data as $item)
@@ -105,7 +109,7 @@
     {{-- The Delete Modal --}}
     <x-jet-dialog-modal wire:model="modalConfirmDeleteVisible">
         <x-slot name="title">
-            {{ __('Delete Modal Title') }}
+            {{ __('Delete Staff Member') }}
         </x-slot>
 
         <x-slot name="content">
