@@ -1,6 +1,8 @@
 title: 'Geo Pages'
 template: geo-pages/show
 layout: layout
+taxonomies:
+  - core
 revisions: false
 route: 'services/{slug}'
 sort_dir: asc

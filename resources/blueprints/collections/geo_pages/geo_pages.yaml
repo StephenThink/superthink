@@ -4,17 +4,6 @@ sections:
     display: Main
     fields:
       -
-        handle: parent_service
-        field:
-          mode: select
-          collections:
-            - services
-          display: 'Parent Service'
-          type: entries
-          icon: entries
-          listable: hidden
-          max_items: 1
-      -
         handle: title
         field:
           type: text
@@ -31,11 +20,33 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
           validate:
             - required
             - 'unique_entry_value:{collection},{id},{site}'
+      -
+        handle: core
+        field:
+          type: terms
+          taxonomies:
+            - core
+          display: 'Core Services'
+          mode: select
+          instructions_position: above
+          listable: hidden
+          max_items: 1
+          create: false
+      -
+        handle: parent_service
+        field:
+          mode: select
+          collections:
+            - services
+          display: 'Parent Service'
+          type: entries
+          icon: entries
+          listable: hidden
+          max_items: 1
   SEO:
     display: SEO
     fields:

@@ -1,0 +1,125 @@
+{{ service_content:image field="hero_image" parent_entry="parent_service" is_image="1" }}
+    {{ if hero_image}}
+    <!-- image_text or image_classes not actually used in the Hero Partial???-->
+        {{ partial:partials/global/hero image_classes="object-left-top" show_playreel="0" image_text="text" }}
+    {{ /if }}
+{{ /service_content:image }}
+
+
+<section class="main__panel_small bg-light dark:bg-dark">
+
+        <div class="container flex">
+            <div class="hidden w-full md:w-2/12 md:block"></div>
+    
+            <div class="w-full mx-auto md:w-1/2 ">
+                <h1 class="text-5xl font-black">{{ title }}</h1>
+
+                <div class="mt-4 text-lg">
+                    {{ service_content field="introduction" parent_entry="parent_service" }}{{ /service_content }}
+                </div>
+                
+            </div>
+    
+            <div class="hidden w-full md:w-4/12 md:block"></div>
+        </div>
+        
+        <div class="container flex mt-12">
+            <div class="hidden w-full md:w-1/12 md:block"></div>
+
+            <div class="w-full md:w-10/12 mx-auto flex -mx-4">
+                {{ service_content field="stepper" parent_entry="parent_service" }}
+
+                    {{ if no_results }}
+                        No results.
+                    {{ else }}
+                        
+                        <div class=" w-1/2 px-4 text-center md:w-1/4">
+                            {{ if image }}
+                                <div class="pb-full rounded-full bg-dark dark:bg-yellow">
+                                    <!-- this might be an svg -->
+                                    {{# {{ image }}
+                                        <img src="{{ url }}" alt="{{ alt }}" class="h-full w-full object-cover">
+                                    {{ /image }} #}}
+                                </div>
+                            {{ else }}
+                                <div class="pb-full rounded-full bg-dark dark:bg-yellow"></div>
+                            {{ /if }}
+
+                            <p class="mt-8 font-bold text-lg">{{ label }}</p>
+                        </div>
+                        
+                    {{ /if }}
+
+                {{ /service_content }}
+                
+            </div>
+
+            <div class="hidden w-full md:w-1/12 md:block"></div>
+
+        </div>
+
+        <div class="container flex mt-12 content ">
+            <div class="hidden w-full md:w-2/12 md:block"></div>
+            <div class="w-full md:w-1/2 mx-auto">
+                {{ service_content:markdown field="content" parent_entry="parent_service" }}{{ /service_content:markdown }}
+            </div>
+            <div class="hidden w-full md:w-4/12 md:block"></div>
+        </div>
+
+    </section>
+
+{{ partial:partials/global/cta custom_cta="Need an idea? Get in touch for a chat..." }}
+
+<section class="main__panel bg-light-grey dark:bg-dark">
+    <div class="container">
+        <h3 class="font-black text-3xl">Featured {{ parent_service.title ?? title }} Projects</h3>
+
+
+
+        <div class="flex flex-wrap mt-12 -mx-4">
+            <!-- Uses the Core Services in the Case Studies Collection to show all other entries with the same Core Services -->
+        {{#    {{ collection:case_studies scope="geo" query_scope="parent_or_child_slug" parent_service="{{ core }}" }}
+            
+                {{ if no_results }}
+                    <p>Dang, rest asured; We're working on it.</p>
+                {{ else }}
+                    {{ case_studies }}
+                        <div class="w-full px-4 mt-12 md:w-1/2">
+                            <a href="{{ url }}">
+                                <div class="pb-2/3 relative">
+                                    {{ if hero_image }}
+                                        <img src="{{ hero_image:url }}" alt="{{ hero_image:alt }}" class="h-full w-full absolute object-cover" loading="lazy">
+                                    {{ /if }}
+                                </div>
+                                <div class="mt-2 font-bold text-lg">
+                                    {{ title }}        
+                                </div>
+                            </a>
+                        </div>
+                    {{ /case_studies }}
+                {{ /if }}
+            {{ /collection:case_studies }}
+#}}
+
+{{ collection from="case_studies" core:contains="{core.slug}"}}
+
+<div class="w-full px-4 mt-12 md:w-1/2">
+    <a href="{{ url }}">
+        <div class="pb-2/3 relative">
+            {{ if hero_image }}
+                <img src="{{ hero_image:url }}" alt="{{ hero_image:alt }}" class="h-full w-full absolute object-cover" loading="lazy">
+            {{ /if }}
+        </div>
+        <div class="mt-2 font-bold text-lg">
+            {{ title }}
+        </div>
+    </a>
+</div>
+
+{{ /collection }}
+        </div>
+    </div>
+</section>
+
+
+
