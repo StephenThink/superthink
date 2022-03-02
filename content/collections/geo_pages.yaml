@@ -2,7 +2,7 @@ title: 'Geo Pages'
 template: geo-pages/show
 layout: layout
 taxonomies:
-  - core
+  - services_filter
 revisions: false
 route: 'services/{slug}'
 sort_dir: asc

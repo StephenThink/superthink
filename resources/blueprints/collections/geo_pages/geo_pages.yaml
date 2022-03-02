@@ -50,6 +50,18 @@ sections:
           instructions_position: above
           create: false
           instructions: 'Dont Touch Me!!!'
+      -
+        handle: services_filter
+        field:
+          type: terms
+          taxonomies:
+            - services_filter
+          display: 'Services Filter'
+          mode: select
+          instructions_position: above
+          listable: hidden
+          max_items: 1
+          create: false
   SEO:
     display: SEO
     fields:

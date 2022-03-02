@@ -72,13 +72,13 @@
 
 <section class="main__panel bg-light-grey dark:bg-dark">
     <div class="container">
-        <h3 class="font-black text-3xl">Featured {{ parent_service.title ?? title }} Projects</h3>
+        <h3 class="font-black text-3xl">Featured {{ services_filter.title ?? title }} Projects</h3>
 
 
 
         <div class="flex flex-wrap mt-12 -mx-4">
             <!-- Uses the Core Services in the Case Studies Collection to show all other entries with the same Core Services -->
-        {{#    {{ collection:case_studies scope="geo" query_scope="parent_or_child_slug" parent_service="{{ core }}" }}
+            {{# collection:case_studies scope="case_studies" query_scope="geo" services_filter="{{ parent_service ? parent_service.slug : slug }}" }}
             
                 {{ if no_results }}
                     <p>Dang, rest asured; We're working on it.</p>
@@ -98,25 +98,28 @@
                         </div>
                     {{ /case_studies }}
                 {{ /if }}
+            {{ /collection:case_studies #}}
+
+{{ collection:case_studies taxonomy:services_filter="{services_filter.slug}" }}
+            
+               
+
+                        <div class="w-full px-4 mt-12 md:w-1/2">
+                            <a href="{{ url }}">
+                                <div class="pb-2/3 relative">
+                                    {{ if hero_image }}
+                                        <img src="{{ hero_image:url }}" alt="{{ hero_image:alt }}" class="h-full w-full absolute object-cover" loading="lazy">
+                                    {{ /if }}
+                                </div>
+                                <div class="mt-2 font-bold text-lg">
+                                    {{ title }}     
+                                </div>
+                            </a>
+                        </div>
+
+
             {{ /collection:case_studies }}
-#}}
 
-{{ collection from="case_studies" core:contains="{core.slug}"}}
-
-<div class="w-full px-4 mt-12 md:w-1/2">
-    <a href="{{ url }}">
-        <div class="pb-2/3 relative">
-            {{ if hero_image }}
-                <img src="{{ hero_image:url }}" alt="{{ hero_image:alt }}" class="h-full w-full absolute object-cover" loading="lazy">
-            {{ /if }}
-        </div>
-        <div class="mt-2 font-bold text-lg">
-            {{ title }}
-        </div>
-    </a>
-</div>
-
-{{ /collection }}
         </div>
     </div>
 </section>

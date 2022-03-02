@@ -4,7 +4,7 @@ blueprint: geo_pages
 parent_service: a220da5c-1433-4add-a21a-1c09c6998ad4
 title: 'Branding Businesses in the Preston Area'
 updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1646213728
+updated_at: 1646220534
 overriding_introduction: '<p>Whether its building a brand from the ground up, breathing new life into an old one, or keeping messages to brand guidelines, Think!Creative has over a decade of experience in helping brand Preston businesses.</p>'
 overriding_content: |-
   ## SMALL CHANGES, BIG DIFFERENCE
@@ -35,6 +35,5 @@ seo:
   description: 'Does your Preston business need a brand identity? Think!Creative''s Brand Creation Experts are on hand to help whatever stage you''re at. Call us on 01253 297900.'
 overriding_video_choice: Image
 core: brand
-services_filter:
-  - brand-identity
+services_filter: brand-identity
 ---
