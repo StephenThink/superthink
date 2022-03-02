@@ -28,4 +28,9 @@ class Client extends Model
     {
         return $this->hasMany('App\Models\Vault');
     }
+
+    public function staff()
+    {
+        return $this->hasMany('App\Models\ClientContact');
+    }
 }

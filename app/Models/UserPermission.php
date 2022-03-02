@@ -29,7 +29,8 @@ class UserPermission extends Model
             'workingdays',
             'clients',
             'vaults',
-            'client-profile'
+            'client-profile',
+            'client-contacts'
         ];
     }
 

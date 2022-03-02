@@ -176,6 +176,11 @@
                     {{ __('Vault') }}
                 </x-jet-dropdown-link>
 
+                <!-- Client Contacts -->
+                <x-jet-dropdown-link href="{{ route('client-contacts') }}" :active="request()->routeIs('client-contacts')">
+                    {{ __('Contacts') }}
+                </x-jet-dropdown-link>
+
             </div>
         </x-slot>
     </x-jet-dropdown>

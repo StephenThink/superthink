@@ -72,6 +72,10 @@ Route::group(['middleware' => [
     Route::get('/clients/profile/{id}', function ($id) {
         return view('clients.profile', ['id'=>$id]);
     })->name('client-profile');
+
+    Route::get('/clients/contacts', function () {
+        return view('clients.contacts');
+    })->name('client-contacts');
 });
 
 
