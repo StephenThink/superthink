@@ -47,6 +47,9 @@ sections:
           icon: entries
           listable: hidden
           max_items: 1
+          instructions_position: above
+          create: false
+          instructions: 'Dont Touch Me!!!'
   SEO:
     display: SEO
     fields:

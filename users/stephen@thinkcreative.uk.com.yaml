@@ -23,3 +23,5 @@ preferences:
       after_save: continue_editing
     services:
       after_save: continue_editing
+    geo_pages:
+      after_save: continue_editing
