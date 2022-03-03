@@ -5,9 +5,9 @@ title: 'mc- BAE Systems Land (UK) Material'
 greatest_hits: false
 core:
   - activations
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1641398637
-hero_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Full-Image-1360x768.5.jpg
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1646303531
+hero_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -17,15 +17,16 @@ main_content:
         type: the_problem
         video_choice: Image
         image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Large-927x522-1.jpg
-        custom_header: ' '
+        custom_header: '  '
         intro: 'When your job is to support and protect an entire country, you need marketing materials with the wow factor. BAE Systems Land (UK) needed to give their brochures and folders a lick of paint. They also needed to bring them bang up to date with clean layouts, full-bleed images and bold typography. So that''s exactly what we gave them. This is just one example of our work with BAE Systems as an ''Agency of Choice'' - an exclusive group of agency partners they trust with their brand. Just as they support and protect our troops - we support and protect their brand. '
   -
     type: set
     attrs:
       values:
         type: the_idea
-        intro_full_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Large-927x522-2.jpg
+        intro_full_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Full-Image-2-2732x1536-2.jpg
         video_choice: Image
+        custom_header: ' '
   -
     type: set
     attrs:

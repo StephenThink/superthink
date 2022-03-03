@@ -5,9 +5,9 @@ title: 'mc- BAE Systems Company Strategy'
 greatest_hits: false
 core:
   - activations
-updated_by: 35c7384a-60a0-4933-9645-d8850117c385
-updated_at: 1641398647
-hero_image: work/experience/bae-systems-company-strategy/BAE-15-Company-Strategy-Full-Image-1360x768.5.jpg
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1646230044
+hero_image: work/experience/bae-systems-company-strategy/BAE-15-Company-Strategy-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-systems-company-strategy/BAE-15-Company-Strategy-Secondary-Image-896x597.jpg
 main_content:
   -

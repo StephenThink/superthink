@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1638194075
-hero_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Full-Image-1360x768.5.jpg
+updated_at: 1646234089
+hero_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Full-Image-2732x1536.jpg
 secondary_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -18,6 +18,7 @@ main_content:
         video_choice: Image
         image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Large-927x522.jpg
         intro: 'After a frosty initial reception to their employee benefit scheme, BAE Systems came to us to warm things up a bit. '
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -25,19 +26,21 @@ main_content:
         type: the_idea
         intro: 'The goal? To increase traffic to an online web portal and encourage sign ups. After a bit of a think about the format, we found an idea that sold employees on the benefits of the scheme and made sign up a lot easier. We also did some Olympics-grade postal gymnastics to get round Royal Mail’s tight mail guidelines. '
         video_choice: Image
+        custom_header: '  '
   -
     type: set
     attrs:
       values:
         type: full_image
         video_choice: Image
-        full_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-FullScreen-1360x768.5.jpg
+        full_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-FullScreen-2732x1536-2.jpg
   -
     type: set
     attrs:
       values:
         type: the_work
         intro: 'Once we’d sorted all that, we printed and personalised 34,000 mailers. The mailers were sent around the world along with posters and e-cards to stretch the campaign into multiple media. The result? A lot more signups and a much happier client. '
+        custom_header: ' '
   -
     type: set
     attrs:
@@ -51,4 +54,5 @@ main_content:
 short_case: false
 services_filter:
   - print-design
+video_choice: Image
 ---

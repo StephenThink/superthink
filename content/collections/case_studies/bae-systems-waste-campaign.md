@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1641834235
-hero_image: work/campaign/bae-systems-waste-campaign/BAE-5-Campaign-Full-Image-1360x768.5.jpg
+updated_at: 1646317758
+hero_image: work/campaign/bae-systems-waste-campaign/BAE-5-Campaign-Full-Image-2732x1536.jpg
 secondary_image: work/campaign/bae-systems-waste-campaign/BAE-5-Campaign-Secondary-Image-896x597.jpg
 main_content:
   -
