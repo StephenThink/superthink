@@ -1,4 +1,4 @@
-<div wire:poll class="p-6">
+<div wire:poll.10000ms class="p-6">
     <div class="text-2xl p-2">
         Messages
     </div>
