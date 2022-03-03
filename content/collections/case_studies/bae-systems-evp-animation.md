@@ -3,8 +3,8 @@ id: f53b369f-81e7-4bab-83b4-7bdd17309d41
 blueprint: case_study
 title: 'NAP - BAE Systems EVP Animation'
 greatest_hits: false
-updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
-updated_at: 1644245933
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1646236031
 core:
   - activations
 main_content:
@@ -41,7 +41,7 @@ main_content:
   -
     type: paragraph
 outro: 'If you are interested in seeing the video in full <a href="https://thinkcreative.uk.com/contact/">get in touch</a> with us!'
-hero_image: work/experience/bae-systems-evp-animation/5-BAE-EVP-animation.jpg
+hero_image: work/experience/bae-systems-evp-animation/BAE-17-EVP-Animation-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-systems-evp-animation/Nadia-scene-4.gif
 video_choice: Image
 short_case: false

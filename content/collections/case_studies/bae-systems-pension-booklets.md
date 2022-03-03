@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640177587
-hero_image: work/experience/bae-systems-pension-booklets/BAE-Pensions-20-Experience-Full-Image-1360x768.5.jpg
+updated_at: 1646311807
+hero_image: work/experience/bae-systems-pension-booklets/BAE-Pensions-20-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-systems-pension-booklets/BAE-Pensions-20-Experience-Secondary-Image-896x597.jpg
 main_content:
   -

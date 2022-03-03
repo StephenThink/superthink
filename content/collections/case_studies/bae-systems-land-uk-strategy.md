@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640105787
-hero_image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Full-Image-1360x768.5.jpg
+updated_at: 1646240788
+hero_image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -17,7 +17,7 @@ main_content:
         type: the_problem
         video_choice: Image
         image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Large-927x522.jpg
-        custom_header: ' '
+        custom_header: '  '
         intro: |-
           Ambitious plans are bread and butter to a brand like BAE Systems. Turning that plan into a readable and interesting document is bread and butter to us. Not that it's easy mind you. BAE Systems Land are as ambitious and forward thinking as they come, so we had a lot of magic to squeeze into the bottle here. 
 
@@ -28,7 +28,7 @@ main_content:
       values:
         type: full_image
         video_choice: Image
-        full_image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Full-Image-1360x768.5-2.jpg
+        full_image: work/experience/bae-systems-land-uk-strategy/BAE-LandStrategy-11-Experience-Full-Image-2732x1536-2.jpg
   -
     type: set
     attrs:
