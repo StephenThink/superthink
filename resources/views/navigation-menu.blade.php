@@ -69,7 +69,7 @@
                             <x-slot name="content">
                                 <div class="w-60">
                                     <!-- Team Management -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
+                                    <div class="nav-headers">
                                         {{ __('Manage Team') }}
                                     </div>
 
@@ -87,7 +87,7 @@
                                     <div class="border-t border-gray-100"></div>
 
                                     <!-- Team Switcher -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
+                                    <div class="nav-headers">
                                         {{ __('Switch Teams') }}
                                     </div>
 
@@ -118,7 +118,7 @@
         <x-slot name="content">
             <div class="w-60">
                 <!-- Frontend Management -->
-                <div class="block px-4 py-2 text-xs text-gray-400">
+                <div class="nav-headers">
                     {{ __('Manage Frontend') }}
                 </div>
 
@@ -132,7 +132,7 @@
                 </x-jet-dropdown-link>
 
                 <!-- Users Management -->
-                <div class="block px-4 py-2 text-xs text-gray-400">
+                <div class="nav-headers">
                     {{ __('Manage Users') }}
                 </div>
 
@@ -152,7 +152,7 @@
                 </x-jet-dropdown-link>
 
                 <!-- Users Management -->
-                <div class="block px-4 py-2 text-xs text-gray-400">
+                <div class="nav-headers">
                     {{ __('Manage Holidays') }}
                 </div>
 
@@ -162,7 +162,7 @@
                 </x-jet-dropdown-link>
 
                 <!-- Client Management -->
-                <div class="block px-4 py-2 text-xs text-gray-400">
+                <div class="nav-headers">
                     {{ __('Manage Clients') }}
                 </div>
 
@@ -209,7 +209,7 @@
 
                         <x-slot name="content">
                             <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
+                            <div class="nav-headers">
                                 {{ __('Manage Account') }}
                             </div>
 
@@ -223,7 +223,7 @@
                                 </x-jet-dropdown-link>
                             @endif
 
-                            <div class="border-t border-gray-100"></div>
+                            <div class="border-t border-header-dark"></div>
 
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
@@ -302,7 +302,7 @@
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="border-t border-gray-200"></div>
 
-                    <div class="block px-4 py-2 text-xs text-gray-400">
+                    <div class="nav-headers">
                         {{ __('Manage Team') }}
                     </div>
 
@@ -320,7 +320,7 @@
                     <div class="border-t border-gray-200"></div>
 
                     <!-- Team Switcher -->
-                    <div class="block px-4 py-2 text-xs text-gray-400">
+                    <div class="nav-headers">
                         {{ __('Switch Teams') }}
                     </div>
 

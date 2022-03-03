@@ -61,3 +61,12 @@
 .nav-dropdown {
     @apply inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-transparent hover:bg-header-dark hover:text-yellow focus:outline-none focus:bg-header-dark  transition;
 }
+
+.dropdown-link {
+@apply block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition;
+}
+
+
+.nav-headers {
+    @apply block px-4 py-1 text-base text-header-dark underline;
+}
