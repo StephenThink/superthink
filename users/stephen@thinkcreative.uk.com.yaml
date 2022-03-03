@@ -11,8 +11,8 @@ preferences:
         - greatest_hits
         - core
         - services_filter
-      after_save: continue_editing
       per_page: 500
+      after_save: continue_editing
     employees:
       columns:
         - title
