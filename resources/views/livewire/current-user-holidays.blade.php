@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between mb-2">
 
         <div class=" text-2xl p-2">
-            Holidays <span wire:poll class="text-sm"> by the way you have {{ auth()->user()->leaveDays }} day's left to take before the end of the year.</span>
+            Holidays <span wire:poll class="text-sm"> by the way you have {{ auth()->user()->leaveDays }} day's left.</span>
         </div>
         <x-jet-button wire:click="createShowModal">
             {{ __('Request Holiday') }}

@@ -58,15 +58,45 @@
 }
 
 
+/* Nav at the Top of the Screen */
+
 .nav-dropdown {
     @apply inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-transparent hover:bg-header-dark hover:text-yellow focus:outline-none focus:bg-header-dark  transition;
 }
 
 .dropdown-link {
-@apply block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition;
+@apply block px-4 py-2 text-sm leading-5 text-white focus:outline-none hover:text-yellow transition;
 }
 
 
 .nav-headers {
-    @apply block px-4 py-1 text-base text-header-dark underline;
+    @apply block px-4 py-1 text-base text-yellow;
+}
+
+/* Just below the Navbar */
+
+.header-main {
+    @apply bg-yellow shadow text-header-dark;
+}
+
+.header-content {
+@apply max-w-full mx-auto py-3 px-4 sm:px-6 lg:px-8;
+}
+
+/* Blocks used for content */
+
+.content-outer {
+    @apply py-6;
+}
+
+.content-block {
+    @apply max-w-full mx-auto sm:px-6 lg:px-8;
+}
+
+.content-inner {
+    @apply bg-white overflow-hidden shadow-xl sm:rounded-lg;
+}
+
+.button-main {
+    @apply inline-flex items-center px-4 py-2 bg-header-dark border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition hover:text-yellow
 }
