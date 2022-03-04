@@ -3895,6 +3895,10 @@ sup {
     height: 100%;
   }
 
+  .md\:h-\[75vh\] {
+    height: 75vh;
+  }
+
   .md\:max-h-auto {
     max-height: auto;
   }
@@ -4158,6 +4162,10 @@ sup {
 
   .lg\:mt-0 {
     margin-top: 0px;
+  }
+
+  .lg\:h-full {
+    height: 100%;
   }
 
   .lg\:w-8\/12 {
