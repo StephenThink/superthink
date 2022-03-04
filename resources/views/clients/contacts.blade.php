@@ -7,7 +7,7 @@
 
     <div class="content-outer">
         <div class="content-block">
-            <div class="content-inner
+            <div class="content-inner">
                 @livewire('client-contacts')
             </div>
         </div>

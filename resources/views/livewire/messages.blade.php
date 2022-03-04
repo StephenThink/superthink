@@ -5,10 +5,10 @@
     @if ($data->count())
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
-            <input wire:model.debounce.300ms="search" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"placeholder="Search Messages...">
+            <input wire:model.debounce.300ms="search" type="text" class="search-input"placeholder="Search Messages...">
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderBy" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderBy" class="search-dropbox" id="grid-state">
                 <option value="date">Date Recieved</option>
                 <option value="from">From</option>
                 <option value="message">Email</option>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="perPage" class="search-dropbox" id="grid-state">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
@@ -77,7 +77,7 @@
                                             </x-jet-button>
                                             @else
                                             <x-jet-button wire:click="readMessage({{ $item->id }})">
-                                                {{ __('Read') }}
+                                                @include('partials.svgs.read')
                                             </x-jet-button>
                                             @endif
 

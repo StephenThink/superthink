@@ -7,10 +7,10 @@
 
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
-            <input wire:model.debounce.300ms="search" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"placeholder="Search Passwords...">
+            <input wire:model.debounce.300ms="search" type="text" class="search-input" placeholder="Search Passwords...">
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderBy" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderBy" class="search-dropbox" id="grid-state">
 
                 <option value="title">Title</option>
                 <option value="login">Login</option>
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="perPage" class="search-dropbox" id="grid-state">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
@@ -73,10 +73,10 @@
 
                                     <td class="px-6 py-2 flex justify-end">
                                         <x-jet-button class="ml-2" wire:click="updateShowModal({{ $item->id }})">
-                                            {{ __('Update') }}
+                                            @include('partials.svgs.update')
                                         </x-jet-button>
                                         <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                            {{ __('Delete') }}
+                                            @include('partials.svgs.trash')
                                         </x-jet-button>
                                     </td>
                                 </tr>
@@ -101,12 +101,12 @@
     {{-- Modal Form --}}
     <x-jet-dialog-modal wire:model="modalFormVisible">
         <x-slot name="title">
-            {{ __('Create or Update Form') }}
+            {{ __('Passwords for the Vault') }}
         </x-slot>
         <x-slot name="content">
             <div class="mt-4">
                 <x-jet-label for="client_id" value="{{ __('Type') }}" />
-                <select wire:model="client_id" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <select wire:model="client_id" id="" class="input-dropdown">
                     <option value="">-- Find a Client--</option>
                     @foreach ($clients as $client)
                     <option value="{{$client->id}}">{{ $client->title}}</option>

@@ -49,7 +49,7 @@
                                             @if ($item->authorised)
 
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                {{ __('Cancel') }}
+                                                @include('partials.svgs.trash')
                                                 </x-jet-button>
                                             @endif
                                         </td>
@@ -82,7 +82,7 @@
 
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 sm:space-x-2 ">
+                <div class="form-grid-2">
                 <div class="mt-4">
                     <x-jet-label for="start" value="{{ __('Start Date') }}" />
                     <x-jet-input wire:model.defer="start" id="" class="block mt-1 w-full" type="date" />

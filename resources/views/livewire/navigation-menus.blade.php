@@ -7,10 +7,10 @@
     @if ($data->count())
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
-            <input wire:model.debounce.300ms="search" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"placeholder="Search Nav Menus...">
+            <input wire:model.debounce.300ms="search" type="text" class="search-input"placeholder="Search Nav Menus...">
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderBy" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderBy" class="search-dropbox" id="grid-state">
                 <option value="type">Type</option>
                 <option value="label">Label</option>
             </select>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="perPage" class="search-dropbox" id="grid-state">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
@@ -72,10 +72,10 @@
                                         </td>
                                         <td class="px-6 py-2 flex justify-end">
                                             <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                                                {{ __('Update') }}
+                                                @include('partials.svgs.update')
                                             </x-jet-button>
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                {{ __('Delete') }}
+                                                @include('partials.svgs.trash')
                                             </x-jet-button>
                                         </td>
                                     </tr>
@@ -117,18 +117,21 @@
                 </div>
                 @error('slug') <span class="error">{{ $message }}</span> @enderror
             </div>
-            <div class="mt-4">
-                <x-jet-label for="sequence" value="{{ __('Sequence') }}" />
-                <x-jet-input wire:model="sequence" id="sequence" class="block mt-1 w-full" type="text" />
-                @error('sequence') <span class="error">{{ $message }}</span> @enderror
+            <div class="form-grid-2">
+                <div class="mt-4">
+                    <x-jet-label for="sequence" value="{{ __('Sequence') }}" />
+                    <x-jet-input wire:model="sequence" id="sequence" class="block mt-1 w-full" type="text" />
+                    @error('sequence') <span class="error">{{ $message }}</span> @enderror
+                </div>
+                <div class="mt-4">
+                    <x-jet-label for="sequence" value="{{ __('Type') }}" />
+                    <select wire:model="type" class="input-dropdown">
+                        <option value="SidebarNav">SidebarNav</option>
+                        <option value="TopNav">TopNav</option>
+                    </select>
+                </div>
             </div>
-            <div class="mt-4">
-                <x-jet-label for="sequence" value="{{ __('Type') }}" />
-                <select wire:model="type" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                    <option value="SidebarNav">SidebarNav</option>
-                    <option value="TopNav">TopNav</option>
-                </select>
-            </div>
+
         </x-slot>
 
         <x-slot name="footer">

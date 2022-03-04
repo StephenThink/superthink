@@ -7,10 +7,10 @@
     @if ($data->count())
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
-            <input wire:model.debounce.300ms="search" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"placeholder="Search Permissions...">
+            <input wire:model.debounce.300ms="search" type="text" class="search-input"placeholder="Search Permissions...">
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderBy" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderBy" class="search-dropbox" id="grid-state">
                 <option value="role">Role</option>
                 <option value="route_name">Route</option>
             </select>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="perPage" class="search-dropbox" id="grid-state">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
@@ -57,14 +57,18 @@
                             @if ($data->count())
                                 @foreach ($data as $item)
                                     <tr>
-                                        <td class="px-6 py-2">{{ $item->role }}</td>
-                                        <td class="px-6 py-2">{{ $item->route_name }}</td>
+                                        <td class="px-6 py-2">{{ Str::title($item->role) }}</td>
+                                        <td class="px-6 py-2"><a
+                                            class="text-indigo-600 hover:text-indigo-900"
+                                            target="_blank"
+                                            href="{{ URL::to('/'.$item->route_name)}}"
+                                        >{{$item->route_name}}</td>
                                         <td class="px-6 py-2 flex justify-end">
                                             <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                                                {{ __('Update') }}
+                                                @include('partials.svgs.update')
                                             </x-jet-button>
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                {{ __('Delete') }}
+                                                @include('partials.svgs.trash')
                                             </x-jet-button>
                                         </td>
                                     </tr>
@@ -91,10 +95,11 @@
             {{ __('Save User Permission') }}
         </x-slot>
 
-        <x-slot name="content">
+        <x-slot name="content" >
+            <div class="form-grid-2">
             <div class="mt-4">
                 <x-jet-label for="role" value="{{ __('Role') }}" />
-                <select wire:model="role" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <select wire:model="role" id="" class="input-dropdown">
                     <option value="">-- Select a Role --</option>
                     @foreach (App\Models\User::userRoleList() as $key => $value)
                         <option value="{{ $key }}">{{ $value }}</option>
@@ -104,7 +109,7 @@
             </div>
             <div class="mt-4">
                 <x-jet-label for="routeName" value="{{ __('Route Name') }}" />
-                <select wire:model="routeName" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <select wire:model="routeName" id="" class="input-dropdown">
                     <option value="">-- Select a Route --</option>
                     @foreach (App\Models\UserPermission::routeNameList() as $item)
                         <option value="{{ $item }}">{{ $item }}</option>
@@ -112,6 +117,7 @@
                 </select>
                 @error('routeName') <span class="error">{{ $message }}</span> @enderror
             </div>
+        </div>
         </x-slot>
 
         <x-slot name="footer">

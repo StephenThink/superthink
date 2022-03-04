@@ -90,7 +90,7 @@
 }
 
 .content-block {
-    @apply max-w-full mx-auto sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto sm:px-6 lg:px-8;
 }
 
 .content-inner {
@@ -109,4 +109,36 @@
 
 .input-text {
     @apply border-header-dark focus:border-yellow focus:ring focus:ring-yellow rounded-md shadow-sm;
+}
+
+.input-dropdown {
+    @apply mt-1 block appearance-none w-full bg-white border border-header-dark text-header-dark py-3 px-2 pr-8 rounded-md leading-tight focus:border-yellow focus:ring focus:ring-yellow h-[42px];
+}
+
+.input-label {
+    @apply block font-medium text-sm text-header-dark
+}
+
+.search-dropbox {
+    @apply block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:bg-white focus:border-gray-500
+}
+
+.search-input {
+    @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-md py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500
+}
+
+/* Form Layout */
+
+.form-grid-2 {
+    @apply grid grid-cols-1 sm:grid-cols-2 sm:space-x-2;
+}
+
+/* Table Content */
+
+.table-content-yes {
+    @apply bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center cursor-pointer
+}
+
+.table-content-no {
+    @apply bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center cursor-pointer
 }

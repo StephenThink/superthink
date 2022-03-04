@@ -14,26 +14,28 @@
         <div class="grid grid-cols-3 gap-2">
             @foreach ($data as $item)
                 <div class="grid grid-flow-row border border-gray-800 rounded-xl shadow-lg p-2 space-y-2 content-between">
-                    <div class="border p-2 border-gray-600 rounded-xl">
-
+                    <div class="grid grid-cols-7 space-x-1">
+                    <div class="border p-2 border-gray-600 rounded-xl col-span-6">
                         <div>{{ $item->staff_name }} - {{ $item->staff_position }}</div>
                         <div><a href="tel:{{ $item->staff_number }}">{{ $item->staff_number }}</a></div>
                         <div><a href="mailto:{{ $item->staff_email }}">{{ $item->staff_email }}</a></div>
                     </div>
+                    <div class="grid grid-rows-2">
+                        <x-jet-button wire:click="updateShowModal({{ $item->id }})">
+                            @include('partials.svgs.update')
+                        </x-jet-button>
+                        <x-jet-danger-button class="" wire:click="deleteShowModal({{ $item->id }})">
+                            @include('partials.svgs.trash')
+                        </x-jet-button>
+                    </div>
+                </div>
                     @if (isset($item->staff_notes) && $item->staff_notes != "")
                     <div class="border p-2 border-gray-600 rounded-xl bg-gray-200">
                         <div>{!! $item->staff_notes !!}</div>
 
                     </div>
                     @endif
-                    <div class="flex justify-between">
-                        <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                            {{ __('Update') }}
-                        </x-jet-button>
-                        <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                            {{ __('Delete') }}
-                        </x-jet-button>
-                    </div>
+
                 </div>
             @endforeach
         </div>

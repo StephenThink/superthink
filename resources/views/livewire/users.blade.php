@@ -7,10 +7,14 @@
 
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
-            <input wire:model.debounce.300ms="search" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"placeholder="Search users...">
+            <input wire:model.debounce.300ms="search" type="text"
+                class="search-input"
+                placeholder="Search users...">
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderBy" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderBy"
+                class="search-dropbox"
+                id="grid-state">
                 <option value="name">Name</option>
                 <option value="role">Role</option>
                 <option value="email">Email</option>
@@ -20,7 +24,9 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderAsc"
+                class="search-dropbox"
+                id="grid-state">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
@@ -29,7 +35,9 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="perPage"
+                class="search-dropbox"
+                id="grid-state">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
@@ -49,33 +57,41 @@
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead>
                             <tr>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Role</th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"></th>
+                                <th
+                                    class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    Name</th>
+                                <th
+                                    class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    Role</th>
+                                <th
+                                    class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    Email</th>
+                                <th
+                                    class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                </th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
                             @if ($data->count())
-                                @foreach ($data as $item)
-                                    <tr>
-                                        <td class="px-6 py-2">{{ $item->name }}</td>
-                                        <td class="px-6 py-2">{{ $item->role }}</td>
-                                        <td class="px-6 py-2">{{ $item->email }}</td>
-                                        <td class="px-6 py-2 flex justify-end">
-                                            <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                                                {{ __('Update') }}
-                                            </x-jet-button>
-                                            <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                {{ __('Delete') }}
-                                            </x-jet-button>
-                                        </td>
-                                    </tr>
-                                @endforeach
+                            @foreach ($data as $item)
+                            <tr>
+                                <td class="px-6 py-2">{{ $item->name }}</td>
+                                <td class="px-6 py-2">{{ Str::title($item->role) }}</td>
+                                <td class="px-6 py-2">{{ $item->email }}</td>
+                                <td class="px-6 py-2 flex justify-end">
+                                    <x-jet-button wire:click="updateShowModal({{ $item->id }})">
+                                        @include('partials.svgs.update')
+                                    </x-jet-button>
+                                    <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
+                                        @include('partials.svgs.trash')
+                                        </x-jet-button>
+                                </td>
+                            </tr>
+                            @endforeach
                             @else
-                                <tr>
-                                    <td class="px-6 py-4 text-sm whitespace-no-wrap" colspan="4">No Results Found</td>
-                                </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-sm whitespace-no-wrap" colspan="4">No Results Found</td>
+                            </tr>
                             @endif
                         </tbody>
                     </table>
@@ -85,112 +101,78 @@
     </div>
 
     <div class="mt-5">
-    {{ $data->links() }}
+        {{ $data->links() }}
     </div>
 
-{{-- Create Modal Form --}}
-<x-jet-dialog-modal wire:model="modalCreateFormVisible">
-    <x-slot name="title">
-        {{ __('Create') }}
-    </x-slot>
+    {{-- Create Modal Form --}}
+    <x-jet-dialog-modal wire:model="modalCreateFormVisible">
+        <x-slot name="title">
+            {{ __('Create') }}
+        </x-slot>
 
-    <x-slot name="content">
-        <div class="mt-4">
-            <x-jet-label for="name" value="{{ __('Name') }}" />
-            <x-jet-input wire:model.defer="name" id="" class="block mt-1 w-full" type="text" />
-            @error('name') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="mt-4">
-            <x-jet-label for="email" value="{{ __('E-Mail') }}" />
-            <x-jet-input wire:model.defer="email" id="" class="block mt-1 w-full" type="email" />
-            @error('email') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="mt-4">
-            <x-jet-label for="password" value="{{ __('Password') }}" />
-            <x-jet-input wire:model.defer="password" id="" class="block mt-1 w-full" type="password" />
-            @error('password') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="mt-4">
-            <x-jet-label for="passwordConfirmation" value="{{ __('Confirm Password') }}" />
-            <x-jet-input wire:model.defer="passwordConfirmation" id="" class="block mt-1 w-full" type="password" />
-            @error('passwordConfirmation') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="mt-4">
-            <x-jet-label for="dateStarted" value="{{ __('Start Date') }}" />
-            <x-jet-input wire:model.defer="dateStarted" id="" class="block mt-1 w-full" type="date" />
-            @error('dateStarted') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="mt-4">
-            <x-jet-label for="role" value="{{ __('Role') }}" />
-            <select wire:model.defer="role" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                <option value="">-- Select a Role --</option>
-                @foreach (App\Models\User::userRoleList() as $key => $value)
-                    <option value="{{ $key }}">{{ $value }}</option>
-                @endforeach
-            </select>
-            @error('role') <span class="error">{{ $message }}</span> @enderror
-        </div>
-
-        <div class="mt-4">
-            <label class="flex items-center">
-                <x-jet-checkbox wire:model.defer="monday" :value="$monday"/>
-                <span class="ml-2 text-sm text-gray-600">Monday</span>
-            </label>
+        <x-slot name="content">
+            <div class="form-grid-2">
+            <div class="mt-4">
+                <x-jet-label for="name" value="{{ __('Name') }}" />
+                <x-jet-input wire:model.defer="name" id="" class="block mt-1 w-full" type="text" />
+                @error('name') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mt-4">
-                <label class="flex items-center">
-                    <x-jet-checkbox wire:model.defer="tuesday" :value="$tuesday"/>
-                    <span class="ml-2 text-sm text-gray-600">Tuesday</span>
-                </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="wednesday" :value="$wednesday"/>
-                        <span class="ml-2 text-sm text-gray-600">Wednesday</span>
-                    </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="thursday" :value="$thursday"/>
-                        <span class="ml-2 text-sm text-gray-600">Thursday</span>
-                    </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="friday" :value="$friday"/>
-                        <span class="ml-2 text-sm text-gray-600">Friday</span>
-                    </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="saturday" :value="$saturday"/>
-                        <span class="ml-2 text-sm text-gray-600">Saturday</span>
-                    </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="sunday" :value="$sunday"/>
-                        <span class="ml-2 text-sm text-gray-600">Sunday</span>
-                    </label>
-                </div>
-    </x-slot>
+                <x-jet-label for="email" value="{{ __('E-Mail') }}" />
+                <x-jet-input wire:model.defer="email" id="" class="block mt-1 w-full" type="email" />
+                @error('email') <span class="error">{{ $message }}</span> @enderror
+            </div>
+        </div>
+        <div class="form-grid-2">
+            <div class="mt-4">
+                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <x-jet-input wire:model.defer="password" id="" class="block mt-1 w-full" type="password" />
+                @error('password') <span class="error">{{ $message }}</span> @enderror
+            </div>
+            <div class="mt-4">
+                <x-jet-label for="passwordConfirmation" value="{{ __('Confirm Password') }}" />
+                <x-jet-input wire:model.defer="passwordConfirmation" id="" class="block mt-1 w-full" type="password" />
+                @error('passwordConfirmation') <span class="error">{{ $message }}</span> @enderror
+            </div>
+        </div>
+            <div class="form-grid-2">
+            <div class="mt-4">
+                <x-jet-label for="dateStarted" value="{{ __('Start Date') }}" />
+                <x-jet-input wire:model.defer="dateStarted" id="" class="block mt-1 w-full" type="date" />
+                @error('dateStarted') <span class="error">{{ $message }}</span> @enderror
+            </div>
+            <div class="mt-4">
+                <x-jet-label for="role" value="{{ __('Role') }}" />
+                <select wire:model.defer="role" id=""
+                    class="input-dropdown">
+                    <option value="">-- Select a Role --</option>
+                    @foreach (App\Models\User::userRoleList() as $key => $value)
+                    <option value="{{ $key }}">{{ $value }}</option>
+                    @endforeach
+                </select>
+                @error('role') <span class="error">{{ $message }}</span> @enderror
+            </div>
+        </div>
+        @include('partials.form.checkboxfordaysofweek')
 
-    <x-slot name="footer">
-        <x-jet-secondary-button wire:click="$toggle('modalCreateFormVisible')" wire:loading.attr="disabled">
-            {{ __('Nevermind') }}
-        </x-jet-secondary-button>
+        </x-slot>
 
-        @if ($modelId)
+        <x-slot name="footer">
+            <x-jet-secondary-button wire:click="$toggle('modalCreateFormVisible')" wire:loading.attr="disabled">
+                {{ __('Nevermind') }}
+            </x-jet-secondary-button>
+
+            @if ($modelId)
             <x-jet-button class="ml-2" wire:click="update" wire:loading.attr="disabled">
                 {{ __('Update') }}
-            </x-jet-danger-button>
-        @else
+            </x-jet-button>
+            @else
             <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
                 {{ __('Create') }}
-            </x-jet-danger-button>
-        @endif
-    </x-slot>
-</x-jet-dialog-modal>
+            </x-jet-button>
+            @endif
+        </x-slot>
+    </x-jet-dialog-modal>
 
     {{-- Update Modal Form --}}
     <x-jet-dialog-modal wire:model="modalFormVisible">
@@ -211,10 +193,11 @@
             </div>
             <div class="mt-4">
                 <x-jet-label for="role" value="{{ __('Role') }}" />
-                <select wire:model="role" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <select wire:model="role" id=""
+                    class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                     <option value="">-- Select a Role --</option>
                     @foreach (App\Models\User::userRoleList() as $key => $value)
-                        <option value="{{ $key }}">{{ $value }}</option>
+                    <option value="{{ $key }}">{{ $value }}</option>
                     @endforeach
                 </select>
                 @error('role') <span class="error">{{ $message }}</span> @enderror
@@ -227,14 +210,14 @@
             </x-jet-secondary-button>
 
             @if ($modelId)
-                <x-jet-button class="ml-2" wire:click="update" wire:loading.attr="disabled">
-                    {{ __('Update') }}
-                </x-jet-danger-button>
-            @else
+            <x-jet-button class="ml-2" wire:click="update" wire:loading.attr="disabled">
+                {{ __('Update') }}
+                </x-jet-button>
+                @else
                 <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
                     {{ __('Create') }}
-                </x-jet-danger-button>
-            @endif
+                    </x-jet-button>
+                    @endif
         </x-slot>
     </x-jet-dialog-modal>
 

@@ -7,11 +7,11 @@
     @if ($data->count())
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
-            <input wire:model.debounce.300ms="search" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"placeholder="Search clients...">
+            <input wire:model.debounce.300ms="search" type="text" class="search-input"placeholder="Search clients...">
         </div>
 
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="perPage" class="search-dropbox" id="grid-state">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
@@ -53,13 +53,13 @@
                                         <td class="px-6 py-2">{{ $item->title }}</td>
                                         <td class="px-6 py-2 flex justify-end">
                                             <x-jet-button wire:click="eventShow('{{ $item->id }}')">
-                                                {{ __('Show') }}
+                                                @include('partials.svgs.read')
                                             </x-jet-button>
                                             <x-jet-button class="ml-2" wire:click="updateShowModal({{ $item->id }})">
-                                                {{ __('Update') }}
+                                                @include('partials.svgs.update')
                                             </x-jet-button>
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                {{ __('Delete') }}
+                                                @include('partials.svgs.trash')
                                             </x-jet-button>
                                         </td>
                                     </tr>

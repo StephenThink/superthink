@@ -73,7 +73,6 @@ class User extends Authenticatable
         foreach ($roles as $key => $role) {
             $roleArray[Str::lower($role->name)] = Str::ucfirst($role->name);
         }
-
         return $roleArray;
     }
 

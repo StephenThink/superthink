@@ -36,58 +36,58 @@
                                         <td class="px-6 py-2">{{ $item->user->name }}</td>
                                         <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'monday')">
                                         @if ($item->monday)
-                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                            @include('partials.svgs.yes')
                                         @else
-                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                            @include('partials.svgs.no')
                                         @endif
                                     </td>
                                     <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'tuesday')">
                                         @if ($item->tuesday)
-                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                             @include('partials.svgs.yes')
                                         @else
-                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                            @include('partials.svgs.no')
                                         @endif
                                     </td>
                                     <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'wednesday')">
                                         @if ($item->wednesday)
-                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                             @include('partials.svgs.yes')
                                         @else
-                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                            @include('partials.svgs.no')
                                         @endif
                                     </td>
                                     <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'thursday')">
                                         @if ($item->thursday)
-                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                             @include('partials.svgs.yes')
                                         @else
-                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                            @include('partials.svgs.no')
                                         @endif
                                     </td>
                                     <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'friday')">
                                         @if ($item->friday)
-                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                             @include('partials.svgs.yes')
                                         @else
-                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                            @include('partials.svgs.no')
                                         @endif
                                     </td>
                                     <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'saturday')">
                                         @if ($item->saturday)
-                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                             @include('partials.svgs.yes')
                                         @else
-                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                            @include('partials.svgs.no')
                                         @endif
                                     </td>
                                     <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'sunday')">
                                         @if ($item->sunday)
-                                            <div class="bg-green-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">Yes</div>
+                                             @include('partials.svgs.yes')
                                         @else
-                                            <div class="bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center">No</div>
+                                            @include('partials.svgs.no')
                                         @endif
                                     </td>
 
                                         <td class="px-6 py-2 flex justify-end">
 
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                {{ __('Delete') }}
+                                                @include('partials.svgs.trash')
                                             </x-jet-button>
                                         </td>
                                     </tr>
@@ -117,7 +117,7 @@
         <x-slot name="content">
             <div class="mt-4">
                 <x-jet-label for="user_id" value="{{ __('Type') }}" />
-                <select wire:model="user_id" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <select wire:model="user_id" id="" class="input-dropdown">
                     <option value="user_id">-- Select a Staff Member --</option>
                     @foreach ($staffmembers as $sm)
                     <option value="{{$sm->id}}">{{$sm->name}}</option>
@@ -125,48 +125,7 @@
                 </select>
                 @error('user_id') <span class="error">{{ $message }}</span> @enderror
             </div>
-            <div class="mt-4">
-            <label class="flex items-center">
-                <x-jet-checkbox wire:model.defer="monday" :value="$monday"/>
-                <span class="ml-2 text-sm text-gray-600">Monday</span>
-            </label>
-            </div>
-            <div class="mt-4">
-                <label class="flex items-center">
-                    <x-jet-checkbox wire:model.defer="tuesday" :value="$tuesday"/>
-                    <span class="ml-2 text-sm text-gray-600">Tuesday</span>
-                </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="wednesday" :value="$wednesday"/>
-                        <span class="ml-2 text-sm text-gray-600">Wednesday</span>
-                    </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="thursday" :value="$thursday"/>
-                        <span class="ml-2 text-sm text-gray-600">Thursday</span>
-                    </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="friday" :value="$friday"/>
-                        <span class="ml-2 text-sm text-gray-600">Friday</span>
-                    </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="saturday" :value="$saturday"/>
-                        <span class="ml-2 text-sm text-gray-600">Saturday</span>
-                    </label>
-                </div>
-                <div class="mt-4">
-                    <label class="flex items-center">
-                        <x-jet-checkbox wire:model.defer="sunday" :value="$sunday"/>
-                        <span class="ml-2 text-sm text-gray-600">Sunday</span>
-                    </label>
-                </div>
+            @include('partials.form.checkboxfordaysofweek')
         </x-slot>
 
         <x-slot name="footer">

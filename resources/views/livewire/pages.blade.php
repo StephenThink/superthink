@@ -7,10 +7,10 @@
     @if ($data->count())
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
-            <input wire:model.debounce.300ms="search" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"placeholder="Search Pages...">
+            <input wire:model.debounce.300ms="search" type="text" class="search-input"placeholder="Search Pages...">
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderBy" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderBy" class="search-dropbox" id="grid-state">
                 <option value="title">Title</option>
                 <option value="slug">Slug</option>
                 <option value="content">Content</option>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select wire:model="perPage" class="search-dropbox" id="grid-state">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
@@ -77,10 +77,10 @@
                                             <td class="px-6 py-4 text-sm whitespace-no-wrap">{!! \Illuminate\Support\Str::limit($item->content, 50, '...') !!}</td>
                                             <td class="px-6 py-4 text-right text-sm">
                                                 <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                                                    {{ __('Update') }}
+                                                    @include('partials.svgs.update')
                                                 </x-jet-button>
                                                 <x-jet-danger-button wire:click="deleteShowModal({{ $item->id }})">
-                                                    {{ __('Delete') }}
+                                                    @include('partials.svgs.trash')
                                                 </x-jet-button>
                                             </td>
                                         </tr>

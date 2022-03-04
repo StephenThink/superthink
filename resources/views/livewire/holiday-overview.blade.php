@@ -67,11 +67,11 @@
                                     </x-jet-button>
                                     @else
                                     <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                                        {{ __('Update') }}
+                                        @include('partials.svgs.update')
                                     </x-jet-button>
                                     @if ( $item->start >= now() )
                                     <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                        {{ __('Delete') }}
+                                        @include('partials.svgs.trash')
                                         </x-jet-button>
                                         @endif
 
@@ -98,7 +98,7 @@
         {{-- Modal Form --}}
         <x-jet-dialog-modal wire:model="modalFormVisible">
             <x-slot name="title">
-                {{ __('Create') }}
+                {{ __('New Holiday') }}
             </x-slot>
 
             <x-slot name="content">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="mt-4">
                     <x-jet-label for="user_id" value="{{ __('Staff Member') }}" />
-                    <select wire:model.defer="user_id" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                    <select wire:model.defer="user_id" id="" class="input-dropdown">
                         <option value="">-- Select a Staff Member --</option>
                         @foreach ($staffMembers as $s)
                         <option value="{{$s->id}}">{{$s->name}} - ( {{$s->leaveDays}} days left )</option>
@@ -119,6 +119,7 @@
                     </select>
                     @error('user_id') <span class="error">{{ $message }}</span> @enderror
                 </div>
+                <div class="form-grid-2">
                 <div class="mt-4">
                     <x-jet-label for="start" value="{{ __('Start Date') }}" />
                     <x-jet-input wire:model.defer="start" id="" class="block mt-1 w-full" type="date" />
@@ -129,9 +130,11 @@
                     <x-jet-input wire:model.defer="end" id="" class="block mt-1 w-full" type="date" />
                     @error('end') <span class="error">{{ $message }}</span> @enderror
                 </div>
-                <div class="mt-4">
+            </div>
+            <div class="form-grid-2">
+                <div class="mt-4 ">
                     <x-jet-label for="halfDay" value="{{ __('Half a Day?') }}" />
-                    <x-jet-checkbox wire:model.defer="halfDay" id="" class="block mt-1" type="checkbox" />
+                    <x-jet-checkbox wire:model.defer="halfDay" id="" class="input-checkbox w-6 h-6" type="checkbox" />
                     @error('halfDay') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 <div class="mt-4">
@@ -139,6 +142,7 @@
                     <x-jet-input wire:model.defer="dateAuthorised" id="" class="block mt-1 w-full" type="date" />
                     @error('dateAuthorised') <span class="error">{{ $message }}</span> @enderror
                 </div>
+            </div>
             </x-slot>
 
             <x-slot name="footer">

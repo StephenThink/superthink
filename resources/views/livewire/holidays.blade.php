@@ -34,11 +34,11 @@
                                         <td class="px-6 py-2">{{ $item->daysTaken }}</td>
                                         <td class="px-6 py-2 flex justify-end">
                                             <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                                                {{ __('Update') }}
+                                                @include('partials.svgs.update')
                                             </x-jet-button>
                                             @if ( $item->start >= now() )
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                {{ __('Delete') }}
+                                                @include('partials.svgs.trash')
                                             </x-jet-button>
                                             @endif
                                         </td>

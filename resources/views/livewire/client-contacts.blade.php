@@ -33,10 +33,10 @@
 
                                         <td class="px-6 py-2 flex justify-end">
                                             <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                                                {{ __('Update') }}
+                                                @include('partials.svgs.update')
                                             </x-jet-button>
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                                {{ __('Delete') }}
+                                                @include('partials.svgs.trash')
                                             </x-jet-button>
                                         </td>
                                     </tr>
@@ -66,7 +66,7 @@
         <x-slot name="content">
             <div class="mt-4">
                 <x-jet-label for="client_id" value="{{ __('Type') }}" />
-                <select wire:model="client_id" id="" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 round leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <select wire:model="client_id" id="" class="input-dropdown">
                     <option value="">-- Pick A Client --</option>
 
                     @foreach ($clients as $client)
