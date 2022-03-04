@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646317758
+updated_at: 1646387428
 hero_image: work/campaign/bae-systems-waste-campaign/BAE-5-Campaign-Full-Image-2732x1536.jpg
 secondary_image: work/campaign/bae-systems-waste-campaign/BAE-5-Campaign-Secondary-Image-896x597.jpg
 main_content:
@@ -18,14 +18,14 @@ main_content:
         custom_header: ' '
         intro: 'The world is in a battle with waste. So much of what we use could have a new life, if only we knew where to put it. And you know what? People do recycle - but sometimes they need a little jolt to do it. That''s why we created a campaign to transform the habits of different sectors of BAE Systems - from Land, Sea, and Air to Submarine. To do this, we put recycling bins in the spotlight by using space in carefully selected locations to highlight our campaign posters.'
         video_choice: Image
-        image: work/campaign/bae-systems-waste-campaign/BAE-5-Campaign-Full-Image-1360x768.5-2.jpg
+        image: work/campaign/bae-systems-waste-campaign/Animated-Inforgraphics-Mockup-3.gif
   -
     type: set
     attrs:
       values:
         type: full_image
         video_choice: Image
-        full_image: work/campaign/bae-systems-waste-campaign/Animated-Inforgraphics-Mockup-3.gif
+        full_image: work/campaign/bae-systems-waste-campaign/BAE-5-Campaign-Full-Image-2732x1536-2.jpg
   -
     type: set
     attrs:
