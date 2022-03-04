@@ -2086,6 +2086,11 @@ sup {
   margin-right: 0.5rem;
 }
 
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -2262,6 +2267,10 @@ sup {
   margin-right: -6rem;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .block {
   display: block;
 }
@@ -2288,6 +2297,18 @@ sup {
 
 .hidden {
   display: none;
+}
+
+.aspect-1 {
+  aspect-ratio: 1;
+}
+
+.aspect-\[3\/4\] {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-\[16\/9\] {
+  aspect-ratio: 16 / 9;
 }
 
 .h-full {
@@ -2372,10 +2393,6 @@ sup {
 
 .h-5 {
   height: 1.25rem;
-}
-
-.h-\[768px\] {
-  height: 768px;
 }
 
 .max-h-700 {
@@ -2480,10 +2497,6 @@ sup {
 
 .w-5 {
   width: 1.25rem;
-}
-
-.w-\[1366px\] {
-  width: 1366px;
 }
 
 .max-w-500 {
@@ -3201,6 +3214,10 @@ sup {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.\!pb-0 {
+  padding-bottom: 0px !important;
 }
 
 .text-center {
@@ -3966,6 +3983,10 @@ sup {
     width: 5rem;
   }
 
+  .md\:w-\[720px\] {
+    width: 720px;
+  }
+
   .md\:flex-grow-0 {
     flex-grow: 0;
   }
@@ -4343,6 +4364,10 @@ sup {
 
   .land\:w-36 {
     width: 9rem;
+  }
+
+  .land\:w-\[416px\] {
+    width: 416px;
   }
 
   .land\:flex-col {
