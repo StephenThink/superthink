@@ -105,7 +105,7 @@
     {{-- Modal Form --}}
     <x-jet-dialog-modal wire:model="modalFormVisible">
         <x-slot name="title">
-            {{ __('Save Page') }}
+            {{ __('Create a New Page') }}
         </x-slot>
 
         <x-slot name="content">
@@ -119,22 +119,22 @@
             <div class="mt-4">
                 <x-jet-label for="slug" value="{{ __('Slug') }}" />
                 <div class="mt-1 flex rounded-md shadow-sm h-10">
-                    <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                    <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-yellow bg-gray-50 text-header-dark text-sm">
                         {{ URL::to('/')}}/
                     </span>
-                    <input wire:model="slug" class="form-input flex-1 block w-full border border-gary-300 rounded-none rounded-r-md transition duration-150 ease-in-out pl-2 sm:text-sm sm:leading-5" placeholder="url-slug">
+                    <input wire:model="slug" class="flex-1 block w-full border border-header-dark rounded-none rounded-r-md transition duration-150 ease-in-out pl-2 sm:text-sm sm:leading-5 !focus:border-yellow" placeholder="url-slug">
                 </div>
                 @error('slug') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mt-4">
                 <label>
-                    <input class="form-checkbox" type="checkbox" value="{{ $isSetToDefaultHomePage }}" wire:model="isSetToDefaultHomePage"/>
+                    <input class="input-checkbox" type="checkbox" value="{{ $isSetToDefaultHomePage }}" wire:model="isSetToDefaultHomePage"/>
                     <span class="ml-2 text-sm text-gray-600">Set as the default home page</span>
                 </label>
             </div>
             <div class="mt-4">
                 <label>
-                    <input class="form-checkbox" type="checkbox" value="{{ $isSetToDefaultNotFoundPage }}" wire:model="isSetToDefaultNotFoundPage"/>
+                    <input class="input-checkbox" type="checkbox" value="{{ $isSetToDefaultNotFoundPage }}" wire:model="isSetToDefaultNotFoundPage"/>
                     <span class="ml-2 text-sm text-red-600">Set as the default 404 error page</span>
                 </label>
             </div>
@@ -165,13 +165,13 @@
             </x-jet-secondary-button>
 
             @if ($modelId)
-            <x-jet-danger-button class="ml-3" wire:click="update" wire:loading.attr="disabled">
+            <x-jet-button class="ml-3" wire:click="update" wire:loading.attr="disabled">
                 {{ __('Update') }}
-            </x-jet-danger-button>
+            </x-jet-button>
             @else
-            <x-jet-danger-button class="ml-3" wire:click="create" wire:loading.attr="disabled">
+            <x-jet-button class="ml-3" wire:click="create" wire:loading.attr="disabled">
                 {{ __('Create') }}
-            </x-jet-danger-button>
+            </x-jet-button>
             @endif
 
         </x-slot>

@@ -82,6 +82,7 @@
 
                 </div>
 
+                <div class="grid grid-cols-1 sm:grid-cols-2 sm:space-x-2 ">
                 <div class="mt-4">
                     <x-jet-label for="start" value="{{ __('Start Date') }}" />
                     <x-jet-input wire:model.defer="start" id="" class="block mt-1 w-full" type="date" />
@@ -92,7 +93,8 @@
                     <x-jet-input wire:model.defer="end" id="" class="block mt-1 w-full" type="date" />
                     @error('end') <span class="error">{{ $message }}</span> @enderror
                 </div>
-                <div class="mt-4">
+            </div>
+                <div class="mt-4 flex space-x-2">
                     <x-jet-label for="halfDay" value="{{ __('Half a Day?') }}" />
                     <x-jet-checkbox wire:model.defer="halfDay" id="" class="block mt-1" type="checkbox" />
                     @error('halfDay') <span class="error">{{ $message }}</span> @enderror

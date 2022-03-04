@@ -100,3 +100,13 @@
 .button-main {
     @apply inline-flex items-center px-4 py-2 bg-header-dark border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition hover:text-yellow
 }
+
+/* Input Fields */
+
+.input-checkbox {
+    @apply rounded border-header-dark text-yellow shadow-sm focus:border-yellow focus:ring focus:ring-yellow;
+}
+
+.input-text {
+    @apply border-header-dark focus:border-yellow focus:ring focus:ring-yellow rounded-md shadow-sm;
+}
