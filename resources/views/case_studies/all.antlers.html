@@ -4,6 +4,7 @@
     <div class="container">
         <div class="flex flex-wrap -mx-4">
             {{ data }}
+                {{ if status=="published"}}
                 <div class="w-full p-4 md:w-1/3 filter-item">
                     <a href="{{ url }}">
                         <img src="{{ !thumbnail ? hero_image : thumbnail }}" alt="" loading=lazy>
@@ -11,6 +12,7 @@
                         <p class="">{{ tagline }}</p>
                     </a>
                 </div>
+                {{ /if}}
             {{ /data }}
         </div>
     </div>
