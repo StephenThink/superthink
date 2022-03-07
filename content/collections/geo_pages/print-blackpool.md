@@ -36,10 +36,12 @@ overriding_content: |-
 
   Talk to our Blackpool print experts now about your campaign.
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646150509
+updated_at: 1646422131
 seo:
   title: 'Print Design in Blackpool'
   description: 'Need a Print Design Agency in Blackpool? Trust Our Print Design Experts to Help Your Company Make a Print Splash. Call us on 01253 297900.'
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Print-Hero-2732x1536.jpg
+core: activations
+services_filter: print-design
 ---

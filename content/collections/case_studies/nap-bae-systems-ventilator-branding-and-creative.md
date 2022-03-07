@@ -31,7 +31,13 @@ main_content:
         intro: 'Functional names can be boring, so we didn’t want something that describes what the ventilator does, like “SomethingVent.” Instead, we wanted a name that reflected the way BAE Systems put business to one side to help the nation. After some furious scribbling and back-and-forth meetings; AirCare was born. '
         video_choice: Image
         image: work/brand/bae-systems-ventilator/BAEVentilator-10-Brand-Large-927x522.jpg
-        sign_off: |-
+  -
+    type: set
+    attrs:
+      values:
+        type: the_work
+        custom_header: ' '
+        intro: |-
           We’re really proud of the work we did on this project, which also included design and branding work. As for the name? Well, we think it stacks up pretty well against the ones other companies came up with. But you be the judge.... 
 
           Penlon Prima EOS2 / 
@@ -60,5 +66,5 @@ services_filter:
   - print-design
   - packaging-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645528720
+updated_at: 1646408682
 ---

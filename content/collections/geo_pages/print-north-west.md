@@ -21,10 +21,12 @@ overriding_content: |-
 
   [Talk to us now about your print project in the North West.](/contact)
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646150706
+updated_at: 1646422186
 seo:
   title: 'Print Design in the North West'
   description: 'Think!Creative’s Print Design Experts Are The Authority On All Things Print Design In The North West. Call our North West studio on 01253 297900.'
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Print-Hero-2732x1536.jpg
+core: activations
+services_filter: print-design
 ---

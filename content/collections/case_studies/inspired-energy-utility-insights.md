@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1641830099
-hero_image: work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-FullScreen.jpg
+updated_at: 1646410680
+hero_image: work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-FullScreen-2732x1536.jpg
 secondary_image: work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-Large.jpg
 main_content:
   -
@@ -18,7 +18,7 @@ main_content:
         custom_header: ' '
         intro: 'The goal? To develop a sub-brand that would attract audiences to Inspired Energy’s series of nationwide forums, webinars and podcasts. The challenge? To make the sub-brand as compelling as its parent. Not an easy task. But one we we absolutely loved digging into.'
         video_choice: Image
-        intro_full_image: work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-FullScreen-2.jpg
+        intro_full_image: work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-FullScreen-2-2732x1536.jpg
   -
     type: set
     attrs:

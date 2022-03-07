@@ -18,11 +18,13 @@ overriding_content: |-
 
   Having worked with global brands such as BP, Utiligroup and BAE Systems for over a decade, our North West designers know not only how important strong branding is, but also how sacrosanct the deadline and budget are. [For a North West creative design studio that understands what really matters to your business, talk to us.](/contact)
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646150537
+updated_at: 1646422140
 parent_service: d04db7c9-133c-46dd-93cf-9b551d2b83c9
 seo:
   title: 'Creative Design Agency For The North West'
   description: 'Have a creative design project in the North West? Challenge Think!Creative’s creative design experts. Call us on 01253 297900.'
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Creative-Design-Hero-2732x1536.jpg
+core: campaign
+services_filter: campaigns
 ---

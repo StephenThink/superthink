@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640278371
-hero_image: work/experience/inspired-energy-edie-live-2019/Inspired-Edie-29-Experience-Full-Image-1360x768.5.jpg
+updated_at: 1646418160
+hero_image: work/experience/inspired-energy-edie-live-2019/Inspired-Edie-29-Experience-Full-Image-2732x1536-2.jpg
 secondary_image: work/experience/inspired-energy-edie-live-2019/Inspired-Edie-29-Experience-Secondary-Image-896x597.jpg
 main_content:
   -

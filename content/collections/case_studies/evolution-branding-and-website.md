@@ -5,7 +5,7 @@ title: 'mc- Evolution Branding & Website'
 short_case: false
 greatest_hits: false
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645620281
+updated_at: 1646421689
 hero_image: work/brand/evolution-branding-and-website/Evolution-2-Brand-Full-Image-2732x1536-2.jpg
 mini_introduction: 'Evolution are a brand on a mission. From their roots as a small start up, they came to Think! to turn them into a powerhouse of a brand in a short space of time.'
 secondary_image: work/brand/evolution-branding-and-website/Evolution-2-Brand-Secondary-Image-896x597.jpg
@@ -30,8 +30,8 @@ main_content:
         images:
           - work/brand/evolution-branding-and-website/Evolution-2-Brand-Small-740x416.25-1.jpg
           - work/brand/evolution-branding-and-website/Evolution-2-Brand-Small-740x416.25-2.jpg
-          - work/brand/evolution-branding-and-website/Evolution-2-Brand-Small-740x416.25-3.jpg
           - work/brand/evolution-branding-and-website/Evolution-2-Brand-Small-740x416.25-4.jpg
+          - work/brand/evolution-branding-and-website/Evolution-2-Brand-Large-927x522-bcard.jpg
   -
     type: paragraph
 video_choice: Image
@@ -41,4 +41,5 @@ services_filter:
   - digital-design
   - display
   - branded-spaces
+  - digital-and-ux-design
 ---

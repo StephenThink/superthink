@@ -5,20 +5,20 @@ title: 'mc- PIC Branding and Website'
 greatest_hits: false
 core:
   - brand
-updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
-updated_at: 1642008631
-hero_image: work/brand/pic-branding-and-website/Pic-6-Brand-Full-Image-1360x768.5.jpg
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1646421652
+hero_image: work/brand/pic-branding-and-website/Pic-6-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/pic-branding-and-website/Pic-6-Brand-Secondary-Image-896x597.jpg
 main_content:
   -
     type: set
     attrs:
       values:
-        type: the_problem
-        video_choice: Image
-        image: work/brand/pic-branding-and-website/Pic-6-Brand-Large-927x522.jpg
+        type: the_idea
         custom_header: ' '
         intro: 'PIC aren''t your traditional investment company. And when you''re not traditional, you don''t want your brand to be traditional either. They came to us to find a brand that would a help them stand out and show off their values. The wordmark and structured graphic uses a geometric triangular grid to reinforce strength and reliability. The angled elements within the mark are a little nod to the idea of forward thinking. '
+        video_choice: Image
+        intro_full_image: work/brand/pic-branding-and-website/Pic-6-Brand-Full-Image-2732x1536-2.jpg
   -
     type: set
     attrs:
@@ -43,6 +43,7 @@ main_content:
 services_filter:
   - brand-identity
   - digital-design
+  - digital-and-ux-design
 short_case: false
 video_choice: Image
 ---

@@ -5,10 +5,10 @@ title: 'mc- BAE Systems Gender Report'
 greatest_hits: false
 core:
   - activations
-updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
-updated_at: 1644336288
-hero_image: work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Full-Image-1360x768.5.jpg
-secondary_image: work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Secondary-Image-896x597.jpg
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1646396882
+hero_image: work/experience/bae-systems-gender-report/44-BAE-Gender-Report-2020-Full-Image.jpg
+secondary_image: work/experience/bae-systems-gender-report/44-BAE-Gender-Report-2020-Secondary-Image.jpg
 main_content:
   -
     type: set
@@ -28,10 +28,14 @@ main_content:
       values:
         type: slider
         images:
-          - work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Small-740x416.25-1.jpg
+          - work/experience/bae-systems-gender-report/44-BAE-Gender-Report-2020-Large-Image-3.jpg
           - work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Small-740x416.25-2.jpg
-          - work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Small-740x416.25-3.jpg
+          - work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Small-740x416.25-1.jpg
+          - work/experience/bae-systems-gender-report/44-BAE-Gender-Report-2020-Large-Image-2.jpg
           - work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Small-740x416.25-4.jpg
+          - work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Small-740x416.25-3.jpg
+          - work/experience/bae-systems-gender-report/44-BAE-Gender-Report-2020-Large-Image.jpg
+          - work/experience/bae-systems-gender-report/BAE-Gender-Report-18-Experience-Full-Image-1360x768.5.jpg
   -
     type: paragraph
 short_case: false

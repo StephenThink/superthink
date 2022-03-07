@@ -19,10 +19,12 @@ overriding_content: |-
 
   Think!Creative is the full service creative design agency of choice for companies like BP, BAE Systems and Utiligroup. Why? Because we give every brief the same dose of passion, invention and creative power, to create results that are engagingly different every time. [Talk to us now about your Lancashire Design project.](/contact)
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646150397
+updated_at: 1646422098
 seo:
   title: 'Creative Design Agency In Lancashire'
   description: 'Have a Creative Design project in Lancashire? Challenge Think!Creative’s creative design experts. Call us on 01253 297900.'
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Creative-Design-Hero-2732x1536.jpg
+core: campaign
+services_filter: campaigns
 ---

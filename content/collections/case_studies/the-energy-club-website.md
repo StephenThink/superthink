@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - brand
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645550386
+updated_at: 1646421676
 hero_image: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/the-energy-club-website/Animated-Mockup-GIF-2.gif
 main_content:
@@ -36,6 +36,7 @@ services_filter:
   - illustration
   - film-and-animation
   - digital-design
+  - digital-and-ux-design
 thumbnail: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Full-Image-2732x1536.jpg
 short_case: false
 short_para_title: 'Old Content'

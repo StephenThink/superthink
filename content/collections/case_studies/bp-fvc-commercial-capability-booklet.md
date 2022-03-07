@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640276712
+updated_at: 1646416720
 main_content:
   -
     type: set
@@ -44,7 +44,7 @@ main_content:
     type: paragraph
 services_filter:
   - print-design
-hero_image: work/experience/bp-fvc-commercial-capability-booklet/BP-FVC-Booklet-26-Experience-Full-Image-1360x768.5.jpg
+hero_image: work/experience/bp-fvc-commercial-capability-booklet/BP-FVC-Booklet-26-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bp-fvc-commercial-capability-booklet/BP-FVC-Booklet-26-Experience-Secondary-Image-896x597.jpg
 short_case: false
 video_choice: Image

@@ -4,7 +4,7 @@ blueprint: geo_pages
 parent_service: a220da5c-1433-4add-a21a-1c09c6998ad4
 title: 'Branding Your Business in Blackpool'
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646146607
+updated_at: 1646421560
 overriding_introduction: '<p>Branding expertise runs through Think!Creative like letters through a stick of Blackpool rock. It is the same with your company: you want a brand that runs from the top to the bottom. It gives the business a tone of voice and character. It’s your stamp of approval, your statement of intent and your badge of quality.</p>'
 overriding_content: |-
   ## A CHANGE IS AS GOOD AS A REST
@@ -35,4 +35,6 @@ seo:
   description: 'Does your Blackpool business need a Branding Experts touch? Think!Creative''s team are on hand to help whatever stage you are at from start up to refresh. Call us on 01253 297900.'
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Branding-Hero-2732x1536.jpg
+core: brand
+services_filter: brand-identity
 ---

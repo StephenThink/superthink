@@ -23,10 +23,12 @@ overriding_content: |-
 
   [Talk to us now about your display project in the North West.](/contact)
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646150777
+updated_at: 1646422233
 seo:
   title: 'Display Design Services in the North West'
   description: 'Does Your Company Have a Display, Interior Design, or Exhibition Stand project? Call Think!Creative’s North West Display Design Experts on 01253 297900.'
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Display-Hero-2732x1536.jpg
+core: activations
+services_filter: display
 ---

@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646314454
+updated_at: 1646411631
 hero_image: work/campaign/bae-too-good-to-waste-campaign/Campaign-1-BAE-Full-Image-2732x1536.jpg
 secondary_image: work/campaign/bae-too-good-to-waste-campaign/Campaign-1-BAE-Secondary-Image-896x597.jpg
 main_content:
@@ -28,8 +28,8 @@ main_content:
         type: slider
         images:
           - work/campaign/bae-too-good-to-waste-campaign/Campaign-1-BAE-Small-Image-740x416.25-1.jpg
-          - work/campaign/bae-too-good-to-waste-campaign/Campaign-1-BAE-Small-Image-740x416.25-2.jpg
           - work/campaign/bae-too-good-to-waste-campaign/Campaign-1-BAE-Small-Image-740x416.25-3.jpg
+          - work/campaign/bae-too-good-to-waste-campaign/Campaign-1-BAE-Small-Image-740x416.25-2.1.jpg
   -
     type: set
     attrs:

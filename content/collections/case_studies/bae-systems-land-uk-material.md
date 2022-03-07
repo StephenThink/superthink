@@ -1,12 +1,12 @@
 ---
 id: 2112dde6-6fd8-4106-9965-a6ff105d1bbe
 blueprint: case_study
-title: 'mc- BAE Systems Land (UK) Material'
+title: 'mc- BAE Systems Land UK Material'
 greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646303531
+updated_at: 1646412975
 hero_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-systems-land-uk-material/BAE-LandMaterial-12-Experience-Secondary-Image-896x597.jpg
 main_content:

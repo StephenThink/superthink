@@ -24,10 +24,12 @@ overriding_content: |-
 
   Think!Creative’s Blackpool copywriters have built up great relationships with businesses large and small. The reason why they trust us with their copywriting is because we understand their brand, company voice, and direction they wish to go in. We also know how to explain complex information in an effective and impactful way. Make your mark. [Contact our Blackpool copywriting team now.](/contact)
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646150743
+updated_at: 1646422199
 seo:
   title: 'Copywriting Services in Blackpool'
   description: '@seo:Think!Creative’s Blackpool Copywriting Services. Words for every brand, every campaign, and every channel. Call 01253 297900.'
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Copywriting-Hero-2732x1536.jpg
+core: activations
+services_filter: copywriting
 ---

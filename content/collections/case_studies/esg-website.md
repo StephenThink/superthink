@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'ESG Website'
 video_choice: Image
 hero_image: work/experience/esg-website/ESG-Website-54-Experience-Full-Image-2732x1536.jpg
-secondary_image: work/experience/esg-website/ESG-Website-54-Experience-Secondary-Image-896x597.jpg
+secondary_image: work/experience/esg-website/ESG-Website-54-Experience-Secondary-Image-927x522.jpg
 main_content:
   -
     type: set
@@ -25,5 +25,5 @@ services_filter:
   - illustration
   - digital-and-ux-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645615579
+updated_at: 1646417869
 ---

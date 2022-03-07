@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640275823
-hero_image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Full-Image-1360x768.5.jpg
+updated_at: 1646417448
+hero_image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -28,7 +28,7 @@ main_content:
       values:
         type: full_image
         video_choice: Image
-        full_image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Full-Image-1360x768.5-2.jpg
+        full_image: work/experience/bp-downstream-people-handbook/BP-Downstream-Handbook-25-Experience-Full-Image-2732x1536-2.jpg
   -
     type: set
     attrs:

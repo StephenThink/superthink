@@ -4,7 +4,7 @@ blueprint: geo_pages
 title: 'Creative Agency in Blackpool'
 parent_service: d04db7c9-133c-46dd-93cf-9b551d2b83c9
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646148323
+updated_at: 1646421763
 overriding_introduction: '<p>The moment your design brief reaches Think!Creative’s Blackpool-based designers, they start exploring ways of pushing the boundaries of your creative design. They work to understand the concept and the thinking behind it. And every project is met with the same enthusiasm whether it’s large or small.</p>'
 overriding_hero_image: heros/geo/Geo-Creative-Design-Hero-2732x1536.jpg
 overriding_content: |-
@@ -21,4 +21,6 @@ seo:
   title: 'Creative Design Agency In Blackpool'
   description: 'Have a creative design project in the Blackpool? Challenge Think!Creative’s creative design experts. Call us on 01253 297900.'
 overriding_video_choice: Image
+core: activations
+services_filter: campaigns
 ---

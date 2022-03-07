@@ -3,7 +3,7 @@ id: b357a804-fadd-4f2a-818a-e098f24169f1
 blueprint: case_study
 title: 'NAP - RBSL Challenger 2 Infographic'
 video_choice: Image
-hero_image: work/experience/rbsl-challenger-2-infographic/RBSL-Challenger-Infographic-52-Activations-Full-Image-1360x768.5.jpg
+hero_image: work/experience/rbsl-challenger-2-infographic/RBSL-Challenger-Infographic-52-Activations-Full-Image-2732x1536.jpg
 secondary_image: work/experience/rbsl-challenger-2-infographic/RBSL-Challenger-Infographic-52-Activations-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -40,5 +40,5 @@ services_filter:
   - digital-design
   - illustration
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1643384440
+updated_at: 1646412081
 ---

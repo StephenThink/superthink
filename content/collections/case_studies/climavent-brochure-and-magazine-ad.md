@@ -6,8 +6,8 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1640274376
-hero_image: work/experience/climavent-brochure-and-magazine-ad/Climavent-23-Experience-Full-Image-1360x768.5.jpg
+updated_at: 1646412432
+hero_image: work/experience/climavent-brochure-and-magazine-ad/Climavent-23-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/climavent-brochure-and-magazine-ad/Climavent-23-Experience-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -21,6 +21,7 @@ main_content:
           We then took that colourful approach and applied it to print ads, websites and brochures. Now their marketing stands out a million miles from all the other brands in their market. 
         image: work/experience/climavent-brochure-and-magazine-ad/Climavent-23-Experience-Large-927x522.jpg
         video_choice: Image
+        custom_header: ' '
   -
     type: set
     attrs:

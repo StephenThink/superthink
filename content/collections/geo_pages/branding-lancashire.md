@@ -26,10 +26,12 @@ overriding_content: |-
 
   [Talk to us now about your Lancashire branding project.](/contact)
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646150367
+updated_at: 1646422088
 seo:
   title: 'Branding Agency in Lancashire'
   description: 'Brand refresh or totally new brand? Think!Creative’s Lancashire Branding experts can help whatever stage your Brand is at. Call us on 01253 297900.'
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Branding-Hero-2732x1536.jpg
+core: brand
+services_filter: brand-identity
 ---
