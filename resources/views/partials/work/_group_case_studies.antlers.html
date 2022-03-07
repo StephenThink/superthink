@@ -23,6 +23,7 @@
                 </div> #}}
             {{ else }}
                 {{ results }}
+
                     <div class="swiper-slide">
                         <a href="{{ url }}" class="">
                             <div class="">
@@ -61,9 +62,10 @@
 
 {{# Desktop View #}}
 <div class="hidden land:block md:block w-full">
-    {{ entries  limit="3" sort="date:asc" as="results" }}
+    {{ entries edit_url:contains="case_studies"  limit="3" sort="date:asc" as="results" }}
     
         {{ if entries_count >= customising:case_studies_limit }}
+        {{ entries_count | dump }}
         <div class="flex items-end justify-between">
             <h2 class="text-2xl font-black font-base">{{ header }}  {{ if customising:show_case_studies_count }}<sup class="superscript">{{entries_count}}</sup>{{ /if }}</h2>
             {{ if ! no_results }}

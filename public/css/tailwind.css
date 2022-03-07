@@ -3676,6 +3676,11 @@ sup {
 
 @media (min-width: 540px) {
 
+  .sm\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .sm\:block {
     display: block;
   }
