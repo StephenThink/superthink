@@ -33,7 +33,7 @@ main_content:
     type: paragraph
 services_filter:
   - digital-design
-  - digital-and-ux-design
+  - web-development
 short_case: false
 video_choice: Image
 ---

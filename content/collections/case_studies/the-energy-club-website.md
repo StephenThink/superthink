@@ -36,7 +36,7 @@ services_filter:
   - illustration
   - film-and-animation
   - digital-design
-  - digital-and-ux-design
+  - web-development
 thumbnail: work/brand/the-energy-club-website/TheEnergyClub-8-Brand-Full-Image-2732x1536.jpg
 short_case: false
 short_para_title: 'Old Content'

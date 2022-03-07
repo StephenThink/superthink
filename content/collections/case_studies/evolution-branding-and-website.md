@@ -41,5 +41,5 @@ services_filter:
   - digital-design
   - display
   - branded-spaces
-  - digital-and-ux-design
+  - web-development
 ---

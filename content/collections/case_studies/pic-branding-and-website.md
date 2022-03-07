@@ -43,7 +43,7 @@ main_content:
 services_filter:
   - brand-identity
   - digital-design
-  - digital-and-ux-design
+  - web-development
 short_case: false
 video_choice: Image
 ---

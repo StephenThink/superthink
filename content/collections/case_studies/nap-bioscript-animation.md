@@ -33,7 +33,7 @@ core:
 services_filter:
   - digital-design
   - film-and-animation
-  - digital-and-ux-design
+  - web-development
   - display
   - illustration
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10

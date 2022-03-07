@@ -29,5 +29,5 @@ seo:
 overriding_video_choice: Image
 overriding_hero_image: heros/geo/Geo-Web-Hero-2732x1536.jpg
 core: activations
-services_filter: digital-and-ux-design
+services_filter: web-development
 ---

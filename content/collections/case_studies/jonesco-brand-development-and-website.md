@@ -66,7 +66,7 @@ services_filter:
   - digital-design
   - illustration
   - packaging-design
-  - digital-and-ux-design
+  - web-development
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
 updated_at: 1646421640
 mini_introduction: 'In a way creating a brand from scratch is easy. But finding the best way for a brand to modernise a rich and successful heritage is much trickier. And that''s the  challenge our friends at Jonesco came to us with. They needed to create a brand foundation that would let them build a more distinctive offer in a world of lookalike products and competitors. But crucially they needed us to do that while maintaining their heritage in a modern way.'
