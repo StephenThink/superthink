@@ -1,6 +1,6 @@
 {{# Mobile View #}}
 <div class="md:hidden w-full">
-    {{ entries sort="date:asc" as="results" }}
+    {{ entries sort="random" as="results" }}
     
         {{ if entries_count >= customising:case_studies_limit }}
         <div class="flex items-end justify-between {{ if !first }}mt-8{{ /if }}">

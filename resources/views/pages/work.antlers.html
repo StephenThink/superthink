@@ -50,7 +50,7 @@
                                 >   
                                     <div class="hover-button image">
                                         <span class="relative inline-block">
-                                            <img src="{{ !thumbnail ? hero_image : thumbnail }}" alt="" >
+                                            <img src="{{ !thumbnail ? hero_image : thumbnail }}" class="aspect-auto" alt="" >
                                         </span>
                                     </div>
                                     <h2 class="mt-4 text-2xl font-bold">{{ title }}</h2>
@@ -104,7 +104,7 @@
                     <!-- query_scope="group_case_studies" -->
                     
                     {{ taxonomy:services_filter }}
-                        {{ partial:partials/work/group_case_studies :header="title" :slug="slug" }}                
+                        {{ partial:partials/work/group_case_studies :header="title" :slug="slug"}}                
                     {{ /taxonomy:services_filter  }}
 
 

@@ -2066,6 +2066,11 @@ sup {
   margin-right: -1rem;
 }
 
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .-mx-2 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
@@ -2084,11 +2089,6 @@ sup {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 .mt-4 {
@@ -2267,10 +2267,6 @@ sup {
   margin-right: -6rem;
 }
 
-.mb-0 {
-  margin-bottom: 0px;
-}
-
 .block {
   display: block;
 }
@@ -2297,18 +2293,6 @@ sup {
 
 .hidden {
   display: none;
-}
-
-.aspect-1 {
-  aspect-ratio: 1;
-}
-
-.aspect-\[3\/4\] {
-  aspect-ratio: 3 / 4;
-}
-
-.aspect-\[16\/9\] {
-  aspect-ratio: 16 / 9;
 }
 
 .h-full {
@@ -3136,12 +3120,8 @@ sup {
   padding-bottom: 9rem;
 }
 
-.pb-2\/3 {
-  padding-bottom: 66.666667%;
-}
-
-.pb-1\/2 {
-  padding-bottom: 50%;
+.\!pb-0 {
+  padding-bottom: 0px !important;
 }
 
 .pt-2 {
@@ -3154,6 +3134,10 @@ sup {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pb-2\/3 {
+  padding-bottom: 66.666667%;
 }
 
 .pb-screen {
@@ -3208,16 +3192,16 @@ sup {
   padding-bottom: 6rem;
 }
 
+.pb-1\/2 {
+  padding-bottom: 50%;
+}
+
 .pl-3 {
   padding-left: 0.75rem;
 }
 
 .pb-2 {
   padding-bottom: 0.5rem;
-}
-
-.\!pb-0 {
-  padding-bottom: 0px !important;
 }
 
 .text-center {
@@ -3895,10 +3879,6 @@ sup {
     height: 100%;
   }
 
-  .md\:h-\[75vh\] {
-    height: 75vh;
-  }
-
   .md\:max-h-auto {
     max-height: auto;
   }
@@ -3963,8 +3943,8 @@ sup {
     width: 8.333333%;
   }
 
-  .md\:w-\[740px\] {
-    width: 740px;
+  .md\:w-\[720px\] {
+    width: 720px;
   }
 
   .md\:w-3\/12 {
@@ -3985,10 +3965,6 @@ sup {
 
   .md\:w-handle {
     width: 5rem;
-  }
-
-  .md\:w-\[720px\] {
-    width: 720px;
   }
 
   .md\:flex-grow-0 {
@@ -4056,10 +4032,6 @@ sup {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-  }
-
-  .md\:bg-cover {
-    background-size: cover;
   }
 
   .md\:p-12 {
@@ -4372,10 +4344,6 @@ sup {
 
   .land\:w-36 {
     width: 9rem;
-  }
-
-  .land\:w-\[416px\] {
-    width: 416px;
   }
 
   .land\:flex-col {
