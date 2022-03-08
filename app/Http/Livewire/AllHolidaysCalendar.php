@@ -10,6 +10,9 @@ use Asantibanez\LivewireCalendar\LivewireCalendar;
 
 class AllHolidaysCalendar extends LivewireCalendar
 {
+
+
+
     public function events(): Collection
     {
         return Holiday::where('authorised', 1)
@@ -24,5 +27,10 @@ class AllHolidaysCalendar extends LivewireCalendar
                         'date' => $hol->start,
                     ];
                 });
+    }
+
+    public function onEventDropped($eventId, $year, $month, $day)
+    {
+
     }
 }

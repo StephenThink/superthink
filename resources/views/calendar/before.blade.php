@@ -1,6 +1,6 @@
 <div class="p-2">
     <div class="flex justify-between">
-        <h2 class="text-2xl">{{ $this->startsAt->format('M Y') }}</h2>
+        <h2 class="text-2xl">{{ $this->startsAt->format('F Y') }}</h2>
 
 <div class="inline-flex rounded-md shadow-sm" role="group">
     <button wire:click="goToPreviousMonth" type="button" class="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-header-dark rounded-l-lg border border-gray-200 hover:text-yellow focus:z-10 focus:ring-2 focus:ring-yellow focus:text-yellow">
