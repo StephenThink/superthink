@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\admin;
 
-use App\Models\Role;
+use App\Models\UserPermission;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Route;
 
-class Roles extends Component
+class UserPermissions extends Component
 {
     use WithPagination;
 
@@ -16,13 +17,14 @@ class Roles extends Component
 
     public $perPage = 10;
     public $search = '';
-    public $orderBy = 'name';
+    public $orderBy = 'role';
     public $orderAsc = true;
 
     /**
      * Put your custom public properties here!
      */
-    public $name;
+    public $role;
+    public $routeName;
 
     /**
      * The validation rules
@@ -32,7 +34,8 @@ class Roles extends Component
     public function rules()
     {
         return [
-            'name' => 'required',
+            'role' => 'required',
+            'routeName' => 'required',
         ];
     }
 
@@ -44,9 +47,10 @@ class Roles extends Component
      */
     public function loadModel()
     {
-        $data = Role::find($this->modelId);
+        $data = UserPermission::find($this->modelId);
         // Assign the variables here
-        $this->name = $data->name;
+        $this->role = $data->role;
+        $this->routeName = $data->route_name;
     }
 
     /**
@@ -58,7 +62,8 @@ class Roles extends Component
     public function modelData()
     {
         return [
-            'name' => $this->name,
+            'role' => $this->role,
+            'route_name' => $this->routeName,
         ];
     }
 
@@ -70,7 +75,7 @@ class Roles extends Component
     public function create()
     {
         $this->validate();
-        Role::create($this->modelData());
+        UserPermission::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
     }
@@ -82,7 +87,7 @@ class Roles extends Component
      */
     public function read()
     {
-        return Role::search($this->search)
+        return UserPermission::search($this->search)
         ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
         ->paginate($this->perPage);
     }
@@ -95,7 +100,7 @@ class Roles extends Component
     public function update()
     {
         $this->validate();
-        Role::find($this->modelId)->update($this->modelData());
+        UserPermission::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -106,7 +111,7 @@ class Roles extends Component
      */
     public function delete()
     {
-        Role::destroy($this->modelId);
+        UserPermission::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -153,7 +158,8 @@ class Roles extends Component
 
     public function render()
     {
-        return view('livewire.roles', [
+
+        return view('livewire.admin.user-permissions', [
             'data' => $this->read(),
         ]);
     }

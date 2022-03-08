@@ -8,7 +8,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                @livewire('messages')
+                @livewire('messages.messages')
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                @livewire('current-user-holidays')
+                @livewire('staff.current-user-holidays')
             </div>
         </div>
     </div>

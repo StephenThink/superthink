@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\messages;
 
 use App\Models\User;
 use App\Models\Holiday;
@@ -85,7 +85,7 @@ public function readMessage($id)
 
     public function render()
     {
-        return view('livewire.messages', [
+        return view('livewire.messages.messages', [
             'data' => $this->read(),
         ]);
     }

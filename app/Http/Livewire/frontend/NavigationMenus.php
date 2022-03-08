@@ -1,29 +1,28 @@
 <?php
 
-namespace App\Http\Livewire;
-
-use App\Models\Client;
+namespace App\Http\Livewire\frontend;
+use Illuminate\Support\Str;
+use App\Models\NavigationMenu;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class Clients extends Component
+class NavigationMenus extends Component
 {
     use WithPagination;
 
     public $modalFormVisible;
     public $modalConfirmDeleteVisible;
+
     public $modelId;
+    public $label;
+    public $slug;
+    public $sequence = 1;
+    public $type = 'SidebarNav';
 
     public $perPage = 10;
     public $search = '';
-    public $orderBy = 'title';
+    public $orderBy = 'type';
     public $orderAsc = true;
-
-
-    /**
-     * Put your custom public properties here!
-     */
-    public $title;
 
     /**
      * The validation rules
@@ -33,7 +32,10 @@ class Clients extends Component
     public function rules()
     {
         return [
-            'title' => 'required',
+            'label' => 'required',
+            'slug' => 'required',
+            'sequence' => 'required',
+            'type' => 'required',
         ];
     }
 
@@ -45,9 +47,11 @@ class Clients extends Component
      */
     public function loadModel()
     {
-        $data = Client::find($this->modelId);
-        // Assign the variables here
-        $this->title = $data->title;
+        $data = NavigationMenu::find($this->modelId);
+        $this->label = $data->label;
+        $this->slug = $data->slug;
+        $this->type = $data->type;
+        $this->sequence = $data->sequence;
     }
 
     /**
@@ -59,7 +63,10 @@ class Clients extends Component
     public function modelData()
     {
         return [
-            'title' => $this->title,
+            'label' => $this->label,
+            'slug' => $this->slug,
+            'sequence' => $this->sequence,
+            'type' => $this->type,
         ];
     }
 
@@ -71,7 +78,7 @@ class Clients extends Component
     public function create()
     {
         $this->validate();
-        Client::create($this->modelData());
+        NavigationMenu::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
     }
@@ -83,7 +90,7 @@ class Clients extends Component
      */
     public function read()
     {
-        return Client::search($this->search)
+        return NavigationMenu::search($this->search)
         ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
         ->paginate($this->perPage);
     }
@@ -96,7 +103,7 @@ class Clients extends Component
     public function update()
     {
         $this->validate();
-        Client::find($this->modelId)->update($this->modelData());
+        NavigationMenu::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -107,7 +114,7 @@ class Clients extends Component
      */
     public function delete()
     {
-        Client::destroy($this->modelId);
+        NavigationMenu::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -152,15 +159,9 @@ class Clients extends Component
         $this->modalConfirmDeleteVisible = true;
     }
 
-    public function eventShow($id)
-    {
-
-        return redirect()->route('client-profile', $id);
-    }
-
     public function render()
     {
-        return view('livewire.clients', [
+        return view('livewire.frontend.navigation-menus', [
             'data' => $this->read(),
         ]);
     }

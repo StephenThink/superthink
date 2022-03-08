@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\vault;
 
-use App\Models\UserPermission;
+use App\Models\Vault;
+use App\Models\Client;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Illuminate\Support\Facades\Route;
 
-class UserPermissions extends Component
+
+class Vaults extends Component
 {
     use WithPagination;
 
@@ -17,14 +18,18 @@ class UserPermissions extends Component
 
     public $perPage = 10;
     public $search = '';
-    public $orderBy = 'role';
+    public $orderBy = 'client_id';
     public $orderAsc = true;
 
     /**
      * Put your custom public properties here!
      */
-    public $role;
-    public $routeName;
+    public $client_id;
+    public $title;
+    public $password;
+    public $login;
+    public $url;
+    public $description;
 
     /**
      * The validation rules
@@ -34,8 +39,10 @@ class UserPermissions extends Component
     public function rules()
     {
         return [
-            'role' => 'required',
-            'routeName' => 'required',
+            'client_id' => 'required',
+            'title' => 'required',
+            'password' => 'required|min:6',
+            'url' => 'url',
         ];
     }
 
@@ -47,10 +54,16 @@ class UserPermissions extends Component
      */
     public function loadModel()
     {
-        $data = UserPermission::find($this->modelId);
+
+
+        $data = Vault::find($this->modelId);
         // Assign the variables here
-        $this->role = $data->role;
-        $this->routeName = $data->route_name;
+        $this->client_id = $data->client_id;
+        $this->title = $data->title;
+        $this->password = $data->password;
+        $this->login = $data->login;
+        $this->url = $data->url;
+        $this->description = $data->description;
     }
 
     /**
@@ -62,8 +75,12 @@ class UserPermissions extends Component
     public function modelData()
     {
         return [
-            'role' => $this->role,
-            'route_name' => $this->routeName,
+            'client_id' => $this->client_id,
+            'title' => $this->title,
+            'password' => encrypt($this->password),
+            'login' => $this->login,
+            'url' => $this->url,
+            'description' => $this->description,
         ];
     }
 
@@ -75,7 +92,7 @@ class UserPermissions extends Component
     public function create()
     {
         $this->validate();
-        UserPermission::create($this->modelData());
+        Vault::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
     }
@@ -87,7 +104,7 @@ class UserPermissions extends Component
      */
     public function read()
     {
-        return UserPermission::search($this->search)
+        return Vault::search($this->search)
         ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
         ->paginate($this->perPage);
     }
@@ -100,7 +117,7 @@ class UserPermissions extends Component
     public function update()
     {
         $this->validate();
-        UserPermission::find($this->modelId)->update($this->modelData());
+        Vault::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -111,7 +128,7 @@ class UserPermissions extends Component
      */
     public function delete()
     {
-        UserPermission::destroy($this->modelId);
+        Vault::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -158,9 +175,12 @@ class UserPermissions extends Component
 
     public function render()
     {
+        $clients = Client::all();
 
-        return view('livewire.user-permissions', [
+        return view('livewire.vaults.vaults', [
             'data' => $this->read(),
+            'clients' => $clients,
         ]);
     }
+
 }

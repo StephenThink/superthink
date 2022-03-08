@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\admin;
 
 use App\Models\Role;
 use App\Models\User;
@@ -255,9 +255,7 @@ public function workDayModelData()
 
     public function render()
     {
-
-
-        return view('livewire.users', [
+        return view('livewire.admin.users', [
             'data' => $this->read(),
         ]);
     }

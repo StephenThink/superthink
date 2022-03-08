@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\admin;
 
-use App\Models\Vault;
-use App\Models\Client;
+use App\Models\Role;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-
-class ClientProfile extends Component
+class Roles extends Component
 {
     use WithPagination;
 
@@ -18,23 +16,15 @@ class ClientProfile extends Component
 
     public $perPage = 10;
     public $search = '';
-    public $orderBy = 'client_id';
+    public $orderBy = 'name';
     public $orderAsc = true;
 
     /**
      * Put your custom public properties here!
      */
-    public $client_id;
-    public $title;
-    public $password;
-    public $login;
-    public $url;
-    public $description;
+    public $name;
 
-    public $client;
-    public $vaults;
-
-     /**
+    /**
      * The validation rules
      *
      * @return void
@@ -42,18 +32,8 @@ class ClientProfile extends Component
     public function rules()
     {
         return [
-            'client_id' => 'required',
-            'title' => 'required',
-            'password' => 'required|min:6',
-            'url' => 'url',
-
+            'name' => 'required',
         ];
-    }
-
-    public function mount($id)
-    {
-        $this->client = Client::find($id);
-        $this->vaults = Vault::where('client_id', $this->client->id)->get();
     }
 
     /**
@@ -64,14 +44,9 @@ class ClientProfile extends Component
      */
     public function loadModel()
     {
-        $data = Vault::find($this->modelId);
+        $data = Role::find($this->modelId);
         // Assign the variables here
-        $this->client_id = $data->client_id;
-        $this->title = $data->title;
-        $this->password = $data->password;
-        $this->login = $data->login;
-        $this->url = $data->url;
-        $this->description = $data->description;
+        $this->name = $data->name;
     }
 
     /**
@@ -83,12 +58,7 @@ class ClientProfile extends Component
     public function modelData()
     {
         return [
-            'client_id' => $this->client_id,
-            'title' => $this->title,
-            'password' => encrypt($this->password),
-            'login' => $this->login,
-            'url' => $this->url,
-            'description' => $this->description,
+            'name' => $this->name,
         ];
     }
 
@@ -99,14 +69,25 @@ class ClientProfile extends Component
      */
     public function create()
     {
-
         $this->validate();
-        Vault::create($this->modelData());
+        Role::create($this->modelData());
         $this->modalFormVisible = false;
-        // $this->reset();
+        $this->reset();
     }
 
-/**
+    /**
+     * The read function.
+     *
+     * @return void
+     */
+    public function read()
+    {
+        return Role::search($this->search)
+        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+        ->paginate($this->perPage);
+    }
+
+    /**
      * The update function
      *
      * @return void
@@ -114,7 +95,7 @@ class ClientProfile extends Component
     public function update()
     {
         $this->validate();
-        Vault::find($this->modelId)->update($this->modelData());
+        Role::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -125,7 +106,7 @@ class ClientProfile extends Component
      */
     public function delete()
     {
-        Vault::destroy($this->modelId);
+        Role::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -135,11 +116,10 @@ class ClientProfile extends Component
      *
      * @return void
      */
-    public function createShowModal($id)
+    public function createShowModal()
     {
         $this->resetValidation();
-        $this->client_id = $id;
-        // $this->reset();
+        $this->reset();
         $this->modalFormVisible = true;
     }
 
@@ -153,7 +133,7 @@ class ClientProfile extends Component
     public function updateShowModal($id)
     {
         $this->resetValidation();
-        // $this->reset();
+        $this->reset();
         $this->modalFormVisible = true;
         $this->modelId = $id;
         $this->loadModel();
@@ -173,12 +153,8 @@ class ClientProfile extends Component
 
     public function render()
     {
-
-
-        return view('livewire.client-profile', [
-            'client' => $this->client,
-            'data' => $this->vaults,
-            'clients' => Client::all(),
+        return view('livewire.admin.roles', [
+            'data' => $this->read(),
         ]);
     }
 }

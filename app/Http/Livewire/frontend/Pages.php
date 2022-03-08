@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\frontend;
 
 use App\Models\Page;
 
@@ -239,7 +239,7 @@ class Pages extends Component
      */
     public function render()
     {
-        return view('livewire.pages', [
+        return view('livewire.frontend.pages', [
             'data' => $this->read(),
         ]);
     }

@@ -11,7 +11,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                @livewire('client-profile', ['id' => $id])
+                @livewire('clients.profile', ['id' => $id])
             </div>
         </div>
     </div>

@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\clients;
 
+use App\Models\Vault;
 use App\Models\Client;
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\ClientContact;
 
-class ClientContacts extends Component
+
+class Profile extends Component
 {
     use WithPagination;
 
@@ -15,19 +16,25 @@ class ClientContacts extends Component
     public $modalConfirmDeleteVisible;
     public $modelId;
 
+    public $perPage = 10;
+    public $search = '';
+    public $orderBy = 'client_id';
+    public $orderAsc = true;
 
     /**
      * Put your custom public properties here!
      */
     public $client_id;
-    public $staff_name;
-    public $staff_position;
-    public $staff_number;
-    public $staff_email;
-    public $staff_notes;
+    public $title;
+    public $password;
+    public $login;
+    public $url;
+    public $description;
 
+    public $client;
+    public $vaults;
 
-    /**
+     /**
      * The validation rules
      *
      * @return void
@@ -36,12 +43,17 @@ class ClientContacts extends Component
     {
         return [
             'client_id' => 'required',
-            'staff_name' => 'required',
-            'staff_position' => 'required',
-            'staff_number' => 'required',
-            'staff_email' => 'email',
+            'title' => 'required',
+            'password' => 'required|min:6',
+            'url' => 'url',
 
         ];
+    }
+
+    public function mount($id)
+    {
+        $this->client = Client::find($id);
+        $this->vaults = Vault::where('client_id', $this->client->id)->get();
     }
 
     /**
@@ -52,14 +64,14 @@ class ClientContacts extends Component
      */
     public function loadModel()
     {
-        $data = ClientContact::find($this->modelId);
+        $data = Vault::find($this->modelId);
         // Assign the variables here
         $this->client_id = $data->client_id;
-        $this->staff_name = $data->staff_name;
-        $this->staff_position = $data->staff_position;
-        $this->staff_number = $data->staff_number;
-        $this->staff_email = $data->staff_email;
-        $this->staff_notes = $data->staff_notes;
+        $this->title = $data->title;
+        $this->password = $data->password;
+        $this->login = $data->login;
+        $this->url = $data->url;
+        $this->description = $data->description;
     }
 
     /**
@@ -72,11 +84,11 @@ class ClientContacts extends Component
     {
         return [
             'client_id' => $this->client_id,
-            'staff_name' => $this->staff_name,
-            'staff_position' => $this->staff_position,
-            'staff_number' => $this->staff_number,
-            'staff_email' => $this->staff_email,
-            'staff_notes' => $this->staff_notes
+            'title' => $this->title,
+            'password' => encrypt($this->password),
+            'login' => $this->login,
+            'url' => $this->url,
+            'description' => $this->description,
         ];
     }
 
@@ -87,23 +99,14 @@ class ClientContacts extends Component
      */
     public function create()
     {
+
         $this->validate();
-        ClientContact::create($this->modelData());
+        Vault::create($this->modelData());
         $this->modalFormVisible = false;
-        $this->reset();
+        // $this->reset();
     }
 
-    /**
-     * The read function.
-     *
-     * @return void
-     */
-    public function read()
-    {
-        return ClientContact::paginate(5);
-    }
-
-    /**
+/**
      * The update function
      *
      * @return void
@@ -111,7 +114,7 @@ class ClientContacts extends Component
     public function update()
     {
         $this->validate();
-        ClientContact::find($this->modelId)->update($this->modelData());
+        Vault::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -122,7 +125,7 @@ class ClientContacts extends Component
      */
     public function delete()
     {
-        ClientContact::destroy($this->modelId);
+        Vault::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -132,10 +135,11 @@ class ClientContacts extends Component
      *
      * @return void
      */
-    public function createShowModal()
+    public function createShowModal($id)
     {
         $this->resetValidation();
-        $this->reset();
+        $this->client_id = $id;
+        // $this->reset();
         $this->modalFormVisible = true;
     }
 
@@ -149,7 +153,7 @@ class ClientContacts extends Component
     public function updateShowModal($id)
     {
         $this->resetValidation();
-        $this->reset();
+        // $this->reset();
         $this->modalFormVisible = true;
         $this->modelId = $id;
         $this->loadModel();
@@ -169,9 +173,12 @@ class ClientContacts extends Component
 
     public function render()
     {
-        return view('livewire.client-contacts', [
-            'data' => $this->read(),
-            'clients' => Client::all()
+
+
+        return view('livewire.clients.profile', [
+            'client' => $this->client,
+            'data' => $this->vaults,
+            'clients' => Client::all(),
         ]);
     }
 }

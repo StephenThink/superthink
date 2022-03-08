@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\clients;
 
-use App\Models\Vault;
 use App\Models\Client;
 use Livewire\Component;
 use Livewire\WithPagination;
+use App\Models\ClientContact;
 
-
-class Vaults extends Component
+class Contacts extends Component
 {
     use WithPagination;
 
@@ -16,20 +15,17 @@ class Vaults extends Component
     public $modalConfirmDeleteVisible;
     public $modelId;
 
-    public $perPage = 10;
-    public $search = '';
-    public $orderBy = 'client_id';
-    public $orderAsc = true;
 
     /**
      * Put your custom public properties here!
      */
     public $client_id;
-    public $title;
-    public $password;
-    public $login;
-    public $url;
-    public $description;
+    public $staff_name;
+    public $staff_position;
+    public $staff_number;
+    public $staff_email;
+    public $staff_notes;
+
 
     /**
      * The validation rules
@@ -40,9 +36,11 @@ class Vaults extends Component
     {
         return [
             'client_id' => 'required',
-            'title' => 'required',
-            'password' => 'required|min:6',
-            'url' => 'url',
+            'staff_name' => 'required',
+            'staff_position' => 'required',
+            'staff_number' => 'required',
+            'staff_email' => 'email',
+
         ];
     }
 
@@ -54,16 +52,14 @@ class Vaults extends Component
      */
     public function loadModel()
     {
-
-
-        $data = Vault::find($this->modelId);
+        $data = ClientContact::find($this->modelId);
         // Assign the variables here
         $this->client_id = $data->client_id;
-        $this->title = $data->title;
-        $this->password = $data->password;
-        $this->login = $data->login;
-        $this->url = $data->url;
-        $this->description = $data->description;
+        $this->staff_name = $data->staff_name;
+        $this->staff_position = $data->staff_position;
+        $this->staff_number = $data->staff_number;
+        $this->staff_email = $data->staff_email;
+        $this->staff_notes = $data->staff_notes;
     }
 
     /**
@@ -76,11 +72,11 @@ class Vaults extends Component
     {
         return [
             'client_id' => $this->client_id,
-            'title' => $this->title,
-            'password' => encrypt($this->password),
-            'login' => $this->login,
-            'url' => $this->url,
-            'description' => $this->description,
+            'staff_name' => $this->staff_name,
+            'staff_position' => $this->staff_position,
+            'staff_number' => $this->staff_number,
+            'staff_email' => $this->staff_email,
+            'staff_notes' => $this->staff_notes
         ];
     }
 
@@ -92,7 +88,7 @@ class Vaults extends Component
     public function create()
     {
         $this->validate();
-        Vault::create($this->modelData());
+        ClientContact::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
     }
@@ -104,9 +100,7 @@ class Vaults extends Component
      */
     public function read()
     {
-        return Vault::search($this->search)
-        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-        ->paginate($this->perPage);
+        return ClientContact::paginate(5);
     }
 
     /**
@@ -117,7 +111,7 @@ class Vaults extends Component
     public function update()
     {
         $this->validate();
-        Vault::find($this->modelId)->update($this->modelData());
+        ClientContact::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
     }
 
@@ -128,7 +122,7 @@ class Vaults extends Component
      */
     public function delete()
     {
-        Vault::destroy($this->modelId);
+        ClientContact::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -175,12 +169,9 @@ class Vaults extends Component
 
     public function render()
     {
-        $clients = Client::all();
-
-        return view('livewire.vaults', [
+        return view('livewire.clients.contacts', [
             'data' => $this->read(),
-            'clients' => $clients,
+            'clients' => Client::all()
         ]);
     }
-
 }

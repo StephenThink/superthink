@@ -8,7 +8,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                @livewire('roles')
+                @livewire('admin.roles')
             </div>
         </div>
     </div>

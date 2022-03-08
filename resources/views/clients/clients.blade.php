@@ -8,7 +8,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                @livewire('clients')
+                @livewire('clients.clients')
             </div>
         </div>
     </div>

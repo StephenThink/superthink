@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\holidays;
 
 use Carbon\Carbon;
 use App\Models\User;
@@ -292,7 +292,7 @@ class Holidays extends Component
     {
         $staffNames = User::all();
 
-        return view('livewire.holidays', [
+        return view('livewire.holidays.holidays', [
             'data' => $this->read(),
             'staffMembers' => $staffNames
         ]);

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\staff;
 
 use App\Models\User;
 use App\Models\WorkingDay;
@@ -210,7 +210,7 @@ class WorkingDays extends Component
         // Only show Staff members that are not allocated
         $staffMembersNotAllocated = User::whereNotIn('id', $notAllocated)->get();
 
-        return view('livewire.working-days', [
+        return view('livewire.staff.working-days', [
             'data' => $this->read(),
             'staffmembers' => $staffMembersNotAllocated,
         ]);

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\staff;
 
 use Carbon\Carbon;
 use Carbon\CarbonPeriod;
@@ -315,7 +315,7 @@ class CurrentUserHolidays extends Component
 
     public function render()
     {
-        return view('livewire.current-user-holidays',
+        return view('livewire.staff.current-user-holidays',
         [
             'holidays' => $this->read(),
         ]);
