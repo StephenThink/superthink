@@ -26,6 +26,7 @@
         <div class="content-block">
             <div class="content-inner">
                 <livewire:all-holidays-calendar
+                    drag-and-drop-enabled="true"
                     week-starts-at="1"
                     before-calendar-view="calendar/before"
                     />
