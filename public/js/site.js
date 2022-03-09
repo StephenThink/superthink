@@ -3494,7 +3494,7 @@ var hits = document.querySelector('.section-hits');
 var hitsHeight = 0; // console.log(hits.offsetHeight);
 
 if (hits) {
-  hitsHeight = hits.offsetHeight + 162;
+  hitsHeight = hits.offsetHeight;
 } // console.info(hitsHeight);
 
 
