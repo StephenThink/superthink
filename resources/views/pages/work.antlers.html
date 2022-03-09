@@ -64,34 +64,11 @@
             </div>
         </div>
 
-        {{ partial:partials/global/cta}}
+       
 
-            <div class="py-12 bg-light dark:bg-dark">
-                {{# <div class="container">
-                    <div class="grid grid-cols-1 -mx-4 grid-gap-4 md:grid-cols-2">
-                        {{ collection:case_studies limit="4" offset="4" greatest_hits:is="true" }}
-                            
-                            {{ if no_results}}
-                            {{ else }}
-                                <a href="{{ url }}">
-                                    <div class="w-full p-4 md:w-1/2 filter-item" 
-                                        data-terms="{{ core-services }}{{ title | lower }}{{if !last }}|{{ /if }}{{ /core-services }}"
-                                    >
-                                        <div class="hover-button image">
-                                            <span class="relative inline-block">
-                                                <img src="{{ !thumbnail ? hero_image : thumbnail }}" alt="" >
-                                            </span>
-                                        </div>
-                                        <h2 class="mt-4 text-2xl font-bold">{{ title }}</h2>
-                                        <p class="">{{ tagline }}</p>
-                                    </div>
-                                </a>
-                            {{ /if }}
-                        
-                        {{ /collection:case_studies }}
-                    </div>
-                </div> #}}
-            </div>
+
+
+
     </section>
 
     <section class="absolute w-full transition section section-services flex-100">
@@ -113,11 +90,13 @@
                 </div>
             </div>
         </div>
+
+        
     </section>
 </div>
-<script src="/js/swiper.js"></script>
-  <script>
-    
+{{ partial:partials/global/cta}}
+{{ partial:partials/footer/awards_list }}
 
-  </script>
+<script src="/js/swiper.js" defer></script>
+
 
