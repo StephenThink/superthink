@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\clients;
 
 use App\Models\Client;
 use App\Models\ClientContact;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class ClientProfileContacts extends Component
+class ProfileContacts extends Component
 {
     use WithPagination;
 
@@ -168,7 +168,7 @@ public function mount($id)
 
     public function render()
     {
-        return view('livewire.client-profile-contacts', [
+        return view('livewire.clients.profile-contacts', [
             'data' => $this->contacts,
         ]);
     }

@@ -3,7 +3,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                @livewire('client-profile-contacts', ['id' => $id])
+                @livewire('clients.profile-contacts', ['id' => $id])
             </div>
         </div>
     </div>

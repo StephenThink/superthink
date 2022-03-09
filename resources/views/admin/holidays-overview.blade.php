@@ -8,7 +8,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                @livewire('just-holidays')
+                @livewire('holidays.just-holidays')
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                @livewire('holiday-overview')
+                @livewire('holidays.overview')
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
     <div class="content-outer hidden xl:block">
         <div class="content-block">
             <div class="content-inner">
-                <livewire:all-holidays-calendar
+                <livewire:calendars.all-holidays-calendar
                     drag-and-drop-enabled="true"
                     week-starts-at="1"
                     before-calendar-view="calendar/before"

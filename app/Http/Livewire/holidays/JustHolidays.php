@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\holidays;
 
 use App\Models\User;
 use Livewire\Component;
@@ -20,7 +20,7 @@ class JustHolidays extends Component
 
     public function render()
     {
-        return view('livewire.just-holidays', [
+        return view('livewire.holidays.just-holidays', [
             'staff' => $this->read(),
         ]);
     }

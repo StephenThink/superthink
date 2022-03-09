@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\holidays;
 
 use Carbon\Carbon;
 use Carbon\CarbonPeriod;
@@ -14,7 +14,7 @@ use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
-class HolidayOverview extends Component
+class Overview extends Component
 {
     use WithPagination;
 
@@ -389,7 +389,7 @@ class HolidayOverview extends Component
 
 
 
-        return view('livewire.holiday-overview', [
+        return view('livewire.holidays.overview', [
             'staff' => $this->read(),
             'data' => $allHolidays,
             'staffMembers' => User::all(),

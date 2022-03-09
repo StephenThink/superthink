@@ -25,7 +25,7 @@
     <div class="content-outer">
         <div class="content-block">
             <div class="content-inner">
-                <livewire:holiday-calendar
+                <livewire:calendars.holiday-calendar
                     week-starts-at="1"
                     before-calendar-view="calendar/before"
                     />
