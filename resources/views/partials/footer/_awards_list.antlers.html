@@ -3,7 +3,7 @@
     <div class="container">
         <div class="flex flex-col land:flex-col md:flex-row land:ml-20 md:ml-0">
             <div class="w-full text-3xl font-black land:w-full md:w-1/4 text-dark dark:text-yellow">
-                {{ award_title }}
+                {{ award_title ? award_title : "Award Winning" }}
             </div>
             <div class="w-full land:w-full md:w-3/4">
                 <div class="flex flex-wrap -mx-8 md:mx-0  target-filter sjinvert">
