@@ -44,7 +44,7 @@ seo:
   description: 'Whether It''s brand development, creative graphic design, powerful content, or innovative digital solutions, our team''s got it covered. Call us on: 01253 297900'
   site_name: false
 require_count: false
-award_title: Awards
+award_title: 'Award Winning'
 video_choice: Image
 below_hero: 'Your creative family'
 quote_me:
