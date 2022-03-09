@@ -41,12 +41,11 @@ greatest_hits: false
 core:
   - activations
 services_filter:
-  - brand-identity
-  - print-design
   - digital-design
   - film-and-animation
   - illustration
+  - web-development
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645533190
+updated_at: 1646671358
 video: /assets/work/experience/bp-online-cdf/BP-Online-CDF-Home-Full-Video-2.mp4
 ---

@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646421700
+updated_at: 1646673056
 hero_image: work/experience/utiligroup-website-update/Utiligroup-Website-28-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/utiligroup-website-update/Utiligroup-Website-28-Experience-Secondary-Image.jpg
 main_content:
@@ -34,6 +34,8 @@ main_content:
 services_filter:
   - digital-design
   - web-development
+  - film-and-animation
+  - illustration
 short_case: false
 video_choice: Image
 ---

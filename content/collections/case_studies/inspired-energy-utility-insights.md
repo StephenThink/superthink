@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646410680
+updated_at: 1646669179
 hero_image: work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-FullScreen-2732x1536.jpg
 secondary_image: work/campaign/inspired-energy-utility-insights/Utility-7-Campaign-Insights-Large.jpg
 main_content:
@@ -50,6 +50,8 @@ services_filter:
   - print-design
   - digital-design
   - display
+  - web-development
+  - campaigns
 video_choice: Image
 mini_introduction: 'Sub-brands are tricky to get right. Sometimes you need them to be a close cousin of your main brand and others they need to be poles apart. So when Inspired Energy came to us to develop a sub-brand - our pencils were sharp and ready to go.'
 ---

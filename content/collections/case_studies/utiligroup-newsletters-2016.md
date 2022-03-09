@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645543262
+updated_at: 1646671657
 hero_image: work/experience/utiligroup-newsletters-2016/Utiligroup-Newsletter-14-Experience-Full-Image-2732x1536.jpg
 main_content:
   -
@@ -40,6 +40,7 @@ main_content:
     type: paragraph
 services_filter:
   - print-design
+  - illustration
 short_case: false
 video_choice: Image
 secondary_image: work/experience/utiligroup-newsletters-2016/Utiligroup-Newsletter-14-Experience-Secondary-Image-896x597.jpg

@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646419147
+updated_at: 1646670403
 hero_image: work/experience/bp-commercial-development-capability/BP-CDF-27-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bp-commercial-development-capability/BP-CDF-27-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -34,9 +34,9 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - brand-identity
   - print-design
   - digital-design
+  - illustration
 video_choice: Image
 short_case: false
 ---

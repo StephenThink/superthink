@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645545046
+updated_at: 1646671708
 hero_image: work/experience/utiligroup-interior-graphics/Experience-3-Utiligroup-Interiors-Full-Image-2732x1536.jpg
 secondary_image: work/experience/utiligroup-interior-graphics/Utiligroup-interior-graphics.jpg
 main_content:

@@ -25,6 +25,7 @@ services_filter:
   - print-design
   - display
   - illustration
+  - digital-design
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645527193
+updated_at: 1646671258
 ---

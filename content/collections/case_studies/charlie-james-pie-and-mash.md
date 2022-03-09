@@ -1,12 +1,12 @@
 ---
 id: baf61092-7e62-41d3-9b01-b44cb32d6fd7
 blueprint: case_study
-title: 'mc- Charlie James Pie and Mash'
+title: 'mc- Charlie James Pie & Mash'
 greatest_hits: false
 core:
   - brand
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646405440
+updated_at: 1646669930
 hero_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/charlie-james-pie-and-mash/CharlieJames-1-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -53,6 +53,8 @@ services_filter:
   - digital-design
   - display
   - illustration
+  - copywriting
+  - branded-spaces
 mini_introduction: 'When it came to building their em<b>pie</b>re, Charlie James Pie &amp; Mash knew the perfect creative team to help.'
 short_case: false
 video_choice: Image

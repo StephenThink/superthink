@@ -1,12 +1,12 @@
 ---
 id: 60540db1-11e0-47bf-bf9c-6d9c5be86afa
 blueprint: case_study
-title: 'mc- Spinal Products Branding and Website'
+title: 'mc- Spinal Products Branding & Website'
 greatest_hits: false
 core:
   - brand
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646421663
+updated_at: 1646669794
 hero_image: work/brand/spinal-products-branding-and-website/SpinalProducts-7-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/spinal-products-branding-and-website/SpinalProducts-7-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -23,7 +23,6 @@ main_content:
     type: paragraph
 services_filter:
   - brand-identity
-  - digital-design
   - web-development
 short_case: false
 video_choice: Image

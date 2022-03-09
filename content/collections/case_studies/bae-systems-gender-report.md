@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646396882
+updated_at: 1646670371
 hero_image: work/experience/bae-systems-gender-report/44-BAE-Gender-Report-2020-Full-Image.jpg
 secondary_image: work/experience/bae-systems-gender-report/44-BAE-Gender-Report-2020-Secondary-Image.jpg
 main_content:

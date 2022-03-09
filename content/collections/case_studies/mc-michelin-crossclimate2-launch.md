@@ -59,7 +59,9 @@ services_filter:
   - print-design
   - digital-design
   - film-and-animation
+  - campaigns
+  - display
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645619179
+updated_at: 1646671910
 video: /assets/work/experience/michelin-cc2-launch/Michelin-CC2-Launch-36-Experience-Small-740x416.25-2.mp4
 ---

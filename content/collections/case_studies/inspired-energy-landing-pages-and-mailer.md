@@ -1,12 +1,12 @@
 ---
 id: e997e47e-bb0e-45f7-b085-65415675dae3
 blueprint: case_study
-title: 'NAP - Inspired Energy Landing Pages and Mailer'
+title: 'NAP - Inspired Energy Landing Pages & Mailer'
 greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646411415
+updated_at: 1646669094
 hero_image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy10.jpg
 secondary_image: work/campaign/inspired-energy-landing-pages-and-mailer/Inspired-Energy3.jpg
 main_content:
@@ -53,5 +53,9 @@ services_filter:
   - brand-identity
   - print-design
   - digital-design
+  - display
+  - illustration
+  - web-development
+  - campaigns
 video_choice: Image
 ---

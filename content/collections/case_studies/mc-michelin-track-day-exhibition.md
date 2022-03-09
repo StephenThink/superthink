@@ -40,6 +40,6 @@ services_filter:
   - display
   - branded-spaces
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645453341
+updated_at: 1646670758
 mini_introduction: 'Promotional events are the lifeblood of a brand with as many products as Michelin. To make a point, you''ve got to get your message across in a very real way. That''s why Michelin asked us to help them with an event where the CrossClimate2 tyre would be demonstrated to dealers on track.'
 ---

@@ -58,7 +58,7 @@ main_content:
     type: paragraph
 greatest_hits: false
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645549268
+updated_at: 1646671741
 core:
   - activations
 services_filter:
@@ -66,4 +66,5 @@ services_filter:
   - display
   - illustration
   - branded-spaces
+  - brand-identity
 ---

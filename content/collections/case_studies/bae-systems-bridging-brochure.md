@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646153420
+updated_at: 1646672349
 hero_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Brochure-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bae-systems-bridging-brochure/BAE-Bridging-Brochure-Secondary-Image-896x597.jpg
 main_content:

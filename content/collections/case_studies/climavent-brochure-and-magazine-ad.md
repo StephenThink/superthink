@@ -1,12 +1,12 @@
 ---
 id: 91c520e5-cbe3-47ae-b7f2-7b099f842494
 blueprint: case_study
-title: 'mc- Climavent Brochure and Magazine Ad'
+title: 'mc- Climavent Brochure & Magazine Ad'
 greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646412432
+updated_at: 1646666705
 hero_image: work/experience/climavent-brochure-and-magazine-ad/Climavent-23-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/climavent-brochure-and-magazine-ad/Climavent-23-Experience-Secondary-Image-896x597.jpg
 main_content:

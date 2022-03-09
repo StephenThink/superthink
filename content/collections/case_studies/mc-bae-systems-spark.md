@@ -4,7 +4,7 @@ blueprint: case_study
 title: 'mc- BAE Systems Spark'
 video_choice: Image
 hero_image: work/brand/bae-systems-spark/BAE-Spark-13-Brand-Hero-2732x1536.jpg
-mini_introduction: 'One of our key roles as a selected agency partner for BAE Systems is to look after their brand-and that includes how to creatively develop sub-brands. So when BAE Systems launched a new learning platform in 2021, we needed to work our magic on this dazzling new sub-brand.'
+mini_introduction: 'One of our key roles as a selected agency partner for BAE Systems is to look after their brand - and that includes how to creatively develop sub-brands. So when BAE Systems launched a new learning platform in 2021, we needed to work our magic on this dazzling new sub-brand.'
 secondary_image: work/brand/bae-systems-spark/BAE-Spark-13-Brand-Secondary-Image-896x597.jpg
 main_content:
   -
@@ -47,6 +47,8 @@ services_filter:
   - brand-identity
   - print-design
   - digital-design
+  - illustration
+  - copywriting
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646410083
+updated_at: 1646670047
 ---

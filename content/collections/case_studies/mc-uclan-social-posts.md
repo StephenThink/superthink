@@ -13,7 +13,7 @@ services_filter:
   - copywriting
   - campaigns
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646419695
+updated_at: 1646670879
 hero_image: work/experience/uclan-social-posts/UCLan-Socials-37-Experience-Full-Image-2732x1536-2.jpg
 secondary_image: work/experience/uclan-social-posts/UCLan-Socials-37-Experience-Secondary-Image-896x597.jpg
 main_content:

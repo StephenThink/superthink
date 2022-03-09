@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - brand
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645643389
+updated_at: 1646672154
 hero_image: Glovers-3-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/glovers-swim-school/Glovers-3-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -43,6 +43,9 @@ services_filter:
   - print-design
   - digital-design
   - illustration
+  - copywriting
+  - packaging-design
+  - web-development
 short_case: false
 mini_introduction: 'When it comes to the competitive world of branding, it’s often a case of sink or swim. For Glover’s, we set out to ensure it was the latter.'
 video_choice: Image

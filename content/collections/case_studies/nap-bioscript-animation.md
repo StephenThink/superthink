@@ -29,14 +29,13 @@ main_content:
     type: paragraph
 greatest_hits: false
 core:
-  - brand
+  - activations
 services_filter:
   - digital-design
   - film-and-animation
-  - web-development
   - display
   - illustration
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645453052
+updated_at: 1646670560
 hero_image: work/brand/bioscript-animation/Bioscript-Brand-11-Large-2732x1536.jpg
 ---

@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646313789
+updated_at: 1646672980
 hero_image: work/experience/bp-caps-brochure-and-commercial-catalogue/BP-Caps-22-Brochure-Full-Image-2732x1536.jpg
 secondary_image: work/experience/bp-caps-brochure-and-commercial-catalogue/BP-CAPS-22-Brochure-Large-927x522.jpg
 main_content:
@@ -32,7 +32,6 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - print-design
   - digital-design
 video_choice: Image
 short_case: false

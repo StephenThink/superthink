@@ -6,7 +6,7 @@ greatest_hits: true
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645456213
+updated_at: 1646670984
 hero_image: work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/merlin-entertainments-sea-life-blackpool-map/MerlinSeaLife-6-Experience-Secondary-Image-896x597.jpg
 main_content:
@@ -34,6 +34,7 @@ main_content:
 services_filter:
   - print-design
   - illustration
+  - display
 short_case: false
 video_choice: Image
 ---

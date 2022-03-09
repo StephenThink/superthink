@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646234089
+updated_at: 1646672459
 hero_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Full-Image-2732x1536.jpg
 secondary_image: work/campaign/bae-systems-employee-benefits-campaign/Campaign-3-BAE-Secondary-Image-896x597.jpg
 main_content:
@@ -54,5 +54,6 @@ main_content:
 short_case: false
 services_filter:
   - print-design
+  - campaigns
 video_choice: Image
 ---

@@ -32,6 +32,7 @@ services_filter:
   - brand-identity
   - print-design
   - illustration
+  - naming
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646406409
+updated_at: 1646669255
 ---

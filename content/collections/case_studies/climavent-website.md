@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - activations
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646416959
+updated_at: 1646668618
 hero_image: work/experience/climavent-website/Climavent-Website-30-Experience-Full-Image-2732x1536.jpg
 secondary_image: work/experience/climavent-website/Climavent-Website-30-Experience-Secondary-Image-896x597-2.jpg
 main_content:
@@ -35,8 +35,7 @@ main_content:
   -
     type: paragraph
 services_filter:
-  - print-design
-  - digital-design
+  - web-development
 short_case: false
 video_choice: Image
 ---

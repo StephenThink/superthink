@@ -65,6 +65,7 @@ services_filter:
   - brand-identity
   - print-design
   - packaging-design
+  - naming
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646408682
+updated_at: 1646671314
 ---

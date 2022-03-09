@@ -5,8 +5,8 @@ title: 'mc- BAE Systems Video Brochure'
 greatest_hits: false
 core:
   - activations
-updated_by: c080c544-1e5b-44fb-913c-aaff9b0032aa
-updated_at: 1644504272
+updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
+updated_at: 1646670329
 main_content:
   -
     type: set
@@ -35,6 +35,7 @@ services_filter:
   - display
   - illustration
   - film-and-animation
+  - packaging-design
 secondary_image: work/experience/bae-systems-video-brochure/BAE-Video-Brochure-21-Experience-Secondary-Image-896x597.jpg
 short_case: false
 video_choice: Image

@@ -6,7 +6,7 @@ greatest_hits: false
 core:
   - campaign
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646411207
+updated_at: 1646669205
 hero_image: work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Full-Image-2732x1536.jpg
 secondary_image: work/campaign/bae-systems-beware-the-brew-campaign/Campaign-2-BAE-Secondary-Image-896x597.jpg
 main_content:
@@ -41,6 +41,7 @@ short_case: false
 services_filter:
   - print-design
   - packaging-design
+  - campaigns
 short_para_title: Shorty
 video_choice: Image
 ---

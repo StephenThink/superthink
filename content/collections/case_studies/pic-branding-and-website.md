@@ -1,12 +1,12 @@
 ---
 id: aa96b51e-81ed-4d9d-b6a0-8d9c032dd4b3
 blueprint: case_study
-title: 'mc- PIC Branding and Website'
+title: 'mc- PIC Branding & Website'
 greatest_hits: false
 core:
   - brand
 updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1646421652
+updated_at: 1646669621
 hero_image: work/brand/pic-branding-and-website/Pic-6-Brand-Full-Image-2732x1536.jpg
 secondary_image: work/brand/pic-branding-and-website/Pic-6-Brand-Secondary-Image-896x597.jpg
 main_content:
@@ -44,6 +44,8 @@ services_filter:
   - brand-identity
   - digital-design
   - web-development
+  - packaging-design
+  - print-design
 short_case: false
 video_choice: Image
 ---
