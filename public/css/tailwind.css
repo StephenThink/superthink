@@ -2782,6 +2782,12 @@ sup {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .self-start {
   align-self: flex-start;
 }
@@ -3074,11 +3080,6 @@ sup {
   padding-bottom: 0.5rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -3092,6 +3093,11 @@ sup {
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-7 {
@@ -3956,6 +3962,10 @@ sup {
     width: 25%;
   }
 
+  .md\:w-1\/5 {
+    width: 20%;
+  }
+
   .md\:w-3\/4 {
     width: 75%;
   }
@@ -4149,12 +4159,16 @@ sup {
     width: 66.666667%;
   }
 
-  .lg\:w-3\/12 {
-    width: 25%;
+  .lg\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .lg\:w-9\/12 {
     width: 75%;
+  }
+
+  .lg\:w-3\/12 {
+    width: 25%;
   }
 
   .lg\:flex-row {
@@ -4169,6 +4183,11 @@ sup {
     --tw-space-x-reverse: 0;
     margin-right: calc(40rem * var(--tw-space-x-reverse));
     margin-left: calc(40rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .lg\:text-14xl {
@@ -4299,6 +4318,11 @@ sup {
 
 @media (min-width: 650px) and (max-width: 820px) {
 
+  .land\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .land\:mt-2 {
     margin-top: 0.5rem;
   }
@@ -4313,6 +4337,10 @@ sup {
 
   .land\:mt-0 {
     margin-top: 0px;
+  }
+
+  .land\:ml-0 {
+    margin-left: 0px;
   }
 
   .land\:block {
@@ -4353,6 +4381,22 @@ sup {
 
   .land\:w-36 {
     width: 9rem;
+  }
+
+  .land\:w-1\/12 {
+    width: 8.333333%;
+  }
+
+  .land\:w-3\/4 {
+    width: 75%;
+  }
+
+  .land\:w-1\/4 {
+    width: 25%;
+  }
+
+  .land\:flex-row {
+    flex-direction: row;
   }
 
   .land\:flex-col {
