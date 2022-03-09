@@ -74,7 +74,7 @@
                                             </x-jet-button>
                                             <x-jet-danger-button class="ml-2" wire:click="denyed({{ $item->requestedId }}, {{$item->id}})">
                                                 {{ __('Deny') }}
-                                            </x-jet-button>
+                                            </x-jet-danger-button>
                                             @else
                                             <x-jet-button wire:click="readMessage({{ $item->id }})">
                                                 @include('partials.svgs.read')

@@ -76,6 +76,10 @@ Route::group(['middleware' => [
     Route::get('/clients/contacts', function () {
         return view('clients.contacts');
     })->name('client-contacts');
+
+    Route::get('/messages', function () {
+        return view('messages.centre');
+    })->name('messages-centre');
 });
 
 

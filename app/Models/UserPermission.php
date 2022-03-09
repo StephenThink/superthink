@@ -30,7 +30,8 @@ class UserPermission extends Model
             'clients',
             'vaults',
             'client-profile',
-            'client-contacts'
+            'client-contacts',
+            'messages-centre',
         ];
     }
 
