@@ -41,6 +41,10 @@ Route::group(['middleware' => [
         return view('admin.users');
     })->name('users');
 
+    Route::get('/users/trash', function () {
+        return view('admin.trashed.users');
+    })->name('users-trashed');
+
     Route::get('/user-permissions', function () {
         return view('admin.user-permissions');
     })->name('user-permissions');

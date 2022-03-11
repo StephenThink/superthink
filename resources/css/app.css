@@ -97,6 +97,10 @@
     @apply bg-white overflow-hidden shadow-xl sm:rounded-lg;
 }
 
+.content-inner-inverted {
+    @apply bg-yellow overflow-hidden shadow-xl sm:rounded-lg;
+}
+
 .button-main {
     @apply inline-flex items-center px-4 py-2 bg-header-dark border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition hover:text-yellow
 }
@@ -141,4 +145,15 @@
 
 .table-content-no {
     @apply bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center cursor-pointer
+}
+
+
+/* Alert Messages */
+
+.alert-success {
+    @apply bg-header-dark text-yellow py-2 px-4 rounded-md inline-flex space-x-2 items-center text-xs font-semibold leading-tight
+}
+
+.alert-redirect {
+    @apply bg-green-600 text-header-dark py-2 px-4 rounded-md inline-flex space-x-2 items-center text-xs font-semibold leading-tight
 }

@@ -1,18 +1,30 @@
 <div class="p-6">
-    <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
-        <x-jet-button wire:click="createShowModal">
-            {{__('Create')}}
-        </x-jet-button>
-    </div>
+    <div class="flex items-center justify-between ">
+        <div class="px-4 py-3">
+        @include('partials.alerts.alerts')
+        </div>
+
+        <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
+            <x-jet-button wire:click="createShowModal">
+                {{__('Create')}}
+            </x-jet-button>
+            @if ($trashedCount > 0)
+            <x-jet-button class="ml-2" wire:click="goToTrashedUsers()">
+                {{__('Trash')}}
+            </x-jet-button>
+            @endif
+
+        </div>
+   </div>
 
     <div class="w-full flex pb-10">
         <div class="w-3/6 mx-1">
             <input wire:model.debounce.300ms="search" type="text"
                 class="search-input"
-                placeholder="Search users...">
+                placeholder="Search Users...">
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderBy"
+            <select wire:model.lazy="orderBy"
                 class="search-dropbox"
                 id="grid-state">
                 <option value="name">Name</option>
@@ -24,7 +36,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc"
+            <select wire:model.lazy="orderAsc"
                 class="search-dropbox"
                 id="grid-state">
                 <option value="1">Ascending</option>
@@ -35,7 +47,7 @@
             </div>
         </div>
         <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage"
+            <select wire:model.lazy="perPage"
                 class="search-dropbox"
                 id="grid-state">
                 <option>10</option>
@@ -214,18 +226,18 @@
                 {{ __('Update') }}
                 </x-jet-button>
                 @else
-                <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
+            <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
                     {{ __('Create') }}
                     </x-jet-button>
-                    @endif
+            @endif
         </x-slot>
     </x-jet-dialog-modal>
 
     {{-- The Delete Modal --}}
     <x-jet-dialog-modal wire:model="modalConfirmDeleteVisible">
         <x-slot name="title">
-            {{ __('Delete Modal Title') }}
-        </x-slot>.defer
+            {{ __('Delete ') }} {{$this->nameOfDeletedUser}} {{ __(' from the Users Table') }}
+        </x-slot>
 
         <x-slot name="content">
             {{ __('Are you sure you want to delete this item?') }}

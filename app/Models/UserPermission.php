@@ -22,6 +22,7 @@ class UserPermission extends Model
             'navigation-menus',
             'dashboard',
             'users',
+            'users-trashed',
             'user-permissions',
             'holidays',
             'holidays-overview',
