@@ -22,7 +22,10 @@ return new class extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+            $table->date('dateStarted')->default('2022-01-01');
+            $table->float('leaveDays')->default('20');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -28,6 +28,12 @@ class Message extends Model
             return $this->belongsTo('App\Models\User', 'from');
         }
 
+        /**
+     * Makes the Search function work in the blade files
+     *
+     * @param  mixed $search
+     * @return void
+     */
         public static function search($search)
     {
         return empty($search) ? static::query()

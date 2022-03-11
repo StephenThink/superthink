@@ -16,6 +16,12 @@ class NavigationMenu extends Model
         'type'
     ];
 
+    /**
+     * Makes the Search function work in the blade files
+     *
+     * @param  mixed $search
+     * @return void
+     */
     public static function search($search)
     {
         return empty($search) ? static::query()

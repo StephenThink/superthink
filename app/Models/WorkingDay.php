@@ -25,6 +25,11 @@ class WorkingDay extends Model
         'sunday'
     ];
 
+    /**
+     * Creates a relationship to the User Table
+     *
+     * @return void
+     */
     public function user()
     {
         return $this->hasOne('App\Models\User', 'id', 'user_id');

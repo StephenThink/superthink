@@ -18,9 +18,23 @@ class Role extends Model
         'name'
     ];
 
+    /**
+     * This Creates a Has many relationship to the User Model
+     *
+     * @return void
+     */
+    public function users()
+    {
+        return $this->belongsToMany('App\Models\User');
+    }
 
 
-
+    /**
+     * Makes the Search function work in the blade files
+     *
+     * @param  mixed $search
+     * @return void
+     */
     public static function search($search)
     {
         return empty($search) ? static::query()

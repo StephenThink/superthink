@@ -21,6 +21,9 @@ class CreateHolidaysTable extends Migration
             $table->boolean('halfDay')->nullable();
             $table->float('daysTaken');
             $table->date('dateAuthorised')->nullable();
+            $table->bigInteger('authorisedBy')->nullable();
+            $table->boolean('pending')->default(false);
+            $table->boolean('authorised')->default(false);
             $table->timestamps();
         });
     }

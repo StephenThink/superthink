@@ -78,21 +78,53 @@ class User extends Authenticatable
         return $roleArray;
     }
 
+    /**
+     * One User could have Many Holidays
+     *
+     * @return void
+     */
     public function holidays()
     {
         return $this->hasMany('App\Models\Holiday');
     }
 
+    /**
+     * One User could have Many Messages
+     *
+     * @return void
+     */
     public function messages()
     {
         return $this->hasMany('App\Models\Message');
     }
 
+    /**
+     * Creates a relationship so that
+     * one User has one Work Day Pattern
+     *
+     * @return void
+     */
     public function workday()
     {
         return $this->hasOne('App\Models\WorkingDay');
     }
 
+    /**
+     * This Creates a Has many relationship to the Role Model
+     *
+     * @return void
+     */
+    public function roles()
+    {
+        return $this->belongsToMany('App\Models\Role');
+    }
+
+    /**
+     * Makes the Search function work in the blade files
+     *
+     * @param  mixed $search
+     * @return void
+     */
     public static function search($search)
     {
         return empty($search) ? static::query()
