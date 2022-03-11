@@ -154,7 +154,7 @@
                 @error('dateStarted') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mt-4">
-                <x-jet-label for="role" value="{{ __('Role') }}" />
+                {{-- <x-jet-label for="role" value="{{ __('Role') }}" />
                 <select wire:model.defer="role" id=""
                     class="input-dropdown">
                     <option value="">-- Select a Role --</option>
@@ -162,7 +162,18 @@
                     <option value="{{ $key }}">{{ $value }}</option>
                     @endforeach
                 </select>
-                @error('role') <span class="error">{{ $message }}</span> @enderror
+                @error('role') <span class="error">{{ $message }}</span> @enderror --}}
+
+                @foreach ($roles as $role)
+                <div class="mt-1">
+                    <label class="inline-flex items-center">
+                    <input type="checkbox" wire:model="selectedRole.{{ $role->id}}"  class="form-checkbox h-6 w-6 text-green-500">
+                         <span class="ml-3 text-sm">{{ $role->name }}</span>
+                     </label>
+                </div>
+                @endforeach
+
+
             </div>
         </div>
         @include('partials.form.checkboxfordaysofweek')

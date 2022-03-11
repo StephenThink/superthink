@@ -45,7 +45,9 @@ class Users extends Component
 
     public $nameOfDeletedUser;
 
-    /**
+    public $selectedRole = [];
+
+       /**
      * Needed for creating a Teams with a new user
      */
     public $newUserId;
@@ -122,6 +124,7 @@ class Users extends Component
             'email' => $this->email,
             'password' => Hash::make($this->password),
             'dateStarted' => $this->dateStarted,
+            'selectedRole' => $this->selectedRole,
         ];
     }
 
@@ -145,7 +148,7 @@ class Users extends Component
      */
     public function create()
     {
-
+dd($this);
         $this->validate();
         User::create($this->createModelData());
         // Find out New Users ID
@@ -284,6 +287,7 @@ class Users extends Component
         return view('livewire.admin.users', [
             'data' => $this->read(),
             'trashedCount' => User::onlyTrashed()->get()->count(),
+            'roles' => Role::all(),
         ]);
     }
 
