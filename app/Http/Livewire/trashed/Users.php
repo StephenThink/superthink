@@ -63,6 +63,8 @@ class Users extends Component
 
         $user = User::onlyTrashed()->whereId($this->modelId)->first();
         $user->forceDelete();
+        $this->modalConfirmDeleteVisible = false;
+
         session()->flash('trash', $user->name . 's record has been successfully obliterated.');
         $this->redirectIfEmpty();
 

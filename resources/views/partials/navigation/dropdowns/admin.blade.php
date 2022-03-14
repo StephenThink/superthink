@@ -27,13 +27,13 @@
                 {{ __('Navigation Menus') }}
             </x-jet-dropdown-link>
 
+@can('is-user-manager')
             <!-- Users Management -->
             <div class="nav-headers">
                 {{ __('Manage Users') }}
             </div>
 
-            <!-- Pages / Nav Options -->
-
+            <!-- Users Options -->
             <x-jet-dropdown-link href="{{ route('users') }}" :active="request()->routeIs('users')">
                 {{ __('Users') }}
             </x-jet-dropdown-link>
@@ -46,7 +46,7 @@
             <x-jet-dropdown-link href="{{ route('workingdays') }}" :active="request()->routeIs('workingdays')">
                 {{ __('Staff Work Days') }}
             </x-jet-dropdown-link>
-
+@endcan
             <!-- Users Management -->
             <div class="nav-headers">
                 {{ __('Manage Holidays') }}

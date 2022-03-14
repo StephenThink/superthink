@@ -132,4 +132,27 @@ class User extends Authenticatable
                 ->orWhere('name', 'like', '%'.$search.'%')
                 ->orWhere('email', 'like', '%'.$search.'%');
     }
+
+
+    /**
+     * Check if the user has a role
+     *
+     * @param  string $role
+     * @return void
+     */
+    public function hasAnyRole(string $role)
+    {
+        return null !== $this->roles()->where('name', $role)->first();
+    }
+
+    /**
+     * Check the Users has any given roles
+     *
+     * @param  array $role
+     * @return void
+     */
+    public function hasAnyRoles(array $role)
+    {
+        return null !== $this->roles()->whereIn('name', $role)->get();
+    }
 }

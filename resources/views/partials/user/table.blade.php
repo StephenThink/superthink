@@ -10,9 +10,6 @@
                                 Name</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                Role</th>
-                            <th
-                                class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                 Email</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
@@ -27,7 +24,6 @@
                         @foreach ($data as $item)
                         <tr>
                             <td class="px-6 py-2">{{ $item->name }}</td>
-                            <td class="px-6 py-2">{{ Str::title($item->role) }}</td>
                             <td class="px-6 py-2">{{ $item->email }}</td>
                             <td class="px-6 py-2">@foreach ($item->roles as $role)
                                 <li>{{ $role->name }}</li>

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Team;
 use App\Policies\TeamPolicy;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -26,6 +27,18 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        // Gates
+        Gate::define('logged-in', function($user){
+            return $user;
+        });
+
+        Gate::define('is-admin', function($user){
+            return $user->hasAnyRole('admin');
+        });
+
+        Gate::define('is-user-manager', function($user){
+            return $user->hasAnyRole('user manager');
+        });
+
     }
 }

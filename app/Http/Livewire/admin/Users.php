@@ -10,6 +10,7 @@ use App\Models\WorkingDay;
 use Illuminate\Support\Str;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 
 class Users extends Component
@@ -329,6 +330,15 @@ class Users extends Component
 
     public function render()
     {
+        if(Gate::denies('is-user-manager'))
+        {
+            return <<<'blade'
+
+            @include('partials.blades.denies')
+
+        blade;
+        }
+
         return view('livewire.admin.users', [
             'data' => $this->read(),
             'trashedCount' => User::onlyTrashed()->get()->count(),

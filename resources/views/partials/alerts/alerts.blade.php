@@ -19,3 +19,9 @@
 </div>
 @endif
 
+@if (session()->has('denied'))
+<div class="alert alert-redirect ">
+    @include('partials.svgs.alerts.denied')
+    {{ session('denied') }}
+</div>
+@endif
