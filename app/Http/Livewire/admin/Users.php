@@ -103,6 +103,15 @@ class Users extends Component
         $this->role = $data->role;
         $this->name = $data->name;
         $this->dateStarted = $data->dateStarted;
+        $this->selectedRole = DB::table('role_user')
+        ->where('user_id', $this->modelId)
+        ->pluck('role_id');
+        $test = [];
+        // Allows livewire to populate the update form with any data that exists.
+        foreach ($this->selectedRole as $key => $value) {
+            $test[$value] = "true";
+        }
+        $this->selectedRole = $test;
     }
 
     /**
@@ -117,6 +126,7 @@ class Users extends Component
             'role' => $this->role,
             'name' => $this->name,
             'dateStarted' => $this->dateStarted,
+            'selectedRole' => $this->selectedRole,
         ];
     }
 
@@ -160,19 +170,17 @@ class Users extends Component
     {
         $this->validate();
 
+
+        // Converts the Trues into an array of key values that can
+        // be used to populate the roles_user table for the
+        // many to many relationship
         $breakDownRoles = [];
-
-        // dd($this->selectedRole);
-
         foreach ($this->selectedRole as $key => $value) {
             $breakDownRoles[] = $key;
         }
 
-        // dd($breakDownRoles);
-
         $user = User::create($this->createModelData());
         // Find out New Users ID
-
 
 
         $user->roles()->sync($breakDownRoles);
@@ -236,8 +244,16 @@ class Users extends Component
         // dd($this->dateStarted);
         // Had to turn off validation as it doesnt work with the dateStarted????
         // $this->validate();
+        $breakDownRoles = [];
+        foreach ($this->selectedRole as $key => $value) {
+            $breakDownRoles[] = $key;
+        }
 
-        User::find($this->modelId)->update($this->modelData());
+        $user = User::find($this->modelId);
+        $user->update($this->modelData());
+
+        $user->roles()->sync($breakDownRoles);
+
         $this->modalFormVisible = false;
         session()->flash('message', $this->name . 's record has been successfully updated.');
     }
@@ -280,6 +296,7 @@ class Users extends Component
      */
     public function updateShowModal($id)
     {
+
         $this->resetValidation();
         $this->reset();
         $this->modalFormVisible = true;
@@ -300,6 +317,11 @@ class Users extends Component
         $this->modalConfirmDeleteVisible = true;
     }
 
+    /**
+     * Send the User to the Route Specificed Below
+     *
+     * @return void
+     */
     public function goToTrashedUsers()
     {
         return redirect()->route('users-trashed');
