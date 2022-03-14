@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\admin;
 
+use Carbon\Carbon;
 use App\Models\Role;
 use App\Models\User;
 use Livewire\Component;
@@ -60,7 +61,6 @@ class Users extends Component
     public function rules()
     {
         return [
-            'role' => 'required',
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|same:passwordConfirmation',
@@ -79,6 +79,16 @@ class Users extends Component
     public function updatingSearch()
     {
         $this->resetPage();
+    }
+
+    public function updatedName()
+    {
+        $this->email = Str::lower($this->name . "@thinkcreative.uk.com");
+        if($this->name == "test") {
+            $this->password = "password";
+            $this->passwordConfirmation = "password";
+            $this->dateStarted = "2022-03-16";
+        }
     }
 
     /**
@@ -119,8 +129,8 @@ class Users extends Component
     public function createModelData()
     {
         return [
-            'role' => $this->role,
             'name' => $this->name,
+            'role' => 'admin',
             'email' => $this->email,
             'password' => Hash::make($this->password),
             'dateStarted' => $this->dateStarted,
@@ -148,19 +158,32 @@ class Users extends Component
      */
     public function create()
     {
-dd($this);
         $this->validate();
-        User::create($this->createModelData());
+
+        $breakDownRoles = [];
+
+        // dd($this->selectedRole);
+
+        foreach ($this->selectedRole as $key => $value) {
+            $breakDownRoles[] = $key;
+        }
+
+        // dd($breakDownRoles);
+
+        $user = User::create($this->createModelData());
         // Find out New Users ID
-        $this->newUserId = User::where('email', $this->email)->first();
+
+
+
+        $user->roles()->sync($breakDownRoles);
 
         // Get the new Team ID
         $newTeamId = DB::table('teams')->get()->count() + 1;
 
         // Create Team for User
         DB::table('teams')->insert([
-            'user_id' => $this->newUserId->id,
-            'name' => explode(' ', $this->newUserId->name, 2)[0]  . "'s Team",
+            'user_id' => $user->id,
+            'name' => explode(' ', $user->name, 2)[0]  . "'s Team",
             'personal_team' => 1,
         ]);
 
@@ -175,7 +198,7 @@ dd($this);
         ($this->sunday == true) ? $this->sunday = true : $this->sunday = false;
 
         WorkingDay::create([
-            'user_id' => $this->newUserId->id,
+            'user_id' => $user->id,
             'monday' => $this->monday,
             'tuesday' => $this->tuesday,
             'wednesday' => $this->wednesday,
@@ -186,7 +209,7 @@ dd($this);
         ]);
 
         $this->modalCreateFormVisible = false;
-        session()->flash('message', $this->newUserId->name . 's record has been successfully created.');
+        session()->flash('message', $user->name . 's record has been successfully created.');
         $this->reset();
 
     }

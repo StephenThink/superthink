@@ -80,6 +80,9 @@
                                     Email</th>
                                 <th
                                     class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    Roles</th>
+                                <th
+                                    class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                 </th>
                             </tr>
                         </thead>
@@ -90,6 +93,10 @@
                                 <td class="px-6 py-2">{{ $item->name }}</td>
                                 <td class="px-6 py-2">{{ Str::title($item->role) }}</td>
                                 <td class="px-6 py-2">{{ $item->email }}</td>
+                                <td class="px-6 py-2">@foreach ($item->roles as $role)
+                                    <li>{{ $role->name }}</li>
+                                @endforeach
+                                </td>
                                 <td class="px-6 py-2 flex justify-end">
                                     <x-jet-button wire:click="updateShowModal({{ $item->id }})">
                                         @include('partials.svgs.update')
@@ -126,7 +133,7 @@
             <div class="form-grid-2">
             <div class="mt-4">
                 <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input wire:model.defer="name" id="" class="block mt-1 w-full" type="text" />
+                <x-jet-input wire:model.lazy="name" id="" class="block mt-1 w-full" type="text" />
                 @error('name') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mt-4">
@@ -167,9 +174,10 @@
                 @foreach ($roles as $role)
                 <div class="mt-1">
                     <label class="inline-flex items-center">
-                    <input type="checkbox" wire:model="selectedRole.{{ $role->id}}"  class="form-checkbox h-6 w-6 text-green-500">
+                    <input type="checkbox" wire:model="selectedRole.{{$role->id}}"  class="form-checkbox h-6 w-6 text-green-500">
                          <span class="ml-3 text-sm">{{ $role->name }}</span>
                      </label>
+
                 </div>
                 @endforeach
 
