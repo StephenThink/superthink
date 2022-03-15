@@ -22,54 +22,60 @@
                             @foreach ($data as $item)
                                 <tr>
                                     <td class="px-6 py-2">{{ $item->user->name }}</td>
-                                    <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'monday')">
+                                    <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'monday', {{$item->monday}})">
                                     @if ($item->monday)
                                         @include('partials.svgs.yes')
                                     @else
                                         @include('partials.svgs.no')
                                     @endif
                                 </td>
-                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'tuesday')">
+                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'tuesday', {{$item->tuesday}})">
                                     @if ($item->tuesday)
                                          @include('partials.svgs.yes')
                                     @else
                                         @include('partials.svgs.no')
                                     @endif
+
                                 </td>
-                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'wednesday')">
+                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'wednesday', {{$item->wednesday}})">
                                     @if ($item->wednesday)
                                          @include('partials.svgs.yes')
                                     @else
                                         @include('partials.svgs.no')
                                     @endif
+
                                 </td>
-                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'thursday')">
+                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'thursday', {{$item->thursday}})">
                                     @if ($item->thursday)
                                          @include('partials.svgs.yes')
                                     @else
                                         @include('partials.svgs.no')
                                     @endif
+
                                 </td>
-                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'friday')">
+                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'friday', {{$item->friday}})">
                                     @if ($item->friday)
                                          @include('partials.svgs.yes')
                                     @else
                                         @include('partials.svgs.no')
                                     @endif
+
                                 </td>
-                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'saturday')">
+                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'saturday', {{$item->saturday}})">
                                     @if ($item->saturday)
                                          @include('partials.svgs.yes')
                                     @else
                                         @include('partials.svgs.no')
                                     @endif
+
                                 </td>
-                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'sunday')">
+                                <td class="px-6 py-2" wire:click="invertDay({{ $item->id}}, 'sunday', {{$item->sunday}})">
                                     @if ($item->sunday)
                                          @include('partials.svgs.yes')
                                     @else
                                         @include('partials.svgs.no')
                                     @endif
+
                                 </td>
 
                                     {{-- <td class="px-6 py-2 flex justify-end">

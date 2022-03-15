@@ -184,21 +184,16 @@ class WorkingDays extends Component
      * @param  string $day
      * @return void
      */
-    public function invertDay($id, $day)
+    public function invertDay($id, $day, $value)
     {
-        if(WorkingDay::find($id)->pluck($day)->first() == 1) {
+
+        if($value == 1) {
             WorkingDay::findOrFail($id)->decrement($day);
         } else {
             WorkingDay::findOrFail($id)->increment($day);
         }
         $this->resetPage();
     }
-
-
-
-
-
-
 
 
     public function render()
