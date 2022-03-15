@@ -6,6 +6,7 @@ use App\Models\Client;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\ClientContact;
+use Illuminate\Support\Facades\Gate;
 
 class Contacts extends Component
 {
@@ -184,6 +185,14 @@ class Contacts extends Component
 
     public function render()
     {
+        if(Gate::denies('is-client-manager'))
+        {
+            return <<<'blade'
+
+            @include('partials.blades.denies')
+
+        blade;
+        }
         return view('livewire.clients.contacts', [
             'data' => $this->read(),
             'clients' => Client::all()

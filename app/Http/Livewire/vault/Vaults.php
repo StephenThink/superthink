@@ -94,6 +94,8 @@ class Vaults extends Component
         $this->validate();
         Vault::create($this->modelData());
         $this->modalFormVisible = false;
+        session()->flash('message', $this->title . 's record has been successfully created.');
+
         $this->reset();
     }
 
@@ -119,6 +121,8 @@ class Vaults extends Component
         $this->validate();
         Vault::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+        session()->flash('message', $this->title . 's record has been successfully updated.');
+
     }
 
     /**
@@ -131,6 +135,8 @@ class Vaults extends Component
         Vault::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
+        session()->flash('trash', 'Password record has been successfully deleted.');
+
     }
 
     /**
