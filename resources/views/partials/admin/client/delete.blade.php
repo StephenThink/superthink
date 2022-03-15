@@ -1,10 +1,10 @@
 <x-jet-dialog-modal wire:model="modalConfirmDeleteVisible">
     <x-slot name="title">
-        {{ __('Delete Modal Title') }}
+        {{ __('Delete Client') }}
     </x-slot>
 
     <x-slot name="content">
-        {{ __('Are you sure you want to delete this item?') }}
+        {{ __('Are you sure you want to delete this client?') }}
     </x-slot>
 
     <x-slot name="footer">

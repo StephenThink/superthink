@@ -5,6 +5,8 @@ namespace App\Http\Livewire\clients;
 use App\Models\Client;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Gate;
+
 
 class Clients extends Component
 {
@@ -16,14 +18,16 @@ class Clients extends Component
 
     public $perPage = 10;
     public $search = '';
-    public $orderBy = 'title';
+    public $orderBy = 'name';
     public $orderAsc = true;
 
 
     /**
      * Put your custom public properties here!
      */
-    public $title;
+    public $name;
+    public $nameOfDeletedClient;
+
 
     /**
      * The validation rules
@@ -33,7 +37,7 @@ class Clients extends Component
     public function rules()
     {
         return [
-            'title' => 'required',
+            'name' => 'required',
         ];
     }
 
@@ -47,7 +51,7 @@ class Clients extends Component
     {
         $data = Client::find($this->modelId);
         // Assign the variables here
-        $this->title = $data->title;
+        $this->name = $data->name;
     }
 
     /**
@@ -59,7 +63,7 @@ class Clients extends Component
     public function modelData()
     {
         return [
-            'title' => $this->title,
+            'name' => $this->name,
         ];
     }
 
@@ -70,10 +74,13 @@ class Clients extends Component
      */
     public function create()
     {
+
         $this->validate();
         Client::create($this->modelData());
         $this->modalFormVisible = false;
+        session()->flash('message', $this->name . 's record has been successfully created.');
         $this->reset();
+
     }
 
     /**
@@ -98,6 +105,8 @@ class Clients extends Component
         $this->validate();
         Client::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+        session()->flash('message', $this->name . 's record has been successfully updated.');
+
     }
 
     /**
@@ -110,6 +119,8 @@ class Clients extends Component
         Client::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
+        session()->flash('trash', $this->nameOfDeletedClient . 's record has been successfully deleted.');
+
     }
 
     /**
@@ -149,6 +160,7 @@ class Clients extends Component
     public function deleteShowModal($id)
     {
         $this->modelId = $id;
+        $this->nameOfDeletedClient = Client::whereId($this->modelId)->pluck('name')->first();
         $this->modalConfirmDeleteVisible = true;
     }
 
@@ -160,6 +172,15 @@ class Clients extends Component
 
     public function render()
     {
+        if(Gate::denies('is-client-manager'))
+        {
+            return <<<'blade'
+
+            @include('partials.blades.denies')
+
+        blade;
+        }
+
         return view('livewire.clients.clients', [
             'data' => $this->read(),
         ]);

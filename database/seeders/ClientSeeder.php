@@ -17,7 +17,7 @@ class ClientSeeder extends Seeder
     {
         //
         DB::table('clients')->insert([
-            'title' => 'Think',
+            'name' => 'Think',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

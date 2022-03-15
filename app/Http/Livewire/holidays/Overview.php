@@ -9,9 +9,11 @@ use App\Models\Holiday;
 use App\Models\Message;
 use App\Models\WorkingDay;
 
+
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Redirect;
 
 class Overview extends Component
@@ -200,6 +202,7 @@ class Overview extends Component
 
             $this->modalFormVisible = false;
             $this->reset();
+            session()->flash('message', 'Holiday Created.');
 
         } else {
             $this->daysErrorVisible = true;
@@ -242,6 +245,8 @@ class Overview extends Component
             'requestedId' => 0,
             'read' => 0,
         ]);
+        session()->flash('message', 'Holiday Updated.');
+
     }
 
         /**
@@ -303,6 +308,7 @@ class Overview extends Component
         ]);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
+        session()->flash('trash', 'Holiday Deleted.');
 
     }
 
@@ -344,6 +350,9 @@ class Overview extends Component
         $unreadMessage->update([
             'read' => 1,
         ]);
+
+        session()->flash('message', 'Holiday Granted.');
+
     }
 
     public function denyed($eventId)
@@ -363,6 +372,7 @@ class Overview extends Component
         'requestedId' => 0,
         'read' => 0,
     ]);
+    session()->flash('trash', 'Holiday Denied.');
 
 }
 
@@ -370,6 +380,16 @@ class Overview extends Component
 
     public function render()
     {
+        if(Gate::denies('is-holiday-manager'))
+        {
+            return <<<'blade'
+
+            @include('partials.blades.denies')
+
+        blade;
+        }
+
+
         // Get all users
         $users = User::all();
 

@@ -16,7 +16,7 @@ class JustHolidays extends Component
      */
     public function read()
     {
-        return User::paginate(10);
+        return User::orderBy('name')->paginate(15);
     }
 
     public function render()
