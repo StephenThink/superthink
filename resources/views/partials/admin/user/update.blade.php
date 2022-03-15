@@ -22,7 +22,7 @@
 
         <div class="flex flex-col mt-4">
             <x-jet-label value="{{ __('Roles / Permissions') }}" />
-            @include('partials.user.checkbox.updatepermission')
+            @include('partials.admin.user.checkbox.updatepermission')
 
         </div>
 

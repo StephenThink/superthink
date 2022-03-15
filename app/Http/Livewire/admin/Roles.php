@@ -23,6 +23,7 @@ class Roles extends Component
      * Put your custom public properties here!
      */
     public $name;
+    public $description;
 
     /**
      * The validation rules
@@ -33,6 +34,7 @@ class Roles extends Component
     {
         return [
             'name' => 'required',
+            'description' => 'required',
         ];
     }
 
@@ -47,6 +49,7 @@ class Roles extends Component
         $data = Role::find($this->modelId);
         // Assign the variables here
         $this->name = $data->name;
+        $this->description = $data->description;
     }
 
     /**
@@ -59,6 +62,7 @@ class Roles extends Component
     {
         return [
             'name' => $this->name,
+            'description' => $this->description,
         ];
     }
 

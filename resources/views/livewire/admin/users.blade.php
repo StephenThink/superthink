@@ -62,14 +62,14 @@
     </div>
 
     {{-- The data table --}}
-    @include('partials.user.table')
+    @include('partials.admin.user.table')
 
     {{-- Create Modal Form --}}
-    @include('partials.user.create')
+    @include('partials.admin.user.create')
 
     {{-- Update Modal Form --}}
-    @include('partials.user.update')
+    @include('partials.admin.user.update')
 
     {{-- The Delete Modal --}}
-    @include('partials.user.delete')
+    @include('partials.admin.user.delete')
 </div>

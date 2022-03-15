@@ -39,14 +39,14 @@
         <div class="form-grid-2">
             <div class="flex flex-col mt-4">
                 <x-jet-label value="{{ __('Roles / Permissions') }}" />
-                @include('partials.user.checkbox.permission')
+                @include('partials.admin.user.checkbox.permission')
 
             </div>
             <div class="flex flex-col mt-4">
                 <x-jet-label value="{{ __('Working Days') }}" />
 
                 <div class="mt-1 border border-header-dark rounded-md p-2 px-4">
-                    @include('partials.user.checkbox.daysofweek')
+                    @include('partials.admin.user.checkbox.daysofweek')
                 </div>
 
             </div>
