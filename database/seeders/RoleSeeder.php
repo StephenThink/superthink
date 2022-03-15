@@ -19,43 +19,57 @@ class RoleSeeder extends Seeder
         // Role::factory()->times(1)->create();
 
         DB::table('roles')->insert([
+            'name' => 'Super',
+            'description' => 'Has complete access to everything.',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+
+        DB::table('roles')->insert([
             'name' => 'Admin',
-            'description' => 'Can access the Admin Area',
+            'description' => 'Can access the Admin Area.',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
 
         DB::table('roles')->insert([
             'name' => 'Vault Manager',
-            'description' => 'Can access the Password Area',
+            'description' => 'Can access the Password Area.',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
 
         DB::table('roles')->insert([
             'name' => 'User Manager',
-            'description' => 'Can access the User Area',
+            'description' => 'Can access the User Area.',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
 
         DB::table('roles')->insert([
             'name' => 'Frontend Manager',
-            'description' => 'Can access the Frontpage Area',
+            'description' => 'Can access the Frontpage Area.',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
 
         DB::table('roles')->insert([
             'name' => 'Holiday Manager',
-            'description' => 'Can access the Holiday Area',
+            'description' => 'Can access the Holiday Area.',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
 
         DB::table('roles')->insert([
             'name' => 'Client Manager',
-            'description' => 'Can access the Client Area',
+            'description' => 'Can access the Client Area.',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+
+        DB::table('roles')->insert([
+            'name' => 'Staff Editor',
+            'description' => 'Can change the days that Staff members work.',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

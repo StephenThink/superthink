@@ -33,11 +33,56 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define('is-admin', function($user){
-            return $user->hasAnyRole('admin');
+            return $user->hasAnyRoles([
+                'admin',
+                'super'
+            ]);
         });
 
         Gate::define('is-user-manager', function($user){
-            return $user->hasAnyRole('user manager');
+            return $user->hasAnyRoles([
+                'user manager',
+                'super'
+                ]);
+        });
+
+        Gate::define('is-client-manager', function($user){
+            return $user->hasAnyRoles([
+                'client manager',
+                'super'
+            ]);
+        });
+
+        Gate::define('is-frontend-manager', function($user){
+            return $user->hasAnyRoles([
+                'frontend manager',
+                'super'
+            ]);
+        });
+
+        Gate::define('is-holiday-manager', function($user){
+            return $user->hasAnyRoles([
+                'holiday manager',
+                'super'
+            ]);
+        });
+
+        Gate::define('is-vault-manager', function($user){
+            return $user->hasAnyRoles([
+                'vault manager',
+                'super'
+            ]);
+        });
+
+        Gate::define('is-super', function($user){
+            return $user->hasAnyRole('super');
+        });
+
+        Gate::define('is-staff-editor', function($user){
+            return $user->hasAnyRoles([
+                'staff editor',
+                'super'
+            ]);
         });
 
     }

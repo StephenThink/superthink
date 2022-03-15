@@ -19,6 +19,7 @@ class Holiday extends Model
     'dateAuthorised',
     'pending',
     'authorised',
+    'authorisedBy'
     ];
 
     public function users()
@@ -31,5 +32,5 @@ class Holiday extends Model
         return $this->belongsTo('App\Models\User', 'authorisedBy');
     }
 
-    
+
 }

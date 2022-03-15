@@ -249,10 +249,18 @@ class Users extends Component
             'dateStarted' => 'required|date|date_format:Y-m-d',
         ]);
 
+        // dd($this);
+
         $breakDownRoles = [];
         foreach ($this->selectedRole as $key => $value) {
-            $breakDownRoles[] = $key;
+            if($value == 1 || $value == "true")
+            {
+                $breakDownRoles[] = $key;
+            }
+
         }
+
+        // dd($breakDownRoles);
 
         $user->update($this->modelData());
 

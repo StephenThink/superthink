@@ -7,7 +7,9 @@
                         <tr>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Name</th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                            @can('is-super')
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider"></th>
+                            @endcan
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
@@ -16,6 +18,7 @@
                                 <tr>
                                     <td class="px-6 py-2">{{ $item->name }}</td>
                                     <td class="px-6 py-2">{{ $item->description }}</td>
+                                    @can('is-super')
                                     <td class="px-6 py-2 flex justify-end">
                                         <x-jet-button wire:click="updateShowModal({{ $item->id }})">
                                             @include('partials.svgs.update')
@@ -24,6 +27,7 @@
                                             @include('partials.svgs.trash')
                                         </x-jet-button>
                                     </td>
+                                    @endcan
                                 </tr>
                             @endforeach
                         @else

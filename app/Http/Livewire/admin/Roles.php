@@ -5,6 +5,8 @@ namespace App\Http\Livewire\admin;
 use App\Models\Role;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Gate;
+
 
 class Roles extends Component
 {
@@ -74,9 +76,12 @@ class Roles extends Component
     public function create()
     {
         $this->validate();
+        // dd($this);
         Role::create($this->modelData());
         $this->modalFormVisible = false;
         $this->reset();
+        session()->flash('message', 'New role has been successfully created.');
+
     }
 
     /**
@@ -101,6 +106,8 @@ class Roles extends Component
         $this->validate();
         Role::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+        session()->flash('message', 'Role updated successfully.');
+
     }
 
     /**
@@ -113,6 +120,9 @@ class Roles extends Component
         Role::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
+        session()->flash('trash', 'Role has been successfully deleted.');
+
+
     }
 
     /**
@@ -125,6 +135,7 @@ class Roles extends Component
         $this->resetValidation();
         $this->reset();
         $this->modalFormVisible = true;
+
     }
 
     /**
@@ -157,6 +168,14 @@ class Roles extends Component
 
     public function render()
     {
+        if(Gate::denies('is-user-manager'))
+        {
+            return <<<'blade'
+
+            @include('partials.blades.denies')
+
+        blade;
+        }
         return view('livewire.admin.roles', [
             'data' => $this->read(),
         ]);

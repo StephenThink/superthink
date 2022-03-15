@@ -6,6 +6,8 @@ use App\Models\User;
 use App\Models\WorkingDay;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Gate;
+
 
 class WorkingDays extends Component
 {
@@ -198,6 +200,17 @@ class WorkingDays extends Component
 
     public function render()
     {
+
+        if(Gate::denies('is-staff-editor'))
+        {
+            return <<<'blade'
+
+            @include('partials.blades.denies')
+
+        blade;
+        }
+
+
         // Grab all Users
         // $staffMembers = User::all();
 
