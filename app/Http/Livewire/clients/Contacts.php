@@ -15,7 +15,10 @@ class Contacts extends Component
     public $modalConfirmDeleteVisible;
     public $modelId;
 
-
+    public $perPage = 10;
+    public $search = '';
+    public $orderBy = 'staff_name';
+    public $orderAsc = true;
     /**
      * Put your custom public properties here!
      */
@@ -25,6 +28,9 @@ class Contacts extends Component
     public $staff_number;
     public $staff_email;
     public $staff_notes;
+
+    public $nameOfDeletedContact;
+
 
 
     /**
@@ -90,6 +96,8 @@ class Contacts extends Component
         $this->validate();
         ClientContact::create($this->modelData());
         $this->modalFormVisible = false;
+        session()->flash('message', $this->staff_name . 's record has been successfully created.');
+
         $this->reset();
     }
 
@@ -100,7 +108,9 @@ class Contacts extends Component
      */
     public function read()
     {
-        return ClientContact::paginate(5);
+        return ClientContact::search($this->search)
+        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+        ->paginate($this->perPage);
     }
 
     /**
@@ -113,6 +123,8 @@ class Contacts extends Component
         $this->validate();
         ClientContact::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+        session()->flash('message', $this->staff_name . 's record has been successfully updated.');
+
     }
 
     /**
@@ -125,6 +137,8 @@ class Contacts extends Component
         ClientContact::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
+        session()->flash('trash', $this->nameOfDeletedContact . 's record has been successfully deleted.');
+
     }
 
     /**
@@ -164,6 +178,7 @@ class Contacts extends Component
     public function deleteShowModal($id)
     {
         $this->modelId = $id;
+        $this->nameOfDeletedContact = ClientContact::whereId($this->modelId)->pluck('name')->first();
         $this->modalConfirmDeleteVisible = true;
     }
 

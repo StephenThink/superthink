@@ -99,6 +99,8 @@ public function mount($id)
         $this->validate();
         ClientContact::create($this->modelData());
         $this->modalFormVisible = false;
+        $this->resetPage();
+
 
     }
 
@@ -112,6 +114,8 @@ public function mount($id)
         $this->validate();
         ClientContact::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+        $this->resetPage();
+
     }
 
     /**
