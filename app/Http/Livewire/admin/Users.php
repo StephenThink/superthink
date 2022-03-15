@@ -30,7 +30,6 @@ class Users extends Component
     /**
      * Put your custom public properties here!
      */
-    public $role;
     public $name;
     public $email;
     public $password;
@@ -101,18 +100,18 @@ class Users extends Component
     public function loadModel()
     {
         $data = User::find($this->modelId);
-        $this->role = $data->role;
         $this->name = $data->name;
+        $this->email = $data->email;
         $this->dateStarted = $data->dateStarted;
         $this->selectedRole = DB::table('role_user')
         ->where('user_id', $this->modelId)
         ->pluck('role_id');
-        $test = [];
+        $convertArray = [];
         // Allows livewire to populate the update form with any data that exists.
         foreach ($this->selectedRole as $key => $value) {
-            $test[$value] = "true";
+            $convertArray[$value] = "true";
         }
-        $this->selectedRole = $test;
+        $this->selectedRole = $convertArray;
     }
 
     /**
@@ -124,8 +123,8 @@ class Users extends Component
     public function modelData()
     {
         return [
-            'role' => $this->role,
             'name' => $this->name,
+            'email' => $this->email,
             'dateStarted' => $this->dateStarted,
             'selectedRole' => $this->selectedRole,
         ];
@@ -141,7 +140,7 @@ class Users extends Component
     {
         return [
             'name' => $this->name,
-            'role' => 'admin',
+            'role' => 'admin', // Remove when no longer required
             'email' => $this->email,
             'password' => Hash::make($this->password),
             'dateStarted' => $this->dateStarted,
@@ -242,15 +241,19 @@ class Users extends Component
      */
     public function update()
     {
-        // dd($this->dateStarted);
-        // Had to turn off validation as it doesnt work with the dateStarted????
-        // $this->validate();
+        $user = User::find($this->modelId);
+
+        $this->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,'.$user->id,
+            'dateStarted' => 'required|date|date_format:Y-m-d',
+        ]);
+
         $breakDownRoles = [];
         foreach ($this->selectedRole as $key => $value) {
             $breakDownRoles[] = $key;
         }
 
-        $user = User::find($this->modelId);
         $user->update($this->modelData());
 
         $user->roles()->sync($breakDownRoles);

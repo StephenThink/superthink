@@ -10,6 +10,11 @@
             @error('name') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div class="mt-4">
+            <x-jet-label for="email" value="{{ __('E-Mail') }}" />
+            <x-jet-input wire:model.defer="email" id="" class="block mt-1 w-full" type="email" />
+            @error('email') <span class="error">{{ $message }}</span> @enderror
+        </div>
+        <div class="mt-4">
             <x-jet-label for="dateStarted" value="{{ __('Start Date') }}" />
             <x-jet-input wire:model.defer="dateStarted" id="" class="block mt-1 w-full" type="date" />
             @error('dateStarted') <span class="error">{{ $message }}</span> @enderror
