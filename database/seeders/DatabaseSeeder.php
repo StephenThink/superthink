@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(NavigationMenuSeeder::class);
         $this->call(ClientSeeder::class);
         $this->call(WorkingDaysSeeder::class);
-        $this->call(UserPermissionSeeder::class);
         $this->call(RoleUserSeeder::class);
     }
 }

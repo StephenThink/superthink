@@ -24,6 +24,7 @@ class CreateWorkingDaysTable extends Migration
             $table->boolean('saturday')->default(false);
             $table->boolean('sunday')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

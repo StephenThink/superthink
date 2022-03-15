@@ -4,6 +4,7 @@ namespace App\Http\Livewire\admin;
 
 use Carbon\Carbon;
 use App\Models\Role;
+use App\Models\Team;
 use App\Models\User;
 use Livewire\Component;
 use App\Models\WorkingDay;
@@ -140,7 +141,6 @@ class Users extends Component
     {
         return [
             'name' => $this->name,
-            'role' => 'admin', // Remove when no longer required
             'email' => $this->email,
             'password' => Hash::make($this->password),
             'dateStarted' => $this->dateStarted,
@@ -271,8 +271,11 @@ class Users extends Component
     {
 
         User::destroy($this->modelId);
+
+        // Also Soft Deletes it from the Working Day Table as otherwise there would be an error.
+        WorkingDay::destroy($this->modelId);
         // Delete the team as well
-        DB::table('teams')->where('user_id', $this->modelId)->delete();
+        Team::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         session()->flash('trash', $this->nameOfDeletedUser . 's record has been successfully deleted.');
         $this->resetPage();

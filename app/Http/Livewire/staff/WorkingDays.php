@@ -109,7 +109,7 @@ class WorkingDays extends Component
      */
     public function read()
     {
-        return WorkingDay::paginate(5);
+        return WorkingDay::paginate(15);
     }
 
     /**
@@ -204,9 +204,11 @@ class WorkingDays extends Component
     public function render()
     {
         // Grab all Users
-        $staffMembers = User::all();
+        // $staffMembers = User::all();
+
         // Find the users not already in the list
         $notAllocated = WorkingDay::pluck('user_id')->all();
+
         // Only show Staff members that are not allocated
         $staffMembersNotAllocated = User::whereNotIn('id', $notAllocated)->get();
 

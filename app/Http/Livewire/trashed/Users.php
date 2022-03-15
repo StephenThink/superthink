@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire\trashed;
 
+use App\Models\Team;
 use App\Models\User;
+use App\Models\WorkingDay;
 use Livewire\Component;
 
 class Users extends Component
@@ -54,6 +56,13 @@ class Users extends Component
     {
         $user = User::onlyTrashed()->findOrFail($id);
         $user->restore();
+
+        $workdayUser = WorkingDay::onlyTrashed()->findOrFail($id);
+        $workdayUser->restore();
+
+        $userTeam = Team::onlyTrashed()->findOrFail($id);
+        $userTeam->restore();
+
         session()->flash('message', $user->name . 's record has been successfully restored.');
         $this->redirectIfEmpty();
     }
@@ -63,6 +72,13 @@ class Users extends Component
 
         $user = User::onlyTrashed()->whereId($this->modelId)->first();
         $user->forceDelete();
+
+        $workdayUser = WorkingDay::onlyTrashed()->findOrFail($this->modelId);
+        $workdayUser->forceDelete();
+
+        $userTeam = Team::onlyTrashed()->findOrFail($this->modelId);
+        $userTeam->forceDelete();
+
         $this->modalConfirmDeleteVisible = false;
 
         session()->flash('trash', $user->name . 's record has been successfully obliterated.');
