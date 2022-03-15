@@ -10,7 +10,7 @@
         </div>
         <div class="h-12 w-full flex items-center">
             <a href="{{ url('/')}}" class="w-full">
-                <img class="h-8" src="{{ url('/img/logo.svg')}}" />
+                <x-jet-application-mark class="block h-9 w-auto" />
             </a>
         </div>
         <div class="flex justify-end sm:w-8/12">

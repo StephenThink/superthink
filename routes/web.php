@@ -21,8 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => [
     'auth:sanctum',
     'verified',
-    'accessrole',
-    
+
 ]], function () {
 
     Route::get('/dashboard', function () {
@@ -45,10 +44,6 @@ Route::group(['middleware' => [
     Route::get('/users/trash', function () {
         return view('admin.trashed.users');
     })->name('users-trashed');
-
-    Route::get('/user-permissions', function () {
-        return view('admin.user-permissions');
-    })->name('user-permissions');
 
     Route::get('/holidays', function () {
         return view('admin.holidays');
