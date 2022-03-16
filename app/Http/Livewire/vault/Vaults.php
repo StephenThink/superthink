@@ -179,6 +179,13 @@ class Vaults extends Component
         $this->modalConfirmDeleteVisible = true;
     }
 
+
+    public function test()
+    {
+        dd("hi");
+
+    }
+
     public function render()
     {
         $clients = Client::all();

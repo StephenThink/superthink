@@ -1017,12 +1017,6 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
-.col-span-5 {
-  grid-column: span 5 / span 5;
-}
-.col-span-4 {
-  grid-column: span 4 / span 4;
-}
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -1229,9 +1223,6 @@ select {
 .w-1\/6 {
   width: 16.666667%;
 }
-.w-1\/4 {
-  width: 25%;
-}
 .w-96 {
   width: 24rem;
 }
@@ -1261,9 +1252,6 @@ select {
 }
 .shrink-0 {
   flex-shrink: 0;
-}
-.shrink {
-  flex-shrink: 1;
 }
 .origin-top-left {
   transform-origin: top left;
@@ -1326,9 +1314,6 @@ select {
 }
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -1532,13 +1517,13 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
-.border-red-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity));
-}
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-red-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 .border-gray-400 {
   --tw-border-opacity: 1;
@@ -1604,13 +1589,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(41 41 41 / var(--tw-bg-opacity));
 }
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-}
 .bg-yellow {
   --tw-bg-opacity: 1;
   background-color: rgb(255 199 52 / var(--tw-bg-opacity));
+}
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 .bg-gray-900 {
   --tw-bg-opacity: 1;
@@ -2482,6 +2467,20 @@ select {
   line-height: 1.25;
   --tw-text-opacity: 1;
   color: rgb(41 41 41 / var(--tw-text-opacity));
+}
+/* Vault */
+.vault-link {
+  display: flex;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+.vault-link:hover {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(255 199 52 / var(--tw-ring-opacity));
 }
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
