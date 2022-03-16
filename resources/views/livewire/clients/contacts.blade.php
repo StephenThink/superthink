@@ -13,13 +13,13 @@
    </div>
 
 
-    <div class="w-full flex pb-10">
-        <div class="w-3/6 mx-1">
+    <div class="search-bar">
+        <div class="search-base-settings md:w-3/6 mx-1">
             <input wire:model.debounce.300ms="search" type="text"
                 class="search-input"
                 placeholder="Search Contacts...">
         </div>
-        <div class="w-1/6 relative mx-1">
+        <div class="search-base-settings md:w-1/6 relative mx-1">
             <select wire:model.lazy="orderBy"
                 class="search-dropbox"
                 id="grid-state">
@@ -34,7 +34,7 @@
 
             </div>
         </div>
-        <div class="w-1/6 relative mx-1">
+        <div class="search-base-settings md:w-1/6 relative mx-1">
             <select wire:model.lazy="orderAsc"
                 class="search-dropbox"
                 id="grid-state">
@@ -45,7 +45,7 @@
 
             </div>
         </div>
-        <div class="w-1/6 relative mx-1">
+        <div class="search-base-settings md:w-1/6 relative mx-1">
             <select wire:model.lazy="perPage"
                 class="search-dropbox"
                 id="grid-state">

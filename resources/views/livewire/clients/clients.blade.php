@@ -12,12 +12,12 @@
    </div>
 
     @if ($data->count())
-    <div class="w-full flex pb-10">
-        <div class="w-3/6 mx-1">
+    <div class="search-bar">
+        <div class="search-base-settings md:w-3/6 mx-1">
             <input wire:model.debounce.300ms="search" type="text" class="search-input"placeholder="Search clients...">
         </div>
 
-        <div class="w-1/6 relative mx-1">
+        <div class="search-base-settings md:w-1/6 relative mx-1">
             <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
@@ -26,7 +26,7 @@
 
             </div>
         </div>
-        <div class="w-1/6 relative mx-1">
+        <div class="search-base-settings md:w-1/6 relative mx-1">
             <select wire:model="perPage" class="search-dropbox" id="grid-state">
                 <option>10</option>
                 <option>25</option>

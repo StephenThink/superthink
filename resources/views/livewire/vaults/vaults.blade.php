@@ -12,42 +12,44 @@
    </div>
 
 
-    <div class="w-full flex pb-10">
-        <div class="w-3/6 mx-1">
-            <input wire:model.debounce.300ms="search" type="text" class="search-input" placeholder="Search Passwords...">
-        </div>
-        <div class="w-1/6 relative mx-1">
-            <select wire:model="orderBy" class="search-dropbox" id="grid-state">
 
-                <option value="title">Title</option>
-                <option value="login">Login</option>
-                <option value="url">URL</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+<div class="search-bar">
+    <div class="search-base-settings md:w-3/6 mx-1">
+        <input wire:model.debounce.300ms="search" type="text" class="search-input" placeholder="Search Passwords...">
+    </div>
+    <div class="search-base-settings md:w-1/6 relative mx-1">
+        <select wire:model="orderBy" class="search-dropbox" id="grid-state">
 
-            </div>
-        </div>
-        <div class="w-1/6 relative mx-1">
-            <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
-                <option value="1">Ascending</option>
-                <option value="0">Descending</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <option value="title">Title</option>
+            <option value="login">Login</option>
+            <option value="url">URL</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
 
-            </div>
-        </div>
-        <div class="w-1/6 relative mx-1">
-            <select wire:model="perPage" class="search-dropbox" id="grid-state">
-                <option>10</option>
-                <option>25</option>
-                <option>50</option>
-                <option>100</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-
-            </div>
         </div>
     </div>
+    <div class="search-base-settings md:w-1/6 relative mx-1">
+        <select wire:model="orderAsc" class="search-dropbox" id="grid-state">
+            <option value="1">Ascending</option>
+            <option value="0">Descending</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+
+        </div>
+    </div>
+    <div class="search-base-settings md:w-1/6 relative mx-1">
+        <select wire:model="perPage" class="search-dropbox" id="grid-state">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+
+        </div>
+    </div>
+</div>
+
     {{-- The data table --}}
     @include('partials.admin.vault.table')
 
