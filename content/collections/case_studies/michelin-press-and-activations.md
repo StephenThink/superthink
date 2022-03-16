@@ -21,7 +21,7 @@ core:
   - activations
 services_filter:
   - print-design
-updated_by: e85953fb-52c6-4488-8c8b-c90f68b2bb10
-updated_at: 1645464113
+updated_by: efe46a1d-e1fe-4d33-b473-6e8d699112ed
+updated_at: 1647013176
 thumbnail: work/experience/michelin-press-activations/Michelin-Various-35-Experience-Full-Image-2732x1536.jpg
 ---
