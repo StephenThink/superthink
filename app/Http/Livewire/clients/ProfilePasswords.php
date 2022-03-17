@@ -8,7 +8,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 
-class Profile extends Component
+class ProfilePasswords extends Component
 {
     use WithPagination;
 
@@ -34,7 +34,7 @@ class Profile extends Component
     public $client;
     public $vaults;
 
-     /**
+    /**
      * The validation rules
      *
      * @return void
@@ -106,7 +106,7 @@ class Profile extends Component
         // $this->reset();
     }
 
-/**
+    /**
      * The update function
      *
      * @return void
@@ -175,7 +175,7 @@ class Profile extends Component
     {
 
 
-        return view('livewire.clients.profile', [
+        return view('livewire.clients.profile-passwords', [
             'client' => $this->client,
             'data' => $this->vaults,
             'clients' => Client::all(),

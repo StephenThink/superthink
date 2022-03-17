@@ -1,4 +1,4 @@
-<div class="grid grid-cols-1 md:grid-cols-2 lg:hidden gap-1">
+<div class="grid grid-cols-1 md:hidden gap-1">
     @if ($data->count())
     @foreach ($data as $item)
     <div class="grid-mobile-view">
