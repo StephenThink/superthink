@@ -3,19 +3,13 @@
     @foreach ($data as $item)
     <div class="grid-mobile-view">
         <div class="grid-left-column">
-            <div>Client</div>
-            <div>Title</div>
-            <div>URL</div>
-            <div>Username</div>
-            <div>Password</div>
+            <div>Name</div>
+            <div>Description</div>
         </div>
 
         <div class="grid-right-column">
-            <div>{{ $item->clients->name }}</div>
-            <div>{{ $item->title }}</div>
-            <div>{{ $item->url }}</div>
-            <div>{{ $item->login }}</div>
-            <div>{{ $item->password }}</div>
+            <div>{{ $item->name }}</div>
+            <div>{{ $item->description }}</div>
         </div>
     </div>
     @endforeach

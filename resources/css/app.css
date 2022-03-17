@@ -145,16 +145,24 @@
     @apply bg-red-500 px-2 py-1 rounded-lg w-10 flex items-center justify-center cursor-pointer;
 }
 
-.grid-row-header {
-    @apply text-sm w-[5.5rem] text-yellow bg-header-dark py-1 pl-2;
+.grid-mobile-view {
+    @apply rounded-lg bg-gray-200 flex;
 }
 
-.grid-row-style {
-    @apply w-full flex items-center;
+.grid-left-column {
+    @apply flex flex-col bg-header-dark text-yellow text-sm rounded-l-lg px-2 py-1 space-y-1;
 }
 
-.grid-row-data {
-    @apply pl-2  w-10/12;
+.grid-right-column {
+    @apply flex flex-col space-y-1 rounded-r-lg pl-2 text-sm justify-center w-full;
+}
+
+.grid-li-list {
+    @apply p-[2px] border border-yellow  text-sm rounded-full  mb-1 bg-yellow bg-opacity-50 flex items-center text-header-dark;
+}
+
+.tailwind-pagination {
+    @apply mt-5 hidden md:flex;
 }
 
 /* Alert Messages */

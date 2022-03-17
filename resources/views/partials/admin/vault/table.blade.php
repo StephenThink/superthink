@@ -71,7 +71,7 @@
     </div>
 </div>
 
-<div class="mt-5 hidden md:flex">
+<div class="tailwind-pagination">
     {{ $data->links() }}
 </div>
 
