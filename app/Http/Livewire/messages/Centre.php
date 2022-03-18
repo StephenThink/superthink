@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\messages;
 
+use App\Models\User;
+use App\Models\Holiday;
 use App\Models\Message;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -11,6 +13,7 @@ class Centre extends Component
     use WithPagination;
 
     public $modalFormVisible;
+    public $sendModalFormVisible;
     public $modalConfirmDeleteVisible;
     public $modelId;
 
@@ -36,6 +39,9 @@ class Centre extends Component
     public function rules()
     {
         return [
+            'user_id' => 'required',
+            'subject' => 'required',
+            'message' => 'required',
         ];
     }
 
@@ -54,7 +60,6 @@ class Centre extends Component
         $this->message = $data->message;
         $this->from = $data->from;
         $this->subject = $data->subject;
-
     }
 
     /**
@@ -82,8 +87,10 @@ class Centre extends Component
     public function create()
     {
         $this->validate();
+        $this->read = 0;
+        $this->from = auth()->user()->id;
         Message::create($this->modelData());
-        $this->modalFormVisible = false;
+        $this->sendModalFormVisible = false;
         $this->reset();
     }
 
@@ -95,8 +102,8 @@ class Centre extends Component
     public function read()
     {
         return Message::search($this->search)
-        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-        ->paginate($this->perPage);
+            ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+            ->paginate($this->perPage);
     }
 
     /**
@@ -119,8 +126,8 @@ class Centre extends Component
     public function delete()
     {
         $forTrash = Message::where('user_id', auth()->user()->id)
-                ->whereRead('1')
-                ->delete();
+            ->whereRead('1')
+            ->delete();
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
     }
@@ -146,7 +153,7 @@ class Centre extends Component
     {
         $this->resetValidation();
         $this->reset();
-        $this->modalFormVisible = true;
+        $this->sendModalFormVisible = true;
     }
 
     /**
@@ -158,9 +165,11 @@ class Centre extends Component
      */
     public function modalFormVisible($id)
     {
+
         $this->modalFormVisible = true;
         $this->modelId = $id;
         $this->loadModel();
+        Message::whereId($id)->update(['read' => '1']);
     }
 
     /**
@@ -174,6 +183,18 @@ class Centre extends Component
         $this->modalConfirmDeleteVisible = true;
     }
 
+    public function toggleRead($id)
+    {
+
+        $read = Message::whereId($id)->pluck('read')->first();
+        if ($read == 0) {
+            // Change to 1 to reflect its been read
+            Message::whereId($id)->update(['read' => '1']);
+        } else {
+            // Change to 0 to reflect its been unread
+            Message::whereId($id)->update(['read' => '0']);
+        }
+    }
 
 
     public function viewAllMessages()
@@ -183,13 +204,59 @@ class Centre extends Component
 
     public function viewUnreadMessages()
     {
+    }
 
+    public function granted($eventId, $messageId)
+    {
+        // Need to change the holiday from pending to autorised
+        $event = Holiday::find($eventId);
+        $event->update([
+            'pending' => 0,
+            'authorised' => 1,
+        ]);
+
+        // Send message to User to say its granted
+        Message::create([
+            'user_id' => $event->user_id,
+            'from' => auth()->user()->id,
+            'subject' => 'Holiday Granted',
+            'message' => $event->daysTaken . " days starting from " . $event->start,
+            'requestedId' => $event->id,
+            'read' => 0,
+        ]);
+
+        // Update Current Message to Read
+        Message::find($messageId)->update(['read' => 1]);
+    }
+
+    public function denyed($eventId, $messageId)
+    {
+        // Need to change the holiday from pending to not authorised
+        $event = Holiday::find($eventId);
+
+        User::findOrFail($event->user_id)->increment('leaveDays', $event->daysTaken);
+        Holiday::destroy($eventId);
+
+        // Send message to User to say its granted
+        Message::create([
+            'user_id' => $event->user_id,
+            'from' => auth()->user()->id,
+            'subject' => 'Holiday Denyed',
+            'message' => $event->daysTaken . " days not starting from " . $event->start,
+            'requestedId' => 0,
+            'read' => 0,
+        ]);
+
+        // Update Current Message to Read
+        Message::find($messageId)->update(['read' => 1]);
     }
 
     public function render()
     {
         return view('livewire.messages.centre', [
             'data' => $this->read(),
+            'users' => User::all(),
+            'unreadCount' => Message::where('user_id', auth()->user()->id)->whereRead('0')->get()->count(),
         ]);
     }
 }
