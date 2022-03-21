@@ -38,6 +38,13 @@
                     @include('partials.navigation.dropdowns.admin')
                 </div>
 
+                @can('is-super')
+                 <!-- Super Dropdown -->
+                <div class="ml-3 relative">
+                    @include('partials.navigation.dropdowns.super')
+                </div>
+                @endcan
+
                 <!-- Settings Dropdown -->
                 <div class="ml-3 relative">
                     @include('partials.navigation.dropdowns.profile')

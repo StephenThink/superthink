@@ -194,3 +194,9 @@
 .search-base-settings {
     @apply w-full;
 }
+
+/* Message Center */
+
+.animated-mail {
+    @apply transition duration-300 ease-in-out hover:scale-150 hover:text-yellow;
+}

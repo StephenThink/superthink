@@ -70,7 +70,7 @@ Route::group(['middleware' => [
     })->name('vaults');
 
     Route::get('/clients/profile/{id}', function ($id) {
-        return view('clients.profile', ['id'=>$id]);
+        return view('clients.profile', ['id' => $id]);
     })->name('client-profile');
 
     Route::get('/clients/contacts', function () {
@@ -80,6 +80,10 @@ Route::group(['middleware' => [
     Route::get('/messages', function () {
         return view('messages.centre');
     })->name('messages-centre');
+
+    Route::get('/messages/trash', function () {
+        return view('admin.trashed.messages');
+    })->name('messages-trashed');
 });
 
 

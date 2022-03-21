@@ -22,7 +22,7 @@ class CreateMessagesTable extends Migration
             $table->timestamps();
             $table->string('subject');
             $table->integer('requestedId')->default(0);
-
+            $table->softDeletes();
         });
     }
 

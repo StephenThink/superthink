@@ -1,8 +1,8 @@
-<x-jet-dropdown align="right" width="60">
+{{-- <x-jet-dropdown align="right" width="60">
     <x-slot name="trigger">
         <span class="inline-flex rounded-md">
             <button type="button" class="nav-dropdown relative">
-{{-- If to check to see if you have a message and if you did then it would display a different icon --}}
+{{-- If to check to see if you have a message and if you did then it would display a different icon
                 @if (\App\Models\Message::where('user_id', auth()->user()->id)->whereRead('0')->get()->count() > 0)
                     <div class="absolute -top-1 right-[25px] text-yellow flex items-center justify-center rounded-full">
                         {{ \App\Models\Message::where('user_id', auth()->user()->id)->whereRead('0')->get()->count() }}
@@ -37,4 +37,19 @@
 
         </div>
     </x-slot>
-</x-jet-dropdown>
+</x-jet-dropdown> --}}
+
+<!-- Navigation Links -->
+<div class="hidden space-x-8 sm:-my-px md:ml-10 sm:flex sm:items-center">
+    <x-jet-nav-link href="{{ route('messages-centre') }}" :active="request()->routeIs('messages-centre')">
+        @if (\App\Models\Message::where('user_id', auth()->user()->id)->whereRead('0')->get()->count() > 0)
+        <div class="text-yellow flex items-center justify-center rounded-full mr-2">
+            {{ \App\Models\Message::where('user_id', auth()->user()->id)->whereRead('0')->get()->count() }}
+        </div>
+        @include('partials.svgs.mail')
+    @else
+        @include('partials.svgs.openmail')
+    @endif
+    </x-jet-nav-link>
+
+</div>

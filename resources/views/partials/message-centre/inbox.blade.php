@@ -29,11 +29,11 @@
                             <td class="px-6 py-2">
                                 @if ($item->read)
                                 <div wire:click="toggleRead({{$item->id}})">
-                                    @include('partials.svgs.openmail')
+                                    @include('partials.svgs.openmail', ['classes' => 'animated-mail'])
                                 </div>
                                 @else
                                 <div wire:click="toggleRead({{$item->id}})">
-                                    @include('partials.svgs.mail')
+                                    @include('partials.svgs.mail', ['classes' => 'animated-mail'])
                                 </div>
                                 @endif
                             </td>

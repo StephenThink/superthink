@@ -2,7 +2,7 @@
     <x-slot name="trigger">
         <span class="inline-flex rounded-md">
             <button type="button" class="nav-dropdown">
-                {{ __('Admin') }}
+                @include('partials.svgs.super')
 
                 <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                     fill="currentColor">
@@ -16,13 +16,7 @@
 
     <x-slot name="content">
         <div class="w-60">
-            @include('partials.navigation.dropdowns.sub-menus.admin.frontend')
-
-            @include('partials.navigation.dropdowns.sub-menus.admin.user')
-
-            @include('partials.navigation.dropdowns.sub-menus.admin.holiday')
-
-            @include('partials.navigation.dropdowns.sub-menus.admin.client')
+            @include('partials.navigation.dropdowns.sub-menus.super.trashed')
         </div>
     </x-slot>
 </x-jet-dropdown>
