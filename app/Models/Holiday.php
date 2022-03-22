@@ -11,15 +11,16 @@ class Holiday extends Model
     use HasFactory;
 
     protected $fillable = [
-    'user_id',
-    'start',
-    'end',
-    'halfDay',
-    'daysTaken',
-    'dateAuthorised',
-    'pending',
-    'authorised',
-    'authorisedBy'
+        'user_id',
+        'start',
+        'end',
+        'halfDay',
+        'daysTaken',
+        'dateAuthorised',
+        'pending',
+        'authorised',
+        'authorisedBy',
+        'bankholiday'
     ];
 
     public function users()
@@ -31,6 +32,4 @@ class Holiday extends Model
     {
         return $this->belongsTo('App\Models\User', 'authorisedBy');
     }
-
-
 }

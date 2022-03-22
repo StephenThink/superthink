@@ -3,9 +3,14 @@
         <div class="px-4 py-3">
         @include('partials.alerts.alerts')
         </div>
+        <div class="flex space-x-2">
         <x-jet-button wire:click="createShowModal">
             {{ __('Create') }}
         </x-jet-button>
+        <x-jet-button wire:click="insertBankHolidays">
+            {{ __('Assign Bank Holidays to Users') }}
+        </x-jet-button>
+    </div>
    </div>
 
     <div class="search-bar">

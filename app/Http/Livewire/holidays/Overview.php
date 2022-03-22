@@ -386,7 +386,10 @@ class Overview extends Component
         $currentYear = Carbon::now()->year;
 
         // Get all the holidays for this year and order them by the start date
-        $holidays = Holiday::whereYear('start', $currentYear)->orderBy('start')->get();
+        $holidays = Holiday::where('bankholiday', 0)
+            ->whereYear('start', $currentYear)
+            ->orderBy('start')
+            ->get();
 
         // Create Blank Array
         $allHolidays = [];

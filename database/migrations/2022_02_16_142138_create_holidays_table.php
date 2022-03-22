@@ -24,6 +24,7 @@ class CreateHolidaysTable extends Migration
             $table->bigInteger('authorisedBy')->nullable();
             $table->boolean('pending')->default(false);
             $table->boolean('authorised')->default(false);
+            $table->boolean('bankholiday')->default(false);
             $table->timestamps();
         });
     }

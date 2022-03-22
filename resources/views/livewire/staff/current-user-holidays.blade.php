@@ -18,6 +18,7 @@
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead>
                             <tr>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Type</th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Date Start</th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Date Finish</th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Half Day?</th>
@@ -30,7 +31,11 @@
                             @if ($holidays->count())
                                 @foreach ($holidays as $item)
                                     <tr>
-
+                                        <td class="px-6 py-2">@if ($item->bankholiday)
+                                            {{\App\Models\BankHoliday::where('bankdate',\Carbon\Carbon::parse($item->start)->toDateString())->pluck('description')->first()}}
+                                        @else
+                                            Requested
+                                        @endif</td>
                                         <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->start)->format('D jS M, Y') }}</td>
                                         <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->end)->format('D jS M, Y') }}</td>
                                         <td class="px-6 py-2">@if ( $item->halfDay  == 1)
@@ -46,7 +51,7 @@
                                             {{-- <x-jet-button wire:click="">
                                                 {{ __('Download') }}
                                             </x-jet-button> --}}
-                                            @if ($item->authorised)
+                                            @if ($item->authorised && !$item->bankholiday)
 
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
                                                 @include('partials.svgs.trash')

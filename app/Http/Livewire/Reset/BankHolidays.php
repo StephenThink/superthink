@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Reset;
 
 use Carbon\Carbon;
+use App\Models\User;
+use App\Models\Holiday;
 use Livewire\Component;
 use App\Models\BankHoliday;
 use Livewire\WithPagination;
@@ -181,6 +183,30 @@ class BankHolidays extends Component
         $this->modelId = $id;
 
         $this->modalConfirmDeleteVisible = true;
+    }
+
+    public function insertBankHolidays()
+    {
+        $users = User::pluck('id');
+        $banks = BankHoliday::all();
+
+        foreach ($users as $key => $user) {
+            foreach ($banks as $k => $bank) {
+                Holiday::create([
+                    'user_id' => $user,
+                    'start' => Carbon::parse($bank->bankdate)->toDateString(),
+                    'end' => Carbon::parse($bank->bankdate)->toDateString(),
+                    'daysTaken' => 1,
+                    'dateAuthorised' => now(),
+                    'authorisedBy' => auth()->user()->id,
+                    'pending' => '0',
+                    'authorised' => '1',
+                    'bankholiday' => '1',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]);
+            }
+        }
     }
 
     public function render()
