@@ -23,7 +23,6 @@ class Holidays extends Component
     {
         $users = User::select('id', 'name', 'dateStarted')->get();
         foreach ($users as $key => $user) {
-
             $dE = Carbon::parse($user->dateStarted)->diffInYears();
 
             // This sets out to add extra days to the base holiday value
@@ -74,7 +73,58 @@ class Holidays extends Component
 
     public function updateHolidays($id, $resetDaysValue)
     {
-        User::find($id)->update(['leaveDays' => $resetDaysValue]);
+        $user = User::find($id);
+        $user->update(['leaveDays' => $resetDaysValue]);
+        session()->flash('message', $user->name . 's record has been successfully updated.');
+        $this->reset();
+    }
+
+    public function updateAll()
+    {
+        $users = User::select('id', 'name', 'dateStarted')->get();
+        foreach ($users as $key => $user) {
+
+            $dE = Carbon::parse($user->dateStarted)->diffInYears();
+
+            // This sets out to add extra days to the base holiday value
+            // However you cannot have anymore than 25 days.
+            switch ($dE) {
+                case 1:
+                    $daysToTake = $this->baseHolidays;
+                    break;
+
+                case 2:
+                    $daysToTake = $this->baseHolidays;
+                    break;
+
+                case 3:
+                    $daysToTake = $this->baseHolidays + 1;
+                    break;
+
+                case 4:
+                    $daysToTake = $this->baseHolidays + 2;
+                    break;
+
+                case 5:
+                    $daysToTake = $this->baseHolidays + 3;
+                    break;
+
+                case 6:
+                    $daysToTake = $this->baseHolidays + 4;
+                    break;
+
+                case 7:
+                    $daysToTake = $this->baseHolidays + 5;
+                    break;
+
+                default:
+                    $daysToTake = 25;
+            }
+
+            $user->update(['leaveDays' => $daysToTake]);
+            session()->flash('message', 'All records has been successfully updated.');
+            // $user->entitlement = $daysToTake;
+        }
     }
 
     public function render()

@@ -1,8 +1,11 @@
 <div class="p-6">
-    <div class="flex items-center justify-between ">
+    <div class="flex items-center justify-between p-2">
         <div class="px-4 py-3">
         @include('partials.alerts.alerts')
         </div>
+        <x-jet-button wire:click="updateAll">
+            {{ __('Update All Holidays') }}
+        </x-jet-button>
    </div>
 
    <div class="flex-col hidden lg:flex">
