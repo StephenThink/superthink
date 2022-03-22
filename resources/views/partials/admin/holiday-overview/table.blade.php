@@ -54,16 +54,16 @@
                                 </x-jet-button>
                                 <x-jet-danger-button class="ml-2" wire:click="denyed({{$item->id}})">
                                     {{ __('Deny') }}
-                                </x-jet-button>
+                                </x-jet-danger-button>
                                 @else
                                 <x-jet-button wire:click="updateShowModal({{ $item->id }})">
                                     @include('partials.svgs.update')
                                 </x-jet-button>
                                 @if ( $item->start >= now() )
                                 <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                    @include('partials.svgs.trash')
-                                    </x-jet-button>
-                                    @endif
+                                @include('partials.svgs.trash')
+                                </x-jet-danger-button>
+                                @endif
 
                                 @endif
                             </td>

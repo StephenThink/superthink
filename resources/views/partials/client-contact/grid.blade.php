@@ -28,7 +28,7 @@
                 <x-jet-danger-button class="" wire:click="deleteShowModal({{ $item->id }})">
                     {{ __("Delete")}}
 
-                    </x-jet-button>
+                    </x-jet-danger-button>
             </div>
         </div>
     </div>

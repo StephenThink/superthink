@@ -23,6 +23,6 @@
         </x-jet-secondary-button>
         <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
             {{ __('Create') }}
-        </x-jet-danger-button>
+        </x-jet-button>
     </x-slot>
 </x-jet-dialog-modal>

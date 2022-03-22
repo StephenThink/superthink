@@ -39,7 +39,7 @@ class Overview extends Component
 
     public $leaveDays;
 
-        /**
+    /**
      * The validation rules
      *
      * @return void
@@ -55,7 +55,7 @@ class Overview extends Component
         ];
     }
 
-         /**
+    /**
      * Runs everytime the title gets updated
      *
      * @param  mixed $value
@@ -67,9 +67,9 @@ class Overview extends Component
         // calculate True Days
 
         $workDays = WorkingDay::where('user_id', $this->user_id)
-        ->select('monday','tuesday','wednesday','thursday','friday','saturday','sunday')
-        ->first()
-        ->toArray();
+            ->select('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
+            ->first()
+            ->toArray();
 
         $total = 0;
 
@@ -80,11 +80,11 @@ class Overview extends Component
         foreach ($period as $key => $value) {
             $index = strtolower(Carbon::parse($value)->format('l'));
             if ($workDays[$index] == 1)
-            $total++;
+                $total++;
         }
 
         // If you they take half a day then subtract it from the total.
-        if($this->halfDay) {
+        if ($this->halfDay) {
             $this->daysTaken = $total - .5;
         } else {
             $this->daysTaken = $total;
@@ -107,14 +107,12 @@ class Overview extends Component
                 $dayDifference = $oriDays - $this->daysTaken;
 
                 User::findOrFail($this->user_id)->increment('leaveDays', $dayDifference);
-
             } else {
-            // If There have been more days been taken do this
-            $dayDifference = $this->daysTaken - $oriDays;
+                // If There have been more days been taken do this
+                $dayDifference = $this->daysTaken - $oriDays;
 
 
                 User::findOrFail($this->user_id)->decrement('leaveDays', $dayDifference);
-
             }
         }
     }
@@ -138,7 +136,6 @@ class Overview extends Component
         $this->daysTaken = $data->daysTaken;
         $this->authorisedBy = $data->authorisedBy;
         $this->authorised = $data->authorised;
-
     }
 
     /**
@@ -162,7 +159,7 @@ class Overview extends Component
     }
 
 
-        /**
+    /**
      * The create function.
      *
      * @return void
@@ -203,12 +200,9 @@ class Overview extends Component
             $this->modalFormVisible = false;
             $this->reset();
             session()->flash('message', 'Holiday Created.');
-
         } else {
             $this->daysErrorVisible = true;
-
         }
-
     }
 
     /**
@@ -221,7 +215,7 @@ class Overview extends Component
         return User::paginate(10);
     }
 
-        /**
+    /**
      * The update function
      *
      * @return void
@@ -236,8 +230,8 @@ class Overview extends Component
         Holiday::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
 
-         // Send message to User to say its granted
-         Message::create([
+        // Send message to User to say its granted
+        Message::create([
             'user_id' => $this->user_id,
             'from' => auth()->user()->id,
             'subject' => 'Holiday Updated',
@@ -246,10 +240,9 @@ class Overview extends Component
             'read' => 0,
         ]);
         session()->flash('message', 'Holiday Updated.');
-
     }
 
-        /**
+    /**
      * Shows the create modal
      *
      * @return void
@@ -297,8 +290,8 @@ class Overview extends Component
 
         Holiday::destroy($this->modelId);
 
-         // Send message to User to say its granted
-         Message::create([
+        // Send message to User to say its granted
+        Message::create([
             'user_id' => $event->user_id,
             'from' => auth()->user()->id,
             'subject' => 'Holiday Removed',
@@ -309,7 +302,6 @@ class Overview extends Component
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
         session()->flash('trash', 'Holiday Deleted.');
-
     }
 
     /**
@@ -352,36 +344,33 @@ class Overview extends Component
         ]);
 
         session()->flash('message', 'Holiday Granted.');
-
     }
 
     public function denyed($eventId)
-{
-    // Need to change the holiday from pending to not authorised
-    $event = Holiday::find($eventId);
+    {
+        // Need to change the holiday from pending to not authorised
+        $event = Holiday::find($eventId);
 
-    User::findOrFail($event->user_id)->increment('leaveDays', $event->daysTaken);
-    Holiday::destroy($eventId);
+        User::findOrFail($event->user_id)->increment('leaveDays', $event->daysTaken);
+        Holiday::destroy($eventId);
 
-    // Send message to User to say its granted
-    Message::create([
-        'user_id' => $event->user_id,
-        'from' => auth()->user()->id,
-        'subject' => 'Holiday Denyed',
-        'message' => $event->daysTaken . " days not starting from " . $event->start,
-        'requestedId' => 0,
-        'read' => 0,
-    ]);
-    session()->flash('trash', 'Holiday Denied.');
-
-}
+        // Send message to User to say its granted
+        Message::create([
+            'user_id' => $event->user_id,
+            'from' => auth()->user()->id,
+            'subject' => 'Holiday Denyed',
+            'message' => $event->daysTaken . " days not starting from " . $event->start,
+            'requestedId' => 0,
+            'read' => 0,
+        ]);
+        session()->flash('trash', 'Holiday Denied.');
+    }
 
 
 
     public function render()
     {
-        if(Gate::denies('is-holiday-manager'))
-        {
+        if (Gate::denies('is-holiday-manager')) {
             return <<<'blade'
 
             @include('partials.blades.denies')
@@ -403,8 +392,8 @@ class Overview extends Component
         $allHolidays = [];
 
         foreach ($users as $user) {
-                // See if a user has a holiday and if they do add them to their array
-                $allHolidays[$user->name] = $holidays->where('user_id', '=', $user->id);
+            // See if a user has a holiday and if they do add them to their array
+            $allHolidays[$user->name] = $holidays->where('user_id', '=', $user->id);
         }
 
 

@@ -99,7 +99,7 @@
                                     </x-jet-button>
                                     <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
                                         {{ __('Destroy') }}
-                                        </x-jet-button>
+                                    </x-jet-danger-button>
                                 </td>
                             </tr>
                             @endforeach

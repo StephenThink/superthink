@@ -23,6 +23,8 @@
             @include('partials.navigation.dropdowns.sub-menus.admin.holiday')
 
             @include('partials.navigation.dropdowns.sub-menus.admin.client')
+
+            @include('partials.navigation.dropdowns.sub-menus.admin.reset')
         </div>
     </x-slot>
 </x-jet-dropdown>

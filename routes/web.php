@@ -84,6 +84,10 @@ Route::group(['middleware' => [
     Route::get('/messages/trash', function () {
         return view('admin.trashed.messages');
     })->name('messages-trashed');
+
+    Route::get('/reset/holidays', function () {
+        return view('reset.holidays');
+    })->name('reset-holidays');
 });
 
 

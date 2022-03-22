@@ -39,7 +39,7 @@
                                             @if ( $item->start >= now() )
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
                                                 @include('partials.svgs.trash')
-                                            </x-jet-button>
+                                            </x-jet-danger-button>
                                             @endif
                                         </td>
                                     </tr>

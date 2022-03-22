@@ -29,7 +29,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name', 'email', 'password','role','dateStarted'
+        'name', 'email', 'password', 'role', 'dateStarted', 'leaveDays'
     ];
 
     /**
@@ -61,6 +61,7 @@ class User extends Authenticatable
      */
     protected $appends = [
         'profile_photo_url',
+        'entitlement',
     ];
 
     /**
@@ -128,8 +129,8 @@ class User extends Authenticatable
     public static function search($search)
     {
         return empty($search) ? static::query()
-            : static::query()->where('name', 'like', '%'.$search.'%')
-                ->orWhere('email', 'like', '%'.$search.'%');
+            : static::query()->where('name', 'like', '%' . $search . '%')
+            ->orWhere('email', 'like', '%' . $search . '%');
     }
 
 

@@ -1,4 +1,11 @@
-<div class="flex-col hidden lg:flex">
+<div class="p-6">
+    <div class="flex items-center justify-between ">
+        <div class="px-4 py-3">
+        @include('partials.alerts.alerts')
+        </div>
+   </div>
+
+   <div class="flex-col hidden lg:flex">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -10,10 +17,10 @@
                                 Name</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                Email</th>
+                                Date Started</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                Roles</th>
+                                Entitlement</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                             </th>
@@ -24,20 +31,14 @@
                         @foreach ($data as $item)
                         <tr>
                             <td class="px-6 py-2">{{ $item->name }}</td>
-                            <td class="px-6 py-2">{{ $item->email }}</td>
-                            <td class="px-6 py-2">
-                                <div class="flex space-x-1 flex-wrap">@foreach ($item->roles as $role)
-                                    <div class="grid-li-list">{{ $role->name }}</div>
-                                    @endforeach
-                                </div>
+                            <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->dateStarted)->toFormattedDateString() }} - {{ \Carbon\Carbon::parse($item->dateStarted)->diffInYears() }} year(s)</td>
+                            <td class="px-6 py-2">{{ $item->entitlement }}
+
                             </td>
                             <td class="px-6 py-2 flex justify-end">
-                                <x-jet-button wire:click="updateShowModal({{ $item->id }})">
+                                <x-jet-button wire:click="updateHolidays({{ $item->id }},{{ $item->entitlement }})">
                                     @include('partials.svgs.update')
                                 </x-jet-button>
-                                <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
-                                    @include('partials.svgs.trash')
-                                    </x-jet-danger-button>
                             </td>
                         </tr>
                         @endforeach
@@ -53,9 +54,16 @@
     </div>
 </div>
 
-<div class="tailwind-pagination">
-    {{ $data->links() }}
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
-
-
-@include('partials.admin.user.grid')

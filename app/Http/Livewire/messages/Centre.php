@@ -102,6 +102,7 @@ class Centre extends Component
     public function read()
     {
         return Message::search($this->search)
+            ->where('user_id', auth()->user()->id)
             ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
             ->paginate($this->perPage);
     }
@@ -213,6 +214,8 @@ class Centre extends Component
         $event->update([
             'pending' => 0,
             'authorised' => 1,
+            'authorisedBy' => auth()->user()->id,
+
         ]);
 
         // Send message to User to say its granted

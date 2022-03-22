@@ -76,7 +76,7 @@
                                             </x-jet-button>
                                             <x-jet-danger-button class="ml-2" wire:click="deleteShowModal({{ $item->id }})">
                                                 @include('partials.svgs.trash')
-                                            </x-jet-button>
+                                            </x-jet-danger-button>
                                         </td>
                                     </tr>
                                 @endforeach

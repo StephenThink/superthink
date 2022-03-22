@@ -55,11 +55,11 @@
         @if ($modelId)
             <x-jet-button class="ml-2" wire:click="update" wire:loading.attr="disabled">
                 {{ __('Update') }}
-            </x-jet-danger-button>
+            </x-jet-button>
         @else
             <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
                 {{ __('Create') }}
-            </x-jet-danger-button>
+            </x-jet-button>
         @endif
     </x-slot>
 </x-jet-dialog-modal>
