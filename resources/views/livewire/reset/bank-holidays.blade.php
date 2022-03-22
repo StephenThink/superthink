@@ -7,9 +7,15 @@
         <x-jet-button wire:click="createShowModal">
             {{ __('Create') }}
         </x-jet-button>
+        @if($BHS == 0)
         <x-jet-button wire:click="insertBankHolidays">
             {{ __('Assign Bank Holidays to Users') }}
         </x-jet-button>
+        @else
+        <x-jet-danger-button wire:click="removeBankHolidays">
+            {{ __('Remove Bank Holidays Assigned to Users') }}
+        </x-jet-danger-button>
+        @endif
     </div>
    </div>
 

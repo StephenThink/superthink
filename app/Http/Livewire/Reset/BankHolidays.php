@@ -207,12 +207,30 @@ class BankHolidays extends Component
                 ]);
             }
         }
+        session()->flash('message', 'Everyone has now got their Bank Holidays booked.');
+    }
+
+    public function removeBankHolidays()
+    {
+
+        $hols = Holiday::whereYear('start', Carbon::now()->year)
+            ->where('bankholiday', 1)
+            ->delete();
+        session()->flash('trash', 'Everyone has now got their Bank Holidays removed.');
     }
 
     public function render()
     {
+
+
+        $bankHolidaySet = Holiday::whereYear('start', Carbon::now()->year)
+            ->where('bankholiday', 1)
+            ->get()
+            ->count();
+
         return view('livewire.reset.bank-holidays', [
             'data' => $this->read(),
+            'BHS' => $bankHolidaySet,
         ]);
     }
 }

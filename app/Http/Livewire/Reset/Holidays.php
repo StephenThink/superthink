@@ -28,6 +28,10 @@ class Holidays extends Component
             // This sets out to add extra days to the base holiday value
             // However you cannot have anymore than 25 days.
             switch ($dE) {
+                case 0:
+                    $daysToTake = $this->baseHolidays;
+                    break;
+
                 case 1:
                     $daysToTake = $this->baseHolidays;
                     break;

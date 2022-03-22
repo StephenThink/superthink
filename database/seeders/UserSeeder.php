@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'Stephen Jackson',
-            'dateStarted' => Carbon::now()->toDateString(),
+            'dateStarted' => 'Carbon::now()->toDateString()',
             'leaveDays' => '20',
             'email_verified_at' => Carbon::now(),
             'email' => 'stephen@thinkcreative.uk.com',
@@ -56,6 +56,5 @@ class UserSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
-
     }
 }
