@@ -2,15 +2,16 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Jetstream\HasProfilePhoto;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -51,7 +52,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        // 'dateStarted' => 'date:d-m-Y',
+        'dateStarted' => 'datetime',
     ];
 
     /**
@@ -154,5 +155,11 @@ class User extends Authenticatable
     public function hasAnyRoles(array $role)
     {
         return null !== $this->roles()->whereIn('name', $role)->get();
+    }
+
+
+    public function getDateStartedAttribute($value)
+    {
+        return Carbon::parse($value)->toFormattedDateString();
     }
 }

@@ -13,6 +13,9 @@
                                 Email</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                Started</th>
+                            <th
+                                class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                 Roles</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
@@ -25,6 +28,7 @@
                         <tr>
                             <td class="px-6 py-2">{{ $item->name }}</td>
                             <td class="px-6 py-2">{{ $item->email }}</td>
+                            <td class="px-6 py-2">{{ $item->dateStarted }}</td>
                             <td class="px-6 py-2">
                                 <div class="flex space-x-1 flex-wrap">@foreach ($item->roles as $role)
                                     <div class="grid-li-list">{{ $role->name }}</div>

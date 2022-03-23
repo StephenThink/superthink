@@ -30,7 +30,9 @@
                         <tbody class="bg-white divide-y divide-gray-200">
                             @if ($holidays->count())
                                 @foreach ($holidays as $item)
-                                    <tr>
+                                    <tr class="@if ($item->bankholiday)
+                                        bg-yellow bg-opacity-50
+                                    @endif">
                                         <td class="px-6 py-2">@if ($item->bankholiday)
                                             {{\App\Models\BankHoliday::where('bankdate',\Carbon\Carbon::parse($item->start)->toDateString())->pluck('description')->first()}}
                                         @else
