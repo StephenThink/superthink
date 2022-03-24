@@ -6,9 +6,12 @@ use Carbon\Carbon;
 use App\Models\Holiday;
 use App\Models\Message;
 use Livewire\Component;
+use Carbon\CarbonPeriod;
+use App\Models\WorkingDay;
 use App\Models\BankHoliday;
 use Illuminate\Support\Collection;
 use Asantibanez\LivewireCalendar\LivewireCalendar;
+
 
 class AllHolidaysCalendar extends LivewireCalendar
 {
@@ -31,13 +34,43 @@ class AllHolidaysCalendar extends LivewireCalendar
 
     public function onEventDropped($eventId, $year, $month, $day)
     {
+        $grabUserID = Holiday::find($eventId)->user_id;
+
+        // Get Original Date
+        $oriStart = Carbon::parse(Holiday::find($eventId)->start);
+        $oriEnd = Carbon::parse(Holiday::find($eventId)->end);
+
+        $grabDaysTaken = $oriStart->diffInDays($oriEnd) + 1;
+
         // New Start
         $newStart = $year . '-' . $month . '-' . $day;
         $formattedNewStart = Carbon::parse($newStart)->toFormattedDateString();
 
-        // Get Original Date
-        $oriStart = Carbon::parse(Holiday::where('id', $eventId)->pluck('start')->first());
-        $oriEnd = Carbon::parse(Holiday::where('id', $eventId)->pluck('end')->first());
+        // Working out the new end from the days taken.
+        $newEnd = Carbon::parse($formattedNewStart)->addDays($grabDaysTaken);
+
+
+
+        // calculate True Days
+
+        $workDays = WorkingDay::where('user_id', $grabUserID)
+            ->select('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
+            ->first()
+            ->toArray();
+
+        $total = 0;
+
+        // This creates a Carbon Period (Array) of days requested
+        $period = CarbonPeriod::create($newStart, $newEnd);
+
+        // Foreach Day, it converts the value to a day and compares it against where they work or not.
+        foreach ($period as $key => $value) {
+            $index = strtolower(Carbon::parse($value)->format('l'));
+            if ($workDays[$index] == 1)
+                $total++;
+
+        }
+dd($total);
 
         // Want to see how many days are different between ori start and new start
         $movedDatesAmount = $oriStart->diffAsCarbonInterval(Carbon::parse($newStart), false);
