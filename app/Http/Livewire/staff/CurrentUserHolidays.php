@@ -41,8 +41,8 @@ class CurrentUserHolidays extends Component
     {
         return [
             'user_id' => 'required',
-            'start' => 'required|date',
-            'end' => 'required|date|after_or_equal:start',
+            'start' => 'required|date|exclude_pre_leaves:start,end',
+            'end' => 'required|date|exclude_pre_leaves:start,end|after_or_equal:start',
             //'dateAuthorised' => 'required|date',
             // 'daysTaken' => 'gte:leaveDays'
         ];
