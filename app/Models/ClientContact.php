@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class ClientContact extends Model
 {
@@ -41,5 +42,30 @@ class ClientContact extends Model
                 ->orWhere('staff_email', 'like', '%'.$search.'%')
                 ->orWhere('staff_notes', 'like', '%'.$search.'%')
                 ->orWhere('staff_number', 'like', '%'.$search.'%');
+    }
+
+    public function getStaffNameAttribute($value)
+    {
+        return Str::headline($value);
+    }
+
+    public function getStaffPositionAttribute($value)
+    {
+        return Str::headline($value);
+    }
+
+    public function getStaffNumberAttribute($value)
+    {
+        // If the telephone number is 11 digits put a break after the 5 digit if not then dont
+
+        if (Str::length($value) == 11) {
+            return Str::substr($value, 0, 5) . ' ' . Str::substr($value, 5, 11);
+        }
+        return $value;
+    }
+
+    public function getStaffEmailAttribute($value)
+    {
+        return Str::lower($value);
     }
 }

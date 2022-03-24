@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Client extends Model
 {
@@ -38,5 +39,18 @@ class Client extends Model
     public function staff()
     {
         return $this->hasMany('App\Models\ClientContact');
+    }
+
+    /**
+     * When getting the name of the client
+     * from the database, it makes the first letter
+     * a capital.
+     *
+     * @param  mixed $value
+     * @return void
+     */
+    public function getNameAttribute($value)
+    {
+        return Str::title($value);
     }
 }
