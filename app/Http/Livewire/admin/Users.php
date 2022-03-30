@@ -82,16 +82,6 @@ class Users extends Component
         $this->resetPage();
     }
 
-    public function updatedName()
-    {
-        $this->email = Str::lower($this->name . "@thinkcreative.uk.com");
-        if($this->name == "test") {
-            $this->password = "password";
-            $this->passwordConfirmation = "password";
-            $this->dateStarted = "2022-03-16";
-        }
-    }
-
     /**
      * Loads the model data
      * of this component.
@@ -103,7 +93,8 @@ class Users extends Component
         $data = User::find($this->modelId);
         $this->name = $data->name;
         $this->email = $data->email;
-        $this->dateStarted = $data->dateStarted;
+        // Have to put this Carbon instance in otherwise the date input on the form will not populate.
+        $this->dateStarted = Carbon::parse($data->dateStarted)->toDateString();
         $this->selectedRole = DB::table('role_user')
         ->where('user_id', $this->modelId)
         ->pluck('role_id');
@@ -117,7 +108,8 @@ class Users extends Component
 
     /**
      * The data for the model mapped
-     * in this component.
+     * in this component. This is used for
+     * create/update to the database
      *
      * @return void
      */
@@ -148,6 +140,12 @@ class Users extends Component
         ];
     }
 
+    /**
+     * This is used to populate the working days database,
+     * from the User Creation Form
+     *
+     * @return void
+     */
     public function workDayModelData()
     {
         return [
@@ -344,6 +342,9 @@ class Users extends Component
 
     public function render()
     {
+        /* If the user somehow gets to this area
+        and they are dont have permission, this will
+        hide any data tables and produce a warning message */
         if(Gate::denies('is-user-manager'))
         {
             return <<<'blade'
@@ -353,6 +354,7 @@ class Users extends Component
         blade;
         }
 
+        /* If the User is allowed to access the users area */
         return view('livewire.admin.users', [
             'data' => $this->read(),
             'trashedCount' => User::onlyTrashed()->get()->count(),

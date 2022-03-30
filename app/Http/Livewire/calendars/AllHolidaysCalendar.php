@@ -13,6 +13,7 @@ use App\Models\BankHoliday;
 use Illuminate\Support\Collection;
 use Asantibanez\LivewireCalendar\LivewireCalendar;
 
+
 class AllHolidaysCalendar extends LivewireCalendar
 {
     public function events(): Collection
