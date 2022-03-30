@@ -110,8 +110,8 @@ class Contacts extends Component
     public function read()
     {
         return ClientContact::search($this->search)
-        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-        ->paginate($this->perPage);
+            ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+            ->paginate($this->perPage);
     }
 
     /**
@@ -125,7 +125,6 @@ class Contacts extends Component
         ClientContact::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
         session()->flash('message', $this->staff_name . 's record has been successfully updated.');
-
     }
 
     /**
@@ -139,7 +138,6 @@ class Contacts extends Component
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
         session()->flash('trash', $this->nameOfDeletedContact . 's record has been successfully deleted.');
-
     }
 
     /**
@@ -179,14 +177,13 @@ class Contacts extends Component
     public function deleteShowModal($id)
     {
         $this->modelId = $id;
-        $this->nameOfDeletedContact = ClientContact::whereId($this->modelId)->pluck('name')->first();
+        $this->nameOfDeletedContact = ClientContact::find($this->modelId)->name;
         $this->modalConfirmDeleteVisible = true;
     }
 
     public function render()
     {
-        if(Gate::denies('is-client-manager'))
-        {
+        if (Gate::denies('is-client-manager')) {
             return <<<'blade'
 
             @include('partials.blades.denies')

@@ -1,4 +1,13 @@
 <div class="p-2">
+
+    <div class="px-4 py-3">
+
+        @foreach ($errors->get('start') as $message)
+        {{$message}}
+        @endforeach
+
+        </div>
+
     <div class="flex justify-between">
         <h2 class="text-2xl">{{ $this->startsAt->format('F Y') }}</h2>
 

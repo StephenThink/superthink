@@ -168,7 +168,7 @@ class Overview extends Component
     {
         // Find out how many leave days they have left
         $user = User::findOrFail($this->user_id);
-        $this->leaveDays = $user->pluck('leaveDays')->first();
+        $this->leaveDays = $user->leaveDays;
 
         $this->validate();
 
@@ -183,7 +183,7 @@ class Overview extends Component
             Holiday::create($this->modelData());
 
             // Remove Days Leave
-            User::findOrFail($this->user_id)->decrement('leaveDays', $this->daysTaken);
+            $user->decrement('leaveDays', $this->daysTaken);
 
 
             // Send message to User to say its granted

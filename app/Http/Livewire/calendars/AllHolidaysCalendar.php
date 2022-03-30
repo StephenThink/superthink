@@ -12,7 +12,7 @@ use App\Models\WorkingDay;
 use App\Models\BankHoliday;
 use Illuminate\Support\Collection;
 use Asantibanez\LivewireCalendar\LivewireCalendar;
-
+use Illuminate\Support\Facades\Validator;
 
 class AllHolidaysCalendar extends LivewireCalendar
 {
@@ -33,11 +33,29 @@ class AllHolidaysCalendar extends LivewireCalendar
             });
     }
 
+    /**
+     * The validation rules
+     *
+     * @return void
+     */
+    public function rules()
+    {
+        return [
+            // 'user_id' => 'required',
+            'start' => 'exclude_pre_leaves:start,end',
+            'end' => 'exclude_pre_leaves:start,end|after_or_equal:start',
+            //'dateAuthorised' => 'required|date',
+            // 'daysTaken' => 'gte:leaveDays'
+        ];
+    }
+
     public function onEventDropped($eventId, $year, $month, $day)
     {
 
         // Grab Event Id
         $hol = Holiday::find($eventId);
+        $userDetails = User::find($hol->user_id);
+
 
         // Grab Information about original Event
         $oriStart = Carbon::parse($hol->start);
@@ -72,7 +90,6 @@ class AllHolidaysCalendar extends LivewireCalendar
         foreach ($period as $key => $value) {
             $index = strtolower(Carbon::parse($value)->format('l'));
             if ($workDays[$index] == 1) {
-
                 $total++;
             }
         }
@@ -86,10 +103,34 @@ class AllHolidaysCalendar extends LivewireCalendar
             $newDaysTaken = $total;
         }
 
+        // Validate to Check to see if the holiday can be moved
+        // $validatedData = Validator::make(
+        //     [
+        //         'user_id' => $userDetails->id,
+        //         'start' => $newStart,
+        //         'end' => $newEnd,
+        //     ],
+        //     [
+        //         // 'user_id' => 'sometimes',
+        //         'start' => 'exclude_pre_leaves:start,end',
+        //         'end' => 'exclude_pre_leaves:start,end',
+        //     ],
+        //     [
+        //         'exclude_pre_leaves' => 'This conflicts with another holiday',
+        //     ],
+        // )->validate();
+
+        // // dd($validatedData);
+
+        // if ($validatedData) {
+        //     dd("Yes");
+        // } else {
+        //     dd("No");
+        // }
+
 
 
         // Add or Sub from Leave Days
-        $userDetails = User::find($hol->user_id);
 
         if ($hol->daysTaken < $newDaysTaken) {
             $amount = $newDaysTaken - $hol->daysTaken;
@@ -104,21 +145,31 @@ class AllHolidaysCalendar extends LivewireCalendar
         // Update Database
 
         Holiday::find($eventId)
-            ->update([
-                'start' => $newStart,
-                'end' => $newEnd,
-                'daysTaken' => $newDaysTaken,
-            ]);
+            ->update($this->modelData($newStart, $newEnd, $newDaysTaken));
 
+        $this->createMessage($hol->user_id, auth()->user()->id, $newStart);
+
+        return redirect(request()->header('Referer'));
+    }
+
+    public function modelData($start, $end, $daysTaken)
+    {
+        return [
+            'start' => $start,
+            'end' => $end,
+            'daysTaken' => $daysTaken,
+        ];
+    }
+
+    public function createMessage($user, $from, $start)
+    {
         Message::create([
-            'user_id' => $hol->user_id,
-            'from' => auth()->user()->id,
+            'user_id' => $user,
+            'from' => $from,
             'subject' => 'Holiday Changed',
-            'message' => 'Your new Start date for your holiday is ' . $newStart->toFormattedDateString(),
+            'message' => 'Your new Start date for your holiday is ' . $start->toFormattedDateString(),
             'requestedId' => 0,
             'read' => 0,
         ]);
-
-        return redirect(request()->header('Referer'));
     }
 }

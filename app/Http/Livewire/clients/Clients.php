@@ -80,7 +80,6 @@ class Clients extends Component
         $this->modalFormVisible = false;
         session()->flash('message', $this->name . 's record has been successfully created.');
         $this->reset();
-
     }
 
     /**
@@ -91,8 +90,8 @@ class Clients extends Component
     public function read()
     {
         return Client::search($this->search)
-        ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-        ->paginate($this->perPage);
+            ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+            ->paginate($this->perPage);
     }
 
     /**
@@ -106,7 +105,6 @@ class Clients extends Component
         Client::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
         session()->flash('message', $this->name . 's record has been successfully updated.');
-
     }
 
     /**
@@ -120,7 +118,6 @@ class Clients extends Component
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
         session()->flash('trash', $this->nameOfDeletedClient . 's record has been successfully deleted.');
-
     }
 
     /**
@@ -160,7 +157,7 @@ class Clients extends Component
     public function deleteShowModal($id)
     {
         $this->modelId = $id;
-        $this->nameOfDeletedClient = Client::whereId($this->modelId)->pluck('name')->first();
+        $this->nameOfDeletedClient = Client::find($this->modelId)->name;
         $this->modalConfirmDeleteVisible = true;
     }
 
@@ -172,8 +169,7 @@ class Clients extends Component
 
     public function render()
     {
-        if(Gate::denies('is-client-manager'))
-        {
+        if (Gate::denies('is-client-manager')) {
             return <<<'blade'
 
             @include('partials.blades.denies')

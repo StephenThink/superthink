@@ -32,7 +32,7 @@ class CurrentUserHolidays extends Component
 
     public $leaveDays;
 
-        /**
+    /**
      * The validation rules
      *
      * @return void
@@ -48,7 +48,7 @@ class CurrentUserHolidays extends Component
         ];
     }
 
-         /**
+    /**
      * Runs everytime the title gets updated
      *
      * @param  mixed $value
@@ -60,9 +60,9 @@ class CurrentUserHolidays extends Component
         // calculate True Days
 
         $workDays = WorkingDay::where('user_id', $this->user_id)
-        ->select('monday','tuesday','wednesday','thursday','friday','saturday','sunday')
-        ->first()
-        ->toArray();
+            ->select('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
+            ->first()
+            ->toArray();
 
         $total = 0;
 
@@ -73,12 +73,12 @@ class CurrentUserHolidays extends Component
         foreach ($period as $key => $value) {
             $index = strtolower(Carbon::parse($value)->format('l'));
             if ($workDays[$index] == 1)
-            $total++;
+                $total++;
         }
 
 
         // If you they take half a day then subtract it from the total.
-        if($this->halfDay) {
+        if ($this->halfDay) {
             $this->daysTaken = $total - .5;
         } else {
             $this->daysTaken = $total;
@@ -86,14 +86,14 @@ class CurrentUserHolidays extends Component
         return $this->daysTaken;
     }
 
-        /**
+    /**
      * Calculates wether or not people should have days added or taken away.
      *
      * @return void
      */
     public function updateLeaveDays()
     {
-        $oriDays = Holiday::find($this->modelId)->pluck('daysTaken')->first();
+        $oriDays = Holiday::find($this->modelId)->daysTaken;
 
         if ($oriDays != $this->daysTaken) {
             if ($oriDays <= $this->daysTaken) {
@@ -101,19 +101,17 @@ class CurrentUserHolidays extends Component
                 $dayDifference = $oriDays - $this->daysTaken;
 
                 User::findOrFail($this->user_id)->increment('leaveDays', $dayDifference);
-
             } else {
-            // If There have been more days been taken do this
-            $dayDifference = $this->daysTaken - $oriDays;
+                // If There have been more days been taken do this
+                $dayDifference = $this->daysTaken - $oriDays;
 
 
                 User::findOrFail($this->user_id)->decrement('leaveDays', $dayDifference);
-
             }
         }
     }
 
-       /**
+    /**
      * Loads the model data
      * of this component.
      *
@@ -133,10 +131,9 @@ class CurrentUserHolidays extends Component
         $this->authorisedBy = $data->authorisedBy;
         $this->pending = $data->pending;
         $this->authorised = $data->authorised;
-
     }
 
-        /**
+    /**
      * The data for the model mapped
      * in this component.
      *
@@ -158,7 +155,7 @@ class CurrentUserHolidays extends Component
     }
 
 
-        /**
+    /**
      * The create function.
      *
      * @return void
@@ -167,8 +164,7 @@ class CurrentUserHolidays extends Component
     {
         // Find out how many leave days they have left
         $this->user_id = auth()->user()->id;
-        $user = User::findOrFail($this->user_id);
-        $this->leaveDays = $user->pluck('leaveDays')->first();
+        $this->leaveDays = User::findOrFail($this->user_id)->leaveDays;
 
 
         $this->validate();
@@ -201,12 +197,10 @@ class CurrentUserHolidays extends Component
             $this->reset();
         } else {
             $this->daysErrorVisible = true;
-
         }
-
     }
 
-     /**
+    /**
      * The read function.
      *
      * @return void
@@ -214,13 +208,13 @@ class CurrentUserHolidays extends Component
     public function read()
     {
 
-        return Holiday::where('user_id','=',auth()->user()->id)
-        ->where('start', '>=', now())
-        ->orderBy('start')
-        ->get();
+        return Holiday::where('user_id', '=', auth()->user()->id)
+            ->where('start', '>=', now())
+            ->orderBy('start')
+            ->get();
     }
 
-       /**
+    /**
      * The update function
      *
      * @return void
@@ -238,7 +232,7 @@ class CurrentUserHolidays extends Component
         $this->modalFormVisible = false;
     }
 
-        /**
+    /**
      * Shows the create modal
      *
      * @return void
@@ -271,7 +265,7 @@ class CurrentUserHolidays extends Component
         $this->loadModel();
     }
 
-       /**
+    /**
      * The delete function.
      *
      * @return void
@@ -295,8 +289,6 @@ class CurrentUserHolidays extends Component
 
         Holiday::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
-
-
     }
 
     /**
@@ -315,9 +307,11 @@ class CurrentUserHolidays extends Component
 
     public function render()
     {
-        return view('livewire.staff.current-user-holidays',
-        [
-            'holidays' => $this->read(),
-        ]);
+        return view(
+            'livewire.staff.current-user-holidays',
+            [
+                'holidays' => $this->read(),
+            ]
+        );
     }
 }
