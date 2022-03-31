@@ -24,5 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BankHolidaySeeder::class);
         $this->call(ClientAddressSeeder::class);
         $this->call(ClientAddressTypeSeeder::class);
+        $this->call(ClientPasswordSeeder::class);
+        $this->call(ClientContactsSeeder::class);
     }
 }
