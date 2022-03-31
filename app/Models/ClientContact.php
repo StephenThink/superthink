@@ -37,11 +37,11 @@ class ClientContact extends Model
     public static function search($search)
     {
         return empty($search) ? static::query()
-            : static::query()->where('staff_name', 'like', '%'.$search.'%')
-                ->orWhere('staff_position', 'like', '%'.$search.'%')
-                ->orWhere('staff_email', 'like', '%'.$search.'%')
-                ->orWhere('staff_notes', 'like', '%'.$search.'%')
-                ->orWhere('staff_number', 'like', '%'.$search.'%');
+            : static::query()->where('staff_name', 'like', '%' . $search . '%')
+            ->orWhere('staff_position', 'like', '%' . $search . '%')
+            ->orWhere('staff_email', 'like', '%' . $search . '%')
+            ->orWhere('staff_notes', 'like', '%' . $search . '%')
+            ->orWhere('staff_number', 'like', '%' . $search . '%');
     }
 
     public function getStaffNameAttribute($value)

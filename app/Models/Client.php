@@ -49,6 +49,11 @@ class Client extends Model
         return $this->hasMany('App\Models\ClientAddress');
     }
 
+    public function jobs()
+    {
+        return $this->hasMany('App\Models\ClientJobs');
+    }
+
     /**
      * When getting the name of the client
      * from the database, it makes the first letter

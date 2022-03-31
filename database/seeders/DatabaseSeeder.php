@@ -26,5 +26,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ClientAddressTypeSeeder::class);
         $this->call(ClientPasswordSeeder::class);
         $this->call(ClientContactsSeeder::class);
+        $this->call(ClientJobStatusSeeder::class);
+        $this->call(ClientJobSeeder::class);
+        $this->call(JobStatusSeeder::class);
     }
 }

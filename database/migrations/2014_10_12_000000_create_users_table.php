@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->date('dateStarted')->default('2022-01-01');
             $table->float('leaveDays')->default('20');
+            $table->float('hourly_rate')->default('85.00');
             $table->timestamps();
             $table->softDeletes();
         });

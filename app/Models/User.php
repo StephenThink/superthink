@@ -65,20 +65,20 @@ class User extends Authenticatable
         'entitlement',
     ];
 
-    /**
-     * The List of User Roles
-     *
-     * @return void
-     */
-    public static function userRoleList()
-    {
-        $roles = Role::all();
-        $roleArray = [];
-        foreach ($roles as $key => $role) {
-            $roleArray[Str::lower($role->name)] = Str::ucfirst($role->name);
-        }
-        return $roleArray;
-    }
+    // /**
+    //  * The List of User Roles
+    //  *
+    //  * @return void
+    //  */
+    // public static function userRoleList()
+    // {
+    //     $roles = Role::all();
+    //     $roleArray = [];
+    //     foreach ($roles as $key => $role) {
+    //         $roleArray[Str::lower($role->name)] = Str::ucfirst($role->name);
+    //     }
+    //     return $roleArray;
+    // }
 
     /**
      * One User could have Many Holidays

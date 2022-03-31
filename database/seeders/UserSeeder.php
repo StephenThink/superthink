@@ -25,6 +25,7 @@ class UserSeeder extends Seeder
             'leaveDays' => '20',
             'email_verified_at' => Carbon::now(),
             'email' => 'stephen@thinkcreative.uk.com',
+            'hourly_rate' => '85.00',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
@@ -44,6 +45,7 @@ class UserSeeder extends Seeder
             'leaveDays' => '20',
             'email_verified_at' => Carbon::now(),
             'email' => 'paul.sealey@thinkcreative.uk.com',
+            'hourly_rate' => '85.00',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
