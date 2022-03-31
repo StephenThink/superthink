@@ -4,11 +4,14 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Client extends Model
 {
     use HasFactory;
+    use SoftDeletes;
+
 
     /**
      * The attributes that are mass assignable.
@@ -28,7 +31,7 @@ class Client extends Model
     public static function search($search)
     {
         return empty($search) ? static::query()
-            : static::query()->where('title', 'like', '%'.$search.'%');
+            : static::query()->where('title', 'like', '%' . $search . '%');
     }
 
     public function passwords()
@@ -39,6 +42,11 @@ class Client extends Model
     public function staff()
     {
         return $this->hasMany('App\Models\ClientContact');
+    }
+
+    public function address()
+    {
+        return $this->hasMany('App\Models\ClientAddress');
     }
 
     /**
@@ -52,5 +60,15 @@ class Client extends Model
     public function getNameAttribute($value)
     {
         return Str::title($value);
+    }
+
+    public function getTelephoneAttribute($value)
+    {
+        // If the telephone number is 11 digits put a break after the 5 digit if not then dont
+
+        if (Str::length($value) == 11) {
+            return Str::substr($value, 0, 5) . ' ' . Str::substr($value, 5, 11);
+        }
+        return $value;
     }
 }

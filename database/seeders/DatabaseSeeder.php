@@ -22,5 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(WorkingDaysSeeder::class);
         $this->call(RoleUserSeeder::class);
         $this->call(BankHolidaySeeder::class);
+        $this->call(ClientAddressSeeder::class);
+        $this->call(ClientAddressTypeSeeder::class);
     }
 }

@@ -1,33 +1,43 @@
 <?php
 
-namespace App\Http\Livewire\clients;
+namespace App\Http\Livewire\Clients;
 
 use App\Models\Client;
+use App\Models\ClientAddress;
+use App\Models\ClientAddressTypes;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Gate;
 
-
-class Clients extends Component
+class Address extends Component
 {
+
+
     use WithPagination;
 
     public $modalFormVisible;
     public $modalConfirmDeleteVisible;
     public $modelId;
-
-    public $perPage = 10;
-    public $search = '';
-    public $orderBy = 'name';
-    public $orderAsc = true;
-
+    public $clientId;
 
     /**
      * Put your custom public properties here!
      */
-    public $name;
-    public $nameOfDeletedClient;
+    public $client_id;
+    public $type;
+    public $property_name;
+    public $property_number;
+    public $address_1;
+    public $address_2;
+    public $town_city;
+    public $county;
+    public $post_code;
 
+    public function mount($id)
+    {
+        # code...
+        $this->clientId = $id;
+    }
 
     /**
      * The validation rules
@@ -37,8 +47,15 @@ class Clients extends Component
     public function rules()
     {
         return [
-            'name' => 'required',
-            'website' => 'url',
+            'client_id' => 'sometimes',
+            'type' => 'required',
+            'property_name' => 'sometimes',
+            'property_number' => 'sometimes',
+            'address_1' => 'sometimes',
+            'address_2' => 'sometimes',
+            'town_city' => 'sometimes',
+            'county' => 'sometimes',
+            'post_code' => 'required',
         ];
     }
 
@@ -50,12 +67,17 @@ class Clients extends Component
      */
     public function loadModel()
     {
-        $data = Client::find($this->modelId);
+        $data = ClientAddress::find($this->modelId);
         // Assign the variables here
-        $this->name = $data->name;
-        $this->tax_number = $data->tax_number;
-        $this->website = $data->website;
-        $this->telephone = $data->telephone;
+        $this->client_id = $data->client_id;
+        $this->type = $data->type;
+        $this->property_name = $data->property_name;
+        $this->property_number = $data->property_number;
+        $this->address_1 = $data->address_1;
+        $this->address_2 = $data->address_2;
+        $this->town_city = $data->town_city;
+        $this->county = $data->county;
+        $this->post_code = $data->post_code;
     }
 
     /**
@@ -67,10 +89,15 @@ class Clients extends Component
     public function modelData()
     {
         return [
-            'name' => $this->name,
-            'tax_number' => $this->tax_number,
-            'website' => $this->website,
-            'telephone' => $this->telephone,
+            'client_id' => $this->client_id,
+            'type' => $this->type,
+            'property_name' => $this->property_name,
+            'property_number' => $this->property_number,
+            'address_1' => $this->address_1,
+            'address_2' => $this->address_2,
+            'town_city' => $this->town_city,
+            'county' => $this->county,
+            'post_code' => $this->post_code,
         ];
     }
 
@@ -83,10 +110,11 @@ class Clients extends Component
     {
 
         $this->validate();
-        Client::create($this->modelData());
+        $this->client_id = $this->clientId;
+        ClientAddress::create($this->modelData());
         $this->modalFormVisible = false;
-        session()->flash('message', $this->name . 's record has been successfully created.');
-        $this->reset();
+        session()->flash('message', 'Address has been successfully created.');
+        $this->resetPage();
     }
 
     /**
@@ -96,10 +124,9 @@ class Clients extends Component
      */
     public function read()
     {
-        return Client::search($this->search)
-            ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-            ->paginate($this->perPage);
+        return ClientAddress::whereClientId($this->clientId)->paginate(10);
     }
+
 
     /**
      * The update function
@@ -109,9 +136,9 @@ class Clients extends Component
     public function update()
     {
         $this->validate();
-        Client::find($this->modelId)->update($this->modelData());
+        ClientAddress::findOrFail($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
-        session()->flash('message', $this->name . 's record has been successfully updated.');
+        session()->flash('message', 'Address has been successfully updated.');
     }
 
     /**
@@ -121,10 +148,10 @@ class Clients extends Component
      */
     public function delete()
     {
-        Client::destroy($this->modelId);
+        ClientAddress::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
-        session()->flash('trash', $this->nameOfDeletedClient . 's record has been successfully deleted.');
+        session()->flash('trash', 'Address has been successfully deleted.');
     }
 
     /**
@@ -135,7 +162,6 @@ class Clients extends Component
     public function createShowModal()
     {
         $this->resetValidation();
-        $this->reset();
         $this->modalFormVisible = true;
     }
 
@@ -149,7 +175,6 @@ class Clients extends Component
     public function updateShowModal($id)
     {
         $this->resetValidation();
-        $this->reset();
         $this->modalFormVisible = true;
         $this->modelId = $id;
         $this->loadModel();
@@ -164,14 +189,7 @@ class Clients extends Component
     public function deleteShowModal($id)
     {
         $this->modelId = $id;
-        $this->nameOfDeletedClient = Client::find($this->modelId)->name;
         $this->modalConfirmDeleteVisible = true;
-    }
-
-    public function eventShow($id)
-    {
-
-        return redirect()->route('client-profile', $id);
     }
 
     public function render()
@@ -184,8 +202,9 @@ class Clients extends Component
         blade;
         }
 
-        return view('livewire.clients.clients', [
+        return view('livewire.clients.address', [
             'data' => $this->read(),
+            'addressTypes' => ClientAddressTypes::all(),
         ]);
     }
 }

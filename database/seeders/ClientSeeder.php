@@ -18,6 +18,9 @@ class ClientSeeder extends Seeder
         //
         DB::table('clients')->insert([
             'name' => 'Think',
+            'tax_number' => '123456789',
+            'telephone' => '01253297900',
+            'website' => 'https://think.thinkcreative.dev',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

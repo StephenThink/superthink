@@ -4,26 +4,11 @@
     </x-slot>
 
     <x-slot name="content">
-        
+
         <div class="mt-4">
-            <x-jet-label for="name" value="{{ __('Client Name') }}" />
+            <x-jet-label for="name" value="{{ __('Name of Address Type') }}" />
             <x-jet-input wire:model="name" id="" class="block mt-1 w-full" type="text" />
             @error('name') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="mt-4">
-            <x-jet-label for="tax_number" value="{{ __('Tax Number') }}" />
-            <x-jet-input wire:model="tax_number" id="" class="block mt-1 w-full" type="text" />
-            @error('tax_number') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="mt-4">
-            <x-jet-label for="telephone" value="{{ __('Telephone Number') }}" />
-            <x-jet-input wire:model="telephone" id="" class="block mt-1 w-full" type="text" />
-            @error('telephone') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        <div class="mt-4">
-            <x-jet-label for="website" value="{{ __('Website') }}" />
-            <x-jet-input wire:model="website" id="" class="block mt-1 w-full" type="url" />
-            @error('website') <span class="error">{{ $message }}</span> @enderror
         </div>
     </x-slot>
 

@@ -7,10 +7,13 @@
                         <tr>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                Client / Website</th>
-                                <th
+                                Type</th>
+                            <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                Telephone</th>
+                                Property Name</th>
+                            <th
+                                class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                Address</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                             </th>
@@ -20,12 +23,15 @@
                         @if ($data->count())
                         @foreach ($data as $item)
                         <tr>
-                            <td class="px-6 py-2 flex items-center">{{ $item->name }} @if($item->website)<span class="ml-2"><a href="{{ $item->website }}">@include('partials.svgs.globe')</a></span>@endif</td>
-                            <td class="px-6 py-2">{{ $item->telephone }}</td>
+                            <td class="px-6 py-2 ">{{ $item->types->name }}</td>
+                            <td class="px-6 py-2 ">{{ $item->property_name }}</td>
+                            <td class="px-6 py-2 ">@if( $item->property_number ){{ $item->property_number }}@endif
+                                                                    @if( $item->address_1 ){{$item->address_1}},@endif
+                                                                    @if( $item->address_2 ){{$item->address_2}},@endif
+                                                                    @if( $item->town_city ){{$item->town_city}},@endif
+                                                                    @if( $item->county ){{$item->county}},@endif
+                                                                    @if( $item->post_code ){{$item->post_code}}@endif </td>
                             <td class="px-6 py-2 flex justify-end">
-                                <x-jet-button wire:click="eventShow('{{ $item->id }}')">
-                                    @include('partials.svgs.read')
-                                </x-jet-button>
                                 <x-jet-button class="ml-2" wire:click="updateShowModal({{ $item->id }})">
                                     @include('partials.svgs.update')
                                 </x-jet-button>
@@ -51,4 +57,4 @@
     {{ $data->links() }}
 </div>
 
-@include('partials.admin.client.grid')
+@include('partials.admin.address.grid')

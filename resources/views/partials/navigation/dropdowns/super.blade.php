@@ -18,5 +18,9 @@
         <div class="w-60">
             @include('partials.navigation.dropdowns.sub-menus.super.trashed')
         </div>
+
+        <div class="w-60">
+            @include('partials.navigation.dropdowns.sub-menus.super.settings')
+        </div>
     </x-slot>
 </x-jet-dropdown>

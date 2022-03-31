@@ -88,6 +88,10 @@ Route::group(['middleware' => [
     Route::get('/reset/holidays', function () {
         return view('reset.holidays');
     })->name('reset-holidays');
+
+    Route::get('/settings/address-types', function () {
+        return view('settings.address-types');
+    })->name('settings-address-types');
 });
 
 

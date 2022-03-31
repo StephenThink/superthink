@@ -1,32 +1,27 @@
 <?php
 
-namespace App\Http\Livewire\clients;
+namespace App\Http\Livewire\Clients;
 
-use App\Models\Client;
+use App\Models\ClientAddressTypes;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Gate;
 
-
-class Clients extends Component
+class AddressTypes extends Component
 {
+
     use WithPagination;
 
     public $modalFormVisible;
     public $modalConfirmDeleteVisible;
     public $modelId;
-
-    public $perPage = 10;
-    public $search = '';
-    public $orderBy = 'name';
-    public $orderAsc = true;
+    public $clientId;
 
 
     /**
      * Put your custom public properties here!
      */
     public $name;
-    public $nameOfDeletedClient;
 
 
     /**
@@ -38,7 +33,6 @@ class Clients extends Component
     {
         return [
             'name' => 'required',
-            'website' => 'url',
         ];
     }
 
@@ -50,12 +44,9 @@ class Clients extends Component
      */
     public function loadModel()
     {
-        $data = Client::find($this->modelId);
+        $data = ClientAddressTypes::find($this->modelId);
         // Assign the variables here
         $this->name = $data->name;
-        $this->tax_number = $data->tax_number;
-        $this->website = $data->website;
-        $this->telephone = $data->telephone;
     }
 
     /**
@@ -68,9 +59,6 @@ class Clients extends Component
     {
         return [
             'name' => $this->name,
-            'tax_number' => $this->tax_number,
-            'website' => $this->website,
-            'telephone' => $this->telephone,
         ];
     }
 
@@ -83,9 +71,9 @@ class Clients extends Component
     {
 
         $this->validate();
-        Client::create($this->modelData());
+        ClientAddressTypes::create($this->modelData());
         $this->modalFormVisible = false;
-        session()->flash('message', $this->name . 's record has been successfully created.');
+        session()->flash('message', 'New type has been successfully created.');
         $this->reset();
     }
 
@@ -96,9 +84,7 @@ class Clients extends Component
      */
     public function read()
     {
-        return Client::search($this->search)
-            ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-            ->paginate($this->perPage);
+        return ClientAddressTypes::paginate(10);
     }
 
     /**
@@ -109,9 +95,9 @@ class Clients extends Component
     public function update()
     {
         $this->validate();
-        Client::find($this->modelId)->update($this->modelData());
+        ClientAddressTypes::findOrFail($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
-        session()->flash('message', $this->name . 's record has been successfully updated.');
+        session()->flash('message', 'Type has been successfully updated.');
     }
 
     /**
@@ -121,10 +107,10 @@ class Clients extends Component
      */
     public function delete()
     {
-        Client::destroy($this->modelId);
+        ClientAddressTypes::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
-        session()->flash('trash', $this->nameOfDeletedClient . 's record has been successfully deleted.');
+        session()->flash('trash', 'Type has been successfully deleted.');
     }
 
     /**
@@ -149,7 +135,6 @@ class Clients extends Component
     public function updateShowModal($id)
     {
         $this->resetValidation();
-        $this->reset();
         $this->modalFormVisible = true;
         $this->modelId = $id;
         $this->loadModel();
@@ -164,18 +149,12 @@ class Clients extends Component
     public function deleteShowModal($id)
     {
         $this->modelId = $id;
-        $this->nameOfDeletedClient = Client::find($this->modelId)->name;
         $this->modalConfirmDeleteVisible = true;
-    }
-
-    public function eventShow($id)
-    {
-
-        return redirect()->route('client-profile', $id);
     }
 
     public function render()
     {
+
         if (Gate::denies('is-client-manager')) {
             return <<<'blade'
 
@@ -184,7 +163,7 @@ class Clients extends Component
         blade;
         }
 
-        return view('livewire.clients.clients', [
+        return view('livewire.clients.address-types', [
             'data' => $this->read(),
         ]);
     }
