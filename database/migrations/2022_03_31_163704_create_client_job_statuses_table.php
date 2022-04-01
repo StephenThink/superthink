@@ -16,6 +16,7 @@ class CreateClientJobStatusesTable extends Migration
         Schema::create('client_job_statuses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('icon');
             $table->timestamps();
         });
     }

@@ -15,12 +15,11 @@ class ClientJob extends Model
      * @var string[]
      */
     protected $fillable = [
-        'name',
         'client_id',
         'job_name',
         'job_number',
         'budget',
-        'status'
+        'status_id'
     ];
 
     public function clients()
@@ -30,8 +29,16 @@ class ClientJob extends Model
 
     public function statuses()
     {
-        return $this->belongsToMany('App\Models\ClientJobStatus', 'job_status', 'id', 'status_id')->withTimestamps();
+        return $this->hasOne('App\Models\ClientJobStatus', 'id', 'status_id');
     }
+
+    // public function jobStatus()
+    // {
+    //     return $this->belongsToMany('App\Models\ClientJobStatus', 'job_status', 'id', 'status_id')->withTimestamps();
+    // }
+
+
+
 
     /**
      * Makes the Search function work in the blade files

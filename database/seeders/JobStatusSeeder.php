@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\ClientJob;
-use App\Models\ClientJobStatus;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class JobStatusSeeder extends Seeder
 {
@@ -16,12 +16,18 @@ class JobStatusSeeder extends Seeder
     public function run()
     {
         //
-        $status = ClientJobStatus::all();
+        DB::table('job_status')->insert([
+            'job_id' => '1',
+            'status_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
 
-        ClientJob::all()->each(function ($job) use ($status) {
-            $job->statuses()->attach(
-                $status->pluck('id')->first()
-            );
-        });
+        DB::table('job_status')->insert([
+            'job_id' => '2',
+            'status_id' => '2',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
     }
 }

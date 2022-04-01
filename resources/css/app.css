@@ -200,3 +200,13 @@
 .animated-mail {
     @apply transition duration-300 ease-in-out hover:scale-150 hover:text-yellow;
 }
+
+/* Jobs */
+
+.status-button {
+    @apply w-6 h-6;
+}
+
+.table-button {
+    @apply w-5 h-5;
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Clients;
 
 use App\Models\ClientJob;
+use App\Models\ClientJobStatus;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Gate;
@@ -28,7 +29,7 @@ class ClientJobs extends Component
     public $job_name;
     public $job_number;
     public $budget;
-    public $status;
+    public $status_id;
 
 
     public function mount($id)
@@ -45,13 +46,11 @@ class ClientJobs extends Component
     public function rules()
     {
         return [
-            'name' => 'required',
-            'client_id' => 'required',
+            'client_id' => 'sometimes',
             'job_name' => 'required',
             'job_number' => 'required',
             'budget' => 'required',
-            'status' => 'required',
-
+            'status_id' => 'required',
         ];
     }
 
@@ -65,12 +64,11 @@ class ClientJobs extends Component
     {
         $data = ClientJob::find($this->modelId);
         // Assign the variables here
-        $this->name = $data->name;
         $this->client_id = $data->client_id;
         $this->job_name = $data->job_name;
         $this->job_number = $data->job_number;
         $this->budget = $data->budget;
-        $this->status = $data->status;
+        $this->status_id = $data->status_id;
     }
 
     /**
@@ -82,12 +80,11 @@ class ClientJobs extends Component
     public function modelData()
     {
         return [
-            'name' => $this->name,
             'client_id' => $this->client_id,
             'job_name' => $this->job_name,
             'job_number' => $this->job_number,
             'budget' => $this->budget,
-            'status' => $this->status
+            'status_id' => $this->status_id,
         ];
     }
 
@@ -99,11 +96,13 @@ class ClientJobs extends Component
     public function create()
     {
         $this->validate();
+
+        $this->client_id = $this->clientId;
+
         ClientJob::create($this->modelData());
         $this->modalFormVisible = false;
         session()->flash('message', $this->job_name . ' has been successfully created.');
-
-        $this->reset();
+        $this->resetPage();
     }
 
     /**
@@ -126,9 +125,11 @@ class ClientJobs extends Component
      */
     public function update()
     {
+        $this->client_id = $this->clientId;
         $this->validate();
         ClientJob::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+        $this->resetPage();
         session()->flash('message', $this->job_name . 's record has been successfully updated.');
     }
 
@@ -153,7 +154,10 @@ class ClientJobs extends Component
     public function createShowModal()
     {
         $this->resetValidation();
-        $this->reset();
+        $this->job_name = '';
+        $this->job_number = '';
+        $this->budget = '';
+        $this->status_id = '';
         $this->modalFormVisible = true;
     }
 
@@ -167,7 +171,6 @@ class ClientJobs extends Component
     public function updateShowModal($id)
     {
         $this->resetValidation();
-        $this->reset();
         $this->modalFormVisible = true;
         $this->modelId = $id;
         $this->loadModel();
@@ -185,10 +188,36 @@ class ClientJobs extends Component
         $this->modalConfirmDeleteVisible = true;
     }
 
+
+    public function toggleStatuses($jsId)
+    {
+        // Find Current Job
+        $js = ClientJob::findOrFail($jsId);
+        // If status is 3 for Completed or 4 for Archived then
+        if ($js->status_id >= 3) {
+            $js->status_id = 1;
+            $js->update(['status_id', $js->status_id]);
+        } else {
+            $js->increment('status_id', 1);
+        }
+        $this->resetPage();
+    }
+
+    public function archiveJob($id)
+    {
+        $js = ClientJob::findOrFail($id);
+        $js->status_id = 4;
+        $js->save();
+        session()->flash('message', 'Job Archived');
+        // $this->resetPage();
+    }
+
+
     public function render()
     {
         return view('livewire.clients.client-jobs', [
             'data' => $this->read(),
+            'jobStatus' => ClientJobStatus::all(),
         ]);
     }
 }

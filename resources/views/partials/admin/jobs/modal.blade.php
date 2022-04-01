@@ -19,6 +19,15 @@
             <x-jet-input wire:model="budget" id="" class="block mt-1 w-full" type="text" />
             @error('budget') <span class="error">{{ $message }}</span> @enderror
         </div>
+        <x-jet-label for="status_id" value="{{ __('Status') }}" />
+        <select wire:model.defer="status_id" id="" class="input-dropdown">
+            <option value="">-- Select a Status --</option>
+            @foreach ($jobStatus as $s)
+            <option value="{{$s->id}}">{{$s->name}}</option>
+            @endforeach
+
+        </select>
+        @error('status_id') <span class="error">{{ $message }}</span> @enderror
 
     </x-slot>
 

@@ -16,10 +16,16 @@ class ClientJobStatus extends Model
      */
     protected $fillable = [
         'name',
+        'icon',
     ];
 
-    public function jobs()
+    // public function jobs()
+    // {
+    //     return $this->belongsToMany('App\Models\ClientJob');
+    // }
+
+    public function job()
     {
-        return $this->belongsToMany('App\Models\ClientJob');
+        return $this->belongsTo('App\Models\ClientJob', 'status_id');
     }
 }

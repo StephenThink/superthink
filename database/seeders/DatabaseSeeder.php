@@ -28,6 +28,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ClientContactsSeeder::class);
         $this->call(ClientJobStatusSeeder::class);
         $this->call(ClientJobSeeder::class);
-        $this->call(JobStatusSeeder::class);
+        // $this->call(JobStatusSeeder::class);
     }
 }
