@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ClientJob extends Model
+class ClientItem extends Model
 {
     use HasFactory;
 
@@ -15,28 +15,20 @@ class ClientJob extends Model
      * @var string[]
      */
     protected $fillable = [
-        'client_id',
-        'job_name',
-        'job_number',
-        'budget',
+        'job_id',
+        'description',
         'status_id'
     ];
 
-    public function clients()
+    public function jobs()
     {
-        return $this->belongsTo('App\Models\Client', 'client_id');
+        return $this->belongsTo('App\Models\ClientJob', 'job_id');
     }
 
     public function statuses()
     {
         return $this->hasOne('App\Models\ClientJobStatus', 'id', 'status_id');
     }
-
-    public function items()
-    {
-        return $this->hasMany('App\Models\ClientItems');
-    }
-
 
 
 
@@ -49,8 +41,6 @@ class ClientJob extends Model
     public static function search($search)
     {
         return empty($search) ? static::query()
-            : static::query()->where('job_name', 'like', '%' . $search . '%')
-            ->orWhere('job_number', 'like', '%' . $search . '%')
-            ->orWhere('budget', 'like', '%' . $search . '%');
+            : static::query()->where('description', 'like', '%' . $search . '%');
     }
 }
