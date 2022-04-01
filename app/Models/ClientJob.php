@@ -32,9 +32,9 @@ class ClientJob extends Model
         return $this->hasOne('App\Models\ClientJobStatus', 'id', 'status_id');
     }
 
-    public function items()
+    public function jobItems()
     {
-        return $this->hasMany('App\Models\ClientItems');
+        return $this->hasMany('App\Models\ClientItem', 'job_id');
     }
 
 
