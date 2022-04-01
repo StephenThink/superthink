@@ -153,6 +153,10 @@
     @apply flex flex-col bg-header-dark text-yellow text-sm rounded-l-lg px-2 py-1 space-y-1;
 }
 
+.grid-middle-column {
+    @apply flex flex-col space-y-1 pl-2 text-sm justify-center w-full;
+}
+
 .grid-right-column {
     @apply flex flex-col space-y-1 rounded-r-lg pl-2 text-sm justify-center w-full;
 }

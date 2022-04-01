@@ -92,6 +92,10 @@ Route::group(['middleware' => [
     Route::get('/settings/address-types', function () {
         return view('settings.address-types');
     })->name('settings-address-types');
+
+    Route::get('/settings/job-statuses', function () {
+        return view('settings.job-statuses');
+    })->name('settings-job-statuses');
 });
 
 

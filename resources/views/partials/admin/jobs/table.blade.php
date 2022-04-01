@@ -29,7 +29,7 @@
                             <td class="px-6 py-2 ">{{ $item->job_name }}</td>
                             <td class="px-6 py-2 ">{{ $item->job_number }}</td>
                             <td class="px-6 py-2 ">£0 / <span class="text-green-800">£{{ number_format($item->budget, 2, '.',',') }}</span></td>
-                            <td class="px-6 py-2 "><span wire:click="toggleStatuses({{ $item->id }})" class="flex items-center cursor-pointer hover:text-yellow">@include('partials.svgs.status.'.$item->statuses->icon)</span></td>
+                            <td class="px-6 py-2 "><span wire:click="toggleStatuses({{ $item->id }})" class="flex items-center cursor-pointer hover:text-yellow ">@include('partials.svgs.status.'.$item->statuses->icon)</span></td>
                             <td class="px-6 py-2 flex justify-end">
                                 @if($item->status_id <> 4)
                                 <x-jet-button class="ml-2 !bg-yellow" wire:click="archiveJob({{ $item->id }})">

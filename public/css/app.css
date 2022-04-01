@@ -1232,6 +1232,12 @@ select {
 .w-96 {
   width: 24rem;
 }
+.\!w-7 {
+  width: 1.75rem !important;
+}
+.\!w-\[3\.75rem\] {
+  width: 3.75rem !important;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -1588,13 +1594,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
 .\!bg-yellow {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 199 52 / var(--tw-bg-opacity)) !important;
+}
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -2455,6 +2461,22 @@ select {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(255 199 52 / var(--tw-text-opacity));
+}
+.grid-middle-column {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid-middle-column > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+.grid-middle-column {
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .grid-right-column {
   display: flex;
