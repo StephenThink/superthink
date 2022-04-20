@@ -24,9 +24,6 @@
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                 Entitlement</th>
-                            <th
-                                class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                            </th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
@@ -34,15 +31,9 @@
                         @foreach ($data as $item)
                         <tr>
                             <td class="px-6 py-2">{{ $item->name }}</td>
-                            <td class="px-6 py-2">{{ \Carbon\Carbon::parse($item->dateStarted)->toFormattedDateString() }} - {{ \Carbon\Carbon::parse($item->dateStarted)->diffInYears() }} year(s)</td>
-                            <td class="px-6 py-2">{{ $item->entitlement }}
+                            <td class="px-6 py-2">{{ $item->formattedDateStarted }} - {{ $item->years_worked }}</td>
+                            <td class="px-6 py-2">{{ $item->leaveDays }} days</td>
 
-                            </td>
-                            <td class="px-6 py-2 flex justify-end">
-                                <x-jet-button wire:click="updateHolidays({{ $item->id }},{{ $item->entitlement }})">
-                                    @include('partials.svgs.update')
-                                </x-jet-button>
-                            </td>
                         </tr>
                         @endforeach
                         @else

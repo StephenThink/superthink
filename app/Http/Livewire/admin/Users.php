@@ -56,6 +56,10 @@ class Users extends Component
      */
     public $newUserId;
 
+
+    /* Make each field editable */
+    public $editedUserIndex = null;
+
     /**
      * The validation rules
      *

@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Reset;
 use Carbon\Carbon;
 use App\Models\User;
 use Livewire\Component;
+use Illuminate\Support\Str;
 
 class Holidays extends Component
 {
@@ -16,8 +17,10 @@ class Holidays extends Component
      */
     public $name;
     public $dateStarted;
+    public $formattedDateStarted;
     public $leaveDays;
     public $resetDaysValue;
+    public $dE;
 
     public function calculateEntitlement()
     {
@@ -64,8 +67,9 @@ class Holidays extends Component
                     $daysToTake = 25;
             }
 
-
-            $user->entitlement = $daysToTake;
+            $user->formattedDateStarted = Carbon::parse($user->dateStarted)->toFormattedDateString();
+            $user->leaveDays = $daysToTake;
+            $user->years_worked = $dE . " " . Str::plural('year', $dE);
         }
         return $users;
     }
