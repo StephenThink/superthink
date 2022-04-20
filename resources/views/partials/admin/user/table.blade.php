@@ -19,6 +19,9 @@
                                 Roles</th>
                             <th
                                 class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                Hourly Rate</th>
+                            <th
+                                class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                             </th>
                         </tr>
                     </thead>
@@ -35,6 +38,14 @@
                                     @endforeach
                                 </div>
                             </td>
+                            <td class="px-6 py-2">
+                                @if ($item->hourly_rate)
+                                £{{ number_format($item->hourly_rate,2) }}
+                                @else
+                                    Not Set
+                                @endif
+
+                                </td>
                             <td class="px-6 py-2 flex justify-end">
                                 <x-jet-button wire:click="updateShowModal({{ $item->id }})">
                                     @include('partials.svgs.update')

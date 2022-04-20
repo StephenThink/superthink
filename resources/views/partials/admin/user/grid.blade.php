@@ -6,6 +6,7 @@
             <div>Name</div>
             <div>Email</div>
             <div>Roles</div>
+            <div>Hourly Rate</div>
         </div>
 
         <div class="grid-right-column">
@@ -18,6 +19,12 @@
                 </div>
                 @endforeach
             </div>
+            <div>@if ($item->hourly_rate)
+                £{{ number_format($item->hourly_rate,2) }}
+                @else
+                    Not Set
+                @endif</div>
+
         </div>
     </div>
     @endforeach

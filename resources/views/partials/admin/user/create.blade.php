@@ -51,6 +51,11 @@
 
             </div>
         </div>
+        <div class="mt-4">
+            <x-jet-label for="hourly_rate" value="{{ __('Hourly Rate') }}" />
+            <x-jet-input wire:model.lazy="hourly_rate" id="" class="block mt-1 w-full" type="text" />
+            @error('hourly_rate') <span class="error">{{ $message }}</span> @enderror
+        </div>
 
     </x-slot>
 

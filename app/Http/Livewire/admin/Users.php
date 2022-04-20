@@ -49,7 +49,9 @@ class Users extends Component
 
     public $selectedRole = [];
 
-       /**
+    public $hourly_rate;
+
+    /**
      * Needed for creating a Teams with a new user
      */
     public $newUserId;
@@ -66,6 +68,7 @@ class Users extends Component
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|same:passwordConfirmation',
             'dateStarted' => 'required|date|date_format:Y-m-d',
+            'hourly_rate' => 'sometimes',
         ];
     }
 
@@ -96,14 +99,15 @@ class Users extends Component
         // Have to put this Carbon instance in otherwise the date input on the form will not populate.
         $this->dateStarted = Carbon::parse($data->dateStarted)->toDateString();
         $this->selectedRole = DB::table('role_user')
-        ->where('user_id', $this->modelId)
-        ->pluck('role_id');
+            ->where('user_id', $this->modelId)
+            ->pluck('role_id');
         $convertArray = [];
         // Allows livewire to populate the update form with any data that exists.
         foreach ($this->selectedRole as $key => $value) {
             $convertArray[$value] = "true";
         }
         $this->selectedRole = $convertArray;
+        $this->hourly_rate = $data->hourly_rate;
     }
 
     /**
@@ -120,6 +124,7 @@ class Users extends Component
             'email' => $this->email,
             'dateStarted' => $this->dateStarted,
             'selectedRole' => $this->selectedRole,
+            'hourly_rate' => $this->hourly_rate,
         ];
     }
 
@@ -137,6 +142,7 @@ class Users extends Component
             'password' => Hash::make($this->password),
             'dateStarted' => $this->dateStarted,
             'selectedRole' => $this->selectedRole,
+            'hourly_rate' => $this->hourly_rate,
         ];
     }
 
@@ -217,7 +223,6 @@ class Users extends Component
         $this->modalCreateFormVisible = false;
         session()->flash('message', $user->name . 's record has been successfully created.');
         $this->reset();
-
     }
 
     /**
@@ -243,19 +248,18 @@ class Users extends Component
 
         $this->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:users,email,'.$user->id,
+            'email' => 'required|email|unique:users,email,' . $user->id,
             'dateStarted' => 'required|date|date_format:Y-m-d',
+            'hourly_rate' => 'sometimes',
         ]);
 
         // dd($this);
 
         $breakDownRoles = [];
         foreach ($this->selectedRole as $key => $value) {
-            if($value == 1 || $value == "true")
-            {
+            if ($value == 1 || $value == "true") {
                 $breakDownRoles[] = $key;
             }
-
         }
 
         // dd($breakDownRoles);
@@ -285,7 +289,6 @@ class Users extends Component
         $this->modalConfirmDeleteVisible = false;
         session()->flash('trash', $this->nameOfDeletedUser . 's record has been successfully deleted.');
         $this->resetPage();
-
     }
 
     /**
@@ -345,8 +348,7 @@ class Users extends Component
         /* If the user somehow gets to this area
         and they are dont have permission, this will
         hide any data tables and produce a warning message */
-        if(Gate::denies('is-user-manager'))
-        {
+        if (Gate::denies('is-user-manager')) {
             return <<<'blade'
 
             @include('partials.blades.denies')
@@ -361,6 +363,4 @@ class Users extends Component
             'roles' => Role::all(),
         ]);
     }
-
-
 }
