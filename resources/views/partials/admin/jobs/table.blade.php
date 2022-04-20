@@ -60,7 +60,7 @@
                                     </td>
                                 </tr>
                                 @if (count($item->jobItems) > 0)
-                                    <tr>
+                                    <tr class="bg-yellow bg-opacity-30">
                                         <th>Item</th>
                                         <th>Hours</th>
                                         <th>Blank</th>
@@ -73,9 +73,13 @@
                                             <td class="px-6 py-2"></td>
                                             <td class="px-6 py-2"></td>
                                             <td class="px-6 py-2"></td>
-                                            <td class="px-6 py-2 flex justify-end mr-4">@include(
-                                                'partials.svgs.status.' . $i->statuses->icon
-                                            )</td>
+                                            <td class="px-6 py-2 flex justify-end items-center"><span class="mr-5">@include(
+                                                'partials.svgs.status.' . $i->statuses->icon)</span>
+
+                                            </td>
+
+
+
                                         </tr>
                                     @endforeach
                                 @endif

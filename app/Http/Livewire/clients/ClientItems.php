@@ -85,6 +85,7 @@ class ClientItems extends Component
         ClientItem::create($this->modelData());
         $this->modalFormVisible = false;
         session()->flash('message', $this->description . ' has been successfully created.');
+        $this->emit('updateJobs');
     }
 
     /**
@@ -111,6 +112,7 @@ class ClientItems extends Component
         ClientItem::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
         session()->flash('message', $this->description . 's record has been successfully updated.');
+        $this->emit('updateJobs');
     }
 
     /**
@@ -178,7 +180,7 @@ class ClientItems extends Component
         } else {
             $js->increment('status_id', 1);
         }
-        // $this->resetPage();
+        $this->emit('updateJobs');
     }
 
     public function archiveJob($id)
@@ -187,7 +189,7 @@ class ClientItems extends Component
         $js->status_id = 4;
         $js->save();
         session()->flash('message', 'Job Archived');
-        // $this->resetPage();
+        $this->emit('updateJobs');
     }
 
     public function render()

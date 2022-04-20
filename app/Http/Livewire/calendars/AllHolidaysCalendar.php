@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Validator;
 
 class AllHolidaysCalendar extends LivewireCalendar
 {
+
+    protected $listeners = ['updateAllCalendar' => 'events'];
+
+
     public function events(): Collection
     {
         return Holiday::where('authorised', 1)

@@ -12,6 +12,8 @@ class ClientJobs extends Component
 {
     use WithPagination;
 
+    protected $listeners = ['updateJobs' => 'render'];
+
     public $modalFormVisible;
     public $modalConfirmDeleteVisible;
     public $modelId;

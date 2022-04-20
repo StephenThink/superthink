@@ -200,6 +200,7 @@ class Overview extends Component
             $this->modalFormVisible = false;
             $this->reset();
             session()->flash('message', 'Holiday Created.');
+            $this->emit('updateAllCalendar');
         } else {
             $this->daysErrorVisible = true;
         }
@@ -302,6 +303,7 @@ class Overview extends Component
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
         session()->flash('trash', 'Holiday Deleted.');
+        $this->emit('updateAllCalendar');
     }
 
     /**
